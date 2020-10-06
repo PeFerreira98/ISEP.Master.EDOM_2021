@@ -34,7 +34,7 @@ The repository includes an example of a PlantUML diagram in diagrams/usecase.pum
 
 ## Issues and Commits
 
-Each team will usually have a clone of this repository in bitbucket.
+Each team will have a fork of this repository in bitbucket.
 
 It is a good practice to create an **Issue** in bitbucket for each task that your team or you individually will be developing.
 
