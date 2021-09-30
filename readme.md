@@ -1,6 +1,6 @@
 # Repository for Project 1 and Project 2
 
-The goal of this repository is to serve as a template for Part 1 and 2 of the project developed during the EDOM course of the MEI Master Program, edition 2020/21.
+The goal of this repository is to serve as a template for Part 1 and 2 of the project developed during the EDOM course of the MEI Master Program, edition 2021/22.
 
 **Please follow the instructions of the teachers of your course because they will always prevail over what is stated in this readme file.**
 
