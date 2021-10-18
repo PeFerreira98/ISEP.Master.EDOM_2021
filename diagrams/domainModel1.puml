@@ -1,0 +1,59 @@
+@startuml domainModel1.png
+
+left to right direction
+
+skinparam monochrome true
+skinparam packageStyle rect
+skinparam defaultFontName FG Virgil
+skinparam shadowing false
+
+class User {
+  string name
+}
+
+class AccountGroup {
+  string name
+}
+
+class Account {
+  string name
+  double initialAmount
+  string description
+}
+
+class Transaction {
+  date date
+  double amount
+  string description
+  var photo
+  string note
+  double fees
+}
+
+class TransactionType {
+  string description
+}
+
+class Currency {
+  char symbol
+  string designation
+}
+
+User "1" --> "1" BookmarkList : has
+User "1" --> "1" AccountGroup : has
+
+AccountGroup "1" --> "0..*" Account : has
+
+BookmarkList "1" --> "0..*" Transaction : has
+
+Account "1" --> "0..*" Transaction : has
+Account "1" --> "1..*" Currency
+
+Transaction "0.1" --> "1" Account : from
+Transaction "0.1" --> "1" Account : to
+Transaction "1" --> "1" Currency : isIn
+Transaction "1" --> "1" TransactionType : Is
+
+hide circle
+
+@enduml
