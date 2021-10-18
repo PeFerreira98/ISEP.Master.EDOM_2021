@@ -7,6 +7,8 @@ skinparam packageStyle rect
 skinparam defaultFontName FG Virgil
 skinparam shadowing false
 
+title Domain Model - Money Manager
+
 class User {
   string name
 }
