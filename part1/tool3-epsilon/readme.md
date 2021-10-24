@@ -10,7 +10,12 @@ Following there are examples of proposed sections for the report.
 
 ## Description of the Tool
 
+Epsilon is a family of Java-based scripting languages for automating common model-based software engineering tasks, such as code generation, model-to-model transformation and model validation, that work out of the box with EMF (including Xtext and Sirius), UML, Simulink, XML and other types of models.  
+Epsilon also includes Eclipse-based editors and debuggers, convenient reflective tools for textual modelling and model visualisation, and Apache Ant tasks.
+
 ## How to Setup and Install
+
+Download the [Eclipse Installer](https://wiki.eclipse.org/Eclipse_Installer) and select Epsilon. Note that you will need a Java Runtime Environment installed on your system.
 
 ## Implementation of the Metamodel
 
