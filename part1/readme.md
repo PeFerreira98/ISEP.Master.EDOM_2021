@@ -11,17 +11,19 @@ Following there are examples of proposed sections for this part of the report (t
 In this step of the process, each team member analyzed a specific application used for Personal Expenses Management.
 Those apps were:
 - Money Manager (Android App)
-- //App 2
-- //App 3
+- Money Manager (iOS App)
+- Money Board (Android App)
 
 After analysis, we come up with these domain models:
 
-Money Manager
-![Money Manager Domain Model](diagrams/domainModel1.png)
+### Money Manager (Android)
+![Money Manager Android Domain Model](diagrams/domainModel_MoneyManager.png)
 
-//App2
+### Money Manager (iOS)
+![Money Manager iOS Domain Model](diagrams/MoneyManager_InnimMobileExp.png)
 
-//App3
+### Money Board
+![Money Board Android Domain Model](diagrams/MoneyBoard.png)
 
 ## Design of the Metamodel
 
