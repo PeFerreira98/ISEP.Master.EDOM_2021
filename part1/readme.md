@@ -17,13 +17,13 @@ Those apps were:
 After analysis, we come up with these domain models:
 
 ### Money Manager (Android)
-![Money Manager Android Domain Model](diagrams/domainModel_MoneyManager.png)
+![Money Manager Android Domain Model](../diagrams/domainModel_MoneyManager.png)
 
 ### Money Manager (iOS)
-![Money Manager iOS Domain Model](diagrams/MoneyManager_InnimMobileExp.png)
+![Money Manager iOS Domain Model](../diagrams/MoneyManager_InnimMobileExp.png)
 
 ### Money Board
-![Money Board Android Domain Model](diagrams/MoneyBoard.png)
+![Money Board Android Domain Model](../diagrams/MoneyBoard.jpg)
 
 ## Design of the Metamodel
 
