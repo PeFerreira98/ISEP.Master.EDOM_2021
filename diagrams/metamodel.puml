@@ -1,0 +1,81 @@
+@startuml metamodel.png
+
+left to right direction
+
+skinparam linetype polyline
+' skinparam linetype ortho
+skinparam monochrome true
+skinparam packageStyle rect
+skinparam shadowing false
+
+' skinparam nodesep 5
+' skinparam ranksep 80
+' skinparam padding 2
+' !pragma ratio 0.2
+
+title Metamodel
+
+class Model {
+    name : string
+}
+
+class UserSpec {
+    cardinality : int
+}
+
+class UserAttribute {
+    name : string
+    type : AttributeType
+}
+
+class AccountSpec {
+    cardinality : int
+}
+
+class AccountAttribute {
+    name : string
+    type : AttributeType
+}
+
+class TransactionSpec {
+    cardinality : int
+}
+
+class TransactionAttribute {
+    name : string
+    type : AttributeType
+}
+
+class Association {
+    name : string
+}
+
+class AttributeType <<Enum>> {
+    text
+    number
+    choice
+    ...
+}
+
+Model *--- "1..*" AttributeType
+
+Model *-- "1..*" UserSpec
+UserSpec *--- "1..*" UserAttribute
+UserAttribute "1" -- "1" AttributeType
+
+Model *-- "1..*" AccountSpec
+AccountSpec *--- "1..*" AccountAttribute
+AccountAttribute "1" -- "1" AttributeType
+
+Model *-- "1..*" TransactionSpec
+TransactionSpec *--- "1" TransactionAttribute
+TransactionAttribute "1" -- "1" AttributeType
+
+Model *--- "1..*" Association
+UserSpec "1" <--> "0.*" Association
+AccountSpec "1" <--> "0.*" Association
+TransactionSpec "1" <--> "0.*" Association
+
+hide circle
+
+@enduml

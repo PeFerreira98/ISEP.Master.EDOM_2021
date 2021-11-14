@@ -26,8 +26,40 @@ After analysis, we come up with these domain models:
 ![Money Board Android Domain Model](../diagrams/MoneyBoard.jpg)
 
 ## Design of the Metamodel
+![MetaModel](../diagrams/metamodel.png)
 
 ## Constraints and Refactorings
+
+* **Model**
+    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+
+* **UserSpec**
+    * mustHaveAttributeWithDifferentNames - a user cannot have fields with the same name
+    * mustHaveNameAttribute - a user must have an attribute called 'name'
+
+* **AccountSpec**
+    * mustHaveAttributeWithDifferentNames - an account cannot have fields with the same name
+    * mustHaveCurrencyAttribute - an account must have an attribute called 'currency'
+
+* **TransactionSpec**
+    * mustHaveAttributeWithDifferentNames - a transaction cannot have fields with the same name
+    * mustHaveCurrencyAttribute - a transaction must have an attribute called 'currency'
+    * mustHaveAmountAttribute - a transaction must have an attribute called 'amount'
+    * mustHaveDateAttribute - a transaction must have an attribute called 'date'
+
+* **Association**
+    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+
+* **UserAttribute**
+    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+    
+* **AccountAttribute**
+    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+
+* **TransactionAttribute**
+    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+
+* **AttributeType**
 
 ## Metamodel Graphical Representation
 

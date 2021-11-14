@@ -2,10 +2,16 @@
 
 left to right direction
 
+skinparam linetype polyline
+' skinparam linetype ortho
 skinparam monochrome true
 skinparam packageStyle rect
-skinparam defaultFontName FG Virgil
 skinparam shadowing false
+
+' skinparam nodesep 5
+' skinparam ranksep 80
+' skinparam padding 2
+' !pragma ratio 0.2
 
 title Domain Model - Money Manager
 
@@ -48,13 +54,13 @@ AccountGroup "1" --> "0..*" Account : has
 
 BookmarkList "1" --> "0..*" Transaction : has
 
-Account "1" --> "0..*" Transaction : has
-Account "1" --> "1..*" Currency
+Account "1" ---> "0..*" Transaction : has
+Account "1" -d-> "1..*" Currency : isIn
 
-Transaction "0.1" --> "1" Account : from
-Transaction "0.1" --> "1" Account : to
-Transaction "1" --> "1" Currency : isIn
-Transaction "1" --> "1" TransactionType : Is
+Transaction "0.1" ---> "1" Account : from
+Transaction "0.1" ---> "1" Account : to
+Transaction "1" -d-> "1" Currency : isIn
+Transaction "1" -d-> "1" TransactionType : Is
 
 hide circle
 
