@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/edom204epsilon/src-gen" creationIcons="false"
+    editDirectory="/edom204epsilon.edit/src-gen" editorDirectory="/edom204epsilon.editor/src-gen"
+    modelPluginID="edom204epsilon" modelName="Edom204epsilon" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>edom204epsilon.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Edom204epsilon" disposableProviderFactory="true" ecorePackage="edom204epsilon.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="edom204epsilon.ecore#//AttributeType"/>
+    <genClasses ecoreClass="edom204epsilon.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//Model/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom204epsilon.ecore#//Model/userspec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom204epsilon.ecore#//Model/accountspec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom204epsilon.ecore#//Model/transactionspec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom204epsilon.ecore#//Model/association"/>
+    </genClasses>
+    <genClasses ecoreClass="edom204epsilon.ecore#//UserSpec">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//UserSpec/cardinality"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom204epsilon.ecore#//UserSpec/userattribute"/>
+    </genClasses>
+    <genClasses ecoreClass="edom204epsilon.ecore#//AccountSpec">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//AccountSpec/cardinality"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom204epsilon.ecore#//AccountSpec/accountattribute"/>
+    </genClasses>
+    <genClasses ecoreClass="edom204epsilon.ecore#//TransactionSpec">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//TransactionSpec/cardinality"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom204epsilon.ecore#//TransactionSpec/transactionattribute"/>
+    </genClasses>
+    <genClasses ecoreClass="edom204epsilon.ecore#//Association">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//Association/name"/>
+    </genClasses>
+    <genClasses ecoreClass="edom204epsilon.ecore#//UserAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//UserAttribute/name"/>
+    </genClasses>
+    <genClasses ecoreClass="edom204epsilon.ecore#//AccountAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//AccountAttribute/name"/>
+    </genClasses>
+    <genClasses ecoreClass="edom204epsilon.ecore#//TransactionAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//TransactionAttribute/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
