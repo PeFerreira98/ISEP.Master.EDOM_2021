@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<moneyManagerModelDiagram dslVersion="1.0.0.0" Id="58246325-1050-4c28-911b-7d7e2a4f6d70" absoluteBounds="0, 0, 11, 8.5" name="Test">
+  <modelMoniker Id="49b0e48b-e294-4879-8c9e-dcc0ac971ed2" />
+  <nestedChildShapes>
+    <transactionSpecShape Id="342f7480-bc4d-49dc-a583-07976dc50b54" absoluteBounds="4.5, 2.125, 1.5, 1">
+      <transactionSpecMoniker Id="f9f5dc37-54b3-4dcd-b3b0-3fe6150ebc90" />
+    </transactionSpecShape>
+    <userSpecShape Id="45be9726-846d-4b75-ba7b-7260821ca3a0" absoluteBounds="3.875, 3.625, 1.5, 1">
+      <userSpecMoniker Id="1685dfb8-2cc6-4f68-856e-12835a64f877" />
+    </userSpecShape>
+    <accountSpecShape Id="da71f57b-e18a-438a-bd39-84e1ff34c643" absoluteBounds="0.5, 2, 1.5, 1">
+      <accountSpecMoniker Id="109fa605-0f83-4c7a-9c52-3ca6f86db923" />
+    </accountSpecShape>
+    <attributeTypeShape Id="8e261434-1266-417a-8050-bbe33eaeb241" absoluteBounds="5.5, 0.5, 1.5, 1">
+      <attributeTypeMoniker Id="66fda418-2d86-454f-995e-84a6210fafcc" />
+    </attributeTypeShape>
+    <accountAttributeShape Id="9d82fd5f-8977-4245-92e9-583421bc7312" absoluteBounds="0.625, 0.5, 1.5, 1">
+      <accountAttributeMoniker Id="db6b358c-33fd-4ca4-b951-5a4a9c468d83" />
+    </accountAttributeShape>
+    <incorporação Id="6ef91a2b-7b2c-4edd-97f7-61b5fd2483b1" edgePoints="[(1.3125 : 2); (1.3125 : 1.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <accountSpecTemAccountAttributeMoniker Id="437ef053-d940-4858-b65e-39fd8a7c6482" />
+      <nodes>
+        <accountSpecShapeMoniker Id="da71f57b-e18a-438a-bd39-84e1ff34c643" />
+        <accountAttributeShapeMoniker Id="9d82fd5f-8977-4245-92e9-583421bc7312" />
+      </nodes>
+    </incorporação>
+    <associationShape Id="710415f9-85a2-46a0-9d4b-f77e04299172" absoluteBounds="2.75, 2, 1.5, 1">
+      <associationMoniker Id="3ec3101b-6ed5-4682-af42-f90ffbb6ea17" />
+    </associationShape>
+    <referência Id="6c45d508-b8f3-43fe-9cf7-416812f6749c" edgePoints="[(2.125 : 1); (5.5 : 1)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <accountAttributeReferênciasAttributeTypesMoniker Id="95f3d1eb-f481-4803-ad18-ca759b59c15f" />
+      <nodes>
+        <accountAttributeShapeMoniker Id="9d82fd5f-8977-4245-92e9-583421bc7312" />
+        <attributeTypeShapeMoniker Id="8e261434-1266-417a-8050-bbe33eaeb241" />
+      </nodes>
+    </referência>
+    <userAttributeShape Id="62094e4f-08fd-43d4-9d56-65cdfec4a023" absoluteBounds="6.5, 3.625, 1.5, 1">
+      <userAttributeMoniker Id="cb1a4149-9be7-4a30-b957-17d9f610381d" />
+    </userAttributeShape>
+    <incorporação Id="1831aa0d-72a1-45cd-9c63-5f71544f4647" edgePoints="[(5.375 : 4.125); (6.5 : 4.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <userSpecTemUserAttributeMoniker Id="bd2320f6-9850-47c0-aff4-8d4423030ee2" />
+      <nodes>
+        <userSpecShapeMoniker Id="45be9726-846d-4b75-ba7b-7260821ca3a0" />
+        <userAttributeShapeMoniker Id="62094e4f-08fd-43d4-9d56-65cdfec4a023" />
+      </nodes>
+    </incorporação>
+    <transactionAttributeShape Id="255a04ce-8cf5-4367-a5a2-9ee8599aa7d8" absoluteBounds="8.625, 2, 1.5, 1">
+      <transactionAttributeMoniker Id="43e50f78-ea5c-45dd-b1f2-a71656bb34cd" />
+    </transactionAttributeShape>
+    <incorporação Id="8e4f3a4b-e2d3-47aa-8b0d-a20bd6a7da60" edgePoints="[(6 : 2.5625); (6.74479166666667 : 2.5625 : JumpStart); (6.91145833333333 : 2.5625 : JumpEnd); (8.625 : 2.5625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <transactionSpecTemTransactionAttributeMoniker Id="cdf608e2-52d8-4396-99a7-6336b2273056" />
+      <nodes>
+        <transactionSpecShapeMoniker Id="342f7480-bc4d-49dc-a583-07976dc50b54" />
+        <transactionAttributeShapeMoniker Id="255a04ce-8cf5-4367-a5a2-9ee8599aa7d8" />
+      </nodes>
+    </incorporação>
+    <referência Id="f3b729cb-e3b8-4cbb-9a20-9949f0ded6c7" edgePoints="[(2 : 2.5); (2.75 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <accountSpecReferênciasAssociationsMoniker Id="87a190a3-556d-433e-be44-10691d0158f2" />
+      <nodes>
+        <accountSpecShapeMoniker Id="da71f57b-e18a-438a-bd39-84e1ff34c643" />
+        <associationShapeMoniker Id="710415f9-85a2-46a0-9d4b-f77e04299172" />
+      </nodes>
+    </referência>
+    <referência Id="2d89841f-13dc-41cf-ba37-776bb108ba97" edgePoints="[(2.75 : 2.1875); (2 : 2.1875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <associationReferênciasAccountSpecMoniker Id="4ed20425-afcc-4042-ab4f-8f930baf36c8" />
+      <nodes>
+        <associationShapeMoniker Id="710415f9-85a2-46a0-9d4b-f77e04299172" />
+        <accountSpecShapeMoniker Id="da71f57b-e18a-438a-bd39-84e1ff34c643" />
+      </nodes>
+    </referência>
+    <referência Id="d179babf-06b8-4a28-a4c8-1d315d23c559" edgePoints="[(4.25 : 2.5625); (4.5 : 2.5625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <associationReferênciasTransactionSpecMoniker Id="6e9b83df-b32f-40b1-a829-d5adc8bb0b61" />
+      <nodes>
+        <associationShapeMoniker Id="710415f9-85a2-46a0-9d4b-f77e04299172" />
+        <transactionSpecShapeMoniker Id="342f7480-bc4d-49dc-a583-07976dc50b54" />
+      </nodes>
+    </referência>
+    <referência Id="e151557e-d0cf-4166-aceb-e4914676586e" edgePoints="[(4.0625 : 3); (4.0625 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <associationReferênciasUserSpecMoniker Id="ac7f2d96-4d26-49aa-8483-3a69ca856b0d" />
+      <nodes>
+        <associationShapeMoniker Id="710415f9-85a2-46a0-9d4b-f77e04299172" />
+        <userSpecShapeMoniker Id="45be9726-846d-4b75-ba7b-7260821ca3a0" />
+      </nodes>
+    </referência>
+    <referência Id="7dda42cf-2532-47b2-8b1a-d91c989b6c04" edgePoints="[(8.625 : 2.03125); (6.91145833333333 : 2.03125 : JumpStart); (6.74479166666667 : 2.03125 : JumpEnd); (6.53125 : 2.03125); (6.53125 : 1.5)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <transactionAttributeReferênciasAttributeTypesMoniker Id="423231fb-51c3-44fb-adf2-39717683879a" />
+      <nodes>
+        <transactionAttributeShapeMoniker Id="255a04ce-8cf5-4367-a5a2-9ee8599aa7d8" />
+        <attributeTypeShapeMoniker Id="8e261434-1266-417a-8050-bbe33eaeb241" />
+      </nodes>
+    </referência>
+    <referência Id="b5143cdb-2ad6-4001-b177-298528ae4fbb" edgePoints="[(4.5 : 2.28125); (4.25 : 2.28125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <transactionSpecReferênciasAssociationsMoniker Id="cee9c49a-c290-4fe4-b27d-95239f22e892" />
+      <nodes>
+        <transactionSpecShapeMoniker Id="342f7480-bc4d-49dc-a583-07976dc50b54" />
+        <associationShapeMoniker Id="710415f9-85a2-46a0-9d4b-f77e04299172" />
+      </nodes>
+    </referência>
+    <referência Id="f83645df-64b6-42ad-a465-5154aa97c1ec" edgePoints="[(6.828125 : 3.625); (6.828125 : 1.5)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <userAttributeReferênciasAttributeTypesMoniker Id="9e314323-a70f-42f9-8dcd-ca7a90df63a3" />
+      <nodes>
+        <userAttributeShapeMoniker Id="62094e4f-08fd-43d4-9d56-65cdfec4a023" />
+        <attributeTypeShapeMoniker Id="8e261434-1266-417a-8050-bbe33eaeb241" />
+      </nodes>
+    </referência>
+    <referência Id="18d6160d-e0fe-4667-99a5-d8ca42cb286f" edgePoints="[(4.21875 : 3.625); (4.21875 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <userSpecReferênciasAssociationsMoniker Id="5934bf20-02cc-49ed-aa9f-dfb2a273213b" />
+      <nodes>
+        <userSpecShapeMoniker Id="45be9726-846d-4b75-ba7b-7260821ca3a0" />
+        <associationShapeMoniker Id="710415f9-85a2-46a0-9d4b-f77e04299172" />
+      </nodes>
+    </referência>
+  </nestedChildShapes>
+</moneyManagerModelDiagram>

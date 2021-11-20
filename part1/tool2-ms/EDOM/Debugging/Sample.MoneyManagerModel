@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="514369bc-ece5-4fa2-b623-d6ab63d7fe46" xmlns="http://schemas.microsoft.com/dsltools/MoneyManagerModel">
+  <elements>
+    <userSpec Id="f3dde627-dcba-4686-8ca5-d6737ac3f86e" name="UserSpec1" />
+  </elements>
+</model>
