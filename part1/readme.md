@@ -31,33 +31,44 @@ After analysis, we come up with these domain models:
 ## Constraints and Refactorings
 
 * **Model**
-    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+    * nameMustBegreaterThan1Char - each model cannot have a blank or null name 
 
 * **UserSpec**
-    * mustHaveAttributeWithDifferentNames - a user cannot have fields with the same name
-    * mustHaveNameAttribute - a user must have an attribute called 'name'
+    * mustHaveAttributeWithDifferentNames - a user cannot have fields with the same name 
+    * mustHaveNameAttribute - a user must have an attribute called 'name' - check
+    * * nameShouldNotContainSpaces - a user cannot contain spaces in its name
+    * nameMustStartWithCapitalLetter - a user's name must start with a capital letter
 
 * **AccountSpec**
     * mustHaveAttributeWithDifferentNames - an account cannot have fields with the same name
-    * mustHaveCurrencyAttribute - an account must have an attribute called 'currency'
+    * mustHaveCurrencyAttribute - an account must have an attribute called 'currency' - check
+    * nameShouldNotContainSpaces - an account cannot contain spaces in its name
+    * nameMustStartWithCapitalLetter - an account's name must start with a capital letter
 
 * **TransactionSpec**
-    * mustHaveAttributeWithDifferentNames - a transaction cannot have fields with the same name
-    * mustHaveCurrencyAttribute - a transaction must have an attribute called 'currency'
-    * mustHaveAmountAttribute - a transaction must have an attribute called 'amount'
-    * mustHaveDateAttribute - a transaction must have an attribute called 'date'
+    * mustHaveAttributeWithDifferentNames - a transaction cannot have fields with the same name 
+    * mustHaveCurrencyAttribute - a transaction must have an attribute called 'currency' - check
+    * mustHaveAmountAttribute - a transaction must have an attribute called 'amount' - check
+    * mustHaveDateAttribute - a transaction must have an attribute called 'date' - check
+    * nameShouldNotContainSpaces - a transaction cannot contain spaces in its name
+    * nameMustStartWithCapitalLetter - a transaction's name must start with a capital letter
 
 * **Association**
-    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+    * nameMustBegreaterThan1Char - an association cannot have a blank or null name
+    * nameShouldNotContainSpaces - an association cannot contain spaces in its name
+    * nameMustStartWithCapitalLetter - an association's name must start with a capital letter
 
 * **UserAttribute**
-    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+    * nameMustBegreaterThan1Char - a user cannot have a blank or null name
+    
     
 * **AccountAttribute**
-    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+    * nameMustBegreaterThan1Char - an account cannot have a blank or null name
+
 
 * **TransactionAttribute**
-    * nameMustBegreaterThan1Char - each model cannot have a blank or null name
+    * nameMustBegreaterThan1Char - a transaction cannot have a blank or null name
+
 
 * **AttributeType**
 
