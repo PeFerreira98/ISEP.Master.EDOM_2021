@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="49b0e48b-e294-4879-8c9e-dcc0ac971ed2" xmlns="http://schemas.microsoft.com/dsltools/MoneyManagerModel">
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="49b0e48b-e294-4879-8c9e-dcc0ac971ed2" name="Model" xmlns="http://schemas.microsoft.com/dsltools/MoneyManagerModel">
   <elements>
     <userSpec Id="1685dfb8-2cc6-4f68-856e-12835a64f877" cardinality="0" name="UserSpec">
       <userAttribute>
@@ -66,7 +66,7 @@
   </transactionSpec>
   <attributeType>
     <modelHasAttributeType Id="8d175803-f108-4a9a-b7bf-4220ff0990f6">
-      <attributeType Id="66fda418-2d86-454f-995e-84a6210fafcc" text="AttributeType" number="0" choice="false" date="" />
+      <attributeType Id="66fda418-2d86-454f-995e-84a6210fafcc" text="AttributeType" number="10" choice="false" date="2000-06-02" />
     </modelHasAttributeType>
   </attributeType>
   <association>
