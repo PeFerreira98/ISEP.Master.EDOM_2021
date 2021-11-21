@@ -1,5 +1,4 @@
-@startuml metamodel.png
-
+@startuml
 left to right direction
 
 skinparam linetype polyline
@@ -20,6 +19,7 @@ class Model {
 }
 
 class UserSpec {
+    name : string
     cardinality : int
 }
 
@@ -29,6 +29,7 @@ class UserAttribute {
 }
 
 class AccountSpec {
+    name : string
     cardinality : int
 }
 
@@ -38,6 +39,7 @@ class AccountAttribute {
 }
 
 class TransactionSpec {
+    name : string
     cardinality : int
 }
 
@@ -77,5 +79,4 @@ AccountSpec "1" <--> "0.*" Association
 TransactionSpec "1" <--> "0.*" Association
 
 hide circle
-
 @enduml
