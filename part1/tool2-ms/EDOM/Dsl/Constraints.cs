@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.Modeling.Validation;
 using System.Text.RegularExpressions;
+using Microsoft.VisualStudio.Modeling;
+using System.Threading;
 
 namespace Empresa.MoneyManagerModel
 {
@@ -23,13 +25,13 @@ namespace Empresa.MoneyManagerModel
         {
             if (this.Name == null || this.Name == "")
             {
-                        context.LogError(
-                        // Description:
-                        "Names Model can't be empty",
-                        // Unique code for this error:
-                        "01ModelNameError",
-                        // Objects to select when user double-clicks error:
-                        this);
+                context.LogError(
+                // Description:
+                "Names Model can't be empty",
+                // Unique code for this error:
+                "01ModelNameError",
+                // Objects to select when user double-clicks error:
+                this);
             }
         }
 
@@ -45,7 +47,7 @@ namespace Empresa.MoneyManagerModel
             {
                 foreach (UserSpec userSpec in this.Elements)
                 {
-                    if (userSpec.Name == null || userSpec.Name == "" || userSpec.Name.Contains(" ") || !char.IsUpper(userSpec.Name[0]))
+                    if (userSpec.Name == null || userSpec.Name == "" || userSpec.Name.Contains(" "))
                     {
                         context.LogError(
                         // Description:
@@ -54,6 +56,14 @@ namespace Empresa.MoneyManagerModel
                         "01UserNameError",
                         // Objects to select when user double-clicks error:
                         this);
+                    }
+                    else if ((userSpec.Name.Length > 0) && (userSpec.Name.Substring(0, 1).ToUpper().CompareTo(userSpec.Name.Substring(0, 1)) != 0))
+                    {
+                        using (Transaction t = Store.TransactionManager.BeginTransaction("updates"))
+                        {
+                            userSpec.Name = Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(userSpec.Name);
+                            t.Commit();
+                        }
                     }
                 }
 
@@ -86,9 +96,9 @@ namespace Empresa.MoneyManagerModel
         {
             if (this.TransactionSpec != null)
             {
-                foreach (TransactionSpec transSpec in this.TransactionSpec )
+                foreach (TransactionSpec transSpec in this.TransactionSpec)
                 {
-                    if (transSpec.Name == null || transSpec.Name == "" || transSpec.Name.Contains(" ") || !char.IsUpper(transSpec.Name[0]))
+                    if (transSpec.Name == null || transSpec.Name == "" || transSpec.Name.Contains(" "))
                     {
                         context.LogError(
                         // Description:
@@ -97,6 +107,14 @@ namespace Empresa.MoneyManagerModel
                         "01TransactionNameError",
                         // Objects to select when user double-clicks error:
                         this);
+                    }
+                    else if ((transSpec.Name.Length > 0) && (transSpec.Name.Substring(0, 1).ToUpper().CompareTo(transSpec.Name.Substring(0, 1)) != 0))
+                    {
+                        using (Transaction t = Store.TransactionManager.BeginTransaction("updates"))
+                        {
+                            transSpec.Name = Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(transSpec.Name);
+                            t.Commit();
+                        }
                     }
                 }
 
@@ -131,7 +149,7 @@ namespace Empresa.MoneyManagerModel
             {
                 foreach (AccountSpec accSpec in this.AccountSpec)
                 {
-                    if (accSpec.Name == null || accSpec.Name == "" || accSpec.Name.Contains(" ") || !char.IsUpper(accSpec.Name[0]))
+                    if (accSpec.Name == null || accSpec.Name == "" || accSpec.Name.Contains(" "))
                     {
                         context.LogError(
                         // Description:
@@ -140,6 +158,14 @@ namespace Empresa.MoneyManagerModel
                         "01AccountNameError",
                         // Objects to select when user double-clicks error:
                         this);
+                    }
+                    else if ((accSpec.Name.Length > 0) && (accSpec.Name.Substring(0, 1).ToUpper().CompareTo(accSpec.Name.Substring(0, 1)) != 0))
+                    {
+                        using (Transaction t = Store.TransactionManager.BeginTransaction("updates"))
+                        {
+                            accSpec.Name = Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(accSpec.Name);
+                            t.Commit();
+                        }
                     }
                 }
 
@@ -174,7 +200,7 @@ namespace Empresa.MoneyManagerModel
             {
                 foreach (Association association in this.Association)
                 {
-                    if (association.Name == null || association.Name == "" || association.Name.Contains(" ") || !char.IsUpper(association.Name[0]))
+                    if (association.Name == null || association.Name == "" || association.Name.Contains(" "))
                     {
                         context.LogError(
                         // Description:
@@ -183,6 +209,14 @@ namespace Empresa.MoneyManagerModel
                         "01AssociationNameError",
                         // Objects to select when user double-clicks error:
                         this);
+                    }
+                    else if ((association.Name.Length > 0) && (association.Name.Substring(0, 1).ToUpper().CompareTo(association.Name.Substring(0, 1)) != 0))
+                    {
+                        using (Transaction t = Store.TransactionManager.BeginTransaction("updates"))
+                        {
+                            association.Name = Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(association.Name);
+                            t.Commit();
+                        }
                     }
                 }
             }
@@ -200,7 +234,7 @@ namespace Empresa.MoneyManagerModel
             {
                 foreach (AttributeType attType in this.AttributeType)
                 {
-                    if (attType.Text == null || attType.Text == "" )
+                    if (attType.Text == null || attType.Text == "")
                     {
                         context.LogError(
                         // Description:
