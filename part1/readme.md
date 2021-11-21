@@ -28,6 +28,9 @@ After analysis, we come up with these domain models:
 ## Design of the Metamodel
 ![MetaModel](../diagrams/metamodel.png)
 
+In this metamodel, attributes such as NIF, email, password won't be represented because they are invariants, so there aren't needed to be represented in the metamodel
+In the metamodel we only represent what could change from model to model.
+
 ## Constraints and Refactorings
 
 * **Model**
@@ -74,4 +77,12 @@ After analysis, we come up with these domain models:
 
 ## Metamodel Graphical Representation
 
+For each metamodel element, the team chose a different color to represent:
+
+* TransactionSpec - for the TransactionSpec, we will be using the color Light Blue (**#00e5e5**)
+* Association - for the Association, we will be using the color Grey (**#C0C0C0**)
+* UserSpec - for the UserSpec, we will be using the PlantUML default color
+* AccountSpec - for the AccountSpec, we will be using the color Light Green (**#95e500**)
+
 ## Presentations of Models (instances)
+* **Activity 7: Application Engineering**
