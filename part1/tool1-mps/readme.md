@@ -86,6 +86,36 @@ In order to assign a "Quick fix" to its appropriate "Checking Rule", we carry ou
 
 ## Implementation of the Visualizations
 
+To implement the visualization we created a "Behavior" for the concept "Model" where the code referring to the puml file generator is present, along with the classes present in our language and the appropriate connections.
+
+The following image is intended to show an excerpt of this code:
+
+![trechoo_behavior](./images/trechoo_behavior.png)
+
+In order to respect the standards of the group, colors were assigned to certain classes.
+
+This being the configuration:
+
+*TransactionSpec - for the TransactionSpec, we will be using the color Light Blue (#00e5e5)
+
+![color_transactionspec](./images/color_transactionspec.png)
+
+*Association - for the Association, we will be using the color Gray (#C0C0C0)
+
+![color_association](./images/color_association.png)
+
+*UserSpec - for the UserSpec, we will be using the PlantUML default color
+
+![color_userspec](./images/color_userspec.png)
+
+*AccountSpec - for the AccountSpec, we will be using the color Light Green (#95e500)
+
+![color_accountspec](./images/color_accountspec.png)
+
+In order to automate the process of generating .PUML files, an "Intention" of the "Model" was created, as shown in the image below:
+
+![intention](./images/intention.png)
+
 ## Implementation of Models (instances)
 
 As mentioned above, the option of "Create sandbox solution" has been added. This one serves to test the previously created model.
@@ -112,3 +142,17 @@ Then the correction of these same failures through "quick fixes" (Refactoring) i
 ![refactoring](./images/refactoring.png)
 
 ## Generation/Execution of Visualizations
+
+To verify the generation / execution of Visualizations, a solution of the "MoneyBoard" application was created.
+
+The procedure to generate the plantUML file is shown in the figure below:
+
+![gerar_ficheiro](./images/gerar_ficheiro.png)
+
+With this, a .PUML file is created and saved in the defined directory whose result (for the created solution) is the following:
+
+![codigo_puml](./images/codigo_puml.png)
+
+When using code conversion plugins for diagrams, the result obtained can be seen in the following image:
+
+![diagrama](./images/diagrama.png)
