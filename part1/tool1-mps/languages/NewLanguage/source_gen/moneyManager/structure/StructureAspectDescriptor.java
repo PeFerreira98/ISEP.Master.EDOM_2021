@@ -124,7 +124,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("UserSpecs", 0x781619bd78713107L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713102L).optional(true).ordered(true).multiple(false).origin("8653132035599184135").done();
     b.aggregate("AccountSpecs", 0x781619bd78713122L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713105L).optional(true).ordered(true).multiple(false).origin("8653132035599184162").done();
     b.aggregate("TransactionSpecs", 0x781619bd78713132L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713123L).optional(true).ordered(true).multiple(false).origin("8653132035599184178").done();
-    b.aggregate("Associations", 0x781619bd78713133L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713129L).optional(true).ordered(true).multiple(false).origin("8653132035599184179").done();
+    b.aggregate("Associations", 0x781619bd78713133L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713129L).optional(true).ordered(true).multiple(true).origin("8653132035599184179").done();
     b.aggregate("UserAttributes", 0x781619bd78713134L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713125L).optional(true).ordered(true).multiple(false).origin("8653132035599184180").done();
     b.aggregate("AccountAttributes", 0x781619bd78713135L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713127L).optional(true).ordered(true).multiple(false).origin("8653132035599184181").done();
     b.aggregate("TransactionAttributes", 0x781619bd78713136L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd7871312cL).optional(true).ordered(true).multiple(false).origin("8653132035599184182").done();

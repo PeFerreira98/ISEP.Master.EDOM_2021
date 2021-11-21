@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:48e138a7-ea7c-4313-8e71-bd55c0487a90(SolutionMoneyManager.a_model)">
+<model ref="r:52059938-3528-46ba-8936-72ed7e10ba31(SolutionMoneyManager.MoneyBoard)">
   <persistence version="9" />
   <languages>
     <use id="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876" name="moneyManager" version="0" />
@@ -45,53 +45,81 @@
       </concept>
     </language>
   </registry>
-  <node concept="0pMyW" id="7wm6rPSy8Q1">
-    <property role="TrG5h" value="teste_model" />
-    <node concept="0pMyZ" id="7wm6rPSy8Q2" role="0pMyU">
-      <property role="TrG5h" value="Teste1" />
+  <node concept="0pMyW" id="7wm6rPSO5BI">
+    <property role="TrG5h" value="MoneyBoard" />
+    <node concept="0pMyk" id="7wm6rPSOoaq" role="0pMye">
+      <property role="TrG5h" value="Association1" />
+    </node>
+    <node concept="0pMyZ" id="7wm6rPSO5BL" role="0pMyU">
+      <property role="TrG5h" value="Daniel" />
       <property role="0pZ3O" value="1" />
-      <node concept="0pMyo" id="7wm6rPSy8Q3" role="0pZ3R">
-        <property role="TrG5h" value="ok" />
+      <node concept="0pMyo" id="7wm6rPSO5BM" role="0pZ3R">
+        <property role="TrG5h" value="name" />
+        <property role="0pZ3s" value="7wm6rPSsj4X/text" />
+      </node>
+      <node concept="0pMyo" id="7wm6rPSO5BT" role="0pZ3R">
+        <property role="TrG5h" value="NIF" />
+        <property role="0pZ3s" value="7wm6rPSsj4Y/number" />
+      </node>
+      <node concept="0pMyo" id="7wm6rPSO5BW" role="0pZ3R">
+        <property role="TrG5h" value="Date Of Birth" />
         <property role="0pZ3s" value="7wm6rPSsj4X/text" />
       </node>
     </node>
-    <node concept="0pMyS" id="7wm6rPSE0vz" role="0pMyv">
-      <property role="TrG5h" value="Account1" />
+    <node concept="0pMyS" id="7wm6rPSO5C0" role="0pMyv">
+      <property role="TrG5h" value="Conta1" />
       <property role="0pZ3v" value="1" />
-      <node concept="0pMyq" id="7wm6rPSE0v$" role="0pZ3u">
-        <property role="TrG5h" value="Currency" />
+      <node concept="0pMyq" id="7wm6rPSO5C1" role="0pZ3u">
+        <property role="TrG5h" value="number" />
         <property role="0pZ3o" value="7wm6rPSsj4X/text" />
       </node>
-      <node concept="0pMyq" id="7wm6rPSE0vB" role="0pZ3u">
-        <property role="TrG5h" value="Date" />
+      <node concept="0pMyq" id="7wm6rPSO5C4" role="0pZ3u">
+        <property role="TrG5h" value="currency" />
         <property role="0pZ3o" value="7wm6rPSsj4X/text" />
       </node>
-      <node concept="0pMyq" id="7wm6rPSE0vE" role="0pZ3u">
-        <property role="TrG5h" value="Amount" />
+      <node concept="0pMyq" id="7wm6rPSO5C7" role="0pZ3u">
+        <property role="TrG5h" value="balance" />
         <property role="0pZ3o" value="7wm6rPSsj4Y/number" />
       </node>
     </node>
-    <node concept="0pMyu" id="7wm6rPSE0vI" role="0pMyf">
+    <node concept="0pMyu" id="7wm6rPSO5Cb" role="0pMyf">
       <property role="TrG5h" value="Transaction1" />
       <property role="0pZ3w" value="1" />
-      <node concept="0pMyh" id="7wm6rPSE0vK" role="0pZ3z">
+      <node concept="0pMyh" id="7wm6rPSO5Cd" role="0pZ3z">
+        <property role="TrG5h" value="amount" />
+        <property role="0pZ3r" value="7wm6rPSsj4Y/number" />
+      </node>
+      <node concept="0pMyh" id="7wm6rPSO5Cf" role="0pZ3z">
         <property role="TrG5h" value="name" />
         <property role="0pZ3r" value="7wm6rPSsj4X/text" />
       </node>
+      <node concept="0pMyh" id="7wm6rPSO5Ci" role="0pZ3z">
+        <property role="TrG5h" value="date" />
+        <property role="0pZ3r" value="7wm6rPSsj4X/text" />
+      </node>
+      <node concept="0pMyh" id="7wm6rPSO5Cm" role="0pZ3z">
+        <property role="TrG5h" value="received" />
+        <property role="0pZ3r" value="7wm6rPSsj4Z/choice" />
+      </node>
+      <node concept="0pMyh" id="7wm6rPSO5Cr" role="0pZ3z">
+        <property role="TrG5h" value="note" />
+        <property role="0pZ3r" value="7wm6rPSsj4X/text" />
+      </node>
+      <node concept="0pMyh" id="7wm6rPSO5Cx" role="0pZ3z">
+        <property role="TrG5h" value="photo" />
+        <property role="0pZ3r" value="7wm6rPSsj4X/text" />
+      </node>
     </node>
-    <node concept="0pMyk" id="7wm6rPSE0vM" role="0pMye">
-      <property role="TrG5h" value="Association1" />
-    </node>
-    <node concept="0pMyo" id="7wm6rPSE0vO" role="0pMy9">
+    <node concept="0pMyo" id="7wm6rPSO5CC" role="0pMy9">
       <property role="TrG5h" value="name" />
       <property role="0pZ3s" value="7wm6rPSsj4X/text" />
     </node>
-    <node concept="0pMyq" id="7wm6rPSE0vQ" role="0pMy8">
-      <property role="TrG5h" value="name" />
-      <property role="0pZ3o" value="7wm6rPSsj4X/text" />
+    <node concept="0pMyq" id="7wm6rPSO5CE" role="0pMy8">
+      <property role="TrG5h" value="number" />
+      <property role="0pZ3o" value="7wm6rPSsj4Y/number" />
     </node>
-    <node concept="0pMyh" id="7wm6rPSE0vS" role="0pMyb">
-      <property role="TrG5h" value="name" />
+    <node concept="0pMyh" id="7wm6rPSO5CG" role="0pMyb">
+      <property role="TrG5h" value="id" />
       <property role="0pZ3r" value="7wm6rPSsj4X/text" />
     </node>
   </node>

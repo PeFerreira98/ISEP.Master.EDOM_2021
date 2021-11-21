@@ -187,7 +187,7 @@
         </node>
         <node concept="2OqwBi" id="7wm6rPSuCTp" role="2GsD0m">
           <node concept="1YBJjd" id="7wm6rPSuCJp" role="2Oq$k0">
-            <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+            <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
           </node>
           <node concept="2TvwIu" id="7wm6rPSuD6T" role="2OqNvi" />
         </node>
@@ -231,7 +231,7 @@
                       <node concept="2OqwBi" id="7wm6rPSuHcc" role="3uHU7w">
                         <node concept="2OqwBi" id="7wm6rPSuGsM" role="2Oq$k0">
                           <node concept="1YBJjd" id="7wm6rPSuGgi" role="2Oq$k0">
-                            <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+                            <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
                           </node>
                           <node concept="2yIwOk" id="7wm6rPSuGQZ" role="2OqNvi" />
                         </node>
@@ -246,7 +246,7 @@
                   </node>
                 </node>
                 <node concept="1YBJjd" id="7wm6rPSuJCW" role="1urrMF">
-                  <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+                  <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
                 </node>
                 <node concept="3Cnw8n" id="7wm6rPSwOuK" role="1urrFz">
                   <ref role="QpYPw" node="7wm6rPSwx_7" resolve="DeleteUniqueAccountSpec" />
@@ -266,7 +266,7 @@
                 <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
                 <node concept="2OqwBi" id="7wm6rPSuFCf" role="37wK5m">
                   <node concept="1YBJjd" id="7wm6rPSuFuG" role="2Oq$k0">
-                    <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+                    <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
                   </node>
                   <node concept="3TrcHB" id="7wm6rPSuFO7" role="2OqNvi">
                     <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -307,14 +307,14 @@
               <property role="Xl_RC" value="Name must begin with capital letter" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSuOfr" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
             </node>
             <node concept="3Cnw8n" id="7wm6rPSwO_u" role="1urrFz">
               <ref role="QpYPw" node="7wm6rPSw7mW" resolve="CapitalizeAccountSpecName" />
               <node concept="3CnSsL" id="7wm6rPSwOFP" role="3Coj4f">
                 <ref role="QkamJ" node="7wm6rPSw7nf" resolve="account" />
                 <node concept="1YBJjd" id="7wm6rPSwOG2" role="3CoRuB">
-                  <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+                  <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
                 </node>
               </node>
             </node>
@@ -327,7 +327,7 @@
             <node concept="2OqwBi" id="7wm6rPSuNcC" role="37wK5m">
               <node concept="2OqwBi" id="7wm6rPSuMbD" role="2Oq$k0">
                 <node concept="1YBJjd" id="7wm6rPSuLPB" role="2Oq$k0">
-                  <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+                  <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
                 </node>
                 <node concept="3TrcHB" id="7wm6rPSuMx8" role="2OqNvi">
                   <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -344,7 +344,7 @@
           <node concept="3y3z36" id="7wm6rPSuL35" role="3uHU7B">
             <node concept="2OqwBi" id="7wm6rPSuKlx" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSuKbH" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSuKDy" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -384,7 +384,7 @@
               <property role="Xl_RC" value="Name should not be null or empty" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSuRIR" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
             </node>
           </node>
         </node>
@@ -395,7 +395,7 @@
             </node>
             <node concept="2OqwBi" id="7wm6rPSuQtj" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSuQ8p" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSuQFs" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -405,7 +405,7 @@
           <node concept="3clFbC" id="7wm6rPSuPxB" role="3uHU7B">
             <node concept="2OqwBi" id="7wm6rPSuOS1" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSuOId" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSuP6t" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -429,7 +429,7 @@
         </node>
         <node concept="2OqwBi" id="7wm6rPSwGiO" role="2GsD0m">
           <node concept="1YBJjd" id="7wm6rPSwF_a" role="2Oq$k0">
-            <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+            <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
           </node>
           <node concept="3Tsc0h" id="7wm6rPSwGVs" role="2OqNvi">
             <ref role="3TtcxE" to="3cva:7wm6rPSsu_z" resolve="AccountAttributes" />
@@ -460,7 +460,7 @@
                     <property role="3clFbU" value="true" />
                   </node>
                   <node concept="37vLTw" id="7wm6rPSwF_o" role="37vLTJ">
-                    <ref role="3cqZAo" node="7wm6rPSwF_4" resolve="nameCheck" />
+                    <ref role="3cqZAo" node="7wm6rPSwF_4" resolve="currencyCheck" />
                   </node>
                 </node>
               </node>
@@ -477,12 +477,12 @@
               <property role="Xl_RC" value="No currency found" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSwF_v" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSuCHE" resolve="accountSpec" />
             </node>
           </node>
         </node>
         <node concept="37vLTw" id="7wm6rPSwF_w" role="3clFbw">
-          <ref role="3cqZAo" node="7wm6rPSwF_4" resolve="nameCheck" />
+          <ref role="3cqZAo" node="7wm6rPSwF_4" resolve="currencyCheck" />
         </node>
       </node>
       <node concept="3clFbH" id="7wm6rPSwFtG" role="3cqZAp" />
@@ -648,7 +648,7 @@
                       <node concept="2OqwBi" id="5pHQwgzR9HS" role="3uHU7w">
                         <node concept="2OqwBi" id="5pHQwgzR8EE" role="2Oq$k0">
                           <node concept="1YBJjd" id="5pHQwgzR8tV" role="2Oq$k0">
-                            <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+                            <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
                           </node>
                           <node concept="2yIwOk" id="5pHQwgzR9h8" role="2OqNvi" />
                         </node>
@@ -660,7 +660,7 @@
                   </node>
                 </node>
                 <node concept="1YBJjd" id="5pHQwgzPKoc" role="1urrMF">
-                  <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+                  <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
                 </node>
                 <node concept="3Cnw8n" id="7wm6rPSwQmH" role="1urrFz">
                   <ref role="QpYPw" node="7wm6rPSwyQG" resolve="DeleteUniqueTransactionSpec" />
@@ -680,7 +680,7 @@
                 <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
                 <node concept="2OqwBi" id="5pHQwgzQKsl" role="37wK5m">
                   <node concept="1YBJjd" id="5pHQwgzQKbH" role="2Oq$k0">
-                    <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+                    <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
                   </node>
                   <node concept="3TrcHB" id="5pHQwgzQKzO" role="2OqNvi">
                     <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -692,7 +692,7 @@
         </node>
         <node concept="2OqwBi" id="5pHQwgzOIuo" role="2GsD0m">
           <node concept="1YBJjd" id="5pHQwgzOId4" role="2Oq$k0">
-            <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+            <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
           </node>
           <node concept="2TvwIu" id="5pHQwgzOIV$" role="2OqNvi" />
         </node>
@@ -719,7 +719,7 @@
             <node concept="2OqwBi" id="5pHQwgzR6Qj" role="37wK5m">
               <node concept="2OqwBi" id="5pHQwgzR6Qk" role="2Oq$k0">
                 <node concept="1YBJjd" id="5pHQwgzR6Ql" role="2Oq$k0">
-                  <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+                  <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
                 </node>
                 <node concept="3TrcHB" id="5pHQwgzR6Qm" role="2OqNvi">
                   <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -736,7 +736,7 @@
           <node concept="3y3z36" id="5pHQwgzR6Qp" role="3uHU7B">
             <node concept="2OqwBi" id="5pHQwgzR6Qq" role="3uHU7B">
               <node concept="1YBJjd" id="5pHQwgzR6Qr" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
               </node>
               <node concept="3TrcHB" id="5pHQwgzR6Qs" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -751,14 +751,14 @@
               <property role="Xl_RC" value="Name must begin with capital letter" />
             </node>
             <node concept="1YBJjd" id="5pHQwgzR6Qx" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
             </node>
             <node concept="3Cnw8n" id="7wm6rPSwQuN" role="1urrFz">
               <ref role="QpYPw" node="7wm6rPSwklL" resolve="CapitalizeTransactionSpecName" />
               <node concept="3CnSsL" id="7wm6rPSwQAy" role="3Coj4f">
                 <ref role="QkamJ" node="7wm6rPSwkm4" resolve="transaction" />
                 <node concept="1YBJjd" id="7wm6rPSwQAJ" role="3CoRuB">
-                  <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+                  <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
                 </node>
               </node>
             </node>
@@ -795,7 +795,7 @@
               <property role="Xl_RC" value="Name should not be null or empty" />
             </node>
             <node concept="1YBJjd" id="5pHQwgzR6QA" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
             </node>
           </node>
         </node>
@@ -804,7 +804,7 @@
             <node concept="Xl_RD" id="5pHQwgzR6QD" role="3uHU7w" />
             <node concept="2OqwBi" id="5pHQwgzR6QE" role="3uHU7B">
               <node concept="1YBJjd" id="5pHQwgzR6QF" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
               </node>
               <node concept="3TrcHB" id="5pHQwgzR6QG" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -814,7 +814,7 @@
           <node concept="3clFbC" id="5pHQwgzR6QH" role="3uHU7B">
             <node concept="2OqwBi" id="5pHQwgzR6QI" role="3uHU7B">
               <node concept="1YBJjd" id="5pHQwgzR6QJ" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
               </node>
               <node concept="3TrcHB" id="5pHQwgzR6QK" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -852,7 +852,7 @@
         </node>
         <node concept="2OqwBi" id="7wm6rPSvEXn" role="2GsD0m">
           <node concept="1YBJjd" id="7wm6rPSvENn" role="2Oq$k0">
-            <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+            <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
           </node>
           <node concept="3Tsc0h" id="7wm6rPSvFlY" role="2OqNvi">
             <ref role="3TtcxE" to="3cva:7wm6rPSsu_u" resolve="TransactionAttributes" />
@@ -962,7 +962,7 @@
               <property role="Xl_RC" value="No currency found" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSvVTF" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
             </node>
           </node>
         </node>
@@ -978,7 +978,7 @@
               <property role="Xl_RC" value="No amount found" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSvWXc" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
             </node>
           </node>
         </node>
@@ -994,7 +994,7 @@
               <property role="Xl_RC" value="No date found" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSvY9h" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSvn9i" resolve="transactionSpec" />
             </node>
           </node>
         </node>
@@ -1029,7 +1029,7 @@
                     <ref role="ehGHo" to="3cva:7wm6rPSsj4G" resolve="TransactionAttribute" />
                   </node>
                   <node concept="2GrUjf" id="7wm6rPSvpVA" role="10QFUP">
-                    <ref role="2Gs0qQ" node="7wm6rPSvpVu" resolve="userSimbling" />
+                    <ref role="2Gs0qQ" node="7wm6rPSvpVu" resolve="userSibling" />
                   </node>
                 </node>
               </node>
@@ -1059,7 +1059,7 @@
                       <node concept="2OqwBi" id="7wm6rPSvpVN" role="3uHU7w">
                         <node concept="2OqwBi" id="7wm6rPSvpVO" role="2Oq$k0">
                           <node concept="1YBJjd" id="7wm6rPSvpVP" role="2Oq$k0">
-                            <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+                            <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
                           </node>
                           <node concept="2yIwOk" id="7wm6rPSvpVQ" role="2OqNvi" />
                         </node>
@@ -1071,7 +1071,7 @@
                   </node>
                 </node>
                 <node concept="1YBJjd" id="7wm6rPSvrN_" role="1urrMF">
-                  <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+                  <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
                 </node>
                 <node concept="3Cnw8n" id="7wm6rPSwRcK" role="1urrFz">
                   <ref role="QpYPw" node="7wm6rPSwzu$" resolve="DeleteUniqueUserSpec" />
@@ -1091,7 +1091,7 @@
                 <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
                 <node concept="2OqwBi" id="7wm6rPSvpVY" role="37wK5m">
                   <node concept="1YBJjd" id="7wm6rPSvpVZ" role="2Oq$k0">
-                    <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+                    <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
                   </node>
                   <node concept="3TrcHB" id="7wm6rPSvpW0" role="2OqNvi">
                     <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -1103,7 +1103,7 @@
         </node>
         <node concept="2OqwBi" id="7wm6rPSvpW1" role="2GsD0m">
           <node concept="1YBJjd" id="7wm6rPSvpW2" role="2Oq$k0">
-            <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+            <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
           </node>
           <node concept="2TvwIu" id="7wm6rPSvpW3" role="2OqNvi" />
         </node>
@@ -1130,7 +1130,7 @@
             <node concept="2OqwBi" id="7wm6rPSvpWe" role="37wK5m">
               <node concept="2OqwBi" id="7wm6rPSvpWf" role="2Oq$k0">
                 <node concept="1YBJjd" id="7wm6rPSvpWg" role="2Oq$k0">
-                  <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+                  <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
                 </node>
                 <node concept="3TrcHB" id="7wm6rPSvpWh" role="2OqNvi">
                   <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -1147,7 +1147,7 @@
           <node concept="3y3z36" id="7wm6rPSvpWk" role="3uHU7B">
             <node concept="2OqwBi" id="7wm6rPSvpWl" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSvpWm" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSvpWn" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -1162,14 +1162,14 @@
               <property role="Xl_RC" value="Name must begin with capital letter" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSvsEt" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
             </node>
             <node concept="3Cnw8n" id="7wm6rPSwRjn" role="1urrFz">
               <ref role="QpYPw" node="7wm6rPSwrt2" resolve="CapitalizeUserSpecName" />
               <node concept="3CnSsL" id="7wm6rPSwRpC" role="3Coj4f">
                 <ref role="QkamJ" node="7wm6rPSwrtl" resolve="user" />
                 <node concept="1YBJjd" id="7wm6rPSwRpP" role="3CoRuB">
-                  <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+                  <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
                 </node>
               </node>
             </node>
@@ -1209,7 +1209,7 @@
               <property role="Xl_RC" value="Name should not be null or empty" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSvpWx" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
             </node>
           </node>
         </node>
@@ -1218,7 +1218,7 @@
             <node concept="Xl_RD" id="7wm6rPSvpW$" role="3uHU7w" />
             <node concept="2OqwBi" id="7wm6rPSvpW_" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSvpWA" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSvpWB" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -1228,7 +1228,7 @@
           <node concept="3clFbC" id="7wm6rPSvpWC" role="3uHU7B">
             <node concept="2OqwBi" id="7wm6rPSvpWD" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSvpWE" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSvpWF" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -1252,7 +1252,7 @@
         </node>
         <node concept="2OqwBi" id="7wm6rPSwADn" role="2GsD0m">
           <node concept="1YBJjd" id="7wm6rPSw_2_" role="2Oq$k0">
-            <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+            <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
           </node>
           <node concept="3Tsc0h" id="7wm6rPSwAWO" role="2OqNvi">
             <ref role="3TtcxE" to="3cva:7wm6rPSsu_a" resolve="UserAttributes" />
@@ -1300,7 +1300,7 @@
               <property role="Xl_RC" value="No name found" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSw_3k" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSvpVp" resolve="userSpec" />
             </node>
           </node>
         </node>
@@ -1924,7 +1924,7 @@
               <property role="Xl_RC" value="Name should not be null or empty" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSwJde" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSwJcY" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSwJcY" resolve="userAttribute" />
             </node>
           </node>
         </node>
@@ -1935,7 +1935,7 @@
             </node>
             <node concept="2OqwBi" id="7wm6rPSwJdi" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSwJdj" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSwJcY" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSwJcY" resolve="userAttribute" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSwJdk" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -1945,7 +1945,7 @@
           <node concept="3clFbC" id="7wm6rPSwJdl" role="3uHU7B">
             <node concept="2OqwBi" id="7wm6rPSwJdm" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSwJdn" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSwJcY" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSwJcY" resolve="userAttribute" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSwJdo" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -2062,7 +2062,7 @@
               <property role="Xl_RC" value="Name should not be null or empty" />
             </node>
             <node concept="1YBJjd" id="7wm6rPSwKwt" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSwKw7" resolve="node" />
+              <ref role="1YBMHb" node="7wm6rPSwKw7" resolve="transactionAttribute" />
             </node>
           </node>
         </node>
@@ -2073,7 +2073,7 @@
             </node>
             <node concept="2OqwBi" id="7wm6rPSwKwx" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSwKwy" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSwKw7" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSwKw7" resolve="transactionAttribute" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSwKwz" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -2083,7 +2083,7 @@
           <node concept="3clFbC" id="7wm6rPSwKw$" role="3uHU7B">
             <node concept="2OqwBi" id="7wm6rPSwKw_" role="3uHU7B">
               <node concept="1YBJjd" id="7wm6rPSwKwA" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSwKw7" resolve="node" />
+                <ref role="1YBMHb" node="7wm6rPSwKw7" resolve="transactionAttribute" />
               </node>
               <node concept="3TrcHB" id="7wm6rPSwKwB" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
