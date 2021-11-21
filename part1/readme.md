@@ -39,7 +39,7 @@ In the metamodel we only represent what could change from model to model.
 * **UserSpec**
     * mustHaveAttributeWithDifferentNames - a user cannot have fields with the same name 
     * mustHaveNameAttribute - a user must have an attribute called 'name' - check
-    * * nameShouldNotContainSpaces - a user cannot contain spaces in its name
+    * nameShouldNotContainSpaces - a user cannot contain spaces in its name
     * nameMustStartWithCapitalLetter - a user's name must start with a capital letter
 
 * **AccountSpec**
@@ -64,14 +64,11 @@ In the metamodel we only represent what could change from model to model.
 * **UserAttribute**
     * nameMustBegreaterThan1Char - a user cannot have a blank or null name
     
-    
 * **AccountAttribute**
     * nameMustBegreaterThan1Char - an account cannot have a blank or null name
 
-
 * **TransactionAttribute**
     * nameMustBegreaterThan1Char - a transaction cannot have a blank or null name
-
 
 * **AttributeType**
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated edom204epsilon -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edom204epsilon.presentation.Edom204epsilonModelWizardID"
+            name="%_UI_Edom204epsilonModelWizard_label"
+            class="edom204epsilon.presentation.Edom204epsilonModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Edom204epsilonModelFile.gif">
+         <description>%_UI_Edom204epsilonModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated edom204epsilon -->
+      <editor
+            id="edom204epsilon.presentation.Edom204epsilonEditorID"
+            name="%_UI_Edom204epsilonEditor_label"
+            icon="icons/full/obj16/Edom204epsilonModelFile.gif"
+            extensions="edom204epsilon"
+            class="edom204epsilon.presentation.Edom204epsilonEditor"
+            contributorClass="edom204epsilon.presentation.Edom204epsilonActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

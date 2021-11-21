@@ -2,8 +2,24 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="edom204epsilon" nsURI="http://www.example.org/edom204epsilon"
     nsPrefix="edom204epsilon">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Model">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="nameMustHaveName nameMustBegreaterThan1Char"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="nameMustHaveName" value="not self.name.oclIsUndefined()"/>
+      <details key="nameMustBegreaterThan1Char" value="not self.name.oclIsUndefined() and self.name.size() > 1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="modelName"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="userspec" upperBound="-1"
         eType="#//UserSpec" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="accountspec" upperBound="-1"
@@ -16,14 +32,16 @@
         upperBound="-1" eType="#//AccountTransactionAssociation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UserSpec">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="userattribute" upperBound="-1"
         eType="#//UserAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="useraccountassociation"
         upperBound="-1" eType="#//UserAccountAssociation" eOpposite="#//UserAccountAssociation/userspec"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AccountSpec">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="accountattribute" upperBound="-1"
         eType="#//AccountAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="useraccountassociation"
@@ -32,22 +50,47 @@
         upperBound="-1" eType="#//AccountTransactionAssociation" eOpposite="#//AccountTransactionAssociation/accountspec"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TransactionSpec">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transactionattribute" upperBound="-1"
         eType="#//TransactionAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="accounttransactionassociation"
         upperBound="-1" eType="#//AccountTransactionAssociation" eOpposite="#//AccountTransactionAssociation/transactionspec"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UserAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="nameMustHaveName nameMustBegreaterThan1Char"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="nameMustHaveName" value="not self.name.oclIsUndefined()"/>
+      <details key="nameMustBegreaterThan1Char" value="not self.name.oclIsUndefined() and self.name.size() > 1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="userAttributeName"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//AttributeType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AccountAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="nameMustHaveName nameMustBegreaterThan1Char"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="nameMustHaveName" value="not self.name.oclIsUndefined()"/>
+      <details key="nameMustBegreaterThan1Char" value="not self.name.oclIsUndefined() and self.name.size() > 1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="accountAttributeName"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//AttributeType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TransactionAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="nameMustHaveName nameMustBegreaterThan1Char"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="nameMustHaveName" value="not self.name.oclIsUndefined()"/>
+      <details key="nameMustBegreaterThan1Char" value="not self.name.oclIsUndefined() and self.name.size() > 1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="transactionAttributeName"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//AttributeType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AttributeType"/>

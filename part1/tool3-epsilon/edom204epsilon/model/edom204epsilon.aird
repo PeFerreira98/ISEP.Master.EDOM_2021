@@ -3,6 +3,9 @@
   <viewpoint:DAnalysis uid="_80FlIEVnEeyYq73kaLOXrg" selectedViews="_-A9n8EVnEeyYq73kaLOXrg" version="14.5.1.202106111100">
     <semanticResources>edom204epsilon.ecore</semanticResources>
     <semanticResources>edom204epsilon.genmodel</semanticResources>
+    <semanticResources>../plugin.xml</semanticResources>
+    <semanticResources>../instances/modelv1.xmi</semanticResources>
+    <semanticResources>../instances/modelv2.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-A9n8EVnEeyYq73kaLOXrg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-E2CYEVnEeyYq73kaLOXrg" name="edom204epsilon" repPath="#_-DhzwEVnEeyYq73kaLOXrg" changeId="b7ba73de-4c2a-4a45-8c56-61970eca9618">
