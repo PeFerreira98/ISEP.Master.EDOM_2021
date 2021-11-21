@@ -16,7 +16,7 @@ After finished the installation and setup proccess, our IDE is ready to use.
 
 When creating the project, we can select "Create sandbox solution" or create the sandbox solution later manually.
 
-![criação_projeto](./images/criação_projeto.PNG)
+![criação_projeto](./images/criação_projeto.png)
 
 In this particular case, it was created when the project was created.
 
@@ -24,24 +24,24 @@ Thus, the project has the following structure:
 * Sandbox Solution (marked with S): This is where we can immediately test our language, when creating applications for testing purposes
 * Language (marked with L): This is where our language is developed.
 
-![estrutura_projeto](./images/estrutura_projeto.PNG)
+![estrutura_projeto](./images/estrutura_projeto.png)
 
 In order to implement the Metamodel, it is necessary to develop the language that is structured as follows:
 
-![estrutura_linguagem](./images/estrutura_linguagem.PNG)
+![estrutura_linguagem](./images/estrutura_linguagem.png)
 
 Inside the "Structure" folder the concepts are created.
 Concepts implement the INamedConcept interface so that they have "name" as a property.
 For "children" we have the connections and cardinality (Composition)
 So, our metamodel concepts looks like this:
 
-![estrutura_concepts](./images/estrutura_concepts.PNG)
+![estrutura_concepts](./images/estrutura_concepts.png)
 
 Concepts can use references, which means they can reference other concepts instead of creating a new concept.
 For example, in our case "Association" is referenced in several other concepts.
 Thus, a "Smart-Reference" was created in the MPS.
 
-![smart_reference](./images/smart_reference.PNG)
+![smart_reference](./images/smart_reference.png)
 
 ## Implementation of Constraints and Refactorings
 
@@ -51,7 +51,7 @@ In the MPS tool, there are two ways to implement constraints:
 
 In our case, we use "Checking Rules" as a way to implement the constraints defined by the group.
 
-![checking_rule](./images/checking_rule.PNG)
+![checking_rule](./images/checking_rule.png)
 
 In short, this method is carried out as follows:
 * In the concept where we intend to create a "checking rule", we click on "Typesystem" in the bar below;
@@ -61,11 +61,11 @@ In short, this method is carried out as follows:
 
 Below is an example of one of our "checking rules":
 
-![exemplo_checking_rule](./images/exemplo_checking_rule.PNG)
+![exemplo_checking_rule](./images/exemplo_checking_rule.png)
 
 To implement the refactoring, "Quick fixes" were created. This way we automate the process of finding an error and correcting it directly.
 
-![quick_fix](./images/quick_fix.PNG)
+![quick_fix](./images/quick_fix.png)
 
 For this:
 * We right-click on "Typesystem";
@@ -74,11 +74,11 @@ For this:
 
 The following is an example of a "Quick fix" to fix the error of a name not starting with a capital letter. 
 
-![exemplo_quick_fix](./images/exemplo_quick_fix.PNG)
+![exemplo_quick_fix](./images/exemplo_quick_fix.png)
 
 In order to assign a "Quick fix" to its appropriate "Checking Rule", we carry out the following process:
 
-![atribuir_quick_fix](./images/atribuir_quick_fix.PNG)
+![atribuir_quick_fix](./images/atribuir_quick_fix.png)
 
 * 1st click on the word "error" within the intended checking rule;
 * 2nd click on the "Inspector" option in the lower right corner of the screen;
