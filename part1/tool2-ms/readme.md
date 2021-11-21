@@ -99,7 +99,8 @@ All annotations such as `[ValidationState(ValidationState.Enabled)]` above the c
 
 One disadvantage of this easy validation method is not being able to put these validation files/partial classes somewhere more organized as they need to be at the same level as the DslDefinition.dsl file.
 
-According to refractorings, no refractors where needed thanks to the strong constraints we have, however, even if I intended to refractor the model it would go against the documentation of this tool. *It is usually better to let the user decide how to correct an invalid model.* as it can be seen [here](https://docs.microsoft.com/en-us/visualstudio/modeling/validation-in-a-domain-specific-language?view=vs-2019#alternatives);
+We refactor the names that aren't in capital letter. One example is:
+![refactorExample](../../diagrams/tool2-ms/refactorExample.PNG)
 
 ## Implementation of the Visualizations
 
