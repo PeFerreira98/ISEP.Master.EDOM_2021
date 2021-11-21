@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:95e94547-038e-47c4-87d8-36d44c91a839(NewSolution.a_model)">
+<model ref="r:95e94547-038e-47c4-87d8-36d44c91a839(SolutionMoneyManager.a_model)">
   <persistence version="9" />
   <languages>
     <use id="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876" name="moneyManager" version="0" />
