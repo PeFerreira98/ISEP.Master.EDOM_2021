@@ -61,7 +61,7 @@
     <property role="EcuMT" value="8653132035599184129" />
     <property role="TrG5h" value="Model" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="7wm6rPSsj47" role="1TKVEi">
       <property role="IQ2ns" value="8653132035599184135" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -105,13 +105,13 @@
       <ref role="20lvS9" node="7wm6rPSsj4G" resolve="TransactionAttribute" />
     </node>
     <node concept="PrWs8" id="7wm6rPSsuBp" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" />
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="7wm6rPSsj42">
     <property role="EcuMT" value="8653132035599184130" />
     <property role="TrG5h" value="UserSpec" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7wm6rPSsj43" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -138,7 +138,7 @@
   <node concept="1TIwiD" id="7wm6rPSsj45">
     <property role="EcuMT" value="8653132035599184133" />
     <property role="TrG5h" value="AccountSpec" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7wm6rPSsj46" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -165,7 +165,7 @@
   <node concept="1TIwiD" id="7wm6rPSsj4z">
     <property role="EcuMT" value="8653132035599184163" />
     <property role="TrG5h" value="TransactionSpec" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7wm6rPSsj4$" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -192,7 +192,7 @@
   <node concept="1TIwiD" id="7wm6rPSsj4_">
     <property role="EcuMT" value="8653132035599184165" />
     <property role="TrG5h" value="UserAttribute" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7wm6rPSsj4A" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -205,7 +205,7 @@
   <node concept="1TIwiD" id="7wm6rPSsj4B">
     <property role="EcuMT" value="8653132035599184167" />
     <property role="TrG5h" value="AccountAttribute" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7wm6rPSsj4C" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -218,7 +218,7 @@
   <node concept="1TIwiD" id="7wm6rPSsj4D">
     <property role="EcuMT" value="8653132035599184169" />
     <property role="TrG5h" value="Association" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7wm6rPSsj4E" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -226,7 +226,7 @@
   <node concept="1TIwiD" id="7wm6rPSsj4G">
     <property role="EcuMT" value="8653132035599184172" />
     <property role="TrG5h" value="TransactionAttribute" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7wm6rPSsj4H" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>

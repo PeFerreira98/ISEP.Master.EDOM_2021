@@ -1,8 +1,876 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082113931046:jetbrains.mps.baseLanguage.structure.ContinueStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="TypesystemDescriptor.java">
-      <unit at="7,0,11,0" name="moneyManager.typesystem.TypesystemDescriptor" />
+      <unit at="8,0,44,0" name="moneyManager.typesystem.TypesystemDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035599797095">
+    <file name="TypesystemDescriptor.java">
+      <node id="8653132035599797095" at="14,5,15,94" concept="7" />
+      <node id="8653132035599797095" at="15,94,16,55" concept="3" />
+      <node id="8653132035599797095" at="13,5,17,5" concept="0" />
+      <scope id="8653132035599797095" at="14,5,16,55">
+        <var name="nonTypesystemRule" id="8653132035599797095" />
+      </scope>
+    </file>
+    <file name="check_AccountSpec_NonTypesystemRule.java">
+      <node id="8653132035599798764" at="28,108,29,47" concept="7" />
+      <node id="8653132035599798997" at="29,47,30,0" concept="10" />
+      <node id="8653132035599810111" at="32,9,33,68" concept="7" />
+      <node id="8653132035599810111" at="33,68,34,361" concept="7" />
+      <node id="8653132035600369584" at="35,11,36,168" concept="7" />
+      <node id="8653132035600369584" at="36,168,37,73" concept="3" />
+      <node id="8653132035600616905" at="41,5,42,0" concept="10" />
+      <node id="8653132035600022826" at="42,0,43,43" concept="9" />
+      <node id="8653132035599844261" at="45,7,46,66" concept="7" />
+      <node id="8653132035599844261" at="46,66,47,243" concept="7" />
+      <node id="8653132035600370014" at="48,9,49,168" concept="7" />
+      <node id="8653132035600370421" at="49,168,50,64" concept="3" />
+      <node id="8653132035600370014" at="50,64,51,71" concept="3" />
+      <node id="8653132035600025129" at="54,5,55,0" concept="10" />
+      <node id="8653132035600027466" at="55,0,56,32" concept="9" />
+      <node id="8653132035599858552" at="58,7,59,66" concept="7" />
+      <node id="8653132035599858552" at="59,66,60,240" concept="7" />
+      <node id="8653132035599858729" at="62,5,63,0" concept="10" />
+      <node id="8653132035600333123" at="63,0,64,34" concept="7" />
+      <node id="8653132035600333141" at="66,92,67,29" concept="3" />
+      <node id="8653132035600333145" at="67,29,68,17" concept="2" />
+      <node id="8653132035600333146" at="70,5,71,0" concept="10" />
+      <node id="8653132035600333149" at="73,7,74,66" concept="7" />
+      <node id="8653132035600333149" at="74,66,75,225" concept="7" />
+      <node id="8653132035600332652" at="77,5,78,0" concept="10" />
+      <node id="8653132035599797095" at="80,50,81,35" concept="8" />
+      <node id="8653132035599797095" at="83,68,84,102" concept="8" />
+      <node id="8653132035599797095" at="86,30,87,17" concept="8" />
+      <node id="8653132035599797095" at="91,0,92,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035599797095" at="95,0,96,0" concept="11" trace="AccountAttributes$oYIG" />
+      <node id="8653132035599797095" at="99,0,100,0" concept="11" trace="AccountSpec$qm" />
+      <node id="8653132035599797095" at="25,0,27,0" concept="1" trace="check_AccountSpec_NonTypesystemRule#()V" />
+      <node id="8653132035599797095" at="80,0,83,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8653132035599797095" at="83,0,86,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8653132035599797095" at="86,0,89,0" concept="6" trace="overrides#()Z" />
+      <node id="8653132035600369584" at="34,361,38,11" concept="0" />
+      <node id="8653132035599858552" at="57,148,61,7" concept="0" />
+      <node id="8653132035600333133" at="65,123,69,7" concept="5" />
+      <node id="8653132035600333149" at="72,24,76,7" concept="0" />
+      <node id="8653132035600370014" at="47,243,52,9" concept="0" />
+      <node id="8653132035599845898" at="56,32,62,5" concept="5" />
+      <node id="8653132035600333127" at="64,34,70,5" concept="4" />
+      <node id="8653132035600333147" at="71,0,77,5" concept="5" />
+      <node id="8653132035599810111" at="31,136,39,9" concept="0" />
+      <node id="8653132035599844261" at="44,174,53,7" concept="0" />
+      <node id="8653132035599799017" at="30,0,40,7" concept="5" />
+      <node id="8653132035599827445" at="43,43,54,5" concept="5" />
+      <node id="8653132035599797105" at="27,124,41,5" concept="4" />
+      <node id="8653132035599797095" at="27,0,80,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8653132035599797095" at="25,48,25,48" />
+      <scope id="8653132035599797095" at="80,50,81,35" />
+      <scope id="8653132035599797095" at="83,68,84,102" />
+      <scope id="8653132035599797095" at="86,30,87,17" />
+      <scope id="8653132035599797095" at="25,0,27,0" />
+      <scope id="8653132035600369584" at="35,11,37,73">
+        <var name="intentionProvider" id="8653132035600369584" />
+      </scope>
+      <scope id="8653132035599858552" at="58,7,60,240">
+        <var name="_reporter_2309309498" id="8653132035599858552" />
+        <var name="errorTarget" id="8653132035599858552" />
+      </scope>
+      <scope id="8653132035600333140" at="66,92,68,17" />
+      <scope id="8653132035600333149" at="73,7,75,225">
+        <var name="_reporter_2309309498" id="8653132035600333149" />
+        <var name="errorTarget" id="8653132035600333149" />
+      </scope>
+      <scope id="8653132035600370014" at="48,9,51,71">
+        <var name="intentionProvider" id="8653132035600370014" />
+      </scope>
+      <scope id="8653132035599797095" at="80,0,83,0" />
+      <scope id="8653132035599797095" at="83,0,86,0">
+        <var name="argument" id="8653132035599797095" />
+      </scope>
+      <scope id="8653132035599797095" at="86,0,89,0" />
+      <scope id="8653132035599845900" at="57,148,61,7" />
+      <scope id="8653132035600333132" at="65,123,69,7" />
+      <scope id="8653132035600333148" at="72,24,76,7" />
+      <scope id="8653132035599810111" at="32,9,38,11">
+        <var name="_reporter_2309309498" id="8653132035599810111" />
+        <var name="errorTarget" id="8653132035599810111" />
+      </scope>
+      <scope id="8653132035600333127" at="64,34,70,5">
+        <var name="attribute" id="8653132035600333128" />
+      </scope>
+      <scope id="8653132035599844261" at="45,7,52,9">
+        <var name="_reporter_2309309498" id="8653132035599844261" />
+        <var name="errorTarget" id="8653132035599844261" />
+      </scope>
+      <scope id="8653132035599799019" at="31,136,39,9" />
+      <scope id="8653132035599827447" at="44,174,53,7" />
+      <scope id="8653132035599797108" at="28,108,40,7">
+        <var name="sibling" id="8653132035599798767" />
+      </scope>
+      <scope id="8653132035599797105" at="27,124,41,5">
+        <var name="accountSibling" id="8653132035599797106" />
+      </scope>
+      <scope id="8653132035599797096" at="27,124,78,0">
+        <var name="currencyCheck" id="8653132035600333124" />
+      </scope>
+      <scope id="8653132035599797095" at="27,0,80,0">
+        <var name="accountSpec" id="8653132035599797095" />
+        <var name="status" id="8653132035599797095" />
+        <var name="typeCheckingContext" id="8653132035599797095" />
+      </scope>
+      <unit id="8653132035599797095" at="90,0,93,0" name="moneyManager.typesystem.check_AccountSpec_NonTypesystemRule$PROPS" />
+      <unit id="8653132035599797095" at="94,0,97,0" name="moneyManager.typesystem.check_AccountSpec_NonTypesystemRule$LINKS" />
+      <unit id="8653132035599797095" at="98,0,101,0" name="moneyManager.typesystem.check_AccountSpec_NonTypesystemRule$CONCEPTS" />
+      <unit id="8653132035599797095" at="24,0,102,0" name="moneyManager.typesystem.check_AccountSpec_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035599875539">
+    <file name="TypesystemDescriptor.java">
+      <node id="8653132035599875539" at="22,5,23,88" concept="7" />
+      <node id="8653132035599875539" at="23,88,24,55" concept="3" />
+      <node id="8653132035599875539" at="21,5,25,5" concept="0" />
+      <scope id="8653132035599875539" at="22,5,24,55">
+        <var name="nonTypesystemRule" id="8653132035599875539" />
+      </scope>
+    </file>
+    <file name="check_Model_NonTypesystemRule.java">
+      <node id="6227873571042093378" at="26,100,27,45" concept="7" />
+      <node id="6227873571042093385" at="27,45,28,0" concept="10" />
+      <node id="6227873571042093388" at="30,9,31,68" concept="7" />
+      <node id="6227873571042093388" at="31,68,32,349" concept="7" />
+      <node id="8653132035600374544" at="33,11,34,162" concept="7" />
+      <node id="8653132035600374544" at="34,162,35,73" concept="3" />
+      <node id="8653132035599875546" at="39,5,40,0" concept="10" />
+      <node id="8653132035599875539" at="42,50,43,29" concept="8" />
+      <node id="8653132035599875539" at="45,68,46,102" concept="8" />
+      <node id="8653132035599875539" at="48,30,49,17" concept="8" />
+      <node id="8653132035599875539" at="53,0,54,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035599875539" at="57,0,58,0" concept="11" trace="Model$ef" />
+      <node id="8653132035599875539" at="23,0,25,0" concept="1" trace="check_Model_NonTypesystemRule#()V" />
+      <node id="8653132035599875539" at="42,0,45,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8653132035599875539" at="45,0,48,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8653132035599875539" at="48,0,51,0" concept="6" trace="overrides#()Z" />
+      <node id="8653132035600374544" at="32,349,36,11" concept="0" />
+      <node id="6227873571042093388" at="29,130,37,9" concept="0" />
+      <node id="6227873571042093386" at="28,0,38,7" concept="5" />
+      <node id="6227873571042093375" at="25,118,39,5" concept="4" />
+      <node id="8653132035599875539" at="25,0,42,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8653132035599875539" at="23,42,23,42" />
+      <scope id="8653132035599875539" at="42,50,43,29" />
+      <scope id="8653132035599875539" at="45,68,46,102" />
+      <scope id="8653132035599875539" at="48,30,49,17" />
+      <scope id="8653132035599875539" at="23,0,25,0" />
+      <scope id="8653132035600374544" at="33,11,35,73">
+        <var name="intentionProvider" id="8653132035600374544" />
+      </scope>
+      <scope id="8653132035599875539" at="42,0,45,0" />
+      <scope id="8653132035599875539" at="45,0,48,0">
+        <var name="argument" id="8653132035599875539" />
+      </scope>
+      <scope id="8653132035599875539" at="48,0,51,0" />
+      <scope id="6227873571042093388" at="30,9,36,11">
+        <var name="_reporter_2309309498" id="6227873571042093388" />
+        <var name="errorTarget" id="6227873571042093388" />
+      </scope>
+      <scope id="6227873571042093387" at="29,130,37,9" />
+      <scope id="6227873571042093377" at="26,100,38,7">
+        <var name="sibling" id="6227873571042093379" />
+      </scope>
+      <scope id="6227873571042093375" at="25,118,39,5">
+        <var name="userSimbling" id="6227873571042093376" />
+      </scope>
+      <scope id="8653132035599875540" at="25,118,40,0" />
+      <scope id="8653132035599875539" at="25,0,42,0">
+        <var name="model" id="8653132035599875539" />
+        <var name="status" id="8653132035599875539" />
+        <var name="typeCheckingContext" id="8653132035599875539" />
+      </scope>
+      <unit id="8653132035599875539" at="52,0,55,0" name="moneyManager.typesystem.check_Model_NonTypesystemRule$PROPS" />
+      <unit id="8653132035599875539" at="56,0,59,0" name="moneyManager.typesystem.check_Model_NonTypesystemRule$CONCEPTS" />
+      <unit id="8653132035599875539" at="22,0,60,0" name="moneyManager.typesystem.check_Model_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035599987279">
+    <file name="TypesystemDescriptor.java">
+      <node id="8653132035599987279" at="30,5,31,98" concept="7" />
+      <node id="8653132035599987279" at="31,98,32,55" concept="3" />
+      <node id="8653132035599987279" at="29,5,33,5" concept="0" />
+      <scope id="8653132035599987279" at="30,5,32,55">
+        <var name="nonTypesystemRule" id="8653132035599987279" />
+      </scope>
+    </file>
+    <file name="check_TransactionSpec_NonTypesystemRule.java">
+      <node id="6227873571039188506" at="28,110,29,45" concept="7" />
+      <node id="6227873571039276767" at="29,45,30,0" concept="10" />
+      <node id="6227873571039282694" at="32,9,33,68" concept="7" />
+      <node id="6227873571039282694" at="33,68,34,369" concept="7" />
+      <node id="8653132035600377261" at="35,11,36,172" concept="7" />
+      <node id="8653132035600377261" at="36,172,37,73" concept="3" />
+      <node id="6227873571039003300" at="41,5,42,0" concept="10" />
+      <node id="6227873571039641370" at="42,0,43,28" concept="9" />
+      <node id="6227873571039636895" at="45,7,46,66" concept="7" />
+      <node id="6227873571039636895" at="46,66,47,247" concept="7" />
+      <node id="8653132035600377779" at="48,9,49,172" concept="7" />
+      <node id="8653132035600378274" at="49,172,50,72" concept="3" />
+      <node id="8653132035600377779" at="50,72,51,71" concept="3" />
+      <node id="8653132035600033818" at="54,5,55,0" concept="10" />
+      <node id="8653132035600034448" at="55,0,56,32" concept="9" />
+      <node id="6227873571039636900" at="58,7,59,66" concept="7" />
+      <node id="6227873571039636900" at="59,66,60,244" concept="7" />
+      <node id="8653132035600061897" at="62,5,63,0" concept="10" />
+      <node id="8653132035600072810" at="63,0,64,34" concept="7" />
+      <node id="8653132035600075805" at="64,34,65,32" concept="7" />
+      <node id="8653132035600077024" at="65,32,66,30" concept="7" />
+      <node id="8653132035600095971" at="68,92,69,29" concept="3" />
+      <node id="8653132035600131264" at="69,29,70,17" concept="2" />
+      <node id="8653132035600113614" at="72,90,73,27" concept="3" />
+      <node id="8653132035600131277" at="73,27,74,17" concept="2" />
+      <node id="8653132035600129812" at="76,88,77,25" concept="3" />
+      <node id="8653132035600131290" at="77,25,78,17" concept="2" />
+      <node id="8653132035600131765" at="80,5,81,0" concept="10" />
+      <node id="8653132035600137791" at="83,7,84,66" concept="7" />
+      <node id="8653132035600137791" at="84,66,85,229" concept="7" />
+      <node id="8653132035600137946" at="87,5,88,0" concept="10" />
+      <node id="8653132035600142111" at="90,7,91,66" concept="7" />
+      <node id="8653132035600142111" at="91,66,92,227" concept="7" />
+      <node id="8653132035600142270" at="94,5,95,0" concept="10" />
+      <node id="8653132035600146977" at="97,7,98,66" concept="7" />
+      <node id="8653132035600146977" at="98,66,99,225" concept="7" />
+      <node id="8653132035600064234" at="101,5,102,0" concept="10" />
+      <node id="8653132035599987279" at="104,50,105,39" concept="8" />
+      <node id="8653132035599987279" at="107,68,108,102" concept="8" />
+      <node id="8653132035599987279" at="110,30,111,17" concept="8" />
+      <node id="8653132035599987279" at="115,0,116,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035599987279" at="119,0,120,0" concept="11" trace="TransactionAttributes$oTll" />
+      <node id="8653132035599987279" at="123,0,124,0" concept="11" trace="TransactionSpec$7p" />
+      <node id="8653132035599987279" at="25,0,27,0" concept="1" trace="check_TransactionSpec_NonTypesystemRule#()V" />
+      <node id="8653132035599987279" at="104,0,107,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8653132035599987279" at="107,0,110,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8653132035599987279" at="110,0,113,0" concept="6" trace="overrides#()Z" />
+      <node id="8653132035600377261" at="34,369,38,11" concept="0" />
+      <node id="6227873571039636900" at="57,155,61,7" concept="0" />
+      <node id="8653132035600079447" at="67,131,71,7" concept="5" />
+      <node id="8653132035600101233" at="71,7,75,7" concept="5" />
+      <node id="8653132035600118327" at="75,7,79,7" concept="5" />
+      <node id="8653132035600137791" at="82,24,86,7" concept="0" />
+      <node id="8653132035600142111" at="89,22,93,7" concept="0" />
+      <node id="8653132035600146977" at="96,20,100,7" concept="0" />
+      <node id="8653132035600377779" at="47,247,52,9" concept="0" />
+      <node id="6227873571039636898" at="56,32,62,5" concept="5" />
+      <node id="8653132035600135761" at="81,0,87,5" concept="5" />
+      <node id="8653132035600141278" at="88,0,94,5" concept="5" />
+      <node id="8653132035600146126" at="95,0,101,5" concept="5" />
+      <node id="6227873571039282694" at="31,140,39,9" concept="0" />
+      <node id="6227873571039636895" at="44,182,53,7" concept="0" />
+      <node id="6227873571039276897" at="30,0,40,7" concept="5" />
+      <node id="6227873571039636880" at="43,28,54,5" concept="5" />
+      <node id="6227873571039003434" at="27,128,41,5" concept="4" />
+      <node id="8653132035600065340" at="66,30,80,5" concept="4" />
+      <node id="8653132035599987279" at="27,0,104,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8653132035599987279" at="25,52,25,52" />
+      <scope id="8653132035599987279" at="104,50,105,39" />
+      <scope id="8653132035599987279" at="107,68,108,102" />
+      <scope id="8653132035599987279" at="110,30,111,17" />
+      <scope id="8653132035599987279" at="25,0,27,0" />
+      <scope id="8653132035600377261" at="35,11,37,73">
+        <var name="intentionProvider" id="8653132035600377261" />
+      </scope>
+      <scope id="6227873571039636900" at="58,7,60,244">
+        <var name="_reporter_2309309498" id="6227873571039636900" />
+        <var name="errorTarget" id="6227873571039636900" />
+      </scope>
+      <scope id="8653132035600079449" at="68,92,70,17" />
+      <scope id="8653132035600101235" at="72,90,74,17" />
+      <scope id="8653132035600118329" at="76,88,78,17" />
+      <scope id="8653132035600137791" at="83,7,85,229">
+        <var name="_reporter_2309309498" id="8653132035600137791" />
+        <var name="errorTarget" id="8653132035600137791" />
+      </scope>
+      <scope id="8653132035600142111" at="90,7,92,227">
+        <var name="_reporter_2309309498" id="8653132035600142111" />
+        <var name="errorTarget" id="8653132035600142111" />
+      </scope>
+      <scope id="8653132035600146977" at="97,7,99,225">
+        <var name="_reporter_2309309498" id="8653132035600146977" />
+        <var name="errorTarget" id="8653132035600146977" />
+      </scope>
+      <scope id="8653132035600377779" at="48,9,51,71">
+        <var name="intentionProvider" id="8653132035600377779" />
+      </scope>
+      <scope id="8653132035599987279" at="104,0,107,0" />
+      <scope id="8653132035599987279" at="107,0,110,0">
+        <var name="argument" id="8653132035599987279" />
+      </scope>
+      <scope id="8653132035599987279" at="110,0,113,0" />
+      <scope id="6227873571039636899" at="57,155,61,7" />
+      <scope id="8653132035600135763" at="82,24,86,7" />
+      <scope id="8653132035600141280" at="89,22,93,7" />
+      <scope id="8653132035600146128" at="96,20,100,7" />
+      <scope id="6227873571039282694" at="32,9,38,11">
+        <var name="_reporter_2309309498" id="6227873571039282694" />
+        <var name="errorTarget" id="6227873571039282694" />
+      </scope>
+      <scope id="6227873571039636895" at="45,7,52,9">
+        <var name="_reporter_2309309498" id="6227873571039636895" />
+        <var name="errorTarget" id="6227873571039636895" />
+      </scope>
+      <scope id="6227873571039276899" at="31,140,39,9" />
+      <scope id="6227873571039636894" at="44,182,53,7" />
+      <scope id="6227873571039003440" at="28,110,40,7">
+        <var name="sibling" id="6227873571039188502" />
+      </scope>
+      <scope id="8653132035600065346" at="67,131,79,7" />
+      <scope id="6227873571039003434" at="27,128,41,5">
+        <var name="userSimbling" id="6227873571039003436" />
+      </scope>
+      <scope id="8653132035600065340" at="66,30,80,5">
+        <var name="attribute" id="8653132035600065342" />
+      </scope>
+      <scope id="8653132035599987280" at="27,128,102,0">
+        <var name="amountCheck" id="8653132035600075808" />
+        <var name="currencyCheck" id="8653132035600072813" />
+        <var name="dateCheck" id="8653132035600077027" />
+      </scope>
+      <scope id="8653132035599987279" at="27,0,104,0">
+        <var name="status" id="8653132035599987279" />
+        <var name="transactionSpec" id="8653132035599987279" />
+        <var name="typeCheckingContext" id="8653132035599987279" />
+      </scope>
+      <unit id="8653132035599987279" at="114,0,117,0" name="moneyManager.typesystem.check_TransactionSpec_NonTypesystemRule$PROPS" />
+      <unit id="8653132035599987279" at="118,0,121,0" name="moneyManager.typesystem.check_TransactionSpec_NonTypesystemRule$LINKS" />
+      <unit id="8653132035599987279" at="122,0,125,0" name="moneyManager.typesystem.check_TransactionSpec_NonTypesystemRule$CONCEPTS" />
+      <unit id="8653132035599987279" at="24,0,126,0" name="moneyManager.typesystem.check_TransactionSpec_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035599998678">
+    <file name="TypesystemDescriptor.java">
+      <node id="8653132035599998678" at="38,5,39,91" concept="7" />
+      <node id="8653132035599998678" at="39,91,40,55" concept="3" />
+      <node id="8653132035599998678" at="37,5,41,5" concept="0" />
+      <scope id="8653132035599998678" at="38,5,40,55">
+        <var name="nonTypesystemRule" id="8653132035599998678" />
+      </scope>
+    </file>
+    <file name="check_UserSpec_NonTypesystemRule.java">
+      <node id="8653132035599998688" at="28,102,29,44" concept="7" />
+      <node id="8653132035599998695" at="29,44,30,0" concept="10" />
+      <node id="8653132035599998698" at="32,9,33,68" concept="7" />
+      <node id="8653132035599998698" at="33,68,34,355" concept="7" />
+      <node id="8653132035600380720" at="35,11,36,165" concept="7" />
+      <node id="8653132035600380720" at="36,165,37,73" concept="3" />
+      <node id="8653132035599998724" at="41,5,42,0" concept="10" />
+      <node id="8653132035599998725" at="42,0,43,28" concept="9" />
+      <node id="8653132035599998746" at="45,7,46,66" concept="7" />
+      <node id="8653132035599998746" at="46,66,47,240" concept="7" />
+      <node id="8653132035600381143" at="48,9,49,165" concept="7" />
+      <node id="8653132035600381544" at="49,165,50,58" concept="3" />
+      <node id="8653132035600381143" at="50,58,51,71" concept="3" />
+      <node id="8653132035600014571" at="54,5,55,0" concept="10" />
+      <node id="8653132035600019063" at="55,0,56,33" concept="9" />
+      <node id="8653132035599998751" at="58,7,59,66" concept="7" />
+      <node id="8653132035599998751" at="59,66,60,237" concept="7" />
+      <node id="8653132035600304166" at="62,5,63,0" concept="10" />
+      <node id="8653132035600306330" at="63,0,64,30" concept="7" />
+      <node id="8653132035600306352" at="66,88,67,25" concept="3" />
+      <node id="8653132035600306356" at="67,25,68,17" concept="2" />
+      <node id="8653132035600306383" at="70,5,71,0" concept="10" />
+      <node id="8653132035600306386" at="73,7,74,66" concept="7" />
+      <node id="8653132035600306386" at="74,66,75,218" concept="7" />
+      <node id="8653132035599998678" at="79,50,80,32" concept="8" />
+      <node id="8653132035599998678" at="82,68,83,102" concept="8" />
+      <node id="8653132035599998678" at="85,30,86,17" concept="8" />
+      <node id="8653132035599998678" at="90,0,91,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035599998678" at="94,0,95,0" concept="11" trace="UserAttributes$oE3R" />
+      <node id="8653132035599998678" at="98,0,99,0" concept="11" trace="UserSpec$oT" />
+      <node id="8653132035599998678" at="25,0,27,0" concept="1" trace="check_UserSpec_NonTypesystemRule#()V" />
+      <node id="8653132035599998678" at="79,0,82,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8653132035599998678" at="82,0,85,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8653132035599998678" at="85,0,88,0" concept="6" trace="overrides#()Z" />
+      <node id="8653132035600380720" at="34,355,38,11" concept="0" />
+      <node id="8653132035599998751" at="57,141,61,7" concept="0" />
+      <node id="8653132035600306344" at="65,117,69,7" concept="5" />
+      <node id="8653132035600306386" at="72,20,76,7" concept="0" />
+      <node id="8653132035600381143" at="47,240,52,9" concept="0" />
+      <node id="8653132035599998749" at="56,33,62,5" concept="5" />
+      <node id="8653132035600306338" at="64,30,70,5" concept="4" />
+      <node id="8653132035600306384" at="71,0,77,5" concept="5" />
+      <node id="8653132035599998698" at="31,133,39,9" concept="0" />
+      <node id="8653132035599998746" at="44,168,53,7" concept="0" />
+      <node id="8653132035599998696" at="30,0,40,7" concept="5" />
+      <node id="8653132035599998731" at="43,28,54,5" concept="5" />
+      <node id="8653132035599998685" at="27,121,41,5" concept="4" />
+      <node id="8653132035599998678" at="27,0,79,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8653132035599998678" at="25,45,25,45" />
+      <scope id="8653132035599998678" at="79,50,80,32" />
+      <scope id="8653132035599998678" at="82,68,83,102" />
+      <scope id="8653132035599998678" at="85,30,86,17" />
+      <scope id="8653132035599998678" at="25,0,27,0" />
+      <scope id="8653132035600380720" at="35,11,37,73">
+        <var name="intentionProvider" id="8653132035600380720" />
+      </scope>
+      <scope id="8653132035599998751" at="58,7,60,237">
+        <var name="_reporter_2309309498" id="8653132035599998751" />
+        <var name="errorTarget" id="8653132035599998751" />
+      </scope>
+      <scope id="8653132035600306351" at="66,88,68,17" />
+      <scope id="8653132035600306386" at="73,7,75,218">
+        <var name="_reporter_2309309498" id="8653132035600306386" />
+        <var name="errorTarget" id="8653132035600306386" />
+      </scope>
+      <scope id="8653132035600381143" at="48,9,51,71">
+        <var name="intentionProvider" id="8653132035600381143" />
+      </scope>
+      <scope id="8653132035599998678" at="79,0,82,0" />
+      <scope id="8653132035599998678" at="82,0,85,0">
+        <var name="argument" id="8653132035599998678" />
+      </scope>
+      <scope id="8653132035599998678" at="85,0,88,0" />
+      <scope id="8653132035599998750" at="57,141,61,7" />
+      <scope id="8653132035600306343" at="65,117,69,7" />
+      <scope id="8653132035600306385" at="72,20,76,7" />
+      <scope id="8653132035599998698" at="32,9,38,11">
+        <var name="_reporter_2309309498" id="8653132035599998698" />
+        <var name="errorTarget" id="8653132035599998698" />
+      </scope>
+      <scope id="8653132035600306338" at="64,30,70,5">
+        <var name="attribute" id="8653132035600306339" />
+      </scope>
+      <scope id="8653132035599998746" at="45,7,52,9">
+        <var name="_reporter_2309309498" id="8653132035599998746" />
+        <var name="errorTarget" id="8653132035599998746" />
+      </scope>
+      <scope id="8653132035599998697" at="31,133,39,9" />
+      <scope id="8653132035599998745" at="44,168,53,7" />
+      <scope id="8653132035599998687" at="28,102,40,7">
+        <var name="sibling" id="8653132035599998689" />
+      </scope>
+      <scope id="8653132035599998685" at="27,121,41,5">
+        <var name="userSibling" id="8653132035599998686" />
+      </scope>
+      <scope id="8653132035599998679" at="27,121,77,5">
+        <var name="nameCheck" id="8653132035600306331" />
+      </scope>
+      <scope id="8653132035599998678" at="27,0,79,0">
+        <var name="status" id="8653132035599998678" />
+        <var name="typeCheckingContext" id="8653132035599998678" />
+        <var name="userSpec" id="8653132035599998678" />
+      </scope>
+      <unit id="8653132035599998678" at="89,0,92,0" name="moneyManager.typesystem.check_UserSpec_NonTypesystemRule$PROPS" />
+      <unit id="8653132035599998678" at="93,0,96,0" name="moneyManager.typesystem.check_UserSpec_NonTypesystemRule$LINKS" />
+      <unit id="8653132035599998678" at="97,0,100,0" name="moneyManager.typesystem.check_UserSpec_NonTypesystemRule$CONCEPTS" />
+      <unit id="8653132035599998678" at="24,0,101,0" name="moneyManager.typesystem.check_UserSpec_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600041093">
+    <file name="TypesystemDescriptor.java">
+      <node id="8653132035600041093" at="18,5,19,94" concept="7" />
+      <node id="8653132035600041093" at="19,94,20,55" concept="3" />
+      <node id="8653132035600041093" at="17,5,21,5" concept="0" />
+      <scope id="8653132035600041093" at="18,5,20,55">
+        <var name="nonTypesystemRule" id="8653132035600041093" />
+      </scope>
+    </file>
+    <file name="check_Association_NonTypesystemRule.java">
+      <node id="8653132035600041292" at="23,124,24,43" concept="9" />
+      <node id="8653132035600041302" at="26,7,27,66" concept="7" />
+      <node id="8653132035600041302" at="27,66,28,243" concept="7" />
+      <node id="8653132035600372099" at="29,9,30,168" concept="7" />
+      <node id="8653132035600373290" at="30,168,31,68" concept="3" />
+      <node id="8653132035600372099" at="31,68,32,71" concept="3" />
+      <node id="8653132035600041318" at="35,5,36,0" concept="10" />
+      <node id="8653132035600041319" at="36,0,37,32" concept="9" />
+      <node id="8653132035600041329" at="39,7,40,66" concept="7" />
+      <node id="8653132035600041329" at="40,66,41,240" concept="7" />
+      <node id="8653132035600041093" at="45,50,46,35" concept="8" />
+      <node id="8653132035600041093" at="48,68,49,102" concept="8" />
+      <node id="8653132035600041093" at="51,30,52,17" concept="8" />
+      <node id="8653132035600041093" at="56,0,57,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035600041093" at="60,0,61,0" concept="11" trace="Association$aj" />
+      <node id="8653132035600041093" at="21,0,23,0" concept="1" trace="check_Association_NonTypesystemRule#()V" />
+      <node id="8653132035600041093" at="45,0,48,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8653132035600041093" at="48,0,51,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8653132035600041093" at="51,0,54,0" concept="6" trace="overrides#()Z" />
+      <node id="8653132035600041329" at="38,148,42,7" concept="0" />
+      <node id="8653132035600372099" at="28,243,33,9" concept="0" />
+      <node id="8653132035600041327" at="37,32,43,5" concept="5" />
+      <node id="8653132035600041302" at="25,174,34,7" concept="0" />
+      <node id="8653132035600041300" at="24,43,35,5" concept="5" />
+      <node id="8653132035600041093" at="23,0,45,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8653132035600041093" at="21,48,21,48" />
+      <scope id="8653132035600041093" at="45,50,46,35" />
+      <scope id="8653132035600041093" at="48,68,49,102" />
+      <scope id="8653132035600041093" at="51,30,52,17" />
+      <scope id="8653132035600041093" at="21,0,23,0" />
+      <scope id="8653132035600041329" at="39,7,41,240">
+        <var name="_reporter_2309309498" id="8653132035600041329" />
+        <var name="errorTarget" id="8653132035600041329" />
+      </scope>
+      <scope id="8653132035600372099" at="29,9,32,71">
+        <var name="intentionProvider" id="8653132035600372099" />
+      </scope>
+      <scope id="8653132035600041093" at="45,0,48,0" />
+      <scope id="8653132035600041093" at="48,0,51,0">
+        <var name="argument" id="8653132035600041093" />
+      </scope>
+      <scope id="8653132035600041093" at="51,0,54,0" />
+      <scope id="8653132035600041328" at="38,148,42,7" />
+      <scope id="8653132035600041302" at="26,7,33,9">
+        <var name="_reporter_2309309498" id="8653132035600041302" />
+        <var name="errorTarget" id="8653132035600041302" />
+      </scope>
+      <scope id="8653132035600041301" at="25,174,34,7" />
+      <scope id="8653132035600041094" at="23,124,43,5" />
+      <scope id="8653132035600041093" at="23,0,45,0">
+        <var name="association" id="8653132035600041093" />
+        <var name="status" id="8653132035600041093" />
+        <var name="typeCheckingContext" id="8653132035600041093" />
+      </scope>
+      <unit id="8653132035600041093" at="55,0,58,0" name="moneyManager.typesystem.check_Association_NonTypesystemRule$PROPS" />
+      <unit id="8653132035600041093" at="59,0,62,0" name="moneyManager.typesystem.check_Association_NonTypesystemRule$CONCEPTS" />
+      <unit id="8653132035600041093" at="20,0,63,0" name="moneyManager.typesystem.check_Association_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600184764">
+    <file name="CapitalizeAccountSpecName_QuickFix.java">
+      <node id="8653132035600184764" at="13,47,14,118" concept="12" />
+      <node id="8653132035600187113" at="16,44,17,41" concept="8" />
+      <node id="8653132035600187518" at="19,35,20,407" concept="3" />
+      <node id="8653132035600184764" at="24,0,25,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035600184764" at="13,0,16,0" concept="1" trace="CapitalizeAccountSpecName_QuickFix#()V" />
+      <node id="8653132035600184764" at="16,0,19,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8653132035600184764" at="19,0,22,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8653132035600184764" at="13,47,14,118" />
+      <scope id="8653132035600186815" at="16,44,17,41" />
+      <scope id="8653132035600184766" at="19,35,20,407" />
+      <scope id="8653132035600184764" at="13,0,16,0" />
+      <scope id="8653132035600184764" at="16,0,19,0">
+        <var name="node" id="8653132035600184764" />
+      </scope>
+      <scope id="8653132035600184764" at="19,0,22,0">
+        <var name="node" id="8653132035600184764" />
+      </scope>
+      <unit id="8653132035600184764" at="23,0,26,0" name="moneyManager.typesystem.CapitalizeAccountSpecName_QuickFix$PROPS" />
+      <unit id="8653132035600184764" at="12,0,27,0" name="moneyManager.typesystem.CapitalizeAccountSpecName_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600210748">
+    <file name="CapitalizeAssociationName_QuickFix.java">
+      <node id="8653132035600210748" at="13,47,14,118" concept="12" />
+      <node id="8653132035600211086" at="16,44,17,41" concept="8" />
+      <node id="8653132035600211429" at="19,35,20,419" concept="3" />
+      <node id="8653132035600210748" at="24,0,25,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035600210748" at="13,0,16,0" concept="1" trace="CapitalizeAssociationName_QuickFix#()V" />
+      <node id="8653132035600210748" at="16,0,19,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8653132035600210748" at="19,0,22,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8653132035600210748" at="13,47,14,118" />
+      <scope id="8653132035600210788" at="16,44,17,41" />
+      <scope id="8653132035600210750" at="19,35,20,419" />
+      <scope id="8653132035600210748" at="13,0,16,0" />
+      <scope id="8653132035600210748" at="16,0,19,0">
+        <var name="node" id="8653132035600210748" />
+      </scope>
+      <scope id="8653132035600210748" at="19,0,22,0">
+        <var name="node" id="8653132035600210748" />
+      </scope>
+      <unit id="8653132035600210748" at="23,0,26,0" name="moneyManager.typesystem.CapitalizeAssociationName_QuickFix$PROPS" />
+      <unit id="8653132035600210748" at="12,0,27,0" name="moneyManager.typesystem.CapitalizeAssociationName_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600237937">
+    <file name="CapitalizeTransactionSpecName_QuickFix.java">
+      <node id="8653132035600237937" at="13,51,14,118" concept="12" />
+      <node id="8653132035600238280" at="16,44,17,41" concept="8" />
+      <node id="8653132035600238379" at="19,35,20,431" concept="3" />
+      <node id="8653132035600237937" at="24,0,25,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035600237937" at="13,0,16,0" concept="1" trace="CapitalizeTransactionSpecName_QuickFix#()V" />
+      <node id="8653132035600237937" at="16,0,19,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8653132035600237937" at="19,0,22,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8653132035600237937" at="13,51,14,118" />
+      <scope id="8653132035600237982" at="16,44,17,41" />
+      <scope id="8653132035600237939" at="19,35,20,431" />
+      <scope id="8653132035600237937" at="13,0,16,0" />
+      <scope id="8653132035600237937" at="16,0,19,0">
+        <var name="node" id="8653132035600237937" />
+      </scope>
+      <scope id="8653132035600237937" at="19,0,22,0">
+        <var name="node" id="8653132035600237937" />
+      </scope>
+      <unit id="8653132035600237937" at="23,0,26,0" name="moneyManager.typesystem.CapitalizeTransactionSpecName_QuickFix$PROPS" />
+      <unit id="8653132035600237937" at="12,0,27,0" name="moneyManager.typesystem.CapitalizeTransactionSpecName_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600267074">
+    <file name="CapitalizeUserSpecName_QuickFix.java">
+      <node id="8653132035600267074" at="13,44,14,118" concept="12" />
+      <node id="8653132035600267407" at="16,44,17,41" concept="8" />
+      <node id="8653132035600267812" at="19,35,20,389" concept="3" />
+      <node id="8653132035600267074" at="24,0,25,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035600267074" at="13,0,16,0" concept="1" trace="CapitalizeUserSpecName_QuickFix#()V" />
+      <node id="8653132035600267074" at="16,0,19,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8653132035600267074" at="19,0,22,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8653132035600267074" at="13,44,14,118" />
+      <scope id="8653132035600267109" at="16,44,17,41" />
+      <scope id="8653132035600267076" at="19,35,20,389" />
+      <scope id="8653132035600267074" at="13,0,16,0" />
+      <scope id="8653132035600267074" at="16,0,19,0">
+        <var name="node" id="8653132035600267074" />
+      </scope>
+      <scope id="8653132035600267074" at="19,0,22,0">
+        <var name="node" id="8653132035600267074" />
+      </scope>
+      <unit id="8653132035600267074" at="23,0,26,0" name="moneyManager.typesystem.CapitalizeUserSpecName_QuickFix$PROPS" />
+      <unit id="8653132035600267074" at="12,0,27,0" name="moneyManager.typesystem.CapitalizeUserSpecName_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600292167">
+    <file name="DeleteUniqueAccountSpec_QuickFix.java">
+      <node id="8653132035600292167" at="11,45,12,118" concept="12" />
+      <node id="8653132035600292500" at="14,44,15,32" concept="8" />
+      <node id="8653132035600292938" at="17,35,18,103" concept="3" />
+      <node id="8653132035600292167" at="11,0,14,0" concept="1" trace="DeleteUniqueAccountSpec_QuickFix#()V" />
+      <node id="8653132035600292167" at="14,0,17,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8653132035600292167" at="17,0,20,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8653132035600292167" at="11,45,12,118" />
+      <scope id="8653132035600292202" at="14,44,15,32" />
+      <scope id="8653132035600292169" at="17,35,18,103" />
+      <scope id="8653132035600292167" at="11,0,14,0" />
+      <scope id="8653132035600292167" at="14,0,17,0">
+        <var name="node" id="8653132035600292167" />
+      </scope>
+      <scope id="8653132035600292167" at="17,0,20,0">
+        <var name="node" id="8653132035600292167" />
+      </scope>
+      <unit id="8653132035600292167" at="10,0,21,0" name="moneyManager.typesystem.DeleteUniqueAccountSpec_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600294912">
+    <file name="DeleteUniqueModel_QuickFix.java">
+      <node id="8653132035600294912" at="11,39,12,118" concept="12" />
+      <node id="8653132035600295387" at="14,44,15,31" concept="8" />
+      <node id="8653132035600295548" at="17,35,18,95" concept="3" />
+      <node id="8653132035600294912" at="11,0,14,0" concept="1" trace="DeleteUniqueModel_QuickFix#()V" />
+      <node id="8653132035600294912" at="14,0,17,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8653132035600294912" at="17,0,20,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8653132035600294912" at="11,39,12,118" />
+      <scope id="8653132035600295089" at="14,44,15,31" />
+      <scope id="8653132035600294914" at="17,35,18,95" />
+      <scope id="8653132035600294912" at="11,0,14,0" />
+      <scope id="8653132035600294912" at="14,0,17,0">
+        <var name="node" id="8653132035600294912" />
+      </scope>
+      <scope id="8653132035600294912" at="17,0,20,0">
+        <var name="node" id="8653132035600294912" />
+      </scope>
+      <unit id="8653132035600294912" at="10,0,21,0" name="moneyManager.typesystem.DeleteUniqueModel_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600297388">
+    <file name="DeleteUniqueTransactionSpec_QuickFix.java">
+      <node id="8653132035600297388" at="11,49,12,118" concept="12" />
+      <node id="8653132035600297840" at="14,44,15,37" concept="8" />
+      <node id="8653132035600298245" at="17,35,18,111" concept="3" />
+      <node id="8653132035600297388" at="11,0,14,0" concept="1" trace="DeleteUniqueTransactionSpec_QuickFix#()V" />
+      <node id="8653132035600297388" at="14,0,17,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8653132035600297388" at="17,0,20,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8653132035600297388" at="11,49,12,118" />
+      <scope id="8653132035600297542" at="14,44,15,37" />
+      <scope id="8653132035600297390" at="17,35,18,111" />
+      <scope id="8653132035600297388" at="11,0,14,0" />
+      <scope id="8653132035600297388" at="14,0,17,0">
+        <var name="node" id="8653132035600297388" />
+      </scope>
+      <scope id="8653132035600297388" at="17,0,20,0">
+        <var name="node" id="8653132035600297388" />
+      </scope>
+      <unit id="8653132035600297388" at="10,0,21,0" name="moneyManager.typesystem.DeleteUniqueTransactionSpec_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600299940">
+    <file name="DeleteUniqueUserSpec_QuickFix.java">
+      <node id="8653132035600299940" at="11,42,12,118" concept="12" />
+      <node id="8653132035600300279" at="14,44,15,30" concept="8" />
+      <node id="8653132035600300653" at="17,35,18,97" concept="3" />
+      <node id="8653132035600299940" at="11,0,14,0" concept="1" trace="DeleteUniqueUserSpec_QuickFix#()V" />
+      <node id="8653132035600299940" at="14,0,17,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8653132035600299940" at="17,0,20,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8653132035600299940" at="11,42,12,118" />
+      <scope id="8653132035600299981" at="14,44,15,30" />
+      <scope id="8653132035600299942" at="17,35,18,97" />
+      <scope id="8653132035600299940" at="11,0,14,0" />
+      <scope id="8653132035600299940" at="14,0,17,0">
+        <var name="node" id="8653132035600299940" />
+      </scope>
+      <scope id="8653132035600299940" at="17,0,20,0">
+        <var name="node" id="8653132035600299940" />
+      </scope>
+      <unit id="8653132035600299940" at="10,0,21,0" name="moneyManager.typesystem.DeleteUniqueUserSpec_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600347963">
+    <file name="TypesystemDescriptor.java">
+      <node id="8653132035600347963" at="34,5,35,96" concept="7" />
+      <node id="8653132035600347963" at="35,96,36,55" concept="3" />
+      <node id="8653132035600347963" at="33,5,37,5" concept="0" />
+      <scope id="8653132035600347963" at="34,5,36,55">
+        <var name="nonTypesystemRule" id="8653132035600347963" />
+      </scope>
+    </file>
+    <file name="check_UserAttribute_NonTypesystemRule.java">
+      <node id="8653132035600347970" at="22,126,23,32" concept="9" />
+      <node id="8653132035600347980" at="25,7,26,66" concept="7" />
+      <node id="8653132035600347980" at="26,66,27,242" concept="7" />
+      <node id="8653132035600347963" at="31,50,32,37" concept="8" />
+      <node id="8653132035600347963" at="34,68,35,102" concept="8" />
+      <node id="8653132035600347963" at="37,30,38,17" concept="8" />
+      <node id="8653132035600347963" at="42,0,43,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035600347963" at="46,0,47,0" concept="11" trace="UserAttribute$8n" />
+      <node id="8653132035600347963" at="20,0,22,0" concept="1" trace="check_UserAttribute_NonTypesystemRule#()V" />
+      <node id="8653132035600347963" at="31,0,34,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8653132035600347963" at="34,0,37,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8653132035600347963" at="37,0,40,0" concept="6" trace="overrides#()Z" />
+      <node id="8653132035600347980" at="24,152,28,7" concept="0" />
+      <node id="8653132035600347978" at="23,32,29,5" concept="5" />
+      <node id="8653132035600347963" at="22,0,31,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8653132035600347963" at="20,50,20,50" />
+      <scope id="8653132035600347963" at="31,50,32,37" />
+      <scope id="8653132035600347963" at="34,68,35,102" />
+      <scope id="8653132035600347963" at="37,30,38,17" />
+      <scope id="8653132035600347963" at="20,0,22,0" />
+      <scope id="8653132035600347980" at="25,7,27,242">
+        <var name="_reporter_2309309498" id="8653132035600347980" />
+        <var name="errorTarget" id="8653132035600347980" />
+      </scope>
+      <scope id="8653132035600347963" at="31,0,34,0" />
+      <scope id="8653132035600347963" at="34,0,37,0">
+        <var name="argument" id="8653132035600347963" />
+      </scope>
+      <scope id="8653132035600347963" at="37,0,40,0" />
+      <scope id="8653132035600347979" at="24,152,28,7" />
+      <scope id="8653132035600347964" at="22,126,29,5" />
+      <scope id="8653132035600347963" at="22,0,31,0">
+        <var name="status" id="8653132035600347963" />
+        <var name="typeCheckingContext" id="8653132035600347963" />
+        <var name="userAttribute" id="8653132035600347963" />
+      </scope>
+      <unit id="8653132035600347963" at="41,0,44,0" name="moneyManager.typesystem.check_UserAttribute_NonTypesystemRule$PROPS" />
+      <unit id="8653132035600347963" at="45,0,48,0" name="moneyManager.typesystem.check_UserAttribute_NonTypesystemRule$CONCEPTS" />
+      <unit id="8653132035600347963" at="19,0,49,0" name="moneyManager.typesystem.check_UserAttribute_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600350434">
+    <file name="TypesystemDescriptor.java">
+      <node id="8653132035600350434" at="10,5,11,99" concept="7" />
+      <node id="8653132035600350434" at="11,99,12,55" concept="3" />
+      <node id="8653132035600350434" at="9,33,13,5" concept="0" />
+      <scope id="8653132035600350434" at="10,5,12,55">
+        <var name="nonTypesystemRule" id="8653132035600350434" />
+      </scope>
+    </file>
+    <file name="check_AccountAttribute_NonTypesystemRule.java">
+      <node id="8653132035600350441" at="22,117,23,32" concept="9" />
+      <node id="8653132035600350451" at="25,7,26,66" concept="7" />
+      <node id="8653132035600350451" at="26,66,27,233" concept="7" />
+      <node id="8653132035600350434" at="31,50,32,40" concept="8" />
+      <node id="8653132035600350434" at="34,68,35,102" concept="8" />
+      <node id="8653132035600350434" at="37,30,38,17" concept="8" />
+      <node id="8653132035600350434" at="42,0,43,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035600350434" at="46,0,47,0" concept="11" trace="AccountAttribute$9l" />
+      <node id="8653132035600350434" at="20,0,22,0" concept="1" trace="check_AccountAttribute_NonTypesystemRule#()V" />
+      <node id="8653132035600350434" at="31,0,34,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8653132035600350434" at="34,0,37,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8653132035600350434" at="37,0,40,0" concept="6" trace="overrides#()Z" />
+      <node id="8653132035600350451" at="24,134,28,7" concept="0" />
+      <node id="8653132035600350449" at="23,32,29,5" concept="5" />
+      <node id="8653132035600350434" at="22,0,31,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8653132035600350434" at="20,53,20,53" />
+      <scope id="8653132035600350434" at="31,50,32,40" />
+      <scope id="8653132035600350434" at="34,68,35,102" />
+      <scope id="8653132035600350434" at="37,30,38,17" />
+      <scope id="8653132035600350434" at="20,0,22,0" />
+      <scope id="8653132035600350451" at="25,7,27,233">
+        <var name="_reporter_2309309498" id="8653132035600350451" />
+        <var name="errorTarget" id="8653132035600350451" />
+      </scope>
+      <scope id="8653132035600350434" at="31,0,34,0" />
+      <scope id="8653132035600350434" at="34,0,37,0">
+        <var name="argument" id="8653132035600350434" />
+      </scope>
+      <scope id="8653132035600350434" at="37,0,40,0" />
+      <scope id="8653132035600350450" at="24,134,28,7" />
+      <scope id="8653132035600350435" at="22,117,29,5" />
+      <scope id="8653132035600350434" at="22,0,31,0">
+        <var name="node" id="8653132035600350434" />
+        <var name="status" id="8653132035600350434" />
+        <var name="typeCheckingContext" id="8653132035600350434" />
+      </scope>
+      <unit id="8653132035600350434" at="41,0,44,0" name="moneyManager.typesystem.check_AccountAttribute_NonTypesystemRule$PROPS" />
+      <unit id="8653132035600350434" at="45,0,48,0" name="moneyManager.typesystem.check_AccountAttribute_NonTypesystemRule$CONCEPTS" />
+      <unit id="8653132035600350434" at="19,0,49,0" name="moneyManager.typesystem.check_AccountAttribute_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem)/8653132035600353284">
+    <file name="TypesystemDescriptor.java">
+      <node id="8653132035600353284" at="26,5,27,103" concept="7" />
+      <node id="8653132035600353284" at="27,103,28,55" concept="3" />
+      <node id="8653132035600353284" at="25,5,29,5" concept="0" />
+      <scope id="8653132035600353284" at="26,5,28,55">
+        <var name="nonTypesystemRule" id="8653132035600353284" />
+      </scope>
+    </file>
+    <file name="check_TransactionAttribute_NonTypesystemRule.java">
+      <node id="8653132035600353297" at="22,133,23,32" concept="9" />
+      <node id="8653132035600353307" at="25,7,26,66" concept="7" />
+      <node id="8653132035600353307" at="26,66,27,249" concept="7" />
+      <node id="8653132035600353284" at="31,50,32,44" concept="8" />
+      <node id="8653132035600353284" at="34,68,35,102" concept="8" />
+      <node id="8653132035600353284" at="37,30,38,17" concept="8" />
+      <node id="8653132035600353284" at="42,0,43,0" concept="11" trace="name$MnvL" />
+      <node id="8653132035600353284" at="46,0,47,0" concept="11" trace="TransactionAttribute$lV" />
+      <node id="8653132035600353284" at="20,0,22,0" concept="1" trace="check_TransactionAttribute_NonTypesystemRule#()V" />
+      <node id="8653132035600353284" at="31,0,34,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8653132035600353284" at="34,0,37,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8653132035600353284" at="37,0,40,0" concept="6" trace="overrides#()Z" />
+      <node id="8653132035600353307" at="24,166,28,7" concept="0" />
+      <node id="8653132035600353305" at="23,32,29,5" concept="5" />
+      <node id="8653132035600353284" at="22,0,31,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8653132035600353284" at="20,57,20,57" />
+      <scope id="8653132035600353284" at="31,50,32,44" />
+      <scope id="8653132035600353284" at="34,68,35,102" />
+      <scope id="8653132035600353284" at="37,30,38,17" />
+      <scope id="8653132035600353284" at="20,0,22,0" />
+      <scope id="8653132035600353307" at="25,7,27,249">
+        <var name="_reporter_2309309498" id="8653132035600353307" />
+        <var name="errorTarget" id="8653132035600353307" />
+      </scope>
+      <scope id="8653132035600353284" at="31,0,34,0" />
+      <scope id="8653132035600353284" at="34,0,37,0">
+        <var name="argument" id="8653132035600353284" />
+      </scope>
+      <scope id="8653132035600353284" at="37,0,40,0" />
+      <scope id="8653132035600353306" at="24,166,28,7" />
+      <scope id="8653132035600353285" at="22,133,29,5" />
+      <scope id="8653132035600353284" at="22,0,31,0">
+        <var name="status" id="8653132035600353284" />
+        <var name="transactionAttribute" id="8653132035600353284" />
+        <var name="typeCheckingContext" id="8653132035600353284" />
+      </scope>
+      <unit id="8653132035600353284" at="41,0,44,0" name="moneyManager.typesystem.check_TransactionAttribute_NonTypesystemRule$PROPS" />
+      <unit id="8653132035600353284" at="45,0,48,0" name="moneyManager.typesystem.check_TransactionAttribute_NonTypesystemRule$CONCEPTS" />
+      <unit id="8653132035600353284" at="19,0,49,0" name="moneyManager.typesystem.check_TransactionAttribute_NonTypesystemRule" />
     </file>
   </root>
 </debug-info>
