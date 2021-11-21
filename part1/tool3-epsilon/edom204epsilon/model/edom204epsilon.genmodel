@@ -9,7 +9,11 @@
   <foreignModel>edom204epsilon.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Edom204epsilon" disposableProviderFactory="true" ecorePackage="edom204epsilon.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="edom204epsilon.ecore#//AttributeType"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="edom204epsilon.ecore#//AttributeType">
+      <genEnumLiterals ecoreEnumLiteral="edom204epsilon.ecore#//AttributeType/EString"/>
+      <genEnumLiterals ecoreEnumLiteral="edom204epsilon.ecore#//AttributeType/Date"/>
+      <genEnumLiterals ecoreEnumLiteral="edom204epsilon.ecore#//AttributeType/EInteger"/>
+    </genEnums>
     <genClasses ecoreClass="edom204epsilon.ecore#//Model">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//Model/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom204epsilon.ecore#//Model/userspec"/>
