@@ -86,6 +86,29 @@ In order to assign a "Quick fix" to its appropriate "Checking Rule", we carry ou
 
 ## Implementation of the Visualizations
 
+## Implementation of Models (instances)
+
+As mentioned above, the option of "Create sandbox solution" has been added. This one serves to test the previously created model.
+In the sandbox we can only add models whose concepts are defined as being "root".
+
+The following image is intended to illustrate the example of creating and developing a test model:
+
+![model_teste](./images/model_teste.png)
+
+With the model, we can verify if the "Constraints" and the "Refactoring" are being properly executed, as will be explained in the next section.
+
 ## Execution of Constraints and Refactorings
+
+Constraints are immediately applied as soon as they are created and the language is "Rebuild".
+
+To "Refactor" the model, an error will appear with a lamp on the left side with suggested modifications that were defined in the "Quick Fixes"
+
+The following image demonstrates the detection of failures such following the "constraints" made:
+
+![detecao_erro](./images/detecao_erro.png)
+
+Then the correction of these same failures through "quick fixes" (Refactoring) is represented:
+
+![refactoring](./images/refactoring.png)
 
 ## Generation/Execution of Visualizations
