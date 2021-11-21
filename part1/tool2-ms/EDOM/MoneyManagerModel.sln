@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl", "Dsl\Dsl.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DslPackage", "DslPackage\DslPackage.csproj", "{F1093344-DA50-4BD9-85C4-372EA14D75CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UML_Generator", "UML_Generator\UML_Generator.csproj", "{EB545671-C656-49A7-9FF1-19355422B607}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F1093344-DA50-4BD9-85C4-372EA14D75CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1093344-DA50-4BD9-85C4-372EA14D75CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1093344-DA50-4BD9-85C4-372EA14D75CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB545671-C656-49A7-9FF1-19355422B607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB545671-C656-49A7-9FF1-19355422B607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB545671-C656-49A7-9FF1-19355422B607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB545671-C656-49A7-9FF1-19355422B607}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

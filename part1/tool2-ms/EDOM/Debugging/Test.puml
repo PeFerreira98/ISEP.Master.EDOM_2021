@@ -1,0 +1,20 @@
+@startuml
+class UserSpec{
+UserAttribute
+Empresa.MoneyManagerModel.AttributeType
+}
+class AccountSpec #95e500 {
+AccountAttribute
+Empresa.MoneyManagerModel.AttributeType
+}
+class TransactionSpec #00e5e5 {
+TransactionAttribute
+Empresa.MoneyManagerModel.AttributeType
+}
+class Association #C0C0C0 {
+Association
+}
+UserSpec "1" <--> "0..*" Association
+AccountSpec "1" <--> "0..*" Association
+TransactionSpec "1" <--> "0..*" Association
+@enduml

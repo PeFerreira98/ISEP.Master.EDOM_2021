@@ -4,7 +4,7 @@
     <userSpec Id="1685dfb8-2cc6-4f68-856e-12835a64f877" cardinality="0" name="UserSpec">
       <userAttribute>
         <userSpecTemUserAttribute Id="bd2320f6-9850-47c0-aff4-8d4423030ee2">
-          <userAttribute Id="cb1a4149-9be7-4a30-b957-17d9f610381d" name="UserAttribute">
+          <userAttribute Id="cb1a4149-9be7-4a30-b957-17d9f610381d" name="UserAttribute" attributeType="AttributeType">
             <attributeTypes>
               <userAttributeReferênciasAttributeTypes Id="9e314323-a70f-42f9-8dcd-ca7a90df63a3">
                 <attributeTypeMoniker Id="66fda418-2d86-454f-995e-84a6210fafcc" />
@@ -25,7 +25,7 @@
       <accountSpec Id="109fa605-0f83-4c7a-9c52-3ca6f86db923" cardinality="0" name="AccountSpec">
         <accountAttribute>
           <accountSpecTemAccountAttribute Id="437ef053-d940-4858-b65e-39fd8a7c6482">
-            <accountAttribute Id="db6b358c-33fd-4ca4-b951-5a4a9c468d83" name="AccountAttribute">
+            <accountAttribute Id="db6b358c-33fd-4ca4-b951-5a4a9c468d83" name="AccountAttribute" attributeType="AttributeType">
               <attributeTypes>
                 <accountAttributeReferênciasAttributeTypes Id="95f3d1eb-f481-4803-ad18-ca759b59c15f">
                   <attributeTypeMoniker Id="66fda418-2d86-454f-995e-84a6210fafcc" />
@@ -47,7 +47,7 @@
       <transactionSpec Id="f9f5dc37-54b3-4dcd-b3b0-3fe6150ebc90" cardinality="0" name="TransactionSpec">
         <transactionAttribute>
           <transactionSpecTemTransactionAttribute Id="cdf608e2-52d8-4396-99a7-6336b2273056">
-            <transactionAttribute Id="43e50f78-ea5c-45dd-b1f2-a71656bb34cd" name="TransactionAttribute">
+            <transactionAttribute Id="43e50f78-ea5c-45dd-b1f2-a71656bb34cd" name="TransactionAttribute" attributeType="AttributeType">
               <attributeTypes>
                 <transactionAttributeReferênciasAttributeTypes Id="423231fb-51c3-44fb-adf2-39717683879a">
                   <attributeTypeMoniker Id="66fda418-2d86-454f-995e-84a6210fafcc" />
@@ -66,7 +66,7 @@
   </transactionSpec>
   <attributeType>
     <modelHasAttributeType Id="8d175803-f108-4a9a-b7bf-4220ff0990f6">
-      <attributeType Id="66fda418-2d86-454f-995e-84a6210fafcc" text="AttributeType" number="10" choice="false" date="2000-06-02" />
+      <attributeType Id="66fda418-2d86-454f-995e-84a6210fafcc" text="AttributeType" number="10" choice="true" date="2000-06-02" />
     </modelHasAttributeType>
   </attributeType>
   <association>
