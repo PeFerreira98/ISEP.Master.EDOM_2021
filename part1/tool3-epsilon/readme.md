@@ -56,7 +56,6 @@ To create a model visualization, there is a class called GeneratePlantUML (ident
 
 ![createPlantUML](../../diagrams/tool3-epsilon/5createPlantUML.png)
 
-![generatePlantUML](../../diagrams/tool3-epsilon/6generatePlantUML.png)
 
 ## Implementation of Models (instances)
 
@@ -69,3 +68,5 @@ When executing the constraints implemented below it is possible to see they are 
 ![validations](../../diagrams/tool3-epsilon/7validations.png)
 
 ## Generation/Execution of Visualizations
+
+![generatePlantUML](../../diagrams/tool3-epsilon/example1.png)

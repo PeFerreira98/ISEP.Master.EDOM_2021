@@ -1,23 +1,39 @@
 @startuml
 digraph model  {
-1 [shape=box3d];
+User1 [shape=box3d];
 Name [shape=square];
 EString [shape=Msquare];
+User1 -> Name [label="has"];
+Name -> EString [label="from type"];
 UserAge [shape=square];
 EInteger [shape=Msquare];
-1 [shape=box3d];
+User1 -> UserAge [label="has"];
+UserAge -> EInteger [label="from type"];
+Account1 [shape=box3d];
 Name [shape=square];
 EString [shape=Msquare];
+Account1 -> Name [label="has"];
+Name -> EString [label="from type"];
 Currency [shape=square];
 EString [shape=Msquare];
-1 [shape=box3d];
+Account1 -> Currency [label="has"];
+Currency -> EString [label="from type"];
+Transaction1 [shape=box3d];
 Name [shape=square];
 EString [shape=Msquare];
+Transaction1 -> Name [label="has"];
+Name -> EString [label="from type"];
 Currency [shape=square];
 EString [shape=Msquare];
+Transaction1 -> Currency [label="has"];
+Currency -> EString [label="from type"];
 Date [shape=square];
 Date [shape=Msquare];
+Transaction1 -> Date [label="has"];
+Date -> Date [label="from type"];
 Amount [shape=square];
 EInteger [shape=Msquare];
+Transaction1 -> Amount [label="has"];
+Amount -> EInteger [label="from type"];
 }
 @enduml

@@ -57,36 +57,45 @@ public class GeneratePlantUML {
 			// For the UserSpec
 	        for (UserSpec sub: myModel.getUserspec()) {
 	        	
-	        	writer.println("User " + sub.getCardinality() + " [shape=box3d];");
+	        	writer.println("User" + sub.getCardinality() + " [shape=box3d];");
 	        		        	
 	        	// For the userAtribute Fields
 	    		for (UserAttribute field: sub.getUserattribute()) {
 	    			writer.println(field.getName() + " [shape=square];");
-	    			writer.println(field.getType() + " [shape=Msquare];");	    			
+	    			writer.println(field.getType() + " [shape=Msquare];");
+	    			
+	    			writer.println("User" + sub.getCardinality() +  " -> " +  field.getName()  + " [label=\"has\"];");
+	    			writer.println(field.getName() +  " -> " +  field.getType()  + " [label=\"from type\"];");
 	    		}       	
 	        }
 	        
 	        // For the AccountSpec
 	        for (AccountSpec sub: myModel.getAccountspec()) {
 	        	
-	        	writer.println("Account " + sub.getCardinality() + " [shape=box3d];");
+	        	writer.println("Account" + sub.getCardinality() + " [shape=box3d];");
 	        		        	
 	        	// For the Subject Fields
 	    		for (AccountAttribute field: sub.getAccountattribute()) {
 	    			writer.println(field.getName() + " [shape=square];");
-	    			writer.println(field.getType() + " [shape=Msquare];");	    			
+	    			writer.println(field.getType() + " [shape=Msquare];");
+	    			
+	    			writer.println("Account" + sub.getCardinality() +  " -> " +  field.getName()  + " [label=\"has\"];");
+	    			writer.println(field.getName() +  " -> " +  field.getType()  + " [label=\"from type\"];");	    			
 	    		}     	
 	        }
 	        
 	        // For the AccountSpec
 	        for (TransactionSpec sub: myModel.getTransactionspec()) {
 	        	
-	        	writer.println("Transaction " + sub.getCardinality() + " [shape=box3d];");
+	        	writer.println("Transaction" + sub.getCardinality() + " [shape=box3d];");
 	        		        	
 	        	// For the Subject Fields
 	    		for (TransactionAttribute field: sub.getTransactionattribute()) {
 	    			writer.println(field.getName() + " [shape=square];");
-	    			writer.println(field.getType() + " [shape=Msquare];");	    			
+	    			writer.println(field.getType() + " [shape=Msquare];");
+	    			
+	    			writer.println("Transaction" + sub.getCardinality() +  " -> " +  field.getName()  + " [label=\"has\"];");
+	    			writer.println(field.getName() +  " -> " +  field.getType()  + " [label=\"from type\"];");	    			
 	    		}        	
 	        }
 	        
