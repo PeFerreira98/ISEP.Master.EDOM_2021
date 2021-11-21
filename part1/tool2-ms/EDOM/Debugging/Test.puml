@@ -1,4 +1,4 @@
-@startuml
+@startuml Model
 class UserSpec{
 UserAttribute
 Empresa.MoneyManagerModel.AttributeType
