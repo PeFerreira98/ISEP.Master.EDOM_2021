@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edom204epsilon:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:edom204epsilon="http://www.example.org/edom204epsilon"
+    xsi:schemaLocation="http://www.example.org/edom204epsilon ../model/edom204epsilon.ecore"
+    name="model1">
+  <userspec/>
+  <accountspec/>
+  <transactionspec/>
+</edom204epsilon:Model>
