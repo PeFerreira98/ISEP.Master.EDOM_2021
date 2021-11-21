@@ -1,7 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: edom204epsilon
-Bundle-SymbolicName: edom204epsilon; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: edom204epsilon;singleton:=true
+Automatic-Module-Name: edom204epsilon
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: edom204epsilon,
+ edom204epsilon.impl,
+ edom204epsilon.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
