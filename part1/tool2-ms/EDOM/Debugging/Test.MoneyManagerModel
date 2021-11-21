@@ -66,7 +66,7 @@
   </transactionSpec>
   <attributeType>
     <modelHasAttributeType Id="8d175803-f108-4a9a-b7bf-4220ff0990f6">
-      <attributeType Id="66fda418-2d86-454f-995e-84a6210fafcc" text="AttributeType" number="10" choice="true" date="2000-06-02" />
+      <attributeType Id="66fda418-2d86-454f-995e-84a6210fafcc" text="AttributeType" number="10" choice="true" date="" />
     </modelHasAttributeType>
   </attributeType>
   <association>
