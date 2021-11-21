@@ -2,6 +2,9 @@
  */
 package edom204epsilon;
 
+import java.util.Map;
+
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -22,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getAccountSpec()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='mustHaveCurrencyAttribute'"
  * @generated
  */
 public interface AccountSpec extends EObject {
@@ -33,7 +36,7 @@ public interface AccountSpec extends EObject {
 	 * @return the value of the '<em>Cardinality</em>' attribute.
 	 * @see #setCardinality(int)
 	 * @see edom204epsilon.Edom204epsilonPackage#getAccountSpec_Cardinality()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getCardinality();
@@ -87,5 +90,21 @@ public interface AccountSpec extends EObject {
 	 * @generated
 	 */
 	EList<AccountTransactionAssociation> getAccounttransactionassociation();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.accountattribute -&gt; forAll(a1, a2 | a1 &lt;&gt; a2 implies a1.name &lt;&gt; a2.name)'"
+	 * @generated
+	 */
+	boolean mustHaveAttributeWithDifferentNames(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.accountattribute -&gt; select(a : AccountAttribute | (a.name.toLower().compareTo(\'currency\') = 0)) -&gt; size() = 1'"
+	 * @generated
+	 */
+	boolean mustHaveCurrencyAttribute(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // AccountSpec

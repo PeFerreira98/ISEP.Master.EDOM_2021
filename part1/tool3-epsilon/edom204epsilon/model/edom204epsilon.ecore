@@ -123,15 +123,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UserAccountAssociation">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="nameMustHaveName nameMustBegreaterThan1Char nameMustStartWithCapitalLetter"/>
+      <details key="constraints" value="nameMustHaveName nameMustBegreaterThan1Char"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="nameMustHaveName" value="not self.name.oclIsUndefined()"/>
       <details key="nameMustBegreaterThan1Char" value="not self.name.oclIsUndefined() and self.name.size() > 1"/>
-      <details key="nameMustStartWithCapitalLetter" value="not self.name.oclIsUndefined() and self.name.size() > 0 and self.name.substring(1, 1).toUpper().compareTo(self.name.substring(1, 1)) = 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="userAccountAssociationName"/>
+        defaultValueLiteral="UserAccountAssociationName"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="userspec" lowerBound="1"
         eType="#//UserSpec" eOpposite="#//UserSpec/useraccountassociation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="accountspec" lowerBound="1"
@@ -139,15 +138,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AccountTransactionAssociation">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="nameMustHaveName nameMustBegreaterThan1Char nameMustStartWithCapitalLetter"/>
+      <details key="constraints" value="nameMustHaveName nameMustBegreaterThan1Char"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="nameMustHaveName" value="not self.name.oclIsUndefined()"/>
       <details key="nameMustBegreaterThan1Char" value="not self.name.oclIsUndefined() and self.name.size() > 1"/>
-      <details key="nameMustStartWithCapitalLetter" value="not self.name.oclIsUndefined() and self.name.size() > 0 and self.name.substring(1, 1).toUpper().compareTo(self.name.substring(1, 1)) = 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="accountTransactionAssociationName"/>
+        defaultValueLiteral="AccountTransactionAssociationName"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="accountspec" lowerBound="1"
         eType="#//AccountSpec" eOpposite="#//AccountSpec/accounttransactionassociation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transactionspec" lowerBound="1"

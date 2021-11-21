@@ -2,6 +2,10 @@
  */
 package edom204epsilon;
 
+import java.util.Map;
+
+import org.eclipse.emf.common.util.DiagnosticChain;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,18 +23,19 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getUserAccountAssociation()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='nameMustHaveName'"
  * @generated
  */
 public interface UserAccountAssociation extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The default value is <code>"UserAccountAssociationName"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see edom204epsilon.Edom204epsilonPackage#getUserAccountAssociation_Name()
-	 * @model
+	 * @model default="UserAccountAssociationName"
 	 * @generated
 	 */
 	String getName();
@@ -92,5 +97,21 @@ public interface UserAccountAssociation extends EObject {
 	 * @generated
 	 */
 	void setAccountspec(AccountSpec value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='not self.name.oclIsUndefined() and self.name.size() &gt; 1'"
+	 * @generated
+	 */
+	boolean nameMustBegreaterThan1Char(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='not self.name.oclIsUndefined()'"
+	 * @generated
+	 */
+	boolean nameMustHaveName(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // UserAccountAssociation

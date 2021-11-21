@@ -13,13 +13,27 @@ Following there are examples of proposed sections for the report.
 Epsilon is a family of Java-based scripting languages for automating common model-based software engineering tasks, such as code generation, model-to-model transformation and model validation, that work out of the box with EMF (including Xtext and Sirius), UML, Simulink, XML and other types of models.  
 Epsilon also includes Eclipse-based editors and debuggers, convenient reflective tools for textual modelling and model visualisation, and Apache Ant tasks.
 
+All languages are built on top of a common language for model querying and modification called Epsilon Object Language.
+
 ## How to Setup and Install
 
 Download the [Eclipse Installer](https://wiki.eclipse.org/Eclipse_Installer) and select Epsilon. Note that you will need a Java Runtime Environment installed on your system.
 
 ## Implementation of the Metamodel
 
+Before implementing the metamodel using Eclipse, we need to create an **Ecore Modelling Project**:
+
+![createProject](../../diagrams/tool3-epsilon/1createProject.png)
+
+![ecoreModellingProject](../../diagrams/tool3-epsilon/2modelEcore.png)
+
+
+
 ## Implementation of Constraints and Refactorings
+
+![oclEditor](../../diagrams/tool3-epsilon/3oclEditor.png)
+
+![oclConstraints](../../diagrams/tool3-epsilon/4oclConstraints.png)
 
 ## Implementation of the Visualizations
 

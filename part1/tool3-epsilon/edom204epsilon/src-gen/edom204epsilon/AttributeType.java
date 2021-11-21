@@ -18,7 +18,68 @@ import org.eclipse.emf.common.util.Enumerator;
  * @generated
  */
 public enum AttributeType implements Enumerator {
-	;
+	/**
+	 * The '<em><b>EString</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ESTRING_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ESTRING(0, "EString", "EString"),
+
+	/**
+	 * The '<em><b>Date</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DATE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DATE(1, "Date", "Date"),
+
+	/**
+	 * The '<em><b>EInteger</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #EINTEGER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	EINTEGER(2, "EInteger", "EInteger");
+
+	/**
+	 * The '<em><b>EString</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ESTRING
+	 * @model name="EString"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ESTRING_VALUE = 0;
+
+	/**
+	 * The '<em><b>Date</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DATE
+	 * @model name="Date"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DATE_VALUE = 1;
+
+	/**
+	 * The '<em><b>EInteger</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #EINTEGER
+	 * @model name="EInteger"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EINTEGER_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Attribute Type</b></em>' enumerators.
@@ -26,7 +87,7 @@ public enum AttributeType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final AttributeType[] VALUES_ARRAY = new AttributeType[] {};
+	private static final AttributeType[] VALUES_ARRAY = new AttributeType[] { ESTRING, DATE, EINTEGER, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Attribute Type</b></em>' enumerators.
@@ -82,6 +143,12 @@ public enum AttributeType implements Enumerator {
 	 */
 	public static AttributeType get(int value) {
 		switch (value) {
+		case ESTRING_VALUE:
+			return ESTRING;
+		case DATE_VALUE:
+			return DATE;
+		case EINTEGER_VALUE:
+			return EINTEGER;
 		}
 		return null;
 	}

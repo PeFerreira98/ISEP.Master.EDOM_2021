@@ -5,6 +5,7 @@ package edom204epsilon;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see edom204epsilon.Edom204epsilonFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore"
  * @generated
  */
 public interface Edom204epsilonPackage extends EPackage {
@@ -131,13 +133,31 @@ public interface Edom204epsilonPackage extends EPackage {
 	int MODEL_FEATURE_COUNT = 6;
 
 	/**
+	 * The operation id for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Name Must Have Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_OPERATION_COUNT = 0;
+	int MODEL_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.UserSpecImpl <em>User Spec</em>}' class.
@@ -186,13 +206,31 @@ public interface Edom204epsilonPackage extends EPackage {
 	int USER_SPEC_FEATURE_COUNT = 3;
 
 	/**
+	 * The operation id for the '<em>Must Have Name Attribute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_SPEC___MUST_HAVE_NAME_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Must Have Attribute With Different Names</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_SPEC___MUST_HAVE_ATTRIBUTE_WITH_DIFFERENT_NAMES__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>User Spec</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_SPEC_OPERATION_COUNT = 0;
+	int USER_SPEC_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.AccountSpecImpl <em>Account Spec</em>}' class.
@@ -250,13 +288,31 @@ public interface Edom204epsilonPackage extends EPackage {
 	int ACCOUNT_SPEC_FEATURE_COUNT = 4;
 
 	/**
+	 * The operation id for the '<em>Must Have Attribute With Different Names</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_SPEC___MUST_HAVE_ATTRIBUTE_WITH_DIFFERENT_NAMES__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Must Have Currency Attribute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_SPEC___MUST_HAVE_CURRENCY_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>Account Spec</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_SPEC_OPERATION_COUNT = 0;
+	int ACCOUNT_SPEC_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.TransactionSpecImpl <em>Transaction Spec</em>}' class.
@@ -305,13 +361,49 @@ public interface Edom204epsilonPackage extends EPackage {
 	int TRANSACTION_SPEC_FEATURE_COUNT = 3;
 
 	/**
+	 * The operation id for the '<em>Must Have Amount Attribute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_SPEC___MUST_HAVE_AMOUNT_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Must Have Currency Attribute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_SPEC___MUST_HAVE_CURRENCY_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
+	 * The operation id for the '<em>Must Have Date Attribute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_SPEC___MUST_HAVE_DATE_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = 2;
+
+	/**
+	 * The operation id for the '<em>Must Have Attribute With Different Names</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_SPEC___MUST_HAVE_ATTRIBUTE_WITH_DIFFERENT_NAMES__DIAGNOSTICCHAIN_MAP = 3;
+
+	/**
 	 * The number of operations of the '<em>Transaction Spec</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_SPEC_OPERATION_COUNT = 0;
+	int TRANSACTION_SPEC_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.UserAttributeImpl <em>User Attribute</em>}' class.
@@ -351,13 +443,31 @@ public interface Edom204epsilonPackage extends EPackage {
 	int USER_ATTRIBUTE_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_ATTRIBUTE___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Name Must Have Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_ATTRIBUTE___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>User Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_ATTRIBUTE_OPERATION_COUNT = 0;
+	int USER_ATTRIBUTE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.AccountAttributeImpl <em>Account Attribute</em>}' class.
@@ -397,13 +507,31 @@ public interface Edom204epsilonPackage extends EPackage {
 	int ACCOUNT_ATTRIBUTE_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_ATTRIBUTE___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Name Must Have Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_ATTRIBUTE___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>Account Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_ATTRIBUTE_OPERATION_COUNT = 0;
+	int ACCOUNT_ATTRIBUTE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.TransactionAttributeImpl <em>Transaction Attribute</em>}' class.
@@ -443,13 +571,31 @@ public interface Edom204epsilonPackage extends EPackage {
 	int TRANSACTION_ATTRIBUTE_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_ATTRIBUTE___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Name Must Have Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION_ATTRIBUTE___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>Transaction Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_ATTRIBUTE_OPERATION_COUNT = 0;
+	int TRANSACTION_ATTRIBUTE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.UserAccountAssociationImpl <em>User Account Association</em>}' class.
@@ -498,13 +644,31 @@ public interface Edom204epsilonPackage extends EPackage {
 	int USER_ACCOUNT_ASSOCIATION_FEATURE_COUNT = 3;
 
 	/**
+	 * The operation id for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_ACCOUNT_ASSOCIATION___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Name Must Have Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_ACCOUNT_ASSOCIATION___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>User Account Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_ACCOUNT_ASSOCIATION_OPERATION_COUNT = 0;
+	int USER_ACCOUNT_ASSOCIATION_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.AccountTransactionAssociationImpl <em>Account Transaction Association</em>}' class.
@@ -553,13 +717,31 @@ public interface Edom204epsilonPackage extends EPackage {
 	int ACCOUNT_TRANSACTION_ASSOCIATION_FEATURE_COUNT = 3;
 
 	/**
+	 * The operation id for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_TRANSACTION_ASSOCIATION___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Name Must Have Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_TRANSACTION_ASSOCIATION___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>Account Transaction Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_TRANSACTION_ASSOCIATION_OPERATION_COUNT = 0;
+	int ACCOUNT_TRANSACTION_ASSOCIATION_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.AttributeType <em>Attribute Type</em>}' enum.
@@ -648,6 +830,26 @@ public interface Edom204epsilonPackage extends EPackage {
 	EReference getModel_Accounttransactionassociation();
 
 	/**
+	 * Returns the meta object for the '{@link edom204epsilon.Model#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Begreater Than1 Char</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * @see edom204epsilon.Model#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getModel__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.Model#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Have Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Have Name</em>' operation.
+	 * @see edom204epsilon.Model#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getModel__NameMustHaveName__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link edom204epsilon.UserSpec <em>User Spec</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -689,6 +891,26 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUserSpec_Useraccountassociation();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.UserSpec#mustHaveNameAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Must Have Name Attribute</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Must Have Name Attribute</em>' operation.
+	 * @see edom204epsilon.UserSpec#mustHaveNameAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUserSpec__MustHaveNameAttribute__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.UserSpec#mustHaveAttributeWithDifferentNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Must Have Attribute With Different Names</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Must Have Attribute With Different Names</em>' operation.
+	 * @see edom204epsilon.UserSpec#mustHaveAttributeWithDifferentNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUserSpec__MustHaveAttributeWithDifferentNames__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link edom204epsilon.AccountSpec <em>Account Spec</em>}'.
@@ -745,6 +967,26 @@ public interface Edom204epsilonPackage extends EPackage {
 	EReference getAccountSpec_Accounttransactionassociation();
 
 	/**
+	 * Returns the meta object for the '{@link edom204epsilon.AccountSpec#mustHaveAttributeWithDifferentNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Must Have Attribute With Different Names</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Must Have Attribute With Different Names</em>' operation.
+	 * @see edom204epsilon.AccountSpec#mustHaveAttributeWithDifferentNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getAccountSpec__MustHaveAttributeWithDifferentNames__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.AccountSpec#mustHaveCurrencyAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Must Have Currency Attribute</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Must Have Currency Attribute</em>' operation.
+	 * @see edom204epsilon.AccountSpec#mustHaveCurrencyAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getAccountSpec__MustHaveCurrencyAttribute__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link edom204epsilon.TransactionSpec <em>Transaction Spec</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -788,6 +1030,46 @@ public interface Edom204epsilonPackage extends EPackage {
 	EReference getTransactionSpec_Accounttransactionassociation();
 
 	/**
+	 * Returns the meta object for the '{@link edom204epsilon.TransactionSpec#mustHaveAmountAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Must Have Amount Attribute</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Must Have Amount Attribute</em>' operation.
+	 * @see edom204epsilon.TransactionSpec#mustHaveAmountAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTransactionSpec__MustHaveAmountAttribute__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.TransactionSpec#mustHaveCurrencyAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Must Have Currency Attribute</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Must Have Currency Attribute</em>' operation.
+	 * @see edom204epsilon.TransactionSpec#mustHaveCurrencyAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTransactionSpec__MustHaveCurrencyAttribute__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.TransactionSpec#mustHaveDateAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Must Have Date Attribute</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Must Have Date Attribute</em>' operation.
+	 * @see edom204epsilon.TransactionSpec#mustHaveDateAttribute(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTransactionSpec__MustHaveDateAttribute__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.TransactionSpec#mustHaveAttributeWithDifferentNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Must Have Attribute With Different Names</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Must Have Attribute With Different Names</em>' operation.
+	 * @see edom204epsilon.TransactionSpec#mustHaveAttributeWithDifferentNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTransactionSpec__MustHaveAttributeWithDifferentNames__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link edom204epsilon.UserAttribute <em>User Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -818,6 +1100,26 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUserAttribute_Type();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.UserAttribute#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Begreater Than1 Char</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * @see edom204epsilon.UserAttribute#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUserAttribute__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.UserAttribute#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Have Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Have Name</em>' operation.
+	 * @see edom204epsilon.UserAttribute#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUserAttribute__NameMustHaveName__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link edom204epsilon.AccountAttribute <em>Account Attribute</em>}'.
@@ -852,6 +1154,26 @@ public interface Edom204epsilonPackage extends EPackage {
 	EAttribute getAccountAttribute_Type();
 
 	/**
+	 * Returns the meta object for the '{@link edom204epsilon.AccountAttribute#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Begreater Than1 Char</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * @see edom204epsilon.AccountAttribute#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getAccountAttribute__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.AccountAttribute#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Have Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Have Name</em>' operation.
+	 * @see edom204epsilon.AccountAttribute#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getAccountAttribute__NameMustHaveName__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link edom204epsilon.TransactionAttribute <em>Transaction Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -882,6 +1204,26 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTransactionAttribute_Type();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.TransactionAttribute#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Begreater Than1 Char</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * @see edom204epsilon.TransactionAttribute#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTransactionAttribute__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.TransactionAttribute#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Have Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Have Name</em>' operation.
+	 * @see edom204epsilon.TransactionAttribute#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTransactionAttribute__NameMustHaveName__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link edom204epsilon.UserAccountAssociation <em>User Account Association</em>}'.
@@ -927,6 +1269,26 @@ public interface Edom204epsilonPackage extends EPackage {
 	EReference getUserAccountAssociation_Accountspec();
 
 	/**
+	 * Returns the meta object for the '{@link edom204epsilon.UserAccountAssociation#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Begreater Than1 Char</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * @see edom204epsilon.UserAccountAssociation#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUserAccountAssociation__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.UserAccountAssociation#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Have Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Have Name</em>' operation.
+	 * @see edom204epsilon.UserAccountAssociation#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUserAccountAssociation__NameMustHaveName__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link edom204epsilon.AccountTransactionAssociation <em>Account Transaction Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -968,6 +1330,26 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAccountTransactionAssociation_Transactionspec();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.AccountTransactionAssociation#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Begreater Than1 Char</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Begreater Than1 Char</em>' operation.
+	 * @see edom204epsilon.AccountTransactionAssociation#nameMustBegreaterThan1Char(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getAccountTransactionAssociation__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link edom204epsilon.AccountTransactionAssociation#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Name Must Have Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Name Must Have Name</em>' operation.
+	 * @see edom204epsilon.AccountTransactionAssociation#nameMustHaveName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getAccountTransactionAssociation__NameMustHaveName__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for enum '{@link edom204epsilon.AttributeType <em>Attribute Type</em>}'.
@@ -1061,6 +1443,24 @@ public interface Edom204epsilonPackage extends EPackage {
 		EReference MODEL__ACCOUNTTRANSACTIONASSOCIATION = eINSTANCE.getModel_Accounttransactionassociation();
 
 		/**
+		 * The meta object literal for the '<em><b>Name Must Begreater Than1 Char</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getModel__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Must Have Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getModel__NameMustHaveName__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.UserSpecImpl <em>User Spec</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1093,6 +1493,24 @@ public interface Edom204epsilonPackage extends EPackage {
 		 * @generated
 		 */
 		EReference USER_SPEC__USERACCOUNTASSOCIATION = eINSTANCE.getUserSpec_Useraccountassociation();
+
+		/**
+		 * The meta object literal for the '<em><b>Must Have Name Attribute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_SPEC___MUST_HAVE_NAME_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getUserSpec__MustHaveNameAttribute__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Must Have Attribute With Different Names</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_SPEC___MUST_HAVE_ATTRIBUTE_WITH_DIFFERENT_NAMES__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getUserSpec__MustHaveAttributeWithDifferentNames__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.AccountSpecImpl <em>Account Spec</em>}' class.
@@ -1138,6 +1556,24 @@ public interface Edom204epsilonPackage extends EPackage {
 				.getAccountSpec_Accounttransactionassociation();
 
 		/**
+		 * The meta object literal for the '<em><b>Must Have Attribute With Different Names</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACCOUNT_SPEC___MUST_HAVE_ATTRIBUTE_WITH_DIFFERENT_NAMES__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getAccountSpec__MustHaveAttributeWithDifferentNames__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Must Have Currency Attribute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACCOUNT_SPEC___MUST_HAVE_CURRENCY_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getAccountSpec__MustHaveCurrencyAttribute__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.TransactionSpecImpl <em>Transaction Spec</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1173,6 +1609,42 @@ public interface Edom204epsilonPackage extends EPackage {
 				.getTransactionSpec_Accounttransactionassociation();
 
 		/**
+		 * The meta object literal for the '<em><b>Must Have Amount Attribute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TRANSACTION_SPEC___MUST_HAVE_AMOUNT_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getTransactionSpec__MustHaveAmountAttribute__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Must Have Currency Attribute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TRANSACTION_SPEC___MUST_HAVE_CURRENCY_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getTransactionSpec__MustHaveCurrencyAttribute__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Must Have Date Attribute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TRANSACTION_SPEC___MUST_HAVE_DATE_ATTRIBUTE__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getTransactionSpec__MustHaveDateAttribute__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Must Have Attribute With Different Names</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TRANSACTION_SPEC___MUST_HAVE_ATTRIBUTE_WITH_DIFFERENT_NAMES__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getTransactionSpec__MustHaveAttributeWithDifferentNames__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.UserAttributeImpl <em>User Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1197,6 +1669,24 @@ public interface Edom204epsilonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute USER_ATTRIBUTE__TYPE = eINSTANCE.getUserAttribute_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Must Begreater Than1 Char</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_ATTRIBUTE___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getUserAttribute__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Must Have Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_ATTRIBUTE___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getUserAttribute__NameMustHaveName__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.AccountAttributeImpl <em>Account Attribute</em>}' class.
@@ -1225,6 +1715,24 @@ public interface Edom204epsilonPackage extends EPackage {
 		EAttribute ACCOUNT_ATTRIBUTE__TYPE = eINSTANCE.getAccountAttribute_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Name Must Begreater Than1 Char</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACCOUNT_ATTRIBUTE___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getAccountAttribute__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Must Have Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACCOUNT_ATTRIBUTE___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getAccountAttribute__NameMustHaveName__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.TransactionAttributeImpl <em>Transaction Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1249,6 +1757,24 @@ public interface Edom204epsilonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TRANSACTION_ATTRIBUTE__TYPE = eINSTANCE.getTransactionAttribute_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Must Begreater Than1 Char</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TRANSACTION_ATTRIBUTE___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getTransactionAttribute__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Must Have Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TRANSACTION_ATTRIBUTE___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getTransactionAttribute__NameMustHaveName__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.UserAccountAssociationImpl <em>User Account Association</em>}' class.
@@ -1285,6 +1811,24 @@ public interface Edom204epsilonPackage extends EPackage {
 		EReference USER_ACCOUNT_ASSOCIATION__ACCOUNTSPEC = eINSTANCE.getUserAccountAssociation_Accountspec();
 
 		/**
+		 * The meta object literal for the '<em><b>Name Must Begreater Than1 Char</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_ACCOUNT_ASSOCIATION___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getUserAccountAssociation__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Must Have Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_ACCOUNT_ASSOCIATION___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getUserAccountAssociation__NameMustHaveName__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.AccountTransactionAssociationImpl <em>Account Transaction Association</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1319,6 +1863,24 @@ public interface Edom204epsilonPackage extends EPackage {
 		 */
 		EReference ACCOUNT_TRANSACTION_ASSOCIATION__TRANSACTIONSPEC = eINSTANCE
 				.getAccountTransactionAssociation_Transactionspec();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Must Begreater Than1 Char</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACCOUNT_TRANSACTION_ASSOCIATION___NAME_MUST_BEGREATER_THAN1_CHAR__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getAccountTransactionAssociation__NameMustBegreaterThan1Char__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Must Have Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACCOUNT_TRANSACTION_ASSOCIATION___NAME_MUST_HAVE_NAME__DIAGNOSTICCHAIN_MAP = eINSTANCE
+				.getAccountTransactionAssociation__NameMustHaveName__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link edom204epsilon.AttributeType <em>Attribute Type</em>}' enum.
