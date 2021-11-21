@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edom204epsilon:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:edom204epsilon="http://www.example.org/edom204epsilon"
+    xsi:schemaLocation="http://www.example.org/edom204epsilon ../model/edom204epsilon.ecore">
+  <userspec
+      cardinality="1"
+      useraccountassociation="//@useraccountassociation.0">
+    <userattribute
+        name="Name"/>
+    <userattribute
+        name="UserAge"
+        type="EInteger"/>
+  </userspec>
+  <accountspec
+      cardinality="1"
+      useraccountassociation="//@useraccountassociation.0"
+      accounttransactionassociation="//@accounttransactionassociation.0">
+    <accountattribute
+        name="Name"/>
+    <accountattribute
+        name="Currency"/>
+  </accountspec>
+  <transactionspec
+      cardinality="1"
+      accounttransactionassociation="//@accounttransactionassociation.0">
+    <transactionattribute
+        name="Name"/>
+    <transactionattribute
+        name="Currency"/>
+    <transactionattribute
+        name="Date"
+        type="Date"/>
+    <transactionattribute
+        name="Amount"
+        type="EInteger"/>
+  </transactionspec>
+  <useraccountassociation
+      name="Name"
+      userspec="//@userspec.0"
+      accountspec="//@accountspec.0"/>
+  <accounttransactionassociation
+      name="Name"
+      accountspec="//@accountspec.0"
+      transactionspec="//@transactionspec.0"/>
+</edom204epsilon:Model>

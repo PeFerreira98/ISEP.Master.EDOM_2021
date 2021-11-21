@@ -21,24 +21,51 @@ Download the [Eclipse Installer](https://wiki.eclipse.org/Eclipse_Installer) and
 
 ## Implementation of the Metamodel
 
-Before implementing the metamodel using Eclipse, we need to create an **Ecore Modelling Project**:
+Before implementing the metamodel using Epsilon, we need to create an **Ecore Modelling Project**:
 
 ![createProject](../../diagrams/tool3-epsilon/1createProject.png)
 
+Then we edit the ecore file to design the metamodel using the graphical view in Epsilon:
+
 ![ecoreModellingProject](../../diagrams/tool3-epsilon/2modelEcore.png)
 
-
+Epsilon automatically processes the file and keeps updating the project.ecore file. Which we will use to add Constraints.
 
 ## Implementation of Constraints and Refactorings
 
+After the metamodel design is finished we started by adding constraints.
+As previously stated in the global report some of the restraints are:
+
+- Names cannot be null
+- First letter must be upper case
+
+```java
+invariant mustHaveName: not self.name.oclIsUndefined();
+invariant nameMustStartWithUppercase: self.name.substring(1,1).toUpper().compareTo(self.name.substring(1, 1)) = 0;
+```
+
 ![oclEditor](../../diagrams/tool3-epsilon/3oclEditor.png)
+
+In this Editor, we can change some of the attributes and properties of our metamodel elements as shown in the image above.
 
 ![oclConstraints](../../diagrams/tool3-epsilon/4oclConstraints.png)
 
 ## Implementation of the Visualizations
 
+To create a model visualization, there is a class called GeneratePlantUML (identical to the class use in the EDOM classes) that will generate a plantuml using the model as a base.
+
+![createPlantUML](../../diagrams/tool3-epsilon/5createPlantUML.png)
+
+![generatePlantUML](../../diagrams/tool3-epsilon/6generatePlantUML.png)
+
 ## Implementation of Models (instances)
 
+![modelImplementation](../../diagrams/tool3-epsilon/8modelImplementation.png)
+
 ## Execution of Constraints and Refactorings
+
+When executing the constraints implemented below it is possible to see they are woking:
+
+![validations](../../diagrams/tool3-epsilon/7validations.png)
 
 ## Generation/Execution of Visualizations

@@ -1,0 +1,23 @@
+@startuml
+digraph model  {
+1 [shape=box3d];
+Name [shape=square];
+EString [shape=Msquare];
+UserAge [shape=square];
+EInteger [shape=Msquare];
+1 [shape=box3d];
+Name [shape=square];
+EString [shape=Msquare];
+Currency [shape=square];
+EString [shape=Msquare];
+1 [shape=box3d];
+Name [shape=square];
+EString [shape=Msquare];
+Currency [shape=square];
+EString [shape=Msquare];
+Date [shape=square];
+Date [shape=Msquare];
+Amount [shape=square];
+EInteger [shape=Msquare];
+}
+@enduml
