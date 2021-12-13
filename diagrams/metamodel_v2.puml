@@ -1,0 +1,101 @@
+@startuml
+left to right direction
+
+skinparam linetype polyline
+' skinparam linetype ortho
+skinparam monochrome true
+skinparam packageStyle rect
+skinparam shadowing false
+
+' skinparam nodesep 5
+' skinparam ranksep 80
+' skinparam padding 2
+' !pragma ratio 0.2
+
+title Metamodel
+
+class Model {
+    name : string
+}
+
+class UserSpec {
+    name : string
+    cardinalityMin : int
+    cardinalityMax : int
+}
+
+class UserAttribute {
+    name : string
+    cardinalityMin : int
+    cardinalityMax : int
+}
+
+class AccountGroupSpec {
+    name : string
+    cardinalityMin : int
+    cardinalityMax : int
+}
+
+class AccountSpec {
+    name : string
+    cardinalityMin : int
+    cardinalityMax : int
+}
+
+class AccountAttribute {
+    name : string
+    type : AttributeType
+}
+
+class TransactionSpec {
+    name : string
+    cardinalityMin : int
+    cardinalityMax : int
+}
+
+class TransactionAttribute {
+    name : string
+    type : AttributeType
+}
+
+class UserAccountAssociation {
+    name : string
+}
+
+class AccountTransactionAssociation {
+    name : string
+}
+
+class AttributeType <<Enum>> {
+    text
+    number
+    choice
+    ...
+}
+
+Model *---- "1..*" AttributeType
+
+Model *- "0..*" AccountGroupSpec
+AccountGroupSpec "1" <-> "0..*" AccountSpec
+
+Model *--- "1..*" UserSpec
+UserSpec *--- "1..*" UserAttribute
+UserAttribute "1" -- "1" AttributeType
+
+Model *--- "1..*" AccountSpec
+AccountSpec *--- "1..*" AccountAttribute
+AccountAttribute "1" -- "1" AttributeType
+
+Model *--- "1..*" TransactionSpec
+TransactionSpec *--- "1" TransactionAttribute
+TransactionAttribute "1" -- "1" AttributeType
+
+Model *---- "1..*" UserAccountAssociation
+Model *---- "1..*" AccountTransactionAssociation
+UserSpec "1" <--> "0.*" UserAccountAssociation
+AccountSpec "1" <--> "0.*" UserAccountAssociation
+AccountSpec "1" <--> "0.*" AccountTransactionAssociation
+TransactionSpec "1" <--> "0.*" AccountTransactionAssociation
+
+hide circle
+@enduml

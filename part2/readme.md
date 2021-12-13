@@ -10,6 +10,8 @@ Following there are examples of proposed sections for this part of the report (t
 
 ## Design of the Metamodel
 
+![MetaModelv2](../diagrams/metamodel_v2.png)
+
 ## Constraints and Refactorings
 
 ## Metamodel Graphical Representation
