@@ -1,0 +1,7 @@
+<?nsuri edom204epsilon?>
+<model name="model1">
+    <userspec name="userSpec1">
+        <userattribute name="Nam"/>
+        <userattribute name="Age"/>
+    </userspec>
+</model>

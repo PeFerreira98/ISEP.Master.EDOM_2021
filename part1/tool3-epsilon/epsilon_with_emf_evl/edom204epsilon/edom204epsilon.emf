@@ -1,0 +1,67 @@
+@namespace(uri="edom204epsilon", prefix="")
+package edom204epsilon;
+
+class Model {
+	attr String name = "modelName";
+	val UserSpec[*] userspec;
+	val AccountSpec[*] accountspec;
+	val TransactionSpec[*] transactionspec;
+	val UserAccountAssociation[*] useraccountassociation;
+	val AccountTransactionAssociation[*] accounttransactionassociation;
+}
+
+class UserSpec {
+	attr String name = "userName";
+	attr int[1] cardinality;
+	val UserAttribute[*] userattribute;
+	ref UserAccountAssociation[*]#userspec useraccountassociation;
+}
+
+class AccountSpec {
+	attr String name = "accountName";
+	attr int[1] cardinality;
+	val AccountAttribute[*] accountattribute;
+	ref UserAccountAssociation[*]#accountspec useraccountassociation;
+	ref AccountTransactionAssociation[*]#accountspec accounttransactionassociation;
+}
+
+class TransactionSpec {
+	attr String name = "transactionName";
+	attr int[1] cardinality;
+	val TransactionAttribute[*] transactionattribute;
+	ref AccountTransactionAssociation[*]#transactionspec accounttransactionassociation;
+}
+
+class UserAttribute {
+	attr String name = "userAttributeName";
+	attr AttributeType type;
+}
+
+class AccountAttribute {
+	attr String name = "accountAttributeName";
+	attr AttributeType type;
+}
+
+class TransactionAttribute {
+	attr String name = "transactionAttributeName";
+	attr AttributeType type;
+}
+
+enum AttributeType {
+	EString = 0;
+	Date = 1;
+	EInteger = 2;
+}
+
+class UserAccountAssociation {
+	attr String name = "userAccountAssociationName";
+	ref UserSpec[1]#useraccountassociation userspec;
+	ref AccountSpec[1]#useraccountassociation accountspec;
+}
+
+class AccountTransactionAssociation {
+	attr String name = "accountTransactionAssociationName";
+	ref AccountSpec[1]#accounttransactionassociation accountspec;
+	ref TransactionSpec[1]#accounttransactionassociation transactionspec;
+}
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="edom204epsilon" xmi:id="_24w7kFkCEeyV64KuGGpeTg" name="model1">
+  <userspec xmi:id="_24w7kVkCEeyV64KuGGpeTg" name="userSpec1">
+    <userattribute xmi:id="_24w7klkCEeyV64KuGGpeTg" name="Nam"/>
+    <userattribute xmi:id="_24w7k1kCEeyV64KuGGpeTg" name="Age"/>
+  </userspec>
+</Model>

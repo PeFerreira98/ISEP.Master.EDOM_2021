@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_fwfcIFB1EeyZv-Zwyun-5Q" version="14.5.1.202106111100">
+  <semanticResources>edom204epsilon.emf</semanticResources>
+  <semanticResources>model1.flexmi</semanticResources>
+  <semanticResources>edom204epsilon.ecore</semanticResources>
+  <semanticResources>model1.flexmi.xmi</semanticResources>
+</viewpoint:DAnalysis>
