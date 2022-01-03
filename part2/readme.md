@@ -16,29 +16,23 @@ Following there are examples of proposed sections for this part of the report (t
 
 ## Activity 1: Design Concrete Syntax for the DSL
 
-### Graphical DSL 
-
-#### Epsilon/Eugenia
+### Graphical DSL (Epsilon/Eugenia)
 For each metamodel element, the team chose a different graphically representation:
 
 * AccountGroupSpec - for the AccountGroupSpec, we will be using an **blue square** object;
-
 * UserSpec - for the UserSpec, we will be using an **oval yellow** object;
 * AccountSpec - for the AccountSpec, we will be using an **oval red** object;
 * TransactionSpec - for the TransactionSpec, we will be using a **oval green** object;
-
 * UserAccountAssociation - for the UserAccountAssociation, we will be using a **orange triangle** object;
-* AccountTransactionAssociation - for the Rating, we will be using a **purple triangle** object;
-
+* AccountTransactionAssociation - for the AccountTransactionAssociation, we will be using a **purple triangle** object;
 * UserAttribute - for the UserAttribute, we will be using a **yellow square** object;
 * AccountAttribute - for the AccountAttribute, we will be using a **red square** object;
 * TransactionAttribute - for the TransactionAttribute, we will be using a **green square** object;
-
 * AttributeType - for the AttributeType, we will be using a **oval blue** object;
 
-#### MS Tools
+### Graphical DSL (MS Tools)
 
-#### Textual DSL (JetBrains MPS)
+### Textual DSL (JetBrains MPS)
 
 ## Activity 2: Specify Common Features for Applications of the Domain
 

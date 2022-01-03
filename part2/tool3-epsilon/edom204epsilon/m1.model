@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="edom204epsilon" xmi:id="_kMd3EGzjEeyboN25xuZvzw">
+  <userspec xmi:id="_yQekYGzjEeyboN25xuZvzw" cardinalityMin="1">
+    <userattribute xmi:id="_1cRK8GzjEeyboN25xuZvzw" name="name" cardinalityMin="1"/>
+    <userattribute xmi:id="_4JyhIGzjEeyboN25xuZvzw" name="dob" type="Date"/>
+  </userspec>
+  <accountspec xmi:id="_mNX-4GzjEeyboN25xuZvzw" cardinalityMin="1">
+    <accountattribute xmi:id="_ox9bgGzjEeyboN25xuZvzw" name="name"/>
+    <accountattribute xmi:id="_rWd_oGzjEeyboN25xuZvzw" name="creationDate" type="Date"/>
+    <accountattribute xmi:id="_tKeT4GzjEeyboN25xuZvzw" name="initialValue" type="EInteger"/>
+  </accountspec>
+  <transactionspec xmi:id="_-6XdEGzjEeyboN25xuZvzw" cardinalityMax="-1">
+    <transactionattribute xmi:id="_DOioAGzkEeyboN25xuZvzw" name="value" type="EInteger"/>
+  </transactionspec>
+  <useraccountassociation xmi:id="_I2l1oGzkEeyboN25xuZvzw" userspec="_yQekYGzjEeyboN25xuZvzw" accountspec="_mNX-4GzjEeyboN25xuZvzw"/>
+  <accounttransactionassociation xmi:id="_MDugAGzkEeyboN25xuZvzw" accountspec="_mNX-4GzjEeyboN25xuZvzw" transactionspec="_-6XdEGzjEeyboN25xuZvzw"/>
+</Model>

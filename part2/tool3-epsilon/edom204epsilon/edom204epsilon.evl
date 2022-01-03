@@ -1,0 +1,18 @@
+context Model {
+	constraint ValidName {
+		check: self.name.length() > 1
+		message: "Name must not be empty"		 
+	}
+}
+
+context UserSpec{
+	constraint ValidName {
+		check: self.name.length() > 1
+		message: "Name must not be empty"		 
+	}
+	
+    constraint MustHaveNameAttribute {
+		check: UserAttribute.all.one(ua | ua.name.toLowerCase().matches("name") )
+		message: "Must have at least 1 attribute called Name"
+	}
+}
