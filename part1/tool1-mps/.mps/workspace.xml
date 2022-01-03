@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3e0e3f2-4412-4574-9822-226902e43bbe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/SolutionMoneyManager/models/SolutionMoneyManager.MoneyBoard.mps" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +17,7 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="289e33de-12a3-4bbf-85e1-9324243e04f5/r:74d64ff5-2ad8-4610-8b45-036d70d22110(TempModule289e33de-12a3-4bbf-85e1-9324243e04f5/ConsoleModel_528652528205500)">
+            <model ref="6a7ea210-9b7c-4107-8e8e-4ef9f19bd53e/r:164b4edc-baa1-486f-bdef-b6ac5b4fc504(TempModule6a7ea210-9b7c-4107-8e8e-4ef9f19bd53e/ConsoleModel_446019163528600)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -36,11 +37,11 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
-              <node concept="aymSD" id="7wm6rPSy33W">
-                <node concept="3balQm" id="7wm6rPSy33X" role="aymYE" />
-                <node concept="2Clz$F" id="7wm6rPSy33Y" role="aymYO" />
-                <node concept="2_V_lH" id="7wm6rPSy33Z" role="1PhJh3">
-                  <ref role="2_V_lI" node="7wm6rPSy33Y" resolve="CommandHolder" />
+              <node concept="aymSD" id="kofekkXWUX">
+                <node concept="3balQm" id="kofekkXWUY" role="aymYE" />
+                <node concept="2Clz$F" id="kofekkXWUZ" role="aymYO" />
+                <node concept="2_V_lH" id="kofekkXWV0" role="1PhJh3">
+                  <ref role="2_V_lI" node="kofekkXWUZ" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -125,6 +126,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" />
     <panes>
+      <pane id="FileSystem" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,6 +135,34 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.typesystem.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:dfd88985-0e03-405e-9505-29f4cea5941a(moneyManager.constraints) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.constraints.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -141,7 +171,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:52059938-3528-46ba-8936-72ed7e10ba31(SolutionMoneyManager.MoneyBoard) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/solutions/SolutionMoneyManager/models/SolutionMoneyManager.MoneyBoard.mps]" />
+              <option name="myItemId" value="r:5be2c78e-d80c-4265-bd4a-9f1a05b4ed07(SolutionMoneyManager.a_model) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -152,6 +182,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:14f1c09e-60d3-4a37-87a9-f14d5d5a2302(moneyManager.structure) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -169,15 +229,26 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
+          <SELECTED>
             <PATH_ELEMENT>
               <option name="myItemId" value="moneyManager" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:14f1c09e-60d3-4a37-87a9-f14d5d5a2302(moneyManager.structure) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="8653132035599184129" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </SELECTED>
         </subPane>
       </pane>
-      <pane id="FileSystem" />
       <pane id="Scope" />
     </panes>
   </component>
