@@ -12,7 +12,7 @@ Following there are examples of proposed sections for this part of the report (t
 
 ### Changes of Part 1 Model
 
-![MetaModelv2](../diagrams/metamodel_v2.png)
+![MetaModelv3](../diagrams/metamodel_v3.png)
 
 ## Activity 1: Design Concrete Syntax for the DSL
 
