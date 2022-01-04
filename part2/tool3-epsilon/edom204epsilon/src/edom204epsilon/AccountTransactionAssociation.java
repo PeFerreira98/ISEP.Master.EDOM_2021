@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getAccountTransactionAssociation()
- * @model annotation="gmf.link source='accountspec' target='transactionspec' style='dot' width='2'"
+ * @model annotation="gmf.link source='accountspec' target='transactionspec' width='2' color='255,0,255'"
  * @generated
  */
 public interface AccountTransactionAssociation extends EObject {

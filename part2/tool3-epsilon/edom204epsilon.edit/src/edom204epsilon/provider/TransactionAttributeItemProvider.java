@@ -61,7 +61,6 @@ public class TransactionAttributeItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -80,28 +79,6 @@ public class TransactionAttributeItemProvider
 				 getString("_UI_TransactionAttribute_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TransactionAttribute_name_feature", "_UI_TransactionAttribute_type"),
 				 Edom204epsilonPackage.Literals.TRANSACTION_ATTRIBUTE__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_TransactionAttribute_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TransactionAttribute_type_feature", "_UI_TransactionAttribute_type"),
-				 Edom204epsilonPackage.Literals.TRANSACTION_ATTRIBUTE__TYPE,
 				 true,
 				 false,
 				 false,
@@ -149,7 +126,6 @@ public class TransactionAttributeItemProvider
 
 		switch (notification.getFeatureID(TransactionAttribute.class)) {
 			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__NAME:
-			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

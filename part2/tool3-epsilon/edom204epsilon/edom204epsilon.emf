@@ -12,14 +12,15 @@ class Model {
 	val AccountTransactionAssociation[*] accounttransactionassociation;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", color = "0,0,255", figure = "rectangle")
 class AccountGroupSpec {
 	attr String name = "accountGroupSpecName";
 	attr int cardinalityMin = 0;
 	attr int cardinalityMax = 1;
+	val AccountSpec[*] accountspec;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", color = "255,255,0", figure = "ellipse")
 class UserSpec {
 	attr String name = "userName";
 	attr int cardinalityMin = 0;
@@ -27,7 +28,7 @@ class UserSpec {
 	val UserAttribute[*] userattribute;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", color = "255,0,0", figure = "ellipse")
 class AccountSpec {
 	attr String name = "accountName";
 	attr int cardinalityMin = 0;
@@ -35,7 +36,7 @@ class AccountSpec {
 	val AccountAttribute[*] accountattribute;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", color = "0,255,0", figure = "ellipse")
 class TransactionSpec {
 	attr String name = "transactionName";
 	attr int cardinalityMin = 0;
@@ -43,42 +44,33 @@ class TransactionSpec {
 	val TransactionAttribute[*] transactionattribute;
 }
 
-@gmf.link(source="userspec", target="accountspec", style="dot", width="2")
+@gmf.link(source="userspec", target="accountspec", width="2", color = "255,165,0")
 class UserAccountAssociation {
 	attr String name = "userAccountAssociationName";
 	ref UserSpec userspec;
 	ref AccountSpec accountspec;
 }
 
-@gmf.link(source="accountspec", target="transactionspec", style="dot", width="2")
+@gmf.link(source="accountspec", target="transactionspec", width="2", color = "255,0,255")
 class AccountTransactionAssociation {
 	attr String name = "accountTransactionAssociationName";
 	ref AccountSpec accountspec;
 	ref TransactionSpec transactionspec;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", color = "255,255,0", figure = "rectangle")
 class UserAttribute {
 	attr String name = "userAttributeName";
 	attr int cardinalityMin = 0;
 	attr int cardinalityMax = 1;
-	attr AttributeType type;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", color = "255,0,0", figure = "rectangle")
 class AccountAttribute {
 	attr String name = "accountAttributeName";
-	attr AttributeType type;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", color = "0,255,0", figure = "rectangle")
 class TransactionAttribute {
 	attr String name = "transactionAttributeName";
-	attr AttributeType type;
-}
-
-enum AttributeType {
-	EString = 0;
-	Date = 1;
-	EInteger = 2;
 }

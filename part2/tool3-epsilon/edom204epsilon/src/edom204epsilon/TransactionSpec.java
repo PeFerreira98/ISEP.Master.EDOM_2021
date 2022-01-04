@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getTransactionSpec()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' color='0,255,0' figure='ellipse'"
  * @generated
  */
 public interface TransactionSpec extends EObject {

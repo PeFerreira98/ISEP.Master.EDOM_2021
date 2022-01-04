@@ -63,7 +63,6 @@ public class UserAttributeItemProvider
 			addNamePropertyDescriptor(object);
 			addCardinalityMinPropertyDescriptor(object);
 			addCardinalityMaxPropertyDescriptor(object);
-			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -135,28 +134,6 @@ public class UserAttributeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UserAttribute_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserAttribute_type_feature", "_UI_UserAttribute_type"),
-				 Edom204epsilonPackage.Literals.USER_ATTRIBUTE__TYPE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This returns UserAttribute.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -197,7 +174,6 @@ public class UserAttributeItemProvider
 			case Edom204epsilonPackage.USER_ATTRIBUTE__NAME:
 			case Edom204epsilonPackage.USER_ATTRIBUTE__CARDINALITY_MIN:
 			case Edom204epsilonPackage.USER_ATTRIBUTE__CARDINALITY_MAX:
-			case Edom204epsilonPackage.USER_ATTRIBUTE__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

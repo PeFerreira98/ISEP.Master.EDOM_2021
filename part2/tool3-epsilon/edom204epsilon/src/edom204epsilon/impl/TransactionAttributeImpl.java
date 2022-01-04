@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link edom204epsilon.impl.TransactionAttributeImpl#getName <em>Name</em>}</li>
- *   <li>{@link edom204epsilon.impl.TransactionAttributeImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,26 +46,6 @@ public class TransactionAttributeImpl extends EObjectImpl implements Transaction
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final AttributeType TYPE_EDEFAULT = AttributeType.ESTRING;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected AttributeType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,35 +95,10 @@ public class TransactionAttributeImpl extends EObjectImpl implements Transaction
 	 * @generated
 	 */
 	@Override
-	public AttributeType getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setType(AttributeType newType) {
-		AttributeType oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__NAME:
 				return getName();
-			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__TYPE:
-				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,9 +113,6 @@ public class TransactionAttributeImpl extends EObjectImpl implements Transaction
 		switch (featureID) {
 			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__NAME:
 				setName((String)newValue);
-				return;
-			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__TYPE:
-				setType((AttributeType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -178,9 +129,6 @@ public class TransactionAttributeImpl extends EObjectImpl implements Transaction
 			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -195,8 +143,6 @@ public class TransactionAttributeImpl extends EObjectImpl implements Transaction
 		switch (featureID) {
 			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Edom204epsilonPackage.TRANSACTION_ATTRIBUTE__TYPE:
-				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -213,8 +159,6 @@ public class TransactionAttributeImpl extends EObjectImpl implements Transaction
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", type: ");
-		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

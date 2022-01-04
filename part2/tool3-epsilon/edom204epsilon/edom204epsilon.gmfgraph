@@ -2,7 +2,8 @@
 <gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="edom204epsilon">
   <figures name="Default">
     <descriptors name="AccountGroupSpecFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AccountGroupSpecFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="AccountGroupSpecFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" blue="255"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -11,7 +12,8 @@
       <accessors accessor="getFigureAccountGroupSpecLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="UserSpecFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="UserSpecFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="UserSpecFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -20,7 +22,8 @@
       <accessors accessor="getFigureUserSpecLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="AccountSpecFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AccountSpecFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="AccountSpecFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -29,7 +32,8 @@
       <accessors accessor="getFigureAccountSpecLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="TransactionSpecFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TransactionSpecFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="TransactionSpecFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" green="255"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -38,7 +42,8 @@
       <accessors accessor="getFigureTransactionSpecLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="UserAttributeFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="UserAttributeFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="UserAttributeFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -47,7 +52,8 @@
       <accessors accessor="getFigureUserAttributeLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="AccountAttributeFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AccountAttributeFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="AccountAttributeFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -56,7 +62,8 @@
       <accessors accessor="getFigureAccountAttributeLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="TransactionAttributeFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TransactionAttributeFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TransactionAttributeFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" green="255"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -65,10 +72,14 @@
       <accessors accessor="getFigureTransactionAttributeLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="UserAccountAssociationFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="UserAccountAssociationFigure" lineWidth="2" lineKind="LINE_DOT"/>
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="UserAccountAssociationFigure" lineWidth="2">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="165"/>
+      </actualFigure>
     </descriptors>
     <descriptors name="AccountTransactionAssociationFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AccountTransactionAssociationFigure" lineWidth="2" lineKind="LINE_DOT"/>
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AccountTransactionAssociationFigure" lineWidth="2">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" blue="255"/>
+      </actualFigure>
     </descriptors>
   </figures>
   <nodes name="AccountGroupSpec" figure="AccountGroupSpecFigure"/>

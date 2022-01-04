@@ -2,6 +2,8 @@
  */
 package edom204epsilon;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,10 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edom204epsilon.AccountGroupSpec#getName <em>Name</em>}</li>
  *   <li>{@link edom204epsilon.AccountGroupSpec#getCardinalityMin <em>Cardinality Min</em>}</li>
  *   <li>{@link edom204epsilon.AccountGroupSpec#getCardinalityMax <em>Cardinality Max</em>}</li>
+ *   <li>{@link edom204epsilon.AccountGroupSpec#getAccountspec <em>Accountspec</em>}</li>
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getAccountGroupSpec()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' color='0,0,255' figure='rectangle'"
  * @generated
  */
 public interface AccountGroupSpec extends EObject {
@@ -91,5 +94,17 @@ public interface AccountGroupSpec extends EObject {
 	 * @generated
 	 */
 	void setCardinalityMax(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Accountspec</b></em>' containment reference list.
+	 * The list contents are of type {@link edom204epsilon.AccountSpec}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Accountspec</em>' containment reference list.
+	 * @see edom204epsilon.Edom204epsilonPackage#getAccountGroupSpec_Accountspec()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AccountSpec> getAccountspec();
 
 } // AccountGroupSpec

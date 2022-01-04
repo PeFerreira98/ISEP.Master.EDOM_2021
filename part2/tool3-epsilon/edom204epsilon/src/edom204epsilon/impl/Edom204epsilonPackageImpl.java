@@ -102,13 +102,6 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	private EClass transactionAttributeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum attributeTypeEEnum = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -287,6 +280,16 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	@Override
 	public EAttribute getAccountGroupSpec_CardinalityMax() {
 		return (EAttribute)accountGroupSpecEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAccountGroupSpec_Accountspec() {
+		return (EReference)accountGroupSpecEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -565,16 +568,6 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUserAttribute_Type() {
-		return (EAttribute)userAttributeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getAccountAttribute() {
 		return accountAttributeEClass;
 	}
@@ -595,16 +588,6 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAccountAttribute_Type() {
-		return (EAttribute)accountAttributeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getTransactionAttribute() {
 		return transactionAttributeEClass;
 	}
@@ -617,26 +600,6 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	@Override
 	public EAttribute getTransactionAttribute_Name() {
 		return (EAttribute)transactionAttributeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getTransactionAttribute_Type() {
-		return (EAttribute)transactionAttributeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EEnum getAttributeType() {
-		return attributeTypeEEnum;
 	}
 
 	/**
@@ -681,6 +644,7 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		createEAttribute(accountGroupSpecEClass, ACCOUNT_GROUP_SPEC__NAME);
 		createEAttribute(accountGroupSpecEClass, ACCOUNT_GROUP_SPEC__CARDINALITY_MIN);
 		createEAttribute(accountGroupSpecEClass, ACCOUNT_GROUP_SPEC__CARDINALITY_MAX);
+		createEReference(accountGroupSpecEClass, ACCOUNT_GROUP_SPEC__ACCOUNTSPEC);
 
 		userSpecEClass = createEClass(USER_SPEC);
 		createEAttribute(userSpecEClass, USER_SPEC__NAME);
@@ -714,18 +678,12 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		createEAttribute(userAttributeEClass, USER_ATTRIBUTE__NAME);
 		createEAttribute(userAttributeEClass, USER_ATTRIBUTE__CARDINALITY_MIN);
 		createEAttribute(userAttributeEClass, USER_ATTRIBUTE__CARDINALITY_MAX);
-		createEAttribute(userAttributeEClass, USER_ATTRIBUTE__TYPE);
 
 		accountAttributeEClass = createEClass(ACCOUNT_ATTRIBUTE);
 		createEAttribute(accountAttributeEClass, ACCOUNT_ATTRIBUTE__NAME);
-		createEAttribute(accountAttributeEClass, ACCOUNT_ATTRIBUTE__TYPE);
 
 		transactionAttributeEClass = createEClass(TRANSACTION_ATTRIBUTE);
 		createEAttribute(transactionAttributeEClass, TRANSACTION_ATTRIBUTE__NAME);
-		createEAttribute(transactionAttributeEClass, TRANSACTION_ATTRIBUTE__TYPE);
-
-		// Create enums
-		attributeTypeEEnum = createEEnum(ATTRIBUTE_TYPE);
 	}
 
 	/**
@@ -771,6 +729,7 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		initEAttribute(getAccountGroupSpec_Name(), ecorePackage.getEString(), "name", "accountGroupSpecName", 0, 1, AccountGroupSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAccountGroupSpec_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "0", 0, 1, AccountGroupSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAccountGroupSpec_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "1", 0, 1, AccountGroupSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAccountGroupSpec_Accountspec(), this.getAccountSpec(), null, "accountspec", null, 0, -1, AccountGroupSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userSpecEClass, UserSpec.class, "UserSpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUserSpec_Name(), ecorePackage.getEString(), "name", "userName", 0, 1, UserSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -804,21 +763,12 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		initEAttribute(getUserAttribute_Name(), ecorePackage.getEString(), "name", "userAttributeName", 0, 1, UserAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUserAttribute_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "0", 0, 1, UserAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUserAttribute_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "1", 0, 1, UserAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUserAttribute_Type(), this.getAttributeType(), "type", null, 0, 1, UserAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accountAttributeEClass, AccountAttribute.class, "AccountAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAccountAttribute_Name(), ecorePackage.getEString(), "name", "accountAttributeName", 0, 1, AccountAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAccountAttribute_Type(), this.getAttributeType(), "type", null, 0, 1, AccountAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transactionAttributeEClass, TransactionAttribute.class, "TransactionAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTransactionAttribute_Name(), ecorePackage.getEString(), "name", "transactionAttributeName", 0, 1, TransactionAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTransactionAttribute_Type(), this.getAttributeType(), "type", null, 0, 1, TransactionAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		// Initialize enums and add enum literals
-		initEEnum(attributeTypeEEnum, AttributeType.class, "AttributeType");
-		addEEnumLiteral(attributeTypeEEnum, AttributeType.ESTRING);
-		addEEnumLiteral(attributeTypeEEnum, AttributeType.DATE);
-		addEEnumLiteral(attributeTypeEEnum, AttributeType.EINTEGER);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -859,43 +809,57 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		  (accountGroupSpecEClass,
 		   source,
 		   new String[] {
-			   "label", "name"
+			   "label", "name",
+			   "color", "0,0,255",
+			   "figure", "rectangle"
 		   });
 		addAnnotation
 		  (userSpecEClass,
 		   source,
 		   new String[] {
-			   "label", "name"
+			   "label", "name",
+			   "color", "255,255,0",
+			   "figure", "ellipse"
 		   });
 		addAnnotation
 		  (accountSpecEClass,
 		   source,
 		   new String[] {
-			   "label", "name"
+			   "label", "name",
+			   "color", "255,0,0",
+			   "figure", "ellipse"
 		   });
 		addAnnotation
 		  (transactionSpecEClass,
 		   source,
 		   new String[] {
-			   "label", "name"
+			   "label", "name",
+			   "color", "0,255,0",
+			   "figure", "ellipse"
 		   });
 		addAnnotation
 		  (userAttributeEClass,
 		   source,
 		   new String[] {
-			   "label", "name"
+			   "label", "name",
+			   "color", "255,255,0",
+			   "figure", "rectangle"
 		   });
 		addAnnotation
 		  (accountAttributeEClass,
 		   source,
 		   new String[] {
-			   "label", "name"
+			   "label", "name",
+			   "color", "255,0,0",
+			   "figure", "rectangle"
 		   });
 		addAnnotation
 		  (transactionAttributeEClass,
 		   source,
 		   new String[] {
-			   "label", "name"
+			   "label", "name",
+			   "color", "0,255,0",
+			   "figure", "rectangle"
 		   });
 	}
 
@@ -913,8 +877,8 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		   new String[] {
 			   "source", "userspec",
 			   "target", "accountspec",
-			   "style", "dot",
-			   "width", "2"
+			   "width", "2",
+			   "color", "255,165,0"
 		   });
 		addAnnotation
 		  (accountTransactionAssociationEClass,
@@ -922,8 +886,8 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		   new String[] {
 			   "source", "accountspec",
 			   "target", "transactionspec",
-			   "style", "dot",
-			   "width", "2"
+			   "width", "2",
+			   "color", "255,0,255"
 		   });
 	}
 

@@ -176,13 +176,22 @@ public interface Edom204epsilonPackage extends EPackage {
 	int ACCOUNT_GROUP_SPEC__CARDINALITY_MAX = 2;
 
 	/**
+	 * The feature id for the '<em><b>Accountspec</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_GROUP_SPEC__ACCOUNTSPEC = 3;
+
+	/**
 	 * The number of structural features of the '<em>Account Group Spec</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_GROUP_SPEC_FEATURE_COUNT = 3;
+	int ACCOUNT_GROUP_SPEC_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.UserSpecImpl <em>User Spec</em>}' class.
@@ -479,22 +488,13 @@ public interface Edom204epsilonPackage extends EPackage {
 	int USER_ATTRIBUTE__CARDINALITY_MAX = 2;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_ATTRIBUTE__TYPE = 3;
-
-	/**
 	 * The number of structural features of the '<em>User Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_ATTRIBUTE_FEATURE_COUNT = 4;
+	int USER_ATTRIBUTE_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.AccountAttributeImpl <em>Account Attribute</em>}' class.
@@ -516,22 +516,13 @@ public interface Edom204epsilonPackage extends EPackage {
 	int ACCOUNT_ATTRIBUTE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNT_ATTRIBUTE__TYPE = 1;
-
-	/**
 	 * The number of structural features of the '<em>Account Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_ATTRIBUTE_FEATURE_COUNT = 2;
+	int ACCOUNT_ATTRIBUTE_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.TransactionAttributeImpl <em>Transaction Attribute</em>}' class.
@@ -553,33 +544,13 @@ public interface Edom204epsilonPackage extends EPackage {
 	int TRANSACTION_ATTRIBUTE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSACTION_ATTRIBUTE__TYPE = 1;
-
-	/**
 	 * The number of structural features of the '<em>Transaction Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSACTION_ATTRIBUTE_FEATURE_COUNT = 2;
-
-	/**
-	 * The meta object id for the '{@link edom204epsilon.AttributeType <em>Attribute Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edom204epsilon.AttributeType
-	 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getAttributeType()
-	 * @generated
-	 */
-	int ATTRIBUTE_TYPE = 10;
-
+	int TRANSACTION_ATTRIBUTE_FEATURE_COUNT = 1;
 
 	/**
 	 * Returns the meta object for class '{@link edom204epsilon.Model <em>Model</em>}'.
@@ -710,6 +681,17 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAccountGroupSpec_CardinalityMax();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edom204epsilon.AccountGroupSpec#getAccountspec <em>Accountspec</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Accountspec</em>'.
+	 * @see edom204epsilon.AccountGroupSpec#getAccountspec()
+	 * @see #getAccountGroupSpec()
+	 * @generated
+	 */
+	EReference getAccountGroupSpec_Accountspec();
 
 	/**
 	 * Returns the meta object for class '{@link edom204epsilon.UserSpec <em>User Spec</em>}'.
@@ -1003,17 +985,6 @@ public interface Edom204epsilonPackage extends EPackage {
 	EAttribute getUserAttribute_CardinalityMax();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edom204epsilon.UserAttribute#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see edom204epsilon.UserAttribute#getType()
-	 * @see #getUserAttribute()
-	 * @generated
-	 */
-	EAttribute getUserAttribute_Type();
-
-	/**
 	 * Returns the meta object for class '{@link edom204epsilon.AccountAttribute <em>Account Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1035,17 +1006,6 @@ public interface Edom204epsilonPackage extends EPackage {
 	EAttribute getAccountAttribute_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edom204epsilon.AccountAttribute#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see edom204epsilon.AccountAttribute#getType()
-	 * @see #getAccountAttribute()
-	 * @generated
-	 */
-	EAttribute getAccountAttribute_Type();
-
-	/**
 	 * Returns the meta object for class '{@link edom204epsilon.TransactionAttribute <em>Transaction Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1065,27 +1025,6 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTransactionAttribute_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edom204epsilon.TransactionAttribute#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see edom204epsilon.TransactionAttribute#getType()
-	 * @see #getTransactionAttribute()
-	 * @generated
-	 */
-	EAttribute getTransactionAttribute_Type();
-
-	/**
-	 * Returns the meta object for enum '{@link edom204epsilon.AttributeType <em>Attribute Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Attribute Type</em>'.
-	 * @see edom204epsilon.AttributeType
-	 * @generated
-	 */
-	EEnum getAttributeType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1208,6 +1147,14 @@ public interface Edom204epsilonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACCOUNT_GROUP_SPEC__CARDINALITY_MAX = eINSTANCE.getAccountGroupSpec_CardinalityMax();
+
+		/**
+		 * The meta object literal for the '<em><b>Accountspec</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACCOUNT_GROUP_SPEC__ACCOUNTSPEC = eINSTANCE.getAccountGroupSpec_Accountspec();
 
 		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.UserSpecImpl <em>User Spec</em>}' class.
@@ -1438,14 +1385,6 @@ public interface Edom204epsilonPackage extends EPackage {
 		EAttribute USER_ATTRIBUTE__CARDINALITY_MAX = eINSTANCE.getUserAttribute_CardinalityMax();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute USER_ATTRIBUTE__TYPE = eINSTANCE.getUserAttribute_Type();
-
-		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.AccountAttributeImpl <em>Account Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1464,14 +1403,6 @@ public interface Edom204epsilonPackage extends EPackage {
 		EAttribute ACCOUNT_ATTRIBUTE__NAME = eINSTANCE.getAccountAttribute_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACCOUNT_ATTRIBUTE__TYPE = eINSTANCE.getAccountAttribute_Type();
-
-		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.TransactionAttributeImpl <em>Transaction Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1488,24 +1419,6 @@ public interface Edom204epsilonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TRANSACTION_ATTRIBUTE__NAME = eINSTANCE.getTransactionAttribute_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TRANSACTION_ATTRIBUTE__TYPE = eINSTANCE.getTransactionAttribute_Type();
-
-		/**
-		 * The meta object literal for the '{@link edom204epsilon.AttributeType <em>Attribute Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edom204epsilon.AttributeType
-		 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getAttributeType()
-		 * @generated
-		 */
-		EEnum ATTRIBUTE_TYPE = eINSTANCE.getAttributeType();
 
 	}
 

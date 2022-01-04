@@ -16,11 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edom204epsilon.UserAttribute#getName <em>Name</em>}</li>
  *   <li>{@link edom204epsilon.UserAttribute#getCardinalityMin <em>Cardinality Min</em>}</li>
  *   <li>{@link edom204epsilon.UserAttribute#getCardinalityMax <em>Cardinality Max</em>}</li>
- *   <li>{@link edom204epsilon.UserAttribute#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getUserAttribute()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' color='255,255,0' figure='rectangle'"
  * @generated
  */
 public interface UserAttribute extends EObject {
@@ -92,30 +91,5 @@ public interface UserAttribute extends EObject {
 	 * @generated
 	 */
 	void setCardinalityMax(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link edom204epsilon.AttributeType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see edom204epsilon.AttributeType
-	 * @see #setType(AttributeType)
-	 * @see edom204epsilon.Edom204epsilonPackage#getUserAttribute_Type()
-	 * @model
-	 * @generated
-	 */
-	AttributeType getType();
-
-	/**
-	 * Sets the value of the '{@link edom204epsilon.UserAttribute#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see edom204epsilon.AttributeType
-	 * @see #getType()
-	 * @generated
-	 */
-	void setType(AttributeType value);
 
 } // UserAttribute

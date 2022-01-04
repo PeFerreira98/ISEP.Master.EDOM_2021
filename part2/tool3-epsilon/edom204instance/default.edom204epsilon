@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="edom204epsilon">
+  <accountgroupSpec name="AccountGroup"/>
+  <userspec name="User"/>
+  <accountspec name="Account1"/>
+  <accountspec name="Account2"/>
+  <transactionspec name="Transaction1"/>
+  <transactionspec name="Transaction2"/>
+  <transactionspec name="Transaction3"/>
+  <useraccountassociation userspec="//@userspec.0" accountspec="//@accountspec.0"/>
+  <useraccountassociation userspec="//@userspec.0" accountspec="//@accountspec.1"/>
+  <accounttransactionassociation accountspec="//@accountspec.0" transactionspec="//@transactionspec.0"/>
+  <accounttransactionassociation accountspec="//@accountspec.1" transactionspec="//@transactionspec.1"/>
+  <accounttransactionassociation accountspec="//@accountspec.1" transactionspec="//@transactionspec.2"/>
+</Model>

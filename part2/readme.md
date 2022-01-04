@@ -23,8 +23,8 @@ For each metamodel element, the team chose a different graphically representatio
 * UserSpec - for the UserSpec, we will be using an **oval yellow** object;
 * AccountSpec - for the AccountSpec, we will be using an **oval red** object;
 * TransactionSpec - for the TransactionSpec, we will be using a **oval green** object;
-* UserAccountAssociation - for the UserAccountAssociation, we will be using a **orange triangle** object;
-* AccountTransactionAssociation - for the AccountTransactionAssociation, we will be using a **purple triangle** object;
+* UserAccountAssociation - for the UserAccountAssociation, we will be using a **orange** link;
+* AccountTransactionAssociation - for the AccountTransactionAssociation, we will be using a **purple** link;
 * UserAttribute - for the UserAttribute, we will be using a **yellow square** object;
 * AccountAttribute - for the AccountAttribute, we will be using a **red square** object;
 * TransactionAttribute - for the TransactionAttribute, we will be using a **green square** object;

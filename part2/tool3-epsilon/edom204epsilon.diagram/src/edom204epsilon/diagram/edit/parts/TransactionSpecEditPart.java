@@ -3,6 +3,7 @@
  */
 package edom204epsilon.diagram.edit.parts;
 
+import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RoundedRectangle;
@@ -265,7 +266,7 @@ public class TransactionSpecEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class TransactionSpecFigure extends RoundedRectangle {
+	public class TransactionSpecFigure extends Ellipse {
 
 		/**
 		 * @generated
@@ -276,7 +277,7 @@ public class TransactionSpecEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		public TransactionSpecFigure() {
-			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
+			this.setBackgroundColor(THIS_BACK);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();
@@ -303,5 +304,10 @@ public class TransactionSpecEditPart extends ShapeNodeEditPart {
 		}
 
 	}
+
+	/**
+	* @generated
+	*/
+	static final Color THIS_BACK = new Color(null, 0, 255, 0);
 
 }

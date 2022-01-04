@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getUserAccountAssociation()
- * @model annotation="gmf.link source='userspec' target='accountspec' style='dot' width='2'"
+ * @model annotation="gmf.link source='userspec' target='accountspec' width='2' color='255,165,0'"
  * @generated
  */
 public interface UserAccountAssociation extends EObject {

@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getUserSpec()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' color='255,255,0' figure='ellipse'"
  * @generated
  */
 public interface UserSpec extends EObject {

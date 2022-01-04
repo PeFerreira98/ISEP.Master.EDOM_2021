@@ -14,11 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link edom204epsilon.TransactionAttribute#getName <em>Name</em>}</li>
- *   <li>{@link edom204epsilon.TransactionAttribute#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getTransactionAttribute()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' color='0,255,0' figure='rectangle'"
  * @generated
  */
 public interface TransactionAttribute extends EObject {
@@ -44,30 +43,5 @@ public interface TransactionAttribute extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link edom204epsilon.AttributeType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see edom204epsilon.AttributeType
-	 * @see #setType(AttributeType)
-	 * @see edom204epsilon.Edom204epsilonPackage#getTransactionAttribute_Type()
-	 * @model
-	 * @generated
-	 */
-	AttributeType getType();
-
-	/**
-	 * Sets the value of the '{@link edom204epsilon.TransactionAttribute#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see edom204epsilon.AttributeType
-	 * @see #getType()
-	 * @generated
-	 */
-	void setType(AttributeType value);
 
 } // TransactionAttribute

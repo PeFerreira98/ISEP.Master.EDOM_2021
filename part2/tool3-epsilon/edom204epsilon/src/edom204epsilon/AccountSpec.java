@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see edom204epsilon.Edom204epsilonPackage#getAccountSpec()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' color='255,0,0' figure='ellipse'"
  * @generated
  */
 public interface AccountSpec extends EObject {

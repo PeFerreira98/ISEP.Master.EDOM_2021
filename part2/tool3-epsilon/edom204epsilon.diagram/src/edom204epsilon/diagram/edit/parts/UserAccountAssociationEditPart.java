@@ -11,6 +11,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 
+import org.eclipse.swt.graphics.Color;
 import edom204epsilon.diagram.edit.policies.UserAccountAssociationItemSemanticEditPolicy;
 
 /**
@@ -68,10 +69,15 @@ public class UserAccountAssociationEditPart extends ConnectionNodeEditPart imple
 		 */
 		public UserAccountAssociationFigure() {
 			this.setLineWidth(2);
-			this.setLineStyle(Graphics.LINE_DOT);
+			this.setForegroundColor(THIS_FORE);
 
 		}
 
 	}
+
+	/**
+	* @generated
+	*/
+	static final Color THIS_FORE = new Color(null, 255, 165, 0);
 
 }
