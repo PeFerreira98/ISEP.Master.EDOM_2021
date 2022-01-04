@@ -1,0 +1,7 @@
+# Tracing options for the edom204epsilon.diagram plug-in
+
+# Common issues
+edom204epsilon.diagram/debug=false
+
+# Visual IDs
+edom204epsilon.diagram/debug/visualID=false

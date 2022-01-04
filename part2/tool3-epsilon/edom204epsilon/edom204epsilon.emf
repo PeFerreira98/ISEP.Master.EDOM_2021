@@ -1,6 +1,7 @@
 @namespace(uri="edom204epsilon", prefix="")
 package edom204epsilon;
 
+@gmf.diagram
 class Model {
 	attr String name = "modelName";
 	val AccountGroupSpec[*] accountgroupSpec;
@@ -11,12 +12,14 @@ class Model {
 	val AccountTransactionAssociation[*] accounttransactionassociation;
 }
 
+@gmf.node(label = "name")
 class AccountGroupSpec {
 	attr String name = "accountGroupSpecName";
 	attr int cardinalityMin = 0;
 	attr int cardinalityMax = 1;
 }
 
+@gmf.node(label = "name")
 class UserSpec {
 	attr String name = "userName";
 	attr int cardinalityMin = 0;
@@ -24,6 +27,7 @@ class UserSpec {
 	val UserAttribute[*] userattribute;
 }
 
+@gmf.node(label = "name")
 class AccountSpec {
 	attr String name = "accountName";
 	attr int cardinalityMin = 0;
@@ -31,6 +35,7 @@ class AccountSpec {
 	val AccountAttribute[*] accountattribute;
 }
 
+@gmf.node(label = "name")
 class TransactionSpec {
 	attr String name = "transactionName";
 	attr int cardinalityMin = 0;
@@ -38,18 +43,21 @@ class TransactionSpec {
 	val TransactionAttribute[*] transactionattribute;
 }
 
+@gmf.link(source="userspec", target="accountspec", style="dot", width="2")
 class UserAccountAssociation {
 	attr String name = "userAccountAssociationName";
 	ref UserSpec userspec;
 	ref AccountSpec accountspec;
 }
 
+@gmf.link(source="accountspec", target="transactionspec", style="dot", width="2")
 class AccountTransactionAssociation {
 	attr String name = "accountTransactionAssociationName";
 	ref AccountSpec accountspec;
 	ref TransactionSpec transactionspec;
 }
 
+@gmf.node(label = "name")
 class UserAttribute {
 	attr String name = "userAttributeName";
 	attr int cardinalityMin = 0;
@@ -57,11 +65,13 @@ class UserAttribute {
 	attr AttributeType type;
 }
 
+@gmf.node(label = "name")
 class AccountAttribute {
 	attr String name = "accountAttributeName";
 	attr AttributeType type;
 }
 
+@gmf.node(label = "name")
 class TransactionAttribute {
 	attr String name = "transactionAttributeName";
 	attr AttributeType type;

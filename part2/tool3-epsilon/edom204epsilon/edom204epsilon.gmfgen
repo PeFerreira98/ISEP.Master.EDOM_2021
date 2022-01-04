@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgen:GenEditorGenerator xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel" copyrightText="">
+  <diagram visualID="1000" editPartClassName="ModelEditPart" itemSemanticEditPolicyClassName="ModelItemSemanticEditPolicy" canonicalEditPolicyClassName="ModelCanonicalEditPolicy" iconProviderPriority="Low" validationProviderPriority="Low" validationEnabled="true" validationDecorators="true" liveValidationUIFeedback="true">
+    <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+    <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ModelEditHelper"/>
+    <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
+    <containsShortcutsTo>edom204epsilon</containsShortcutsTo>
+    <shortcutsProvidedFor>edom204epsilon</shortcutsProvidedFor>
+    <domainDiagramElement href="edom204epsilon.genmodel#//edom204epsilon/Model"/>
+    <topLevelNodes visualID="2001" editPartClassName="AccountGroupSpecEditPart" itemSemanticEditPolicyClassName="AccountGroupSpecItemSemanticEditPolicy" canonicalEditPolicyClassName="AccountGroupSpecCanonicalEditPolicy" graphicalNodeEditPolicyClassName="AccountGroupSpecGraphicalNodeEditPolicy" createCommandClassName="AccountGroupSpecCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="AccountGroupSpecEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="AccountGroupSpecFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class AccountGroupSpecFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureAccountGroupSpecLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public AccountGroupSpecFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureAccountGroupSpecLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureAccountGroupSpecLabelFigure.setText(&quot;AccountGroupSpec&quot;);&#xA;&#xA;this.add(fFigureAccountGroupSpecLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureAccountGroupSpecLabelFigure() {&#xA;&#x9;&#x9;return fFigureAccountGroupSpecLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="edom204epsilon.genmodel#//edom204epsilon/AccountGroupSpec"/>
+        <containmentMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/accountgroupSpec"/>
+        <childMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/accountgroupSpec"/>
+      </modelFacet>
+      <labels visualID="5001" editPartClassName="AccountGroupSpecNameEditPart" itemSemanticEditPolicyClassName="AccountGroupSpecNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureAccountGroupSpecLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="edom204epsilon.genmodel#//edom204epsilon/AccountGroupSpec/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <topLevelNodes visualID="2002" editPartClassName="UserSpecEditPart" itemSemanticEditPolicyClassName="UserSpecItemSemanticEditPolicy" canonicalEditPolicyClassName="UserSpecCanonicalEditPolicy" graphicalNodeEditPolicyClassName="UserSpecGraphicalNodeEditPolicy" createCommandClassName="UserSpecCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="UserSpecEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="UserSpecFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class UserSpecFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureUserSpecLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public UserSpecFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureUserSpecLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureUserSpecLabelFigure.setText(&quot;UserSpec&quot;);&#xA;&#xA;this.add(fFigureUserSpecLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureUserSpecLabelFigure() {&#xA;&#x9;&#x9;return fFigureUserSpecLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="edom204epsilon.genmodel#//edom204epsilon/UserSpec"/>
+        <containmentMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/userspec"/>
+        <childMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/userspec"/>
+      </modelFacet>
+      <labels visualID="5002" editPartClassName="UserSpecNameEditPart" itemSemanticEditPolicyClassName="UserSpecNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureUserSpecLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="edom204epsilon.genmodel#//edom204epsilon/UserSpec/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <topLevelNodes visualID="2003" editPartClassName="AccountSpecEditPart" itemSemanticEditPolicyClassName="AccountSpecItemSemanticEditPolicy" canonicalEditPolicyClassName="AccountSpecCanonicalEditPolicy" graphicalNodeEditPolicyClassName="AccountSpecGraphicalNodeEditPolicy" createCommandClassName="AccountSpecCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="AccountSpecEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="AccountSpecFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class AccountSpecFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureAccountSpecLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public AccountSpecFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureAccountSpecLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureAccountSpecLabelFigure.setText(&quot;AccountSpec&quot;);&#xA;&#xA;this.add(fFigureAccountSpecLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureAccountSpecLabelFigure() {&#xA;&#x9;&#x9;return fFigureAccountSpecLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="edom204epsilon.genmodel#//edom204epsilon/AccountSpec"/>
+        <containmentMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/accountspec"/>
+        <childMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/accountspec"/>
+      </modelFacet>
+      <labels visualID="5003" editPartClassName="AccountSpecNameEditPart" itemSemanticEditPolicyClassName="AccountSpecNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureAccountSpecLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="edom204epsilon.genmodel#//edom204epsilon/AccountSpec/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <topLevelNodes visualID="2004" editPartClassName="TransactionSpecEditPart" itemSemanticEditPolicyClassName="TransactionSpecItemSemanticEditPolicy" canonicalEditPolicyClassName="TransactionSpecCanonicalEditPolicy" graphicalNodeEditPolicyClassName="TransactionSpecGraphicalNodeEditPolicy" createCommandClassName="TransactionSpecCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="TransactionSpecEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TransactionSpecFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TransactionSpecFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTransactionSpecLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TransactionSpecFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTransactionSpecLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTransactionSpecLabelFigure.setText(&quot;TransactionSpec&quot;);&#xA;&#xA;this.add(fFigureTransactionSpecLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTransactionSpecLabelFigure() {&#xA;&#x9;&#x9;return fFigureTransactionSpecLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="edom204epsilon.genmodel#//edom204epsilon/TransactionSpec"/>
+        <containmentMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/transactionspec"/>
+        <childMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/transactionspec"/>
+      </modelFacet>
+      <labels visualID="5004" editPartClassName="TransactionSpecNameEditPart" itemSemanticEditPolicyClassName="TransactionSpecNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureTransactionSpecLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="edom204epsilon.genmodel#//edom204epsilon/TransactionSpec/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <links visualID="4001" editPartClassName="UserAccountAssociationEditPart" itemSemanticEditPolicyClassName="UserAccountAssociationItemSemanticEditPolicy" createCommandClassName="UserAccountAssociationCreateCommand" reorientCommandClassName="UserAccountAssociationReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="UserAccountAssociationEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="UserAccountAssociationFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class UserAccountAssociationFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public UserAccountAssociationFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass href="edom204epsilon.genmodel#//edom204epsilon/UserAccountAssociation"/>
+        <containmentMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/useraccountassociation"/>
+        <childMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/useraccountassociation"/>
+        <sourceMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/UserAccountAssociation/userspec"/>
+        <targetMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/UserAccountAssociation/accountspec"/>
+      </modelFacet>
+    </links>
+    <links visualID="4002" editPartClassName="AccountTransactionAssociationEditPart" itemSemanticEditPolicyClassName="AccountTransactionAssociationItemSemanticEditPolicy" createCommandClassName="AccountTransactionAssociationCreateCommand" reorientCommandClassName="AccountTransactionAssociationReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="AccountTransactionAssociationEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="AccountTransactionAssociationFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class AccountTransactionAssociationFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public AccountTransactionAssociationFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass href="edom204epsilon.genmodel#//edom204epsilon/AccountTransactionAssociation"/>
+        <containmentMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/accounttransactionassociation"/>
+        <childMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/accounttransactionassociation"/>
+        <sourceMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/AccountTransactionAssociation/accountspec"/>
+        <targetMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/AccountTransactionAssociation/transactionspec"/>
+      </modelFacet>
+    </links>
+    <palette>
+      <groups title="Objects" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="AccountAttribute" description="Create new AccountAttribute"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="AccountGroupSpec" description="Create new AccountGroupSpec" genNodes="//@diagram/@topLevelNodes.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="AccountSpec" description="Create new AccountSpec" genNodes="//@diagram/@topLevelNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="TransactionAttribute" description="Create new TransactionAttribute"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="TransactionSpec" description="Create new TransactionSpec" genNodes="//@diagram/@topLevelNodes.3"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="UserAttribute" description="Create new UserAttribute"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="UserSpec" description="Create new UserSpec" genNodes="//@diagram/@topLevelNodes.1"/>
+      </groups>
+      <groups title="Connections" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="AccountTransactionAssociation" description="Create new AccountTransactionAssociation" genLinks="//@diagram/@links.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="UserAccountAssociation" description="Create new UserAccountAssociation" genLinks="//@diagram/@links.0"/>
+      </groups>
+    </palette>
+    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="edom204epsilon.diagram.general" name="Edom204epsilon Diagram">
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="edom204epsilon.diagram.appearance" name="Appearance" kind="Appearance"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="edom204epsilon.diagram.connections" name="Connections" kind="Connections"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="edom204epsilon.diagram.printing" name="Printing" kind="Printing"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="edom204epsilon.diagram.rulersAndGrid" name="Rulers And Grid" kind="RulersAndGrid"/>
+    </preferencePages>
+  </diagram>
+  <plugin printingEnabled="true">
+    <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
+    <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
+    <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>
+  </plugin>
+  <editor/>
+  <navigator>
+    <childReferences child="//@diagram"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.0"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.1"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.2"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.3"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.0" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.2" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.1" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.1" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.3" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.3" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.2" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+  </navigator>
+  <diagramUpdater/>
+  <propertySheet>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="appearance"/>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="diagram"/>
+    <tabs xsi:type="gmfgen:GenCustomPropertyTab" iD="domain" label="Core">
+      <filter xsi:type="gmfgen:TypeTabFilter">
+        <types>org.eclipse.gmf.runtime.notation.View</types>
+        <types>org.eclipse.gef.EditPart</types>
+        <generatedTypes>abstractNavigatorItem</generatedTypes>
+      </filter>
+    </tabs>
+  </propertySheet>
+  <domainGenModel href="edom204epsilon.genmodel#/"/>
+  <labelParsers extensibleViaService="true">
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet"/>
+  </labelParsers>
+  <contextMenus context="//@diagram">
+    <items xsi:type="gmfgen:LoadResourceAction"/>
+  </contextMenus>
+</gmfgen:GenEditorGenerator>

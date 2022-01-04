@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="edom204epsilon">
+  <figures name="Default">
+    <descriptors name="AccountGroupSpecFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AccountGroupSpecFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AccountGroupSpecLabelFigure" text="AccountGroupSpec"/>
+      </actualFigure>
+      <accessors accessor="getFigureAccountGroupSpecLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="UserSpecFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="UserSpecFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="UserSpecLabelFigure" text="UserSpec"/>
+      </actualFigure>
+      <accessors accessor="getFigureUserSpecLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="AccountSpecFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AccountSpecFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AccountSpecLabelFigure" text="AccountSpec"/>
+      </actualFigure>
+      <accessors accessor="getFigureAccountSpecLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TransactionSpecFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TransactionSpecFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TransactionSpecLabelFigure" text="TransactionSpec"/>
+      </actualFigure>
+      <accessors accessor="getFigureTransactionSpecLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="UserAttributeFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="UserAttributeFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="UserAttributeLabelFigure" text="UserAttribute"/>
+      </actualFigure>
+      <accessors accessor="getFigureUserAttributeLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="AccountAttributeFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AccountAttributeFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AccountAttributeLabelFigure" text="AccountAttribute"/>
+      </actualFigure>
+      <accessors accessor="getFigureAccountAttributeLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TransactionAttributeFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TransactionAttributeFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TransactionAttributeLabelFigure" text="TransactionAttribute"/>
+      </actualFigure>
+      <accessors accessor="getFigureTransactionAttributeLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="UserAccountAssociationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="UserAccountAssociationFigure" lineWidth="2" lineKind="LINE_DOT"/>
+    </descriptors>
+    <descriptors name="AccountTransactionAssociationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AccountTransactionAssociationFigure" lineWidth="2" lineKind="LINE_DOT"/>
+    </descriptors>
+  </figures>
+  <nodes name="AccountGroupSpec" figure="AccountGroupSpecFigure"/>
+  <nodes name="UserSpec" figure="UserSpecFigure"/>
+  <nodes name="AccountSpec" figure="AccountSpecFigure"/>
+  <nodes name="TransactionSpec" figure="TransactionSpecFigure"/>
+  <nodes name="UserAttribute" figure="UserAttributeFigure"/>
+  <nodes name="AccountAttribute" figure="AccountAttributeFigure"/>
+  <nodes name="TransactionAttribute" figure="TransactionAttributeFigure"/>
+  <connections name="UserAccountAssociation" figure="UserAccountAssociationFigure"/>
+  <connections name="AccountTransactionAssociation" figure="AccountTransactionAssociationFigure"/>
+  <labels name="AccountGroupSpecLabel" figure="AccountGroupSpecFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="UserSpecLabel" figure="UserSpecFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="AccountSpecLabel" figure="AccountSpecFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="TransactionSpecLabel" figure="TransactionSpecFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="UserAttributeLabel" figure="UserAttributeFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="AccountAttributeLabel" figure="AccountAttributeFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="TransactionAttributeLabel" figure="TransactionAttributeFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+</gmfgraph:Canvas>
