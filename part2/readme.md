@@ -36,6 +36,19 @@ For each metamodel element, the team chose a different graphically representatio
 
 ## Activity 2: Specify Common Features for Applications of the Domain
 
+For the prototypes we will be using a common OO Language such as Java or C# and we will be developing a console application based in the MoneyManager(iOS), Moneyboard and MoneyManager(Android) apps.
+
+For all models, there are some common functionalities:
+
+1. Create User
+    - The User need to create a User based on UserSpec that will contain Attributes/fields based on UserAttribute and a name. 
+    - In this case we will assume a User has an Account list for simplicity.
+2. Create Account
+    - The User need to create an Account based on AccountSpec that will contain Attributes/fields based on AccountAttribute and a name. 
+    - In this case we will assume a Account has an Transaction list for simplicity.
+3. Create Transaction
+    - The User need to create Transaction based on TransactionSpec that will contain Attributes/fields based on TransactionAttribute and a name.
+
 
 ## Activity 3: Implement Prototypes of Applications of the Domain
 
@@ -58,6 +71,7 @@ For each metamodel element, the team chose a different graphically representatio
 
 ## Activity 6: Generate Applications
 
+After generating all the code in the different applications, the generation was tested for the 3 existing models and the necessary code was generated without any problem. This allowed us to understand all the possibilities that this type of Low Code Technologies provide, allowing to generate 3 different applications but with common points, using the same files.
 
 ## Constraints and Refactorings
 
