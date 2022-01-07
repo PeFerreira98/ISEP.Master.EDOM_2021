@@ -79,6 +79,10 @@ class AccountTransactionAssociation {
     name : string
 }
 
+class CategoryTransactionAssociation {
+    name : string
+}
+
 class AttributeType <<Enum>> {
     text
     number
@@ -111,9 +115,12 @@ AccountSpec "1" --> "0..*" AccountTransactionAssociation
 TransactionSpec "1" --> "0..*" AccountTransactionAssociation
 
 Model *- "0..*" CategorySpec
+Model *- "0..*" CategoryTransactionAssociation
 CategorySpec "1" --> "1..*" CategoryAttribute
 CategoryAttribute "1" -- "1" AttributeType
-TransactionSpec "1..*" --> "1" CategorySpec
+TransactionSpec "1" --> "0..*" CategoryTransactionAssociation
+CategorySpec "1" --> "0..*" CategoryTransactionAssociation
+
 
 hide circle
 @enduml
