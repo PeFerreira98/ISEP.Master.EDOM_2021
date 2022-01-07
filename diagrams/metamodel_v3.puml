@@ -116,7 +116,7 @@ TransactionSpec "1" --> "0..*" AccountTransactionAssociation
 
 Model *- "0..*" CategorySpec
 Model *- "0..*" CategoryTransactionAssociation
-CategorySpec "1" --> "1..*" CategoryAttribute
+CategorySpec *-- "1..*" CategoryAttribute
 CategoryAttribute "1" -- "1" AttributeType
 TransactionSpec "1" --> "0..*" CategoryTransactionAssociation
 CategorySpec "1" --> "0..*" CategoryTransactionAssociation
