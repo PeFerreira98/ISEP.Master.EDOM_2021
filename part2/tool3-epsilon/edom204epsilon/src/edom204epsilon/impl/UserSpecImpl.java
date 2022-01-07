@@ -67,7 +67,7 @@ public class UserSpecImpl extends EObjectImpl implements UserSpec {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CARDINALITY_MIN_EDEFAULT = 0;
+	protected static final int CARDINALITY_MIN_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getCardinalityMin() <em>Cardinality Min</em>}' attribute.

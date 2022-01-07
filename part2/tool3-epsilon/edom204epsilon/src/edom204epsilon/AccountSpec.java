@@ -51,13 +51,13 @@ public interface AccountSpec extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Cardinality Min</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cardinality Min</em>' attribute.
 	 * @see #setCardinalityMin(int)
 	 * @see edom204epsilon.Edom204epsilonPackage#getAccountSpec_CardinalityMin()
-	 * @model default="0"
+	 * @model default="1"
 	 * @generated
 	 */
 	int getCardinalityMin();
@@ -74,13 +74,13 @@ public interface AccountSpec extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Cardinality Max</b></em>' attribute.
-	 * The default value is <code>"1"</code>.
+	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cardinality Max</em>' attribute.
 	 * @see #setCardinalityMax(int)
 	 * @see edom204epsilon.Edom204epsilonPackage#getAccountSpec_CardinalityMax()
-	 * @model default="1"
+	 * @model default="-1"
 	 * @generated
 	 */
 	int getCardinalityMax();

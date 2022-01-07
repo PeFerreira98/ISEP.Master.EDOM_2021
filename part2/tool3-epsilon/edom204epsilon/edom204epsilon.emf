@@ -23,7 +23,7 @@ class AccountGroupSpec {
 @gmf.node(label = "name", color = "255,255,0", figure = "ellipse")
 class UserSpec {
 	attr String name = "userName";
-	attr int cardinalityMin = 0;
+	attr int cardinalityMin = 1;
 	attr int cardinalityMax = 1;
 	val UserAttribute[*] userattribute;
 }
@@ -31,16 +31,16 @@ class UserSpec {
 @gmf.node(label = "name", color = "255,0,0", figure = "ellipse")
 class AccountSpec {
 	attr String name = "accountName";
-	attr int cardinalityMin = 0;
-	attr int cardinalityMax = 1;
+	attr int cardinalityMin = 1;
+	attr int cardinalityMax = -1;
 	val AccountAttribute[*] accountattribute;
 }
 
 @gmf.node(label = "name", color = "0,255,0", figure = "ellipse")
 class TransactionSpec {
 	attr String name = "transactionName";
-	attr int cardinalityMin = 0;
-	attr int cardinalityMax = 1;
+	attr int cardinalityMin = 1;
+	attr int cardinalityMax = -1;
 	val TransactionAttribute[*] transactionattribute;
 }
 
@@ -61,16 +61,29 @@ class AccountTransactionAssociation {
 @gmf.node(label = "name", color = "255,255,0", figure = "rectangle")
 class UserAttribute {
 	attr String name = "userAttributeName";
-	attr int cardinalityMin = 0;
+	attr int cardinalityMin = 1;
 	attr int cardinalityMax = 1;
+	attr AttributeType type;
 }
 
 @gmf.node(label = "name", color = "255,0,0", figure = "rectangle")
 class AccountAttribute {
 	attr String name = "accountAttributeName";
+	attr int cardinalityMin = 1;
+	attr int cardinalityMax = 1;
+	attr AttributeType type;
 }
 
 @gmf.node(label = "name", color = "0,255,0", figure = "rectangle")
 class TransactionAttribute {
 	attr String name = "transactionAttributeName";
+	attr int cardinalityMin = 1;
+	attr int cardinalityMax = 1;
+	attr AttributeType type;
+}
+
+enum AttributeType {
+	string = 0;
+	DateTime = 1;
+	double = 2;
 }

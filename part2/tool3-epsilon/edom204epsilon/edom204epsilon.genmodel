@@ -5,6 +5,11 @@
     copyrightFields="false">
   <foreignModel>edom204epsilon.emf</foreignModel>
   <genPackages prefix="Edom204epsilon" disposableProviderFactory="true" ecorePackage="edom204epsilon.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="edom204epsilon.ecore#//AttributeType">
+      <genEnumLiterals ecoreEnumLiteral="edom204epsilon.ecore#//AttributeType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="edom204epsilon.ecore#//AttributeType/DateTime"/>
+      <genEnumLiterals ecoreEnumLiteral="edom204epsilon.ecore#//AttributeType/double"/>
+    </genEnums>
     <genClasses ecoreClass="edom204epsilon.ecore#//Model">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//Model/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom204epsilon.ecore#//Model/accountgroupSpec"/>
@@ -52,12 +57,19 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//UserAttribute/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//UserAttribute/cardinalityMin"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//UserAttribute/cardinalityMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//UserAttribute/type"/>
     </genClasses>
     <genClasses ecoreClass="edom204epsilon.ecore#//AccountAttribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//AccountAttribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//AccountAttribute/cardinalityMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//AccountAttribute/cardinalityMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//AccountAttribute/type"/>
     </genClasses>
     <genClasses ecoreClass="edom204epsilon.ecore#//TransactionAttribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//TransactionAttribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//TransactionAttribute/cardinalityMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//TransactionAttribute/cardinalityMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom204epsilon.ecore#//TransactionAttribute/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

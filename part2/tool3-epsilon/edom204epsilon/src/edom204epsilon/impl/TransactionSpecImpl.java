@@ -67,7 +67,7 @@ public class TransactionSpecImpl extends EObjectImpl implements TransactionSpec 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CARDINALITY_MIN_EDEFAULT = 0;
+	protected static final int CARDINALITY_MIN_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getCardinalityMin() <em>Cardinality Min</em>}' attribute.
@@ -87,7 +87,7 @@ public class TransactionSpecImpl extends EObjectImpl implements TransactionSpec 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CARDINALITY_MAX_EDEFAULT = 1;
+	protected static final int CARDINALITY_MAX_EDEFAULT = -1;
 
 	/**
 	 * The cached value of the '{@link #getCardinalityMax() <em>Cardinality Max</em>}' attribute.

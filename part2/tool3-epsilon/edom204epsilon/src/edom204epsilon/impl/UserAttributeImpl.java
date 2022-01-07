@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link edom204epsilon.impl.UserAttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link edom204epsilon.impl.UserAttributeImpl#getCardinalityMin <em>Cardinality Min</em>}</li>
  *   <li>{@link edom204epsilon.impl.UserAttributeImpl#getCardinalityMax <em>Cardinality Max</em>}</li>
+ *   <li>{@link edom204epsilon.impl.UserAttributeImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,7 +58,7 @@ public class UserAttributeImpl extends EObjectImpl implements UserAttribute {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CARDINALITY_MIN_EDEFAULT = 0;
+	protected static final int CARDINALITY_MIN_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getCardinalityMin() <em>Cardinality Min</em>}' attribute.
@@ -88,6 +89,26 @@ public class UserAttributeImpl extends EObjectImpl implements UserAttribute {
 	 * @ordered
 	 */
 	protected int cardinalityMax = CARDINALITY_MAX_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final AttributeType TYPE_EDEFAULT = AttributeType.STRING;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected AttributeType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -183,6 +204,29 @@ public class UserAttributeImpl extends EObjectImpl implements UserAttribute {
 	 * @generated
 	 */
 	@Override
+	public AttributeType getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setType(AttributeType newType) {
+		AttributeType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Edom204epsilonPackage.USER_ATTRIBUTE__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case Edom204epsilonPackage.USER_ATTRIBUTE__NAME:
@@ -191,6 +235,8 @@ public class UserAttributeImpl extends EObjectImpl implements UserAttribute {
 				return getCardinalityMin();
 			case Edom204epsilonPackage.USER_ATTRIBUTE__CARDINALITY_MAX:
 				return getCardinalityMax();
+			case Edom204epsilonPackage.USER_ATTRIBUTE__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,6 +257,9 @@ public class UserAttributeImpl extends EObjectImpl implements UserAttribute {
 				return;
 			case Edom204epsilonPackage.USER_ATTRIBUTE__CARDINALITY_MAX:
 				setCardinalityMax((Integer)newValue);
+				return;
+			case Edom204epsilonPackage.USER_ATTRIBUTE__TYPE:
+				setType((AttributeType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,6 +282,9 @@ public class UserAttributeImpl extends EObjectImpl implements UserAttribute {
 			case Edom204epsilonPackage.USER_ATTRIBUTE__CARDINALITY_MAX:
 				setCardinalityMax(CARDINALITY_MAX_EDEFAULT);
 				return;
+			case Edom204epsilonPackage.USER_ATTRIBUTE__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -251,6 +303,8 @@ public class UserAttributeImpl extends EObjectImpl implements UserAttribute {
 				return cardinalityMin != CARDINALITY_MIN_EDEFAULT;
 			case Edom204epsilonPackage.USER_ATTRIBUTE__CARDINALITY_MAX:
 				return cardinalityMax != CARDINALITY_MAX_EDEFAULT;
+			case Edom204epsilonPackage.USER_ATTRIBUTE__TYPE:
+				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -271,6 +325,8 @@ public class UserAttributeImpl extends EObjectImpl implements UserAttribute {
 		result.append(cardinalityMin);
 		result.append(", cardinalityMax: ");
 		result.append(cardinalityMax);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

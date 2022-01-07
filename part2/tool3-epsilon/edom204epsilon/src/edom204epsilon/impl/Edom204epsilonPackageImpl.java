@@ -102,6 +102,13 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	private EClass transactionAttributeEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum attributeTypeEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -568,6 +575,16 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	 * @generated
 	 */
 	@Override
+	public EAttribute getUserAttribute_Type() {
+		return (EAttribute)userAttributeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAccountAttribute() {
 		return accountAttributeEClass;
 	}
@@ -588,6 +605,36 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	 * @generated
 	 */
 	@Override
+	public EAttribute getAccountAttribute_CardinalityMin() {
+		return (EAttribute)accountAttributeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAccountAttribute_CardinalityMax() {
+		return (EAttribute)accountAttributeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAccountAttribute_Type() {
+		return (EAttribute)accountAttributeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTransactionAttribute() {
 		return transactionAttributeEClass;
 	}
@@ -600,6 +647,46 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	@Override
 	public EAttribute getTransactionAttribute_Name() {
 		return (EAttribute)transactionAttributeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTransactionAttribute_CardinalityMin() {
+		return (EAttribute)transactionAttributeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTransactionAttribute_CardinalityMax() {
+		return (EAttribute)transactionAttributeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTransactionAttribute_Type() {
+		return (EAttribute)transactionAttributeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getAttributeType() {
+		return attributeTypeEEnum;
 	}
 
 	/**
@@ -678,12 +765,22 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		createEAttribute(userAttributeEClass, USER_ATTRIBUTE__NAME);
 		createEAttribute(userAttributeEClass, USER_ATTRIBUTE__CARDINALITY_MIN);
 		createEAttribute(userAttributeEClass, USER_ATTRIBUTE__CARDINALITY_MAX);
+		createEAttribute(userAttributeEClass, USER_ATTRIBUTE__TYPE);
 
 		accountAttributeEClass = createEClass(ACCOUNT_ATTRIBUTE);
 		createEAttribute(accountAttributeEClass, ACCOUNT_ATTRIBUTE__NAME);
+		createEAttribute(accountAttributeEClass, ACCOUNT_ATTRIBUTE__CARDINALITY_MIN);
+		createEAttribute(accountAttributeEClass, ACCOUNT_ATTRIBUTE__CARDINALITY_MAX);
+		createEAttribute(accountAttributeEClass, ACCOUNT_ATTRIBUTE__TYPE);
 
 		transactionAttributeEClass = createEClass(TRANSACTION_ATTRIBUTE);
 		createEAttribute(transactionAttributeEClass, TRANSACTION_ATTRIBUTE__NAME);
+		createEAttribute(transactionAttributeEClass, TRANSACTION_ATTRIBUTE__CARDINALITY_MIN);
+		createEAttribute(transactionAttributeEClass, TRANSACTION_ATTRIBUTE__CARDINALITY_MAX);
+		createEAttribute(transactionAttributeEClass, TRANSACTION_ATTRIBUTE__TYPE);
+
+		// Create enums
+		attributeTypeEEnum = createEEnum(ATTRIBUTE_TYPE);
 	}
 
 	/**
@@ -733,20 +830,20 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 
 		initEClass(userSpecEClass, UserSpec.class, "UserSpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUserSpec_Name(), ecorePackage.getEString(), "name", "userName", 0, 1, UserSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUserSpec_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "0", 0, 1, UserSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUserSpec_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "1", 0, 1, UserSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUserSpec_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "1", 0, 1, UserSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUserSpec_Userattribute(), this.getUserAttribute(), null, "userattribute", null, 0, -1, UserSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accountSpecEClass, AccountSpec.class, "AccountSpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAccountSpec_Name(), ecorePackage.getEString(), "name", "accountName", 0, 1, AccountSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAccountSpec_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "0", 0, 1, AccountSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAccountSpec_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "1", 0, 1, AccountSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAccountSpec_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "1", 0, 1, AccountSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAccountSpec_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "-1", 0, 1, AccountSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAccountSpec_Accountattribute(), this.getAccountAttribute(), null, "accountattribute", null, 0, -1, AccountSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transactionSpecEClass, TransactionSpec.class, "TransactionSpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTransactionSpec_Name(), ecorePackage.getEString(), "name", "transactionName", 0, 1, TransactionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTransactionSpec_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "0", 0, 1, TransactionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTransactionSpec_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "1", 0, 1, TransactionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransactionSpec_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "1", 0, 1, TransactionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransactionSpec_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "-1", 0, 1, TransactionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransactionSpec_Transactionattribute(), this.getTransactionAttribute(), null, "transactionattribute", null, 0, -1, TransactionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userAccountAssociationEClass, UserAccountAssociation.class, "UserAccountAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -761,14 +858,27 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 
 		initEClass(userAttributeEClass, UserAttribute.class, "UserAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUserAttribute_Name(), ecorePackage.getEString(), "name", "userAttributeName", 0, 1, UserAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUserAttribute_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "0", 0, 1, UserAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUserAttribute_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "1", 0, 1, UserAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUserAttribute_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "1", 0, 1, UserAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUserAttribute_Type(), this.getAttributeType(), "type", null, 0, 1, UserAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accountAttributeEClass, AccountAttribute.class, "AccountAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAccountAttribute_Name(), ecorePackage.getEString(), "name", "accountAttributeName", 0, 1, AccountAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAccountAttribute_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "1", 0, 1, AccountAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAccountAttribute_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "1", 0, 1, AccountAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAccountAttribute_Type(), this.getAttributeType(), "type", null, 0, 1, AccountAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transactionAttributeEClass, TransactionAttribute.class, "TransactionAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTransactionAttribute_Name(), ecorePackage.getEString(), "name", "transactionAttributeName", 0, 1, TransactionAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransactionAttribute_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "1", 0, 1, TransactionAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransactionAttribute_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "1", 0, 1, TransactionAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransactionAttribute_Type(), this.getAttributeType(), "type", null, 0, 1, TransactionAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(attributeTypeEEnum, AttributeType.class, "AttributeType");
+		addEEnumLiteral(attributeTypeEEnum, AttributeType.STRING);
+		addEEnumLiteral(attributeTypeEEnum, AttributeType.DATE_TIME);
+		addEEnumLiteral(attributeTypeEEnum, AttributeType.DOUBLE);
 
 		// Create resource
 		createResource(eNS_URI);

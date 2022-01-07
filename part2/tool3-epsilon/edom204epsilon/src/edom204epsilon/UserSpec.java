@@ -51,13 +51,13 @@ public interface UserSpec extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Cardinality Min</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cardinality Min</em>' attribute.
 	 * @see #setCardinalityMin(int)
 	 * @see edom204epsilon.Edom204epsilonPackage#getUserSpec_CardinalityMin()
-	 * @model default="0"
+	 * @model default="1"
 	 * @generated
 	 */
 	int getCardinalityMin();

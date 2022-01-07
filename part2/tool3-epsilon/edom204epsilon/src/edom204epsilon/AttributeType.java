@@ -19,67 +19,63 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum AttributeType implements Enumerator {
 	/**
-	 * The '<em><b>EString</b></em>' literal object.
+	 * The '<em><b>String</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ESTRING_VALUE
+	 * @see #STRING_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ESTRING(0, "EString", "EString"),
+	STRING(0, "string", "string"), /**
+	 * The '<em><b>Date Time</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DATE_TIME_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DATE_TIME(1, "DateTime", "DateTime"), /**
+	 * The '<em><b>Double</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DOUBLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DOUBLE(2, "double", "double");
 
 	/**
-	 * The '<em><b>Date</b></em>' literal object.
+	 * The '<em><b>String</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #DATE_VALUE
+	 * @see #STRING
+	 * @model name="string"
 	 * @generated
 	 * @ordered
 	 */
-	DATE(1, "Date", "Date"),
+	public static final int STRING_VALUE = 0;
 
 	/**
-	 * The '<em><b>EInteger</b></em>' literal object.
+	 * The '<em><b>Date Time</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #EINTEGER_VALUE
+	 * @see #DATE_TIME
+	 * @model name="DateTime"
 	 * @generated
 	 * @ordered
 	 */
-	EINTEGER(2, "EInteger", "EInteger");
+	public static final int DATE_TIME_VALUE = 1;
 
 	/**
-	 * The '<em><b>EString</b></em>' literal value.
+	 * The '<em><b>Double</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ESTRING
-	 * @model name="EString"
+	 * @see #DOUBLE
+	 * @model name="double"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ESTRING_VALUE = 0;
-
-	/**
-	 * The '<em><b>Date</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #DATE
-	 * @model name="Date"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int DATE_VALUE = 1;
-
-	/**
-	 * The '<em><b>EInteger</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #EINTEGER
-	 * @model name="EInteger"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int EINTEGER_VALUE = 2;
+	public static final int DOUBLE_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Attribute Type</b></em>' enumerators.
@@ -89,9 +85,9 @@ public enum AttributeType implements Enumerator {
 	 */
 	private static final AttributeType[] VALUES_ARRAY =
 		new AttributeType[] {
-			ESTRING,
-			DATE,
-			EINTEGER,
+			STRING,
+			DATE_TIME,
+			DOUBLE,
 		};
 
 	/**
@@ -148,9 +144,9 @@ public enum AttributeType implements Enumerator {
 	 */
 	public static AttributeType get(int value) {
 		switch (value) {
-			case ESTRING_VALUE: return ESTRING;
-			case DATE_VALUE: return DATE;
-			case EINTEGER_VALUE: return EINTEGER;
+			case STRING_VALUE: return STRING;
+			case DATE_TIME_VALUE: return DATE_TIME;
+			case DOUBLE_VALUE: return DOUBLE;
 		}
 		return null;
 	}

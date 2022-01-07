@@ -61,6 +61,9 @@ public class AccountAttributeItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addCardinalityMinPropertyDescriptor(object);
+			addCardinalityMaxPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,6 +82,72 @@ public class AccountAttributeItemProvider
 				 getString("_UI_AccountAttribute_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AccountAttribute_name_feature", "_UI_AccountAttribute_type"),
 				 Edom204epsilonPackage.Literals.ACCOUNT_ATTRIBUTE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Cardinality Min feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCardinalityMinPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AccountAttribute_cardinalityMin_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AccountAttribute_cardinalityMin_feature", "_UI_AccountAttribute_type"),
+				 Edom204epsilonPackage.Literals.ACCOUNT_ATTRIBUTE__CARDINALITY_MIN,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Cardinality Max feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCardinalityMaxPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AccountAttribute_cardinalityMax_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AccountAttribute_cardinalityMax_feature", "_UI_AccountAttribute_type"),
+				 Edom204epsilonPackage.Literals.ACCOUNT_ATTRIBUTE__CARDINALITY_MAX,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AccountAttribute_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AccountAttribute_type_feature", "_UI_AccountAttribute_type"),
+				 Edom204epsilonPackage.Literals.ACCOUNT_ATTRIBUTE__TYPE,
 				 true,
 				 false,
 				 false,
@@ -126,6 +195,9 @@ public class AccountAttributeItemProvider
 
 		switch (notification.getFeatureID(AccountAttribute.class)) {
 			case Edom204epsilonPackage.ACCOUNT_ATTRIBUTE__NAME:
+			case Edom204epsilonPackage.ACCOUNT_ATTRIBUTE__CARDINALITY_MIN:
+			case Edom204epsilonPackage.ACCOUNT_ATTRIBUTE__CARDINALITY_MAX:
+			case Edom204epsilonPackage.ACCOUNT_ATTRIBUTE__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
