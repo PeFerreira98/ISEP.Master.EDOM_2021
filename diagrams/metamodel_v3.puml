@@ -40,6 +40,18 @@ class AccountSpec {
     name : string
     cardinalityMin : int
     cardinalityMax : int
+    needBankAccount : boolean
+}
+
+class CategorySpec {
+    name : string
+    cardinalityMin : int
+    cardinalityMax : int
+}
+
+class CategoryAttribute {
+    name : string
+    type : AttributeType
 }
 
 class AccountAttribute {
@@ -51,6 +63,7 @@ class TransactionSpec {
     name : string
     cardinalityMin : int
     cardinalityMax : int
+    category: string
 }
 
 class TransactionAttribute {
@@ -87,7 +100,7 @@ AccountSpec *--- "1..*" AccountAttribute
 AccountAttribute "1" -- "1" AttributeType
 
 Model *--- "1..*" TransactionSpec
-TransactionSpec *--- "1" TransactionAttribute
+TransactionSpec *--- "1..*" TransactionAttribute
 TransactionAttribute "1" -- "1" AttributeType
 
 Model *---- "1..*" UserAccountAssociation
@@ -96,6 +109,11 @@ UserSpec "1" --> "0..*" UserAccountAssociation
 AccountSpec "1" --> "0..*" UserAccountAssociation
 AccountSpec "1" --> "0..*" AccountTransactionAssociation
 TransactionSpec "1" --> "0..*" AccountTransactionAssociation
+
+Model *- "0..*" CategorySpec
+CategorySpec "1" --> "1..*" CategoryAttribute
+CategoryAttribute "1" -- "1" AttributeType
+TransactionSpec "1..*" --> "1" CategorySpec
 
 hide circle
 @enduml
