@@ -1,99 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3e0e3f2-4412-4574-9822-226902e43bbe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.mps/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.mps/migration.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.mps/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.mps/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountAttribute_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountAttribute_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountGroupSpec_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountGroupSpec_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountSpec_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountSpec_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountTransactionAssociationReference_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountTransactionAssociationReference_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountTransactionAssociationReference_SubstituteMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountTransactionAssociation_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountTransactionAssociation_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/CategoryAttribute_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/CategoryAttribute_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/CategorySpec_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/CategorySpec_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/Model_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/Model_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/TransactionAttribute_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/TransactionAttribute_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/TransactionCategoryAssociationReference_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/TransactionCategoryAssociationReference_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/TransactionCategoryAssociationReference_SubstituteMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/TransactionCategoryAssociation_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/TransactionCategoryAssociation_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/TransactionSpec_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/TransactionSpec_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/UserAccountAssociationReference_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/UserAccountAssociationReference_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/UserAccountAssociationReference_SubstituteMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/UserAccountAssociation_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/UserAccountAssociation_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/UserAttribute_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/UserAttribute_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/UserSpec_Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/UserSpec_EditorBuilder_a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/SolutionMoneyManager/source_gen.caches/SolutionMoneyManager/a_model/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/SolutionMoneyManager/source_gen.caches/SolutionMoneyManager/a_model/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/SolutionMoneyManager/source_gen/SolutionMoneyManager/a_model/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/behavior/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/behavior/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/editor/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/intentions/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/intentions/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/structure/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/typesystem/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/typesystem/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/typesystem/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/moneyManager/typesystem/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.behavior.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.behavior.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.editor.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.editor.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.intentions.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.intentions.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.structure.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.typesystem.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/models/moneyManager.typesystem.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/moneyManager.mpl" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/moneyManager.mpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/behavior/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/behavior/dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/behavior/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/behavior/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/editor/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/editor/dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/editor/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/editor/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/intentions/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/intentions/dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/intentions/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/intentions/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/structure/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/structure/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/typesystem/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/typesystem/dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/typesystem/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/moneyManager/typesystem/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/Language.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/behavior/BehaviorAspectDescriptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/behavior/Model__BehaviorDescriptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/behavior/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/behavior/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AssociationReference_Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountSpecReference_Editor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AssociationReference_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountSpecReference_EditorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AssociationReference_SubstituteMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/AccountSpecReference_SubstituteMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/EditorAspectDescriptorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/EditorAspectDescriptorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/editor/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/intentions/GeneratePlantUML_Intention.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/intentions/GeneratePlantUML_Intention.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/intentions/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/intentions/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/ConceptPresentationAspectImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/ConceptPresentationAspectImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/LanguageConceptSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/LanguageConceptSwitch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/StructureAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/StructureAspectDescriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/structure/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/typesystem/CapitalizeAssociationName_QuickFix.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/typesystem/CapitalizeAssociationName_QuickFix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/typesystem/TypesystemDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/typesystem/TypesystemDescriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/typesystem/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/typesystem/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/typesystem/check_Association_NonTypesystemRule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/typesystem/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/moneyManager/typesystem/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps" afterDir="false" />
-    </list>
+    <list default="true" id="e3e0e3f2-4412-4574-9822-226902e43bbe" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,54 +131,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SolutionMoneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:40ab0ff7-848a-4b34-9f5c-2b72c8b4de63(SolutionMoneyManager.a_model) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.typesystem.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modules Pool" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -298,6 +158,10 @@
               <option name="myItemId" value="moneyManager" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -315,11 +179,55 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:2a14342b-a65f-4017-82a3-0a33a55ab1c8(moneyManager.typesystem) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.typesystem.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="moneyManager" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SolutionMoneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:40ab0ff7-848a-4b34-9f5c-2b72c8b4de63(SolutionMoneyManager.a_model) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
