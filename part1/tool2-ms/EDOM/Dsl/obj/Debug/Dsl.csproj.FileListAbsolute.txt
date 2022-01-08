@@ -92,15 +92,12 @@ C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.TextTemplating.Modeling.15.0.dll
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.Telemetry.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\System.Collections.Immutable.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.RemoteControl.dll
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.Utilities.Internal.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\System.Memory.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.Shell.15.0.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
@@ -153,14 +150,7 @@ C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.xml
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.GraphModel.xml
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\pt-BR\Microsoft.VisualStudio.TextTemplating.15.0.resources.dll
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\pt-BR\Microsoft.VisualStudio.TextTemplating.Modeling.15.0.resources.dll
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\pt-BR\Microsoft.VisualStudio.Modeling.Sdk.Integration.15.0.resources.dll
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\pt-BR\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.resources.dll
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\pt-BR\Microsoft.VisualStudio.TextTemplating.VSHost.15.0.resources.dll
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\pt-BR\Microsoft.VisualStudio.Shell.15.0.resources.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\en\Microsoft.VisualStudio.Imaging.resources.dll
-C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\pt-BR\Microsoft.VisualStudio.GraphModel.resources.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csproj.AssemblyReference.cache
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx.resources
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csproj.GenerateResource.cache
@@ -168,6 +158,7 @@ C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csproj.CopyComplete
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Empresa.MoneyManagerModel.Dsl.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Empresa.MoneyManagerModel.Dsl.pdb
+<<<<<<< HEAD
 C:\Users\Utilizador\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\GeneratedCode\MoneyManagerModelSchema.xsd
 C:\Users\Utilizador\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Empresa.MoneyManagerModel.Dsl.dll
 C:\Users\Utilizador\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\Empresa.MoneyManagerModel.Dsl.pdb
@@ -244,3 +235,6 @@ C:\Users\Utilizador\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csp
 C:\Users\Utilizador\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Empresa.MoneyManagerModel.Dsl.dll
 C:\Users\Utilizador\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Empresa.MoneyManagerModel.Dsl.pdb
 C:\Users\Utilizador\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csproj.AssemblyReference.cache
+=======
+C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Dsl\bin\Debug\en\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.resources.dll
+>>>>>>> 90ec4aa34ef8a0cb4157b68878375182efde43e7
