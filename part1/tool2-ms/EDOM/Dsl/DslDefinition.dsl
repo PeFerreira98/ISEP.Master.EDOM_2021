@@ -742,67 +742,67 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="9e649443-b300-405e-bd16-4553b1af36b9" Description="Descrição de Empresa.MoneyManagerModel.UserSpecShape" Name="UserSpecShape" DisplayName="User Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Spec Shape" FillColor="PeachPuff" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="9e649443-b300-405e-bd16-4553b1af36b9" Description="Descrição de Empresa.MoneyManagerModel.UserSpecShape" Name="UserSpecShape" DisplayName="User Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Spec Shape" FillColor="PeachPuff" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="85ce6a7b-2267-422f-93c5-056d110860b1" Description="Descrição de Empresa.MoneyManagerModel.AccountSpecShape" Name="AccountSpecShape" DisplayName="Account Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Spec Shape" FillColor="IndianRed" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="85ce6a7b-2267-422f-93c5-056d110860b1" Description="Descrição de Empresa.MoneyManagerModel.AccountSpecShape" Name="AccountSpecShape" DisplayName="Account Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Spec Shape" FillColor="IndianRed" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="bb8089bf-5aeb-4435-b73e-e16cbc12ef3c" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpecShape" Name="TransactionSpecShape" DisplayName="Transaction Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Transaction Spec Shape" FillColor="DarkKhaki" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="bb8089bf-5aeb-4435-b73e-e16cbc12ef3c" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpecShape" Name="TransactionSpecShape" DisplayName="Transaction Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Transaction Spec Shape" FillColor="DarkKhaki" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="f12fccf6-9b52-4578-b87b-e986adf00354" Description="Descrição de Empresa.MoneyManagerModel.AttributeTypeShape" Name="AttributeTypeShape" DisplayName="Attribute Type Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Attribute Type Shape" FillColor="Aquamarine" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="f12fccf6-9b52-4578-b87b-e986adf00354" Description="Descrição de Empresa.MoneyManagerModel.AttributeTypeShape" Name="AttributeTypeShape" DisplayName="Attribute Type Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Attribute Type Shape" FillColor="Aquamarine" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="TextDecorator" DisplayName="Text Decorator" DefaultText="TextDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="337a9ec5-b753-4e5c-acfd-928f2a9a38c5" Description="Descrição de Empresa.MoneyManagerModel.UserAttributeShape" Name="UserAttributeShape" DisplayName="User Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Attribute Shape" FillColor="PeachPuff" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="337a9ec5-b753-4e5c-acfd-928f2a9a38c5" Description="Descrição de Empresa.MoneyManagerModel.UserAttributeShape" Name="UserAttributeShape" DisplayName="User Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Attribute Shape" FillColor="PeachPuff" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="eaa7515c-e598-4b70-bf30-da967797d226" Description="Descrição de Empresa.MoneyManagerModel.AccountAttributeShape" Name="AccountAttributeShape" DisplayName="Account Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Attribute Shape" FillColor="IndianRed" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="eaa7515c-e598-4b70-bf30-da967797d226" Description="Descrição de Empresa.MoneyManagerModel.AccountAttributeShape" Name="AccountAttributeShape" DisplayName="Account Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Attribute Shape" FillColor="IndianRed" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="4a852e1c-788f-4e13-9c9c-74ec8bc036b9" Description="Descrição de Empresa.MoneyManagerModel.TransactionAttributeShape" Name="TransactionAttributeShape" DisplayName="Transaction Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Transaction Attribute Shape" FillColor="DarkKhaki" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="4a852e1c-788f-4e13-9c9c-74ec8bc036b9" Description="Descrição de Empresa.MoneyManagerModel.TransactionAttributeShape" Name="TransactionAttributeShape" DisplayName="Transaction Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Transaction Attribute Shape" FillColor="DarkKhaki" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="b2ef685e-ebcd-42ea-8b87-ae6209d1a389" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpecSchape" Name="AccountGroupSpecSchape" DisplayName="Account Group Spec Schape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Group Spec Schape" FillColor="IndianRed" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="b2ef685e-ebcd-42ea-8b87-ae6209d1a389" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpecSchape" Name="AccountGroupSpecSchape" DisplayName="Account Group Spec Schape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Group Spec Schape" FillColor="IndianRed" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="bd770a93-5b15-4108-9dfb-be0e2fbe78de" Description="Description for Empresa.MoneyManagerModel.UserAccountAssociationShape" Name="UserAccountAssociationShape" DisplayName="User Account Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Account Association Shape" InitialHeight="1" Geometry="Ellipse">
+    <GeometryShape Id="bd770a93-5b15-4108-9dfb-be0e2fbe78de" Description="Description for Empresa.MoneyManagerModel.UserAccountAssociationShape" Name="UserAccountAssociationShape" DisplayName="User Account Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Account Association Shape" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="81c6a71d-e70a-46fe-8f30-ed34512b5f3f" Description="Description for Empresa.MoneyManagerModel.AccountTransactionAssociationShape" Name="AccountTransactionAssociationShape" DisplayName="Account Transaction Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Transaction Association Shape" InitialHeight="1" Geometry="Ellipse">
+    <GeometryShape Id="81c6a71d-e70a-46fe-8f30-ed34512b5f3f" Description="Description for Empresa.MoneyManagerModel.AccountTransactionAssociationShape" Name="AccountTransactionAssociationShape" DisplayName="Account Transaction Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Transaction Association Shape" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="f7dc43e5-ff59-4eca-b720-b11d4099e083" Description="Description for Empresa.MoneyManagerModel.CategorySpecShape" Name="CategorySpecShape" DisplayName="Category Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Category Spec Shape" FillColor="Plum" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="f7dc43e5-ff59-4eca-b720-b11d4099e083" Description="Description for Empresa.MoneyManagerModel.CategorySpecShape" Name="CategorySpecShape" DisplayName="Category Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Category Spec Shape" FillColor="Plum" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="41abd9a7-205d-40e9-b611-6359cbd0ef6a" Description="Description for Empresa.MoneyManagerModel.CategoryAttributeShape" Name="CategoryAttributeShape" DisplayName="Category Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Category Attribute Shape" FillColor="Plum" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="41abd9a7-205d-40e9-b611-6359cbd0ef6a" Description="Description for Empresa.MoneyManagerModel.CategoryAttributeShape" Name="CategoryAttributeShape" DisplayName="Category Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Category Attribute Shape" FillColor="Plum" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="3f1072fd-b0c0-484f-9b87-1eb60e8cc025" Description="Description for Empresa.MoneyManagerModel.CategoryTransactionAssociationShape" Name="CategoryTransactionAssociationShape" DisplayName="Category Transaction Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Category Transaction Association Shape" InitialHeight="1" Geometry="Ellipse">
+    <GeometryShape Id="3f1072fd-b0c0-484f-9b87-1eb60e8cc025" Description="Description for Empresa.MoneyManagerModel.CategoryTransactionAssociationShape" Name="CategoryTransactionAssociationShape" DisplayName="Category Transaction Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Category Transaction Association Shape" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>

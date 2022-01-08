@@ -153,16 +153,6 @@ namespace Empresa.MoneyManagerModel
 				return false;
 			}
 		}
-		/// <summary>
-		/// Specifies the geometry used by this shape
-		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
-		{
-			get
-			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
-			}
-		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -385,16 +375,6 @@ namespace Empresa.MoneyManagerModel
 			get
 			{
 				return false;
-			}
-		}
-		/// <summary>
-		/// Specifies the geometry used by this shape
-		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
-		{
-			get
-			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -621,16 +601,6 @@ namespace Empresa.MoneyManagerModel
 				return false;
 			}
 		}
-		/// <summary>
-		/// Specifies the geometry used by this shape
-		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
-		{
-			get
-			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
-			}
-		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -853,6 +823,16 @@ namespace Empresa.MoneyManagerModel
 			get
 			{
 				return false;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -1079,6 +1059,16 @@ namespace Empresa.MoneyManagerModel
 				return false;
 			}
 		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+			}
+		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -1301,6 +1291,16 @@ namespace Empresa.MoneyManagerModel
 			get
 			{
 				return false;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -1527,6 +1527,16 @@ namespace Empresa.MoneyManagerModel
 				return false;
 			}
 		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+			}
+		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -1751,16 +1761,6 @@ namespace Empresa.MoneyManagerModel
 				return false;
 			}
 		}
-		/// <summary>
-		/// Specifies the geometry used by this shape
-		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
-		{
-			get
-			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
-			}
-		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -1961,13 +1961,24 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
-		/// Specifies the geometry used by this shape
+		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return DslDiagrams::ShapeGeometries.Ellipse;
+				return true;
+			}
+		}
+		
+		/// <summary>
+		/// Indicates the direction of the gradient.
+		/// </summary>
+		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		{
+			get
+			{
+				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
 			}
 		}
 		#endregion
@@ -2170,13 +2181,24 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
-		/// Specifies the geometry used by this shape
+		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return DslDiagrams::ShapeGeometries.Ellipse;
+				return true;
+			}
+		}
+		
+		/// <summary>
+		/// Indicates the direction of the gradient.
+		/// </summary>
+		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		{
+			get
+			{
+				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
 			}
 		}
 		#endregion
@@ -2403,16 +2425,6 @@ namespace Empresa.MoneyManagerModel
 				return false;
 			}
 		}
-		/// <summary>
-		/// Specifies the geometry used by this shape
-		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
-		{
-			get
-			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
-			}
-		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -2637,6 +2649,16 @@ namespace Empresa.MoneyManagerModel
 				return false;
 			}
 		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+			}
+		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -2837,13 +2859,24 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
-		/// Specifies the geometry used by this shape
+		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return DslDiagrams::ShapeGeometries.Ellipse;
+				return true;
+			}
+		}
+		
+		/// <summary>
+		/// Indicates the direction of the gradient.
+		/// </summary>
+		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		{
+			get
+			{
+				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
 			}
 		}
 		#endregion

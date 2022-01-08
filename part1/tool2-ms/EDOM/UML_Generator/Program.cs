@@ -14,7 +14,7 @@ namespace UML_Generator
             using (Microsoft.VisualStudio.Modeling.Transaction t =
         store.TransactionManager.BeginTransaction("Load model"))
             {
-                model = MoneyManagerModelSerializationHelper.Instance.LoadModel(store, "C:/Users/Utilizador/OneDrive - Instituto Superior de Engenharia do Porto/Desktop/edom-21-22-atb-204/part1/tool2-ms/EDOM/Debugging/Test_IT2.MoneyManagerModel", null, null, null);
+                model = MoneyManagerModelSerializationHelper.Instance.LoadModel(store, "C:/Users/Utilizador/edom-21-22-atb-204/part1/tool2-ms/EDOM/Debugging/Test_IT2.MoneyManagerModel", null, null, null);
                 t.Commit();
             }
 
@@ -23,23 +23,25 @@ namespace UML_Generator
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter("C:/Users/Utilizador/OneDrive - Instituto Superior de Engenharia do Porto/Desktop/edom-21-22-atb-204/part1/tool2-ms/EDOM/Debugging/Test.puml"))
                 {
                     file.WriteLine("@startuml");
+                    file.WriteLine("title <u>Metamodel Graphical Representation</u>");
+                    file.WriteLine("\n");
 
                     //Classes and Enum
                     foreach (UserSpec userSpec in model.Elements)
                     {
 
                         //User
-                        file.WriteLine("class " + userSpec.Name + "{");
+                        file.WriteLine("class " + userSpec.Name + " #ffdab9 {");
 
                         foreach (UserAttribute userAttribute in userSpec.UserAttribute)
                         {
                             file.WriteLine(userAttribute.Name + "\n" + userAttribute.AttributeTypes + "\n}");
                         }
                     }
-
+                    file.WriteLine("\n");
                     foreach (AccountSpec accSpec in model.AccountSpec)
                     {
-                        file.WriteLine("class " + accSpec.Name + " #95e500 {");
+                        file.WriteLine("class " + accSpec.Name + " #CD5C5C {");
 
 
                         foreach (AccountAttribute accountAttribute in accSpec.AccountAttribute)
@@ -49,10 +51,10 @@ namespace UML_Generator
                         }
 
                     }
-
+                    file.WriteLine("\n");
                     foreach (TransactionSpec transSpec in model.TransactionSpec)
                     {
-                        file.WriteLine("class " + transSpec.Name + " #00e5e5 {");
+                        file.WriteLine("class " + transSpec.Name + " #BDB76B {");
 
 
                         foreach (TransactionAttribute transAttribute in transSpec.TransactionAttribute)
@@ -62,24 +64,35 @@ namespace UML_Generator
                         }
 
                     }
-
-                    //Classes and Enum
-                    var a = model.CategorySpec;
-                    var b = model.TransactionSpec;
-
+                    file.WriteLine("\n");
                     foreach (CategorySpec categorySpec in model.CategorySpec)
                     {
 
-                        file.WriteLine("class " + categorySpec.Name + "{");
+                        file.WriteLine("class " + categorySpec.Name + " #e0b0ff {");
 
                         foreach (CategoryAttribute categoryAttribute in categorySpec.CategoryAttribute)
                         {
-                            file.WriteLine(categoryAttribute.Name + "\n" + categoryAttribute.AttributeType + "\n}");
+                            file.WriteLine(categoryAttribute.Name + "\n" + categoryAttribute.AttributeType1 + "\n}");
                         }
                     }
+                    file.WriteLine("\n");
+                    foreach (UserAccountAssociation association in model.UserAccountAssociation)
+                    {
+                        file.WriteLine("class " + association.Name + " #ffffff {}");
+                    }
+                    file.WriteLine("\n");
+                    foreach (AccountTransactionAssociation association in model.AccountTransactionAssociation)
+                    {
+                        file.WriteLine("class " + association.Name + " #ffffff {}");
+                    }
+                    file.WriteLine("\n");
+                    foreach (CategoryTransactionAssociation association in model.CategoryTransactionAssociation)
+                    {
+                        file.WriteLine("class " + association.Name + " #ffffff {}");
+                    }
+                    file.WriteLine("\n");
 
                     //Relationship
-
                     foreach (UserSpec userSpec in model.Elements)
                     {
                         foreach (UserAccountAssociation association in model.UserAccountAssociation)
