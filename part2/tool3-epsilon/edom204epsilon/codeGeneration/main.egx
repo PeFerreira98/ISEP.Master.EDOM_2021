@@ -1,50 +1,67 @@
+pre
+{
+	var modname = Model.allInstances().first().name;
+}
+
+rule accountGroupToCode
+{
+	template: "egl/accountGroupToCode.egl"
+	target: "gen/" + modname + "/src/main/java/AccountGroup.java"
+}
+
+rule categoryToCode
+{
+	template: "egl/categoryToCode.egl"
+	target: "gen/" + modname + "/src/main/java/Category.java"
+}
+
 rule transactionToCode transform tranSpec : TransactionSpec
 {
 	parameters : Map
 	{
-		"modname" = Model.allInstances().first().name
+		"modname" = modname
 	}
 	
 	template: "egl/transactionToCode.egl"
-	target: "gen/Classes/" + tranSpec.name + ".cs"
+	target: "gen/" + modname + "/src/main/java/" + tranSpec.name + ".java"
 }
 
 rule accountToCode transform actSpec : AccountSpec
 {
 	parameters : Map
 	{
-		"modname" = Model.allInstances().first().name
+		"modname" = modname
 	}
 	
 	template: "egl/accountToCode.egl"
-	target: "gen/Classes/" + actSpec.name + ".cs"
+	target: "gen/" + modname + "/src/main/java/" + actSpec.name + ".java"
 }
 
 rule userToCode transform usrSpec : UserSpec
 {
 	parameters : Map
 	{
-		"modname" = Model.allInstances().first().name
+		"modname" = modname
 	}
 
 	template: "egl/userToCode.egl"
-	target: "gen/Classes/" + usrSpec.name + ".cs"
+	target: "gen/" + modname + "/src/main/java/" + usrSpec.name + ".java"
 }
 
 rule modelToCode transform mod : Model
 {
 	template: "egl/modelToCode.egl"
-	target: "gen/Classes/Model.cs"
+	target: "gen/" + modname + "/src/main/java/Model.java"
 }
 
 rule programToCode transform mod : Model
 {
 	template: "egl/programToCode.egl"
-	target: "gen/Program.cs"
+	target: "gen/" + modname + "/src/main/java/Program.java"
 }
 
-rule projectToCode transform mod : Model
+rule pomToCode
 {
-	template: "egl/projectToCode.egl"
-	target: "gen/" + mod.name + ".csproj"
+	template: "egl/pomToCode.egl"
+	target: "gen/" + modname + "/pom.xml"
 }

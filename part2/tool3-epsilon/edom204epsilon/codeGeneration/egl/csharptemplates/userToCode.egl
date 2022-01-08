@@ -1,0 +1,33 @@
+namespace [%=modname%].Classes;
+
+using System.Collections.Generic;
+
+public class [%=usrSpec.name%]
+{
+    public List<Account> Accounts { get; set; }
+    [%for (u in usrSpec.userattribute){%]
+  	public [%=u.type%] [%=u.name%] { get; set; }
+	[%}%]
+    
+    public [%=usrSpec.name%](List<Account> accounts[%for (u in usrSpec.userattribute){%], [%=u.type%] [%=u.name.toLowerCase()%][%}%])
+    {
+        this.Accounts = accounts;
+        [%for (u in usrSpec.userattribute){%]
+  		this.[%=u.name%] = [%=u.name.toLowerCase()%];
+		[%}%]
+    }
+
+    public [%=usrSpec.name%]([%for (u in usrSpec.userattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(usrSpec.userattribute.last() != u){%], [%}%][%}%])
+    	: this(new List<Account>()[%for (u in usrSpec.userattribute){%], [%=u.name.toLowerCase()%][%}%]);
+
+    public void ListAll()
+    {
+        foreach (var account in Accounts)
+        {
+            Console.WriteLine("\t" + account.ToString());
+            account.ListAll();
+        }
+    }
+    
+    public override string ToString() => $"[%=usrSpec.name%] -> [%for (u in usrSpec.userattribute){%][%=u.name%]:{[%=u.name%]}[%if(usrSpec.userattribute.last() != u){%], [%}%][%}%]";
+}

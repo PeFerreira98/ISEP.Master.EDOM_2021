@@ -1,0 +1,33 @@
+namespace [%=modname%].Classes;
+
+using System;
+using System.Collections.Generic;
+
+public class [%=actSpec.name%]
+{
+    public List<Transaction> Transactions { get; set; }
+    [%for (a in actSpec.accountattribute){%]
+  	public [%=a.type%] [%=a.name%] { get; set; }
+	[%}%]
+
+    public [%=actSpec.name%](List<Transaction> transactions[%for (a in actSpec.accountattribute){%], [%=a.type%] [%=a.name.toLowerCase()%][%}%])
+    {
+        this.Transactions = transactions;
+        [%for (a in actSpec.accountattribute){%]
+  		this.[%=a.name%] = [%=a.name.toLowerCase()%];
+		[%}%]
+    }
+    
+    public [%=actSpec.name%]([%for (a in actSpec.accountattribute){%][%=a.type%] [%=a.name.toLowerCase()%][%if(actSpec.accountattribute.last() != a){%], [%}%][%}%])
+    	: this(new List<Transaction>()[%for (a in actSpec.accountattribute){%], [%=a.name.toLowerCase()%][%}%]){}
+
+    public void ListAll()
+    {
+        foreach (var transaction in Transactions)
+        {
+            Console.WriteLine("\t\t" + transaction.ToString());
+        }
+    }
+    
+    public override string ToString() => $"[%=actSpec.name%] -> [%for (a in actSpec.accountattribute){%][%=a.name%]:{[%=a.name%]}[%if(actSpec.accountattribute.last() != a){%], [%}%][%}%]";
+}

@@ -86,4 +86,5 @@ enum AttributeType {
 	string = 0;
 	DateTime = 1;
 	double = 2;
+	LocalDate = 3;
 }
