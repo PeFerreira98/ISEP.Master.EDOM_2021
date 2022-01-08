@@ -45,17 +45,49 @@
         </ElementMergeDirective>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="Association" />
+            <DomainClassMoniker Name="AccountGroupSpec" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ModelTemAssociation.Association</DomainPath>
+            <DomainPath>ModelHasAccountGroupSpec.AccountGroupSpec</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="UserAccountAssociation" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ModelHasUserAccountAssociation.UserAccountAssociation</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="AccountTransactionAssociation" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ModelHasAccountTransactionAssociation.AccountTransactionAssociation</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="CategorySpec" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ModelHasCategorySpec.CategorySpec</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="CategoryTransactionAssociation" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ModelHasCategoryTransactionAssociation.CategoryTransactionAssociation</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="2dbc7532-1bd2-41f0-9312-666a5ba6cdb6" Description="Elements embedded in the model. Appear as boxes on the diagram." Name="UserSpec" DisplayName="User Spec" Namespace="Empresa.MoneyManagerModel">
       <Properties>
-        <DomainProperty Id="9dada005-9b5f-4e53-8f3e-e5e1881e0215" Description="Descrição de Empresa.MoneyManagerModel.UserSpec.Cardinality" Name="Cardinality" DisplayName="Cardinality">
+        <DomainProperty Id="9dada005-9b5f-4e53-8f3e-e5e1881e0215" Description="Descrição de Empresa.MoneyManagerModel.UserSpec.Cardinality" Name="CardinalityMax" DisplayName="Cardinality Max">
           <Type>
             <ExternalTypeMoniker Name="/System/Int64" />
           </Type>
@@ -63,6 +95,11 @@
         <DomainProperty Id="820c4832-1708-4167-95a2-5f3d2e5bd557" Description="Descrição de Empresa.MoneyManagerModel.UserSpec.Name" Name="Name" DisplayName="Name">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="8923f918-f5a7-4f3d-ae90-a3024cd7fdd6" Description="Description for Empresa.MoneyManagerModel.UserSpec.Cardinality Min" Name="CardinalityMin" DisplayName="Cardinality Min">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int64" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -79,7 +116,7 @@
     </DomainClass>
     <DomainClass Id="bf7eb524-4e10-4015-9476-fe1f3a09f341" Description="Descrição de Empresa.MoneyManagerModel.AccountSpec" Name="AccountSpec" DisplayName="Account Spec" Namespace="Empresa.MoneyManagerModel">
       <Properties>
-        <DomainProperty Id="c15a347f-6b2c-464c-b39d-0dc5c5fc8319" Description="Descrição de Empresa.MoneyManagerModel.AccountSpec.Cardinality" Name="Cardinality" DisplayName="Cardinality">
+        <DomainProperty Id="c15a347f-6b2c-464c-b39d-0dc5c5fc8319" Description="Descrição de Empresa.MoneyManagerModel.AccountSpec.Cardinality" Name="CardinalityMax" DisplayName="Cardinality Max">
           <Type>
             <ExternalTypeMoniker Name="/System/Int64" />
           </Type>
@@ -87,6 +124,16 @@
         <DomainProperty Id="f847fa10-9f66-4332-82ff-e91c5ed1da5b" Description="Descrição de Empresa.MoneyManagerModel.AccountSpec.Name" Name="Name" DisplayName="Name">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="dfdaf151-fd71-4d41-87fb-8c2444aba397" Description="Description for Empresa.MoneyManagerModel.AccountSpec.Cardinality Min" Name="CardinalityMin" DisplayName="Cardinality Min">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int64" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="1203230a-c23c-49f7-94a2-7ecd91b6e683" Description="Description for Empresa.MoneyManagerModel.AccountSpec.Need Banck Account" Name="NeedBanckAccount" DisplayName="Need Banck Account">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -103,7 +150,7 @@
     </DomainClass>
     <DomainClass Id="fc656488-c88b-4a49-8c90-c7374b8111fa" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpec" Name="TransactionSpec" DisplayName="Transaction Spec" Namespace="Empresa.MoneyManagerModel">
       <Properties>
-        <DomainProperty Id="87813a82-5ca0-4046-86d8-240085ed08aa" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpec.Cardinality" Name="Cardinality" DisplayName="Cardinality">
+        <DomainProperty Id="87813a82-5ca0-4046-86d8-240085ed08aa" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpec.Cardinality" Name="CardinalityMax" DisplayName="Cardinality Max">
           <Type>
             <ExternalTypeMoniker Name="/System/Int64" />
           </Type>
@@ -111,6 +158,11 @@
         <DomainProperty Id="f709acc9-036b-4df1-ae1e-16adbf93abfb" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpec.Name" Name="Name" DisplayName="Name">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="35421780-5b1e-443e-87bc-cf0da08a1f78" Description="Description for Empresa.MoneyManagerModel.TransactionSpec.Cardinality Min" Name="CardinalityMin" DisplayName="Cardinality Min">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int64" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -145,15 +197,6 @@
         <DomainProperty Id="9cb25238-2b81-45e4-91b9-720cd28f48ee" Description="Descrição de Empresa.MoneyManagerModel.AttributeType.Date" Name="Date" DisplayName="Date">
           <Type>
             <ExternalTypeMoniker Name="/System/DateTime" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
-    <DomainClass Id="ac1f172e-7f18-4678-9ed1-36cf862dfff5" Description="Descrição de Empresa.MoneyManagerModel.Association" Name="Association" DisplayName="Association" Namespace="Empresa.MoneyManagerModel">
-      <Properties>
-        <DomainProperty Id="e520a30a-8cc1-462b-90ab-133c9bb01e43" Description="Descrição de Empresa.MoneyManagerModel.Association.Name" Name="Name" DisplayName="Name">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -194,6 +237,100 @@
           </Type>
         </DomainProperty>
         <DomainProperty Id="2681d4f0-8232-4646-856c-45612e49900c" Description="Descrição de Empresa.MoneyManagerModel.TransactionAttribute.Attribute Type" Name="AttributeType" DisplayName="Attribute Type">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="c17a6a31-3c2e-4dbf-ac9a-ad39d1eeded0" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpec" Name="AccountGroupSpec" DisplayName="Account Group Spec" Namespace="Empresa.MoneyManagerModel">
+      <Properties>
+        <DomainProperty Id="fa10579c-314f-474a-bb32-65735af2e8cd" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpec.Name" Name="Name" DisplayName="Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="9606dce1-593d-48b0-8d24-03e09c427d1d" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpec.Cardinality Min" Name="CardinalityMin" DisplayName="Cardinality Min">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int64" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="e5bb975f-01af-417a-9fb4-6acfd56dbc27" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpec.Cardinality Max" Name="CardinalityMax" DisplayName="Cardinality Max">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int64" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="610ff4bd-5260-405f-94f9-17c3b3cec94c" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpec.Need Bank Account" Name="needBankAccount" DisplayName="Need Bank Account">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="bbae121a-6eaa-4f09-bc52-07c416b81a91" Description="Description for Empresa.MoneyManagerModel.UserAccountAssociation" Name="UserAccountAssociation" DisplayName="User Account Association" Namespace="Empresa.MoneyManagerModel">
+      <Properties>
+        <DomainProperty Id="22de6b0f-0096-4ed6-be56-ef2d83e92b23" Description="Description for Empresa.MoneyManagerModel.UserAccountAssociation.Name" Name="Name" DisplayName="Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="19af0665-0e13-4769-b070-30030d418360" Description="Description for Empresa.MoneyManagerModel.AccountTransactionAssociation" Name="AccountTransactionAssociation" DisplayName="Account Transaction Association" Namespace="Empresa.MoneyManagerModel">
+      <Properties>
+        <DomainProperty Id="5f4043e9-a186-418e-a42c-66d8d4bdc4e0" Description="Description for Empresa.MoneyManagerModel.AccountTransactionAssociation.Name" Name="Name" DisplayName="Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="0872376a-cbba-4118-939f-ebc612fc8d61" Description="Description for Empresa.MoneyManagerModel.CategorySpec" Name="CategorySpec" DisplayName="Category Spec" Namespace="Empresa.MoneyManagerModel">
+      <Properties>
+        <DomainProperty Id="166a3648-d7b1-428a-90c2-d4a7922eb348" Description="Description for Empresa.MoneyManagerModel.CategorySpec.Name" Name="Name" DisplayName="Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="9ee0c5d2-7a7e-4be7-8ad9-3ddf772d70e9" Description="Description for Empresa.MoneyManagerModel.CategorySpec.Cardinality Min" Name="CardinalityMin" DisplayName="Cardinality Min">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int64" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="83c00e64-a7ab-4cb6-b7d3-25a1ecbc24b0" Description="Description for Empresa.MoneyManagerModel.CategorySpec.Cardinality Max" Name="CardinalityMax" DisplayName="Cardinality Max">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int64" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="CategoryAttribute" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>CategorySpecHasCategoryAttribute.CategoryAttribute</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="8de30989-5700-4e06-9837-5139bb323d96" Description="Description for Empresa.MoneyManagerModel.CategoryAttribute" Name="CategoryAttribute" DisplayName="Category Attribute" Namespace="Empresa.MoneyManagerModel">
+      <Properties>
+        <DomainProperty Id="107e5794-2ea6-4dee-81c3-35a5035b3fb4" Description="Description for Empresa.MoneyManagerModel.CategoryAttribute.Name" Name="Name" DisplayName="Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="38412739-bcc1-481d-b09a-bbdb4d1e011a" Description="Description for Empresa.MoneyManagerModel.CategoryAttribute.Attribute Type" Name="AttributeType" DisplayName="Attribute Type">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="4f7b0789-6c44-42d3-a2a9-44c85544d702" Description="Description for Empresa.MoneyManagerModel.CategoryTransactionAssociation" Name="CategoryTransactionAssociation" DisplayName="Category Transaction Association" Namespace="Empresa.MoneyManagerModel">
+      <Properties>
+        <DomainProperty Id="43b7c72d-6715-4ade-85ff-91ed3dd9d1f5" Description="Description for Empresa.MoneyManagerModel.CategoryTransactionAssociation.Name" Name="Name" DisplayName="Name">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -266,22 +403,6 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="5ef8b147-23b4-4f75-88f0-2b0d1a54117e" Description="Descrição de Empresa.MoneyManagerModel.ModelTemAssociation" Name="ModelTemAssociation" DisplayName="Model Tem Association" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="173aee40-f116-4169-9ac3-37448f80c2e5" Description="Descrição de Empresa.MoneyManagerModel.ModelTemAssociation.Model" Name="Model" DisplayName="Model" PropertyName="Association" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Association">
-          <RolePlayer>
-            <DomainClassMoniker Name="Model" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="fcebb10b-2866-4a93-a7f4-de1cf69c3264" Description="Descrição de Empresa.MoneyManagerModel.ModelTemAssociation.Association" Name="Association" DisplayName="Association" PropertyName="Model" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Model">
-          <RolePlayer>
-            <DomainClassMoniker Name="Association" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="c4053548-df3b-4d73-bdda-f20e22055e17" Description="Descrição de Empresa.MoneyManagerModel.UserSpecTemUserAttribute" Name="UserSpecTemUserAttribute" DisplayName="User Spec Tem User Attribute" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
       <Source>
         <DomainRole Id="c3dd25ae-fc31-45be-8b95-dfa714c13f2d" Description="Descrição de Empresa.MoneyManagerModel.UserSpecTemUserAttribute.UserSpec" Name="UserSpec" DisplayName="User Spec" PropertyName="UserAttribute" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="User Attribute">
@@ -326,102 +447,6 @@
         <DomainRole Id="88abdc2e-5ffa-4c6d-8534-8271fb27f946" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute.TransactionAttribute" Name="TransactionAttribute" DisplayName="Transaction Attribute" PropertyName="TransactionSpec" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Transaction Spec">
           <RolePlayer>
             <DomainClassMoniker Name="TransactionAttribute" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="796197ba-ed91-46a7-9401-9b955eb9e10c" Description="Descrição de Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec" Name="AssociationReferênciasTransactionSpec" DisplayName="Association Referências Transaction Spec" Namespace="Empresa.MoneyManagerModel">
-      <Source>
-        <DomainRole Id="7b6cef58-1c87-4041-b805-664f8da2ada7" Description="Descrição de Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.Association" Name="Association" DisplayName="Association" PropertyName="TransactionSpec" Multiplicity="One" PropertyDisplayName="Transaction Spec">
-          <RolePlayer>
-            <DomainClassMoniker Name="Association" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="4f3cdd71-71c3-4b55-a01b-c61566e3e6b1" Description="Descrição de Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.TransactionSpec" Name="TransactionSpec" DisplayName="Transaction Spec" PropertyName="Association" PropertyDisplayName="Association">
-          <RolePlayer>
-            <DomainClassMoniker Name="TransactionSpec" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="4b64381b-243a-42db-8af3-238ffd74ad2c" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations" Name="TransactionSpecReferênciasAssociations" DisplayName="Transaction Spec Referências Associations" Namespace="Empresa.MoneyManagerModel">
-      <Source>
-        <DomainRole Id="8ef12b82-e0d5-4061-85b4-742bab028303" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.TransactionSpec" Name="TransactionSpec" DisplayName="Transaction Spec" PropertyName="Associations" PropertyDisplayName="Associations">
-          <RolePlayer>
-            <DomainClassMoniker Name="TransactionSpec" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="24f96325-a860-4e3e-914b-44710d1bb0b5" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.Association" Name="Association" DisplayName="Association" PropertyName="TransactionSpecs" Multiplicity="One" PropertyDisplayName="Transaction Specs">
-          <RolePlayer>
-            <DomainClassMoniker Name="Association" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="c635805d-a0f6-4fce-abe8-9f25345d4125" Description="Descrição de Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec" Name="AssociationReferênciasAccountSpec" DisplayName="Association Referências Account Spec" Namespace="Empresa.MoneyManagerModel">
-      <Source>
-        <DomainRole Id="9d8aa203-e622-41ee-b928-42be3aeed9ae" Description="Descrição de Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.Association" Name="Association" DisplayName="Association" PropertyName="AccountSpec" Multiplicity="One" PropertyDisplayName="Account Spec">
-          <RolePlayer>
-            <DomainClassMoniker Name="Association" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="5855cd2e-df52-48a7-a598-53b124601f12" Description="Descrição de Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AccountSpec" Name="AccountSpec" DisplayName="Account Spec" PropertyName="Association" PropertyDisplayName="Association">
-          <RolePlayer>
-            <DomainClassMoniker Name="AccountSpec" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="cb63e87c-d795-466b-a30d-65991a60c78b" Description="Descrição de Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations" Name="AccountSpecReferênciasAssociations" DisplayName="Account Spec Referências Associations" Namespace="Empresa.MoneyManagerModel">
-      <Source>
-        <DomainRole Id="89ac9ac6-a03a-4876-8544-dcfce5cb535a" Description="Descrição de Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AccountSpec" Name="AccountSpec" DisplayName="Account Spec" PropertyName="Associations" PropertyDisplayName="Associations">
-          <RolePlayer>
-            <DomainClassMoniker Name="AccountSpec" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="c47bc27e-8d69-43a7-b4ae-43a2e1627ea9" Description="Descrição de Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.Association" Name="Association" DisplayName="Association" PropertyName="AccountSpecs" Multiplicity="One" PropertyDisplayName="Account Specs">
-          <RolePlayer>
-            <DomainClassMoniker Name="Association" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="10d611a1-a88d-41c4-8b60-6d1546764963" Description="Descrição de Empresa.MoneyManagerModel.AssociationReferênciasUserSpec" Name="AssociationReferênciasUserSpec" DisplayName="Association Referências User Spec" Namespace="Empresa.MoneyManagerModel">
-      <Source>
-        <DomainRole Id="38e4ae2c-8288-4143-99e3-c59b2f10b5c9" Description="Descrição de Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.Association" Name="Association" DisplayName="Association" PropertyName="UserSpec" Multiplicity="One" PropertyDisplayName="User Spec">
-          <RolePlayer>
-            <DomainClassMoniker Name="Association" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="2267e780-2caf-4b42-98ca-5bd1608962c2" Description="Descrição de Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.UserSpec" Name="UserSpec" DisplayName="User Spec" PropertyName="Association" PropertyDisplayName="Association">
-          <RolePlayer>
-            <DomainClassMoniker Name="UserSpec" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="995cf682-20b4-4924-bf7d-ccc0edcc0f9b" Description="Descrição de Empresa.MoneyManagerModel.UserSpecReferênciasAssociations" Name="UserSpecReferênciasAssociations" DisplayName="User Spec Referências Associations" Namespace="Empresa.MoneyManagerModel">
-      <Source>
-        <DomainRole Id="8d6483b3-728e-470a-8d17-6f288f40565e" Description="Descrição de Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.UserSpec" Name="UserSpec" DisplayName="User Spec" PropertyName="Associations" PropertyDisplayName="Associations">
-          <RolePlayer>
-            <DomainClassMoniker Name="UserSpec" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="787e33e0-a216-4cff-956f-11d2a7ec32b5" Description="Descrição de Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.Association" Name="Association" DisplayName="Association" PropertyName="UserSpecs" Multiplicity="One" PropertyDisplayName="User Specs">
-          <RolePlayer>
-            <DomainClassMoniker Name="Association" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -474,6 +499,230 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="99e383d8-3931-42e7-ba2b-d96f8206be40" Description="Description for Empresa.MoneyManagerModel.ModelHasAccountGroupSpec" Name="ModelHasAccountGroupSpec" DisplayName="Model Has Account Group Spec" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="4f87e073-fbdb-4269-a5cc-21f9f256cc28" Description="Description for Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.Model" Name="Model" DisplayName="Model" PropertyName="AccountGroupSpec" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Account Group Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="Model" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="d425e915-cfc9-4180-a0bf-8a1563dbc71e" Description="Description for Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.AccountGroupSpec" Name="AccountGroupSpec" DisplayName="Account Group Spec" PropertyName="Model" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Model">
+          <RolePlayer>
+            <DomainClassMoniker Name="AccountGroupSpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="d99df43e-92a3-4179-821c-09cee7606f1d" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec" Name="AccountGroupSpecReferencesAccountSpec" DisplayName="Account Group Spec References Account Spec" Namespace="Empresa.MoneyManagerModel">
+      <Source>
+        <DomainRole Id="39b23029-5322-4eb3-b12a-c52bd8b694cc" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountGroupSpec" Name="AccountGroupSpec" DisplayName="Account Group Spec" PropertyName="AccountSpec" PropertyDisplayName="Account Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="AccountGroupSpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="0438b51c-7363-4c69-9da2-65dd943b7ef2" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountSpec" Name="AccountSpec" DisplayName="Account Spec" PropertyName="AccountGroupSpec" Multiplicity="One" PropertyDisplayName="Account Group Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="AccountSpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="920962a0-571e-497d-bc99-10cc71adb2e6" Description="Description for Empresa.MoneyManagerModel.ModelHasUserAccountAssociation" Name="ModelHasUserAccountAssociation" DisplayName="Model Has User Account Association" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="90f8735c-cf90-4a6c-92d1-7c61abfa2a25" Description="Description for Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.Model" Name="Model" DisplayName="Model" PropertyName="UserAccountAssociation" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="User Account Association">
+          <RolePlayer>
+            <DomainClassMoniker Name="Model" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="7bc95540-6634-4291-98e7-92f6d38a4081" Description="Description for Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.UserAccountAssociation" Name="UserAccountAssociation" DisplayName="User Account Association" PropertyName="Model" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Model">
+          <RolePlayer>
+            <DomainClassMoniker Name="UserAccountAssociation" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="b7777fe8-1b83-4599-b308-ae59f8eb442c" Description="Description for Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation" Name="ModelHasAccountTransactionAssociation" DisplayName="Model Has Account Transaction Association" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="06f2f990-e5de-48e5-8af3-61c37d6bb029" Description="Description for Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.Model" Name="Model" DisplayName="Model" PropertyName="AccountTransactionAssociation" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Account Transaction Association">
+          <RolePlayer>
+            <DomainClassMoniker Name="Model" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="a7805d24-9f71-4c6c-b920-130fa356103c" Description="Description for Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.AccountTransactionAssociation" Name="AccountTransactionAssociation" DisplayName="Account Transaction Association" PropertyName="Model" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Model">
+          <RolePlayer>
+            <DomainClassMoniker Name="AccountTransactionAssociation" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="360a5d5f-42b0-49dd-8726-49ba2d615250" Description="Description for Empresa.MoneyManagerModel.ModelHasCategorySpec" Name="ModelHasCategorySpec" DisplayName="Model Has Category Spec" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="cf1a6a0b-3705-4ee1-ada8-ac3427c5895e" Description="Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.Model" Name="Model" DisplayName="Model" PropertyName="CategorySpec" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Category Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="Model" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="f09d5f86-b964-4a57-afb5-72d1a3713d5f" Description="Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.CategorySpec" Name="CategorySpec" DisplayName="Category Spec" PropertyName="Model" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Model">
+          <RolePlayer>
+            <DomainClassMoniker Name="CategorySpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="3e04be3d-a61d-4bd2-87ca-7402a38e28fb" Description="Description for Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1" Name="CategoryAttributeReferencesAttributeType1" DisplayName="Category Attribute References Attribute Type1" Namespace="Empresa.MoneyManagerModel">
+      <Source>
+        <DomainRole Id="1b3d70aa-863f-4108-9d13-8b7049418f3e" Description="Description for Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.CategoryAttribute" Name="CategoryAttribute" DisplayName="Category Attribute" PropertyName="AttributeType1" Multiplicity="One" PropertyDisplayName="Attribute Type1">
+          <RolePlayer>
+            <DomainClassMoniker Name="CategoryAttribute" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="12f4979a-cfde-4bbe-ab64-d47215b93b5a" Description="Description for Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.AttributeType" Name="AttributeType" DisplayName="Attribute Type" PropertyName="CategoryAttribute1" Multiplicity="One" PropertyDisplayName="Category Attribute1">
+          <RolePlayer>
+            <DomainClassMoniker Name="AttributeType" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="532da53a-eefd-43db-ac78-44eee34ba305" Description="Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute" Name="CategorySpecHasCategoryAttribute" DisplayName="Category Spec Has Category Attribute" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="8cfe4cd6-1264-4981-8d61-d3926cd47910" Description="Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpec" Name="CategorySpec" DisplayName="Category Spec" PropertyName="CategoryAttribute" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Category Attribute">
+          <RolePlayer>
+            <DomainClassMoniker Name="CategorySpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="ef2d7540-bf42-474d-9d5a-5d43df94e809" Description="Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategoryAttribute" Name="CategoryAttribute" DisplayName="Category Attribute" PropertyName="CategorySpec" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Category Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="CategoryAttribute" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="a1a93c3a-e30b-4042-9d83-8c781d4a9f6d" Description="Description for Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation" Name="UserSpecReferencesUserAccountAssociation" DisplayName="User Spec References User Account Association" Namespace="Empresa.MoneyManagerModel">
+      <Source>
+        <DomainRole Id="e14d30bc-b90e-497f-99fe-849d4eab5673" Description="Description for Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserSpec" Name="UserSpec" DisplayName="User Spec" PropertyName="UserAccountAssociation" PropertyDisplayName="User Account Association">
+          <RolePlayer>
+            <DomainClassMoniker Name="UserSpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="03029638-b9fc-486a-8612-916666687b8a" Description="Description for Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserAccountAssociation" Name="UserAccountAssociation" DisplayName="User Account Association" PropertyName="UserSpec" Multiplicity="One" PropertyDisplayName="User Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="UserAccountAssociation" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="e04bdff6-6651-441d-9bbe-c852b0778434" Description="Description for Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation" Name="AccountSpecReferencesUserAccountAssociation" DisplayName="Account Spec References User Account Association" Namespace="Empresa.MoneyManagerModel">
+      <Source>
+        <DomainRole Id="a0ac3676-4db0-4d5a-9404-e183d620a7b8" Description="Description for Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.AccountSpec" Name="AccountSpec" DisplayName="Account Spec" PropertyName="UserAccountAssociation" PropertyDisplayName="User Account Association">
+          <RolePlayer>
+            <DomainClassMoniker Name="AccountSpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="d5bd2829-caba-4079-899e-98d46a5347d3" Description="Description for Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.UserAccountAssociation" Name="UserAccountAssociation" DisplayName="User Account Association" PropertyName="AccountSpec" Multiplicity="One" PropertyDisplayName="Account Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="UserAccountAssociation" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="9689c1fa-aa4a-4b29-9f43-a032b09838dd" Description="Description for Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation" Name="AccountSpecReferencesAccountTransactionAssociation" DisplayName="Account Spec References Account Transaction Association" Namespace="Empresa.MoneyManagerModel">
+      <Source>
+        <DomainRole Id="eebc9430-316e-4023-8270-2a67bbc472c7" Description="Description for Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountSpec" Name="AccountSpec" DisplayName="Account Spec" PropertyName="AccountTransactionAssociation" PropertyDisplayName="Account Transaction Association">
+          <RolePlayer>
+            <DomainClassMoniker Name="AccountSpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="c8f50b41-3ac5-4082-a770-6a420554fbd9" Description="Description for Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountTransactionAssociation" Name="AccountTransactionAssociation" DisplayName="Account Transaction Association" PropertyName="AccountSpec" Multiplicity="One" PropertyDisplayName="Account Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="AccountTransactionAssociation" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="204530af-12c9-4a89-a396-f43fb4b0c981" Description="Description for Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation" Name="TransactionSpecReferencesAccountTransactionAssociation" DisplayName="Transaction Spec References Account Transaction Association" Namespace="Empresa.MoneyManagerModel">
+      <Source>
+        <DomainRole Id="a7e67384-bcfe-4532-9baa-7a4a12080dae" Description="Description for Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.TransactionSpec" Name="TransactionSpec" DisplayName="Transaction Spec" PropertyName="AccountTransactionAssociation" PropertyDisplayName="Account Transaction Association">
+          <RolePlayer>
+            <DomainClassMoniker Name="TransactionSpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="e0728564-4fcb-4e66-b3a3-0fdc9712e3ce" Description="Description for Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.AccountTransactionAssociation" Name="AccountTransactionAssociation" DisplayName="Account Transaction Association" PropertyName="TransactionSpec" Multiplicity="One" PropertyDisplayName="Transaction Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="AccountTransactionAssociation" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="3bd00fec-d312-4548-8166-28384c1b8007" Description="Description for Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation" Name="ModelHasCategoryTransactionAssociation" DisplayName="Model Has Category Transaction Association" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="0a9b3567-41b2-465c-b819-cbf1b7423ee3" Description="Description for Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.Model" Name="Model" DisplayName="Model" PropertyName="CategoryTransactionAssociation" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Category Transaction Association">
+          <RolePlayer>
+            <DomainClassMoniker Name="Model" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="121d68c5-17e0-4106-9149-a670eb781b59" Description="Description for Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.CategoryTransactionAssociation" Name="CategoryTransactionAssociation" DisplayName="Category Transaction Association" PropertyName="Model" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Model">
+          <RolePlayer>
+            <DomainClassMoniker Name="CategoryTransactionAssociation" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="63903078-5e7c-4c29-9dd6-fc5ccee17f13" Description="Description for Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation" Name="CategorySpecReferencesCategoryTransactionAssociation" DisplayName="Category Spec References Category Transaction Association" Namespace="Empresa.MoneyManagerModel">
+      <Source>
+        <DomainRole Id="1cc04004-b5e0-475f-9d05-c16c44491c67" Description="Description for Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategorySpec" Name="CategorySpec" DisplayName="Category Spec" PropertyName="CategoryTransactionAssociation" PropertyDisplayName="Category Transaction Association">
+          <RolePlayer>
+            <DomainClassMoniker Name="CategorySpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="975be051-15db-4296-a433-64870f61f968" Description="Description for Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociation" Name="CategoryTransactionAssociation" DisplayName="Category Transaction Association" PropertyName="CategorySpec" Multiplicity="One" PropertyDisplayName="Category Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="CategoryTransactionAssociation" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="fe74993f-b882-4d69-95c5-d93d7fcb5ed6" Description="Description for Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation" Name="TransactionSpecReferencesCategoryTransactionAssociation" DisplayName="Transaction Spec References Category Transaction Association" Namespace="Empresa.MoneyManagerModel">
+      <Source>
+        <DomainRole Id="2a443f39-a5fa-4384-889f-954dfa711d25" Description="Description for Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpec" Name="TransactionSpec" DisplayName="Transaction Spec" PropertyName="CategoryTransactionAssociation" PropertyDisplayName="Category Transaction Association">
+          <RolePlayer>
+            <DomainClassMoniker Name="TransactionSpec" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="d5e63cab-8161-4e52-9826-ac9bed7cbf78" Description="Description for Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociation" Name="CategoryTransactionAssociation" DisplayName="Category Transaction Association" PropertyName="TransactionSpec" Multiplicity="One" PropertyDisplayName="Transaction Spec">
+          <RolePlayer>
+            <DomainClassMoniker Name="CategoryTransactionAssociation" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -493,42 +742,67 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="9e649443-b300-405e-bd16-4553b1af36b9" Description="Descrição de Empresa.MoneyManagerModel.UserSpecShape" Name="UserSpecShape" DisplayName="User Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Spec Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="9e649443-b300-405e-bd16-4553b1af36b9" Description="Descrição de Empresa.MoneyManagerModel.UserSpecShape" Name="UserSpecShape" DisplayName="User Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Spec Shape" FillColor="PeachPuff" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="85ce6a7b-2267-422f-93c5-056d110860b1" Description="Descrição de Empresa.MoneyManagerModel.AccountSpecShape" Name="AccountSpecShape" DisplayName="Account Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Spec Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="85ce6a7b-2267-422f-93c5-056d110860b1" Description="Descrição de Empresa.MoneyManagerModel.AccountSpecShape" Name="AccountSpecShape" DisplayName="Account Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Spec Shape" FillColor="IndianRed" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="bb8089bf-5aeb-4435-b73e-e16cbc12ef3c" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpecShape" Name="TransactionSpecShape" DisplayName="Transaction Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Transaction Spec Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="bb8089bf-5aeb-4435-b73e-e16cbc12ef3c" Description="Descrição de Empresa.MoneyManagerModel.TransactionSpecShape" Name="TransactionSpecShape" DisplayName="Transaction Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Transaction Spec Shape" FillColor="DarkKhaki" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="f12fccf6-9b52-4578-b87b-e986adf00354" Description="Descrição de Empresa.MoneyManagerModel.AttributeTypeShape" Name="AttributeTypeShape" DisplayName="Attribute Type Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Attribute Type Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="f12fccf6-9b52-4578-b87b-e986adf00354" Description="Descrição de Empresa.MoneyManagerModel.AttributeTypeShape" Name="AttributeTypeShape" DisplayName="Attribute Type Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Attribute Type Shape" FillColor="Aquamarine" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="TextDecorator" DisplayName="Text Decorator" DefaultText="TextDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="8ed59e93-8b6e-4866-bf6d-15501740e0ae" Description="Descrição de Empresa.MoneyManagerModel.AssociationShape" Name="AssociationShape" DisplayName="Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Association Shape" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
-      </ShapeHasDecorators>
-    </GeometryShape>
-    <GeometryShape Id="337a9ec5-b753-4e5c-acfd-928f2a9a38c5" Description="Descrição de Empresa.MoneyManagerModel.UserAttributeShape" Name="UserAttributeShape" DisplayName="User Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Attribute Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="337a9ec5-b753-4e5c-acfd-928f2a9a38c5" Description="Descrição de Empresa.MoneyManagerModel.UserAttributeShape" Name="UserAttributeShape" DisplayName="User Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Attribute Shape" FillColor="PeachPuff" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="eaa7515c-e598-4b70-bf30-da967797d226" Description="Descrição de Empresa.MoneyManagerModel.AccountAttributeShape" Name="AccountAttributeShape" DisplayName="Account Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Attribute Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="eaa7515c-e598-4b70-bf30-da967797d226" Description="Descrição de Empresa.MoneyManagerModel.AccountAttributeShape" Name="AccountAttributeShape" DisplayName="Account Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Attribute Shape" FillColor="IndianRed" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="4a852e1c-788f-4e13-9c9c-74ec8bc036b9" Description="Descrição de Empresa.MoneyManagerModel.TransactionAttributeShape" Name="TransactionAttributeShape" DisplayName="Transaction Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Transaction Attribute Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="4a852e1c-788f-4e13-9c9c-74ec8bc036b9" Description="Descrição de Empresa.MoneyManagerModel.TransactionAttributeShape" Name="TransactionAttributeShape" DisplayName="Transaction Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Transaction Attribute Shape" FillColor="DarkKhaki" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="b2ef685e-ebcd-42ea-8b87-ae6209d1a389" Description="Description for Empresa.MoneyManagerModel.AccountGroupSpecSchape" Name="AccountGroupSpecSchape" DisplayName="Account Group Spec Schape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Group Spec Schape" FillColor="IndianRed" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="bd770a93-5b15-4108-9dfb-be0e2fbe78de" Description="Description for Empresa.MoneyManagerModel.UserAccountAssociationShape" Name="UserAccountAssociationShape" DisplayName="User Account Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="User Account Association Shape" InitialHeight="1" Geometry="Ellipse">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="81c6a71d-e70a-46fe-8f30-ed34512b5f3f" Description="Description for Empresa.MoneyManagerModel.AccountTransactionAssociationShape" Name="AccountTransactionAssociationShape" DisplayName="Account Transaction Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Account Transaction Association Shape" InitialHeight="1" Geometry="Ellipse">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="f7dc43e5-ff59-4eca-b720-b11d4099e083" Description="Description for Empresa.MoneyManagerModel.CategorySpecShape" Name="CategorySpecShape" DisplayName="Category Spec Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Category Spec Shape" FillColor="Plum" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="41abd9a7-205d-40e9-b611-6359cbd0ef6a" Description="Description for Empresa.MoneyManagerModel.CategoryAttributeShape" Name="CategoryAttributeShape" DisplayName="Category Attribute Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Category Attribute Shape" FillColor="Plum" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="3f1072fd-b0c0-484f-9b87-1eb60e8cc025" Description="Description for Empresa.MoneyManagerModel.CategoryTransactionAssociationShape" Name="CategoryTransactionAssociationShape" DisplayName="Category Transaction Association Shape" Namespace="Empresa.MoneyManagerModel" FixedTooltipText="Category Transaction Association Shape" InitialHeight="1" Geometry="Ellipse">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
@@ -558,16 +832,28 @@
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="Model/Name" />
           </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="association">
-            <DomainRelationshipMoniker Name="ModelTemAssociation" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="accountGroupSpec">
+            <DomainRelationshipMoniker Name="ModelHasAccountGroupSpec" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="userAccountAssociation">
+            <DomainRelationshipMoniker Name="ModelHasUserAccountAssociation" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="accountTransactionAssociation">
+            <DomainRelationshipMoniker Name="ModelHasAccountTransactionAssociation" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="categorySpec">
+            <DomainRelationshipMoniker Name="ModelHasCategorySpec" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="categoryTransactionAssociation">
+            <DomainRelationshipMoniker Name="ModelHasCategoryTransactionAssociation" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="UserSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="userSpecMoniker" ElementName="userSpec" MonikerTypeName="UserSpecMoniker">
         <DomainClassMoniker Name="UserSpec" />
         <ElementData>
-          <XmlPropertyData XmlName="cardinality">
-            <DomainPropertyMoniker Name="UserSpec/Cardinality" />
+          <XmlPropertyData XmlName="cardinalityMax">
+            <DomainPropertyMoniker Name="UserSpec/CardinalityMax" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="UserSpec/Name" />
@@ -575,9 +861,12 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="userAttribute">
             <DomainRelationshipMoniker Name="UserSpecTemUserAttribute" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="associations">
-            <DomainRelationshipMoniker Name="UserSpecReferênciasAssociations" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="userAccountAssociation">
+            <DomainRelationshipMoniker Name="UserSpecReferencesUserAccountAssociation" />
           </XmlRelationshipData>
+          <XmlPropertyData XmlName="cardinalityMin">
+            <DomainPropertyMoniker Name="UserSpec/CardinalityMin" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ExampleModelHasElements" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelHasElementsMoniker" ElementName="exampleModelHasElements" MonikerTypeName="ExampleModelHasElementsMoniker">
@@ -592,8 +881,8 @@
       <XmlClassData TypeName="AccountSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="accountSpecMoniker" ElementName="accountSpec" MonikerTypeName="AccountSpecMoniker">
         <DomainClassMoniker Name="AccountSpec" />
         <ElementData>
-          <XmlPropertyData XmlName="cardinality">
-            <DomainPropertyMoniker Name="AccountSpec/Cardinality" />
+          <XmlPropertyData XmlName="cardinalityMax">
+            <DomainPropertyMoniker Name="AccountSpec/CardinalityMax" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="AccountSpec/Name" />
@@ -601,9 +890,18 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="accountAttribute">
             <DomainRelationshipMoniker Name="AccountSpecTemAccountAttribute" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="associations">
-            <DomainRelationshipMoniker Name="AccountSpecReferênciasAssociations" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="userAccountAssociation">
+            <DomainRelationshipMoniker Name="AccountSpecReferencesUserAccountAssociation" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="accountTransactionAssociation">
+            <DomainRelationshipMoniker Name="AccountSpecReferencesAccountTransactionAssociation" />
+          </XmlRelationshipData>
+          <XmlPropertyData XmlName="cardinalityMin">
+            <DomainPropertyMoniker Name="AccountSpec/CardinalityMin" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="needBanckAccount">
+            <DomainPropertyMoniker Name="AccountSpec/NeedBanckAccount" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ModelTemAccountSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelTemAccountSpecMoniker" ElementName="modelTemAccountSpec" MonikerTypeName="ModelTemAccountSpecMoniker">
@@ -615,8 +913,8 @@
       <XmlClassData TypeName="TransactionSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="transactionSpecMoniker" ElementName="transactionSpec" MonikerTypeName="TransactionSpecMoniker">
         <DomainClassMoniker Name="TransactionSpec" />
         <ElementData>
-          <XmlPropertyData XmlName="cardinality">
-            <DomainPropertyMoniker Name="TransactionSpec/Cardinality" />
+          <XmlPropertyData XmlName="cardinalityMax">
+            <DomainPropertyMoniker Name="TransactionSpec/CardinalityMax" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="TransactionSpec/Name" />
@@ -624,9 +922,15 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="transactionAttribute">
             <DomainRelationshipMoniker Name="TransactionSpecTemTransactionAttribute" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="associations">
-            <DomainRelationshipMoniker Name="TransactionSpecReferênciasAssociations" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="accountTransactionAssociation">
+            <DomainRelationshipMoniker Name="TransactionSpecReferencesAccountTransactionAssociation" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="categoryTransactionAssociation">
+            <DomainRelationshipMoniker Name="TransactionSpecReferencesCategoryTransactionAssociation" />
+          </XmlRelationshipData>
+          <XmlPropertyData XmlName="cardinalityMin">
+            <DomainPropertyMoniker Name="TransactionSpec/CardinalityMin" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="TransactionSpecShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="transactionSpecShapeMoniker" ElementName="transactionSpecShape" MonikerTypeName="TransactionSpecShapeMoniker">
@@ -663,29 +967,6 @@
       </XmlClassData>
       <XmlClassData TypeName="Referência" MonikerAttributeName="" SerializeId="true" MonikerElementName="referênciaMoniker" ElementName="referência" MonikerTypeName="ReferênciaMoniker">
         <ConnectorMoniker Name="Referência" />
-      </XmlClassData>
-      <XmlClassData TypeName="Association" MonikerAttributeName="" SerializeId="true" MonikerElementName="associationMoniker" ElementName="association" MonikerTypeName="AssociationMoniker">
-        <DomainClassMoniker Name="Association" />
-        <ElementData>
-          <XmlPropertyData XmlName="name">
-            <DomainPropertyMoniker Name="Association/Name" />
-          </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="transactionSpec">
-            <DomainRelationshipMoniker Name="AssociationReferênciasTransactionSpec" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="accountSpec">
-            <DomainRelationshipMoniker Name="AssociationReferênciasAccountSpec" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="userSpec">
-            <DomainRelationshipMoniker Name="AssociationReferênciasUserSpec" />
-          </XmlRelationshipData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ModelTemAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelTemAssociationMoniker" ElementName="modelTemAssociation" MonikerTypeName="ModelTemAssociationMoniker">
-        <DomainRelationshipMoniker Name="ModelTemAssociation" />
-      </XmlClassData>
-      <XmlClassData TypeName="AssociationShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="associationShapeMoniker" ElementName="associationShape" MonikerTypeName="AssociationShapeMoniker">
-        <GeometryShapeMoniker Name="AssociationShape" />
       </XmlClassData>
       <XmlClassData TypeName="UserAttribute" MonikerAttributeName="" SerializeId="true" MonikerElementName="userAttributeMoniker" ElementName="userAttribute" MonikerTypeName="UserAttributeMoniker">
         <DomainClassMoniker Name="UserAttribute" />
@@ -747,24 +1028,6 @@
       <XmlClassData TypeName="TransactionAttributeShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="transactionAttributeShapeMoniker" ElementName="transactionAttributeShape" MonikerTypeName="TransactionAttributeShapeMoniker">
         <GeometryShapeMoniker Name="TransactionAttributeShape" />
       </XmlClassData>
-      <XmlClassData TypeName="AssociationReferênciasTransactionSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="associationReferênciasTransactionSpecMoniker" ElementName="associationReferênciasTransactionSpec" MonikerTypeName="AssociationReferênciasTransactionSpecMoniker">
-        <DomainRelationshipMoniker Name="AssociationReferênciasTransactionSpec" />
-      </XmlClassData>
-      <XmlClassData TypeName="TransactionSpecReferênciasAssociations" MonikerAttributeName="" SerializeId="true" MonikerElementName="transactionSpecReferênciasAssociationsMoniker" ElementName="transactionSpecReferênciasAssociations" MonikerTypeName="TransactionSpecReferênciasAssociationsMoniker">
-        <DomainRelationshipMoniker Name="TransactionSpecReferênciasAssociations" />
-      </XmlClassData>
-      <XmlClassData TypeName="AssociationReferênciasAccountSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="associationReferênciasAccountSpecMoniker" ElementName="associationReferênciasAccountSpec" MonikerTypeName="AssociationReferênciasAccountSpecMoniker">
-        <DomainRelationshipMoniker Name="AssociationReferênciasAccountSpec" />
-      </XmlClassData>
-      <XmlClassData TypeName="AccountSpecReferênciasAssociations" MonikerAttributeName="" SerializeId="true" MonikerElementName="accountSpecReferênciasAssociationsMoniker" ElementName="accountSpecReferênciasAssociations" MonikerTypeName="AccountSpecReferênciasAssociationsMoniker">
-        <DomainRelationshipMoniker Name="AccountSpecReferênciasAssociations" />
-      </XmlClassData>
-      <XmlClassData TypeName="AssociationReferênciasUserSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="associationReferênciasUserSpecMoniker" ElementName="associationReferênciasUserSpec" MonikerTypeName="AssociationReferênciasUserSpecMoniker">
-        <DomainRelationshipMoniker Name="AssociationReferênciasUserSpec" />
-      </XmlClassData>
-      <XmlClassData TypeName="UserSpecReferênciasAssociations" MonikerAttributeName="" SerializeId="true" MonikerElementName="userSpecReferênciasAssociationsMoniker" ElementName="userSpecReferênciasAssociations" MonikerTypeName="UserSpecReferênciasAssociationsMoniker">
-        <DomainRelationshipMoniker Name="UserSpecReferênciasAssociations" />
-      </XmlClassData>
       <XmlClassData TypeName="UserAttributeReferênciasAttributeTypes" MonikerAttributeName="" SerializeId="true" MonikerElementName="userAttributeReferênciasAttributeTypesMoniker" ElementName="userAttributeReferênciasAttributeTypes" MonikerTypeName="UserAttributeReferênciasAttributeTypesMoniker">
         <DomainRelationshipMoniker Name="UserAttributeReferênciasAttributeTypes" />
       </XmlClassData>
@@ -774,124 +1037,148 @@
       <XmlClassData TypeName="TransactionAttributeReferênciasAttributeTypes" MonikerAttributeName="" SerializeId="true" MonikerElementName="transactionAttributeReferênciasAttributeTypesMoniker" ElementName="transactionAttributeReferênciasAttributeTypes" MonikerTypeName="TransactionAttributeReferênciasAttributeTypesMoniker">
         <DomainRelationshipMoniker Name="TransactionAttributeReferênciasAttributeTypes" />
       </XmlClassData>
+      <XmlClassData TypeName="AccountGroupSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="accountGroupSpecMoniker" ElementName="accountGroupSpec" MonikerTypeName="AccountGroupSpecMoniker">
+        <DomainClassMoniker Name="AccountGroupSpec" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="AccountGroupSpec/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalityMin">
+            <DomainPropertyMoniker Name="AccountGroupSpec/CardinalityMin" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalityMax">
+            <DomainPropertyMoniker Name="AccountGroupSpec/CardinalityMax" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="accountSpec">
+            <DomainRelationshipMoniker Name="AccountGroupSpecReferencesAccountSpec" />
+          </XmlRelationshipData>
+          <XmlPropertyData XmlName="needBankAccount">
+            <DomainPropertyMoniker Name="AccountGroupSpec/needBankAccount" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ModelHasAccountGroupSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelHasAccountGroupSpecMoniker" ElementName="modelHasAccountGroupSpec" MonikerTypeName="ModelHasAccountGroupSpecMoniker">
+        <DomainRelationshipMoniker Name="ModelHasAccountGroupSpec" />
+      </XmlClassData>
+      <XmlClassData TypeName="AccountGroupSpecReferencesAccountSpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="accountGroupSpecReferencesAccountSpecMoniker" ElementName="accountGroupSpecReferencesAccountSpec" MonikerTypeName="AccountGroupSpecReferencesAccountSpecMoniker">
+        <DomainRelationshipMoniker Name="AccountGroupSpecReferencesAccountSpec" />
+      </XmlClassData>
+      <XmlClassData TypeName="AccountGroupSpecSchape" MonikerAttributeName="" SerializeId="true" MonikerElementName="accountGroupSpecSchapeMoniker" ElementName="accountGroupSpecSchape" MonikerTypeName="AccountGroupSpecSchapeMoniker">
+        <GeometryShapeMoniker Name="AccountGroupSpecSchape" />
+      </XmlClassData>
+      <XmlClassData TypeName="UserAccountAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="userAccountAssociationMoniker" ElementName="userAccountAssociation" MonikerTypeName="UserAccountAssociationMoniker">
+        <DomainClassMoniker Name="UserAccountAssociation" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="UserAccountAssociation/Name" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="AccountTransactionAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="accountTransactionAssociationMoniker" ElementName="accountTransactionAssociation" MonikerTypeName="AccountTransactionAssociationMoniker">
+        <DomainClassMoniker Name="AccountTransactionAssociation" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="AccountTransactionAssociation/Name" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ModelHasUserAccountAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelHasUserAccountAssociationMoniker" ElementName="modelHasUserAccountAssociation" MonikerTypeName="ModelHasUserAccountAssociationMoniker">
+        <DomainRelationshipMoniker Name="ModelHasUserAccountAssociation" />
+      </XmlClassData>
+      <XmlClassData TypeName="UserAccountAssociationShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="userAccountAssociationShapeMoniker" ElementName="userAccountAssociationShape" MonikerTypeName="UserAccountAssociationShapeMoniker">
+        <GeometryShapeMoniker Name="UserAccountAssociationShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ModelHasAccountTransactionAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelHasAccountTransactionAssociationMoniker" ElementName="modelHasAccountTransactionAssociation" MonikerTypeName="ModelHasAccountTransactionAssociationMoniker">
+        <DomainRelationshipMoniker Name="ModelHasAccountTransactionAssociation" />
+      </XmlClassData>
+      <XmlClassData TypeName="AccountTransactionAssociationShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="accountTransactionAssociationShapeMoniker" ElementName="accountTransactionAssociationShape" MonikerTypeName="AccountTransactionAssociationShapeMoniker">
+        <GeometryShapeMoniker Name="AccountTransactionAssociationShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="CategorySpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="categorySpecMoniker" ElementName="categorySpec" MonikerTypeName="CategorySpecMoniker">
+        <DomainClassMoniker Name="CategorySpec" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="CategorySpec/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalityMin">
+            <DomainPropertyMoniker Name="CategorySpec/CardinalityMin" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalityMax">
+            <DomainPropertyMoniker Name="CategorySpec/CardinalityMax" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="categoryAttribute">
+            <DomainRelationshipMoniker Name="CategorySpecHasCategoryAttribute" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="categoryTransactionAssociation">
+            <DomainRelationshipMoniker Name="CategorySpecReferencesCategoryTransactionAssociation" />
+          </XmlRelationshipData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ModelHasCategorySpec" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelHasCategorySpecMoniker" ElementName="modelHasCategorySpec" MonikerTypeName="ModelHasCategorySpecMoniker">
+        <DomainRelationshipMoniker Name="ModelHasCategorySpec" />
+      </XmlClassData>
+      <XmlClassData TypeName="CategorySpecShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="categorySpecShapeMoniker" ElementName="categorySpecShape" MonikerTypeName="CategorySpecShapeMoniker">
+        <GeometryShapeMoniker Name="CategorySpecShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="CategoryAttribute" MonikerAttributeName="" SerializeId="true" MonikerElementName="categoryAttributeMoniker" ElementName="categoryAttribute" MonikerTypeName="CategoryAttributeMoniker">
+        <DomainClassMoniker Name="CategoryAttribute" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="CategoryAttribute/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="attributeType">
+            <DomainPropertyMoniker Name="CategoryAttribute/AttributeType" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="attributeType1">
+            <DomainRelationshipMoniker Name="CategoryAttributeReferencesAttributeType1" />
+          </XmlRelationshipData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="CategoryAttributeShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="categoryAttributeShapeMoniker" ElementName="categoryAttributeShape" MonikerTypeName="CategoryAttributeShapeMoniker">
+        <GeometryShapeMoniker Name="CategoryAttributeShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="CategoryAttributeReferencesAttributeType1" MonikerAttributeName="" SerializeId="true" MonikerElementName="categoryAttributeReferencesAttributeType1Moniker" ElementName="categoryAttributeReferencesAttributeType1" MonikerTypeName="CategoryAttributeReferencesAttributeType1Moniker">
+        <DomainRelationshipMoniker Name="CategoryAttributeReferencesAttributeType1" />
+      </XmlClassData>
+      <XmlClassData TypeName="CategorySpecHasCategoryAttribute" MonikerAttributeName="" SerializeId="true" MonikerElementName="categorySpecHasCategoryAttributeMoniker" ElementName="categorySpecHasCategoryAttribute" MonikerTypeName="CategorySpecHasCategoryAttributeMoniker">
+        <DomainRelationshipMoniker Name="CategorySpecHasCategoryAttribute" />
+      </XmlClassData>
+      <XmlClassData TypeName="UserSpecReferencesUserAccountAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="userSpecReferencesUserAccountAssociationMoniker" ElementName="userSpecReferencesUserAccountAssociation" MonikerTypeName="UserSpecReferencesUserAccountAssociationMoniker">
+        <DomainRelationshipMoniker Name="UserSpecReferencesUserAccountAssociation" />
+      </XmlClassData>
+      <XmlClassData TypeName="AccountSpecReferencesUserAccountAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="accountSpecReferencesUserAccountAssociationMoniker" ElementName="accountSpecReferencesUserAccountAssociation" MonikerTypeName="AccountSpecReferencesUserAccountAssociationMoniker">
+        <DomainRelationshipMoniker Name="AccountSpecReferencesUserAccountAssociation" />
+      </XmlClassData>
+      <XmlClassData TypeName="AccountSpecReferencesAccountTransactionAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="accountSpecReferencesAccountTransactionAssociationMoniker" ElementName="accountSpecReferencesAccountTransactionAssociation" MonikerTypeName="AccountSpecReferencesAccountTransactionAssociationMoniker">
+        <DomainRelationshipMoniker Name="AccountSpecReferencesAccountTransactionAssociation" />
+      </XmlClassData>
+      <XmlClassData TypeName="TransactionSpecReferencesAccountTransactionAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="transactionSpecReferencesAccountTransactionAssociationMoniker" ElementName="transactionSpecReferencesAccountTransactionAssociation" MonikerTypeName="TransactionSpecReferencesAccountTransactionAssociationMoniker">
+        <DomainRelationshipMoniker Name="TransactionSpecReferencesAccountTransactionAssociation" />
+      </XmlClassData>
+      <XmlClassData TypeName="CategoryTransactionAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="categoryTransactionAssociationMoniker" ElementName="categoryTransactionAssociation" MonikerTypeName="CategoryTransactionAssociationMoniker">
+        <DomainClassMoniker Name="CategoryTransactionAssociation" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="CategoryTransactionAssociation/Name" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ModelHasCategoryTransactionAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="modelHasCategoryTransactionAssociationMoniker" ElementName="modelHasCategoryTransactionAssociation" MonikerTypeName="ModelHasCategoryTransactionAssociationMoniker">
+        <DomainRelationshipMoniker Name="ModelHasCategoryTransactionAssociation" />
+      </XmlClassData>
+      <XmlClassData TypeName="CategoryTransactionAssociationShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="categoryTransactionAssociationShapeMoniker" ElementName="categoryTransactionAssociationShape" MonikerTypeName="CategoryTransactionAssociationShapeMoniker">
+        <GeometryShapeMoniker Name="CategoryTransactionAssociationShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="CategorySpecReferencesCategoryTransactionAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="categorySpecReferencesCategoryTransactionAssociationMoniker" ElementName="categorySpecReferencesCategoryTransactionAssociation" MonikerTypeName="CategorySpecReferencesCategoryTransactionAssociationMoniker">
+        <DomainRelationshipMoniker Name="CategorySpecReferencesCategoryTransactionAssociation" />
+      </XmlClassData>
+      <XmlClassData TypeName="TransactionSpecReferencesCategoryTransactionAssociation" MonikerAttributeName="" SerializeId="true" MonikerElementName="transactionSpecReferencesCategoryTransactionAssociationMoniker" ElementName="transactionSpecReferencesCategoryTransactionAssociation" MonikerTypeName="TransactionSpecReferencesCategoryTransactionAssociationMoniker">
+        <DomainRelationshipMoniker Name="TransactionSpecReferencesCategoryTransactionAssociation" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="MoneyManagerModelExplorer" />
   <ConnectionBuilders>
-    <ConnectionBuilder Name="AssociationReferênciasTransactionSpecConstrutor">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="AssociationReferênciasTransactionSpec" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Association" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="TransactionSpec" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="TransactionSpecReferênciasAssociationsConstrutor">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="TransactionSpecReferênciasAssociations" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="TransactionSpec" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Association" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="AssociationReferênciasAccountSpecConstrutor">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="AssociationReferênciasAccountSpec" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Association" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="AccountSpec" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="AccountSpecReferênciasAssociationsConstrutor">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="AccountSpecReferênciasAssociations" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="AccountSpec" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Association" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="AssociationReferênciasUserSpecConstrutor">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="AssociationReferênciasUserSpec" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Association" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="UserSpec" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="UserSpecReferênciasAssociationsConstrutor">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="UserSpecReferênciasAssociations" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="UserSpec" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Association" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
     <ConnectionBuilder Name="UserAttributeReferênciasAttributeTypesConstrutor">
       <LinkConnectDirective>
         <DomainRelationshipMoniker Name="UserAttributeReferênciasAttributeTypes" />
@@ -944,6 +1231,158 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="AttributeType" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="AccountGroupSpecReferencesAccountSpecBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="AccountGroupSpecReferencesAccountSpec" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="AccountGroupSpec" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="AccountSpec" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="CategoryAttributeReferencesAttributeType1Builder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="CategoryAttributeReferencesAttributeType1" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="CategoryAttribute" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="AttributeType" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="UserSpecReferencesUserAccountAssociationBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="UserSpecReferencesUserAccountAssociation" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="UserSpec" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="UserAccountAssociation" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="AccountSpecReferencesUserAccountAssociationBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="AccountSpecReferencesUserAccountAssociation" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="AccountSpec" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="UserAccountAssociation" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="AccountSpecReferencesAccountTransactionAssociationBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="AccountSpecReferencesAccountTransactionAssociation" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="AccountSpec" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="AccountTransactionAssociation" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="TransactionSpecReferencesAccountTransactionAssociationBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="TransactionSpecReferencesAccountTransactionAssociation" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="TransactionSpec" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="AccountTransactionAssociation" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="CategorySpecReferencesCategoryTransactionAssociationBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="CategorySpecReferencesCategoryTransactionAssociation" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="CategorySpec" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="CategoryTransactionAssociation" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="TransactionSpecReferencesCategoryTransactionAssociationBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="TransactionSpecReferencesCategoryTransactionAssociation" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="TransactionSpec" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="CategoryTransactionAssociation" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -1024,21 +1463,6 @@
         <GeometryShapeMoniker Name="AttributeTypeShape" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="Association" />
-        <ParentElementPath>
-          <DomainPath>ModelTemAssociation.Model/!Model</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="AssociationShape/NameDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Association/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="AssociationShape" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="UserAttribute" />
         <ParentElementPath>
           <DomainPath>UserSpecTemUserAttribute.UserSpec/!UserSpec/ExampleModelHasElements.Model/!Model</DomainPath>
@@ -1083,6 +1507,96 @@
         </DecoratorMap>
         <GeometryShapeMoniker Name="TransactionAttributeShape" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="AccountGroupSpec" />
+        <ParentElementPath>
+          <DomainPath>ModelHasAccountGroupSpec.Model/!Model</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AccountGroupSpecSchape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AccountGroupSpec/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="AccountGroupSpecSchape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="UserAccountAssociation" />
+        <ParentElementPath>
+          <DomainPath>ModelHasUserAccountAssociation.Model/!Model</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="UserAccountAssociationShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="UserAccountAssociation/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="UserAccountAssociationShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="AccountTransactionAssociation" />
+        <ParentElementPath>
+          <DomainPath>ModelHasAccountTransactionAssociation.Model/!Model</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AccountTransactionAssociationShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AccountTransactionAssociation/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="AccountTransactionAssociationShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="CategorySpec" />
+        <ParentElementPath>
+          <DomainPath>ModelHasCategorySpec.Model/!Model</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="CategorySpecShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="CategorySpec/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="CategorySpecShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="CategoryAttribute" />
+        <ParentElementPath>
+          <DomainPath>CategorySpecHasCategoryAttribute.CategorySpec/!CategorySpec/ModelHasCategorySpec.Model/!Model</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="CategoryAttributeShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="CategoryAttribute/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="CategoryAttributeShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="CategoryTransactionAssociation" />
+        <ParentElementPath>
+          <DomainPath>ModelHasCategoryTransactionAssociation.Model/!Model</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="CategoryTransactionAssociationShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="CategoryTransactionAssociation/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="CategoryTransactionAssociationShape" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -1099,30 +1613,6 @@
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="Referência" />
-        <DomainRelationshipMoniker Name="TransactionSpecReferênciasAssociations" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="Referência" />
-        <DomainRelationshipMoniker Name="AssociationReferênciasTransactionSpec" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="Referência" />
-        <DomainRelationshipMoniker Name="AccountSpecReferênciasAssociations" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="Referência" />
-        <DomainRelationshipMoniker Name="AssociationReferênciasAccountSpec" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="Referência" />
-        <DomainRelationshipMoniker Name="UserSpecReferênciasAssociations" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="Referência" />
-        <DomainRelationshipMoniker Name="AssociationReferênciasUserSpec" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="Referência" />
         <DomainRelationshipMoniker Name="UserAttributeReferênciasAttributeTypes" />
       </ConnectorMap>
       <ConnectorMap>
@@ -1132,6 +1622,42 @@
       <ConnectorMap>
         <ConnectorMoniker Name="Referência" />
         <DomainRelationshipMoniker Name="TransactionAttributeReferênciasAttributeTypes" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Referência" />
+        <DomainRelationshipMoniker Name="AccountGroupSpecReferencesAccountSpec" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Referência" />
+        <DomainRelationshipMoniker Name="CategoryAttributeReferencesAttributeType1" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Incorporação" />
+        <DomainRelationshipMoniker Name="CategorySpecHasCategoryAttribute" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Referência" />
+        <DomainRelationshipMoniker Name="UserSpecReferencesUserAccountAssociation" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Referência" />
+        <DomainRelationshipMoniker Name="AccountSpecReferencesUserAccountAssociation" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Referência" />
+        <DomainRelationshipMoniker Name="AccountSpecReferencesAccountTransactionAssociation" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Referência" />
+        <DomainRelationshipMoniker Name="TransactionSpecReferencesAccountTransactionAssociation" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Referência" />
+        <DomainRelationshipMoniker Name="CategorySpecReferencesCategoryTransactionAssociation" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Referência" />
+        <DomainRelationshipMoniker Name="TransactionSpecReferencesCategoryTransactionAssociation" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -1155,9 +1681,6 @@
       <ElementTool Name="AttributeType" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="AttributeType" Tooltip="Attribute Type" HelpKeyword="AttributeType">
         <DomainClassMoniker Name="AttributeType" />
       </ElementTool>
-      <ElementTool Name="Association" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Association" Tooltip="Association" HelpKeyword="Association">
-        <DomainClassMoniker Name="Association" />
-      </ElementTool>
       <ElementTool Name="UserAttribute" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="UserAttribute" Tooltip="User Attribute" HelpKeyword="UserAttribute">
         <DomainClassMoniker Name="UserAttribute" />
       </ElementTool>
@@ -1170,30 +1693,57 @@
       <ConnectionTool Name="AccAttAttType" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="AccAttAttType" Tooltip="Acc Att Att Type" HelpKeyword="AccAttAttType" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
         <ConnectionBuilderMoniker Name="MoneyManagerModel/AccountAttributeReferênciasAttributeTypesConstrutor" />
       </ConnectionTool>
-      <ConnectionTool Name="AccSpAss" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="AccSpAss" Tooltip="Acc Sp Ass" HelpKeyword="AccSpAss" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
-        <ConnectionBuilderMoniker Name="MoneyManagerModel/AccountSpecReferênciasAssociationsConstrutor" />
-      </ConnectionTool>
-      <ConnectionTool Name="AssAccSp" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="AssAccSp" Tooltip="Ass Acc Sp" HelpKeyword="AssAccSp" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
-        <ConnectionBuilderMoniker Name="MoneyManagerModel/AssociationReferênciasAccountSpecConstrutor" />
-      </ConnectionTool>
-      <ConnectionTool Name="AssTranSp" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="AssTranSp" Tooltip="Ass Tran Sp" HelpKeyword="AssTranSp" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
-        <ConnectionBuilderMoniker Name="MoneyManagerModel/AssociationReferênciasTransactionSpecConstrutor" />
-      </ConnectionTool>
-      <ConnectionTool Name="AssUserSp" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="AssUserSp" Tooltip="Ass User Sp" HelpKeyword="AssUserSp" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
-        <ConnectionBuilderMoniker Name="MoneyManagerModel/AssociationReferênciasUserSpecConstrutor" />
-      </ConnectionTool>
       <ConnectionTool Name="TransAttAttType" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="TransAttAttType" Tooltip="Trans Att Att Type" HelpKeyword="TransAttAttType" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
         <ConnectionBuilderMoniker Name="MoneyManagerModel/TransactionAttributeReferênciasAttributeTypesConstrutor" />
-      </ConnectionTool>
-      <ConnectionTool Name="TransSpAss" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="TransSpAss" Tooltip="Trans Sp Ass" HelpKeyword="TransSpAss" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
-        <ConnectionBuilderMoniker Name="MoneyManagerModel/TransactionSpecReferênciasAssociationsConstrutor" />
       </ConnectionTool>
       <ConnectionTool Name="UserAttAttType" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="UserAttAttType" Tooltip="User Att Att Type" HelpKeyword="UserAttAttType" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
         <ConnectionBuilderMoniker Name="MoneyManagerModel/UserAttributeReferênciasAttributeTypesConstrutor" />
       </ConnectionTool>
-      <ConnectionTool Name="UserSpAss" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="UserSpAss" Tooltip="User Sp Ass" HelpKeyword="UserSpAss" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
-        <ConnectionBuilderMoniker Name="MoneyManagerModel/UserSpecReferênciasAssociationsConstrutor" />
+      <ElementTool Name="AccountGroupSpec" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="AccountGroupSpec" Tooltip="Account Group Spec" HelpKeyword="AccountGroupSpec">
+        <DomainClassMoniker Name="AccountGroupSpec" />
+      </ElementTool>
+      <ConnectionTool Name="AccountGroupSpecReferencesAccountSpec" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="AccountGroupSpecReferencesAccountSpec" Tooltip="Account Group Spec References Account Spec" HelpKeyword="AccountGroupSpecReferencesAccountSpec" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
+        <ConnectionBuilderMoniker Name="MoneyManagerModel/AccountGroupSpecReferencesAccountSpecBuilder" />
       </ConnectionTool>
+      <ElementTool Name="UserAccountAssociation" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="UserAccountAssociation" Tooltip="User Account Association" HelpKeyword="UserAccountAssociation">
+        <DomainClassMoniker Name="UserAccountAssociation" />
+      </ElementTool>
+      <ElementTool Name="AccountTransactionAssociation" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="AccountTransactionAssociation" Tooltip="Account Transaction Association" HelpKeyword="AccountTransactionAssociation">
+        <DomainClassMoniker Name="AccountTransactionAssociation" />
+      </ElementTool>
+      <ElementTool Name="CategorySpec" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="CategorySpec" Tooltip="Category Spec" HelpKeyword="CategorySpec">
+        <DomainClassMoniker Name="CategorySpec" />
+      </ElementTool>
+      <ConnectionTool Name="CategoryAttributeReferencesAttributeType" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="CategoryAttributeReferencesAttributeType" Tooltip="Category Attribute References Attribute Type" HelpKeyword="CategoryAttributeReferencesAttributeType" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
+        <ConnectionBuilderMoniker Name="MoneyManagerModel/CategoryAttributeReferencesAttributeType1Builder" />
+      </ConnectionTool>
+      <ElementTool Name="CategoryAttribute" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="CategoryAttribute" Tooltip="Category Attribute" HelpKeyword="CategoryAttribute">
+        <DomainClassMoniker Name="CategoryAttribute" />
+      </ElementTool>
+      <ConnectionTool Name="UserSpecTemUserAttribute" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="UserSpecTemUserAttribute" Tooltip="User Spec Tem User Attribute" HelpKeyword="UserSpecTemUserAttribute" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
+        <ConnectionBuilderMoniker Name="MoneyManagerModel/UserAttributeReferênciasAttributeTypesConstrutor" />
+      </ConnectionTool>
+      <ConnectionTool Name="AccountSpecReferencesUserAccountAssociation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="AccountSpecReferencesUserAccountAssociation" Tooltip="Account Spec References User Account Association" HelpKeyword="AccountSpecReferencesUserAccountAssociation" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
+        <ConnectionBuilderMoniker Name="MoneyManagerModel/AccountSpecReferencesUserAccountAssociationBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="AccountSpecReferencesAccountTransactionAssociation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="AccountSpecReferencesAccountTransactionAssociation" Tooltip="Account Spec References Account Transaction Association" HelpKeyword="AccountSpecReferencesAccountTransactionAssociation" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
+        <ConnectionBuilderMoniker Name="MoneyManagerModel/AccountSpecReferencesAccountTransactionAssociationBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="TransactionSpecReferencesAccountTransactionAssociation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="TransactionSpecReferencesAccountTransactionAssociation" Tooltip="Transaction Spec References Account Transaction Association" HelpKeyword="TransactionSpecReferencesAccountTransactionAssociation" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
+        <ConnectionBuilderMoniker Name="MoneyManagerModel/TransactionSpecReferencesAccountTransactionAssociationBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="CategorySpecReferencesCategoryTransactionAssociation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="CategorySpecReferencesCategoryTransactionAssociation" Tooltip="Category Spec References Category Transaction Association" HelpKeyword="CategorySpecReferencesCategoryTransactionAssociation" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
+        <ConnectionBuilderMoniker Name="MoneyManagerModel/CategorySpecReferencesCategoryTransactionAssociationBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="TransactionSpecReferencesCategoryTransactionAssociation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="TransactionSpecReferencesCategoryTransactionAssociation" Tooltip="Transaction Spec References Category Transaction Association" HelpKeyword="TransactionSpecReferencesCategoryTransactionAssociation" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
+        <ConnectionBuilderMoniker Name="MoneyManagerModel/TransactionSpecReferencesCategoryTransactionAssociationBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="UserSpecReferencesUserAccountAssociation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="UserSpecReferencesUserAccountAssociation" Tooltip="User Spec References User Account Association" HelpKeyword="UserSpecReferencesUserAccountAssociation" SourceCursorIcon="Resources\ConnectorSourceSearch.cur" TargetCursorIcon="Resources\ConnectorTargetSearch.cur">
+        <ConnectionBuilderMoniker Name="MoneyManagerModel/UserSpecReferencesUserAccountAssociationBuilder" />
+      </ConnectionTool>
+      <ElementTool Name="CategoryTransactionAssociation" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="CategoryTransactionAssociation" Tooltip="Category Transaction Association" HelpKeyword="CategoryTransactionAssociation">
+        <DomainClassMoniker Name="CategoryTransactionAssociation" />
+      </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="true" UsesOpen="true" UsesSave="true" UsesCustom="true" UsesLoad="true" />
     <DiagramMoniker Name="MoneyManagerModelDiagram" />

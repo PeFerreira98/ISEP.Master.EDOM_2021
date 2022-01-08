@@ -52,37 +52,49 @@ namespace Empresa.MoneyManagerModel
 		/// </summary>
 		public const string AccAttAttTypeFilterString = "AccAttAttType.1.0";
 		/// <summary>
-		/// Toolbox item filter string used to identify AccSpAss connector tool.
-		/// </summary>
-		public const string AccSpAssFilterString = "AccSpAss.1.0";
-		/// <summary>
-		/// Toolbox item filter string used to identify AssAccSp connector tool.
-		/// </summary>
-		public const string AssAccSpFilterString = "AssAccSp.1.0";
-		/// <summary>
-		/// Toolbox item filter string used to identify AssTranSp connector tool.
-		/// </summary>
-		public const string AssTranSpFilterString = "AssTranSp.1.0";
-		/// <summary>
-		/// Toolbox item filter string used to identify AssUserSp connector tool.
-		/// </summary>
-		public const string AssUserSpFilterString = "AssUserSp.1.0";
-		/// <summary>
 		/// Toolbox item filter string used to identify TransAttAttType connector tool.
 		/// </summary>
 		public const string TransAttAttTypeFilterString = "TransAttAttType.1.0";
-		/// <summary>
-		/// Toolbox item filter string used to identify TransSpAss connector tool.
-		/// </summary>
-		public const string TransSpAssFilterString = "TransSpAss.1.0";
 		/// <summary>
 		/// Toolbox item filter string used to identify UserAttAttType connector tool.
 		/// </summary>
 		public const string UserAttAttTypeFilterString = "UserAttAttType.1.0";
 		/// <summary>
-		/// Toolbox item filter string used to identify UserSpAss connector tool.
+		/// Toolbox item filter string used to identify AccountGroupSpecReferencesAccountSpec connector tool.
 		/// </summary>
-		public const string UserSpAssFilterString = "UserSpAss.1.0";
+		public const string AccountGroupSpecReferencesAccountSpecFilterString = "AccountGroupSpecReferencesAccountSpec.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify CategoryAttributeReferencesAttributeType connector tool.
+		/// </summary>
+		public const string CategoryAttributeReferencesAttributeTypeFilterString = "CategoryAttributeReferencesAttributeType.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify UserSpecTemUserAttribute connector tool.
+		/// </summary>
+		public const string UserSpecTemUserAttributeFilterString = "UserSpecTemUserAttribute.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify AccountSpecReferencesUserAccountAssociation connector tool.
+		/// </summary>
+		public const string AccountSpecReferencesUserAccountAssociationFilterString = "AccountSpecReferencesUserAccountAssociation.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify AccountSpecReferencesAccountTransactionAssociation connector tool.
+		/// </summary>
+		public const string AccountSpecReferencesAccountTransactionAssociationFilterString = "AccountSpecReferencesAccountTransactionAssociation.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify TransactionSpecReferencesAccountTransactionAssociation connector tool.
+		/// </summary>
+		public const string TransactionSpecReferencesAccountTransactionAssociationFilterString = "TransactionSpecReferencesAccountTransactionAssociation.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify CategorySpecReferencesCategoryTransactionAssociation connector tool.
+		/// </summary>
+		public const string CategorySpecReferencesCategoryTransactionAssociationFilterString = "CategorySpecReferencesCategoryTransactionAssociation.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify TransactionSpecReferencesCategoryTransactionAssociation connector tool.
+		/// </summary>
+		public const string TransactionSpecReferencesCategoryTransactionAssociationFilterString = "TransactionSpecReferencesCategoryTransactionAssociation.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify UserSpecReferencesUserAccountAssociation connector tool.
+		/// </summary>
+		public const string UserSpecReferencesUserAccountAssociationFilterString = "UserSpecReferencesUserAccountAssociation.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -130,7 +142,7 @@ namespace Empresa.MoneyManagerModel
 		{
 			get
 			{
-				return 17;
+				return 25;
 			}
 		}
 		
@@ -243,27 +255,11 @@ namespace Empresa.MoneyManagerModel
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "Empresa.MoneyManagerModel.AssociationToolboxItem":
-					// Add Association shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Empresa.MoneyManagerModel.AssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						5, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("AssociationToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"Association", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("AssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Empresa.MoneyManagerModel.Association.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
 				case "Empresa.MoneyManagerModel.UserAttributeToolboxItem":
 					// Add UserAttribute shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Empresa.MoneyManagerModel.UserAttributeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						6, // Position relative to other items in the same toolbox tab.
+						5, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("UserAttributeToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("UserAttributeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -279,7 +275,7 @@ namespace Empresa.MoneyManagerModel
 					// Add AccountAttribute shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Empresa.MoneyManagerModel.AccountAttributeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						7, // Position relative to other items in the same toolbox tab.
+						6, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("AccountAttributeToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AccountAttributeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -295,7 +291,7 @@ namespace Empresa.MoneyManagerModel
 					// Add TransactionAttribute shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Empresa.MoneyManagerModel.TransactionAttributeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						8, // Position relative to other items in the same toolbox tab.
+						7, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("TransactionAttributeToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("TransactionAttributeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -312,7 +308,7 @@ namespace Empresa.MoneyManagerModel
 					// Add AccAttAttType connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Empresa.MoneyManagerModel.AccAttAttTypeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						9, // Position relative to other items in the same toolbox tab.
+						8, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("AccAttAttTypeToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AccAttAttTypeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -325,84 +321,12 @@ namespace Empresa.MoneyManagerModel
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(AccAttAttTypeFilterString)
 						});
 					break;
-				case "Empresa.MoneyManagerModel.AccSpAssToolboxItem":
-
-					// Add AccSpAss connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Empresa.MoneyManagerModel.AccSpAssToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						10, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("AccSpAssToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AccSpAssToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"AccSpAss", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("AccSpAssToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(AccSpAssFilterString)
-						});
-					break;
-				case "Empresa.MoneyManagerModel.AssAccSpToolboxItem":
-
-					// Add AssAccSp connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Empresa.MoneyManagerModel.AssAccSpToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						11, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("AssAccSpToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AssAccSpToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"AssAccSp", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("AssAccSpToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(AssAccSpFilterString)
-						});
-					break;
-				case "Empresa.MoneyManagerModel.AssTranSpToolboxItem":
-
-					// Add AssTranSp connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Empresa.MoneyManagerModel.AssTranSpToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						12, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("AssTranSpToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AssTranSpToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"AssTranSp", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("AssTranSpToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(AssTranSpFilterString)
-						});
-					break;
-				case "Empresa.MoneyManagerModel.AssUserSpToolboxItem":
-
-					// Add AssUserSp connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Empresa.MoneyManagerModel.AssUserSpToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						13, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("AssUserSpToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AssUserSpToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"AssUserSp", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("AssUserSpToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(AssUserSpFilterString)
-						});
-					break;
 				case "Empresa.MoneyManagerModel.TransAttAttTypeToolboxItem":
 
 					// Add TransAttAttType connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Empresa.MoneyManagerModel.TransAttAttTypeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						14, // Position relative to other items in the same toolbox tab.
+						9, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("TransAttAttTypeToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("TransAttAttTypeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -415,30 +339,12 @@ namespace Empresa.MoneyManagerModel
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(TransAttAttTypeFilterString)
 						});
 					break;
-				case "Empresa.MoneyManagerModel.TransSpAssToolboxItem":
-
-					// Add TransSpAss connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Empresa.MoneyManagerModel.TransSpAssToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						15, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("TransSpAssToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("TransSpAssToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"TransSpAss", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("TransSpAssToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(TransSpAssFilterString)
-						});
-					break;
 				case "Empresa.MoneyManagerModel.UserAttAttTypeToolboxItem":
 
 					// Add UserAttAttType connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Empresa.MoneyManagerModel.UserAttAttTypeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						16, // Position relative to other items in the same toolbox tab.
+						10, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("UserAttAttTypeToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("UserAttAttTypeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -451,22 +357,262 @@ namespace Empresa.MoneyManagerModel
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(UserAttAttTypeFilterString)
 						});
 					break;
-				case "Empresa.MoneyManagerModel.UserSpAssToolboxItem":
-
-					// Add UserSpAss connector tool.
+				case "Empresa.MoneyManagerModel.AccountGroupSpecToolboxItem":
+					// Add AccountGroupSpec shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Empresa.MoneyManagerModel.UserSpAssToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						17, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("UserSpAssToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("UserSpAssToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.AccountGroupSpecToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						11, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("AccountGroupSpecToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AccountGroupSpecToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"UserSpAss", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("UserSpAssToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						"AccountGroupSpec", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AccountGroupSpecToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Empresa.MoneyManagerModel.AccountGroupSpec.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpecToolboxItem":
+
+					// Add AccountGroupSpecReferencesAccountSpec connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpecToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						12, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("AccountGroupSpecReferencesAccountSpecToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AccountGroupSpecReferencesAccountSpecToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"AccountGroupSpecReferencesAccountSpec", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AccountGroupSpecReferencesAccountSpecToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						null, // Connector toolbox items do not have an underlying data object.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(UserSpAssFilterString)
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(AccountGroupSpecReferencesAccountSpecFilterString)
+						});
+					break;
+				case "Empresa.MoneyManagerModel.UserAccountAssociationToolboxItem":
+					// Add UserAccountAssociation shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.UserAccountAssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						13, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("UserAccountAssociationToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("UserAccountAssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UserAccountAssociation", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("UserAccountAssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Empresa.MoneyManagerModel.UserAccountAssociation.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Empresa.MoneyManagerModel.AccountTransactionAssociationToolboxItem":
+					// Add AccountTransactionAssociation shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.AccountTransactionAssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						14, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("AccountTransactionAssociationToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AccountTransactionAssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"AccountTransactionAssociation", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AccountTransactionAssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Empresa.MoneyManagerModel.AccountTransactionAssociation.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Empresa.MoneyManagerModel.CategorySpecToolboxItem":
+					// Add CategorySpec shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.CategorySpecToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						15, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("CategorySpecToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("CategorySpecToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"CategorySpec", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("CategorySpecToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Empresa.MoneyManagerModel.CategorySpec.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeTypeToolboxItem":
+
+					// Add CategoryAttributeReferencesAttributeType connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeTypeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						16, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("CategoryAttributeReferencesAttributeTypeToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("CategoryAttributeReferencesAttributeTypeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"CategoryAttributeReferencesAttributeType", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("CategoryAttributeReferencesAttributeTypeToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(CategoryAttributeReferencesAttributeTypeFilterString)
+						});
+					break;
+				case "Empresa.MoneyManagerModel.CategoryAttributeToolboxItem":
+					// Add CategoryAttribute shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.CategoryAttributeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						17, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("CategoryAttributeToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("CategoryAttributeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"CategoryAttribute", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("CategoryAttributeToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Empresa.MoneyManagerModel.CategoryAttribute.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Empresa.MoneyManagerModel.UserSpecTemUserAttributeToolboxItem":
+
+					// Add UserSpecTemUserAttribute connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.UserSpecTemUserAttributeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						18, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("UserSpecTemUserAttributeToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("UserSpecTemUserAttributeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UserSpecTemUserAttribute", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("UserSpecTemUserAttributeToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(UserSpecTemUserAttributeFilterString)
+						});
+					break;
+				case "Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociationToolboxItem":
+
+					// Add AccountSpecReferencesUserAccountAssociation connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						19, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("AccountSpecReferencesUserAccountAssociationToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AccountSpecReferencesUserAccountAssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"AccountSpecReferencesUserAccountAssociation", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AccountSpecReferencesUserAccountAssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(AccountSpecReferencesUserAccountAssociationFilterString)
+						});
+					break;
+				case "Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociationToolboxItem":
+
+					// Add AccountSpecReferencesAccountTransactionAssociation connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						20, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("AccountSpecReferencesAccountTransactionAssociationToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AccountSpecReferencesAccountTransactionAssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"AccountSpecReferencesAccountTransactionAssociation", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AccountSpecReferencesAccountTransactionAssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(AccountSpecReferencesAccountTransactionAssociationFilterString)
+						});
+					break;
+				case "Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociationToolboxItem":
+
+					// Add TransactionSpecReferencesAccountTransactionAssociation connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						21, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("TransactionSpecReferencesAccountTransactionAssociationToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("TransactionSpecReferencesAccountTransactionAssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"TransactionSpecReferencesAccountTransactionAssociation", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("TransactionSpecReferencesAccountTransactionAssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(TransactionSpecReferencesAccountTransactionAssociationFilterString)
+						});
+					break;
+				case "Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociationToolboxItem":
+
+					// Add CategorySpecReferencesCategoryTransactionAssociation connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						22, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("CategorySpecReferencesCategoryTransactionAssociationToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("CategorySpecReferencesCategoryTransactionAssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"CategorySpecReferencesCategoryTransactionAssociation", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("CategorySpecReferencesCategoryTransactionAssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(CategorySpecReferencesCategoryTransactionAssociationFilterString)
+						});
+					break;
+				case "Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociationToolboxItem":
+
+					// Add TransactionSpecReferencesCategoryTransactionAssociation connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						23, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("TransactionSpecReferencesCategoryTransactionAssociationToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("TransactionSpecReferencesCategoryTransactionAssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"TransactionSpecReferencesCategoryTransactionAssociation", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("TransactionSpecReferencesCategoryTransactionAssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(TransactionSpecReferencesCategoryTransactionAssociationFilterString)
+						});
+					break;
+				case "Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociationToolboxItem":
+
+					// Add UserSpecReferencesUserAccountAssociation connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						24, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("UserSpecReferencesUserAccountAssociationToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("UserSpecReferencesUserAccountAssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UserSpecReferencesUserAccountAssociation", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("UserSpecReferencesUserAccountAssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(UserSpecReferencesUserAccountAssociationFilterString)
+						});
+					break;
+				case "Empresa.MoneyManagerModel.CategoryTransactionAssociationToolboxItem":
+					// Add CategoryTransactionAssociation shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Empresa.MoneyManagerModel.CategoryTransactionAssociationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						25, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("CategoryTransactionAssociationToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("CategoryTransactionAssociationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Empresa.MoneyManagerModel.MoneyManagerModelToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MoneyManagerModelToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"CategoryTransactionAssociation", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("CategoryTransactionAssociationToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Empresa.MoneyManagerModel.CategoryTransactionAssociation.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
 				default:

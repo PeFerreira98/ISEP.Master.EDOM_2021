@@ -1,93 +1,130 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="49b0e48b-e294-4879-8c9e-dcc0ac971ed2" name="Model" xmlns="http://schemas.microsoft.com/dsltools/MoneyManagerModel">
   <elements>
-    <userSpec Id="1685dfb8-2cc6-4f68-856e-12835a64f877" cardinality="0" name="UserSpec">
+    <userSpec Id="846a77d6-67bd-44d9-83d9-168c576fbe47" cardinalityMax="0" name="UserSpec" cardinalityMin="0">
       <userAttribute>
-        <userSpecTemUserAttribute Id="bd2320f6-9850-47c0-aff4-8d4423030ee2">
-          <userAttribute Id="cb1a4149-9be7-4a30-b957-17d9f610381d" name="UserAttribute" attributeType="AttributeType">
+        <userSpecTemUserAttribute Id="598d15fc-80c6-4bb1-b7f0-1967d7c52746">
+          <userAttribute Id="38e55fcc-ef12-4dc3-b769-80cd611d5b0e" name="UserAttribute">
             <attributeTypes>
-              <userAttributeReferênciasAttributeTypes Id="9e314323-a70f-42f9-8dcd-ca7a90df63a3">
-                <attributeTypeMoniker Id="66fda418-2d86-454f-995e-84a6210fafcc" />
+              <userAttributeReferênciasAttributeTypes Id="92e31791-3b8f-4458-bb51-3dc1f764ddba">
+                <attributeTypeMoniker Id="157995e1-0e53-4193-ad59-716e93738986" />
               </userAttributeReferênciasAttributeTypes>
             </attributeTypes>
           </userAttribute>
         </userSpecTemUserAttribute>
       </userAttribute>
-      <associations>
-        <userSpecReferênciasAssociations Id="5934bf20-02cc-49ed-aa9f-dfb2a273213b">
-          <associationMoniker Id="3ec3101b-6ed5-4682-af42-f90ffbb6ea17" />
-        </userSpecReferênciasAssociations>
-      </associations>
+      <userAccountAssociation>
+        <userSpecReferencesUserAccountAssociation Id="bfe09da9-f2fa-4008-a932-d63be895c319">
+          <userAccountAssociationMoniker Id="6ea8d791-7676-47e8-9b7d-4efde9e0e62a" />
+        </userSpecReferencesUserAccountAssociation>
+      </userAccountAssociation>
     </userSpec>
   </elements>
   <accountSpec>
-    <modelTemAccountSpec Id="d2a41f1b-fc45-458c-b175-774a6458e44e">
-      <accountSpec Id="109fa605-0f83-4c7a-9c52-3ca6f86db923" cardinality="0" name="AccountSpec">
+    <modelTemAccountSpec Id="fb0e241b-2be3-4fc8-a390-d2b000d4f2e6">
+      <accountSpec Id="c6de41d9-c6ab-46f5-a2fa-d3731f501611" cardinalityMax="0" name="AccountSpec" cardinalityMin="0" needBanckAccount="false">
         <accountAttribute>
-          <accountSpecTemAccountAttribute Id="437ef053-d940-4858-b65e-39fd8a7c6482">
-            <accountAttribute Id="db6b358c-33fd-4ca4-b951-5a4a9c468d83" name="AccountAttribute" attributeType="AttributeType">
+          <accountSpecTemAccountAttribute Id="19526e87-4b9a-41d0-af88-256728405a8e">
+            <accountAttribute Id="272b1ef1-74c4-4f1e-8ae5-9db48622aa7c" name="AccountAttribute">
               <attributeTypes>
-                <accountAttributeReferênciasAttributeTypes Id="95f3d1eb-f481-4803-ad18-ca759b59c15f">
-                  <attributeTypeMoniker Id="66fda418-2d86-454f-995e-84a6210fafcc" />
+                <accountAttributeReferênciasAttributeTypes Id="7a9d8510-4f1d-4f31-8b9e-6dc0a9470dce">
+                  <attributeTypeMoniker Id="157995e1-0e53-4193-ad59-716e93738986" />
                 </accountAttributeReferênciasAttributeTypes>
               </attributeTypes>
             </accountAttribute>
           </accountSpecTemAccountAttribute>
         </accountAttribute>
-        <associations>
-          <accountSpecReferênciasAssociations Id="87a190a3-556d-433e-be44-10691d0158f2">
-            <associationMoniker Id="3ec3101b-6ed5-4682-af42-f90ffbb6ea17" />
-          </accountSpecReferênciasAssociations>
-        </associations>
+        <userAccountAssociation>
+          <accountSpecReferencesUserAccountAssociation Id="d4f270fd-0448-4a54-8a19-ce9d21dd5fc9">
+            <userAccountAssociationMoniker Id="6ea8d791-7676-47e8-9b7d-4efde9e0e62a" />
+          </accountSpecReferencesUserAccountAssociation>
+        </userAccountAssociation>
+        <accountTransactionAssociation>
+          <accountSpecReferencesAccountTransactionAssociation Id="61e533d1-e77b-46b9-8111-bdbb41bcd951">
+            <accountTransactionAssociationMoniker Id="7a0a5335-c53d-46c1-b379-2ba5fe5eb36b" />
+          </accountSpecReferencesAccountTransactionAssociation>
+        </accountTransactionAssociation>
       </accountSpec>
     </modelTemAccountSpec>
   </accountSpec>
   <transactionSpec>
-    <modelHasTransactionSpec Id="8815093f-270c-422b-94e7-bc1d26f13054">
-      <transactionSpec Id="f9f5dc37-54b3-4dcd-b3b0-3fe6150ebc90" cardinality="0" name="TransactionSpec">
+    <modelHasTransactionSpec Id="684d53e2-0d46-4c5c-8621-3ca02af7267d">
+      <transactionSpec Id="1b44f831-9952-41a4-993a-2a7f40b2bdb1" cardinalityMax="0" name="TransactionSpec" cardinalityMin="0">
         <transactionAttribute>
-          <transactionSpecTemTransactionAttribute Id="cdf608e2-52d8-4396-99a7-6336b2273056">
-            <transactionAttribute Id="43e50f78-ea5c-45dd-b1f2-a71656bb34cd" name="TransactionAttribute" attributeType="AttributeType">
+          <transactionSpecTemTransactionAttribute Id="b341276e-ad2f-48ff-afdf-c3824c70a59d">
+            <transactionAttribute Id="b1962355-019d-4e7c-899d-c89adddb0689" name="TransactionAttribute">
               <attributeTypes>
-                <transactionAttributeReferênciasAttributeTypes Id="423231fb-51c3-44fb-adf2-39717683879a">
-                  <attributeTypeMoniker Id="66fda418-2d86-454f-995e-84a6210fafcc" />
+                <transactionAttributeReferênciasAttributeTypes Id="2e28afa3-1a7c-4642-bcd1-e16ad7a61003">
+                  <attributeTypeMoniker Id="157995e1-0e53-4193-ad59-716e93738986" />
                 </transactionAttributeReferênciasAttributeTypes>
               </attributeTypes>
             </transactionAttribute>
           </transactionSpecTemTransactionAttribute>
         </transactionAttribute>
-        <associations>
-          <transactionSpecReferênciasAssociations Id="cee9c49a-c290-4fe4-b27d-95239f22e892">
-            <associationMoniker Id="3ec3101b-6ed5-4682-af42-f90ffbb6ea17" />
-          </transactionSpecReferênciasAssociations>
-        </associations>
+        <accountTransactionAssociation>
+          <transactionSpecReferencesAccountTransactionAssociation Id="8eb21d5b-1fd8-41d1-8bc1-83bb31f29abf">
+            <accountTransactionAssociationMoniker Id="7a0a5335-c53d-46c1-b379-2ba5fe5eb36b" />
+          </transactionSpecReferencesAccountTransactionAssociation>
+        </accountTransactionAssociation>
+        <categoryTransactionAssociation>
+          <transactionSpecReferencesCategoryTransactionAssociation Id="c6c8eef6-3abb-40be-8c82-41d3fab65bee">
+            <categoryTransactionAssociationMoniker Id="2d6ed374-a3ae-4be8-b694-ac0dc3273589" />
+          </transactionSpecReferencesCategoryTransactionAssociation>
+        </categoryTransactionAssociation>
       </transactionSpec>
     </modelHasTransactionSpec>
   </transactionSpec>
   <attributeType>
-    <modelHasAttributeType Id="8d175803-f108-4a9a-b7bf-4220ff0990f6">
-      <attributeType Id="66fda418-2d86-454f-995e-84a6210fafcc" text="AttributeType" number="10" choice="true" date="" />
+    <modelHasAttributeType Id="28a0bb11-6712-44e2-b11c-d85e0c16c001">
+      <attributeType Id="157995e1-0e53-4193-ad59-716e93738986" text="AttributeType" number="1" choice="false" date="" />
     </modelHasAttributeType>
   </attributeType>
-  <association>
-    <modelTemAssociation Id="a70d7054-88e5-4bf9-a875-310068f1f010">
-      <association Id="3ec3101b-6ed5-4682-af42-f90ffbb6ea17" name="Association">
-        <transactionSpec>
-          <associationReferênciasTransactionSpec Id="6e9b83df-b32f-40b1-a829-d5adc8bb0b61">
-            <transactionSpecMoniker Id="f9f5dc37-54b3-4dcd-b3b0-3fe6150ebc90" />
-          </associationReferênciasTransactionSpec>
-        </transactionSpec>
+  <accountGroupSpec>
+    <modelHasAccountGroupSpec Id="ab228f63-cbd7-4434-9aab-4a0bc6246563">
+      <accountGroupSpec Id="8cdcc9ae-ae4c-4ca1-a2f1-f9483ed8ba58" name="AccountGroupSpec" cardinalityMin="0" cardinalityMax="0" needBankAccount="false">
         <accountSpec>
-          <associationReferênciasAccountSpec Id="4ed20425-afcc-4042-ab4f-8f930baf36c8">
-            <accountSpecMoniker Id="109fa605-0f83-4c7a-9c52-3ca6f86db923" />
-          </associationReferênciasAccountSpec>
+          <accountGroupSpecReferencesAccountSpec Id="ed71b307-6597-4f65-b3a8-6bc6b629935a">
+            <accountSpecMoniker Id="c6de41d9-c6ab-46f5-a2fa-d3731f501611" />
+          </accountGroupSpecReferencesAccountSpec>
         </accountSpec>
-        <userSpec>
-          <associationReferênciasUserSpec Id="ac7f2d96-4d26-49aa-8483-3a69ca856b0d">
-            <userSpecMoniker Id="1685dfb8-2cc6-4f68-856e-12835a64f877" />
-          </associationReferênciasUserSpec>
-        </userSpec>
-      </association>
-    </modelTemAssociation>
-  </association>
+      </accountGroupSpec>
+    </modelHasAccountGroupSpec>
+  </accountGroupSpec>
+  <userAccountAssociation>
+    <modelHasUserAccountAssociation Id="a614d9b7-daac-4581-8f76-8dc75133a6b1">
+      <userAccountAssociation Id="6ea8d791-7676-47e8-9b7d-4efde9e0e62a" name="UserAccountAssociation" />
+    </modelHasUserAccountAssociation>
+  </userAccountAssociation>
+  <accountTransactionAssociation>
+    <modelHasAccountTransactionAssociation Id="73889763-b201-4e65-b4d1-8d91c6f4dc85">
+      <accountTransactionAssociation Id="7a0a5335-c53d-46c1-b379-2ba5fe5eb36b" name="AccountTransactionAssociation" />
+    </modelHasAccountTransactionAssociation>
+  </accountTransactionAssociation>
+  <categorySpec>
+    <modelHasCategorySpec Id="8f8e9c3b-3c74-466f-9c19-933172ed6cfa">
+      <categorySpec Id="1badbaf9-5e58-4031-a1a9-55a1603425e7" name="CategorySpec" cardinalityMin="1" cardinalityMax="3">
+        <categoryAttribute>
+          <categorySpecHasCategoryAttribute Id="8ac9b963-f518-483b-86f2-25c44adc516b">
+            <categoryAttribute Id="b528465e-628a-4ee3-a969-948b089b4c8e" name="CategoryAttribute">
+              <attributeType1>
+                <categoryAttributeReferencesAttributeType1 Id="bfb28351-c0b6-497f-a489-a3c079c4b9b4">
+                  <attributeTypeMoniker Id="157995e1-0e53-4193-ad59-716e93738986" />
+                </categoryAttributeReferencesAttributeType1>
+              </attributeType1>
+            </categoryAttribute>
+          </categorySpecHasCategoryAttribute>
+        </categoryAttribute>
+        <categoryTransactionAssociation>
+          <categorySpecReferencesCategoryTransactionAssociation Id="604304a4-6c70-4615-a6e6-2a0e70c2f0ab">
+            <categoryTransactionAssociationMoniker Id="2d6ed374-a3ae-4be8-b694-ac0dc3273589" />
+          </categorySpecReferencesCategoryTransactionAssociation>
+        </categoryTransactionAssociation>
+      </categorySpec>
+    </modelHasCategorySpec>
+  </categorySpec>
+  <categoryTransactionAssociation>
+    <modelHasCategoryTransactionAssociation Id="13cae630-1005-4265-b463-8c89f0fca7a2">
+      <categoryTransactionAssociation Id="2d6ed374-a3ae-4be8-b694-ac0dc3273589" name="CategoryTransactionAssociation" />
+    </modelHasCategoryTransactionAssociation>
+  </categoryTransactionAssociation>
 </model>

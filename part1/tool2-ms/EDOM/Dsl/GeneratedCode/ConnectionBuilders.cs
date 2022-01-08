@@ -15,792 +15,6 @@ namespace Empresa.MoneyManagerModel
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class AssociationReferênciasTransactionSpecConstrutor
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.Association)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.TransactionSpec)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::Empresa.MoneyManagerModel.Association)
-				{
-					if (candidateTarget is global::Empresa.MoneyManagerModel.TransactionSpec)
-					{
-						global::Empresa.MoneyManagerModel.Association sourceAssociation = (global::Empresa.MoneyManagerModel.Association)candidateSource;
-						global::Empresa.MoneyManagerModel.TransactionSpec targetTransactionSpec = (global::Empresa.MoneyManagerModel.TransactionSpec)candidateTarget;
-						if(sourceAssociation == null || global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.GetLinkToTransactionSpec(sourceAssociation) != null) return false;
-						if(targetTransactionSpec == null || sourceAssociation == null || global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.GetLinks(sourceAssociation, targetTransactionSpec).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::Empresa.MoneyManagerModel.Association)
-				{
-					if (target is global::Empresa.MoneyManagerModel.TransactionSpec)
-					{
-						global::Empresa.MoneyManagerModel.Association sourceAccepted = (global::Empresa.MoneyManagerModel.Association)source;
-						global::Empresa.MoneyManagerModel.TransactionSpec targetAccepted = (global::Empresa.MoneyManagerModel.TransactionSpec)target;
-						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class TransactionSpecReferênciasAssociationsConstrutor
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.TransactionSpec)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.Association)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::Empresa.MoneyManagerModel.TransactionSpec)
-				{
-					if (candidateTarget is global::Empresa.MoneyManagerModel.Association)
-					{
-						global::Empresa.MoneyManagerModel.TransactionSpec sourceTransactionSpec = (global::Empresa.MoneyManagerModel.TransactionSpec)candidateSource;
-						global::Empresa.MoneyManagerModel.Association targetAssociation = (global::Empresa.MoneyManagerModel.Association)candidateTarget;
-						if(targetAssociation == null || global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.GetLinkToTransactionSpecs(targetAssociation) != null) return false;
-						if(targetAssociation == null || sourceTransactionSpec == null || global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.GetLinks(sourceTransactionSpec, targetAssociation).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::Empresa.MoneyManagerModel.TransactionSpec)
-				{
-					if (target is global::Empresa.MoneyManagerModel.Association)
-					{
-						global::Empresa.MoneyManagerModel.TransactionSpec sourceAccepted = (global::Empresa.MoneyManagerModel.TransactionSpec)source;
-						global::Empresa.MoneyManagerModel.Association targetAccepted = (global::Empresa.MoneyManagerModel.Association)target;
-						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class AssociationReferênciasAccountSpecConstrutor
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.Association)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.AccountSpec)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::Empresa.MoneyManagerModel.Association)
-				{
-					if (candidateTarget is global::Empresa.MoneyManagerModel.AccountSpec)
-					{
-						global::Empresa.MoneyManagerModel.Association sourceAssociation = (global::Empresa.MoneyManagerModel.Association)candidateSource;
-						global::Empresa.MoneyManagerModel.AccountSpec targetAccountSpec = (global::Empresa.MoneyManagerModel.AccountSpec)candidateTarget;
-						if(sourceAssociation == null || global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.GetLinkToAccountSpec(sourceAssociation) != null) return false;
-						if(targetAccountSpec == null || sourceAssociation == null || global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.GetLinks(sourceAssociation, targetAccountSpec).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::Empresa.MoneyManagerModel.Association)
-				{
-					if (target is global::Empresa.MoneyManagerModel.AccountSpec)
-					{
-						global::Empresa.MoneyManagerModel.Association sourceAccepted = (global::Empresa.MoneyManagerModel.Association)source;
-						global::Empresa.MoneyManagerModel.AccountSpec targetAccepted = (global::Empresa.MoneyManagerModel.AccountSpec)target;
-						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class AccountSpecReferênciasAssociationsConstrutor
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.AccountSpec)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.Association)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::Empresa.MoneyManagerModel.AccountSpec)
-				{
-					if (candidateTarget is global::Empresa.MoneyManagerModel.Association)
-					{
-						global::Empresa.MoneyManagerModel.AccountSpec sourceAccountSpec = (global::Empresa.MoneyManagerModel.AccountSpec)candidateSource;
-						global::Empresa.MoneyManagerModel.Association targetAssociation = (global::Empresa.MoneyManagerModel.Association)candidateTarget;
-						if(targetAssociation == null || global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.GetLinkToAccountSpecs(targetAssociation) != null) return false;
-						if(targetAssociation == null || sourceAccountSpec == null || global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.GetLinks(sourceAccountSpec, targetAssociation).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::Empresa.MoneyManagerModel.AccountSpec)
-				{
-					if (target is global::Empresa.MoneyManagerModel.Association)
-					{
-						global::Empresa.MoneyManagerModel.AccountSpec sourceAccepted = (global::Empresa.MoneyManagerModel.AccountSpec)source;
-						global::Empresa.MoneyManagerModel.Association targetAccepted = (global::Empresa.MoneyManagerModel.Association)target;
-						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class AssociationReferênciasUserSpecConstrutor
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.Association)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.UserSpec)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::Empresa.MoneyManagerModel.Association)
-				{
-					if (candidateTarget is global::Empresa.MoneyManagerModel.UserSpec)
-					{
-						global::Empresa.MoneyManagerModel.Association sourceAssociation = (global::Empresa.MoneyManagerModel.Association)candidateSource;
-						global::Empresa.MoneyManagerModel.UserSpec targetUserSpec = (global::Empresa.MoneyManagerModel.UserSpec)candidateTarget;
-						if(sourceAssociation == null || global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.GetLinkToUserSpec(sourceAssociation) != null) return false;
-						if(targetUserSpec == null || sourceAssociation == null || global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.GetLinks(sourceAssociation, targetUserSpec).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::Empresa.MoneyManagerModel.Association)
-				{
-					if (target is global::Empresa.MoneyManagerModel.UserSpec)
-					{
-						global::Empresa.MoneyManagerModel.Association sourceAccepted = (global::Empresa.MoneyManagerModel.Association)source;
-						global::Empresa.MoneyManagerModel.UserSpec targetAccepted = (global::Empresa.MoneyManagerModel.UserSpec)target;
-						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class UserSpecReferênciasAssociationsConstrutor
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.UserSpec)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::Empresa.MoneyManagerModel.Association)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::Empresa.MoneyManagerModel.UserSpec)
-				{
-					if (candidateTarget is global::Empresa.MoneyManagerModel.Association)
-					{
-						global::Empresa.MoneyManagerModel.UserSpec sourceUserSpec = (global::Empresa.MoneyManagerModel.UserSpec)candidateSource;
-						global::Empresa.MoneyManagerModel.Association targetAssociation = (global::Empresa.MoneyManagerModel.Association)candidateTarget;
-						if(targetAssociation == null || global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.GetLinkToUserSpecs(targetAssociation) != null) return false;
-						if(targetAssociation == null || sourceUserSpec == null || global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.GetLinks(sourceUserSpec, targetAssociation).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::Empresa.MoneyManagerModel.UserSpec)
-				{
-					if (target is global::Empresa.MoneyManagerModel.Association)
-					{
-						global::Empresa.MoneyManagerModel.UserSpec sourceAccepted = (global::Empresa.MoneyManagerModel.UserSpec)source;
-						global::Empresa.MoneyManagerModel.Association targetAccepted = (global::Empresa.MoneyManagerModel.Association)target;
-						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
 	public static partial class UserAttributeReferênciasAttributeTypesConstrutor
 	{
 		#region Accept Connection Methods
@@ -1194,6 +408,1055 @@ namespace Empresa.MoneyManagerModel
 		}
 		#endregion
  	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class AccountGroupSpecReferencesAccountSpecBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.AccountGroupSpec)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.AccountSpec)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Empresa.MoneyManagerModel.AccountGroupSpec)
+				{
+					if (candidateTarget is global::Empresa.MoneyManagerModel.AccountSpec)
+					{
+						global::Empresa.MoneyManagerModel.AccountGroupSpec sourceAccountGroupSpec = (global::Empresa.MoneyManagerModel.AccountGroupSpec)candidateSource;
+						global::Empresa.MoneyManagerModel.AccountSpec targetAccountSpec = (global::Empresa.MoneyManagerModel.AccountSpec)candidateTarget;
+						if(targetAccountSpec == null || global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.GetLinkToAccountGroupSpec(targetAccountSpec) != null) return false;
+						if(targetAccountSpec == null || sourceAccountGroupSpec == null || global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.GetLinks(sourceAccountGroupSpec, targetAccountSpec).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Empresa.MoneyManagerModel.AccountGroupSpec)
+				{
+					if (target is global::Empresa.MoneyManagerModel.AccountSpec)
+					{
+						global::Empresa.MoneyManagerModel.AccountGroupSpec sourceAccepted = (global::Empresa.MoneyManagerModel.AccountGroupSpec)source;
+						global::Empresa.MoneyManagerModel.AccountSpec targetAccepted = (global::Empresa.MoneyManagerModel.AccountSpec)target;
+						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class CategoryAttributeReferencesAttributeType1Builder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.CategoryAttribute)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.AttributeType)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Empresa.MoneyManagerModel.CategoryAttribute)
+				{
+					if (candidateTarget is global::Empresa.MoneyManagerModel.AttributeType)
+					{
+						global::Empresa.MoneyManagerModel.CategoryAttribute sourceCategoryAttribute = (global::Empresa.MoneyManagerModel.CategoryAttribute)candidateSource;
+						global::Empresa.MoneyManagerModel.AttributeType targetAttributeType = (global::Empresa.MoneyManagerModel.AttributeType)candidateTarget;
+						if(targetAttributeType == null || global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.GetLinkToCategoryAttribute1(targetAttributeType) != null) return false;
+						if(sourceCategoryAttribute == null || global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.GetLinkToAttributeType1(sourceCategoryAttribute) != null) return false;
+						if(targetAttributeType == null || sourceCategoryAttribute == null || global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.GetLinks(sourceCategoryAttribute, targetAttributeType).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Empresa.MoneyManagerModel.CategoryAttribute)
+				{
+					if (target is global::Empresa.MoneyManagerModel.AttributeType)
+					{
+						global::Empresa.MoneyManagerModel.CategoryAttribute sourceAccepted = (global::Empresa.MoneyManagerModel.CategoryAttribute)source;
+						global::Empresa.MoneyManagerModel.AttributeType targetAccepted = (global::Empresa.MoneyManagerModel.AttributeType)target;
+						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class UserSpecReferencesUserAccountAssociationBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.UserSpec)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.UserAccountAssociation)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Empresa.MoneyManagerModel.UserSpec)
+				{
+					if (candidateTarget is global::Empresa.MoneyManagerModel.UserAccountAssociation)
+					{
+						global::Empresa.MoneyManagerModel.UserSpec sourceUserSpec = (global::Empresa.MoneyManagerModel.UserSpec)candidateSource;
+						global::Empresa.MoneyManagerModel.UserAccountAssociation targetUserAccountAssociation = (global::Empresa.MoneyManagerModel.UserAccountAssociation)candidateTarget;
+						if(targetUserAccountAssociation == null || global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.GetLinkToUserSpec(targetUserAccountAssociation) != null) return false;
+						if(targetUserAccountAssociation == null || sourceUserSpec == null || global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.GetLinks(sourceUserSpec, targetUserAccountAssociation).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Empresa.MoneyManagerModel.UserSpec)
+				{
+					if (target is global::Empresa.MoneyManagerModel.UserAccountAssociation)
+					{
+						global::Empresa.MoneyManagerModel.UserSpec sourceAccepted = (global::Empresa.MoneyManagerModel.UserSpec)source;
+						global::Empresa.MoneyManagerModel.UserAccountAssociation targetAccepted = (global::Empresa.MoneyManagerModel.UserAccountAssociation)target;
+						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class AccountSpecReferencesUserAccountAssociationBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.AccountSpec)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.UserAccountAssociation)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Empresa.MoneyManagerModel.AccountSpec)
+				{
+					if (candidateTarget is global::Empresa.MoneyManagerModel.UserAccountAssociation)
+					{
+						global::Empresa.MoneyManagerModel.AccountSpec sourceAccountSpec = (global::Empresa.MoneyManagerModel.AccountSpec)candidateSource;
+						global::Empresa.MoneyManagerModel.UserAccountAssociation targetUserAccountAssociation = (global::Empresa.MoneyManagerModel.UserAccountAssociation)candidateTarget;
+						if(targetUserAccountAssociation == null || global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.GetLinkToAccountSpec(targetUserAccountAssociation) != null) return false;
+						if(targetUserAccountAssociation == null || sourceAccountSpec == null || global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.GetLinks(sourceAccountSpec, targetUserAccountAssociation).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Empresa.MoneyManagerModel.AccountSpec)
+				{
+					if (target is global::Empresa.MoneyManagerModel.UserAccountAssociation)
+					{
+						global::Empresa.MoneyManagerModel.AccountSpec sourceAccepted = (global::Empresa.MoneyManagerModel.AccountSpec)source;
+						global::Empresa.MoneyManagerModel.UserAccountAssociation targetAccepted = (global::Empresa.MoneyManagerModel.UserAccountAssociation)target;
+						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class AccountSpecReferencesAccountTransactionAssociationBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.AccountSpec)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.AccountTransactionAssociation)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Empresa.MoneyManagerModel.AccountSpec)
+				{
+					if (candidateTarget is global::Empresa.MoneyManagerModel.AccountTransactionAssociation)
+					{
+						global::Empresa.MoneyManagerModel.AccountSpec sourceAccountSpec = (global::Empresa.MoneyManagerModel.AccountSpec)candidateSource;
+						global::Empresa.MoneyManagerModel.AccountTransactionAssociation targetAccountTransactionAssociation = (global::Empresa.MoneyManagerModel.AccountTransactionAssociation)candidateTarget;
+						if(targetAccountTransactionAssociation == null || global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.GetLinkToAccountSpec(targetAccountTransactionAssociation) != null) return false;
+						if(targetAccountTransactionAssociation == null || sourceAccountSpec == null || global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.GetLinks(sourceAccountSpec, targetAccountTransactionAssociation).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Empresa.MoneyManagerModel.AccountSpec)
+				{
+					if (target is global::Empresa.MoneyManagerModel.AccountTransactionAssociation)
+					{
+						global::Empresa.MoneyManagerModel.AccountSpec sourceAccepted = (global::Empresa.MoneyManagerModel.AccountSpec)source;
+						global::Empresa.MoneyManagerModel.AccountTransactionAssociation targetAccepted = (global::Empresa.MoneyManagerModel.AccountTransactionAssociation)target;
+						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class TransactionSpecReferencesAccountTransactionAssociationBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.TransactionSpec)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.AccountTransactionAssociation)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Empresa.MoneyManagerModel.TransactionSpec)
+				{
+					if (candidateTarget is global::Empresa.MoneyManagerModel.AccountTransactionAssociation)
+					{
+						global::Empresa.MoneyManagerModel.TransactionSpec sourceTransactionSpec = (global::Empresa.MoneyManagerModel.TransactionSpec)candidateSource;
+						global::Empresa.MoneyManagerModel.AccountTransactionAssociation targetAccountTransactionAssociation = (global::Empresa.MoneyManagerModel.AccountTransactionAssociation)candidateTarget;
+						if(targetAccountTransactionAssociation == null || global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.GetLinkToTransactionSpec(targetAccountTransactionAssociation) != null) return false;
+						if(targetAccountTransactionAssociation == null || sourceTransactionSpec == null || global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.GetLinks(sourceTransactionSpec, targetAccountTransactionAssociation).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Empresa.MoneyManagerModel.TransactionSpec)
+				{
+					if (target is global::Empresa.MoneyManagerModel.AccountTransactionAssociation)
+					{
+						global::Empresa.MoneyManagerModel.TransactionSpec sourceAccepted = (global::Empresa.MoneyManagerModel.TransactionSpec)source;
+						global::Empresa.MoneyManagerModel.AccountTransactionAssociation targetAccepted = (global::Empresa.MoneyManagerModel.AccountTransactionAssociation)target;
+						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class CategorySpecReferencesCategoryTransactionAssociationBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.CategorySpec)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Empresa.MoneyManagerModel.CategorySpec)
+				{
+					if (candidateTarget is global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)
+					{
+						global::Empresa.MoneyManagerModel.CategorySpec sourceCategorySpec = (global::Empresa.MoneyManagerModel.CategorySpec)candidateSource;
+						global::Empresa.MoneyManagerModel.CategoryTransactionAssociation targetCategoryTransactionAssociation = (global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)candidateTarget;
+						if(targetCategoryTransactionAssociation == null || global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.GetLinkToCategorySpec(targetCategoryTransactionAssociation) != null) return false;
+						if(targetCategoryTransactionAssociation == null || sourceCategorySpec == null || global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.GetLinks(sourceCategorySpec, targetCategoryTransactionAssociation).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Empresa.MoneyManagerModel.CategorySpec)
+				{
+					if (target is global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)
+					{
+						global::Empresa.MoneyManagerModel.CategorySpec sourceAccepted = (global::Empresa.MoneyManagerModel.CategorySpec)source;
+						global::Empresa.MoneyManagerModel.CategoryTransactionAssociation targetAccepted = (global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)target;
+						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class TransactionSpecReferencesCategoryTransactionAssociationBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.TransactionSpec)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::Empresa.MoneyManagerModel.TransactionSpec)
+				{
+					if (candidateTarget is global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)
+					{
+						global::Empresa.MoneyManagerModel.TransactionSpec sourceTransactionSpec = (global::Empresa.MoneyManagerModel.TransactionSpec)candidateSource;
+						global::Empresa.MoneyManagerModel.CategoryTransactionAssociation targetCategoryTransactionAssociation = (global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)candidateTarget;
+						if(targetCategoryTransactionAssociation == null || global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.GetLinkToTransactionSpec(targetCategoryTransactionAssociation) != null) return false;
+						if(targetCategoryTransactionAssociation == null || sourceTransactionSpec == null || global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.GetLinks(sourceTransactionSpec, targetCategoryTransactionAssociation).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::Empresa.MoneyManagerModel.TransactionSpec)
+				{
+					if (target is global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)
+					{
+						global::Empresa.MoneyManagerModel.TransactionSpec sourceAccepted = (global::Empresa.MoneyManagerModel.TransactionSpec)source;
+						global::Empresa.MoneyManagerModel.CategoryTransactionAssociation targetAccepted = (global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)target;
+						DslModeling::ElementLink result = new global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
  	
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
@@ -1408,870 +1671,6 @@ namespace Empresa.MoneyManagerModel
 			/// Constructs a new the AccAttAttTypeConnectionType with the given ConnectionBuilder.
 			/// </summary>
 			public AccAttAttTypeConnectionType() : base() {}
-		}
-	}
- 	
- 	/// <summary>
-	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
-	/// </summary>
-	internal partial class AccSpAssConnectAction : DslDiagrams::ConnectAction
-	{
-		private DslDiagrams::ConnectionType[] connectionTypes;
-		private global::System.Windows.Forms.Cursor sourceCursor;
-		private global::System.Windows.Forms.Cursor targetCursor;
-		
-		/// <summary>
-		/// Constructs a new AccSpAssConnectAction for the given Diagram.
-		/// </summary>
-		public AccSpAssConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
-		{
-			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
-			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
-
-			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("AccSpAssSourceCursor", resourceCulture);
-			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
-			{ 
-				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
-			}
-			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("AccSpAssTargetCursor", resourceCulture);
-			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
-			{ 
-				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
-			}
-		}
-		
-		/// <summary>
-		/// Gets the cursor corresponding to the given mouse position.
-		/// </summary>
-		/// <remarks>
-		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
-		/// </remarks>
-		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
-		{
-			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
-			{
-				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
-				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
-				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
-
-				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
-				string warningString = string.Empty;
-				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
-				{
-					return global::System.Windows.Forms.Cursors.No;
-				}
-			}
-			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
-		}
-		
-		/// <summary>
-		/// Associates custom source and target cursors with the connect action.
-		/// </summary>
-		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
-		{
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
-			{
-				return this.sourceCursor;
-			}
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
-			{
-				return this.targetCursor;
-			}
-			return base.GetCursorFromCursorType(connectActionCursor);
-		}
-		
-		/// <summary>
-		/// Disposes custom cursor resources.
-		/// </summary>
-		protected override void Dispose(bool disposing)
-		{
-			try
-			{
-				if(disposing)
-				{
-					if(this.sourceCursor != null)
-					{
-						this.sourceCursor.Dispose();
-						this.sourceCursor = null;
-					}
-					if(this.targetCursor != null)
-					{
-						this.targetCursor.Dispose();
-						this.targetCursor = null;
-					}
-				}
-			}
-			finally
-			{
-				base.Dispose(disposing);
-			}
-		}
-		
-		/// <summary>
-		/// Returns the AccSpAssConnectionType associated with this action.
-		/// </summary>
-		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-		{
-			if(this.connectionTypes == null)
-			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AccSpAssConnectionType() };
-			}
-			
-			return this.connectionTypes;
-		}
-		
-		private partial class AccSpAssConnectionTypeBase : DslDiagrams::ConnectionType
-		{
-			/// <summary>
-			/// Constructs a new the AccSpAssConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			protected AccSpAssConnectionTypeBase() : base() {}
-			
-			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
-			{
-				if (shape is DslDiagrams::Compartment)
-				{
-					return shape.ParentShape;
-				}
-				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
-				if (swimlane != null && swimlane.ForwardDragDropToParent)
-				{
-					return shape.ParentShape;
-				}
-				return shape;
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder AccountSpecReferênciasAssociationsConstrutor.
-			/// </remarks>
-			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
-			{
-				bool canConnect = true;
-				
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				
-				DslModeling::ModelElement targetElement = null;
-				if (targetShapeElement != null)
-				{
-					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-					targetElement = targetShapeElement.ModelElement;
-					if(targetElement == null) targetElement = targetShapeElement;
-			
-				}
-
-				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
-				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
-				if (canConnect)
-				{				
-					if(targetShapeElement == null)
-					{
-						return AccountSpecReferênciasAssociationsConstrutor.CanAcceptSource(sourceElement);
-					}
-					else
-					{				
-						return AccountSpecReferênciasAssociationsConstrutor.CanAcceptSourceAndTarget(sourceElement, targetElement);
-					}
-				}
-				else
-				{
-					//return false
-					return canConnect;
-				}
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
-			/// </summary>
-			/// <remarks>
-			/// Always return true here, to give CanCreateConnection a chance to decide.
-			/// </remarks>
-			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-			{
-				return true;
-			}
-			
-			/// <summary>
-			/// Called by the base ConnectAction class to create the underlying relationship.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder AccountSpecReferênciasAssociationsConstrutor.
-			/// </remarks>
-			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
-			{
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
-				
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-				
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
-				if(targetElement == null) targetElement = targetShapeElement;
-				AccountSpecReferênciasAssociationsConstrutor.Connect(sourceElement, targetElement);
-			}
-		}
-		
-		private partial class AccSpAssConnectionType : AccSpAssConnectionTypeBase
-		{
-			/// <summary>
-			/// Constructs a new the AccSpAssConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			public AccSpAssConnectionType() : base() {}
-		}
-	}
- 	
- 	/// <summary>
-	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
-	/// </summary>
-	internal partial class AssAccSpConnectAction : DslDiagrams::ConnectAction
-	{
-		private DslDiagrams::ConnectionType[] connectionTypes;
-		private global::System.Windows.Forms.Cursor sourceCursor;
-		private global::System.Windows.Forms.Cursor targetCursor;
-		
-		/// <summary>
-		/// Constructs a new AssAccSpConnectAction for the given Diagram.
-		/// </summary>
-		public AssAccSpConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
-		{
-			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
-			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
-
-			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("AssAccSpSourceCursor", resourceCulture);
-			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
-			{ 
-				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
-			}
-			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("AssAccSpTargetCursor", resourceCulture);
-			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
-			{ 
-				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
-			}
-		}
-		
-		/// <summary>
-		/// Gets the cursor corresponding to the given mouse position.
-		/// </summary>
-		/// <remarks>
-		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
-		/// </remarks>
-		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
-		{
-			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
-			{
-				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
-				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
-				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
-
-				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
-				string warningString = string.Empty;
-				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
-				{
-					return global::System.Windows.Forms.Cursors.No;
-				}
-			}
-			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
-		}
-		
-		/// <summary>
-		/// Associates custom source and target cursors with the connect action.
-		/// </summary>
-		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
-		{
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
-			{
-				return this.sourceCursor;
-			}
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
-			{
-				return this.targetCursor;
-			}
-			return base.GetCursorFromCursorType(connectActionCursor);
-		}
-		
-		/// <summary>
-		/// Disposes custom cursor resources.
-		/// </summary>
-		protected override void Dispose(bool disposing)
-		{
-			try
-			{
-				if(disposing)
-				{
-					if(this.sourceCursor != null)
-					{
-						this.sourceCursor.Dispose();
-						this.sourceCursor = null;
-					}
-					if(this.targetCursor != null)
-					{
-						this.targetCursor.Dispose();
-						this.targetCursor = null;
-					}
-				}
-			}
-			finally
-			{
-				base.Dispose(disposing);
-			}
-		}
-		
-		/// <summary>
-		/// Returns the AssAccSpConnectionType associated with this action.
-		/// </summary>
-		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-		{
-			if(this.connectionTypes == null)
-			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AssAccSpConnectionType() };
-			}
-			
-			return this.connectionTypes;
-		}
-		
-		private partial class AssAccSpConnectionTypeBase : DslDiagrams::ConnectionType
-		{
-			/// <summary>
-			/// Constructs a new the AssAccSpConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			protected AssAccSpConnectionTypeBase() : base() {}
-			
-			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
-			{
-				if (shape is DslDiagrams::Compartment)
-				{
-					return shape.ParentShape;
-				}
-				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
-				if (swimlane != null && swimlane.ForwardDragDropToParent)
-				{
-					return shape.ParentShape;
-				}
-				return shape;
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder AssociationReferênciasAccountSpecConstrutor.
-			/// </remarks>
-			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
-			{
-				bool canConnect = true;
-				
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				
-				DslModeling::ModelElement targetElement = null;
-				if (targetShapeElement != null)
-				{
-					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-					targetElement = targetShapeElement.ModelElement;
-					if(targetElement == null) targetElement = targetShapeElement;
-			
-				}
-
-				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
-				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
-				if (canConnect)
-				{				
-					if(targetShapeElement == null)
-					{
-						return AssociationReferênciasAccountSpecConstrutor.CanAcceptSource(sourceElement);
-					}
-					else
-					{				
-						return AssociationReferênciasAccountSpecConstrutor.CanAcceptSourceAndTarget(sourceElement, targetElement);
-					}
-				}
-				else
-				{
-					//return false
-					return canConnect;
-				}
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
-			/// </summary>
-			/// <remarks>
-			/// Always return true here, to give CanCreateConnection a chance to decide.
-			/// </remarks>
-			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-			{
-				return true;
-			}
-			
-			/// <summary>
-			/// Called by the base ConnectAction class to create the underlying relationship.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder AssociationReferênciasAccountSpecConstrutor.
-			/// </remarks>
-			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
-			{
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
-				
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-				
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
-				if(targetElement == null) targetElement = targetShapeElement;
-				AssociationReferênciasAccountSpecConstrutor.Connect(sourceElement, targetElement);
-			}
-		}
-		
-		private partial class AssAccSpConnectionType : AssAccSpConnectionTypeBase
-		{
-			/// <summary>
-			/// Constructs a new the AssAccSpConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			public AssAccSpConnectionType() : base() {}
-		}
-	}
- 	
- 	/// <summary>
-	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
-	/// </summary>
-	internal partial class AssTranSpConnectAction : DslDiagrams::ConnectAction
-	{
-		private DslDiagrams::ConnectionType[] connectionTypes;
-		private global::System.Windows.Forms.Cursor sourceCursor;
-		private global::System.Windows.Forms.Cursor targetCursor;
-		
-		/// <summary>
-		/// Constructs a new AssTranSpConnectAction for the given Diagram.
-		/// </summary>
-		public AssTranSpConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
-		{
-			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
-			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
-
-			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("AssTranSpSourceCursor", resourceCulture);
-			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
-			{ 
-				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
-			}
-			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("AssTranSpTargetCursor", resourceCulture);
-			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
-			{ 
-				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
-			}
-		}
-		
-		/// <summary>
-		/// Gets the cursor corresponding to the given mouse position.
-		/// </summary>
-		/// <remarks>
-		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
-		/// </remarks>
-		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
-		{
-			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
-			{
-				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
-				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
-				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
-
-				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
-				string warningString = string.Empty;
-				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
-				{
-					return global::System.Windows.Forms.Cursors.No;
-				}
-			}
-			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
-		}
-		
-		/// <summary>
-		/// Associates custom source and target cursors with the connect action.
-		/// </summary>
-		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
-		{
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
-			{
-				return this.sourceCursor;
-			}
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
-			{
-				return this.targetCursor;
-			}
-			return base.GetCursorFromCursorType(connectActionCursor);
-		}
-		
-		/// <summary>
-		/// Disposes custom cursor resources.
-		/// </summary>
-		protected override void Dispose(bool disposing)
-		{
-			try
-			{
-				if(disposing)
-				{
-					if(this.sourceCursor != null)
-					{
-						this.sourceCursor.Dispose();
-						this.sourceCursor = null;
-					}
-					if(this.targetCursor != null)
-					{
-						this.targetCursor.Dispose();
-						this.targetCursor = null;
-					}
-				}
-			}
-			finally
-			{
-				base.Dispose(disposing);
-			}
-		}
-		
-		/// <summary>
-		/// Returns the AssTranSpConnectionType associated with this action.
-		/// </summary>
-		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-		{
-			if(this.connectionTypes == null)
-			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AssTranSpConnectionType() };
-			}
-			
-			return this.connectionTypes;
-		}
-		
-		private partial class AssTranSpConnectionTypeBase : DslDiagrams::ConnectionType
-		{
-			/// <summary>
-			/// Constructs a new the AssTranSpConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			protected AssTranSpConnectionTypeBase() : base() {}
-			
-			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
-			{
-				if (shape is DslDiagrams::Compartment)
-				{
-					return shape.ParentShape;
-				}
-				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
-				if (swimlane != null && swimlane.ForwardDragDropToParent)
-				{
-					return shape.ParentShape;
-				}
-				return shape;
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder AssociationReferênciasTransactionSpecConstrutor.
-			/// </remarks>
-			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
-			{
-				bool canConnect = true;
-				
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				
-				DslModeling::ModelElement targetElement = null;
-				if (targetShapeElement != null)
-				{
-					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-					targetElement = targetShapeElement.ModelElement;
-					if(targetElement == null) targetElement = targetShapeElement;
-			
-				}
-
-				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
-				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
-				if (canConnect)
-				{				
-					if(targetShapeElement == null)
-					{
-						return AssociationReferênciasTransactionSpecConstrutor.CanAcceptSource(sourceElement);
-					}
-					else
-					{				
-						return AssociationReferênciasTransactionSpecConstrutor.CanAcceptSourceAndTarget(sourceElement, targetElement);
-					}
-				}
-				else
-				{
-					//return false
-					return canConnect;
-				}
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
-			/// </summary>
-			/// <remarks>
-			/// Always return true here, to give CanCreateConnection a chance to decide.
-			/// </remarks>
-			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-			{
-				return true;
-			}
-			
-			/// <summary>
-			/// Called by the base ConnectAction class to create the underlying relationship.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder AssociationReferênciasTransactionSpecConstrutor.
-			/// </remarks>
-			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
-			{
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
-				
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-				
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
-				if(targetElement == null) targetElement = targetShapeElement;
-				AssociationReferênciasTransactionSpecConstrutor.Connect(sourceElement, targetElement);
-			}
-		}
-		
-		private partial class AssTranSpConnectionType : AssTranSpConnectionTypeBase
-		{
-			/// <summary>
-			/// Constructs a new the AssTranSpConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			public AssTranSpConnectionType() : base() {}
-		}
-	}
- 	
- 	/// <summary>
-	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
-	/// </summary>
-	internal partial class AssUserSpConnectAction : DslDiagrams::ConnectAction
-	{
-		private DslDiagrams::ConnectionType[] connectionTypes;
-		private global::System.Windows.Forms.Cursor sourceCursor;
-		private global::System.Windows.Forms.Cursor targetCursor;
-		
-		/// <summary>
-		/// Constructs a new AssUserSpConnectAction for the given Diagram.
-		/// </summary>
-		public AssUserSpConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
-		{
-			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
-			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
-
-			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("AssUserSpSourceCursor", resourceCulture);
-			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
-			{ 
-				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
-			}
-			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("AssUserSpTargetCursor", resourceCulture);
-			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
-			{ 
-				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
-			}
-		}
-		
-		/// <summary>
-		/// Gets the cursor corresponding to the given mouse position.
-		/// </summary>
-		/// <remarks>
-		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
-		/// </remarks>
-		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
-		{
-			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
-			{
-				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
-				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
-				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
-
-				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
-				string warningString = string.Empty;
-				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
-				{
-					return global::System.Windows.Forms.Cursors.No;
-				}
-			}
-			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
-		}
-		
-		/// <summary>
-		/// Associates custom source and target cursors with the connect action.
-		/// </summary>
-		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
-		{
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
-			{
-				return this.sourceCursor;
-			}
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
-			{
-				return this.targetCursor;
-			}
-			return base.GetCursorFromCursorType(connectActionCursor);
-		}
-		
-		/// <summary>
-		/// Disposes custom cursor resources.
-		/// </summary>
-		protected override void Dispose(bool disposing)
-		{
-			try
-			{
-				if(disposing)
-				{
-					if(this.sourceCursor != null)
-					{
-						this.sourceCursor.Dispose();
-						this.sourceCursor = null;
-					}
-					if(this.targetCursor != null)
-					{
-						this.targetCursor.Dispose();
-						this.targetCursor = null;
-					}
-				}
-			}
-			finally
-			{
-				base.Dispose(disposing);
-			}
-		}
-		
-		/// <summary>
-		/// Returns the AssUserSpConnectionType associated with this action.
-		/// </summary>
-		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-		{
-			if(this.connectionTypes == null)
-			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AssUserSpConnectionType() };
-			}
-			
-			return this.connectionTypes;
-		}
-		
-		private partial class AssUserSpConnectionTypeBase : DslDiagrams::ConnectionType
-		{
-			/// <summary>
-			/// Constructs a new the AssUserSpConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			protected AssUserSpConnectionTypeBase() : base() {}
-			
-			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
-			{
-				if (shape is DslDiagrams::Compartment)
-				{
-					return shape.ParentShape;
-				}
-				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
-				if (swimlane != null && swimlane.ForwardDragDropToParent)
-				{
-					return shape.ParentShape;
-				}
-				return shape;
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder AssociationReferênciasUserSpecConstrutor.
-			/// </remarks>
-			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
-			{
-				bool canConnect = true;
-				
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				
-				DslModeling::ModelElement targetElement = null;
-				if (targetShapeElement != null)
-				{
-					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-					targetElement = targetShapeElement.ModelElement;
-					if(targetElement == null) targetElement = targetShapeElement;
-			
-				}
-
-				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
-				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
-				if (canConnect)
-				{				
-					if(targetShapeElement == null)
-					{
-						return AssociationReferênciasUserSpecConstrutor.CanAcceptSource(sourceElement);
-					}
-					else
-					{				
-						return AssociationReferênciasUserSpecConstrutor.CanAcceptSourceAndTarget(sourceElement, targetElement);
-					}
-				}
-				else
-				{
-					//return false
-					return canConnect;
-				}
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
-			/// </summary>
-			/// <remarks>
-			/// Always return true here, to give CanCreateConnection a chance to decide.
-			/// </remarks>
-			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-			{
-				return true;
-			}
-			
-			/// <summary>
-			/// Called by the base ConnectAction class to create the underlying relationship.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder AssociationReferênciasUserSpecConstrutor.
-			/// </remarks>
-			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
-			{
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
-				
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-				
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
-				if(targetElement == null) targetElement = targetShapeElement;
-				AssociationReferênciasUserSpecConstrutor.Connect(sourceElement, targetElement);
-			}
-		}
-		
-		private partial class AssUserSpConnectionType : AssUserSpConnectionTypeBase
-		{
-			/// <summary>
-			/// Constructs a new the AssUserSpConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			public AssUserSpConnectionType() : base() {}
 		}
 	}
  	
@@ -2494,222 +1893,6 @@ namespace Empresa.MoneyManagerModel
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class TransSpAssConnectAction : DslDiagrams::ConnectAction
-	{
-		private DslDiagrams::ConnectionType[] connectionTypes;
-		private global::System.Windows.Forms.Cursor sourceCursor;
-		private global::System.Windows.Forms.Cursor targetCursor;
-		
-		/// <summary>
-		/// Constructs a new TransSpAssConnectAction for the given Diagram.
-		/// </summary>
-		public TransSpAssConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
-		{
-			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
-			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
-
-			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("TransSpAssSourceCursor", resourceCulture);
-			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
-			{ 
-				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
-			}
-			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("TransSpAssTargetCursor", resourceCulture);
-			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
-			{ 
-				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
-			}
-		}
-		
-		/// <summary>
-		/// Gets the cursor corresponding to the given mouse position.
-		/// </summary>
-		/// <remarks>
-		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
-		/// </remarks>
-		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
-		{
-			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
-			{
-				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
-				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
-				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
-
-				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
-				string warningString = string.Empty;
-				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
-				{
-					return global::System.Windows.Forms.Cursors.No;
-				}
-			}
-			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
-		}
-		
-		/// <summary>
-		/// Associates custom source and target cursors with the connect action.
-		/// </summary>
-		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
-		{
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
-			{
-				return this.sourceCursor;
-			}
-			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
-			{
-				return this.targetCursor;
-			}
-			return base.GetCursorFromCursorType(connectActionCursor);
-		}
-		
-		/// <summary>
-		/// Disposes custom cursor resources.
-		/// </summary>
-		protected override void Dispose(bool disposing)
-		{
-			try
-			{
-				if(disposing)
-				{
-					if(this.sourceCursor != null)
-					{
-						this.sourceCursor.Dispose();
-						this.sourceCursor = null;
-					}
-					if(this.targetCursor != null)
-					{
-						this.targetCursor.Dispose();
-						this.targetCursor = null;
-					}
-				}
-			}
-			finally
-			{
-				base.Dispose(disposing);
-			}
-		}
-		
-		/// <summary>
-		/// Returns the TransSpAssConnectionType associated with this action.
-		/// </summary>
-		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-		{
-			if(this.connectionTypes == null)
-			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new TransSpAssConnectionType() };
-			}
-			
-			return this.connectionTypes;
-		}
-		
-		private partial class TransSpAssConnectionTypeBase : DslDiagrams::ConnectionType
-		{
-			/// <summary>
-			/// Constructs a new the TransSpAssConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			protected TransSpAssConnectionTypeBase() : base() {}
-			
-			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
-			{
-				if (shape is DslDiagrams::Compartment)
-				{
-					return shape.ParentShape;
-				}
-				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
-				if (swimlane != null && swimlane.ForwardDragDropToParent)
-				{
-					return shape.ParentShape;
-				}
-				return shape;
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder TransactionSpecReferênciasAssociationsConstrutor.
-			/// </remarks>
-			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
-			{
-				bool canConnect = true;
-				
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				
-				DslModeling::ModelElement targetElement = null;
-				if (targetShapeElement != null)
-				{
-					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-					targetElement = targetShapeElement.ModelElement;
-					if(targetElement == null) targetElement = targetShapeElement;
-			
-				}
-
-				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
-				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
-				if (canConnect)
-				{				
-					if(targetShapeElement == null)
-					{
-						return TransactionSpecReferênciasAssociationsConstrutor.CanAcceptSource(sourceElement);
-					}
-					else
-					{				
-						return TransactionSpecReferênciasAssociationsConstrutor.CanAcceptSourceAndTarget(sourceElement, targetElement);
-					}
-				}
-				else
-				{
-					//return false
-					return canConnect;
-				}
-			}
-						
-			/// <summary>
-			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
-			/// </summary>
-			/// <remarks>
-			/// Always return true here, to give CanCreateConnection a chance to decide.
-			/// </remarks>
-			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
-			{
-				return true;
-			}
-			
-			/// <summary>
-			/// Called by the base ConnectAction class to create the underlying relationship.
-			/// </summary>
-			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder TransactionSpecReferênciasAssociationsConstrutor.
-			/// </remarks>
-			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
-			{
-				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
-				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
-				
-				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
-				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
-				
-				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
-				if(sourceElement == null) sourceElement = sourceShapeElement;
-				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
-				if(targetElement == null) targetElement = targetShapeElement;
-				TransactionSpecReferênciasAssociationsConstrutor.Connect(sourceElement, targetElement);
-			}
-		}
-		
-		private partial class TransSpAssConnectionType : TransSpAssConnectionTypeBase
-		{
-			/// <summary>
-			/// Constructs a new the TransSpAssConnectionType with the given ConnectionBuilder.
-			/// </summary>
-			public TransSpAssConnectionType() : base() {}
-		}
-	}
- 	
- 	/// <summary>
-	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
-	/// </summary>
 	internal partial class UserAttAttTypeConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
@@ -2926,26 +2109,26 @@ namespace Empresa.MoneyManagerModel
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class UserSpAssConnectAction : DslDiagrams::ConnectAction
+	internal partial class AccountGroupSpecReferencesAccountSpecConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		private global::System.Windows.Forms.Cursor sourceCursor;
 		private global::System.Windows.Forms.Cursor targetCursor;
 		
 		/// <summary>
-		/// Constructs a new UserSpAssConnectAction for the given Diagram.
+		/// Constructs a new AccountGroupSpecReferencesAccountSpecConnectAction for the given Diagram.
 		/// </summary>
-		public UserSpAssConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public AccountGroupSpecReferencesAccountSpecConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
 			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
 
-			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("UserSpAssSourceCursor", resourceCulture);
+			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("AccountGroupSpecReferencesAccountSpecSourceCursor", resourceCulture);
 			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
 			{ 
 				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
 			}
-			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("UserSpAssTargetCursor", resourceCulture);
+			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("AccountGroupSpecReferencesAccountSpecTargetCursor", resourceCulture);
 			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
 			{ 
 				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
@@ -3020,24 +2203,24 @@ namespace Empresa.MoneyManagerModel
 		}
 		
 		/// <summary>
-		/// Returns the UserSpAssConnectionType associated with this action.
+		/// Returns the AccountGroupSpecReferencesAccountSpecConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new UserSpAssConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AccountGroupSpecReferencesAccountSpecConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class UserSpAssConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class AccountGroupSpecReferencesAccountSpecConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the UserSpAssConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the AccountGroupSpecReferencesAccountSpecConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected UserSpAssConnectionTypeBase() : base() {}
+			protected AccountGroupSpecReferencesAccountSpecConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -3057,7 +2240,7 @@ namespace Empresa.MoneyManagerModel
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder UserSpecReferênciasAssociationsConstrutor.
+			/// This implementation delegates calls to the ConnectionBuilder AccountGroupSpecReferencesAccountSpecBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -3083,11 +2266,11 @@ namespace Empresa.MoneyManagerModel
 				{				
 					if(targetShapeElement == null)
 					{
-						return UserSpecReferênciasAssociationsConstrutor.CanAcceptSource(sourceElement);
+						return AccountGroupSpecReferencesAccountSpecBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return UserSpecReferênciasAssociationsConstrutor.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return AccountGroupSpecReferencesAccountSpecBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -3112,7 +2295,7 @@ namespace Empresa.MoneyManagerModel
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder UserSpecReferênciasAssociationsConstrutor.
+			/// This implementation delegates calls to the ConnectionBuilder AccountGroupSpecReferencesAccountSpecBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -3126,16 +2309,1744 @@ namespace Empresa.MoneyManagerModel
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				UserSpecReferênciasAssociationsConstrutor.Connect(sourceElement, targetElement);
+				AccountGroupSpecReferencesAccountSpecBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class UserSpAssConnectionType : UserSpAssConnectionTypeBase
+		private partial class AccountGroupSpecReferencesAccountSpecConnectionType : AccountGroupSpecReferencesAccountSpecConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the UserSpAssConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the AccountGroupSpecReferencesAccountSpecConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public UserSpAssConnectionType() : base() {}
+			public AccountGroupSpecReferencesAccountSpecConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class CategoryAttributeReferencesAttributeTypeConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		private global::System.Windows.Forms.Cursor sourceCursor;
+		private global::System.Windows.Forms.Cursor targetCursor;
+		
+		/// <summary>
+		/// Constructs a new CategoryAttributeReferencesAttributeTypeConnectAction for the given Diagram.
+		/// </summary>
+		public CategoryAttributeReferencesAttributeTypeConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
+			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
+
+			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("CategoryAttributeReferencesAttributeTypeSourceCursor", resourceCulture);
+			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
+			{ 
+				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
+			}
+			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("CategoryAttributeReferencesAttributeTypeTargetCursor", resourceCulture);
+			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
+			{ 
+				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
+			}
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		/// <summary>
+		/// Associates custom source and target cursors with the connect action.
+		/// </summary>
+		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
+		{
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
+			{
+				return this.sourceCursor;
+			}
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
+			{
+				return this.targetCursor;
+			}
+			return base.GetCursorFromCursorType(connectActionCursor);
+		}
+		
+		/// <summary>
+		/// Disposes custom cursor resources.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					if(this.sourceCursor != null)
+					{
+						this.sourceCursor.Dispose();
+						this.sourceCursor = null;
+					}
+					if(this.targetCursor != null)
+					{
+						this.targetCursor.Dispose();
+						this.targetCursor = null;
+					}
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
+		
+		/// <summary>
+		/// Returns the CategoryAttributeReferencesAttributeTypeConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new CategoryAttributeReferencesAttributeTypeConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class CategoryAttributeReferencesAttributeTypeConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the CategoryAttributeReferencesAttributeTypeConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected CategoryAttributeReferencesAttributeTypeConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder CategoryAttributeReferencesAttributeType1Builder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return CategoryAttributeReferencesAttributeType1Builder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return CategoryAttributeReferencesAttributeType1Builder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder CategoryAttributeReferencesAttributeType1Builder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				CategoryAttributeReferencesAttributeType1Builder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class CategoryAttributeReferencesAttributeTypeConnectionType : CategoryAttributeReferencesAttributeTypeConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the CategoryAttributeReferencesAttributeTypeConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public CategoryAttributeReferencesAttributeTypeConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class UserSpecTemUserAttributeConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		private global::System.Windows.Forms.Cursor sourceCursor;
+		private global::System.Windows.Forms.Cursor targetCursor;
+		
+		/// <summary>
+		/// Constructs a new UserSpecTemUserAttributeConnectAction for the given Diagram.
+		/// </summary>
+		public UserSpecTemUserAttributeConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
+			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
+
+			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("UserSpecTemUserAttributeSourceCursor", resourceCulture);
+			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
+			{ 
+				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
+			}
+			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("UserSpecTemUserAttributeTargetCursor", resourceCulture);
+			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
+			{ 
+				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
+			}
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		/// <summary>
+		/// Associates custom source and target cursors with the connect action.
+		/// </summary>
+		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
+		{
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
+			{
+				return this.sourceCursor;
+			}
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
+			{
+				return this.targetCursor;
+			}
+			return base.GetCursorFromCursorType(connectActionCursor);
+		}
+		
+		/// <summary>
+		/// Disposes custom cursor resources.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					if(this.sourceCursor != null)
+					{
+						this.sourceCursor.Dispose();
+						this.sourceCursor = null;
+					}
+					if(this.targetCursor != null)
+					{
+						this.targetCursor.Dispose();
+						this.targetCursor = null;
+					}
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
+		
+		/// <summary>
+		/// Returns the UserSpecTemUserAttributeConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new UserSpecTemUserAttributeConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class UserSpecTemUserAttributeConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the UserSpecTemUserAttributeConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected UserSpecTemUserAttributeConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder UserAttributeReferênciasAttributeTypesConstrutor.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return UserAttributeReferênciasAttributeTypesConstrutor.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return UserAttributeReferênciasAttributeTypesConstrutor.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder UserAttributeReferênciasAttributeTypesConstrutor.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				UserAttributeReferênciasAttributeTypesConstrutor.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class UserSpecTemUserAttributeConnectionType : UserSpecTemUserAttributeConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the UserSpecTemUserAttributeConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public UserSpecTemUserAttributeConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class AccountSpecReferencesUserAccountAssociationConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		private global::System.Windows.Forms.Cursor sourceCursor;
+		private global::System.Windows.Forms.Cursor targetCursor;
+		
+		/// <summary>
+		/// Constructs a new AccountSpecReferencesUserAccountAssociationConnectAction for the given Diagram.
+		/// </summary>
+		public AccountSpecReferencesUserAccountAssociationConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
+			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
+
+			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("AccountSpecReferencesUserAccountAssociationSourceCursor", resourceCulture);
+			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
+			{ 
+				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
+			}
+			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("AccountSpecReferencesUserAccountAssociationTargetCursor", resourceCulture);
+			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
+			{ 
+				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
+			}
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		/// <summary>
+		/// Associates custom source and target cursors with the connect action.
+		/// </summary>
+		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
+		{
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
+			{
+				return this.sourceCursor;
+			}
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
+			{
+				return this.targetCursor;
+			}
+			return base.GetCursorFromCursorType(connectActionCursor);
+		}
+		
+		/// <summary>
+		/// Disposes custom cursor resources.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					if(this.sourceCursor != null)
+					{
+						this.sourceCursor.Dispose();
+						this.sourceCursor = null;
+					}
+					if(this.targetCursor != null)
+					{
+						this.targetCursor.Dispose();
+						this.targetCursor = null;
+					}
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
+		
+		/// <summary>
+		/// Returns the AccountSpecReferencesUserAccountAssociationConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AccountSpecReferencesUserAccountAssociationConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class AccountSpecReferencesUserAccountAssociationConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the AccountSpecReferencesUserAccountAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected AccountSpecReferencesUserAccountAssociationConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder AccountSpecReferencesUserAccountAssociationBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return AccountSpecReferencesUserAccountAssociationBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return AccountSpecReferencesUserAccountAssociationBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder AccountSpecReferencesUserAccountAssociationBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				AccountSpecReferencesUserAccountAssociationBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class AccountSpecReferencesUserAccountAssociationConnectionType : AccountSpecReferencesUserAccountAssociationConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the AccountSpecReferencesUserAccountAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public AccountSpecReferencesUserAccountAssociationConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class AccountSpecReferencesAccountTransactionAssociationConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		private global::System.Windows.Forms.Cursor sourceCursor;
+		private global::System.Windows.Forms.Cursor targetCursor;
+		
+		/// <summary>
+		/// Constructs a new AccountSpecReferencesAccountTransactionAssociationConnectAction for the given Diagram.
+		/// </summary>
+		public AccountSpecReferencesAccountTransactionAssociationConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
+			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
+
+			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("AccountSpecReferencesAccountTransactionAssociationSourceCursor", resourceCulture);
+			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
+			{ 
+				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
+			}
+			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("AccountSpecReferencesAccountTransactionAssociationTargetCursor", resourceCulture);
+			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
+			{ 
+				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
+			}
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		/// <summary>
+		/// Associates custom source and target cursors with the connect action.
+		/// </summary>
+		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
+		{
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
+			{
+				return this.sourceCursor;
+			}
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
+			{
+				return this.targetCursor;
+			}
+			return base.GetCursorFromCursorType(connectActionCursor);
+		}
+		
+		/// <summary>
+		/// Disposes custom cursor resources.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					if(this.sourceCursor != null)
+					{
+						this.sourceCursor.Dispose();
+						this.sourceCursor = null;
+					}
+					if(this.targetCursor != null)
+					{
+						this.targetCursor.Dispose();
+						this.targetCursor = null;
+					}
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
+		
+		/// <summary>
+		/// Returns the AccountSpecReferencesAccountTransactionAssociationConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AccountSpecReferencesAccountTransactionAssociationConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class AccountSpecReferencesAccountTransactionAssociationConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the AccountSpecReferencesAccountTransactionAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected AccountSpecReferencesAccountTransactionAssociationConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder AccountSpecReferencesAccountTransactionAssociationBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return AccountSpecReferencesAccountTransactionAssociationBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return AccountSpecReferencesAccountTransactionAssociationBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder AccountSpecReferencesAccountTransactionAssociationBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				AccountSpecReferencesAccountTransactionAssociationBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class AccountSpecReferencesAccountTransactionAssociationConnectionType : AccountSpecReferencesAccountTransactionAssociationConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the AccountSpecReferencesAccountTransactionAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public AccountSpecReferencesAccountTransactionAssociationConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class TransactionSpecReferencesAccountTransactionAssociationConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		private global::System.Windows.Forms.Cursor sourceCursor;
+		private global::System.Windows.Forms.Cursor targetCursor;
+		
+		/// <summary>
+		/// Constructs a new TransactionSpecReferencesAccountTransactionAssociationConnectAction for the given Diagram.
+		/// </summary>
+		public TransactionSpecReferencesAccountTransactionAssociationConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
+			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
+
+			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("TransactionSpecReferencesAccountTransactionAssociationSourceCursor", resourceCulture);
+			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
+			{ 
+				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
+			}
+			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("TransactionSpecReferencesAccountTransactionAssociationTargetCursor", resourceCulture);
+			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
+			{ 
+				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
+			}
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		/// <summary>
+		/// Associates custom source and target cursors with the connect action.
+		/// </summary>
+		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
+		{
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
+			{
+				return this.sourceCursor;
+			}
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
+			{
+				return this.targetCursor;
+			}
+			return base.GetCursorFromCursorType(connectActionCursor);
+		}
+		
+		/// <summary>
+		/// Disposes custom cursor resources.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					if(this.sourceCursor != null)
+					{
+						this.sourceCursor.Dispose();
+						this.sourceCursor = null;
+					}
+					if(this.targetCursor != null)
+					{
+						this.targetCursor.Dispose();
+						this.targetCursor = null;
+					}
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
+		
+		/// <summary>
+		/// Returns the TransactionSpecReferencesAccountTransactionAssociationConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new TransactionSpecReferencesAccountTransactionAssociationConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class TransactionSpecReferencesAccountTransactionAssociationConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the TransactionSpecReferencesAccountTransactionAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected TransactionSpecReferencesAccountTransactionAssociationConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder TransactionSpecReferencesAccountTransactionAssociationBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return TransactionSpecReferencesAccountTransactionAssociationBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return TransactionSpecReferencesAccountTransactionAssociationBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder TransactionSpecReferencesAccountTransactionAssociationBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				TransactionSpecReferencesAccountTransactionAssociationBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class TransactionSpecReferencesAccountTransactionAssociationConnectionType : TransactionSpecReferencesAccountTransactionAssociationConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the TransactionSpecReferencesAccountTransactionAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public TransactionSpecReferencesAccountTransactionAssociationConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class CategorySpecReferencesCategoryTransactionAssociationConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		private global::System.Windows.Forms.Cursor sourceCursor;
+		private global::System.Windows.Forms.Cursor targetCursor;
+		
+		/// <summary>
+		/// Constructs a new CategorySpecReferencesCategoryTransactionAssociationConnectAction for the given Diagram.
+		/// </summary>
+		public CategorySpecReferencesCategoryTransactionAssociationConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
+			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
+
+			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("CategorySpecReferencesCategoryTransactionAssociationSourceCursor", resourceCulture);
+			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
+			{ 
+				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
+			}
+			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("CategorySpecReferencesCategoryTransactionAssociationTargetCursor", resourceCulture);
+			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
+			{ 
+				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
+			}
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		/// <summary>
+		/// Associates custom source and target cursors with the connect action.
+		/// </summary>
+		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
+		{
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
+			{
+				return this.sourceCursor;
+			}
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
+			{
+				return this.targetCursor;
+			}
+			return base.GetCursorFromCursorType(connectActionCursor);
+		}
+		
+		/// <summary>
+		/// Disposes custom cursor resources.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					if(this.sourceCursor != null)
+					{
+						this.sourceCursor.Dispose();
+						this.sourceCursor = null;
+					}
+					if(this.targetCursor != null)
+					{
+						this.targetCursor.Dispose();
+						this.targetCursor = null;
+					}
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
+		
+		/// <summary>
+		/// Returns the CategorySpecReferencesCategoryTransactionAssociationConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new CategorySpecReferencesCategoryTransactionAssociationConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class CategorySpecReferencesCategoryTransactionAssociationConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the CategorySpecReferencesCategoryTransactionAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected CategorySpecReferencesCategoryTransactionAssociationConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder CategorySpecReferencesCategoryTransactionAssociationBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return CategorySpecReferencesCategoryTransactionAssociationBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return CategorySpecReferencesCategoryTransactionAssociationBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder CategorySpecReferencesCategoryTransactionAssociationBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				CategorySpecReferencesCategoryTransactionAssociationBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class CategorySpecReferencesCategoryTransactionAssociationConnectionType : CategorySpecReferencesCategoryTransactionAssociationConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the CategorySpecReferencesCategoryTransactionAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public CategorySpecReferencesCategoryTransactionAssociationConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class TransactionSpecReferencesCategoryTransactionAssociationConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		private global::System.Windows.Forms.Cursor sourceCursor;
+		private global::System.Windows.Forms.Cursor targetCursor;
+		
+		/// <summary>
+		/// Constructs a new TransactionSpecReferencesCategoryTransactionAssociationConnectAction for the given Diagram.
+		/// </summary>
+		public TransactionSpecReferencesCategoryTransactionAssociationConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
+			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
+
+			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("TransactionSpecReferencesCategoryTransactionAssociationSourceCursor", resourceCulture);
+			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
+			{ 
+				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
+			}
+			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("TransactionSpecReferencesCategoryTransactionAssociationTargetCursor", resourceCulture);
+			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
+			{ 
+				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
+			}
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		/// <summary>
+		/// Associates custom source and target cursors with the connect action.
+		/// </summary>
+		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
+		{
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
+			{
+				return this.sourceCursor;
+			}
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
+			{
+				return this.targetCursor;
+			}
+			return base.GetCursorFromCursorType(connectActionCursor);
+		}
+		
+		/// <summary>
+		/// Disposes custom cursor resources.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					if(this.sourceCursor != null)
+					{
+						this.sourceCursor.Dispose();
+						this.sourceCursor = null;
+					}
+					if(this.targetCursor != null)
+					{
+						this.targetCursor.Dispose();
+						this.targetCursor = null;
+					}
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
+		
+		/// <summary>
+		/// Returns the TransactionSpecReferencesCategoryTransactionAssociationConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new TransactionSpecReferencesCategoryTransactionAssociationConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class TransactionSpecReferencesCategoryTransactionAssociationConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the TransactionSpecReferencesCategoryTransactionAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected TransactionSpecReferencesCategoryTransactionAssociationConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder TransactionSpecReferencesCategoryTransactionAssociationBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return TransactionSpecReferencesCategoryTransactionAssociationBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return TransactionSpecReferencesCategoryTransactionAssociationBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder TransactionSpecReferencesCategoryTransactionAssociationBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				TransactionSpecReferencesCategoryTransactionAssociationBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class TransactionSpecReferencesCategoryTransactionAssociationConnectionType : TransactionSpecReferencesCategoryTransactionAssociationConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the TransactionSpecReferencesCategoryTransactionAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public TransactionSpecReferencesCategoryTransactionAssociationConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class UserSpecReferencesUserAccountAssociationConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		private global::System.Windows.Forms.Cursor sourceCursor;
+		private global::System.Windows.Forms.Cursor targetCursor;
+		
+		/// <summary>
+		/// Constructs a new UserSpecReferencesUserAccountAssociationConnectAction for the given Diagram.
+		/// </summary>
+		public UserSpecReferencesUserAccountAssociationConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+			global::System.Resources.ResourceManager resourceManager = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager;
+			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
+
+			byte[] sourceCursorBytes = (byte[])resourceManager.GetObject("UserSpecReferencesUserAccountAssociationSourceCursor", resourceCulture);
+			using(global::System.IO.MemoryStream sourceCursorStream = new global::System.IO.MemoryStream(sourceCursorBytes))
+			{ 
+				this.sourceCursor = new global::System.Windows.Forms.Cursor(sourceCursorStream);
+			}
+			byte[] targetCursorBytes = (byte[])resourceManager.GetObject("UserSpecReferencesUserAccountAssociationTargetCursor", resourceCulture);
+			using(global::System.IO.MemoryStream targetCursorStream = new global::System.IO.MemoryStream(targetCursorBytes))
+			{ 
+				this.targetCursor = new global::System.Windows.Forms.Cursor(targetCursorStream);
+			}
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		/// <summary>
+		/// Associates custom source and target cursors with the connect action.
+		/// </summary>
+		protected override global::System.Windows.Forms.Cursor GetCursorFromCursorType(DslDiagrams::ConnectActionCursor connectActionCursor)
+		{
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Searching)
+			{
+				return this.sourceCursor;
+			}
+			if(connectActionCursor == DslDiagrams::ConnectActionCursor.Allowed)
+			{
+				return this.targetCursor;
+			}
+			return base.GetCursorFromCursorType(connectActionCursor);
+		}
+		
+		/// <summary>
+		/// Disposes custom cursor resources.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					if(this.sourceCursor != null)
+					{
+						this.sourceCursor.Dispose();
+						this.sourceCursor = null;
+					}
+					if(this.targetCursor != null)
+					{
+						this.targetCursor.Dispose();
+						this.targetCursor = null;
+					}
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
+		
+		/// <summary>
+		/// Returns the UserSpecReferencesUserAccountAssociationConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new UserSpecReferencesUserAccountAssociationConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class UserSpecReferencesUserAccountAssociationConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the UserSpecReferencesUserAccountAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected UserSpecReferencesUserAccountAssociationConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder UserSpecReferencesUserAccountAssociationBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return UserSpecReferencesUserAccountAssociationBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return UserSpecReferencesUserAccountAssociationBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder UserSpecReferencesUserAccountAssociationBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				UserSpecReferencesUserAccountAssociationBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class UserSpecReferencesUserAccountAssociationConnectionType : UserSpecReferencesUserAccountAssociationConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the UserSpecReferencesUserAccountAssociationConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public UserSpecReferencesUserAccountAssociationConnectionType() : base() {}
 		}
 	}
 }

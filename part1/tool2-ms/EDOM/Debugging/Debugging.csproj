@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{c24915f1-ab23-4bb9-803b-7d96553e22a3}</ProjectGuid>
+    <ProjectGuid>{C24915F1-AB23-4BB9-803B-7D96553E22A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -56,9 +56,9 @@
     <None Include="Sample.MoneyManagerModel.diagram">
       <DependentUpon>Sample.MoneyManagerModel</DependentUpon>
     </None>
-    <None Include="Test.MoneyManagerModel" />
-    <None Include="Test.MoneyManagerModel.diagram">
-      <DependentUpon>Test.MoneyManagerModel</DependentUpon>
+    <None Include="Test_IT2.MoneyManagerModel" />
+    <None Include="Test_IT2.MoneyManagerModel.diagram">
+      <DependentUpon>Test_IT2.MoneyManagerModel</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -215,12 +215,6 @@ namespace Empresa.MoneyManagerModel
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Empresa.MoneyManagerModel.Association)
-			{
-				global::Empresa.MoneyManagerModel.AssociationShape newShape = new global::Empresa.MoneyManagerModel.AssociationShape(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::Empresa.MoneyManagerModel.UserAttribute)
 			{
 				global::Empresa.MoneyManagerModel.UserAttributeShape newShape = new global::Empresa.MoneyManagerModel.UserAttributeShape(this.Partition);
@@ -239,6 +233,42 @@ namespace Empresa.MoneyManagerModel
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::Empresa.MoneyManagerModel.AccountGroupSpec)
+			{
+				global::Empresa.MoneyManagerModel.AccountGroupSpecSchape newShape = new global::Empresa.MoneyManagerModel.AccountGroupSpecSchape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.UserAccountAssociation)
+			{
+				global::Empresa.MoneyManagerModel.UserAccountAssociationShape newShape = new global::Empresa.MoneyManagerModel.UserAccountAssociationShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.AccountTransactionAssociation)
+			{
+				global::Empresa.MoneyManagerModel.AccountTransactionAssociationShape newShape = new global::Empresa.MoneyManagerModel.AccountTransactionAssociationShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.CategorySpec)
+			{
+				global::Empresa.MoneyManagerModel.CategorySpecShape newShape = new global::Empresa.MoneyManagerModel.CategorySpecShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.CategoryAttribute)
+			{
+				global::Empresa.MoneyManagerModel.CategoryAttributeShape newShape = new global::Empresa.MoneyManagerModel.CategoryAttributeShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)
+			{
+				global::Empresa.MoneyManagerModel.CategoryTransactionAssociationShape newShape = new global::Empresa.MoneyManagerModel.CategoryTransactionAssociationShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute)
 			{
 				global::Empresa.MoneyManagerModel.Incorporação newShape = new global::Empresa.MoneyManagerModel.Incorporação(this.Partition);
@@ -254,36 +284,6 @@ namespace Empresa.MoneyManagerModel
 				global::Empresa.MoneyManagerModel.Incorporação newShape = new global::Empresa.MoneyManagerModel.Incorporação(this.Partition);
 				return newShape;
 			}
-			if(element is global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations)
-			{
-				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
-				return newShape;
-			}
-			if(element is global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec)
-			{
-				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
-				return newShape;
-			}
-			if(element is global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations)
-			{
-				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
-				return newShape;
-			}
-			if(element is global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec)
-			{
-				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
-				return newShape;
-			}
-			if(element is global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations)
-			{
-				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
-				return newShape;
-			}
-			if(element is global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec)
-			{
-				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
-				return newShape;
-			}
 			if(element is global::Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes)
 			{
 				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
@@ -295,6 +295,51 @@ namespace Empresa.MoneyManagerModel
 				return newShape;
 			}
 			if(element is global::Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes)
+			{
+				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec)
+			{
+				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1)
+			{
+				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute)
+			{
+				global::Empresa.MoneyManagerModel.Incorporação newShape = new global::Empresa.MoneyManagerModel.Incorporação(this.Partition);
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation)
+			{
+				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation)
+			{
+				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation)
+			{
+				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation)
+			{
+				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation)
+			{
+				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
+				return newShape;
+			}
+			if(element is global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation)
 			{
 				global::Empresa.MoneyManagerModel.Referência newShape = new global::Empresa.MoneyManagerModel.Referência(this.Partition);
 				return newShape;
@@ -314,10 +359,15 @@ namespace Empresa.MoneyManagerModel
 			global::Empresa.MoneyManagerModel.AccountSpecShape.DecoratorsInitialized += AccountSpecShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Empresa.MoneyManagerModel.TransactionSpecShape.DecoratorsInitialized += TransactionSpecShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Empresa.MoneyManagerModel.AttributeTypeShape.DecoratorsInitialized += AttributeTypeShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Empresa.MoneyManagerModel.AssociationShape.DecoratorsInitialized += AssociationShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Empresa.MoneyManagerModel.UserAttributeShape.DecoratorsInitialized += UserAttributeShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Empresa.MoneyManagerModel.AccountAttributeShape.DecoratorsInitialized += AccountAttributeShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Empresa.MoneyManagerModel.TransactionAttributeShape.DecoratorsInitialized += TransactionAttributeShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Empresa.MoneyManagerModel.AccountGroupSpecSchape.DecoratorsInitialized += AccountGroupSpecSchapeDecoratorMap.OnDecoratorsInitialized;
+			global::Empresa.MoneyManagerModel.UserAccountAssociationShape.DecoratorsInitialized += UserAccountAssociationShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Empresa.MoneyManagerModel.AccountTransactionAssociationShape.DecoratorsInitialized += AccountTransactionAssociationShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Empresa.MoneyManagerModel.CategorySpecShape.DecoratorsInitialized += CategorySpecShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Empresa.MoneyManagerModel.CategoryAttributeShape.DecoratorsInitialized += CategoryAttributeShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Empresa.MoneyManagerModel.CategoryTransactionAssociationShape.DecoratorsInitialized += CategoryTransactionAssociationShapeDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -396,24 +446,6 @@ namespace Empresa.MoneyManagerModel
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for AssociationShape.
-		/// </summary>
-		internal static partial class AssociationShapeDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for AssociationShape.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Empresa.MoneyManagerModel.Association.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
 		/// Class containing decorator path traversal methods for UserAttributeShape.
 		/// </summary>
 		internal static partial class UserAttributeShapeDecoratorMap
@@ -467,19 +499,130 @@ namespace Empresa.MoneyManagerModel
 			}
 		}
 		
+		/// <summary>
+		/// Class containing decorator path traversal methods for AccountGroupSpecSchape.
+		/// </summary>
+		internal static partial class AccountGroupSpecSchapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for AccountGroupSpecSchape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Empresa.MoneyManagerModel.AccountGroupSpec.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for UserAccountAssociationShape.
+		/// </summary>
+		internal static partial class UserAccountAssociationShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for UserAccountAssociationShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Empresa.MoneyManagerModel.UserAccountAssociation.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for AccountTransactionAssociationShape.
+		/// </summary>
+		internal static partial class AccountTransactionAssociationShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for AccountTransactionAssociationShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Empresa.MoneyManagerModel.AccountTransactionAssociation.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for CategorySpecShape.
+		/// </summary>
+		internal static partial class CategorySpecShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for CategorySpecShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Empresa.MoneyManagerModel.CategorySpec.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for CategoryAttributeShape.
+		/// </summary>
+		internal static partial class CategoryAttributeShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for CategoryAttributeShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Empresa.MoneyManagerModel.CategoryAttribute.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for CategoryTransactionAssociationShape.
+		/// </summary>
+		internal static partial class CategoryTransactionAssociationShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for CategoryTransactionAssociationShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Empresa.MoneyManagerModel.CategoryTransactionAssociation.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
 		#endregion
 		
 		#region Connect actions
 		private bool changingMouseAction;
 		private global::Empresa.MoneyManagerModel.AccAttAttTypeConnectAction accAttAttTypeConnectAction;
-		private global::Empresa.MoneyManagerModel.AccSpAssConnectAction accSpAssConnectAction;
-		private global::Empresa.MoneyManagerModel.AssAccSpConnectAction assAccSpConnectAction;
-		private global::Empresa.MoneyManagerModel.AssTranSpConnectAction assTranSpConnectAction;
-		private global::Empresa.MoneyManagerModel.AssUserSpConnectAction assUserSpConnectAction;
 		private global::Empresa.MoneyManagerModel.TransAttAttTypeConnectAction transAttAttTypeConnectAction;
-		private global::Empresa.MoneyManagerModel.TransSpAssConnectAction transSpAssConnectAction;
 		private global::Empresa.MoneyManagerModel.UserAttAttTypeConnectAction userAttAttTypeConnectAction;
-		private global::Empresa.MoneyManagerModel.UserSpAssConnectAction userSpAssConnectAction;
+		private global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpecConnectAction accountGroupSpecReferencesAccountSpecConnectAction;
+		private global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeTypeConnectAction categoryAttributeReferencesAttributeTypeConnectAction;
+		private global::Empresa.MoneyManagerModel.UserSpecTemUserAttributeConnectAction userSpecTemUserAttributeConnectAction;
+		private global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociationConnectAction accountSpecReferencesUserAccountAssociationConnectAction;
+		private global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociationConnectAction accountSpecReferencesAccountTransactionAssociationConnectAction;
+		private global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociationConnectAction transactionSpecReferencesAccountTransactionAssociationConnectAction;
+		private global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociationConnectAction categorySpecReferencesCategoryTransactionAssociationConnectAction;
+		private global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociationConnectAction transactionSpecReferencesCategoryTransactionAssociationConnectAction;
+		private global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociationConnectAction userSpecReferencesUserAccountAssociationConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -511,42 +654,6 @@ namespace Empresa.MoneyManagerModel
 					}
 					action = this.accAttAttTypeConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.AccSpAssFilterString))
-				{
-					if (this.accSpAssConnectAction == null)
-					{
-						this.accSpAssConnectAction = new global::Empresa.MoneyManagerModel.AccSpAssConnectAction(this);
-						this.accSpAssConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
-					}
-					action = this.accSpAssConnectAction;
-				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.AssAccSpFilterString))
-				{
-					if (this.assAccSpConnectAction == null)
-					{
-						this.assAccSpConnectAction = new global::Empresa.MoneyManagerModel.AssAccSpConnectAction(this);
-						this.assAccSpConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
-					}
-					action = this.assAccSpConnectAction;
-				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.AssTranSpFilterString))
-				{
-					if (this.assTranSpConnectAction == null)
-					{
-						this.assTranSpConnectAction = new global::Empresa.MoneyManagerModel.AssTranSpConnectAction(this);
-						this.assTranSpConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
-					}
-					action = this.assTranSpConnectAction;
-				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.AssUserSpFilterString))
-				{
-					if (this.assUserSpConnectAction == null)
-					{
-						this.assUserSpConnectAction = new global::Empresa.MoneyManagerModel.AssUserSpConnectAction(this);
-						this.assUserSpConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
-					}
-					action = this.assUserSpConnectAction;
-				} 
 				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.TransAttAttTypeFilterString))
 				{
 					if (this.transAttAttTypeConnectAction == null)
@@ -555,15 +662,6 @@ namespace Empresa.MoneyManagerModel
 						this.transAttAttTypeConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
 					action = this.transAttAttTypeConnectAction;
-				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.TransSpAssFilterString))
-				{
-					if (this.transSpAssConnectAction == null)
-					{
-						this.transSpAssConnectAction = new global::Empresa.MoneyManagerModel.TransSpAssConnectAction(this);
-						this.transSpAssConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
-					}
-					action = this.transSpAssConnectAction;
 				} 
 				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.UserAttAttTypeFilterString))
 				{
@@ -574,14 +672,86 @@ namespace Empresa.MoneyManagerModel
 					}
 					action = this.userAttAttTypeConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.UserSpAssFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.AccountGroupSpecReferencesAccountSpecFilterString))
 				{
-					if (this.userSpAssConnectAction == null)
+					if (this.accountGroupSpecReferencesAccountSpecConnectAction == null)
 					{
-						this.userSpAssConnectAction = new global::Empresa.MoneyManagerModel.UserSpAssConnectAction(this);
-						this.userSpAssConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.accountGroupSpecReferencesAccountSpecConnectAction = new global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpecConnectAction(this);
+						this.accountGroupSpecReferencesAccountSpecConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.userSpAssConnectAction;
+					action = this.accountGroupSpecReferencesAccountSpecConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.CategoryAttributeReferencesAttributeTypeFilterString))
+				{
+					if (this.categoryAttributeReferencesAttributeTypeConnectAction == null)
+					{
+						this.categoryAttributeReferencesAttributeTypeConnectAction = new global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeTypeConnectAction(this);
+						this.categoryAttributeReferencesAttributeTypeConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.categoryAttributeReferencesAttributeTypeConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.UserSpecTemUserAttributeFilterString))
+				{
+					if (this.userSpecTemUserAttributeConnectAction == null)
+					{
+						this.userSpecTemUserAttributeConnectAction = new global::Empresa.MoneyManagerModel.UserSpecTemUserAttributeConnectAction(this);
+						this.userSpecTemUserAttributeConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.userSpecTemUserAttributeConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.AccountSpecReferencesUserAccountAssociationFilterString))
+				{
+					if (this.accountSpecReferencesUserAccountAssociationConnectAction == null)
+					{
+						this.accountSpecReferencesUserAccountAssociationConnectAction = new global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociationConnectAction(this);
+						this.accountSpecReferencesUserAccountAssociationConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.accountSpecReferencesUserAccountAssociationConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.AccountSpecReferencesAccountTransactionAssociationFilterString))
+				{
+					if (this.accountSpecReferencesAccountTransactionAssociationConnectAction == null)
+					{
+						this.accountSpecReferencesAccountTransactionAssociationConnectAction = new global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociationConnectAction(this);
+						this.accountSpecReferencesAccountTransactionAssociationConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.accountSpecReferencesAccountTransactionAssociationConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.TransactionSpecReferencesAccountTransactionAssociationFilterString))
+				{
+					if (this.transactionSpecReferencesAccountTransactionAssociationConnectAction == null)
+					{
+						this.transactionSpecReferencesAccountTransactionAssociationConnectAction = new global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociationConnectAction(this);
+						this.transactionSpecReferencesAccountTransactionAssociationConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.transactionSpecReferencesAccountTransactionAssociationConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.CategorySpecReferencesCategoryTransactionAssociationFilterString))
+				{
+					if (this.categorySpecReferencesCategoryTransactionAssociationConnectAction == null)
+					{
+						this.categorySpecReferencesCategoryTransactionAssociationConnectAction = new global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociationConnectAction(this);
+						this.categorySpecReferencesCategoryTransactionAssociationConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.categorySpecReferencesCategoryTransactionAssociationConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.TransactionSpecReferencesCategoryTransactionAssociationFilterString))
+				{
+					if (this.transactionSpecReferencesCategoryTransactionAssociationConnectAction == null)
+					{
+						this.transactionSpecReferencesCategoryTransactionAssociationConnectAction = new global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociationConnectAction(this);
+						this.transactionSpecReferencesCategoryTransactionAssociationConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.transactionSpecReferencesCategoryTransactionAssociationConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Empresa.MoneyManagerModel.MoneyManagerModelToolboxHelper.UserSpecReferencesUserAccountAssociationFilterString))
+				{
+					if (this.userSpecReferencesUserAccountAssociationConnectAction == null)
+					{
+						this.userSpecReferencesUserAccountAssociationConnectAction = new global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociationConnectAction(this);
+						this.userSpecReferencesUserAccountAssociationConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.userSpecReferencesUserAccountAssociationConnectAction;
 				} 
 				else
 				{
@@ -645,45 +815,60 @@ namespace Empresa.MoneyManagerModel
 						this.accAttAttTypeConnectAction.Dispose();
 						this.accAttAttTypeConnectAction = null;
 					}
-					if(this.accSpAssConnectAction != null)
-					{
-						this.accSpAssConnectAction.Dispose();
-						this.accSpAssConnectAction = null;
-					}
-					if(this.assAccSpConnectAction != null)
-					{
-						this.assAccSpConnectAction.Dispose();
-						this.assAccSpConnectAction = null;
-					}
-					if(this.assTranSpConnectAction != null)
-					{
-						this.assTranSpConnectAction.Dispose();
-						this.assTranSpConnectAction = null;
-					}
-					if(this.assUserSpConnectAction != null)
-					{
-						this.assUserSpConnectAction.Dispose();
-						this.assUserSpConnectAction = null;
-					}
 					if(this.transAttAttTypeConnectAction != null)
 					{
 						this.transAttAttTypeConnectAction.Dispose();
 						this.transAttAttTypeConnectAction = null;
-					}
-					if(this.transSpAssConnectAction != null)
-					{
-						this.transSpAssConnectAction.Dispose();
-						this.transSpAssConnectAction = null;
 					}
 					if(this.userAttAttTypeConnectAction != null)
 					{
 						this.userAttAttTypeConnectAction.Dispose();
 						this.userAttAttTypeConnectAction = null;
 					}
-					if(this.userSpAssConnectAction != null)
+					if(this.accountGroupSpecReferencesAccountSpecConnectAction != null)
 					{
-						this.userSpAssConnectAction.Dispose();
-						this.userSpAssConnectAction = null;
+						this.accountGroupSpecReferencesAccountSpecConnectAction.Dispose();
+						this.accountGroupSpecReferencesAccountSpecConnectAction = null;
+					}
+					if(this.categoryAttributeReferencesAttributeTypeConnectAction != null)
+					{
+						this.categoryAttributeReferencesAttributeTypeConnectAction.Dispose();
+						this.categoryAttributeReferencesAttributeTypeConnectAction = null;
+					}
+					if(this.userSpecTemUserAttributeConnectAction != null)
+					{
+						this.userSpecTemUserAttributeConnectAction.Dispose();
+						this.userSpecTemUserAttributeConnectAction = null;
+					}
+					if(this.accountSpecReferencesUserAccountAssociationConnectAction != null)
+					{
+						this.accountSpecReferencesUserAccountAssociationConnectAction.Dispose();
+						this.accountSpecReferencesUserAccountAssociationConnectAction = null;
+					}
+					if(this.accountSpecReferencesAccountTransactionAssociationConnectAction != null)
+					{
+						this.accountSpecReferencesAccountTransactionAssociationConnectAction.Dispose();
+						this.accountSpecReferencesAccountTransactionAssociationConnectAction = null;
+					}
+					if(this.transactionSpecReferencesAccountTransactionAssociationConnectAction != null)
+					{
+						this.transactionSpecReferencesAccountTransactionAssociationConnectAction.Dispose();
+						this.transactionSpecReferencesAccountTransactionAssociationConnectAction = null;
+					}
+					if(this.categorySpecReferencesCategoryTransactionAssociationConnectAction != null)
+					{
+						this.categorySpecReferencesCategoryTransactionAssociationConnectAction.Dispose();
+						this.categorySpecReferencesCategoryTransactionAssociationConnectAction = null;
+					}
+					if(this.transactionSpecReferencesCategoryTransactionAssociationConnectAction != null)
+					{
+						this.transactionSpecReferencesCategoryTransactionAssociationConnectAction.Dispose();
+						this.transactionSpecReferencesCategoryTransactionAssociationConnectAction = null;
+					}
+					if(this.userSpecReferencesUserAccountAssociationConnectAction != null)
+					{
+						this.userSpecReferencesUserAccountAssociationConnectAction.Dispose();
+						this.userSpecReferencesUserAccountAssociationConnectAction = null;
 					}
 				}
 			}
@@ -739,25 +924,33 @@ namespace Empresa.MoneyManagerModel
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserSpecTemUserAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.CategoryTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.CategoryAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.CategorySpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserAccountAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountGroupSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.Association), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AttributeType), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -777,6 +970,30 @@ namespace Empresa.MoneyManagerModel
 				{
 					parentElement = GetParentForUserSpec((global::Empresa.MoneyManagerModel.UserSpec)childElement);
 				} else
+				if(childElement is global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)
+				{
+					parentElement = GetParentForCategoryTransactionAssociation((global::Empresa.MoneyManagerModel.CategoryTransactionAssociation)childElement);
+				} else
+				if(childElement is global::Empresa.MoneyManagerModel.CategoryAttribute)
+				{
+					parentElement = GetParentForCategoryAttribute((global::Empresa.MoneyManagerModel.CategoryAttribute)childElement);
+				} else
+				if(childElement is global::Empresa.MoneyManagerModel.CategorySpec)
+				{
+					parentElement = GetParentForCategorySpec((global::Empresa.MoneyManagerModel.CategorySpec)childElement);
+				} else
+				if(childElement is global::Empresa.MoneyManagerModel.AccountTransactionAssociation)
+				{
+					parentElement = GetParentForAccountTransactionAssociation((global::Empresa.MoneyManagerModel.AccountTransactionAssociation)childElement);
+				} else
+				if(childElement is global::Empresa.MoneyManagerModel.UserAccountAssociation)
+				{
+					parentElement = GetParentForUserAccountAssociation((global::Empresa.MoneyManagerModel.UserAccountAssociation)childElement);
+				} else
+				if(childElement is global::Empresa.MoneyManagerModel.AccountGroupSpec)
+				{
+					parentElement = GetParentForAccountGroupSpec((global::Empresa.MoneyManagerModel.AccountGroupSpec)childElement);
+				} else
 				if(childElement is global::Empresa.MoneyManagerModel.TransactionAttribute)
 				{
 					parentElement = GetParentForTransactionAttribute((global::Empresa.MoneyManagerModel.TransactionAttribute)childElement);
@@ -788,10 +1005,6 @@ namespace Empresa.MoneyManagerModel
 				if(childElement is global::Empresa.MoneyManagerModel.UserAttribute)
 				{
 					parentElement = GetParentForUserAttribute((global::Empresa.MoneyManagerModel.UserAttribute)childElement);
-				} else
-				if(childElement is global::Empresa.MoneyManagerModel.Association)
-				{
-					parentElement = GetParentForAssociation((global::Empresa.MoneyManagerModel.Association)childElement);
 				} else
 				if(childElement is global::Empresa.MoneyManagerModel.AttributeType)
 				{
@@ -842,13 +1055,6 @@ namespace Empresa.MoneyManagerModel
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Empresa.MoneyManagerModel.Model GetParentForAssociation( global::Empresa.MoneyManagerModel.Association root )
-			{
-				// Segments 0 and 1
-				global::Empresa.MoneyManagerModel.Model result = root.Model;
-				if ( result == null ) return null;
-				return result;
-			}
 			public static global::Empresa.MoneyManagerModel.Model GetParentForUserAttribute( global::Empresa.MoneyManagerModel.UserAttribute root )
 			{
 				// Segments 0 and 1
@@ -876,6 +1082,51 @@ namespace Empresa.MoneyManagerModel
 				if ( root2 == null ) return null;
 				// Segments 2 and 3
 				global::Empresa.MoneyManagerModel.Model result = root2.Model;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Empresa.MoneyManagerModel.Model GetParentForAccountGroupSpec( global::Empresa.MoneyManagerModel.AccountGroupSpec root )
+			{
+				// Segments 0 and 1
+				global::Empresa.MoneyManagerModel.Model result = root.Model;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Empresa.MoneyManagerModel.Model GetParentForUserAccountAssociation( global::Empresa.MoneyManagerModel.UserAccountAssociation root )
+			{
+				// Segments 0 and 1
+				global::Empresa.MoneyManagerModel.Model result = root.Model;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Empresa.MoneyManagerModel.Model GetParentForAccountTransactionAssociation( global::Empresa.MoneyManagerModel.AccountTransactionAssociation root )
+			{
+				// Segments 0 and 1
+				global::Empresa.MoneyManagerModel.Model result = root.Model;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Empresa.MoneyManagerModel.Model GetParentForCategorySpec( global::Empresa.MoneyManagerModel.CategorySpec root )
+			{
+				// Segments 0 and 1
+				global::Empresa.MoneyManagerModel.Model result = root.Model;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Empresa.MoneyManagerModel.Model GetParentForCategoryAttribute( global::Empresa.MoneyManagerModel.CategoryAttribute root )
+			{
+				// Segments 0 and 1
+				global::Empresa.MoneyManagerModel.CategorySpec root2 = root.CategorySpec;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::Empresa.MoneyManagerModel.Model result = root2.Model;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Empresa.MoneyManagerModel.Model GetParentForCategoryTransactionAssociation( global::Empresa.MoneyManagerModel.CategoryTransactionAssociation root )
+			{
+				// Segments 0 and 1
+				global::Empresa.MoneyManagerModel.Model result = root.Model;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -971,15 +1222,18 @@ namespace Empresa.MoneyManagerModel
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserSpecTemUserAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

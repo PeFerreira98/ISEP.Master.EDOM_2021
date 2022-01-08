@@ -967,245 +967,6 @@ namespace Empresa.MoneyManagerModel
 namespace Empresa.MoneyManagerModel
 {
 	/// <summary>
-	/// DomainRelationship ModelTemAssociation
-	/// Descrição de Empresa.MoneyManagerModel.ModelTemAssociation
-	/// </summary>
-	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelTemAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelTemAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("5ef8b147-23b4-4f75-88f0-2b0d1a54117e")]
-	public partial class ModelTemAssociation : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ModelTemAssociation domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5ef8b147, 0x23b4, 0x4f75, 0x88, 0xf0, 0x2b, 0x0d, 0x1a, 0x54, 0x11, 0x7e);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ModelTemAssociation link in the same Partition as the given Model
-		/// </summary>
-		/// <param name="source">Model to use as the source of the relationship.</param>
-		/// <param name="target">Association to use as the target of the relationship.</param>
-		public ModelTemAssociation(Model source, Association target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelTemAssociation.ModelDomainRoleId, source), new DslModeling::RoleAssignment(ModelTemAssociation.AssociationDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ModelTemAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ModelTemAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ModelTemAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ModelTemAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Model domain role code
-		
-		/// <summary>
-		/// Model domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ModelDomainRoleId = new global::System.Guid(0x173aee40, 0xf116, 0x4169, 0x9a, 0xc3, 0x37, 0x44, 0x8f, 0x80, 0xc2, 0xe5);
-		
-		/// <summary>
-		/// DomainRole Model
-		/// Descrição de Empresa.MoneyManagerModel.ModelTemAssociation.Model
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelTemAssociation/Model.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelTemAssociation/Model.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Association", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelTemAssociation/Model.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("173aee40-f116-4169-9ac3-37448f80c2e5")]
-		public virtual Model Model
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Model)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModelDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModelDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Model of a Association
-		/// <summary>
-		/// Gets Model.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Model GetModel(Association element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AssociationDomainRoleId) as Model;
-		}
-		
-		/// <summary>
-		/// Sets Model.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetModel(Association element, Model newModel)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, AssociationDomainRoleId, newModel);
-		}
-		#endregion
-		#region Association domain role code
-		
-		/// <summary>
-		/// Association domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AssociationDomainRoleId = new global::System.Guid(0xfcebb10b, 0x2866, 0x4a93, 0xa7, 0xf4, 0xde, 0x1c, 0xf6, 0x9c, 0x32, 0x64);
-		
-		/// <summary>
-		/// DomainRole Association
-		/// Descrição de Empresa.MoneyManagerModel.ModelTemAssociation.Association
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelTemAssociation/Association.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelTemAssociation/Association.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Model", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelTemAssociation/Association.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("fcebb10b-2866-4a93-a7f4-de1cf69c3264")]
-		public virtual Association Association
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Association)DslModeling::DomainRoleInfo.GetRolePlayer(this, AssociationDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AssociationDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Association of a Model
-		/// <summary>
-		/// Gets a list of Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Association> GetAssociation(Model element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(element, ModelDomainRoleId);
-		}
-		#endregion
-		#region Model link accessor
-		/// <summary>
-		/// Get the list of ModelTemAssociation links to a Model.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelTemAssociation> GetLinksToAssociation ( global::Empresa.MoneyManagerModel.Model modelInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelTemAssociation>(modelInstance, global::Empresa.MoneyManagerModel.ModelTemAssociation.ModelDomainRoleId);
-		}
-		#endregion
-		#region Association link accessor
-		/// <summary>
-		/// Get the ModelTemAssociation link to a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.ModelTemAssociation GetLinkToModel (global::Empresa.MoneyManagerModel.Association associationInstance)
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelTemAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelTemAssociation>(associationInstance, global::Empresa.MoneyManagerModel.ModelTemAssociation.AssociationDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Association not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region ModelTemAssociation instance accessors
-		
-		/// <summary>
-		/// Get any ModelTemAssociation links between a given Model and a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelTemAssociation> GetLinks( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.Association target )
-		{
-			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelTemAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelTemAssociation>();
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelTemAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelTemAssociation>(source, global::Empresa.MoneyManagerModel.ModelTemAssociation.ModelDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.ModelTemAssociation link in links )
-			{
-				if ( target.Equals(link.Association) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ModelTemAssociation link between a given Modeland a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.ModelTemAssociation GetLink( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.Association target )
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelTemAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelTemAssociation>(source, global::Empresa.MoneyManagerModel.ModelTemAssociation.ModelDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.ModelTemAssociation link in links )
-			{
-				if ( target.Equals(link.Association) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Empresa.MoneyManagerModel
-{
-	/// <summary>
 	/// DomainRelationship UserSpecTemUserAttribute
 	/// Descrição de Empresa.MoneyManagerModel.UserSpecTemUserAttribute
 	/// </summary>
@@ -1914,1450 +1675,6 @@ namespace Empresa.MoneyManagerModel
 			foreach ( global::Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute link in links )
 			{
 				if ( target.Equals(link.TransactionAttribute) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Empresa.MoneyManagerModel
-{
-	/// <summary>
-	/// DomainRelationship AssociationReferênciasTransactionSpec
-	/// Descrição de Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec
-	/// </summary>
-	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("796197ba-ed91-46a7-9401-9b955eb9e10c")]
-	public partial class AssociationReferênciasTransactionSpec : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// AssociationReferênciasTransactionSpec domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x796197ba, 0xed91, 0x46a7, 0x94, 0x01, 0x9b, 0x95, 0x5e, 0xb9, 0xe1, 0x0c);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a AssociationReferênciasTransactionSpec link in the same Partition as the given Association
-		/// </summary>
-		/// <param name="source">Association to use as the source of the relationship.</param>
-		/// <param name="target">TransactionSpec to use as the target of the relationship.</param>
-		public AssociationReferênciasTransactionSpec(Association source, TransactionSpec target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(AssociationReferênciasTransactionSpec.AssociationDomainRoleId, source), new DslModeling::RoleAssignment(AssociationReferênciasTransactionSpec.TransactionSpecDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AssociationReferênciasTransactionSpec(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AssociationReferênciasTransactionSpec(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AssociationReferênciasTransactionSpec(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AssociationReferênciasTransactionSpec(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Association domain role code
-		
-		/// <summary>
-		/// Association domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AssociationDomainRoleId = new global::System.Guid(0x7b6cef58, 0x1c87, 0x4041, 0xb8, 0x05, 0x66, 0x4f, 0x8d, 0xa2, 0xad, 0xa7);
-		
-		/// <summary>
-		/// DomainRole Association
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.Association
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec/Association.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec/Association.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "TransactionSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec/Association.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("7b6cef58-1c87-4041-b805-664f8da2ada7")]
-		public virtual Association Association
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Association)DslModeling::DomainRoleInfo.GetRolePlayer(this, AssociationDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AssociationDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Association of a TransactionSpec
-		/// <summary>
-		/// Gets a list of Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Association> GetAssociation(TransactionSpec element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(element, TransactionSpecDomainRoleId);
-		}
-		#endregion
-		#region TransactionSpec domain role code
-		
-		/// <summary>
-		/// TransactionSpec domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TransactionSpecDomainRoleId = new global::System.Guid(0x4f3cdd71, 0x71c3, 0x4b55, 0xa0, 0x1b, 0xc6, 0x15, 0x66, 0xe3, 0xe6, 0xb1);
-		
-		/// <summary>
-		/// DomainRole TransactionSpec
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.TransactionSpec
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec/TransactionSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec/TransactionSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Association", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec/TransactionSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("4f3cdd71-71c3-4b55-a01b-c61566e3e6b1")]
-		public virtual TransactionSpec TransactionSpec
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (TransactionSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, TransactionSpecDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TransactionSpecDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access TransactionSpec of a Association
-		/// <summary>
-		/// Gets TransactionSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static TransactionSpec GetTransactionSpec(Association element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AssociationDomainRoleId) as TransactionSpec;
-		}
-		
-		/// <summary>
-		/// Sets TransactionSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetTransactionSpec(Association element, TransactionSpec newTransactionSpec)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, AssociationDomainRoleId, newTransactionSpec);
-		}
-		#endregion
-		#region Association link accessor
-		/// <summary>
-		/// Get the AssociationReferênciasTransactionSpec link to a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec GetLinkToTransactionSpec (global::Empresa.MoneyManagerModel.Association associationInstance)
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec>(associationInstance, global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.AssociationDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Association not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region TransactionSpec link accessor
-		/// <summary>
-		/// Get the list of AssociationReferênciasTransactionSpec links to a TransactionSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec> GetLinksToAssociation ( global::Empresa.MoneyManagerModel.TransactionSpec transactionSpecInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec>(transactionSpecInstance, global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.TransactionSpecDomainRoleId);
-		}
-		#endregion
-		#region AssociationReferênciasTransactionSpec instance accessors
-		
-		/// <summary>
-		/// Get any AssociationReferênciasTransactionSpec links between a given Association and a TransactionSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec> GetLinks( global::Empresa.MoneyManagerModel.Association source, global::Empresa.MoneyManagerModel.TransactionSpec target )
-		{
-			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec>();
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec>(source, global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.AssociationDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec link in links )
-			{
-				if ( target.Equals(link.TransactionSpec) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one AssociationReferênciasTransactionSpec link between a given Associationand a TransactionSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec GetLink( global::Empresa.MoneyManagerModel.Association source, global::Empresa.MoneyManagerModel.TransactionSpec target )
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec>(source, global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.AssociationDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec link in links )
-			{
-				if ( target.Equals(link.TransactionSpec) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Empresa.MoneyManagerModel
-{
-	/// <summary>
-	/// DomainRelationship TransactionSpecReferênciasAssociations
-	/// Descrição de Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations
-	/// </summary>
-	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("4b64381b-243a-42db-8af3-238ffd74ad2c")]
-	public partial class TransactionSpecReferênciasAssociations : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// TransactionSpecReferênciasAssociations domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x4b64381b, 0x243a, 0x42db, 0x8a, 0xf3, 0x23, 0x8f, 0xfd, 0x74, 0xad, 0x2c);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a TransactionSpecReferênciasAssociations link in the same Partition as the given TransactionSpec
-		/// </summary>
-		/// <param name="source">TransactionSpec to use as the source of the relationship.</param>
-		/// <param name="target">Association to use as the target of the relationship.</param>
-		public TransactionSpecReferênciasAssociations(TransactionSpec source, Association target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TransactionSpecReferênciasAssociations.TransactionSpecDomainRoleId, source), new DslModeling::RoleAssignment(TransactionSpecReferênciasAssociations.AssociationDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TransactionSpecReferênciasAssociations(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TransactionSpecReferênciasAssociations(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TransactionSpecReferênciasAssociations(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TransactionSpecReferênciasAssociations(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region TransactionSpec domain role code
-		
-		/// <summary>
-		/// TransactionSpec domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TransactionSpecDomainRoleId = new global::System.Guid(0x8ef12b82, 0xe0d5, 0x4061, 0x85, 0xb4, 0x74, 0x2b, 0xab, 0x02, 0x83, 0x03);
-		
-		/// <summary>
-		/// DomainRole TransactionSpec
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.TransactionSpec
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations/TransactionSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations/TransactionSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Associations", PropertyDisplayNameKey="Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations/TransactionSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("8ef12b82-e0d5-4061-85b4-742bab028303")]
-		public virtual TransactionSpec TransactionSpec
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (TransactionSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, TransactionSpecDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TransactionSpecDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access TransactionSpecs of a Association
-		/// <summary>
-		/// Gets TransactionSpecs.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static TransactionSpec GetTransactionSpecs(Association element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AssociationDomainRoleId) as TransactionSpec;
-		}
-		
-		/// <summary>
-		/// Sets TransactionSpecs.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetTransactionSpecs(Association element, TransactionSpec newTransactionSpec)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, AssociationDomainRoleId, newTransactionSpec);
-		}
-		#endregion
-		#region Association domain role code
-		
-		/// <summary>
-		/// Association domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AssociationDomainRoleId = new global::System.Guid(0x24f96325, 0xa860, 0x4e3e, 0x91, 0x4b, 0x44, 0x71, 0x0d, 0x1b, 0xb0, 0xb5);
-		
-		/// <summary>
-		/// DomainRole Association
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.Association
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations/Association.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations/Association.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TransactionSpecs", PropertyDisplayNameKey="Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations/Association.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("24f96325-a860-4e3e-914b-44710d1bb0b5")]
-		public virtual Association Association
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Association)DslModeling::DomainRoleInfo.GetRolePlayer(this, AssociationDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AssociationDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Associations of a TransactionSpec
-		/// <summary>
-		/// Gets a list of Associations.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Association> GetAssociations(TransactionSpec element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(element, TransactionSpecDomainRoleId);
-		}
-		#endregion
-		#region TransactionSpec link accessor
-		/// <summary>
-		/// Get the list of TransactionSpecReferênciasAssociations links to a TransactionSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations> GetLinksToAssociations ( global::Empresa.MoneyManagerModel.TransactionSpec transactionSpecInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations>(transactionSpecInstance, global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.TransactionSpecDomainRoleId);
-		}
-		#endregion
-		#region Association link accessor
-		/// <summary>
-		/// Get the TransactionSpecReferênciasAssociations link to a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations GetLinkToTransactionSpecs (global::Empresa.MoneyManagerModel.Association associationInstance)
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations>(associationInstance, global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.AssociationDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Association not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region TransactionSpecReferênciasAssociations instance accessors
-		
-		/// <summary>
-		/// Get any TransactionSpecReferênciasAssociations links between a given TransactionSpec and a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations> GetLinks( global::Empresa.MoneyManagerModel.TransactionSpec source, global::Empresa.MoneyManagerModel.Association target )
-		{
-			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations>();
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations>(source, global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.TransactionSpecDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations link in links )
-			{
-				if ( target.Equals(link.Association) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one TransactionSpecReferênciasAssociations link between a given TransactionSpecand a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations GetLink( global::Empresa.MoneyManagerModel.TransactionSpec source, global::Empresa.MoneyManagerModel.Association target )
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations>(source, global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.TransactionSpecDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations link in links )
-			{
-				if ( target.Equals(link.Association) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Empresa.MoneyManagerModel
-{
-	/// <summary>
-	/// DomainRelationship AssociationReferênciasAccountSpec
-	/// Descrição de Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec
-	/// </summary>
-	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("c635805d-a0f6-4fce-abe8-9f25345d4125")]
-	public partial class AssociationReferênciasAccountSpec : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// AssociationReferênciasAccountSpec domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc635805d, 0xa0f6, 0x4fce, 0xab, 0xe8, 0x9f, 0x25, 0x34, 0x5d, 0x41, 0x25);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a AssociationReferênciasAccountSpec link in the same Partition as the given Association
-		/// </summary>
-		/// <param name="source">Association to use as the source of the relationship.</param>
-		/// <param name="target">AccountSpec to use as the target of the relationship.</param>
-		public AssociationReferênciasAccountSpec(Association source, AccountSpec target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(AssociationReferênciasAccountSpec.AssociationDomainRoleId, source), new DslModeling::RoleAssignment(AssociationReferênciasAccountSpec.AccountSpecDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AssociationReferênciasAccountSpec(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AssociationReferênciasAccountSpec(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AssociationReferênciasAccountSpec(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AssociationReferênciasAccountSpec(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Association domain role code
-		
-		/// <summary>
-		/// Association domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AssociationDomainRoleId = new global::System.Guid(0x9d8aa203, 0xe622, 0x41ee, 0xb9, 0x28, 0x42, 0xbe, 0x3a, 0xee, 0xd9, 0xae);
-		
-		/// <summary>
-		/// DomainRole Association
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.Association
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec/Association.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec/Association.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AccountSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec/Association.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("9d8aa203-e622-41ee-b928-42be3aeed9ae")]
-		public virtual Association Association
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Association)DslModeling::DomainRoleInfo.GetRolePlayer(this, AssociationDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AssociationDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Association of a AccountSpec
-		/// <summary>
-		/// Gets a list of Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Association> GetAssociation(AccountSpec element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(element, AccountSpecDomainRoleId);
-		}
-		#endregion
-		#region AccountSpec domain role code
-		
-		/// <summary>
-		/// AccountSpec domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AccountSpecDomainRoleId = new global::System.Guid(0x5855cd2e, 0xdf52, 0x48a7, 0xa5, 0x98, 0x53, 0xb1, 0x24, 0x60, 0x1f, 0x12);
-		
-		/// <summary>
-		/// DomainRole AccountSpec
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AccountSpec
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec/AccountSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec/AccountSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Association", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec/AccountSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("5855cd2e-df52-48a7-a598-53b124601f12")]
-		public virtual AccountSpec AccountSpec
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (AccountSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountSpecDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountSpecDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access AccountSpec of a Association
-		/// <summary>
-		/// Gets AccountSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static AccountSpec GetAccountSpec(Association element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AssociationDomainRoleId) as AccountSpec;
-		}
-		
-		/// <summary>
-		/// Sets AccountSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetAccountSpec(Association element, AccountSpec newAccountSpec)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, AssociationDomainRoleId, newAccountSpec);
-		}
-		#endregion
-		#region Association link accessor
-		/// <summary>
-		/// Get the AssociationReferênciasAccountSpec link to a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec GetLinkToAccountSpec (global::Empresa.MoneyManagerModel.Association associationInstance)
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec>(associationInstance, global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AssociationDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Association not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region AccountSpec link accessor
-		/// <summary>
-		/// Get the list of AssociationReferênciasAccountSpec links to a AccountSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec> GetLinksToAssociation ( global::Empresa.MoneyManagerModel.AccountSpec accountSpecInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec>(accountSpecInstance, global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AccountSpecDomainRoleId);
-		}
-		#endregion
-		#region AssociationReferênciasAccountSpec instance accessors
-		
-		/// <summary>
-		/// Get any AssociationReferênciasAccountSpec links between a given Association and a AccountSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec> GetLinks( global::Empresa.MoneyManagerModel.Association source, global::Empresa.MoneyManagerModel.AccountSpec target )
-		{
-			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec>();
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec>(source, global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AssociationDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec link in links )
-			{
-				if ( target.Equals(link.AccountSpec) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one AssociationReferênciasAccountSpec link between a given Associationand a AccountSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec GetLink( global::Empresa.MoneyManagerModel.Association source, global::Empresa.MoneyManagerModel.AccountSpec target )
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec>(source, global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AssociationDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec link in links )
-			{
-				if ( target.Equals(link.AccountSpec) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Empresa.MoneyManagerModel
-{
-	/// <summary>
-	/// DomainRelationship AccountSpecReferênciasAssociations
-	/// Descrição de Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations
-	/// </summary>
-	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("cb63e87c-d795-466b-a30d-65991a60c78b")]
-	public partial class AccountSpecReferênciasAssociations : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// AccountSpecReferênciasAssociations domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xcb63e87c, 0xd795, 0x466b, 0xa3, 0x0d, 0x65, 0x99, 0x1a, 0x60, 0xc7, 0x8b);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a AccountSpecReferênciasAssociations link in the same Partition as the given AccountSpec
-		/// </summary>
-		/// <param name="source">AccountSpec to use as the source of the relationship.</param>
-		/// <param name="target">Association to use as the target of the relationship.</param>
-		public AccountSpecReferênciasAssociations(AccountSpec source, Association target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(AccountSpecReferênciasAssociations.AccountSpecDomainRoleId, source), new DslModeling::RoleAssignment(AccountSpecReferênciasAssociations.AssociationDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AccountSpecReferênciasAssociations(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AccountSpecReferênciasAssociations(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AccountSpecReferênciasAssociations(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AccountSpecReferênciasAssociations(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region AccountSpec domain role code
-		
-		/// <summary>
-		/// AccountSpec domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AccountSpecDomainRoleId = new global::System.Guid(0x89ac9ac6, 0xa03a, 0x4876, 0x85, 0x44, 0xdc, 0xfc, 0xe5, 0xcb, 0x53, 0x5a);
-		
-		/// <summary>
-		/// DomainRole AccountSpec
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AccountSpec
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations/AccountSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations/AccountSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Associations", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations/AccountSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("89ac9ac6-a03a-4876-8544-dcfce5cb535a")]
-		public virtual AccountSpec AccountSpec
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (AccountSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountSpecDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountSpecDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access AccountSpecs of a Association
-		/// <summary>
-		/// Gets AccountSpecs.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static AccountSpec GetAccountSpecs(Association element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AssociationDomainRoleId) as AccountSpec;
-		}
-		
-		/// <summary>
-		/// Sets AccountSpecs.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetAccountSpecs(Association element, AccountSpec newAccountSpec)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, AssociationDomainRoleId, newAccountSpec);
-		}
-		#endregion
-		#region Association domain role code
-		
-		/// <summary>
-		/// Association domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AssociationDomainRoleId = new global::System.Guid(0xc47bc27e, 0x8d69, 0x43a7, 0xb4, 0xae, 0x43, 0xa2, 0xe1, 0x62, 0x7e, 0xa9);
-		
-		/// <summary>
-		/// DomainRole Association
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.Association
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations/Association.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations/Association.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "AccountSpecs", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations/Association.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("c47bc27e-8d69-43a7-b4ae-43a2e1627ea9")]
-		public virtual Association Association
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Association)DslModeling::DomainRoleInfo.GetRolePlayer(this, AssociationDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AssociationDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Associations of a AccountSpec
-		/// <summary>
-		/// Gets a list of Associations.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Association> GetAssociations(AccountSpec element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(element, AccountSpecDomainRoleId);
-		}
-		#endregion
-		#region AccountSpec link accessor
-		/// <summary>
-		/// Get the list of AccountSpecReferênciasAssociations links to a AccountSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations> GetLinksToAssociations ( global::Empresa.MoneyManagerModel.AccountSpec accountSpecInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations>(accountSpecInstance, global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AccountSpecDomainRoleId);
-		}
-		#endregion
-		#region Association link accessor
-		/// <summary>
-		/// Get the AccountSpecReferênciasAssociations link to a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations GetLinkToAccountSpecs (global::Empresa.MoneyManagerModel.Association associationInstance)
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations>(associationInstance, global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AssociationDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Association not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region AccountSpecReferênciasAssociations instance accessors
-		
-		/// <summary>
-		/// Get any AccountSpecReferênciasAssociations links between a given AccountSpec and a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations> GetLinks( global::Empresa.MoneyManagerModel.AccountSpec source, global::Empresa.MoneyManagerModel.Association target )
-		{
-			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations>();
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations>(source, global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AccountSpecDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations link in links )
-			{
-				if ( target.Equals(link.Association) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one AccountSpecReferênciasAssociations link between a given AccountSpecand a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations GetLink( global::Empresa.MoneyManagerModel.AccountSpec source, global::Empresa.MoneyManagerModel.Association target )
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations>(source, global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AccountSpecDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations link in links )
-			{
-				if ( target.Equals(link.Association) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Empresa.MoneyManagerModel
-{
-	/// <summary>
-	/// DomainRelationship AssociationReferênciasUserSpec
-	/// Descrição de Empresa.MoneyManagerModel.AssociationReferênciasUserSpec
-	/// </summary>
-	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("10d611a1-a88d-41c4-8b60-6d1546764963")]
-	public partial class AssociationReferênciasUserSpec : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// AssociationReferênciasUserSpec domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x10d611a1, 0xa88d, 0x41c4, 0x8b, 0x60, 0x6d, 0x15, 0x46, 0x76, 0x49, 0x63);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a AssociationReferênciasUserSpec link in the same Partition as the given Association
-		/// </summary>
-		/// <param name="source">Association to use as the source of the relationship.</param>
-		/// <param name="target">UserSpec to use as the target of the relationship.</param>
-		public AssociationReferênciasUserSpec(Association source, UserSpec target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(AssociationReferênciasUserSpec.AssociationDomainRoleId, source), new DslModeling::RoleAssignment(AssociationReferênciasUserSpec.UserSpecDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AssociationReferênciasUserSpec(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AssociationReferênciasUserSpec(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AssociationReferênciasUserSpec(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AssociationReferênciasUserSpec(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Association domain role code
-		
-		/// <summary>
-		/// Association domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AssociationDomainRoleId = new global::System.Guid(0x38e4ae2c, 0x8288, 0x4143, 0x99, 0xe3, 0xc5, 0x9b, 0x2f, 0x10, 0xb5, 0xc9);
-		
-		/// <summary>
-		/// DomainRole Association
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.Association
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationReferênciasUserSpec/Association.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationReferênciasUserSpec/Association.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "UserSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AssociationReferênciasUserSpec/Association.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("38e4ae2c-8288-4143-99e3-c59b2f10b5c9")]
-		public virtual Association Association
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Association)DslModeling::DomainRoleInfo.GetRolePlayer(this, AssociationDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AssociationDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Association of a UserSpec
-		/// <summary>
-		/// Gets a list of Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Association> GetAssociation(UserSpec element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(element, UserSpecDomainRoleId);
-		}
-		#endregion
-		#region UserSpec domain role code
-		
-		/// <summary>
-		/// UserSpec domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid UserSpecDomainRoleId = new global::System.Guid(0x2267e780, 0x2caf, 0x4b42, 0x98, 0xca, 0x5b, 0xd1, 0x60, 0x89, 0x62, 0xc2);
-		
-		/// <summary>
-		/// DomainRole UserSpec
-		/// Descrição de Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.UserSpec
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationReferênciasUserSpec/UserSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationReferênciasUserSpec/UserSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Association", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AssociationReferênciasUserSpec/UserSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("2267e780-2caf-4b42-98ca-5bd1608962c2")]
-		public virtual UserSpec UserSpec
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (UserSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, UserSpecDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, UserSpecDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access UserSpec of a Association
-		/// <summary>
-		/// Gets UserSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static UserSpec GetUserSpec(Association element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AssociationDomainRoleId) as UserSpec;
-		}
-		
-		/// <summary>
-		/// Sets UserSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetUserSpec(Association element, UserSpec newUserSpec)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, AssociationDomainRoleId, newUserSpec);
-		}
-		#endregion
-		#region Association link accessor
-		/// <summary>
-		/// Get the AssociationReferênciasUserSpec link to a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec GetLinkToUserSpec (global::Empresa.MoneyManagerModel.Association associationInstance)
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec>(associationInstance, global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.AssociationDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Association not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region UserSpec link accessor
-		/// <summary>
-		/// Get the list of AssociationReferênciasUserSpec links to a UserSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec> GetLinksToAssociation ( global::Empresa.MoneyManagerModel.UserSpec userSpecInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec>(userSpecInstance, global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.UserSpecDomainRoleId);
-		}
-		#endregion
-		#region AssociationReferênciasUserSpec instance accessors
-		
-		/// <summary>
-		/// Get any AssociationReferênciasUserSpec links between a given Association and a UserSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec> GetLinks( global::Empresa.MoneyManagerModel.Association source, global::Empresa.MoneyManagerModel.UserSpec target )
-		{
-			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec>();
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec>(source, global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.AssociationDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec link in links )
-			{
-				if ( target.Equals(link.UserSpec) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one AssociationReferênciasUserSpec link between a given Associationand a UserSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec GetLink( global::Empresa.MoneyManagerModel.Association source, global::Empresa.MoneyManagerModel.UserSpec target )
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec>(source, global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.AssociationDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec link in links )
-			{
-				if ( target.Equals(link.UserSpec) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Empresa.MoneyManagerModel
-{
-	/// <summary>
-	/// DomainRelationship UserSpecReferênciasAssociations
-	/// Descrição de Empresa.MoneyManagerModel.UserSpecReferênciasAssociations
-	/// </summary>
-	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("995cf682-20b4-4924-bf7d-ccc0edcc0f9b")]
-	public partial class UserSpecReferênciasAssociations : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// UserSpecReferênciasAssociations domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x995cf682, 0x20b4, 0x4924, 0xbf, 0x7d, 0xcc, 0xc0, 0xed, 0xcc, 0x0f, 0x9b);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a UserSpecReferênciasAssociations link in the same Partition as the given UserSpec
-		/// </summary>
-		/// <param name="source">UserSpec to use as the source of the relationship.</param>
-		/// <param name="target">Association to use as the target of the relationship.</param>
-		public UserSpecReferênciasAssociations(UserSpec source, Association target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(UserSpecReferênciasAssociations.UserSpecDomainRoleId, source), new DslModeling::RoleAssignment(UserSpecReferênciasAssociations.AssociationDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public UserSpecReferênciasAssociations(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public UserSpecReferênciasAssociations(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public UserSpecReferênciasAssociations(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public UserSpecReferênciasAssociations(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region UserSpec domain role code
-		
-		/// <summary>
-		/// UserSpec domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid UserSpecDomainRoleId = new global::System.Guid(0x8d6483b3, 0x728e, 0x470a, 0x8d, 0x17, 0x6f, 0x28, 0x8f, 0x40, 0x56, 0x5e);
-		
-		/// <summary>
-		/// DomainRole UserSpec
-		/// Descrição de Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.UserSpec
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserSpecReferênciasAssociations/UserSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserSpecReferênciasAssociations/UserSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Associations", PropertyDisplayNameKey="Empresa.MoneyManagerModel.UserSpecReferênciasAssociations/UserSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("8d6483b3-728e-470a-8d17-6f288f40565e")]
-		public virtual UserSpec UserSpec
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (UserSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, UserSpecDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, UserSpecDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access UserSpecs of a Association
-		/// <summary>
-		/// Gets UserSpecs.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static UserSpec GetUserSpecs(Association element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AssociationDomainRoleId) as UserSpec;
-		}
-		
-		/// <summary>
-		/// Sets UserSpecs.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetUserSpecs(Association element, UserSpec newUserSpec)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, AssociationDomainRoleId, newUserSpec);
-		}
-		#endregion
-		#region Association domain role code
-		
-		/// <summary>
-		/// Association domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AssociationDomainRoleId = new global::System.Guid(0x787e33e0, 0xa216, 0x4cff, 0x95, 0x6f, 0x11, 0xd2, 0xa7, 0xec, 0x32, 0xb5);
-		
-		/// <summary>
-		/// DomainRole Association
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.Association
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserSpecReferênciasAssociations/Association.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserSpecReferênciasAssociations/Association.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "UserSpecs", PropertyDisplayNameKey="Empresa.MoneyManagerModel.UserSpecReferênciasAssociations/Association.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("787e33e0-a216-4cff-956f-11d2a7ec32b5")]
-		public virtual Association Association
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Association)DslModeling::DomainRoleInfo.GetRolePlayer(this, AssociationDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AssociationDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Associations of a UserSpec
-		/// <summary>
-		/// Gets a list of Associations.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Association> GetAssociations(UserSpec element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(element, UserSpecDomainRoleId);
-		}
-		#endregion
-		#region UserSpec link accessor
-		/// <summary>
-		/// Get the list of UserSpecReferênciasAssociations links to a UserSpec.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations> GetLinksToAssociations ( global::Empresa.MoneyManagerModel.UserSpec userSpecInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations>(userSpecInstance, global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.UserSpecDomainRoleId);
-		}
-		#endregion
-		#region Association link accessor
-		/// <summary>
-		/// Get the UserSpecReferênciasAssociations link to a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations GetLinkToUserSpecs (global::Empresa.MoneyManagerModel.Association associationInstance)
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations>(associationInstance, global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.AssociationDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Association not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region UserSpecReferênciasAssociations instance accessors
-		
-		/// <summary>
-		/// Get any UserSpecReferênciasAssociations links between a given UserSpec and a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations> GetLinks( global::Empresa.MoneyManagerModel.UserSpec source, global::Empresa.MoneyManagerModel.Association target )
-		{
-			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations>();
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations>(source, global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.UserSpecDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations link in links )
-			{
-				if ( target.Equals(link.Association) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one UserSpecReferênciasAssociations link between a given UserSpecand a Association.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations GetLink( global::Empresa.MoneyManagerModel.UserSpec source, global::Empresa.MoneyManagerModel.Association target )
-		{
-			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations>(source, global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.UserSpecDomainRoleId);
-			foreach ( global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations link in links )
-			{
-				if ( target.Equals(link.Association) )
 				{
 					return link;
 				}
@@ -4139,6 +2456,3402 @@ namespace Empresa.MoneyManagerModel
 			foreach ( global::Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes link in links )
 			{
 				if ( target.Equals(link.AttributeType) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship ModelHasAccountGroupSpec
+	/// Description for Empresa.MoneyManagerModel.ModelHasAccountGroupSpec
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("99e383d8-3931-42e7-ba2b-d96f8206be40")]
+	public partial class ModelHasAccountGroupSpec : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelHasAccountGroupSpec domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x99e383d8, 0x3931, 0x42e7, 0xba, 0x2b, 0xd9, 0x6f, 0x82, 0x06, 0xbe, 0x40);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelHasAccountGroupSpec link in the same Partition as the given Model
+		/// </summary>
+		/// <param name="source">Model to use as the source of the relationship.</param>
+		/// <param name="target">AccountGroupSpec to use as the target of the relationship.</param>
+		public ModelHasAccountGroupSpec(Model source, AccountGroupSpec target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelHasAccountGroupSpec.ModelDomainRoleId, source), new DslModeling::RoleAssignment(ModelHasAccountGroupSpec.AccountGroupSpecDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasAccountGroupSpec(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasAccountGroupSpec(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasAccountGroupSpec(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasAccountGroupSpec(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Model domain role code
+		
+		/// <summary>
+		/// Model domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ModelDomainRoleId = new global::System.Guid(0x4f87e073, 0xfbdb, 0x4269, 0xa5, 0xcc, 0x21, 0xf9, 0xf2, 0x56, 0xcc, 0x28);
+		
+		/// <summary>
+		/// DomainRole Model
+		/// Description for Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.Model
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/Model.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/Model.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AccountGroupSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/Model.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("4f87e073-fbdb-4269-a5cc-21f9f256cc28")]
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Model)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModelDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModelDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Model of a AccountGroupSpec
+		/// <summary>
+		/// Gets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Model GetModel(AccountGroupSpec element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AccountGroupSpecDomainRoleId) as Model;
+		}
+		
+		/// <summary>
+		/// Sets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetModel(AccountGroupSpec element, Model newModel)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AccountGroupSpecDomainRoleId, newModel);
+		}
+		#endregion
+		#region AccountGroupSpec domain role code
+		
+		/// <summary>
+		/// AccountGroupSpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AccountGroupSpecDomainRoleId = new global::System.Guid(0xd425e915, 0xcfc9, 0x4180, 0xa0, 0xbf, 0x8a, 0x15, 0x63, 0xdb, 0xc7, 0x1e);
+		
+		/// <summary>
+		/// DomainRole AccountGroupSpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.AccountGroupSpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/AccountGroupSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/AccountGroupSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Model", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/AccountGroupSpec.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("d425e915-cfc9-4180-a0bf-8a1563dbc71e")]
+		public virtual AccountGroupSpec AccountGroupSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AccountGroupSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountGroupSpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountGroupSpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AccountGroupSpec of a Model
+		/// <summary>
+		/// Gets a list of AccountGroupSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<AccountGroupSpec> GetAccountGroupSpec(Model element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<AccountGroupSpec>, AccountGroupSpec>(element, ModelDomainRoleId);
+		}
+		#endregion
+		#region Model link accessor
+		/// <summary>
+		/// Get the list of ModelHasAccountGroupSpec links to a Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec> GetLinksToAccountGroupSpec ( global::Empresa.MoneyManagerModel.Model modelInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec>(modelInstance, global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.ModelDomainRoleId);
+		}
+		#endregion
+		#region AccountGroupSpec link accessor
+		/// <summary>
+		/// Get the ModelHasAccountGroupSpec link to a AccountGroupSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec GetLinkToModel (global::Empresa.MoneyManagerModel.AccountGroupSpec accountGroupSpecInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec>(accountGroupSpecInstance, global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.AccountGroupSpecDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AccountGroupSpec not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ModelHasAccountGroupSpec instance accessors
+		
+		/// <summary>
+		/// Get any ModelHasAccountGroupSpec links between a given Model and a AccountGroupSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec> GetLinks( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.AccountGroupSpec target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec>(source, global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec link in links )
+			{
+				if ( target.Equals(link.AccountGroupSpec) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelHasAccountGroupSpec link between a given Modeland a AccountGroupSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec GetLink( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.AccountGroupSpec target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec>(source, global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec link in links )
+			{
+				if ( target.Equals(link.AccountGroupSpec) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship AccountGroupSpecReferencesAccountSpec
+	/// Description for Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("d99df43e-92a3-4179-821c-09cee7606f1d")]
+	public partial class AccountGroupSpecReferencesAccountSpec : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// AccountGroupSpecReferencesAccountSpec domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd99df43e, 0x92a3, 0x4179, 0x82, 0x1c, 0x09, 0xce, 0xe7, 0x60, 0x6f, 0x1d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a AccountGroupSpecReferencesAccountSpec link in the same Partition as the given AccountGroupSpec
+		/// </summary>
+		/// <param name="source">AccountGroupSpec to use as the source of the relationship.</param>
+		/// <param name="target">AccountSpec to use as the target of the relationship.</param>
+		public AccountGroupSpecReferencesAccountSpec(AccountGroupSpec source, AccountSpec target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(AccountGroupSpecReferencesAccountSpec.AccountGroupSpecDomainRoleId, source), new DslModeling::RoleAssignment(AccountGroupSpecReferencesAccountSpec.AccountSpecDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public AccountGroupSpecReferencesAccountSpec(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public AccountGroupSpecReferencesAccountSpec(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public AccountGroupSpecReferencesAccountSpec(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public AccountGroupSpecReferencesAccountSpec(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region AccountGroupSpec domain role code
+		
+		/// <summary>
+		/// AccountGroupSpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AccountGroupSpecDomainRoleId = new global::System.Guid(0x39b23029, 0x5322, 0x4eb3, 0xb1, 0x2a, 0xc5, 0x2b, 0xd8, 0xb6, 0x94, 0xcc);
+		
+		/// <summary>
+		/// DomainRole AccountGroupSpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountGroupSpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountGroupSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountGroupSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AccountSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountGroupSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("39b23029-5322-4eb3-b12a-c52bd8b694cc")]
+		public virtual AccountGroupSpec AccountGroupSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AccountGroupSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountGroupSpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountGroupSpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AccountGroupSpec of a AccountSpec
+		/// <summary>
+		/// Gets AccountGroupSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static AccountGroupSpec GetAccountGroupSpec(AccountSpec element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AccountSpecDomainRoleId) as AccountGroupSpec;
+		}
+		
+		/// <summary>
+		/// Sets AccountGroupSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetAccountGroupSpec(AccountSpec element, AccountGroupSpec newAccountGroupSpec)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AccountSpecDomainRoleId, newAccountGroupSpec);
+		}
+		#endregion
+		#region AccountSpec domain role code
+		
+		/// <summary>
+		/// AccountSpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AccountSpecDomainRoleId = new global::System.Guid(0x0438b51c, 0x7363, 0x4c69, 0x9d, 0xa2, 0x65, 0xdd, 0x94, 0x3b, 0x7e, 0xf2);
+		
+		/// <summary>
+		/// DomainRole AccountSpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountSpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "AccountGroupSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("0438b51c-7363-4c69-9da2-65dd943b7ef2")]
+		public virtual AccountSpec AccountSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AccountSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountSpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountSpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AccountSpec of a AccountGroupSpec
+		/// <summary>
+		/// Gets a list of AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<AccountSpec> GetAccountSpec(AccountGroupSpec element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<AccountSpec>, AccountSpec>(element, AccountGroupSpecDomainRoleId);
+		}
+		#endregion
+		#region AccountGroupSpec link accessor
+		/// <summary>
+		/// Get the list of AccountGroupSpecReferencesAccountSpec links to a AccountGroupSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec> GetLinksToAccountSpec ( global::Empresa.MoneyManagerModel.AccountGroupSpec accountGroupSpecInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec>(accountGroupSpecInstance, global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountGroupSpecDomainRoleId);
+		}
+		#endregion
+		#region AccountSpec link accessor
+		/// <summary>
+		/// Get the AccountGroupSpecReferencesAccountSpec link to a AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec GetLinkToAccountGroupSpec (global::Empresa.MoneyManagerModel.AccountSpec accountSpecInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec>(accountSpecInstance, global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountSpecDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AccountSpec not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region AccountGroupSpecReferencesAccountSpec instance accessors
+		
+		/// <summary>
+		/// Get any AccountGroupSpecReferencesAccountSpec links between a given AccountGroupSpec and a AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec> GetLinks( global::Empresa.MoneyManagerModel.AccountGroupSpec source, global::Empresa.MoneyManagerModel.AccountSpec target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec>(source, global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountGroupSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec link in links )
+			{
+				if ( target.Equals(link.AccountSpec) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one AccountGroupSpecReferencesAccountSpec link between a given AccountGroupSpecand a AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec GetLink( global::Empresa.MoneyManagerModel.AccountGroupSpec source, global::Empresa.MoneyManagerModel.AccountSpec target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec>(source, global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountGroupSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec link in links )
+			{
+				if ( target.Equals(link.AccountSpec) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship ModelHasUserAccountAssociation
+	/// Description for Empresa.MoneyManagerModel.ModelHasUserAccountAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("920962a0-571e-497d-bc99-10cc71adb2e6")]
+	public partial class ModelHasUserAccountAssociation : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelHasUserAccountAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x920962a0, 0x571e, 0x497d, 0xbc, 0x99, 0x10, 0xcc, 0x71, 0xad, 0xb2, 0xe6);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelHasUserAccountAssociation link in the same Partition as the given Model
+		/// </summary>
+		/// <param name="source">Model to use as the source of the relationship.</param>
+		/// <param name="target">UserAccountAssociation to use as the target of the relationship.</param>
+		public ModelHasUserAccountAssociation(Model source, UserAccountAssociation target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelHasUserAccountAssociation.ModelDomainRoleId, source), new DslModeling::RoleAssignment(ModelHasUserAccountAssociation.UserAccountAssociationDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasUserAccountAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasUserAccountAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasUserAccountAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasUserAccountAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Model domain role code
+		
+		/// <summary>
+		/// Model domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ModelDomainRoleId = new global::System.Guid(0x90f8735c, 0xcf90, 0x4a6c, 0x92, 0xd1, 0x7c, 0x61, 0xab, 0xfa, 0x2a, 0x25);
+		
+		/// <summary>
+		/// DomainRole Model
+		/// Description for Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.Model
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/Model.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/Model.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "UserAccountAssociation", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/Model.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("90f8735c-cf90-4a6c-92d1-7c61abfa2a25")]
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Model)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModelDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModelDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Model of a UserAccountAssociation
+		/// <summary>
+		/// Gets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Model GetModel(UserAccountAssociation element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, UserAccountAssociationDomainRoleId) as Model;
+		}
+		
+		/// <summary>
+		/// Sets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetModel(UserAccountAssociation element, Model newModel)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, UserAccountAssociationDomainRoleId, newModel);
+		}
+		#endregion
+		#region UserAccountAssociation domain role code
+		
+		/// <summary>
+		/// UserAccountAssociation domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid UserAccountAssociationDomainRoleId = new global::System.Guid(0x7bc95540, 0x6634, 0x4291, 0x98, 0xe7, 0x92, 0xf6, 0xd3, 0x8a, 0x40, 0x81);
+		
+		/// <summary>
+		/// DomainRole UserAccountAssociation
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.UserAccountAssociation
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/UserAccountAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/UserAccountAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Model", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/UserAccountAssociation.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("7bc95540-6634-4291-98e7-92f6d38a4081")]
+		public virtual UserAccountAssociation UserAccountAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (UserAccountAssociation)DslModeling::DomainRoleInfo.GetRolePlayer(this, UserAccountAssociationDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, UserAccountAssociationDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access UserAccountAssociation of a Model
+		/// <summary>
+		/// Gets a list of UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<UserAccountAssociation> GetUserAccountAssociation(Model element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<UserAccountAssociation>, UserAccountAssociation>(element, ModelDomainRoleId);
+		}
+		#endregion
+		#region Model link accessor
+		/// <summary>
+		/// Get the list of ModelHasUserAccountAssociation links to a Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation> GetLinksToUserAccountAssociation ( global::Empresa.MoneyManagerModel.Model modelInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation>(modelInstance, global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.ModelDomainRoleId);
+		}
+		#endregion
+		#region UserAccountAssociation link accessor
+		/// <summary>
+		/// Get the ModelHasUserAccountAssociation link to a UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation GetLinkToModel (global::Empresa.MoneyManagerModel.UserAccountAssociation userAccountAssociationInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation>(userAccountAssociationInstance, global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.UserAccountAssociationDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of UserAccountAssociation not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ModelHasUserAccountAssociation instance accessors
+		
+		/// <summary>
+		/// Get any ModelHasUserAccountAssociation links between a given Model and a UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation> GetLinks( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.UserAccountAssociation target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation>(source, global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation link in links )
+			{
+				if ( target.Equals(link.UserAccountAssociation) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelHasUserAccountAssociation link between a given Modeland a UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation GetLink( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.UserAccountAssociation target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation>(source, global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation link in links )
+			{
+				if ( target.Equals(link.UserAccountAssociation) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship ModelHasAccountTransactionAssociation
+	/// Description for Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("b7777fe8-1b83-4599-b308-ae59f8eb442c")]
+	public partial class ModelHasAccountTransactionAssociation : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelHasAccountTransactionAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb7777fe8, 0x1b83, 0x4599, 0xb3, 0x08, 0xae, 0x59, 0xf8, 0xeb, 0x44, 0x2c);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelHasAccountTransactionAssociation link in the same Partition as the given Model
+		/// </summary>
+		/// <param name="source">Model to use as the source of the relationship.</param>
+		/// <param name="target">AccountTransactionAssociation to use as the target of the relationship.</param>
+		public ModelHasAccountTransactionAssociation(Model source, AccountTransactionAssociation target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelHasAccountTransactionAssociation.ModelDomainRoleId, source), new DslModeling::RoleAssignment(ModelHasAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasAccountTransactionAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasAccountTransactionAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasAccountTransactionAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasAccountTransactionAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Model domain role code
+		
+		/// <summary>
+		/// Model domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ModelDomainRoleId = new global::System.Guid(0x06f2f990, 0xe5de, 0x48e5, 0x8a, 0xf3, 0x61, 0xc3, 0x7d, 0x6b, 0xb0, 0x29);
+		
+		/// <summary>
+		/// DomainRole Model
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.Model
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/Model.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/Model.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AccountTransactionAssociation", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/Model.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("06f2f990-e5de-48e5-8af3-61c37d6bb029")]
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Model)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModelDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModelDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Model of a AccountTransactionAssociation
+		/// <summary>
+		/// Gets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Model GetModel(AccountTransactionAssociation element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AccountTransactionAssociationDomainRoleId) as Model;
+		}
+		
+		/// <summary>
+		/// Sets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetModel(AccountTransactionAssociation element, Model newModel)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AccountTransactionAssociationDomainRoleId, newModel);
+		}
+		#endregion
+		#region AccountTransactionAssociation domain role code
+		
+		/// <summary>
+		/// AccountTransactionAssociation domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AccountTransactionAssociationDomainRoleId = new global::System.Guid(0xa7805d24, 0x9f71, 0x4c6c, 0xb9, 0x20, 0x13, 0x0f, 0xa3, 0x56, 0x10, 0x3c);
+		
+		/// <summary>
+		/// DomainRole AccountTransactionAssociation
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.AccountTransactionAssociation
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/AccountTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/AccountTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Model", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/AccountTransactionAssociation.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("a7805d24-9f71-4c6c-b920-130fa356103c")]
+		public virtual AccountTransactionAssociation AccountTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AccountTransactionAssociation)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountTransactionAssociationDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountTransactionAssociationDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AccountTransactionAssociation of a Model
+		/// <summary>
+		/// Gets a list of AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<AccountTransactionAssociation> GetAccountTransactionAssociation(Model element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<AccountTransactionAssociation>, AccountTransactionAssociation>(element, ModelDomainRoleId);
+		}
+		#endregion
+		#region Model link accessor
+		/// <summary>
+		/// Get the list of ModelHasAccountTransactionAssociation links to a Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation> GetLinksToAccountTransactionAssociation ( global::Empresa.MoneyManagerModel.Model modelInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation>(modelInstance, global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.ModelDomainRoleId);
+		}
+		#endregion
+		#region AccountTransactionAssociation link accessor
+		/// <summary>
+		/// Get the ModelHasAccountTransactionAssociation link to a AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation GetLinkToModel (global::Empresa.MoneyManagerModel.AccountTransactionAssociation accountTransactionAssociationInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation>(accountTransactionAssociationInstance, global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AccountTransactionAssociation not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ModelHasAccountTransactionAssociation instance accessors
+		
+		/// <summary>
+		/// Get any ModelHasAccountTransactionAssociation links between a given Model and a AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation> GetLinks( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.AccountTransactionAssociation target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation>(source, global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.AccountTransactionAssociation) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelHasAccountTransactionAssociation link between a given Modeland a AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation GetLink( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.AccountTransactionAssociation target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation>(source, global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.AccountTransactionAssociation) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship ModelHasCategorySpec
+	/// Description for Empresa.MoneyManagerModel.ModelHasCategorySpec
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasCategorySpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasCategorySpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("360a5d5f-42b0-49dd-8726-49ba2d615250")]
+	public partial class ModelHasCategorySpec : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelHasCategorySpec domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x360a5d5f, 0x42b0, 0x49dd, 0x87, 0x26, 0x49, 0xba, 0x2d, 0x61, 0x52, 0x50);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelHasCategorySpec link in the same Partition as the given Model
+		/// </summary>
+		/// <param name="source">Model to use as the source of the relationship.</param>
+		/// <param name="target">CategorySpec to use as the target of the relationship.</param>
+		public ModelHasCategorySpec(Model source, CategorySpec target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelHasCategorySpec.ModelDomainRoleId, source), new DslModeling::RoleAssignment(ModelHasCategorySpec.CategorySpecDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasCategorySpec(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasCategorySpec(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasCategorySpec(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasCategorySpec(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Model domain role code
+		
+		/// <summary>
+		/// Model domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ModelDomainRoleId = new global::System.Guid(0xcf1a6a0b, 0x3705, 0x4ee1, 0xad, 0xa8, 0xac, 0x34, 0x27, 0xc5, 0x89, 0x5e);
+		
+		/// <summary>
+		/// DomainRole Model
+		/// Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.Model
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CategorySpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("cf1a6a0b-3705-4ee1-ada8-ac3427c5895e")]
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Model)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModelDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModelDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Model of a CategorySpec
+		/// <summary>
+		/// Gets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Model GetModel(CategorySpec element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CategorySpecDomainRoleId) as Model;
+		}
+		
+		/// <summary>
+		/// Sets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetModel(CategorySpec element, Model newModel)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, CategorySpecDomainRoleId, newModel);
+		}
+		#endregion
+		#region CategorySpec domain role code
+		
+		/// <summary>
+		/// CategorySpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CategorySpecDomainRoleId = new global::System.Guid(0xf09d5f86, 0xb964, 0x4a57, 0xaf, 0xb5, 0x72, 0xd1, 0xa3, 0x71, 0x3d, 0x5f);
+		
+		/// <summary>
+		/// DomainRole CategorySpec
+		/// Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.CategorySpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasCategorySpec/CategorySpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasCategorySpec/CategorySpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Model", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasCategorySpec/CategorySpec.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("f09d5f86-b964-4a57-afb5-72d1a3713d5f")]
+		public virtual CategorySpec CategorySpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (CategorySpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, CategorySpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CategorySpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CategorySpec of a Model
+		/// <summary>
+		/// Gets a list of CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<CategorySpec> GetCategorySpec(Model element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<CategorySpec>, CategorySpec>(element, ModelDomainRoleId);
+		}
+		#endregion
+		#region Model link accessor
+		/// <summary>
+		/// Get the list of ModelHasCategorySpec links to a Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasCategorySpec> GetLinksToCategorySpec ( global::Empresa.MoneyManagerModel.Model modelInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategorySpec>(modelInstance, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId);
+		}
+		#endregion
+		#region CategorySpec link accessor
+		/// <summary>
+		/// Get the ModelHasCategorySpec link to a CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasCategorySpec GetLinkToModel (global::Empresa.MoneyManagerModel.CategorySpec categorySpecInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasCategorySpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategorySpec>(categorySpecInstance, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.CategorySpecDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CategorySpec not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ModelHasCategorySpec instance accessors
+		
+		/// <summary>
+		/// Get any ModelHasCategorySpec links between a given Model and a CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasCategorySpec> GetLinks( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.CategorySpec target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasCategorySpec> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasCategorySpec>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasCategorySpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategorySpec>(source, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasCategorySpec link in links )
+			{
+				if ( target.Equals(link.CategorySpec) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelHasCategorySpec link between a given Modeland a CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasCategorySpec GetLink( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.CategorySpec target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasCategorySpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategorySpec>(source, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasCategorySpec link in links )
+			{
+				if ( target.Equals(link.CategorySpec) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship CategoryAttributeReferencesAttributeType1
+	/// Description for
+	/// Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("3e04be3d-a61d-4bd2-87ca-7402a38e28fb")]
+	public partial class CategoryAttributeReferencesAttributeType1 : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// CategoryAttributeReferencesAttributeType1 domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x3e04be3d, 0xa61d, 0x4bd2, 0x87, 0xca, 0x74, 0x02, 0xa3, 0x8e, 0x28, 0xfb);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a CategoryAttributeReferencesAttributeType1 link in the same Partition as the given CategoryAttribute
+		/// </summary>
+		/// <param name="source">CategoryAttribute to use as the source of the relationship.</param>
+		/// <param name="target">AttributeType to use as the target of the relationship.</param>
+		public CategoryAttributeReferencesAttributeType1(CategoryAttribute source, AttributeType target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(CategoryAttributeReferencesAttributeType1.CategoryAttributeDomainRoleId, source), new DslModeling::RoleAssignment(CategoryAttributeReferencesAttributeType1.AttributeTypeDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CategoryAttributeReferencesAttributeType1(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CategoryAttributeReferencesAttributeType1(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CategoryAttributeReferencesAttributeType1(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CategoryAttributeReferencesAttributeType1(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region CategoryAttribute domain role code
+		
+		/// <summary>
+		/// CategoryAttribute domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CategoryAttributeDomainRoleId = new global::System.Guid(0x1b3d70aa, 0x863f, 0x4108, 0x9d, 0x13, 0x8b, 0x70, 0x49, 0x41, 0x8f, 0x3e);
+		
+		/// <summary>
+		/// DomainRole CategoryAttribute
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.CategoryAttribute
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/CategoryAttribute.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/CategoryAttribute.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AttributeType1", PropertyDisplayNameKey="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/CategoryAttribute.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("1b3d70aa-863f-4108-9d13-8b7049418f3e")]
+		public virtual CategoryAttribute CategoryAttribute
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (CategoryAttribute)DslModeling::DomainRoleInfo.GetRolePlayer(this, CategoryAttributeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CategoryAttributeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CategoryAttribute1 of a AttributeType
+		/// <summary>
+		/// Gets CategoryAttribute1.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static CategoryAttribute GetCategoryAttribute1(AttributeType element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AttributeTypeDomainRoleId) as CategoryAttribute;
+		}
+		
+		/// <summary>
+		/// Sets CategoryAttribute1.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetCategoryAttribute1(AttributeType element, CategoryAttribute newCategoryAttribute)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AttributeTypeDomainRoleId, newCategoryAttribute);
+		}
+		#endregion
+		#region AttributeType domain role code
+		
+		/// <summary>
+		/// AttributeType domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AttributeTypeDomainRoleId = new global::System.Guid(0x12f4979a, 0xcfde, 0x4bbe, 0xab, 0x64, 0xd4, 0x72, 0x15, 0xb9, 0x3b, 0x5a);
+		
+		/// <summary>
+		/// DomainRole AttributeType
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.AttributeType
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/AttributeType.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/AttributeType.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "CategoryAttribute1", PropertyDisplayNameKey="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/AttributeType.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("12f4979a-cfde-4bbe-ab64-d47215b93b5a")]
+		public virtual AttributeType AttributeType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AttributeType)DslModeling::DomainRoleInfo.GetRolePlayer(this, AttributeTypeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AttributeTypeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AttributeType1 of a CategoryAttribute
+		/// <summary>
+		/// Gets AttributeType1.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static AttributeType GetAttributeType1(CategoryAttribute element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CategoryAttributeDomainRoleId) as AttributeType;
+		}
+		
+		/// <summary>
+		/// Sets AttributeType1.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetAttributeType1(CategoryAttribute element, AttributeType newAttributeType)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, CategoryAttributeDomainRoleId, newAttributeType);
+		}
+		#endregion
+		#region CategoryAttribute link accessor
+		/// <summary>
+		/// Get the CategoryAttributeReferencesAttributeType1 link to a CategoryAttribute.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1 GetLinkToAttributeType1 (global::Empresa.MoneyManagerModel.CategoryAttribute categoryAttributeInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1>(categoryAttributeInstance, global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.CategoryAttributeDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CategoryAttribute not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region AttributeType link accessor
+		/// <summary>
+		/// Get the CategoryAttributeReferencesAttributeType1 link to a AttributeType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1 GetLinkToCategoryAttribute1 (global::Empresa.MoneyManagerModel.AttributeType attributeTypeInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1>(attributeTypeInstance, global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.AttributeTypeDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AttributeType not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region CategoryAttributeReferencesAttributeType1 instance accessors
+		
+		/// <summary>
+		/// Get any CategoryAttributeReferencesAttributeType1 links between a given CategoryAttribute and a AttributeType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1> GetLinks( global::Empresa.MoneyManagerModel.CategoryAttribute source, global::Empresa.MoneyManagerModel.AttributeType target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1>(source, global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.CategoryAttributeDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1 link in links )
+			{
+				if ( target.Equals(link.AttributeType) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one CategoryAttributeReferencesAttributeType1 link between a given CategoryAttributeand a AttributeType.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1 GetLink( global::Empresa.MoneyManagerModel.CategoryAttribute source, global::Empresa.MoneyManagerModel.AttributeType target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1>(source, global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.CategoryAttributeDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1 link in links )
+			{
+				if ( target.Equals(link.AttributeType) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship CategorySpecHasCategoryAttribute
+	/// Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("532da53a-eefd-43db-ac78-44eee34ba305")]
+	public partial class CategorySpecHasCategoryAttribute : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// CategorySpecHasCategoryAttribute domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x532da53a, 0xeefd, 0x43db, 0xac, 0x78, 0x44, 0xee, 0xe3, 0x4b, 0xa3, 0x05);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a CategorySpecHasCategoryAttribute link in the same Partition as the given CategorySpec
+		/// </summary>
+		/// <param name="source">CategorySpec to use as the source of the relationship.</param>
+		/// <param name="target">CategoryAttribute to use as the target of the relationship.</param>
+		public CategorySpecHasCategoryAttribute(CategorySpec source, CategoryAttribute target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId, source), new DslModeling::RoleAssignment(CategorySpecHasCategoryAttribute.CategoryAttributeDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CategorySpecHasCategoryAttribute(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CategorySpecHasCategoryAttribute(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CategorySpecHasCategoryAttribute(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CategorySpecHasCategoryAttribute(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region CategorySpec domain role code
+		
+		/// <summary>
+		/// CategorySpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CategorySpecDomainRoleId = new global::System.Guid(0x8cfe4cd6, 0x1264, 0x4981, 0x8d, 0x61, 0xd3, 0x92, 0x6c, 0xd4, 0x79, 0x10);
+		
+		/// <summary>
+		/// DomainRole CategorySpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CategoryAttribute", PropertyDisplayNameKey="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainObjectId("8cfe4cd6-1264-4981-8d61-d3926cd47910")]
+		public virtual CategorySpec CategorySpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (CategorySpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, CategorySpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CategorySpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CategorySpec of a CategoryAttribute
+		/// <summary>
+		/// Gets CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static CategorySpec GetCategorySpec(CategoryAttribute element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CategoryAttributeDomainRoleId) as CategorySpec;
+		}
+		
+		/// <summary>
+		/// Sets CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetCategorySpec(CategoryAttribute element, CategorySpec newCategorySpec)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, CategoryAttributeDomainRoleId, newCategorySpec);
+		}
+		#endregion
+		#region CategoryAttribute domain role code
+		
+		/// <summary>
+		/// CategoryAttribute domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CategoryAttributeDomainRoleId = new global::System.Guid(0xef2d7540, 0xbf42, 0x474d, 0x9d, 0x5a, 0x5d, 0x43, 0xdf, 0x94, 0xe8, 0x09);
+		
+		/// <summary>
+		/// DomainRole CategoryAttribute
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategoryAttribute
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategoryAttribute.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategoryAttribute.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "CategorySpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategoryAttribute.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("ef2d7540-bf42-474d-9d5a-5d43df94e809")]
+		public virtual CategoryAttribute CategoryAttribute
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (CategoryAttribute)DslModeling::DomainRoleInfo.GetRolePlayer(this, CategoryAttributeDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CategoryAttributeDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CategoryAttribute of a CategorySpec
+		/// <summary>
+		/// Gets a list of CategoryAttribute.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<CategoryAttribute> GetCategoryAttribute(CategorySpec element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryAttribute>, CategoryAttribute>(element, CategorySpecDomainRoleId);
+		}
+		#endregion
+		#region CategorySpec link accessor
+		/// <summary>
+		/// Get the list of CategorySpecHasCategoryAttribute links to a CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute> GetLinksToCategoryAttribute ( global::Empresa.MoneyManagerModel.CategorySpec categorySpecInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute>(categorySpecInstance, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId);
+		}
+		#endregion
+		#region CategoryAttribute link accessor
+		/// <summary>
+		/// Get the CategorySpecHasCategoryAttribute link to a CategoryAttribute.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute GetLinkToCategorySpec (global::Empresa.MoneyManagerModel.CategoryAttribute categoryAttributeInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute>(categoryAttributeInstance, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategoryAttributeDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CategoryAttribute not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region CategorySpecHasCategoryAttribute instance accessors
+		
+		/// <summary>
+		/// Get any CategorySpecHasCategoryAttribute links between a given CategorySpec and a CategoryAttribute.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute> GetLinks( global::Empresa.MoneyManagerModel.CategorySpec source, global::Empresa.MoneyManagerModel.CategoryAttribute target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute>(source, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute link in links )
+			{
+				if ( target.Equals(link.CategoryAttribute) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one CategorySpecHasCategoryAttribute link between a given CategorySpecand a CategoryAttribute.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute GetLink( global::Empresa.MoneyManagerModel.CategorySpec source, global::Empresa.MoneyManagerModel.CategoryAttribute target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute>(source, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute link in links )
+			{
+				if ( target.Equals(link.CategoryAttribute) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship UserSpecReferencesUserAccountAssociation
+	/// Description for
+	/// Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("a1a93c3a-e30b-4042-9d83-8c781d4a9f6d")]
+	public partial class UserSpecReferencesUserAccountAssociation : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// UserSpecReferencesUserAccountAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa1a93c3a, 0xe30b, 0x4042, 0x9d, 0x83, 0x8c, 0x78, 0x1d, 0x4a, 0x9f, 0x6d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a UserSpecReferencesUserAccountAssociation link in the same Partition as the given UserSpec
+		/// </summary>
+		/// <param name="source">UserSpec to use as the source of the relationship.</param>
+		/// <param name="target">UserAccountAssociation to use as the target of the relationship.</param>
+		public UserSpecReferencesUserAccountAssociation(UserSpec source, UserAccountAssociation target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(UserSpecReferencesUserAccountAssociation.UserSpecDomainRoleId, source), new DslModeling::RoleAssignment(UserSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public UserSpecReferencesUserAccountAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public UserSpecReferencesUserAccountAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public UserSpecReferencesUserAccountAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public UserSpecReferencesUserAccountAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region UserSpec domain role code
+		
+		/// <summary>
+		/// UserSpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid UserSpecDomainRoleId = new global::System.Guid(0xe14d30bc, 0xb90e, 0x497f, 0x99, 0xfe, 0x84, 0x9d, 0x4e, 0xab, 0x56, 0x73);
+		
+		/// <summary>
+		/// DomainRole UserSpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserSpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "UserAccountAssociation", PropertyDisplayNameKey="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("e14d30bc-b90e-497f-99fe-849d4eab5673")]
+		public virtual UserSpec UserSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (UserSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, UserSpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, UserSpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access UserSpec of a UserAccountAssociation
+		/// <summary>
+		/// Gets UserSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static UserSpec GetUserSpec(UserAccountAssociation element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, UserAccountAssociationDomainRoleId) as UserSpec;
+		}
+		
+		/// <summary>
+		/// Sets UserSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetUserSpec(UserAccountAssociation element, UserSpec newUserSpec)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, UserAccountAssociationDomainRoleId, newUserSpec);
+		}
+		#endregion
+		#region UserAccountAssociation domain role code
+		
+		/// <summary>
+		/// UserAccountAssociation domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid UserAccountAssociationDomainRoleId = new global::System.Guid(0x03029638, 0xb9fc, 0x486a, 0x86, 0x12, 0x91, 0x66, 0x66, 0x68, 0x7b, 0x8a);
+		
+		/// <summary>
+		/// DomainRole UserAccountAssociation
+		/// Description for
+		/// Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserAccountAssociation
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserAccountAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserAccountAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "UserSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserAccountAssociation.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("03029638-b9fc-486a-8612-916666687b8a")]
+		public virtual UserAccountAssociation UserAccountAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (UserAccountAssociation)DslModeling::DomainRoleInfo.GetRolePlayer(this, UserAccountAssociationDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, UserAccountAssociationDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access UserAccountAssociation of a UserSpec
+		/// <summary>
+		/// Gets a list of UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<UserAccountAssociation> GetUserAccountAssociation(UserSpec element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<UserAccountAssociation>, UserAccountAssociation>(element, UserSpecDomainRoleId);
+		}
+		#endregion
+		#region UserSpec link accessor
+		/// <summary>
+		/// Get the list of UserSpecReferencesUserAccountAssociation links to a UserSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation> GetLinksToUserAccountAssociation ( global::Empresa.MoneyManagerModel.UserSpec userSpecInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation>(userSpecInstance, global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserSpecDomainRoleId);
+		}
+		#endregion
+		#region UserAccountAssociation link accessor
+		/// <summary>
+		/// Get the UserSpecReferencesUserAccountAssociation link to a UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation GetLinkToUserSpec (global::Empresa.MoneyManagerModel.UserAccountAssociation userAccountAssociationInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation>(userAccountAssociationInstance, global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of UserAccountAssociation not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region UserSpecReferencesUserAccountAssociation instance accessors
+		
+		/// <summary>
+		/// Get any UserSpecReferencesUserAccountAssociation links between a given UserSpec and a UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation> GetLinks( global::Empresa.MoneyManagerModel.UserSpec source, global::Empresa.MoneyManagerModel.UserAccountAssociation target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation>(source, global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation link in links )
+			{
+				if ( target.Equals(link.UserAccountAssociation) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one UserSpecReferencesUserAccountAssociation link between a given UserSpecand a UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation GetLink( global::Empresa.MoneyManagerModel.UserSpec source, global::Empresa.MoneyManagerModel.UserAccountAssociation target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation>(source, global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation link in links )
+			{
+				if ( target.Equals(link.UserAccountAssociation) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship AccountSpecReferencesUserAccountAssociation
+	/// Description for
+	/// Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("e04bdff6-6651-441d-9bbe-c852b0778434")]
+	public partial class AccountSpecReferencesUserAccountAssociation : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// AccountSpecReferencesUserAccountAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xe04bdff6, 0x6651, 0x441d, 0x9b, 0xbe, 0xc8, 0x52, 0xb0, 0x77, 0x84, 0x34);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a AccountSpecReferencesUserAccountAssociation link in the same Partition as the given AccountSpec
+		/// </summary>
+		/// <param name="source">AccountSpec to use as the source of the relationship.</param>
+		/// <param name="target">UserAccountAssociation to use as the target of the relationship.</param>
+		public AccountSpecReferencesUserAccountAssociation(AccountSpec source, UserAccountAssociation target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(AccountSpecReferencesUserAccountAssociation.AccountSpecDomainRoleId, source), new DslModeling::RoleAssignment(AccountSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public AccountSpecReferencesUserAccountAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public AccountSpecReferencesUserAccountAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public AccountSpecReferencesUserAccountAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public AccountSpecReferencesUserAccountAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region AccountSpec domain role code
+		
+		/// <summary>
+		/// AccountSpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AccountSpecDomainRoleId = new global::System.Guid(0xa0ac3676, 0x4db0, 0x4d5a, 0x94, 0x04, 0xe1, 0x83, 0xd6, 0x20, 0xa7, 0xb8);
+		
+		/// <summary>
+		/// DomainRole AccountSpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.AccountSpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/AccountSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/AccountSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "UserAccountAssociation", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/AccountSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("a0ac3676-4db0-4d5a-9404-e183d620a7b8")]
+		public virtual AccountSpec AccountSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AccountSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountSpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountSpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AccountSpec of a UserAccountAssociation
+		/// <summary>
+		/// Gets AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static AccountSpec GetAccountSpec(UserAccountAssociation element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, UserAccountAssociationDomainRoleId) as AccountSpec;
+		}
+		
+		/// <summary>
+		/// Sets AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetAccountSpec(UserAccountAssociation element, AccountSpec newAccountSpec)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, UserAccountAssociationDomainRoleId, newAccountSpec);
+		}
+		#endregion
+		#region UserAccountAssociation domain role code
+		
+		/// <summary>
+		/// UserAccountAssociation domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid UserAccountAssociationDomainRoleId = new global::System.Guid(0xd5bd2829, 0xcaba, 0x4079, 0x89, 0x9e, 0x98, 0xd4, 0x6a, 0x53, 0x47, 0xd3);
+		
+		/// <summary>
+		/// DomainRole UserAccountAssociation
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.UserAccountAssociation
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/UserAccountAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/UserAccountAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "AccountSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/UserAccountAssociation.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("d5bd2829-caba-4079-899e-98d46a5347d3")]
+		public virtual UserAccountAssociation UserAccountAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (UserAccountAssociation)DslModeling::DomainRoleInfo.GetRolePlayer(this, UserAccountAssociationDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, UserAccountAssociationDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access UserAccountAssociation of a AccountSpec
+		/// <summary>
+		/// Gets a list of UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<UserAccountAssociation> GetUserAccountAssociation(AccountSpec element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<UserAccountAssociation>, UserAccountAssociation>(element, AccountSpecDomainRoleId);
+		}
+		#endregion
+		#region AccountSpec link accessor
+		/// <summary>
+		/// Get the list of AccountSpecReferencesUserAccountAssociation links to a AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation> GetLinksToUserAccountAssociation ( global::Empresa.MoneyManagerModel.AccountSpec accountSpecInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation>(accountSpecInstance, global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.AccountSpecDomainRoleId);
+		}
+		#endregion
+		#region UserAccountAssociation link accessor
+		/// <summary>
+		/// Get the AccountSpecReferencesUserAccountAssociation link to a UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation GetLinkToAccountSpec (global::Empresa.MoneyManagerModel.UserAccountAssociation userAccountAssociationInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation>(userAccountAssociationInstance, global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of UserAccountAssociation not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region AccountSpecReferencesUserAccountAssociation instance accessors
+		
+		/// <summary>
+		/// Get any AccountSpecReferencesUserAccountAssociation links between a given AccountSpec and a UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation> GetLinks( global::Empresa.MoneyManagerModel.AccountSpec source, global::Empresa.MoneyManagerModel.UserAccountAssociation target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation>(source, global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.AccountSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation link in links )
+			{
+				if ( target.Equals(link.UserAccountAssociation) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one AccountSpecReferencesUserAccountAssociation link between a given AccountSpecand a UserAccountAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation GetLink( global::Empresa.MoneyManagerModel.AccountSpec source, global::Empresa.MoneyManagerModel.UserAccountAssociation target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation>(source, global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.AccountSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation link in links )
+			{
+				if ( target.Equals(link.UserAccountAssociation) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship AccountSpecReferencesAccountTransactionAssociation
+	/// Description for
+	/// Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("9689c1fa-aa4a-4b29-9f43-a032b09838dd")]
+	public partial class AccountSpecReferencesAccountTransactionAssociation : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// AccountSpecReferencesAccountTransactionAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9689c1fa, 0xaa4a, 0x4b29, 0x9f, 0x43, 0xa0, 0x32, 0xb0, 0x98, 0x38, 0xdd);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a AccountSpecReferencesAccountTransactionAssociation link in the same Partition as the given AccountSpec
+		/// </summary>
+		/// <param name="source">AccountSpec to use as the source of the relationship.</param>
+		/// <param name="target">AccountTransactionAssociation to use as the target of the relationship.</param>
+		public AccountSpecReferencesAccountTransactionAssociation(AccountSpec source, AccountTransactionAssociation target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(AccountSpecReferencesAccountTransactionAssociation.AccountSpecDomainRoleId, source), new DslModeling::RoleAssignment(AccountSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public AccountSpecReferencesAccountTransactionAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public AccountSpecReferencesAccountTransactionAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public AccountSpecReferencesAccountTransactionAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public AccountSpecReferencesAccountTransactionAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region AccountSpec domain role code
+		
+		/// <summary>
+		/// AccountSpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AccountSpecDomainRoleId = new global::System.Guid(0xeebc9430, 0x316e, 0x4023, 0x82, 0x70, 0x2a, 0x67, 0xbb, 0xc4, 0x72, 0xc7);
+		
+		/// <summary>
+		/// DomainRole AccountSpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountSpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AccountTransactionAssociation", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("eebc9430-316e-4023-8270-2a67bbc472c7")]
+		public virtual AccountSpec AccountSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AccountSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountSpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountSpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AccountSpec of a AccountTransactionAssociation
+		/// <summary>
+		/// Gets AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static AccountSpec GetAccountSpec(AccountTransactionAssociation element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AccountTransactionAssociationDomainRoleId) as AccountSpec;
+		}
+		
+		/// <summary>
+		/// Sets AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetAccountSpec(AccountTransactionAssociation element, AccountSpec newAccountSpec)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AccountTransactionAssociationDomainRoleId, newAccountSpec);
+		}
+		#endregion
+		#region AccountTransactionAssociation domain role code
+		
+		/// <summary>
+		/// AccountTransactionAssociation domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AccountTransactionAssociationDomainRoleId = new global::System.Guid(0xc8f50b41, 0x3ac5, 0x4082, 0xa7, 0x70, 0x6a, 0x42, 0x05, 0x54, 0xfb, 0xd9);
+		
+		/// <summary>
+		/// DomainRole AccountTransactionAssociation
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountTransactionAssociation
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "AccountSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("c8f50b41-3ac5-4082-a770-6a420554fbd9")]
+		public virtual AccountTransactionAssociation AccountTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AccountTransactionAssociation)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountTransactionAssociationDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountTransactionAssociationDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AccountTransactionAssociation of a AccountSpec
+		/// <summary>
+		/// Gets a list of AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<AccountTransactionAssociation> GetAccountTransactionAssociation(AccountSpec element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<AccountTransactionAssociation>, AccountTransactionAssociation>(element, AccountSpecDomainRoleId);
+		}
+		#endregion
+		#region AccountSpec link accessor
+		/// <summary>
+		/// Get the list of AccountSpecReferencesAccountTransactionAssociation links to a AccountSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation> GetLinksToAccountTransactionAssociation ( global::Empresa.MoneyManagerModel.AccountSpec accountSpecInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation>(accountSpecInstance, global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountSpecDomainRoleId);
+		}
+		#endregion
+		#region AccountTransactionAssociation link accessor
+		/// <summary>
+		/// Get the AccountSpecReferencesAccountTransactionAssociation link to a AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation GetLinkToAccountSpec (global::Empresa.MoneyManagerModel.AccountTransactionAssociation accountTransactionAssociationInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation>(accountTransactionAssociationInstance, global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AccountTransactionAssociation not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region AccountSpecReferencesAccountTransactionAssociation instance accessors
+		
+		/// <summary>
+		/// Get any AccountSpecReferencesAccountTransactionAssociation links between a given AccountSpec and a AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation> GetLinks( global::Empresa.MoneyManagerModel.AccountSpec source, global::Empresa.MoneyManagerModel.AccountTransactionAssociation target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation>(source, global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.AccountTransactionAssociation) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one AccountSpecReferencesAccountTransactionAssociation link between a given AccountSpecand a AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation GetLink( global::Empresa.MoneyManagerModel.AccountSpec source, global::Empresa.MoneyManagerModel.AccountTransactionAssociation target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation>(source, global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.AccountTransactionAssociation) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship TransactionSpecReferencesAccountTransactionAssociation
+	/// Description for
+	/// Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("204530af-12c9-4a89-a396-f43fb4b0c981")]
+	public partial class TransactionSpecReferencesAccountTransactionAssociation : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TransactionSpecReferencesAccountTransactionAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x204530af, 0x12c9, 0x4a89, 0xa3, 0x96, 0xf4, 0x3f, 0xb4, 0xb0, 0xc9, 0x81);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TransactionSpecReferencesAccountTransactionAssociation link in the same Partition as the given TransactionSpec
+		/// </summary>
+		/// <param name="source">TransactionSpec to use as the source of the relationship.</param>
+		/// <param name="target">AccountTransactionAssociation to use as the target of the relationship.</param>
+		public TransactionSpecReferencesAccountTransactionAssociation(TransactionSpec source, AccountTransactionAssociation target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TransactionSpecReferencesAccountTransactionAssociation.TransactionSpecDomainRoleId, source), new DslModeling::RoleAssignment(TransactionSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TransactionSpecReferencesAccountTransactionAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TransactionSpecReferencesAccountTransactionAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TransactionSpecReferencesAccountTransactionAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TransactionSpecReferencesAccountTransactionAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TransactionSpec domain role code
+		
+		/// <summary>
+		/// TransactionSpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TransactionSpecDomainRoleId = new global::System.Guid(0xa7e67384, 0xbcfe, 0x4532, 0x9b, 0xaa, 0x7a, 0x4a, 0x12, 0x08, 0x0d, 0xae);
+		
+		/// <summary>
+		/// DomainRole TransactionSpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.TransactionSpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/TransactionSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/TransactionSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AccountTransactionAssociation", PropertyDisplayNameKey="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/TransactionSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("a7e67384-bcfe-4532-9baa-7a4a12080dae")]
+		public virtual TransactionSpec TransactionSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (TransactionSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, TransactionSpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TransactionSpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access TransactionSpec of a AccountTransactionAssociation
+		/// <summary>
+		/// Gets TransactionSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static TransactionSpec GetTransactionSpec(AccountTransactionAssociation element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AccountTransactionAssociationDomainRoleId) as TransactionSpec;
+		}
+		
+		/// <summary>
+		/// Sets TransactionSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTransactionSpec(AccountTransactionAssociation element, TransactionSpec newTransactionSpec)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AccountTransactionAssociationDomainRoleId, newTransactionSpec);
+		}
+		#endregion
+		#region AccountTransactionAssociation domain role code
+		
+		/// <summary>
+		/// AccountTransactionAssociation domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AccountTransactionAssociationDomainRoleId = new global::System.Guid(0xe0728564, 0x4fcb, 0x4e66, 0xb3, 0xa3, 0x0f, 0xdc, 0x97, 0x12, 0xe3, 0xce);
+		
+		/// <summary>
+		/// DomainRole AccountTransactionAssociation
+		/// Description for
+		/// Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.AccountTransactionAssociation
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TransactionSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("e0728564-4fcb-4e66-b3a3-0fdc9712e3ce")]
+		public virtual AccountTransactionAssociation AccountTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AccountTransactionAssociation)DslModeling::DomainRoleInfo.GetRolePlayer(this, AccountTransactionAssociationDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AccountTransactionAssociationDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AccountTransactionAssociation of a TransactionSpec
+		/// <summary>
+		/// Gets a list of AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<AccountTransactionAssociation> GetAccountTransactionAssociation(TransactionSpec element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<AccountTransactionAssociation>, AccountTransactionAssociation>(element, TransactionSpecDomainRoleId);
+		}
+		#endregion
+		#region TransactionSpec link accessor
+		/// <summary>
+		/// Get the list of TransactionSpecReferencesAccountTransactionAssociation links to a TransactionSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation> GetLinksToAccountTransactionAssociation ( global::Empresa.MoneyManagerModel.TransactionSpec transactionSpecInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation>(transactionSpecInstance, global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.TransactionSpecDomainRoleId);
+		}
+		#endregion
+		#region AccountTransactionAssociation link accessor
+		/// <summary>
+		/// Get the TransactionSpecReferencesAccountTransactionAssociation link to a AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation GetLinkToTransactionSpec (global::Empresa.MoneyManagerModel.AccountTransactionAssociation accountTransactionAssociationInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation>(accountTransactionAssociationInstance, global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AccountTransactionAssociation not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TransactionSpecReferencesAccountTransactionAssociation instance accessors
+		
+		/// <summary>
+		/// Get any TransactionSpecReferencesAccountTransactionAssociation links between a given TransactionSpec and a AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation> GetLinks( global::Empresa.MoneyManagerModel.TransactionSpec source, global::Empresa.MoneyManagerModel.AccountTransactionAssociation target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation>(source, global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.TransactionSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.AccountTransactionAssociation) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TransactionSpecReferencesAccountTransactionAssociation link between a given TransactionSpecand a AccountTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation GetLink( global::Empresa.MoneyManagerModel.TransactionSpec source, global::Empresa.MoneyManagerModel.AccountTransactionAssociation target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation>(source, global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.TransactionSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.AccountTransactionAssociation) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship ModelHasCategoryTransactionAssociation
+	/// Description for Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("3bd00fec-d312-4548-8166-28384c1b8007")]
+	public partial class ModelHasCategoryTransactionAssociation : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModelHasCategoryTransactionAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x3bd00fec, 0xd312, 0x4548, 0x81, 0x66, 0x28, 0x38, 0x4c, 0x1b, 0x80, 0x07);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModelHasCategoryTransactionAssociation link in the same Partition as the given Model
+		/// </summary>
+		/// <param name="source">Model to use as the source of the relationship.</param>
+		/// <param name="target">CategoryTransactionAssociation to use as the target of the relationship.</param>
+		public ModelHasCategoryTransactionAssociation(Model source, CategoryTransactionAssociation target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModelHasCategoryTransactionAssociation.ModelDomainRoleId, source), new DslModeling::RoleAssignment(ModelHasCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasCategoryTransactionAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasCategoryTransactionAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModelHasCategoryTransactionAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModelHasCategoryTransactionAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Model domain role code
+		
+		/// <summary>
+		/// Model domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ModelDomainRoleId = new global::System.Guid(0x0a9b3567, 0x41b2, 0x465c, 0xb8, 0x19, 0xcb, 0xf1, 0xb7, 0x42, 0x3e, 0xe3);
+		
+		/// <summary>
+		/// DomainRole Model
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.Model
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/Model.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/Model.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CategoryTransactionAssociation", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/Model.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("0a9b3567-41b2-465c-b819-cbf1b7423ee3")]
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Model)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModelDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModelDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Model of a CategoryTransactionAssociation
+		/// <summary>
+		/// Gets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Model GetModel(CategoryTransactionAssociation element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CategoryTransactionAssociationDomainRoleId) as Model;
+		}
+		
+		/// <summary>
+		/// Sets Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetModel(CategoryTransactionAssociation element, Model newModel)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, CategoryTransactionAssociationDomainRoleId, newModel);
+		}
+		#endregion
+		#region CategoryTransactionAssociation domain role code
+		
+		/// <summary>
+		/// CategoryTransactionAssociation domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CategoryTransactionAssociationDomainRoleId = new global::System.Guid(0x121d68c5, 0x17e0, 0x4106, 0x91, 0x49, 0xa6, 0x70, 0xeb, 0x78, 0x1b, 0x59);
+		
+		/// <summary>
+		/// DomainRole CategoryTransactionAssociation
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.CategoryTransactionAssociation
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/CategoryTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/CategoryTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Model", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/CategoryTransactionAssociation.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("121d68c5-17e0-4106-9149-a670eb781b59")]
+		public virtual CategoryTransactionAssociation CategoryTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (CategoryTransactionAssociation)DslModeling::DomainRoleInfo.GetRolePlayer(this, CategoryTransactionAssociationDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CategoryTransactionAssociationDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CategoryTransactionAssociation of a Model
+		/// <summary>
+		/// Gets a list of CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<CategoryTransactionAssociation> GetCategoryTransactionAssociation(Model element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryTransactionAssociation>, CategoryTransactionAssociation>(element, ModelDomainRoleId);
+		}
+		#endregion
+		#region Model link accessor
+		/// <summary>
+		/// Get the list of ModelHasCategoryTransactionAssociation links to a Model.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation> GetLinksToCategoryTransactionAssociation ( global::Empresa.MoneyManagerModel.Model modelInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation>(modelInstance, global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.ModelDomainRoleId);
+		}
+		#endregion
+		#region CategoryTransactionAssociation link accessor
+		/// <summary>
+		/// Get the ModelHasCategoryTransactionAssociation link to a CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation GetLinkToModel (global::Empresa.MoneyManagerModel.CategoryTransactionAssociation categoryTransactionAssociationInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation>(categoryTransactionAssociationInstance, global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CategoryTransactionAssociation not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ModelHasCategoryTransactionAssociation instance accessors
+		
+		/// <summary>
+		/// Get any ModelHasCategoryTransactionAssociation links between a given Model and a CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation> GetLinks( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.CategoryTransactionAssociation target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation>(source, global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.CategoryTransactionAssociation) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModelHasCategoryTransactionAssociation link between a given Modeland a CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation GetLink( global::Empresa.MoneyManagerModel.Model source, global::Empresa.MoneyManagerModel.CategoryTransactionAssociation target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation>(source, global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.ModelDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.CategoryTransactionAssociation) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship CategorySpecReferencesCategoryTransactionAssociation
+	/// Description for
+	/// Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("63903078-5e7c-4c29-9dd6-fc5ccee17f13")]
+	public partial class CategorySpecReferencesCategoryTransactionAssociation : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// CategorySpecReferencesCategoryTransactionAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x63903078, 0x5e7c, 0x4c29, 0x9d, 0xd6, 0xfc, 0x5c, 0xce, 0xe1, 0x7f, 0x13);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a CategorySpecReferencesCategoryTransactionAssociation link in the same Partition as the given CategorySpec
+		/// </summary>
+		/// <param name="source">CategorySpec to use as the source of the relationship.</param>
+		/// <param name="target">CategoryTransactionAssociation to use as the target of the relationship.</param>
+		public CategorySpecReferencesCategoryTransactionAssociation(CategorySpec source, CategoryTransactionAssociation target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(CategorySpecReferencesCategoryTransactionAssociation.CategorySpecDomainRoleId, source), new DslModeling::RoleAssignment(CategorySpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CategorySpecReferencesCategoryTransactionAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CategorySpecReferencesCategoryTransactionAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CategorySpecReferencesCategoryTransactionAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CategorySpecReferencesCategoryTransactionAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region CategorySpec domain role code
+		
+		/// <summary>
+		/// CategorySpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CategorySpecDomainRoleId = new global::System.Guid(0x1cc04004, 0xb5e0, 0x475f, 0x9d, 0x05, 0xc1, 0x6c, 0x44, 0x49, 0x1c, 0x67);
+		
+		/// <summary>
+		/// DomainRole CategorySpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategorySpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategorySpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategorySpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CategoryTransactionAssociation", PropertyDisplayNameKey="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategorySpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("1cc04004-b5e0-475f-9d05-c16c44491c67")]
+		public virtual CategorySpec CategorySpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (CategorySpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, CategorySpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CategorySpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CategorySpec of a CategoryTransactionAssociation
+		/// <summary>
+		/// Gets CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static CategorySpec GetCategorySpec(CategoryTransactionAssociation element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CategoryTransactionAssociationDomainRoleId) as CategorySpec;
+		}
+		
+		/// <summary>
+		/// Sets CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetCategorySpec(CategoryTransactionAssociation element, CategorySpec newCategorySpec)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, CategoryTransactionAssociationDomainRoleId, newCategorySpec);
+		}
+		#endregion
+		#region CategoryTransactionAssociation domain role code
+		
+		/// <summary>
+		/// CategoryTransactionAssociation domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CategoryTransactionAssociationDomainRoleId = new global::System.Guid(0x975be051, 0x15db, 0x4296, 0xa4, 0x33, 0x64, 0x87, 0x0f, 0x61, 0xf9, 0x68);
+		
+		/// <summary>
+		/// DomainRole CategoryTransactionAssociation
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociation
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "CategorySpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("975be051-15db-4296-a433-64870f61f968")]
+		public virtual CategoryTransactionAssociation CategoryTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (CategoryTransactionAssociation)DslModeling::DomainRoleInfo.GetRolePlayer(this, CategoryTransactionAssociationDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CategoryTransactionAssociationDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CategoryTransactionAssociation of a CategorySpec
+		/// <summary>
+		/// Gets a list of CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<CategoryTransactionAssociation> GetCategoryTransactionAssociation(CategorySpec element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryTransactionAssociation>, CategoryTransactionAssociation>(element, CategorySpecDomainRoleId);
+		}
+		#endregion
+		#region CategorySpec link accessor
+		/// <summary>
+		/// Get the list of CategorySpecReferencesCategoryTransactionAssociation links to a CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation> GetLinksToCategoryTransactionAssociation ( global::Empresa.MoneyManagerModel.CategorySpec categorySpecInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation>(categorySpecInstance, global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategorySpecDomainRoleId);
+		}
+		#endregion
+		#region CategoryTransactionAssociation link accessor
+		/// <summary>
+		/// Get the CategorySpecReferencesCategoryTransactionAssociation link to a CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation GetLinkToCategorySpec (global::Empresa.MoneyManagerModel.CategoryTransactionAssociation categoryTransactionAssociationInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation>(categoryTransactionAssociationInstance, global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CategoryTransactionAssociation not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region CategorySpecReferencesCategoryTransactionAssociation instance accessors
+		
+		/// <summary>
+		/// Get any CategorySpecReferencesCategoryTransactionAssociation links between a given CategorySpec and a CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation> GetLinks( global::Empresa.MoneyManagerModel.CategorySpec source, global::Empresa.MoneyManagerModel.CategoryTransactionAssociation target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation>(source, global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategorySpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.CategoryTransactionAssociation) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one CategorySpecReferencesCategoryTransactionAssociation link between a given CategorySpecand a CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation GetLink( global::Empresa.MoneyManagerModel.CategorySpec source, global::Empresa.MoneyManagerModel.CategoryTransactionAssociation target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation>(source, global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategorySpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.CategoryTransactionAssociation) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainRelationship TransactionSpecReferencesCategoryTransactionAssociation
+	/// Description for
+	/// Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("fe74993f-b882-4d69-95c5-d93d7fcb5ed6")]
+	public partial class TransactionSpecReferencesCategoryTransactionAssociation : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TransactionSpecReferencesCategoryTransactionAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfe74993f, 0xb882, 0x4d69, 0x95, 0xc5, 0xd9, 0x3d, 0x7f, 0xcb, 0x5e, 0xd6);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TransactionSpecReferencesCategoryTransactionAssociation link in the same Partition as the given TransactionSpec
+		/// </summary>
+		/// <param name="source">TransactionSpec to use as the source of the relationship.</param>
+		/// <param name="target">CategoryTransactionAssociation to use as the target of the relationship.</param>
+		public TransactionSpecReferencesCategoryTransactionAssociation(TransactionSpec source, CategoryTransactionAssociation target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpecDomainRoleId, source), new DslModeling::RoleAssignment(TransactionSpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TransactionSpecReferencesCategoryTransactionAssociation(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TransactionSpecReferencesCategoryTransactionAssociation(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TransactionSpecReferencesCategoryTransactionAssociation(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TransactionSpecReferencesCategoryTransactionAssociation(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TransactionSpec domain role code
+		
+		/// <summary>
+		/// TransactionSpec domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TransactionSpecDomainRoleId = new global::System.Guid(0x2a443f39, 0xa5fa, 0x4384, 0x88, 0x9f, 0x95, 0x4d, 0xfa, 0x71, 0x1d, 0x25);
+		
+		/// <summary>
+		/// DomainRole TransactionSpec
+		/// Description for
+		/// Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpec
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/TransactionSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/TransactionSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CategoryTransactionAssociation", PropertyDisplayNameKey="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/TransactionSpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("2a443f39-a5fa-4384-889f-954dfa711d25")]
+		public virtual TransactionSpec TransactionSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (TransactionSpec)DslModeling::DomainRoleInfo.GetRolePlayer(this, TransactionSpecDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TransactionSpecDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access TransactionSpec of a CategoryTransactionAssociation
+		/// <summary>
+		/// Gets TransactionSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static TransactionSpec GetTransactionSpec(CategoryTransactionAssociation element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CategoryTransactionAssociationDomainRoleId) as TransactionSpec;
+		}
+		
+		/// <summary>
+		/// Sets TransactionSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTransactionSpec(CategoryTransactionAssociation element, TransactionSpec newTransactionSpec)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, CategoryTransactionAssociationDomainRoleId, newTransactionSpec);
+		}
+		#endregion
+		#region CategoryTransactionAssociation domain role code
+		
+		/// <summary>
+		/// CategoryTransactionAssociation domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CategoryTransactionAssociationDomainRoleId = new global::System.Guid(0xd5e63cab, 0x8161, 0x4e52, 0x98, 0x26, 0xac, 0x9b, 0xed, 0x7c, 0xbf, 0x78);
+		
+		/// <summary>
+		/// DomainRole CategoryTransactionAssociation
+		/// Description for
+		/// Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociation
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TransactionSpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("d5e63cab-8161-4e52-9826-ac9bed7cbf78")]
+		public virtual CategoryTransactionAssociation CategoryTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (CategoryTransactionAssociation)DslModeling::DomainRoleInfo.GetRolePlayer(this, CategoryTransactionAssociationDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CategoryTransactionAssociationDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CategoryTransactionAssociation of a TransactionSpec
+		/// <summary>
+		/// Gets a list of CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<CategoryTransactionAssociation> GetCategoryTransactionAssociation(TransactionSpec element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryTransactionAssociation>, CategoryTransactionAssociation>(element, TransactionSpecDomainRoleId);
+		}
+		#endregion
+		#region TransactionSpec link accessor
+		/// <summary>
+		/// Get the list of TransactionSpecReferencesCategoryTransactionAssociation links to a TransactionSpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation> GetLinksToCategoryTransactionAssociation ( global::Empresa.MoneyManagerModel.TransactionSpec transactionSpecInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation>(transactionSpecInstance, global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpecDomainRoleId);
+		}
+		#endregion
+		#region CategoryTransactionAssociation link accessor
+		/// <summary>
+		/// Get the TransactionSpecReferencesCategoryTransactionAssociation link to a CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation GetLinkToTransactionSpec (global::Empresa.MoneyManagerModel.CategoryTransactionAssociation categoryTransactionAssociationInstance)
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation>(categoryTransactionAssociationInstance, global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CategoryTransactionAssociation not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TransactionSpecReferencesCategoryTransactionAssociation instance accessors
+		
+		/// <summary>
+		/// Get any TransactionSpecReferencesCategoryTransactionAssociation links between a given TransactionSpec and a CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation> GetLinks( global::Empresa.MoneyManagerModel.TransactionSpec source, global::Empresa.MoneyManagerModel.CategoryTransactionAssociation target )
+		{
+			global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation> outLinks = new global::System.Collections.Generic.List<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation>();
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation>(source, global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.CategoryTransactionAssociation) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TransactionSpecReferencesCategoryTransactionAssociation link between a given TransactionSpecand a CategoryTransactionAssociation.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation GetLink( global::Empresa.MoneyManagerModel.TransactionSpec source, global::Empresa.MoneyManagerModel.CategoryTransactionAssociation target )
+		{
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation>(source, global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpecDomainRoleId);
+			foreach ( global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation link in links )
+			{
+				if ( target.Equals(link.CategoryTransactionAssociation) )
 				{
 					return link;
 				}

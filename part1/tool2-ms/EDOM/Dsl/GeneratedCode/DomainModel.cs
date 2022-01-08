@@ -72,27 +72,39 @@ namespace Empresa.MoneyManagerModel
 				typeof(AccountSpec),
 				typeof(TransactionSpec),
 				typeof(AttributeType),
-				typeof(Association),
 				typeof(UserAttribute),
 				typeof(AccountAttribute),
 				typeof(TransactionAttribute),
+				typeof(AccountGroupSpec),
+				typeof(UserAccountAssociation),
+				typeof(AccountTransactionAssociation),
+				typeof(CategorySpec),
+				typeof(CategoryAttribute),
+				typeof(CategoryTransactionAssociation),
 				typeof(ExampleModelHasElements),
 				typeof(ModelTemAccountSpec),
 				typeof(ModelHasTransactionSpec),
 				typeof(ModelHasAttributeType),
-				typeof(ModelTemAssociation),
 				typeof(UserSpecTemUserAttribute),
 				typeof(AccountSpecTemAccountAttribute),
 				typeof(TransactionSpecTemTransactionAttribute),
-				typeof(AssociationReferênciasTransactionSpec),
-				typeof(TransactionSpecReferênciasAssociations),
-				typeof(AssociationReferênciasAccountSpec),
-				typeof(AccountSpecReferênciasAssociations),
-				typeof(AssociationReferênciasUserSpec),
-				typeof(UserSpecReferênciasAssociations),
 				typeof(UserAttributeReferênciasAttributeTypes),
 				typeof(AccountAttributeReferênciasAttributeTypes),
 				typeof(TransactionAttributeReferênciasAttributeTypes),
+				typeof(ModelHasAccountGroupSpec),
+				typeof(AccountGroupSpecReferencesAccountSpec),
+				typeof(ModelHasUserAccountAssociation),
+				typeof(ModelHasAccountTransactionAssociation),
+				typeof(ModelHasCategorySpec),
+				typeof(CategoryAttributeReferencesAttributeType1),
+				typeof(CategorySpecHasCategoryAttribute),
+				typeof(UserSpecReferencesUserAccountAssociation),
+				typeof(AccountSpecReferencesUserAccountAssociation),
+				typeof(AccountSpecReferencesAccountTransactionAssociation),
+				typeof(TransactionSpecReferencesAccountTransactionAssociation),
+				typeof(ModelHasCategoryTransactionAssociation),
+				typeof(CategorySpecReferencesCategoryTransactionAssociation),
+				typeof(TransactionSpecReferencesCategoryTransactionAssociation),
 				typeof(MoneyManagerModelDiagram),
 				typeof(Incorporação),
 				typeof(Referência),
@@ -100,10 +112,15 @@ namespace Empresa.MoneyManagerModel
 				typeof(AccountSpecShape),
 				typeof(TransactionSpecShape),
 				typeof(AttributeTypeShape),
-				typeof(AssociationShape),
 				typeof(UserAttributeShape),
 				typeof(AccountAttributeShape),
 				typeof(TransactionAttributeShape),
+				typeof(AccountGroupSpecSchape),
+				typeof(UserAccountAssociationShape),
+				typeof(AccountTransactionAssociationShape),
+				typeof(CategorySpecShape),
+				typeof(CategoryAttributeShape),
+				typeof(CategoryTransactionAssociationShape),
 				typeof(global::Empresa.MoneyManagerModel.FixUpDiagram),
 				typeof(global::Empresa.MoneyManagerModel.ConnectorRolePlayerChanged),
 			};
@@ -118,23 +135,38 @@ namespace Empresa.MoneyManagerModel
 			return new DomainMemberInfo[]
 			{
 				new DomainMemberInfo(typeof(Model), "Name", Model.NameDomainPropertyId, typeof(Model.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(UserSpec), "Cardinality", UserSpec.CardinalityDomainPropertyId, typeof(UserSpec.CardinalityPropertyHandler)),
+				new DomainMemberInfo(typeof(UserSpec), "CardinalityMax", UserSpec.CardinalityMaxDomainPropertyId, typeof(UserSpec.CardinalityMaxPropertyHandler)),
 				new DomainMemberInfo(typeof(UserSpec), "Name", UserSpec.NameDomainPropertyId, typeof(UserSpec.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(AccountSpec), "Cardinality", AccountSpec.CardinalityDomainPropertyId, typeof(AccountSpec.CardinalityPropertyHandler)),
+				new DomainMemberInfo(typeof(UserSpec), "CardinalityMin", UserSpec.CardinalityMinDomainPropertyId, typeof(UserSpec.CardinalityMinPropertyHandler)),
+				new DomainMemberInfo(typeof(AccountSpec), "CardinalityMax", AccountSpec.CardinalityMaxDomainPropertyId, typeof(AccountSpec.CardinalityMaxPropertyHandler)),
 				new DomainMemberInfo(typeof(AccountSpec), "Name", AccountSpec.NameDomainPropertyId, typeof(AccountSpec.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(TransactionSpec), "Cardinality", TransactionSpec.CardinalityDomainPropertyId, typeof(TransactionSpec.CardinalityPropertyHandler)),
+				new DomainMemberInfo(typeof(AccountSpec), "CardinalityMin", AccountSpec.CardinalityMinDomainPropertyId, typeof(AccountSpec.CardinalityMinPropertyHandler)),
+				new DomainMemberInfo(typeof(AccountSpec), "NeedBanckAccount", AccountSpec.NeedBanckAccountDomainPropertyId, typeof(AccountSpec.NeedBanckAccountPropertyHandler)),
+				new DomainMemberInfo(typeof(TransactionSpec), "CardinalityMax", TransactionSpec.CardinalityMaxDomainPropertyId, typeof(TransactionSpec.CardinalityMaxPropertyHandler)),
 				new DomainMemberInfo(typeof(TransactionSpec), "Name", TransactionSpec.NameDomainPropertyId, typeof(TransactionSpec.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(TransactionSpec), "CardinalityMin", TransactionSpec.CardinalityMinDomainPropertyId, typeof(TransactionSpec.CardinalityMinPropertyHandler)),
 				new DomainMemberInfo(typeof(AttributeType), "Text", AttributeType.TextDomainPropertyId, typeof(AttributeType.TextPropertyHandler)),
 				new DomainMemberInfo(typeof(AttributeType), "Number", AttributeType.NumberDomainPropertyId, typeof(AttributeType.NumberPropertyHandler)),
 				new DomainMemberInfo(typeof(AttributeType), "Choice", AttributeType.ChoiceDomainPropertyId, typeof(AttributeType.ChoicePropertyHandler)),
 				new DomainMemberInfo(typeof(AttributeType), "Date", AttributeType.DateDomainPropertyId, typeof(AttributeType.DatePropertyHandler)),
-				new DomainMemberInfo(typeof(Association), "Name", Association.NameDomainPropertyId, typeof(Association.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(UserAttribute), "Name", UserAttribute.NameDomainPropertyId, typeof(UserAttribute.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(UserAttribute), "AttributeType", UserAttribute.AttributeTypeDomainPropertyId, typeof(UserAttribute.AttributeTypePropertyHandler)),
 				new DomainMemberInfo(typeof(AccountAttribute), "Name", AccountAttribute.NameDomainPropertyId, typeof(AccountAttribute.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(AccountAttribute), "AttributeType", AccountAttribute.AttributeTypeDomainPropertyId, typeof(AccountAttribute.AttributeTypePropertyHandler)),
 				new DomainMemberInfo(typeof(TransactionAttribute), "Name", TransactionAttribute.NameDomainPropertyId, typeof(TransactionAttribute.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(TransactionAttribute), "AttributeType", TransactionAttribute.AttributeTypeDomainPropertyId, typeof(TransactionAttribute.AttributeTypePropertyHandler)),
+				new DomainMemberInfo(typeof(AccountGroupSpec), "Name", AccountGroupSpec.NameDomainPropertyId, typeof(AccountGroupSpec.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(AccountGroupSpec), "CardinalityMin", AccountGroupSpec.CardinalityMinDomainPropertyId, typeof(AccountGroupSpec.CardinalityMinPropertyHandler)),
+				new DomainMemberInfo(typeof(AccountGroupSpec), "CardinalityMax", AccountGroupSpec.CardinalityMaxDomainPropertyId, typeof(AccountGroupSpec.CardinalityMaxPropertyHandler)),
+				new DomainMemberInfo(typeof(AccountGroupSpec), "needBankAccount", AccountGroupSpec.needBankAccountDomainPropertyId, typeof(AccountGroupSpec.needBankAccountPropertyHandler)),
+				new DomainMemberInfo(typeof(UserAccountAssociation), "Name", UserAccountAssociation.NameDomainPropertyId, typeof(UserAccountAssociation.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(AccountTransactionAssociation), "Name", AccountTransactionAssociation.NameDomainPropertyId, typeof(AccountTransactionAssociation.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(CategorySpec), "Name", CategorySpec.NameDomainPropertyId, typeof(CategorySpec.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(CategorySpec), "CardinalityMin", CategorySpec.CardinalityMinDomainPropertyId, typeof(CategorySpec.CardinalityMinPropertyHandler)),
+				new DomainMemberInfo(typeof(CategorySpec), "CardinalityMax", CategorySpec.CardinalityMaxDomainPropertyId, typeof(CategorySpec.CardinalityMaxPropertyHandler)),
+				new DomainMemberInfo(typeof(CategoryAttribute), "Name", CategoryAttribute.NameDomainPropertyId, typeof(CategoryAttribute.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(CategoryAttribute), "AttributeType", CategoryAttribute.AttributeTypeDomainPropertyId, typeof(CategoryAttribute.AttributeTypePropertyHandler)),
+				new DomainMemberInfo(typeof(CategoryTransactionAssociation), "Name", CategoryTransactionAssociation.NameDomainPropertyId, typeof(CategoryTransactionAssociation.NamePropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -153,32 +185,46 @@ namespace Empresa.MoneyManagerModel
 				new DomainRolePlayerInfo(typeof(ModelHasTransactionSpec), "TransactionSpec", ModelHasTransactionSpec.TransactionSpecDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ModelHasAttributeType), "Model", ModelHasAttributeType.ModelDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ModelHasAttributeType), "AttributeType", ModelHasAttributeType.AttributeTypeDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ModelTemAssociation), "Model", ModelTemAssociation.ModelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ModelTemAssociation), "Association", ModelTemAssociation.AssociationDomainRoleId),
 				new DomainRolePlayerInfo(typeof(UserSpecTemUserAttribute), "UserSpec", UserSpecTemUserAttribute.UserSpecDomainRoleId),
 				new DomainRolePlayerInfo(typeof(UserSpecTemUserAttribute), "UserAttribute", UserSpecTemUserAttribute.UserAttributeDomainRoleId),
 				new DomainRolePlayerInfo(typeof(AccountSpecTemAccountAttribute), "AccountSpec", AccountSpecTemAccountAttribute.AccountSpecDomainRoleId),
 				new DomainRolePlayerInfo(typeof(AccountSpecTemAccountAttribute), "AccountAttribute", AccountSpecTemAccountAttribute.AccountAttributeDomainRoleId),
 				new DomainRolePlayerInfo(typeof(TransactionSpecTemTransactionAttribute), "TransactionSpec", TransactionSpecTemTransactionAttribute.TransactionSpecDomainRoleId),
 				new DomainRolePlayerInfo(typeof(TransactionSpecTemTransactionAttribute), "TransactionAttribute", TransactionSpecTemTransactionAttribute.TransactionAttributeDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AssociationReferênciasTransactionSpec), "Association", AssociationReferênciasTransactionSpec.AssociationDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AssociationReferênciasTransactionSpec), "TransactionSpec", AssociationReferênciasTransactionSpec.TransactionSpecDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TransactionSpecReferênciasAssociations), "TransactionSpec", TransactionSpecReferênciasAssociations.TransactionSpecDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TransactionSpecReferênciasAssociations), "Association", TransactionSpecReferênciasAssociations.AssociationDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AssociationReferênciasAccountSpec), "Association", AssociationReferênciasAccountSpec.AssociationDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AssociationReferênciasAccountSpec), "AccountSpec", AssociationReferênciasAccountSpec.AccountSpecDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AccountSpecReferênciasAssociations), "AccountSpec", AccountSpecReferênciasAssociations.AccountSpecDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AccountSpecReferênciasAssociations), "Association", AccountSpecReferênciasAssociations.AssociationDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AssociationReferênciasUserSpec), "Association", AssociationReferênciasUserSpec.AssociationDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AssociationReferênciasUserSpec), "UserSpec", AssociationReferênciasUserSpec.UserSpecDomainRoleId),
-				new DomainRolePlayerInfo(typeof(UserSpecReferênciasAssociations), "UserSpec", UserSpecReferênciasAssociations.UserSpecDomainRoleId),
-				new DomainRolePlayerInfo(typeof(UserSpecReferênciasAssociations), "Association", UserSpecReferênciasAssociations.AssociationDomainRoleId),
 				new DomainRolePlayerInfo(typeof(UserAttributeReferênciasAttributeTypes), "UserAttribute", UserAttributeReferênciasAttributeTypes.UserAttributeDomainRoleId),
 				new DomainRolePlayerInfo(typeof(UserAttributeReferênciasAttributeTypes), "AttributeType", UserAttributeReferênciasAttributeTypes.AttributeTypeDomainRoleId),
 				new DomainRolePlayerInfo(typeof(AccountAttributeReferênciasAttributeTypes), "AccountAttribute", AccountAttributeReferênciasAttributeTypes.AccountAttributeDomainRoleId),
 				new DomainRolePlayerInfo(typeof(AccountAttributeReferênciasAttributeTypes), "AttributeTypes", AccountAttributeReferênciasAttributeTypes.AttributeTypesDomainRoleId),
 				new DomainRolePlayerInfo(typeof(TransactionAttributeReferênciasAttributeTypes), "TransactionAttribute", TransactionAttributeReferênciasAttributeTypes.TransactionAttributeDomainRoleId),
 				new DomainRolePlayerInfo(typeof(TransactionAttributeReferênciasAttributeTypes), "AttributeType", TransactionAttributeReferênciasAttributeTypes.AttributeTypeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasAccountGroupSpec), "Model", ModelHasAccountGroupSpec.ModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasAccountGroupSpec), "AccountGroupSpec", ModelHasAccountGroupSpec.AccountGroupSpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AccountGroupSpecReferencesAccountSpec), "AccountGroupSpec", AccountGroupSpecReferencesAccountSpec.AccountGroupSpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AccountGroupSpecReferencesAccountSpec), "AccountSpec", AccountGroupSpecReferencesAccountSpec.AccountSpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasUserAccountAssociation), "Model", ModelHasUserAccountAssociation.ModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasUserAccountAssociation), "UserAccountAssociation", ModelHasUserAccountAssociation.UserAccountAssociationDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasAccountTransactionAssociation), "Model", ModelHasAccountTransactionAssociation.ModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasAccountTransactionAssociation), "AccountTransactionAssociation", ModelHasAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasCategorySpec), "Model", ModelHasCategorySpec.ModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasCategorySpec), "CategorySpec", ModelHasCategorySpec.CategorySpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CategoryAttributeReferencesAttributeType1), "CategoryAttribute", CategoryAttributeReferencesAttributeType1.CategoryAttributeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CategoryAttributeReferencesAttributeType1), "AttributeType", CategoryAttributeReferencesAttributeType1.AttributeTypeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CategorySpecHasCategoryAttribute), "CategorySpec", CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CategorySpecHasCategoryAttribute), "CategoryAttribute", CategorySpecHasCategoryAttribute.CategoryAttributeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(UserSpecReferencesUserAccountAssociation), "UserSpec", UserSpecReferencesUserAccountAssociation.UserSpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(UserSpecReferencesUserAccountAssociation), "UserAccountAssociation", UserSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AccountSpecReferencesUserAccountAssociation), "AccountSpec", AccountSpecReferencesUserAccountAssociation.AccountSpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AccountSpecReferencesUserAccountAssociation), "UserAccountAssociation", AccountSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AccountSpecReferencesAccountTransactionAssociation), "AccountSpec", AccountSpecReferencesAccountTransactionAssociation.AccountSpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AccountSpecReferencesAccountTransactionAssociation), "AccountTransactionAssociation", AccountSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TransactionSpecReferencesAccountTransactionAssociation), "TransactionSpec", TransactionSpecReferencesAccountTransactionAssociation.TransactionSpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TransactionSpecReferencesAccountTransactionAssociation), "AccountTransactionAssociation", TransactionSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasCategoryTransactionAssociation), "Model", ModelHasCategoryTransactionAssociation.ModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModelHasCategoryTransactionAssociation), "CategoryTransactionAssociation", ModelHasCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CategorySpecReferencesCategoryTransactionAssociation), "CategorySpec", CategorySpecReferencesCategoryTransactionAssociation.CategorySpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CategorySpecReferencesCategoryTransactionAssociation), "CategoryTransactionAssociation", CategorySpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TransactionSpecReferencesCategoryTransactionAssociation), "TransactionSpec", TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpecDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TransactionSpecReferencesCategoryTransactionAssociation), "CategoryTransactionAssociation", TransactionSpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId),
 			};
 		}
 		#endregion
@@ -200,27 +246,37 @@ namespace Empresa.MoneyManagerModel
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(20);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(30);
 				createElementMap.Add(typeof(Model), 0);
 				createElementMap.Add(typeof(UserSpec), 1);
 				createElementMap.Add(typeof(AccountSpec), 2);
 				createElementMap.Add(typeof(TransactionSpec), 3);
 				createElementMap.Add(typeof(AttributeType), 4);
-				createElementMap.Add(typeof(Association), 5);
-				createElementMap.Add(typeof(UserAttribute), 6);
-				createElementMap.Add(typeof(AccountAttribute), 7);
-				createElementMap.Add(typeof(TransactionAttribute), 8);
-				createElementMap.Add(typeof(MoneyManagerModelDiagram), 9);
-				createElementMap.Add(typeof(Incorporação), 10);
-				createElementMap.Add(typeof(Referência), 11);
-				createElementMap.Add(typeof(UserSpecShape), 12);
-				createElementMap.Add(typeof(AccountSpecShape), 13);
-				createElementMap.Add(typeof(TransactionSpecShape), 14);
-				createElementMap.Add(typeof(AttributeTypeShape), 15);
-				createElementMap.Add(typeof(AssociationShape), 16);
-				createElementMap.Add(typeof(UserAttributeShape), 17);
-				createElementMap.Add(typeof(AccountAttributeShape), 18);
-				createElementMap.Add(typeof(TransactionAttributeShape), 19);
+				createElementMap.Add(typeof(UserAttribute), 5);
+				createElementMap.Add(typeof(AccountAttribute), 6);
+				createElementMap.Add(typeof(TransactionAttribute), 7);
+				createElementMap.Add(typeof(AccountGroupSpec), 8);
+				createElementMap.Add(typeof(UserAccountAssociation), 9);
+				createElementMap.Add(typeof(AccountTransactionAssociation), 10);
+				createElementMap.Add(typeof(CategorySpec), 11);
+				createElementMap.Add(typeof(CategoryAttribute), 12);
+				createElementMap.Add(typeof(CategoryTransactionAssociation), 13);
+				createElementMap.Add(typeof(MoneyManagerModelDiagram), 14);
+				createElementMap.Add(typeof(Incorporação), 15);
+				createElementMap.Add(typeof(Referência), 16);
+				createElementMap.Add(typeof(UserSpecShape), 17);
+				createElementMap.Add(typeof(AccountSpecShape), 18);
+				createElementMap.Add(typeof(TransactionSpecShape), 19);
+				createElementMap.Add(typeof(AttributeTypeShape), 20);
+				createElementMap.Add(typeof(UserAttributeShape), 21);
+				createElementMap.Add(typeof(AccountAttributeShape), 22);
+				createElementMap.Add(typeof(TransactionAttributeShape), 23);
+				createElementMap.Add(typeof(AccountGroupSpecSchape), 24);
+				createElementMap.Add(typeof(UserAccountAssociationShape), 25);
+				createElementMap.Add(typeof(AccountTransactionAssociationShape), 26);
+				createElementMap.Add(typeof(CategorySpecShape), 27);
+				createElementMap.Add(typeof(CategoryAttributeShape), 28);
+				createElementMap.Add(typeof(CategoryTransactionAssociationShape), 29);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -239,21 +295,31 @@ namespace Empresa.MoneyManagerModel
 				case 2: return new AccountSpec(partition, propertyAssignments);
 				case 3: return new TransactionSpec(partition, propertyAssignments);
 				case 4: return new AttributeType(partition, propertyAssignments);
-				case 5: return new Association(partition, propertyAssignments);
-				case 6: return new UserAttribute(partition, propertyAssignments);
-				case 7: return new AccountAttribute(partition, propertyAssignments);
-				case 8: return new TransactionAttribute(partition, propertyAssignments);
-				case 9: return new MoneyManagerModelDiagram(partition, propertyAssignments);
-				case 10: return new Incorporação(partition, propertyAssignments);
-				case 11: return new Referência(partition, propertyAssignments);
-				case 12: return new UserSpecShape(partition, propertyAssignments);
-				case 13: return new AccountSpecShape(partition, propertyAssignments);
-				case 14: return new TransactionSpecShape(partition, propertyAssignments);
-				case 15: return new AttributeTypeShape(partition, propertyAssignments);
-				case 16: return new AssociationShape(partition, propertyAssignments);
-				case 17: return new UserAttributeShape(partition, propertyAssignments);
-				case 18: return new AccountAttributeShape(partition, propertyAssignments);
-				case 19: return new TransactionAttributeShape(partition, propertyAssignments);
+				case 5: return new UserAttribute(partition, propertyAssignments);
+				case 6: return new AccountAttribute(partition, propertyAssignments);
+				case 7: return new TransactionAttribute(partition, propertyAssignments);
+				case 8: return new AccountGroupSpec(partition, propertyAssignments);
+				case 9: return new UserAccountAssociation(partition, propertyAssignments);
+				case 10: return new AccountTransactionAssociation(partition, propertyAssignments);
+				case 11: return new CategorySpec(partition, propertyAssignments);
+				case 12: return new CategoryAttribute(partition, propertyAssignments);
+				case 13: return new CategoryTransactionAssociation(partition, propertyAssignments);
+				case 14: return new MoneyManagerModelDiagram(partition, propertyAssignments);
+				case 15: return new Incorporação(partition, propertyAssignments);
+				case 16: return new Referência(partition, propertyAssignments);
+				case 17: return new UserSpecShape(partition, propertyAssignments);
+				case 18: return new AccountSpecShape(partition, propertyAssignments);
+				case 19: return new TransactionSpecShape(partition, propertyAssignments);
+				case 20: return new AttributeTypeShape(partition, propertyAssignments);
+				case 21: return new UserAttributeShape(partition, propertyAssignments);
+				case 22: return new AccountAttributeShape(partition, propertyAssignments);
+				case 23: return new TransactionAttributeShape(partition, propertyAssignments);
+				case 24: return new AccountGroupSpecSchape(partition, propertyAssignments);
+				case 25: return new UserAccountAssociationShape(partition, propertyAssignments);
+				case 26: return new AccountTransactionAssociationShape(partition, propertyAssignments);
+				case 27: return new CategorySpecShape(partition, propertyAssignments);
+				case 28: return new CategoryAttributeShape(partition, propertyAssignments);
+				case 29: return new CategoryTransactionAssociationShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -276,24 +342,31 @@ namespace Empresa.MoneyManagerModel
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(17);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(24);
 				createElementLinkMap.Add(typeof(ExampleModelHasElements), 0);
 				createElementLinkMap.Add(typeof(ModelTemAccountSpec), 1);
 				createElementLinkMap.Add(typeof(ModelHasTransactionSpec), 2);
 				createElementLinkMap.Add(typeof(ModelHasAttributeType), 3);
-				createElementLinkMap.Add(typeof(ModelTemAssociation), 4);
-				createElementLinkMap.Add(typeof(UserSpecTemUserAttribute), 5);
-				createElementLinkMap.Add(typeof(AccountSpecTemAccountAttribute), 6);
-				createElementLinkMap.Add(typeof(TransactionSpecTemTransactionAttribute), 7);
-				createElementLinkMap.Add(typeof(AssociationReferênciasTransactionSpec), 8);
-				createElementLinkMap.Add(typeof(TransactionSpecReferênciasAssociations), 9);
-				createElementLinkMap.Add(typeof(AssociationReferênciasAccountSpec), 10);
-				createElementLinkMap.Add(typeof(AccountSpecReferênciasAssociations), 11);
-				createElementLinkMap.Add(typeof(AssociationReferênciasUserSpec), 12);
-				createElementLinkMap.Add(typeof(UserSpecReferênciasAssociations), 13);
-				createElementLinkMap.Add(typeof(UserAttributeReferênciasAttributeTypes), 14);
-				createElementLinkMap.Add(typeof(AccountAttributeReferênciasAttributeTypes), 15);
-				createElementLinkMap.Add(typeof(TransactionAttributeReferênciasAttributeTypes), 16);
+				createElementLinkMap.Add(typeof(UserSpecTemUserAttribute), 4);
+				createElementLinkMap.Add(typeof(AccountSpecTemAccountAttribute), 5);
+				createElementLinkMap.Add(typeof(TransactionSpecTemTransactionAttribute), 6);
+				createElementLinkMap.Add(typeof(UserAttributeReferênciasAttributeTypes), 7);
+				createElementLinkMap.Add(typeof(AccountAttributeReferênciasAttributeTypes), 8);
+				createElementLinkMap.Add(typeof(TransactionAttributeReferênciasAttributeTypes), 9);
+				createElementLinkMap.Add(typeof(ModelHasAccountGroupSpec), 10);
+				createElementLinkMap.Add(typeof(AccountGroupSpecReferencesAccountSpec), 11);
+				createElementLinkMap.Add(typeof(ModelHasUserAccountAssociation), 12);
+				createElementLinkMap.Add(typeof(ModelHasAccountTransactionAssociation), 13);
+				createElementLinkMap.Add(typeof(ModelHasCategorySpec), 14);
+				createElementLinkMap.Add(typeof(CategoryAttributeReferencesAttributeType1), 15);
+				createElementLinkMap.Add(typeof(CategorySpecHasCategoryAttribute), 16);
+				createElementLinkMap.Add(typeof(UserSpecReferencesUserAccountAssociation), 17);
+				createElementLinkMap.Add(typeof(AccountSpecReferencesUserAccountAssociation), 18);
+				createElementLinkMap.Add(typeof(AccountSpecReferencesAccountTransactionAssociation), 19);
+				createElementLinkMap.Add(typeof(TransactionSpecReferencesAccountTransactionAssociation), 20);
+				createElementLinkMap.Add(typeof(ModelHasCategoryTransactionAssociation), 21);
+				createElementLinkMap.Add(typeof(CategorySpecReferencesCategoryTransactionAssociation), 22);
+				createElementLinkMap.Add(typeof(TransactionSpecReferencesCategoryTransactionAssociation), 23);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -312,19 +385,26 @@ namespace Empresa.MoneyManagerModel
 				case 1: return new ModelTemAccountSpec(partition, roleAssignments, propertyAssignments);
 				case 2: return new ModelHasTransactionSpec(partition, roleAssignments, propertyAssignments);
 				case 3: return new ModelHasAttributeType(partition, roleAssignments, propertyAssignments);
-				case 4: return new ModelTemAssociation(partition, roleAssignments, propertyAssignments);
-				case 5: return new UserSpecTemUserAttribute(partition, roleAssignments, propertyAssignments);
-				case 6: return new AccountSpecTemAccountAttribute(partition, roleAssignments, propertyAssignments);
-				case 7: return new TransactionSpecTemTransactionAttribute(partition, roleAssignments, propertyAssignments);
-				case 8: return new AssociationReferênciasTransactionSpec(partition, roleAssignments, propertyAssignments);
-				case 9: return new TransactionSpecReferênciasAssociations(partition, roleAssignments, propertyAssignments);
-				case 10: return new AssociationReferênciasAccountSpec(partition, roleAssignments, propertyAssignments);
-				case 11: return new AccountSpecReferênciasAssociations(partition, roleAssignments, propertyAssignments);
-				case 12: return new AssociationReferênciasUserSpec(partition, roleAssignments, propertyAssignments);
-				case 13: return new UserSpecReferênciasAssociations(partition, roleAssignments, propertyAssignments);
-				case 14: return new UserAttributeReferênciasAttributeTypes(partition, roleAssignments, propertyAssignments);
-				case 15: return new AccountAttributeReferênciasAttributeTypes(partition, roleAssignments, propertyAssignments);
-				case 16: return new TransactionAttributeReferênciasAttributeTypes(partition, roleAssignments, propertyAssignments);
+				case 4: return new UserSpecTemUserAttribute(partition, roleAssignments, propertyAssignments);
+				case 5: return new AccountSpecTemAccountAttribute(partition, roleAssignments, propertyAssignments);
+				case 6: return new TransactionSpecTemTransactionAttribute(partition, roleAssignments, propertyAssignments);
+				case 7: return new UserAttributeReferênciasAttributeTypes(partition, roleAssignments, propertyAssignments);
+				case 8: return new AccountAttributeReferênciasAttributeTypes(partition, roleAssignments, propertyAssignments);
+				case 9: return new TransactionAttributeReferênciasAttributeTypes(partition, roleAssignments, propertyAssignments);
+				case 10: return new ModelHasAccountGroupSpec(partition, roleAssignments, propertyAssignments);
+				case 11: return new AccountGroupSpecReferencesAccountSpec(partition, roleAssignments, propertyAssignments);
+				case 12: return new ModelHasUserAccountAssociation(partition, roleAssignments, propertyAssignments);
+				case 13: return new ModelHasAccountTransactionAssociation(partition, roleAssignments, propertyAssignments);
+				case 14: return new ModelHasCategorySpec(partition, roleAssignments, propertyAssignments);
+				case 15: return new CategoryAttributeReferencesAttributeType1(partition, roleAssignments, propertyAssignments);
+				case 16: return new CategorySpecHasCategoryAttribute(partition, roleAssignments, propertyAssignments);
+				case 17: return new UserSpecReferencesUserAccountAssociation(partition, roleAssignments, propertyAssignments);
+				case 18: return new AccountSpecReferencesUserAccountAssociation(partition, roleAssignments, propertyAssignments);
+				case 19: return new AccountSpecReferencesAccountTransactionAssociation(partition, roleAssignments, propertyAssignments);
+				case 20: return new TransactionSpecReferencesAccountTransactionAssociation(partition, roleAssignments, propertyAssignments);
+				case 21: return new ModelHasCategoryTransactionAssociation(partition, roleAssignments, propertyAssignments);
+				case 22: return new CategorySpecReferencesCategoryTransactionAssociation(partition, roleAssignments, propertyAssignments);
+				case 23: return new TransactionSpecReferencesCategoryTransactionAssociation(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -497,10 +577,15 @@ namespace Empresa.MoneyManagerModel
 			DomainRoles.Add(global::Empresa.MoneyManagerModel.ModelTemAccountSpec.AccountSpecDomainRoleId, true);
 			DomainRoles.Add(global::Empresa.MoneyManagerModel.ModelHasTransactionSpec.TransactionSpecDomainRoleId, true);
 			DomainRoles.Add(global::Empresa.MoneyManagerModel.ModelHasAttributeType.AttributeTypeDomainRoleId, true);
-			DomainRoles.Add(global::Empresa.MoneyManagerModel.ModelTemAssociation.AssociationDomainRoleId, true);
 			DomainRoles.Add(global::Empresa.MoneyManagerModel.UserSpecTemUserAttribute.UserAttributeDomainRoleId, true);
 			DomainRoles.Add(global::Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute.AccountAttributeDomainRoleId, true);
 			DomainRoles.Add(global::Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute.TransactionAttributeDomainRoleId, true);
+			DomainRoles.Add(global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.AccountGroupSpecDomainRoleId, true);
+			DomainRoles.Add(global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.UserAccountAssociationDomainRoleId, true);
+			DomainRoles.Add(global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId, true);
+			DomainRoles.Add(global::Empresa.MoneyManagerModel.ModelHasCategorySpec.CategorySpecDomainRoleId, true);
+			DomainRoles.Add(global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategoryAttributeDomainRoleId, true);
+			DomainRoles.Add(global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

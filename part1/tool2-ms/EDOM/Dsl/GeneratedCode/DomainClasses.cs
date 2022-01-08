@@ -194,18 +194,80 @@ namespace Empresa.MoneyManagerModel
 			}
 		}
 		#endregion
-		#region Association opposite domain role accessor
+		#region AccountGroupSpec opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Association.
-		/// Descrição de Empresa.MoneyManagerModel.ModelTemAssociation.Model
+		/// Gets a list of AccountGroupSpec.
+		/// Description for Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.Model
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Association> Association
+		public virtual DslModeling::LinkedElementCollection<AccountGroupSpec> AccountGroupSpec
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(global::Empresa.MoneyManagerModel.ModelTemAssociation.ModelDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AccountGroupSpec>, AccountGroupSpec>(global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.ModelDomainRoleId);
+			}
+		}
+		#endregion
+		#region UserAccountAssociation opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of UserAccountAssociation.
+		/// Description for Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.Model
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<UserAccountAssociation> UserAccountAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<UserAccountAssociation>, UserAccountAssociation>(global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.ModelDomainRoleId);
+			}
+		}
+		#endregion
+		#region AccountTransactionAssociation opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of AccountTransactionAssociation.
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.Model
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<AccountTransactionAssociation> AccountTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AccountTransactionAssociation>, AccountTransactionAssociation>(global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.ModelDomainRoleId);
+			}
+		}
+		#endregion
+		#region CategorySpec opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of CategorySpec.
+		/// Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.Model
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<CategorySpec> CategorySpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<CategorySpec>, CategorySpec>(global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId);
+			}
+		}
+		#endregion
+		#region CategoryTransactionAssociation opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of CategoryTransactionAssociation.
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.Model
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<CategoryTransactionAssociation> CategoryTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryTransactionAssociation>, CategoryTransactionAssociation>(global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.ModelDomainRoleId);
 			}
 		}
 		#endregion
@@ -249,7 +311,27 @@ namespace Empresa.MoneyManagerModel
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Empresa.MoneyManagerModel.Association.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Empresa.MoneyManagerModel.AccountGroupSpec.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Empresa.MoneyManagerModel.UserAccountAssociation.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Empresa.MoneyManagerModel.AccountTransactionAssociation.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Empresa.MoneyManagerModel.CategorySpec.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Empresa.MoneyManagerModel.CategoryTransactionAssociation.DomainClassId)) 
 				{
 					return true;
 				}
@@ -314,11 +396,47 @@ namespace Empresa.MoneyManagerModel
 				return;
 			}
 				
-			global::Empresa.MoneyManagerModel.Association sourceAssociation5 = sourceElement as global::Empresa.MoneyManagerModel.Association;
-			if (sourceAssociation5 != null)
+			global::Empresa.MoneyManagerModel.AccountGroupSpec sourceAccountGroupSpec5 = sourceElement as global::Empresa.MoneyManagerModel.AccountGroupSpec;
+			if (sourceAccountGroupSpec5 != null)
 			{
-				// Create link for path ModelTemAssociation.Association
-				this.Association.Add(sourceAssociation5);
+				// Create link for path ModelHasAccountGroupSpec.AccountGroupSpec
+				this.AccountGroupSpec.Add(sourceAccountGroupSpec5);
+
+				return;
+			}
+				
+			global::Empresa.MoneyManagerModel.UserAccountAssociation sourceUserAccountAssociation6 = sourceElement as global::Empresa.MoneyManagerModel.UserAccountAssociation;
+			if (sourceUserAccountAssociation6 != null)
+			{
+				// Create link for path ModelHasUserAccountAssociation.UserAccountAssociation
+				this.UserAccountAssociation.Add(sourceUserAccountAssociation6);
+
+				return;
+			}
+				
+			global::Empresa.MoneyManagerModel.AccountTransactionAssociation sourceAccountTransactionAssociation7 = sourceElement as global::Empresa.MoneyManagerModel.AccountTransactionAssociation;
+			if (sourceAccountTransactionAssociation7 != null)
+			{
+				// Create link for path ModelHasAccountTransactionAssociation.AccountTransactionAssociation
+				this.AccountTransactionAssociation.Add(sourceAccountTransactionAssociation7);
+
+				return;
+			}
+				
+			global::Empresa.MoneyManagerModel.CategorySpec sourceCategorySpec8 = sourceElement as global::Empresa.MoneyManagerModel.CategorySpec;
+			if (sourceCategorySpec8 != null)
+			{
+				// Create link for path ModelHasCategorySpec.CategorySpec
+				this.CategorySpec.Add(sourceCategorySpec8);
+
+				return;
+			}
+				
+			global::Empresa.MoneyManagerModel.CategoryTransactionAssociation sourceCategoryTransactionAssociation9 = sourceElement as global::Empresa.MoneyManagerModel.CategoryTransactionAssociation;
+			if (sourceCategoryTransactionAssociation9 != null)
+			{
+				// Create link for path ModelHasCategoryTransactionAssociation.CategoryTransactionAssociation
+				this.CategoryTransactionAssociation.Add(sourceCategoryTransactionAssociation9);
 
 				return;
 			}
@@ -401,15 +519,71 @@ namespace Empresa.MoneyManagerModel
 				return;
 			}
 				
-			global::Empresa.MoneyManagerModel.Association sourceAssociation5 = sourceElement as global::Empresa.MoneyManagerModel.Association;
-			if (sourceAssociation5 != null)
+			global::Empresa.MoneyManagerModel.AccountGroupSpec sourceAccountGroupSpec5 = sourceElement as global::Empresa.MoneyManagerModel.AccountGroupSpec;
+			if (sourceAccountGroupSpec5 != null)
 			{
-				// Delete link for path ModelTemAssociation.Association
+				// Delete link for path ModelHasAccountGroupSpec.AccountGroupSpec
 				
-				foreach (DslModeling::ElementLink link in global::Empresa.MoneyManagerModel.ModelTemAssociation.GetLinks((global::Empresa.MoneyManagerModel.Model)this, sourceAssociation5))
+				foreach (DslModeling::ElementLink link in global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.GetLinks((global::Empresa.MoneyManagerModel.Model)this, sourceAccountGroupSpec5))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Empresa.MoneyManagerModel.ModelTemAssociation.ModelDomainRoleId, global::Empresa.MoneyManagerModel.ModelTemAssociation.AssociationDomainRoleId);
+					link.Delete(global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.ModelDomainRoleId, global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.AccountGroupSpecDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::Empresa.MoneyManagerModel.UserAccountAssociation sourceUserAccountAssociation6 = sourceElement as global::Empresa.MoneyManagerModel.UserAccountAssociation;
+			if (sourceUserAccountAssociation6 != null)
+			{
+				// Delete link for path ModelHasUserAccountAssociation.UserAccountAssociation
+				
+				foreach (DslModeling::ElementLink link in global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.GetLinks((global::Empresa.MoneyManagerModel.Model)this, sourceUserAccountAssociation6))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.ModelDomainRoleId, global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.UserAccountAssociationDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::Empresa.MoneyManagerModel.AccountTransactionAssociation sourceAccountTransactionAssociation7 = sourceElement as global::Empresa.MoneyManagerModel.AccountTransactionAssociation;
+			if (sourceAccountTransactionAssociation7 != null)
+			{
+				// Delete link for path ModelHasAccountTransactionAssociation.AccountTransactionAssociation
+				
+				foreach (DslModeling::ElementLink link in global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.GetLinks((global::Empresa.MoneyManagerModel.Model)this, sourceAccountTransactionAssociation7))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.ModelDomainRoleId, global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::Empresa.MoneyManagerModel.CategorySpec sourceCategorySpec8 = sourceElement as global::Empresa.MoneyManagerModel.CategorySpec;
+			if (sourceCategorySpec8 != null)
+			{
+				// Delete link for path ModelHasCategorySpec.CategorySpec
+				
+				foreach (DslModeling::ElementLink link in global::Empresa.MoneyManagerModel.ModelHasCategorySpec.GetLinks((global::Empresa.MoneyManagerModel.Model)this, sourceCategorySpec8))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.CategorySpecDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::Empresa.MoneyManagerModel.CategoryTransactionAssociation sourceCategoryTransactionAssociation9 = sourceElement as global::Empresa.MoneyManagerModel.CategoryTransactionAssociation;
+			if (sourceCategoryTransactionAssociation9 != null)
+			{
+				// Delete link for path ModelHasCategoryTransactionAssociation.CategoryTransactionAssociation
+				
+				foreach (DslModeling::ElementLink link in global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.GetLinks((global::Empresa.MoneyManagerModel.Model)this, sourceCategoryTransactionAssociation9))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.ModelDomainRoleId, global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId);
 				}
 
 				return;
@@ -459,59 +633,59 @@ namespace Empresa.MoneyManagerModel
 		{
 		}
 		#endregion
-		#region Cardinality domain property code
+		#region CardinalityMax domain property code
 		
 		/// <summary>
-		/// Cardinality domain property Id.
+		/// CardinalityMax domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid CardinalityDomainPropertyId = new global::System.Guid(0x9dada005, 0x9b5f, 0x4e53, 0x8f, 0x3e, 0xe5, 0xe1, 0x88, 0x1e, 0x02, 0x15);
+		public static readonly global::System.Guid CardinalityMaxDomainPropertyId = new global::System.Guid(0x9dada005, 0x9b5f, 0x4e53, 0x8f, 0x3e, 0xe5, 0xe1, 0x88, 0x1e, 0x02, 0x15);
 		
 		/// <summary>
-		/// Storage for Cardinality
+		/// Storage for CardinalityMax
 		/// </summary>
-		private global::System.Int64 cardinalityPropertyStorage;
+		private global::System.Int64 cardinalityMaxPropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of Cardinality domain property.
+		/// Gets or sets the value of CardinalityMax domain property.
 		/// Descrição de Empresa.MoneyManagerModel.UserSpec.Cardinality
 		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserSpec/Cardinality.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserSpec/Cardinality.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserSpec/CardinalityMax.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserSpec/CardinalityMax.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("9dada005-9b5f-4e53-8f3e-e5e1881e0215")]
-		public global::System.Int64 Cardinality
+		public global::System.Int64 CardinalityMax
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return cardinalityPropertyStorage;
+				return cardinalityMaxPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				CardinalityPropertyHandler.Instance.SetValue(this, value);
+				CardinalityMaxPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the UserSpec.Cardinality domain property.
+		/// Value handler for the UserSpec.CardinalityMax domain property.
 		/// </summary>
-		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<UserSpec, global::System.Int64>
+		internal sealed partial class CardinalityMaxPropertyHandler : DslModeling::DomainPropertyValueHandler<UserSpec, global::System.Int64>
 		{
-			private CardinalityPropertyHandler() { }
+			private CardinalityMaxPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the UserSpec.Cardinality domain property value handler.
+			/// Gets the singleton instance of the UserSpec.CardinalityMax domain property value handler.
 			/// </summary>
-			public static readonly CardinalityPropertyHandler Instance = new CardinalityPropertyHandler();
+			public static readonly CardinalityMaxPropertyHandler Instance = new CardinalityMaxPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the UserSpec.Cardinality domain property.
+			/// Gets the Id of the UserSpec.CardinalityMax domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return CardinalityDomainPropertyId;
+					return CardinalityMaxDomainPropertyId;
 				}
 			}
 			
@@ -523,7 +697,7 @@ namespace Empresa.MoneyManagerModel
 			public override sealed global::System.Int64 GetValue(UserSpec element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.cardinalityPropertyStorage;
+				return element.cardinalityMaxPropertyStorage;
 			}
 		
 			/// <summary>
@@ -539,7 +713,7 @@ namespace Empresa.MoneyManagerModel
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.cardinalityPropertyStorage = newValue;
+					element.cardinalityMaxPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -633,6 +807,93 @@ namespace Empresa.MoneyManagerModel
 		}
 		
 		#endregion
+		#region CardinalityMin domain property code
+		
+		/// <summary>
+		/// CardinalityMin domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalityMinDomainPropertyId = new global::System.Guid(0x8923f918, 0xf5a7, 0x4f3d, 0xae, 0x90, 0xa3, 0x02, 0x4c, 0xd7, 0xfd, 0xd6);
+		
+		/// <summary>
+		/// Storage for CardinalityMin
+		/// </summary>
+		private global::System.Int64 cardinalityMinPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalityMin domain property.
+		/// Description for Empresa.MoneyManagerModel.UserSpec.Cardinality Min
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserSpec/CardinalityMin.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserSpec/CardinalityMin.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("8923f918-f5a7-4f3d-ae90-a3024cd7fdd6")]
+		public global::System.Int64 CardinalityMin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalityMinPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalityMinPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the UserSpec.CardinalityMin domain property.
+		/// </summary>
+		internal sealed partial class CardinalityMinPropertyHandler : DslModeling::DomainPropertyValueHandler<UserSpec, global::System.Int64>
+		{
+			private CardinalityMinPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the UserSpec.CardinalityMin domain property value handler.
+			/// </summary>
+			public static readonly CardinalityMinPropertyHandler Instance = new CardinalityMinPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the UserSpec.CardinalityMin domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalityMinDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int64 GetValue(UserSpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalityMinPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(UserSpec element, global::System.Int64 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int64 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalityMinPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region Model opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Model.
@@ -666,33 +927,19 @@ namespace Empresa.MoneyManagerModel
 			}
 		}
 		#endregion
-		#region Association opposite domain role accessor
+		#region UserAccountAssociation opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Association.
-		/// Descrição de Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.UserSpec
+		/// Gets a list of UserAccountAssociation.
+		/// Description for
+		/// Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserSpec
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Association> Association
+		public virtual DslModeling::LinkedElementCollection<UserAccountAssociation> UserAccountAssociation
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.UserSpecDomainRoleId);
-			}
-		}
-		#endregion
-		#region Associations opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Associations.
-		/// Descrição de Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.UserSpec
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Association> Associations
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.UserSpecDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<UserAccountAssociation>, UserAccountAssociation>(global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserSpecDomainRoleId);
 			}
 		}
 		#endregion
@@ -834,59 +1081,59 @@ namespace Empresa.MoneyManagerModel
 		{
 		}
 		#endregion
-		#region Cardinality domain property code
+		#region CardinalityMax domain property code
 		
 		/// <summary>
-		/// Cardinality domain property Id.
+		/// CardinalityMax domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid CardinalityDomainPropertyId = new global::System.Guid(0xc15a347f, 0x6b2c, 0x464c, 0xb3, 0x9d, 0x0d, 0xc5, 0xc5, 0xfc, 0x83, 0x19);
+		public static readonly global::System.Guid CardinalityMaxDomainPropertyId = new global::System.Guid(0xc15a347f, 0x6b2c, 0x464c, 0xb3, 0x9d, 0x0d, 0xc5, 0xc5, 0xfc, 0x83, 0x19);
 		
 		/// <summary>
-		/// Storage for Cardinality
+		/// Storage for CardinalityMax
 		/// </summary>
-		private global::System.Int64 cardinalityPropertyStorage;
+		private global::System.Int64 cardinalityMaxPropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of Cardinality domain property.
+		/// Gets or sets the value of CardinalityMax domain property.
 		/// Descrição de Empresa.MoneyManagerModel.AccountSpec.Cardinality
 		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpec/Cardinality.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpec/Cardinality.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpec/CardinalityMax.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpec/CardinalityMax.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("c15a347f-6b2c-464c-b39d-0dc5c5fc8319")]
-		public global::System.Int64 Cardinality
+		public global::System.Int64 CardinalityMax
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return cardinalityPropertyStorage;
+				return cardinalityMaxPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				CardinalityPropertyHandler.Instance.SetValue(this, value);
+				CardinalityMaxPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the AccountSpec.Cardinality domain property.
+		/// Value handler for the AccountSpec.CardinalityMax domain property.
 		/// </summary>
-		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<AccountSpec, global::System.Int64>
+		internal sealed partial class CardinalityMaxPropertyHandler : DslModeling::DomainPropertyValueHandler<AccountSpec, global::System.Int64>
 		{
-			private CardinalityPropertyHandler() { }
+			private CardinalityMaxPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the AccountSpec.Cardinality domain property value handler.
+			/// Gets the singleton instance of the AccountSpec.CardinalityMax domain property value handler.
 			/// </summary>
-			public static readonly CardinalityPropertyHandler Instance = new CardinalityPropertyHandler();
+			public static readonly CardinalityMaxPropertyHandler Instance = new CardinalityMaxPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the AccountSpec.Cardinality domain property.
+			/// Gets the Id of the AccountSpec.CardinalityMax domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return CardinalityDomainPropertyId;
+					return CardinalityMaxDomainPropertyId;
 				}
 			}
 			
@@ -898,7 +1145,7 @@ namespace Empresa.MoneyManagerModel
 			public override sealed global::System.Int64 GetValue(AccountSpec element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.cardinalityPropertyStorage;
+				return element.cardinalityMaxPropertyStorage;
 			}
 		
 			/// <summary>
@@ -914,7 +1161,7 @@ namespace Empresa.MoneyManagerModel
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.cardinalityPropertyStorage = newValue;
+					element.cardinalityMaxPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -1008,6 +1255,180 @@ namespace Empresa.MoneyManagerModel
 		}
 		
 		#endregion
+		#region CardinalityMin domain property code
+		
+		/// <summary>
+		/// CardinalityMin domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalityMinDomainPropertyId = new global::System.Guid(0xdfdaf151, 0xfd71, 0x4d41, 0x87, 0xfb, 0x8c, 0x24, 0x44, 0xab, 0xa3, 0x97);
+		
+		/// <summary>
+		/// Storage for CardinalityMin
+		/// </summary>
+		private global::System.Int64 cardinalityMinPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalityMin domain property.
+		/// Description for Empresa.MoneyManagerModel.AccountSpec.Cardinality Min
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpec/CardinalityMin.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpec/CardinalityMin.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("dfdaf151-fd71-4d41-87fb-8c2444aba397")]
+		public global::System.Int64 CardinalityMin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalityMinPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalityMinPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AccountSpec.CardinalityMin domain property.
+		/// </summary>
+		internal sealed partial class CardinalityMinPropertyHandler : DslModeling::DomainPropertyValueHandler<AccountSpec, global::System.Int64>
+		{
+			private CardinalityMinPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AccountSpec.CardinalityMin domain property value handler.
+			/// </summary>
+			public static readonly CardinalityMinPropertyHandler Instance = new CardinalityMinPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AccountSpec.CardinalityMin domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalityMinDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int64 GetValue(AccountSpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalityMinPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AccountSpec element, global::System.Int64 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int64 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalityMinPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region NeedBanckAccount domain property code
+		
+		/// <summary>
+		/// NeedBanckAccount domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NeedBanckAccountDomainPropertyId = new global::System.Guid(0x1203230a, 0xc23c, 0x49f7, 0x94, 0xa2, 0x7e, 0xcd, 0x91, 0xb6, 0xe6, 0x83);
+		
+		/// <summary>
+		/// Storage for NeedBanckAccount
+		/// </summary>
+		private global::System.Boolean needBanckAccountPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of NeedBanckAccount domain property.
+		/// Description for Empresa.MoneyManagerModel.AccountSpec.Need Banck Account
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountSpec/NeedBanckAccount.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountSpec/NeedBanckAccount.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("1203230a-c23c-49f7-94a2-7ecd91b6e683")]
+		public global::System.Boolean NeedBanckAccount
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return needBanckAccountPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NeedBanckAccountPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AccountSpec.NeedBanckAccount domain property.
+		/// </summary>
+		internal sealed partial class NeedBanckAccountPropertyHandler : DslModeling::DomainPropertyValueHandler<AccountSpec, global::System.Boolean>
+		{
+			private NeedBanckAccountPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AccountSpec.NeedBanckAccount domain property value handler.
+			/// </summary>
+			public static readonly NeedBanckAccountPropertyHandler Instance = new NeedBanckAccountPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AccountSpec.NeedBanckAccount domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NeedBanckAccountDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(AccountSpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.needBanckAccountPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AccountSpec element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.needBanckAccountPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region Model opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Model.
@@ -1043,35 +1464,55 @@ namespace Empresa.MoneyManagerModel
 			}
 		}
 		#endregion
-		#region Association opposite domain role accessor
-		
+		#region AccountGroupSpec opposite domain role accessor
 		/// <summary>
-		/// Gets a list of Association.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AccountSpec
+		/// Gets or sets AccountGroupSpec.
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountSpec
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Association> Association
+		public virtual AccountGroupSpec AccountGroupSpec
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AccountSpecDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountSpecDomainRoleId) as AccountGroupSpec;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountSpecDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region Associations opposite domain role accessor
+		#region UserAccountAssociation opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Associations.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AccountSpec
+		/// Gets a list of UserAccountAssociation.
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.AccountSpec
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Association> Associations
+		public virtual DslModeling::LinkedElementCollection<UserAccountAssociation> UserAccountAssociation
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AccountSpecDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<UserAccountAssociation>, UserAccountAssociation>(global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.AccountSpecDomainRoleId);
+			}
+		}
+		#endregion
+		#region AccountTransactionAssociation opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of AccountTransactionAssociation.
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountSpec
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<AccountTransactionAssociation> AccountTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AccountTransactionAssociation>, AccountTransactionAssociation>(global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountSpecDomainRoleId);
 			}
 		}
 		#endregion
@@ -1213,59 +1654,59 @@ namespace Empresa.MoneyManagerModel
 		{
 		}
 		#endregion
-		#region Cardinality domain property code
+		#region CardinalityMax domain property code
 		
 		/// <summary>
-		/// Cardinality domain property Id.
+		/// CardinalityMax domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid CardinalityDomainPropertyId = new global::System.Guid(0x87813a82, 0x5ca0, 0x4046, 0x86, 0xd8, 0x24, 0x00, 0x85, 0xed, 0x08, 0xaa);
+		public static readonly global::System.Guid CardinalityMaxDomainPropertyId = new global::System.Guid(0x87813a82, 0x5ca0, 0x4046, 0x86, 0xd8, 0x24, 0x00, 0x85, 0xed, 0x08, 0xaa);
 		
 		/// <summary>
-		/// Storage for Cardinality
+		/// Storage for CardinalityMax
 		/// </summary>
-		private global::System.Int64 cardinalityPropertyStorage;
+		private global::System.Int64 cardinalityMaxPropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of Cardinality domain property.
+		/// Gets or sets the value of CardinalityMax domain property.
 		/// Descrição de Empresa.MoneyManagerModel.TransactionSpec.Cardinality
 		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpec/Cardinality.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpec/Cardinality.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpec/CardinalityMax.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpec/CardinalityMax.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("87813a82-5ca0-4046-86d8-240085ed08aa")]
-		public global::System.Int64 Cardinality
+		public global::System.Int64 CardinalityMax
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return cardinalityPropertyStorage;
+				return cardinalityMaxPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				CardinalityPropertyHandler.Instance.SetValue(this, value);
+				CardinalityMaxPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the TransactionSpec.Cardinality domain property.
+		/// Value handler for the TransactionSpec.CardinalityMax domain property.
 		/// </summary>
-		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<TransactionSpec, global::System.Int64>
+		internal sealed partial class CardinalityMaxPropertyHandler : DslModeling::DomainPropertyValueHandler<TransactionSpec, global::System.Int64>
 		{
-			private CardinalityPropertyHandler() { }
+			private CardinalityMaxPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the TransactionSpec.Cardinality domain property value handler.
+			/// Gets the singleton instance of the TransactionSpec.CardinalityMax domain property value handler.
 			/// </summary>
-			public static readonly CardinalityPropertyHandler Instance = new CardinalityPropertyHandler();
+			public static readonly CardinalityMaxPropertyHandler Instance = new CardinalityMaxPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the TransactionSpec.Cardinality domain property.
+			/// Gets the Id of the TransactionSpec.CardinalityMax domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return CardinalityDomainPropertyId;
+					return CardinalityMaxDomainPropertyId;
 				}
 			}
 			
@@ -1277,7 +1718,7 @@ namespace Empresa.MoneyManagerModel
 			public override sealed global::System.Int64 GetValue(TransactionSpec element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.cardinalityPropertyStorage;
+				return element.cardinalityMaxPropertyStorage;
 			}
 		
 			/// <summary>
@@ -1293,7 +1734,7 @@ namespace Empresa.MoneyManagerModel
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.cardinalityPropertyStorage = newValue;
+					element.cardinalityMaxPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -1387,6 +1828,93 @@ namespace Empresa.MoneyManagerModel
 		}
 		
 		#endregion
+		#region CardinalityMin domain property code
+		
+		/// <summary>
+		/// CardinalityMin domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalityMinDomainPropertyId = new global::System.Guid(0x35421780, 0x5b1e, 0x443e, 0x87, 0xbc, 0xcf, 0x0d, 0xa0, 0x8a, 0x1f, 0x78);
+		
+		/// <summary>
+		/// Storage for CardinalityMin
+		/// </summary>
+		private global::System.Int64 cardinalityMinPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalityMin domain property.
+		/// Description for Empresa.MoneyManagerModel.TransactionSpec.Cardinality Min
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.TransactionSpec/CardinalityMin.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.TransactionSpec/CardinalityMin.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("35421780-5b1e-443e-87bc-cf0da08a1f78")]
+		public global::System.Int64 CardinalityMin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalityMinPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalityMinPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the TransactionSpec.CardinalityMin domain property.
+		/// </summary>
+		internal sealed partial class CardinalityMinPropertyHandler : DslModeling::DomainPropertyValueHandler<TransactionSpec, global::System.Int64>
+		{
+			private CardinalityMinPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the TransactionSpec.CardinalityMin domain property value handler.
+			/// </summary>
+			public static readonly CardinalityMinPropertyHandler Instance = new CardinalityMinPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the TransactionSpec.CardinalityMin domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalityMinDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int64 GetValue(TransactionSpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalityMinPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(TransactionSpec element, global::System.Int64 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int64 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalityMinPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region Model opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Model.
@@ -1423,35 +1951,35 @@ namespace Empresa.MoneyManagerModel
 			}
 		}
 		#endregion
-		#region Association opposite domain role accessor
+		#region AccountTransactionAssociation opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Association.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.TransactionSpec
+		/// Gets a list of AccountTransactionAssociation.
+		/// Description for
+		/// Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.TransactionSpec
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Association> Association
+		public virtual DslModeling::LinkedElementCollection<AccountTransactionAssociation> AccountTransactionAssociation
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.TransactionSpecDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AccountTransactionAssociation>, AccountTransactionAssociation>(global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.TransactionSpecDomainRoleId);
 			}
 		}
 		#endregion
-		#region Associations opposite domain role accessor
+		#region CategoryTransactionAssociation opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Associations.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.TransactionSpec
+		/// Gets a list of CategoryTransactionAssociation.
+		/// Description for
+		/// Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpec
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Association> Associations
+		public virtual DslModeling::LinkedElementCollection<CategoryTransactionAssociation> CategoryTransactionAssociation
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Association>, Association>(global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.TransactionSpecDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryTransactionAssociation>, CategoryTransactionAssociation>(global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpecDomainRoleId);
 			}
 		}
 		#endregion
@@ -2020,270 +2548,23 @@ namespace Empresa.MoneyManagerModel
 			}
 		}
 		#endregion
-	}
-}
-namespace Empresa.MoneyManagerModel
-{
-	/// <summary>
-	/// DomainClass Association
-	/// Descrição de Empresa.MoneyManagerModel.Association
-	/// </summary>
-	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.Association.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.Association.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("ac1f172e-7f18-4678-9ed1-36cf862dfff5")]
-	public partial class Association : DslModeling::ModelElement
-	{
-		#region Constructors, domain class Id
-	
+		#region CategoryAttribute1 opposite domain role accessor
 		/// <summary>
-		/// Association domain class Id.
+		/// Gets or sets CategoryAttribute1.
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.AttributeType
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xac1f172e, 0x7f18, 0x4678, 0x9e, 0xd1, 0x36, 0xcf, 0x86, 0x2d, 0xff, 0xf5);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Association(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Association(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Name domain property code
-		
-		/// <summary>
-		/// Name domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0xe520a30a, 0x8cc1, 0x462b, 0x90, 0xab, 0x13, 0x3c, 0x9b, 0xb0, 0x1e, 0x43);
-		
-		/// <summary>
-		/// Storage for Name
-		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of Name domain property.
-		/// Descrição de Empresa.MoneyManagerModel.Association.Name
-		/// </summary>
-		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.Association/Name.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.Association/Name.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("e520a30a-8cc1-462b-90ab-133c9bb01e43")]
-		public global::System.String Name
+		public virtual CategoryAttribute CategoryAttribute1
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return namePropertyStorage;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.AttributeTypeDomainRoleId) as CategoryAttribute;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				NamePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Association.Name domain property.
-		/// </summary>
-		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<Association, global::System.String>
-		{
-			private NamePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Association.Name domain property value handler.
-			/// </summary>
-			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Association.Name domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return NameDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Association element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.namePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Association element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.namePropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region Model opposite domain role accessor
-		/// <summary>
-		/// Gets or sets Model.
-		/// Descrição de Empresa.MoneyManagerModel.ModelTemAssociation.Association
-		/// </summary>
-		public virtual Model Model
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelTemAssociation.AssociationDomainRoleId) as Model;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelTemAssociation.AssociationDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region TransactionSpec opposite domain role accessor
-		/// <summary>
-		/// Gets or sets TransactionSpec.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.Association
-		/// </summary>
-		public virtual TransactionSpec TransactionSpec
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.AssociationDomainRoleId) as TransactionSpec;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.AssociationReferênciasTransactionSpec.AssociationDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region TransactionSpecs opposite domain role accessor
-		/// <summary>
-		/// Gets or sets TransactionSpecs.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.Association
-		/// </summary>
-		public virtual TransactionSpec TransactionSpecs
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.AssociationDomainRoleId) as TransactionSpec;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.TransactionSpecReferênciasAssociations.AssociationDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region AccountSpec opposite domain role accessor
-		/// <summary>
-		/// Gets or sets AccountSpec.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.Association
-		/// </summary>
-		public virtual AccountSpec AccountSpec
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AssociationDomainRoleId) as AccountSpec;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.AssociationReferênciasAccountSpec.AssociationDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region AccountSpecs opposite domain role accessor
-		/// <summary>
-		/// Gets or sets AccountSpecs.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.Association
-		/// </summary>
-		public virtual AccountSpec AccountSpecs
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AssociationDomainRoleId) as AccountSpec;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.AccountSpecReferênciasAssociations.AssociationDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region UserSpec opposite domain role accessor
-		/// <summary>
-		/// Gets or sets UserSpec.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.Association
-		/// </summary>
-		public virtual UserSpec UserSpec
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.AssociationDomainRoleId) as UserSpec;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.AssociationReferênciasUserSpec.AssociationDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region UserSpecs opposite domain role accessor
-		/// <summary>
-		/// Gets or sets UserSpecs.
-		/// Descrição de
-		/// Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.Association
-		/// </summary>
-		public virtual UserSpec UserSpecs
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.AssociationDomainRoleId) as UserSpec;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.UserSpecReferênciasAssociations.AssociationDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.AttributeTypeDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -3048,6 +3329,1700 @@ namespace Empresa.MoneyManagerModel
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes.TransactionAttributeDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass AccountGroupSpec
+	/// Description for Empresa.MoneyManagerModel.AccountGroupSpec
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountGroupSpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountGroupSpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("c17a6a31-3c2e-4dbf-ac9a-ad39d1eeded0")]
+	public partial class AccountGroupSpec : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AccountGroupSpec domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc17a6a31, 0x3c2e, 0x4dbf, 0xac, 0x9a, 0xad, 0x39, 0xd1, 0xee, 0xde, 0xd0);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AccountGroupSpec(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AccountGroupSpec(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0xfa10579c, 0x314f, 0x474a, 0xbb, 0x32, 0x65, 0x73, 0x5a, 0xf2, 0xe8, 0xcd);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Empresa.MoneyManagerModel.AccountGroupSpec.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountGroupSpec/Name.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountGroupSpec/Name.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("fa10579c-314f-474a-bb32-65735af2e8cd")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AccountGroupSpec.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<AccountGroupSpec, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AccountGroupSpec.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AccountGroupSpec.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(AccountGroupSpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AccountGroupSpec element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region CardinalityMin domain property code
+		
+		/// <summary>
+		/// CardinalityMin domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalityMinDomainPropertyId = new global::System.Guid(0x9606dce1, 0x593d, 0x48b0, 0x8d, 0x24, 0x03, 0xe0, 0x9c, 0x42, 0x7d, 0x1d);
+		
+		/// <summary>
+		/// Storage for CardinalityMin
+		/// </summary>
+		private global::System.Int64 cardinalityMinPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalityMin domain property.
+		/// Description for Empresa.MoneyManagerModel.AccountGroupSpec.Cardinality Min
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountGroupSpec/CardinalityMin.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountGroupSpec/CardinalityMin.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("9606dce1-593d-48b0-8d24-03e09c427d1d")]
+		public global::System.Int64 CardinalityMin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalityMinPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalityMinPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AccountGroupSpec.CardinalityMin domain property.
+		/// </summary>
+		internal sealed partial class CardinalityMinPropertyHandler : DslModeling::DomainPropertyValueHandler<AccountGroupSpec, global::System.Int64>
+		{
+			private CardinalityMinPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AccountGroupSpec.CardinalityMin domain property value handler.
+			/// </summary>
+			public static readonly CardinalityMinPropertyHandler Instance = new CardinalityMinPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AccountGroupSpec.CardinalityMin domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalityMinDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int64 GetValue(AccountGroupSpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalityMinPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AccountGroupSpec element, global::System.Int64 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int64 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalityMinPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region CardinalityMax domain property code
+		
+		/// <summary>
+		/// CardinalityMax domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalityMaxDomainPropertyId = new global::System.Guid(0xe5bb975f, 0x01af, 0x417a, 0x9f, 0xb4, 0x6a, 0xcf, 0xd5, 0x6d, 0xbc, 0x27);
+		
+		/// <summary>
+		/// Storage for CardinalityMax
+		/// </summary>
+		private global::System.Int64 cardinalityMaxPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalityMax domain property.
+		/// Description for Empresa.MoneyManagerModel.AccountGroupSpec.Cardinality Max
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountGroupSpec/CardinalityMax.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountGroupSpec/CardinalityMax.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("e5bb975f-01af-417a-9fb4-6acfd56dbc27")]
+		public global::System.Int64 CardinalityMax
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalityMaxPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalityMaxPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AccountGroupSpec.CardinalityMax domain property.
+		/// </summary>
+		internal sealed partial class CardinalityMaxPropertyHandler : DslModeling::DomainPropertyValueHandler<AccountGroupSpec, global::System.Int64>
+		{
+			private CardinalityMaxPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AccountGroupSpec.CardinalityMax domain property value handler.
+			/// </summary>
+			public static readonly CardinalityMaxPropertyHandler Instance = new CardinalityMaxPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AccountGroupSpec.CardinalityMax domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalityMaxDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int64 GetValue(AccountGroupSpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalityMaxPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AccountGroupSpec element, global::System.Int64 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int64 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalityMaxPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region needBankAccount domain property code
+		
+		/// <summary>
+		/// needBankAccount domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid needBankAccountDomainPropertyId = new global::System.Guid(0x610ff4bd, 0x5260, 0x405f, 0x94, 0xf9, 0x17, 0xc3, 0xb3, 0xce, 0xc9, 0x4c);
+		
+		/// <summary>
+		/// Storage for needBankAccount
+		/// </summary>
+		private global::System.Boolean needBankAccountPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of needBankAccount domain property.
+		/// Description for Empresa.MoneyManagerModel.AccountGroupSpec.Need Bank Account
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountGroupSpec/needBankAccount.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountGroupSpec/needBankAccount.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("610ff4bd-5260-405f-94f9-17c3b3cec94c")]
+		public global::System.Boolean needBankAccount
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return needBankAccountPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				needBankAccountPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AccountGroupSpec.needBankAccount domain property.
+		/// </summary>
+		internal sealed partial class needBankAccountPropertyHandler : DslModeling::DomainPropertyValueHandler<AccountGroupSpec, global::System.Boolean>
+		{
+			private needBankAccountPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AccountGroupSpec.needBankAccount domain property value handler.
+			/// </summary>
+			public static readonly needBankAccountPropertyHandler Instance = new needBankAccountPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AccountGroupSpec.needBankAccount domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return needBankAccountDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(AccountGroupSpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.needBankAccountPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AccountGroupSpec element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.needBankAccountPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Model opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Model.
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.AccountGroupSpec
+		/// </summary>
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.AccountGroupSpecDomainRoleId) as Model;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.AccountGroupSpecDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region AccountSpec opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of AccountSpec.
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountGroupSpec
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<AccountSpec> AccountSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AccountSpec>, AccountSpec>(global::Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountGroupSpecDomainRoleId);
+			}
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass UserAccountAssociation
+	/// Description for Empresa.MoneyManagerModel.UserAccountAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserAccountAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserAccountAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("bbae121a-6eaa-4f09-bc52-07c416b81a91")]
+	public partial class UserAccountAssociation : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// UserAccountAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xbbae121a, 0x6eaa, 0x4f09, 0xbc, 0x52, 0x07, 0xc4, 0x16, 0xb8, 0x1a, 0x91);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public UserAccountAssociation(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public UserAccountAssociation(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x22de6b0f, 0x0096, 0x4ed6, 0xbe, 0x56, 0xef, 0x2d, 0x83, 0xe9, 0x2b, 0x23);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Empresa.MoneyManagerModel.UserAccountAssociation.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserAccountAssociation/Name.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserAccountAssociation/Name.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("22de6b0f-0096-4ed6-be56-ef2d83e92b23")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the UserAccountAssociation.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<UserAccountAssociation, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the UserAccountAssociation.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the UserAccountAssociation.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(UserAccountAssociation element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(UserAccountAssociation element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Model opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Model.
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.UserAccountAssociation
+		/// </summary>
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.UserAccountAssociationDomainRoleId) as Model;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.UserAccountAssociationDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region UserSpec opposite domain role accessor
+		/// <summary>
+		/// Gets or sets UserSpec.
+		/// Description for
+		/// Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserAccountAssociation
+		/// </summary>
+		public virtual UserSpec UserSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId) as UserSpec;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region AccountSpec opposite domain role accessor
+		/// <summary>
+		/// Gets or sets AccountSpec.
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.UserAccountAssociation
+		/// </summary>
+		public virtual AccountSpec AccountSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId) as AccountSpec;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.UserAccountAssociationDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass AccountTransactionAssociation
+	/// Description for Empresa.MoneyManagerModel.AccountTransactionAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("19af0665-0e13-4769-b070-30030d418360")]
+	public partial class AccountTransactionAssociation : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AccountTransactionAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x19af0665, 0x0e13, 0x4769, 0xb0, 0x70, 0x30, 0x03, 0x0d, 0x41, 0x83, 0x60);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AccountTransactionAssociation(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AccountTransactionAssociation(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x5f4043e9, 0xa186, 0x418e, 0xa4, 0x2c, 0x66, 0xd8, 0xd4, 0xbd, 0xc4, 0xe0);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Empresa.MoneyManagerModel.AccountTransactionAssociation.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountTransactionAssociation/Name.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountTransactionAssociation/Name.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("5f4043e9-a186-418e-a42c-66d8d4bdc4e0")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AccountTransactionAssociation.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<AccountTransactionAssociation, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AccountTransactionAssociation.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AccountTransactionAssociation.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(AccountTransactionAssociation element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AccountTransactionAssociation element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Model opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Model.
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.AccountTransactionAssociation
+		/// </summary>
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId) as Model;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region AccountSpec opposite domain role accessor
+		/// <summary>
+		/// Gets or sets AccountSpec.
+		/// Description for
+		/// Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountTransactionAssociation
+		/// </summary>
+		public virtual AccountSpec AccountSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId) as AccountSpec;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region TransactionSpec opposite domain role accessor
+		/// <summary>
+		/// Gets or sets TransactionSpec.
+		/// Description for
+		/// Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.AccountTransactionAssociation
+		/// </summary>
+		public virtual TransactionSpec TransactionSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId) as TransactionSpec;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.AccountTransactionAssociationDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass CategorySpec
+	/// Description for Empresa.MoneyManagerModel.CategorySpec
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("0872376a-cbba-4118-939f-ebc612fc8d61")]
+	public partial class CategorySpec : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// CategorySpec domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x0872376a, 0xcbba, 0x4118, 0x93, 0x9f, 0xeb, 0xc6, 0x12, 0xfc, 0x8d, 0x61);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategorySpec(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategorySpec(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x166a3648, 0xd7b1, 0x428a, 0x90, 0xc2, 0xd4, 0xa7, 0x92, 0x2e, 0xb3, 0x48);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Empresa.MoneyManagerModel.CategorySpec.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpec/Name.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpec/Name.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("166a3648-d7b1-428a-90c2-d4a7922eb348")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CategorySpec.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<CategorySpec, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CategorySpec.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CategorySpec.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CategorySpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CategorySpec element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region CardinalityMin domain property code
+		
+		/// <summary>
+		/// CardinalityMin domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalityMinDomainPropertyId = new global::System.Guid(0x9ee0c5d2, 0x7a7e, 0x4be7, 0x8a, 0xd9, 0x3d, 0xdf, 0x77, 0x2d, 0x70, 0xe9);
+		
+		/// <summary>
+		/// Storage for CardinalityMin
+		/// </summary>
+		private global::System.Int64 cardinalityMinPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalityMin domain property.
+		/// Description for Empresa.MoneyManagerModel.CategorySpec.Cardinality Min
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpec/CardinalityMin.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpec/CardinalityMin.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("9ee0c5d2-7a7e-4be7-8ad9-3ddf772d70e9")]
+		public global::System.Int64 CardinalityMin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalityMinPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalityMinPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CategorySpec.CardinalityMin domain property.
+		/// </summary>
+		internal sealed partial class CardinalityMinPropertyHandler : DslModeling::DomainPropertyValueHandler<CategorySpec, global::System.Int64>
+		{
+			private CardinalityMinPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CategorySpec.CardinalityMin domain property value handler.
+			/// </summary>
+			public static readonly CardinalityMinPropertyHandler Instance = new CardinalityMinPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CategorySpec.CardinalityMin domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalityMinDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int64 GetValue(CategorySpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalityMinPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CategorySpec element, global::System.Int64 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int64 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalityMinPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region CardinalityMax domain property code
+		
+		/// <summary>
+		/// CardinalityMax domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalityMaxDomainPropertyId = new global::System.Guid(0x83c00e64, 0xa7ab, 0x4cb6, 0xb7, 0xd3, 0x25, 0xa1, 0xec, 0xbc, 0x24, 0xb0);
+		
+		/// <summary>
+		/// Storage for CardinalityMax
+		/// </summary>
+		private global::System.Int64 cardinalityMaxPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalityMax domain property.
+		/// Description for Empresa.MoneyManagerModel.CategorySpec.Cardinality Max
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpec/CardinalityMax.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpec/CardinalityMax.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("83c00e64-a7ab-4cb6-b7d3-25a1ecbc24b0")]
+		public global::System.Int64 CardinalityMax
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalityMaxPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalityMaxPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CategorySpec.CardinalityMax domain property.
+		/// </summary>
+		internal sealed partial class CardinalityMaxPropertyHandler : DslModeling::DomainPropertyValueHandler<CategorySpec, global::System.Int64>
+		{
+			private CardinalityMaxPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CategorySpec.CardinalityMax domain property value handler.
+			/// </summary>
+			public static readonly CardinalityMaxPropertyHandler Instance = new CardinalityMaxPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CategorySpec.CardinalityMax domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalityMaxDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int64 GetValue(CategorySpec element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalityMaxPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CategorySpec element, global::System.Int64 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int64 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalityMaxPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Model opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Model.
+		/// Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.CategorySpec
+		/// </summary>
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.CategorySpecDomainRoleId) as Model;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.CategorySpecDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region CategoryAttribute opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of CategoryAttribute.
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpec
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<CategoryAttribute> CategoryAttribute
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryAttribute>, CategoryAttribute>(global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId);
+			}
+		}
+		#endregion
+		#region CategoryTransactionAssociation opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of CategoryTransactionAssociation.
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategorySpec
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<CategoryTransactionAssociation> CategoryTransactionAssociation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryTransactionAssociation>, CategoryTransactionAssociation>(global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategorySpecDomainRoleId);
+			}
+		}
+		#endregion
+		#region ElementGroupPrototype Merge methods
+		/// <summary>
+		/// Returns a value indicating whether the source element represented by the
+		/// specified root ProtoElement can be added to this element.
+		/// </summary>
+		/// <param name="rootElement">
+		/// The root ProtoElement representing a source element.  This can be null, 
+		/// in which case the ElementGroupPrototype does not contain an ProtoElements
+		/// and the code should inspect the ElementGroupPrototype context information.
+		/// </param>
+		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
+		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
+		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
+		{
+			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
+			
+			if (rootElement != null)
+			{
+				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Empresa.MoneyManagerModel.CategoryAttribute.DomainClassId)) 
+				{
+					return true;
+				}
+			}
+			return base.CanMerge(rootElement, elementGroupPrototype);
+		}
+		
+		/// <summary>
+		/// Called by the Merge process to create a relationship between 
+		/// this target element and the specified source element. 
+		/// Typically, a parent-child relationship is established
+		/// between the target element (the parent) and the source element 
+		/// (the child), but any relationship can be established.
+		/// </summary>
+		/// <param name="sourceElement">The element that is to be related to this model element.</param>
+		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
+		/// <remarks>
+		/// This method is overriden to create the relationship between the target element and the specified source element.
+		/// The base method does nothing.
+		/// </remarks>
+		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
+		{
+			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
+			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
+			// need to support this case.
+			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
+		
+				
+			global::Empresa.MoneyManagerModel.CategoryAttribute sourceCategoryAttribute1 = sourceElement as global::Empresa.MoneyManagerModel.CategoryAttribute;
+			if (sourceCategoryAttribute1 != null)
+			{
+				// Create link for path CategorySpecHasCategoryAttribute.CategoryAttribute
+				this.CategoryAttribute.Add(sourceCategoryAttribute1);
+
+				return;
+			}
+		
+			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
+			// during a "Paste".
+			if (sourceElement is DslModeling::ExtensionElement
+				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
+			{
+				return;
+			}
+		
+			// Fall through to base class if this class hasn't handled the merge.
+			base.MergeRelate(sourceElement, elementGroup);
+		}
+		
+		/// <summary>
+		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
+		/// element from the current one (removes links created by MergeRelate).
+		/// </summary>
+		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
+		{
+			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
+				
+			global::Empresa.MoneyManagerModel.CategoryAttribute sourceCategoryAttribute1 = sourceElement as global::Empresa.MoneyManagerModel.CategoryAttribute;
+			if (sourceCategoryAttribute1 != null)
+			{
+				// Delete link for path CategorySpecHasCategoryAttribute.CategoryAttribute
+				
+				foreach (DslModeling::ElementLink link in global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.GetLinks((global::Empresa.MoneyManagerModel.CategorySpec)this, sourceCategoryAttribute1))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategoryAttributeDomainRoleId);
+				}
+
+				return;
+			}
+			// Fall through to base class if this class hasn't handled the unmerge.
+			base.MergeDisconnect(sourceElement);
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass CategoryAttribute
+	/// Description for Empresa.MoneyManagerModel.CategoryAttribute
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryAttribute.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryAttribute.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("8de30989-5700-4e06-9837-5139bb323d96")]
+	public partial class CategoryAttribute : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// CategoryAttribute domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x8de30989, 0x5700, 0x4e06, 0x98, 0x37, 0x51, 0x39, 0xbb, 0x32, 0x3d, 0x96);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategoryAttribute(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategoryAttribute(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x107e5794, 0x2ea6, 0x4dee, 0x81, 0xc3, 0x35, 0xa5, 0x03, 0x5b, 0x3f, 0xb4);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Empresa.MoneyManagerModel.CategoryAttribute.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryAttribute/Name.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryAttribute/Name.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("107e5794-2ea6-4dee-81c3-35a5035b3fb4")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CategoryAttribute.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<CategoryAttribute, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CategoryAttribute.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CategoryAttribute.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CategoryAttribute element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CategoryAttribute element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region AttributeType domain property code
+		
+		/// <summary>
+		/// AttributeType domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid AttributeTypeDomainPropertyId = new global::System.Guid(0x38412739, 0xbcc1, 0x481d, 0xb0, 0x9a, 0xbb, 0xdb, 0x4d, 0x1e, 0x01, 0x1a);
+		
+		/// <summary>
+		/// Storage for AttributeType
+		/// </summary>
+		private global::System.String attributeTypePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of AttributeType domain property.
+		/// Description for Empresa.MoneyManagerModel.CategoryAttribute.Attribute Type
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryAttribute/AttributeType.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryAttribute/AttributeType.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("38412739-bcc1-481d-b09a-bbdb4d1e011a")]
+		public global::System.String AttributeType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return attributeTypePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				AttributeTypePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CategoryAttribute.AttributeType domain property.
+		/// </summary>
+		internal sealed partial class AttributeTypePropertyHandler : DslModeling::DomainPropertyValueHandler<CategoryAttribute, global::System.String>
+		{
+			private AttributeTypePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CategoryAttribute.AttributeType domain property value handler.
+			/// </summary>
+			public static readonly AttributeTypePropertyHandler Instance = new AttributeTypePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CategoryAttribute.AttributeType domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return AttributeTypeDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CategoryAttribute element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.attributeTypePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CategoryAttribute element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.attributeTypePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region AttributeType1 opposite domain role accessor
+		/// <summary>
+		/// Gets or sets AttributeType1.
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.CategoryAttribute
+		/// </summary>
+		public virtual AttributeType AttributeType1
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.CategoryAttributeDomainRoleId) as AttributeType;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.CategoryAttributeDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region CategorySpec opposite domain role accessor
+		/// <summary>
+		/// Gets or sets CategorySpec.
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategoryAttribute
+		/// </summary>
+		public virtual CategorySpec CategorySpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategoryAttributeDomainRoleId) as CategorySpec;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategoryAttributeDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass CategoryTransactionAssociation
+	/// Description for Empresa.MoneyManagerModel.CategoryTransactionAssociation
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryTransactionAssociation.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryTransactionAssociation.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("4f7b0789-6c44-42d3-a2a9-44c85544d702")]
+	public partial class CategoryTransactionAssociation : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// CategoryTransactionAssociation domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x4f7b0789, 0x6c44, 0x42d3, 0xa2, 0xa9, 0x44, 0xc8, 0x55, 0x44, 0xd7, 0x02);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategoryTransactionAssociation(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategoryTransactionAssociation(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x43b7c72d, 0x6715, 0x4ade, 0x85, 0xff, 0x91, 0xed, 0x3d, 0xd9, 0xd1, 0xf5);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Empresa.MoneyManagerModel.CategoryTransactionAssociation.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryTransactionAssociation/Name.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryTransactionAssociation/Name.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("43b7c72d-6715-4ade-85ff-91ed3dd9d1f5")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CategoryTransactionAssociation.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<CategoryTransactionAssociation, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CategoryTransactionAssociation.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CategoryTransactionAssociation.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CategoryTransactionAssociation element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CategoryTransactionAssociation element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Model opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Model.
+		/// Description for
+		/// Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.CategoryTransactionAssociation
+		/// </summary>
+		public virtual Model Model
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId) as Model;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region CategorySpec opposite domain role accessor
+		/// <summary>
+		/// Gets or sets CategorySpec.
+		/// Description for
+		/// Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociation
+		/// </summary>
+		public virtual CategorySpec CategorySpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId) as CategorySpec;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region TransactionSpec opposite domain role accessor
+		/// <summary>
+		/// Gets or sets TransactionSpec.
+		/// Description for
+		/// Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociation
+		/// </summary>
+		public virtual TransactionSpec TransactionSpec
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId) as TransactionSpec;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociationDomainRoleId, value);
 			}
 		}
 		#endregion

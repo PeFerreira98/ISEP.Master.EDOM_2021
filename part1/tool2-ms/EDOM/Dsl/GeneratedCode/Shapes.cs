@@ -129,24 +129,38 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.PeachPuff);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
 		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return true;
+				return false;
 			}
 		}
-		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -349,24 +363,38 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.IndianRed);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
 		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return true;
+				return false;
 			}
 		}
-		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -569,24 +597,38 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.DarkKhaki);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
 		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return true;
+				return false;
 			}
 		}
-		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -789,24 +831,28 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Aquamarine);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
 		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -885,226 +931,6 @@ namespace Empresa.MoneyManagerModel
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
 		public AttributeTypeShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-	}
-}
-namespace Empresa.MoneyManagerModel
-{
-	/// <summary>
-	/// DomainClass AssociationShape
-	/// Descrição de Empresa.MoneyManagerModel.AssociationShape
-	/// </summary>
-	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AssociationShape.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AssociationShape.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("8ed59e93-8b6e-4866-bf6d-15501740e0ae")]
-	public partial class AssociationShape : DslDiagrams::NodeShape
-	{
-		#region DiagramElement boilerplate
-		private static DslDiagrams::StyleSet classStyleSet;
-		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
-		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
-		
-		/// <summary>
-		/// Per-class style set for this shape.
-		/// </summary>
-		protected override DslDiagrams::StyleSet ClassStyleSet
-		{
-			get
-			{
-				if (classStyleSet == null)
-				{
-					classStyleSet = CreateClassStyleSet();
-				}
-				return classStyleSet;
-			}
-		}
-		
-		/// <summary>
-		/// Per-class ShapeFields for this shape.
-		/// </summary>
-		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
-		{
-			get
-			{
-				if (shapeFields == null)
-				{
-					shapeFields = CreateShapeFields();
-				}
-				return shapeFields;
-			}
-		}
-		
-		/// <summary>
-		/// Event fired when decorator initialization is complete for this shape type.
-		/// </summary>
-		public static event global::System.EventHandler DecoratorsInitialized;
-		
-		/// <summary>
-		/// List containing decorators used by this type.
-		/// </summary>
-		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
-		{
-			get 
-			{
-				if(decorators == null)
-				{
-					decorators = CreateDecorators();
-					
-					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
-					if(DecoratorsInitialized != null)
-					{
-						DecoratorsInitialized(this, global::System.EventArgs.Empty);
-					}
-				}
-				
-				return decorators; 
-			}
-		}
-		
-		/// <summary>
-		/// Finds a decorator associated with AssociationShape.
-		/// </summary>
-		public static DslDiagrams::Decorator FindAssociationShapeDecorator(string decoratorName)
-		{	
-			if(decorators == null) return null;
-			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
-		}
-		
-		
-		/// <summary>
-		/// Shape instance initialization.
-		/// </summary>
-		public override void OnInitialize()
-		{
-			base.OnInitialize();
-			
-			// Create host shapes for outer decorators.
-			foreach(DslDiagrams::Decorator decorator in this.Decorators)
-			{
-				if(decorator.RequiresHost)
-				{
-					decorator.ConfigureHostShape(this);
-				}
-			}
-			
-		}
-		#endregion
-		#region Shape size
-		
-		/// <summary>
-		/// Default size for this shape.
-		/// </summary>
-		public override DslDiagrams::SizeD DefaultSize
-		{
-			get
-			{
-				return new DslDiagrams::SizeD(1.5, 1);
-			}
-		}
-		#endregion
-		#region Shape styles
-		/// <summary>
-		/// Indicates whether this shape displays a background gradient.
-		/// </summary>
-		public override bool HasBackgroundGradient
-		{
-			get
-			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-			}
-		}
-		#endregion
-		#region Decorators
-		/// <summary>
-		/// Initialize the collection of shape fields associated with this shape type.
-		/// </summary>
-		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
-		{
-			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager.GetString("AssociationShapeNameDecoratorDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			shapeFields.Add(field1);
-			
-		}
-		
-		/// <summary>
-		/// Initialize the collection of decorators associated with this shape type.  This method also
-		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
-		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
-		/// </summary>
-		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
-		{
-			base.InitializeDecorators(shapeFields, decorators);
-			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator1);
-				
-		}
-		
-		/// <summary>
-		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
-		/// after the shape has been associated with the model element.
-		/// </summary>
-		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
-		{
-			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
-			
-			if(iteration == 0)
-			{
-				foreach(DslDiagrams::Decorator decorator in this.Decorators)
-				{
-					if(decorator.RequiresHost)
-					{
-						decorator.RepositionHostShape(decorator.GetHostShape(this));
-					}
-				}
-			}
-		}
-		#endregion
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// AssociationShape domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x8ed59e93, 0x8b6e, 0x4866, 0xbf, 0x6d, 0x15, 0x50, 0x17, 0x40, 0xe0, 0xae);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public AssociationShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public AssociationShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -1229,24 +1055,28 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.PeachPuff);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
 		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -1449,24 +1279,28 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.IndianRed);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
 		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -1669,24 +1503,28 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Shape styles
 		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.DarkKhaki);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
 		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -1765,6 +1603,1325 @@ namespace Empresa.MoneyManagerModel
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
 		public TransactionAttributeShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass AccountGroupSpecSchape
+	/// Description for Empresa.MoneyManagerModel.AccountGroupSpecSchape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountGroupSpecSchape.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountGroupSpecSchape.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("b2ef685e-ebcd-42ea-8b87-ae6209d1a389")]
+	public partial class AccountGroupSpecSchape : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with AccountGroupSpecSchape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindAccountGroupSpecSchapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.5, 1);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.IndianRed);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
+		/// Indicates whether this shape displays a background gradient.
+		/// </summary>
+		public override bool HasBackgroundGradient
+		{
+			get
+			{
+				return false;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+			}
+		}
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
+			field1.DefaultText = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager.GetString("AccountGroupSpecSchapeNameDecoratorDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AccountGroupSpecSchape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb2ef685e, 0xebcd, 0x42ea, 0x8b, 0x87, 0xae, 0x62, 0x09, 0xd1, 0xa3, 0x89);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AccountGroupSpecSchape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AccountGroupSpecSchape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass UserAccountAssociationShape
+	/// Description for Empresa.MoneyManagerModel.UserAccountAssociationShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.UserAccountAssociationShape.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.UserAccountAssociationShape.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("bd770a93-5b15-4108-9dfb-be0e2fbe78de")]
+	public partial class UserAccountAssociationShape : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with UserAccountAssociationShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindUserAccountAssociationShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.5, 1);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.Ellipse;
+			}
+		}
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
+			field1.DefaultText = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager.GetString("UserAccountAssociationShapeNameDecoratorDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// UserAccountAssociationShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xbd770a93, 0x5b15, 0x4108, 0x9d, 0xfb, 0xbe, 0x0e, 0x2f, 0xbe, 0x78, 0xde);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public UserAccountAssociationShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public UserAccountAssociationShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass AccountTransactionAssociationShape
+	/// Description for Empresa.MoneyManagerModel.AccountTransactionAssociationShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.AccountTransactionAssociationShape.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.AccountTransactionAssociationShape.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("81c6a71d-e70a-46fe-8f30-ed34512b5f3f")]
+	public partial class AccountTransactionAssociationShape : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with AccountTransactionAssociationShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindAccountTransactionAssociationShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.5, 1);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.Ellipse;
+			}
+		}
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
+			field1.DefaultText = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager.GetString("AccountTransactionAssociationShapeNameDecoratorDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AccountTransactionAssociationShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x81c6a71d, 0xe70a, 0x46fe, 0x8f, 0x30, 0xed, 0x34, 0x51, 0x2b, 0x5f, 0x3f);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AccountTransactionAssociationShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AccountTransactionAssociationShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass CategorySpecShape
+	/// Description for Empresa.MoneyManagerModel.CategorySpecShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpecShape.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpecShape.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("f7dc43e5-ff59-4eca-b720-b11d4099e083")]
+	public partial class CategorySpecShape : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with CategorySpecShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindCategorySpecShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.5, 1);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Plum);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
+		/// Indicates whether this shape displays a background gradient.
+		/// </summary>
+		public override bool HasBackgroundGradient
+		{
+			get
+			{
+				return false;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+			}
+		}
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
+			field1.DefaultText = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager.GetString("CategorySpecShapeNameDecoratorDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// CategorySpecShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf7dc43e5, 0xff59, 0x4eca, 0xb7, 0x20, 0xb1, 0x1d, 0x40, 0x99, 0xe0, 0x83);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategorySpecShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategorySpecShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass CategoryAttributeShape
+	/// Description for Empresa.MoneyManagerModel.CategoryAttributeShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryAttributeShape.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryAttributeShape.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("41abd9a7-205d-40e9-b611-6359cbd0ef6a")]
+	public partial class CategoryAttributeShape : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with CategoryAttributeShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindCategoryAttributeShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.5, 1);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Plum);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
+		/// Indicates whether this shape displays a background gradient.
+		/// </summary>
+		public override bool HasBackgroundGradient
+		{
+			get
+			{
+				return false;
+			}
+		}
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
+			field1.DefaultText = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager.GetString("CategoryAttributeShapeNameDecoratorDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// CategoryAttributeShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x41abd9a7, 0x205d, 0x40e9, 0xb6, 0x11, 0x63, 0x59, 0xcb, 0xd0, 0xef, 0x6a);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategoryAttributeShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategoryAttributeShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Empresa.MoneyManagerModel
+{
+	/// <summary>
+	/// DomainClass CategoryTransactionAssociationShape
+	/// Description for Empresa.MoneyManagerModel.CategoryTransactionAssociationShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategoryTransactionAssociationShape.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategoryTransactionAssociationShape.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("3f1072fd-b0c0-484f-9b87-1eb60e8cc025")]
+	public partial class CategoryTransactionAssociationShape : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with CategoryTransactionAssociationShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindCategoryTransactionAssociationShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.5, 1);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.Ellipse;
+			}
+		}
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
+			field1.DefaultText = global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.SingletonResourceManager.GetString("CategoryTransactionAssociationShapeNameDecoratorDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			shapeFields.Add(field1);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// CategoryTransactionAssociationShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x3f1072fd, 0xb0c0, 0x484f, 0x9b, 0x87, 0x1e, 0xb6, 0x0e, 0x8c, 0xc0, 0x25);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategoryTransactionAssociationShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public CategoryTransactionAssociationShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

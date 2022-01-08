@@ -1,10 +1,6 @@
 ﻿using Empresa.MoneyManagerModel;
 using Microsoft.VisualStudio.Modeling;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 namespace UML_Generator
 {
     class Program
@@ -18,7 +14,7 @@ namespace UML_Generator
             using (Microsoft.VisualStudio.Modeling.Transaction t =
         store.TransactionManager.BeginTransaction("Load model"))
             {
-                model = MoneyManagerModelSerializationHelper.Instance.LoadModel(store, "C:/Users/Utilizador/OneDrive - Instituto Superior de Engenharia do Porto/Desktop/edom-21-22-atb-204/part1/tool2-ms/EDOM/Debugging/Test.MoneyManagerModel", null, null, null);
+                model = MoneyManagerModelSerializationHelper.Instance.LoadModel(store, "C:/Users/Utilizador/OneDrive - Instituto Superior de Engenharia do Porto/Desktop/edom-21-22-atb-204/part1/tool2-ms/EDOM/Debugging/Test_IT2.MoneyManagerModel", null, null, null);
                 t.Commit();
             }
 
@@ -67,36 +63,68 @@ namespace UML_Generator
 
                     }
 
-                    //AttributeType Amarelo Torrado
-                    foreach (Association association in model.Association)
+                    //Classes and Enum
+                    var a = model.CategorySpec;
+                    var b = model.TransactionSpec;
+
+                    foreach (CategorySpec categorySpec in model.CategorySpec)
                     {
-                        file.WriteLine("class " + association.Name + " #C0C0C0 {");
-                        file.WriteLine(association.Name + "\n}");
+
+                        file.WriteLine("class " + categorySpec.Name + "{");
+
+                        foreach (CategoryAttribute categoryAttribute in categorySpec.CategoryAttribute)
+                        {
+                            file.WriteLine(categoryAttribute.Name + "\n" + categoryAttribute.AttributeType + "\n}");
+                        }
                     }
 
                     //Relationship
 
                     foreach (UserSpec userSpec in model.Elements)
                     {
-                        foreach (Association association in model.Association)
+                        foreach (UserAccountAssociation association in model.UserAccountAssociation)
                         {
-                            file.WriteLine(userSpec.Name + " \"1\" <--> \"0..*\" " + association.Name);
+                            file.WriteLine(userSpec.Name + " \"1\" --> \"0..*\" " + association.Name);
                         }
                     }
 
                     foreach (AccountSpec accountSpec in model.AccountSpec)
                     {
-                        foreach (Association association in model.Association)
+                        foreach (UserAccountAssociation association in model.UserAccountAssociation)
                         {
-                            file.WriteLine(accountSpec.Name + " \"1\" <--> \"0..*\" " + association.Name);
+                            file.WriteLine(accountSpec.Name + " \"1\" --> \"0..*\" " + association.Name);
+                        }
+                    }
+
+                    foreach (AccountSpec accountSpec in model.AccountSpec)
+                    {
+                        foreach (AccountTransactionAssociation association in model.AccountTransactionAssociation)
+                        {
+                            file.WriteLine(accountSpec.Name + " \"1\" --> \"0..*\" " + association.Name);
                         }
                     }
 
                     foreach (TransactionSpec transactionSpec in model.TransactionSpec)
                     {
-                        foreach (Association association in model.Association)
+                        foreach (AccountTransactionAssociation association in model.AccountTransactionAssociation)
                         {
-                            file.WriteLine(transactionSpec.Name + " \"1\" <--> \"0..*\" " + association.Name);
+                            file.WriteLine(transactionSpec.Name + " \"1\" --> \"0..*\" " + association.Name);
+                        }
+                    }
+
+                    foreach (TransactionSpec transactionSpec in model.TransactionSpec)
+                    {
+                        foreach (CategoryTransactionAssociation association in model.CategoryTransactionAssociation)
+                        {
+                            file.WriteLine(transactionSpec.Name + " \"1\" --> \"0..*\" " + association.Name);
+                        }
+                    }
+
+                    foreach (CategorySpec categorySpec in model.CategorySpec)
+                    {
+                        foreach (CategoryTransactionAssociation association in model.CategoryTransactionAssociation)
+                        {
+                            file.WriteLine(categorySpec.Name + " \"1\" --> \"0..*\" " + association.Name);
                         }
                     }
 
