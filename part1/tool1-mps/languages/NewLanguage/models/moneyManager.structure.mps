@@ -83,9 +83,32 @@
     <node concept="1TJgyj" id="7wm6rPSsj4N" role="1TKVEi">
       <property role="IQ2ns" value="8653132035599184179" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="Associations" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="7wm6rPSsj4D" resolve="Association" />
+      <property role="20kJfa" value="AccountGroupSpecs" />
+      <ref role="20lvS9" node="5fOgv8FYu$l" resolve="AccountGroupSpec" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8G8bhB" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707843650663" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="CategorySpecs" />
+      <ref role="20lvS9" node="5fOgv8G8bh9" resolve="CategorySpec" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8FYu_B" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707841108327" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="UserAccountAssociation" />
+      <ref role="20lvS9" node="5fOgv8FYu$t" resolve="UserAccountAssociation" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8FYu_K" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707841108336" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="AccountTransactionAssociation" />
+      <ref role="20lvS9" node="5fOgv8FYu_9" resolve="AccountTransactionAssociation" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8G8w$n" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707843737879" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="TransactionCategoryAssociation" />
+      <ref role="20lvS9" node="5fOgv8G8w$7" resolve="TransactionCategoryAssociation" />
     </node>
     <node concept="1TJgyj" id="7wm6rPSsj4O" role="1TKVEi">
       <property role="IQ2ns" value="8653132035599184180" />
@@ -105,6 +128,12 @@
       <property role="20kJfa" value="TransactionAttributes" />
       <ref role="20lvS9" node="7wm6rPSsj4G" resolve="TransactionAttribute" />
     </node>
+    <node concept="1TJgyj" id="5fOgv8G8bhX" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707843650685" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="CategoryAttributes" />
+      <ref role="20lvS9" node="5fOgv8G8bhc" resolve="CategoryAttribute" />
+    </node>
     <node concept="PrWs8" id="7wm6rPSsuBp" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -118,7 +147,12 @@
     </node>
     <node concept="1TJgyi" id="7wm6rPSsu_9" role="1TKVEl">
       <property role="IQ2nx" value="8653132035599231305" />
-      <property role="TrG5h" value="cardinality" />
+      <property role="TrG5h" value="cardinalityMin" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5fOgv8FYuzZ" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707841108223" />
+      <property role="TrG5h" value="cardinalityMax" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyj" id="7wm6rPSsu_a" role="1TKVEi">
@@ -131,9 +165,9 @@
     <node concept="1TJgyj" id="7wm6rPSsu_p" role="1TKVEi">
       <property role="IQ2ns" value="8653132035599231321" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="AssociationReferences" />
+      <property role="20kJfa" value="UserAccountAssociationReference" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="7wm6rPSsu_i" resolve="AssociationReference" />
+      <ref role="20lvS9" node="5fOgv8FYu$U" resolve="UserAccountAssociationReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="7wm6rPSsj45">
@@ -145,8 +179,18 @@
     </node>
     <node concept="1TJgyi" id="7wm6rPSsu_y" role="1TKVEl">
       <property role="IQ2nx" value="8653132035599231330" />
-      <property role="TrG5h" value="cardinality" />
+      <property role="TrG5h" value="cardinalityMin" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5fOgv8FYu$8" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707841108232" />
+      <property role="TrG5h" value="cardinalityMax" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5fOgv8G6jof" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707843159567" />
+      <property role="TrG5h" value="needBankAccount" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
     <node concept="1TJgyj" id="7wm6rPSsu_z" role="1TKVEi">
       <property role="IQ2ns" value="8653132035599231331" />
@@ -158,9 +202,16 @@
     <node concept="1TJgyj" id="7wm6rPSsu_$" role="1TKVEi">
       <property role="IQ2ns" value="8653132035599231332" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="AssociationReferences" />
+      <property role="20kJfa" value="UserAccountAssociationReference" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="7wm6rPSsu_i" resolve="AssociationReference" />
+      <ref role="20lvS9" node="5fOgv8FYu$U" resolve="UserAccountAssociationReference" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8FYu_n" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707841108311" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="AccountTransactionAssociationReference" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5fOgv8FYu_c" resolve="AccountTransactionAssociationReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="7wm6rPSsj4z">
@@ -172,22 +223,27 @@
     </node>
     <node concept="1TJgyi" id="7wm6rPSsu_t" role="1TKVEl">
       <property role="IQ2nx" value="8653132035599231325" />
-      <property role="TrG5h" value="cardinality" />
+      <property role="TrG5h" value="cardinalityMin" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5fOgv8FYu$b" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707841108235" />
+      <property role="TrG5h" value="cardinalityMax" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyj" id="7wm6rPSsu_u" role="1TKVEi">
       <property role="IQ2ns" value="8653132035599231326" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="TransactionAttributes" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="7wm6rPSsj4G" resolve="TransactionAttribute" />
     </node>
-    <node concept="1TJgyj" id="7wm6rPSsu_v" role="1TKVEi">
-      <property role="IQ2ns" value="8653132035599231327" />
+    <node concept="1TJgyj" id="5fOgv8FYu_s" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707841108316" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="AssociationReferences" />
+      <property role="20kJfa" value="AccountTransactionAssociationReference" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="7wm6rPSsu_i" resolve="AssociationReference" />
+      <ref role="20lvS9" node="5fOgv8FYu_c" resolve="AccountTransactionAssociationReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="7wm6rPSsj4_">
@@ -202,6 +258,16 @@
       <property role="TrG5h" value="type" />
       <ref role="AX2Wp" node="7wm6rPSsj4W" resolve="AttributeType" />
     </node>
+    <node concept="1TJgyi" id="5fOgv8FYu$e" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707841108238" />
+      <property role="TrG5h" value="cardinalityMin" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5fOgv8FYu$h" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707841108241" />
+      <property role="TrG5h" value="cardinalityMax" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7wm6rPSsj4B">
     <property role="EcuMT" value="8653132035599184167" />
@@ -214,14 +280,6 @@
       <property role="IQ2nx" value="8653132035599231333" />
       <property role="TrG5h" value="type" />
       <ref role="AX2Wp" node="7wm6rPSsj4W" resolve="AttributeType" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="7wm6rPSsj4D">
-    <property role="EcuMT" value="8653132035599184169" />
-    <property role="TrG5h" value="Association" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="7wm6rPSsj4E" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="7wm6rPSsj4G">
@@ -256,17 +314,182 @@
       <property role="1L1pqM" value="boolean" />
     </node>
   </node>
-  <node concept="1TIwiD" id="7wm6rPSsu_i">
-    <property role="EcuMT" value="8653132035599231314" />
-    <property role="TrG5h" value="AssociationReference" />
-    <node concept="1TJgyj" id="7wm6rPSsu_j" role="1TKVEi">
-      <property role="20lbJX" value="fLJekj4/1" />
-      <property role="IQ2ns" value="8653132035599231315" />
-      <property role="20kJfa" value="association" />
-      <ref role="20lvS9" node="7wm6rPSsj4D" resolve="Association" />
+  <node concept="1TIwiD" id="5fOgv8FYu$l">
+    <property role="EcuMT" value="6049532707841108245" />
+    <property role="TrG5h" value="AccountGroupSpec" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="5fOgv8FYu$m" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
-    <node concept="RPilO" id="7wm6rPSsu_o" role="lGtFl">
-      <ref role="RPilL" node="7wm6rPSsu_j" resolve="association" />
+    <node concept="1TJgyi" id="5fOgv8FYu$o" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707841108248" />
+      <property role="TrG5h" value="cardinalityMin" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5fOgv8FYu$q" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707841108250" />
+      <property role="TrG5h" value="cardinalityMax" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8GeLr2" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707845379778" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="accountSpec" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5fOgv8FYu_v" resolve="AccountSpecReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5fOgv8FYu$t">
+    <property role="EcuMT" value="6049532707841108253" />
+    <property role="TrG5h" value="UserAccountAssociation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="5fOgv8FYu$u" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8FYu_0" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707841108288" />
+      <property role="20kJfa" value="UserSpec" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7wm6rPSsj42" resolve="UserSpec" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8FYu_6" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707841108294" />
+      <property role="20kJfa" value="AccountSpec" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7wm6rPSsj45" resolve="AccountSpec" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5fOgv8FYu$U">
+    <property role="EcuMT" value="6049532707841108282" />
+    <property role="TrG5h" value="UserAccountAssociationReference" />
+    <node concept="1TJgyj" id="5fOgv8FYu$V" role="1TKVEi">
+      <property role="20lbJX" value="fLJekj4/1" />
+      <property role="IQ2ns" value="6049532707841108283" />
+      <property role="20kJfa" value="userAccountAssociation" />
+      <ref role="20lvS9" node="5fOgv8FYu$t" resolve="UserAccountAssociation" />
+    </node>
+    <node concept="RPilO" id="5fOgv8G8aHN" role="lGtFl">
+      <ref role="RPilL" node="5fOgv8FYu$V" resolve="userAccountAssociation" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5fOgv8FYu_9">
+    <property role="EcuMT" value="6049532707841108297" />
+    <property role="TrG5h" value="AccountTransactionAssociation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="5fOgv8FYu_i" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707841108306" />
+      <property role="20kJfa" value="AccountSpec" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7wm6rPSsj45" resolve="AccountSpec" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8FYu_k" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707841108308" />
+      <property role="20kJfa" value="TransactionSpec" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7wm6rPSsj4z" resolve="TransactionSpec" />
+    </node>
+    <node concept="PrWs8" id="5fOgv8FYu_a" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5fOgv8FYu_c">
+    <property role="EcuMT" value="6049532707841108300" />
+    <property role="TrG5h" value="AccountTransactionAssociationReference" />
+    <node concept="1TJgyj" id="5fOgv8FYu_d" role="1TKVEi">
+      <property role="20lbJX" value="fLJekj4/1" />
+      <property role="IQ2ns" value="6049532707841108301" />
+      <property role="20kJfa" value="accountTransactionAssociation" />
+      <ref role="20lvS9" node="5fOgv8FYu_9" resolve="AccountTransactionAssociation" />
+    </node>
+    <node concept="RPilO" id="5fOgv8G7Pwn" role="lGtFl">
+      <ref role="RPilL" node="5fOgv8FYu_d" resolve="accountTransactionAssociation" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5fOgv8FYu_v">
+    <property role="EcuMT" value="6049532707841108319" />
+    <property role="TrG5h" value="AccountSpecReference" />
+    <node concept="1TJgyj" id="5fOgv8FYu_w" role="1TKVEi">
+      <property role="20lbJX" value="fLJekj4/1" />
+      <property role="IQ2ns" value="6049532707841108320" />
+      <property role="20kJfa" value="accountSpecReference" />
+      <ref role="20lvS9" node="7wm6rPSsj45" resolve="AccountSpec" />
+    </node>
+    <node concept="PrWs8" id="5fOgv8GeLqW" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="RPilO" id="5fOgv8GeLqY" role="lGtFl">
+      <ref role="RPilL" node="5fOgv8FYu_w" resolve="accountSpecReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5fOgv8G8bh9">
+    <property role="EcuMT" value="6049532707843650633" />
+    <property role="TrG5h" value="CategorySpec" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="5fOgv8G8bha" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="5fOgv8G8bhf" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707843650639" />
+      <property role="TrG5h" value="cardinalityMin" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5fOgv8G8bhh" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707843650641" />
+      <property role="TrG5h" value="cardinalityMax" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8G8bhk" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707843650644" />
+      <property role="20kJfa" value="categoryAttributes" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <ref role="20lvS9" node="5fOgv8G8bhc" resolve="CategoryAttribute" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5fOgv8G8bhc">
+    <property role="EcuMT" value="6049532707843650636" />
+    <property role="TrG5h" value="CategoryAttribute" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="5fOgv8G8bhd" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="5fOgv8G8bhq" role="1TKVEl">
+      <property role="IQ2nx" value="6049532707843650650" />
+      <property role="TrG5h" value="type" />
+      <ref role="AX2Wp" node="7wm6rPSsj4W" resolve="AttributeType" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5fOgv8G8w$7">
+    <property role="EcuMT" value="6049532707843737863" />
+    <property role="TrG5h" value="TransactionCategoryAssociation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="5fOgv8G8w$8" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8G8w$a" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707843737866" />
+      <property role="20kJfa" value="TransactionSpec" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7wm6rPSsj4z" resolve="TransactionSpec" />
+    </node>
+    <node concept="1TJgyj" id="5fOgv8G8w$c" role="1TKVEi">
+      <property role="IQ2ns" value="6049532707843737868" />
+      <property role="20kJfa" value="CategorySpec" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5fOgv8G8bh9" resolve="CategorySpec" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5fOgv8G8w$f">
+    <property role="EcuMT" value="6049532707843737871" />
+    <property role="TrG5h" value="TransactionCategoryAssociationReference" />
+    <node concept="1TJgyj" id="5fOgv8G8w$g" role="1TKVEi">
+      <property role="20lbJX" value="fLJekj4/1" />
+      <property role="IQ2ns" value="6049532707843737872" />
+      <property role="20kJfa" value="transactionCategoryAssociation" />
+      <ref role="20lvS9" node="5fOgv8G8w$7" resolve="TransactionCategoryAssociation" />
+    </node>
+    <node concept="RPilO" id="5fOgv8G8w$l" role="lGtFl">
+      <ref role="RPilL" node="5fOgv8G8w$g" resolve="transactionCategoryAssociation" />
     </node>
   </node>
 </model>

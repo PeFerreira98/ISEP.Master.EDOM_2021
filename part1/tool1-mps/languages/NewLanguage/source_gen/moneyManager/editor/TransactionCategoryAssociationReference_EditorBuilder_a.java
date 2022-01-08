@@ -38,11 +38,11 @@ import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class AssociationReference_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class TransactionCategoryAssociationReference_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public AssociationReference_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public TransactionCategoryAssociationReference_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -59,21 +59,21 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_8sxcxt_a");
+    editorCell.setCellId("Collection_u5ttlf_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createRefCell_0());
     return editorCell;
   }
   private EditorCell createRefCell_0() {
-    final SReferenceLink referenceLink = LINKS.association$_UNK;
+    final SReferenceLink referenceLink = LINKS.transactionCategoryAssociation$iXJK;
     SReferenceCellProvider provider = new SReferenceCellProvider(getNode(), referenceLink, getEditorContext()) {
       protected EditorCell createReferenceCell(final SNode targetNode) {
         EditorCell cell = getUpdateSession().updateReferencedNodeCell(new Computable<EditorCell>() {
           public EditorCell compute() {
             return new Inline_Builder0(getEditorContext(), getNode(), targetNode).createCell();
           }
-        }, targetNode, LINKS.association$_UNK);
+        }, targetNode, LINKS.transactionCategoryAssociation$iXJK);
         CellUtil.setupIDeprecatableStyles(targetNode, cell);
         setSemanticNodeToCells(cell, getNode());
         installDeleteActions_notnull_smartReference(cell);
@@ -88,12 +88,12 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     };
 
-    provider.setNoTargetText("<no association>");
+    provider.setNoTargetText("<no transactionCategoryAssociation>");
     EditorCell editorCell = provider.createCell();
 
     if (editorCell.getSRole() == null) {
       editorCell.setReferenceCell(true);
-      editorCell.setSRole(LINKS.association$_UNK);
+      editorCell.setSRole(LINKS.transactionCategoryAssociation$iXJK);
     }
     editorCell.setSubstituteInfo(new SReferenceSubstituteInfoSmartReferenceDecorator(new SReferenceSubstituteInfo(editorCell, referenceLink)));
     Iterable<SNode> referenceAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.LinkAttribute$v_);
@@ -160,7 +160,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink association$_UNK = MetaAdapterFactory.getReferenceLink(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd7871e952L, 0x781619bd7871e953L, "association");
+    /*package*/ static final SReferenceLink transactionCategoryAssociation$iXJK = MetaAdapterFactory.getReferenceLink(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x53f441f22c22090fL, 0x53f441f22c220910L, "transactionCategoryAssociation");
   }
 
   private static final class CONCEPTS {
