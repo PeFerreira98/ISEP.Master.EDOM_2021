@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class AssociationReference_Editor extends DefaultNodeEditor {
+public class TransactionCategoryAssociationReference_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new AssociationReference_EditorBuilder_a(editorContext, node).createCell();
+    return new TransactionCategoryAssociationReference_EditorBuilder_a(editorContext, node).createCell();
   }
 }

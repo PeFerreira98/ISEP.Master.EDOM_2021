@@ -61,11 +61,9 @@
     <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.language.LanguageExtensions" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
-    <classNode dependClassName="moneyManager.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="moneyManager.editor.EditorAspectDescriptorImpl" />
     <classNode dependClassName="moneyManager.intentions.IntentionsDescriptor" />
     <classNode dependClassName="moneyManager.structure.ConceptPresentationAspectImpl" />
