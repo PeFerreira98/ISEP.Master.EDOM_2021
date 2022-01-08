@@ -12,7 +12,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import java.util.Collections;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
-import moneyManager.behavior.Model__BehaviorDescriptor;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 
 public final class GeneratePlantUML_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
@@ -47,7 +46,6 @@ public final class GeneratePlantUML_Intention extends AbstractIntentionDescripto
     }
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
-      Model__BehaviorDescriptor.generatePlantUML_id7wm6rPSy8TP.invoke(node);
     }
     @Override
     public IntentionDescriptor getDescriptor() {

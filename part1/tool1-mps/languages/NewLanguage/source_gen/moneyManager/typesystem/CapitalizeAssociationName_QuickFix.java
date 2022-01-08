@@ -17,7 +17,8 @@ public class CapitalizeAssociationName_QuickFix extends QuickFix_Runtime {
     return "Capitalize the first letter";
   }
   public void execute(SNode node) {
-    SPropertyOperations.set(((SNode) CapitalizeAssociationName_QuickFix.this.getField("association")[0]), PROPS.name$MnvL, SPropertyOperations.getString(((SNode) CapitalizeAssociationName_QuickFix.this.getField("association")[0]), PROPS.name$MnvL).substring(0, 1).toUpperCase() + SPropertyOperations.getString(((SNode) CapitalizeAssociationName_QuickFix.this.getField("association")[0]), PROPS.name$MnvL).substring(1));
+    SPropertyOperations.set(((SNode) CapitalizeAssociationName_QuickFix.this.getField("AccountTransactionAssociation")[0]), PROPS.name$MnvL, SPropertyOperations.getString(((SNode) CapitalizeAssociationName_QuickFix.this.getField("AccountTransactionAssociation")[0]), PROPS.name$MnvL).substring(0, 1).toUpperCase() + SPropertyOperations.getString(((SNode) CapitalizeAssociationName_QuickFix.this.getField("AccountTransactionAssociation")[0]), PROPS.name$MnvL).substring(1));
+    SPropertyOperations.set(((SNode) CapitalizeAssociationName_QuickFix.this.getField("UserAccountAssociation")[0]), PROPS.name$MnvL, SPropertyOperations.getString(((SNode) CapitalizeAssociationName_QuickFix.this.getField("UserAccountAssociation")[0]), PROPS.name$MnvL).substring(0, 1).toUpperCase() + SPropertyOperations.getString(((SNode) CapitalizeAssociationName_QuickFix.this.getField("UserAccountAssociation")[0]), PROPS.name$MnvL).substring(1));
   }
 
   private static final class PROPS {

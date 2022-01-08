@@ -35,19 +35,19 @@ For each metamodel element, the team chose a different graphically representatio
 ### Graphical DSL (MS Tools)
 For each metamodel element, the team chose a different graphically representation:
 
-* AccountGroupSpec - for the AccountGroupSpec, we will be using an **curve rectangle red ** object;
-* UserSpec - for the UserSpec, we will be using an **orange curve rectangle** object;
-* AccountSpec - for the AccountSpec, we will be using an **red curve rectangle** object;
-* TransactionSpec - for the TransactionSpec, we will be using a **gold curve rectangle** object;
-* CategorySpec - for the CategorySpec, we will be using a **purple curve rectangle** object;
-* UserAccountAssociation - for the UserAccountAssociation, we will be using a **oval white** link;
-* AccountTransactionAssociation - for the AccountTransactionAssociation, we will be using a **oval white** link;
-* CategoryTransactionAssociation - for the CategoryTransactionAssociation , we will be using a **oval white** link;
-* UserAttribute - for the UserAttribute, we will be using a **orange rectangle** object;
-* AccountAttribute - for the AccountAttribute, we will be using a **red rectangle** object;
-* TransactionAttribute - for the TransactionAttribute, we will be using a **gold rectangle** object;
-* CategoryAttribute - for the CategoryAttribute, we will be using a **purple rectangle** object;
-* AttributeType - for the AttributeType, we will be using a **blue rectangle** object;
+* AccountGroupSpec - for the AccountGroupSpec, we will be using an **rectangle red ** object;
+* UserSpec - for the UserSpec, we will be using an **orange rectangle** object;
+* AccountSpec - for the AccountSpec, we will be using an **red rectangle** object;
+* TransactionSpec - for the TransactionSpec, we will be using a **gold rectangle** object;
+* CategorySpec - for the CategorySpec, we will be using a **purple rectangle** object;
+* UserAccountAssociation - for the UserAccountAssociation, we will be using a **white rectangle** link;
+* AccountTransactionAssociation - for the AccountTransactionAssociation, we will be using a **white rectangle** link;
+* CategoryTransactionAssociation - for the CategoryTransactionAssociation , we will be using a **white rectangle** link;
+* UserAttribute - for the UserAttribute, we will be using a **orange curve rectangle** object;
+* AccountAttribute - for the AccountAttribute, we will be using a **red curve rectangle** object;
+* TransactionAttribute - for the TransactionAttribute, we will be using a **gold curve rectangle** object;
+* CategoryAttribute - for the CategoryAttribute, we will be using a **purple curve rectangle** object;
+* AttributeType - for the AttributeType, we will be using a **blue curve rectangle** object;
 
 ### Textual DSL (JetBrains MPS)
 

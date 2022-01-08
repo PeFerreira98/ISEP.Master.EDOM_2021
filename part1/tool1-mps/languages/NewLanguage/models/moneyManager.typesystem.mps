@@ -7,8 +7,6 @@
   </languages>
   <imports>
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" />
-    <import index="ez8h" ref="r:c065a2fe-9ac5-41ab-a01a-9101cb5fa9b5(ecommerceRating.structure)" />
-    <import index="6dtg" ref="r:792285ea-ca6a-4f3c-9cd3-86d184a39073(ecommerceRating.typesystem)" />
     <import index="3cva" ref="r:14f1c09e-60d3-4a37-87a9-f14d5d5a2302(moneyManager.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
@@ -1314,152 +1312,6 @@
       <ref role="1YaFvo" to="3cva:7wm6rPSsj42" resolve="UserSpec" />
     </node>
   </node>
-  <node concept="18kY7G" id="7wm6rPSv$i5">
-    <property role="TrG5h" value="check_Association" />
-    <node concept="3clFbS" id="7wm6rPSv$i6" role="18ibNy">
-      <node concept="3SKdUt" id="7wm6rPSv$lc" role="3cqZAp">
-        <node concept="1PaTwC" id="7wm6rPSv$ld" role="1aUNEU">
-          <node concept="3oM_SD" id="7wm6rPSv$le" role="1PaTwD">
-            <property role="3oM_SC" value="Check" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$lf" role="1PaTwD">
-            <property role="3oM_SC" value="if" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$lg" role="1PaTwD">
-            <property role="3oM_SC" value="starts" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$lh" role="1PaTwD">
-            <property role="3oM_SC" value="with" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$li" role="1PaTwD">
-            <property role="3oM_SC" value="capital" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$lj" role="1PaTwD">
-            <property role="3oM_SC" value="letters" />
-          </node>
-        </node>
-      </node>
-      <node concept="3clFbJ" id="7wm6rPSv$lk" role="3cqZAp">
-        <node concept="3clFbS" id="7wm6rPSv$ll" role="3clFbx">
-          <node concept="2MkqsV" id="7wm6rPSv$lm" role="3cqZAp">
-            <node concept="Xl_RD" id="7wm6rPSv$ln" role="2MkJ7o">
-              <property role="Xl_RC" value="Name must begin with capital letter" />
-            </node>
-            <node concept="1YBJjd" id="7wm6rPSv$lo" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSv$i8" resolve="association" />
-            </node>
-            <node concept="3Cnw8n" id="7wm6rPSwP63" role="1urrFz">
-              <ref role="QpYPw" node="7wm6rPSwdGW" resolve="CapitalizeAssociationName" />
-              <node concept="3CnSsL" id="7wm6rPSwPoE" role="3Coj4f">
-                <ref role="QkamJ" node="7wm6rPSwdHf" resolve="association" />
-                <node concept="1YBJjd" id="7wm6rPSwPoR" role="3CoRuB">
-                  <ref role="1YBMHb" node="7wm6rPSv$i8" resolve="association" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1Wc70l" id="7wm6rPSv$lp" role="3clFbw">
-          <node concept="2YIFZM" id="7wm6rPSv$lq" role="3uHU7w">
-            <ref role="1Pybhc" to="wyt6:~Character" resolve="Character" />
-            <ref role="37wK5l" to="wyt6:~Character.isLowerCase(char)" resolve="isLowerCase" />
-            <node concept="2OqwBi" id="7wm6rPSv$lr" role="37wK5m">
-              <node concept="2OqwBi" id="7wm6rPSv$ls" role="2Oq$k0">
-                <node concept="1YBJjd" id="7wm6rPSv$lt" role="2Oq$k0">
-                  <ref role="1YBMHb" node="7wm6rPSv$i8" resolve="association" />
-                </node>
-                <node concept="3TrcHB" id="7wm6rPSv$lu" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                </node>
-              </node>
-              <node concept="liA8E" id="7wm6rPSv$lv" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.charAt(int)" resolve="charAt" />
-                <node concept="3cmrfG" id="7wm6rPSv$lw" role="37wK5m">
-                  <property role="3cmrfH" value="0" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3y3z36" id="7wm6rPSv$lx" role="3uHU7B">
-            <node concept="2OqwBi" id="7wm6rPSv$ly" role="3uHU7B">
-              <node concept="1YBJjd" id="7wm6rPSv$lz" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSv$i8" resolve="association" />
-              </node>
-              <node concept="3TrcHB" id="7wm6rPSv$l$" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-            <node concept="10Nm6u" id="7wm6rPSv$l_" role="3uHU7w" />
-          </node>
-        </node>
-      </node>
-      <node concept="3clFbH" id="7wm6rPSv$lA" role="3cqZAp" />
-      <node concept="3SKdUt" id="7wm6rPSv$lB" role="3cqZAp">
-        <node concept="1PaTwC" id="7wm6rPSv$lC" role="1aUNEU">
-          <node concept="3oM_SD" id="7wm6rPSv$lD" role="1PaTwD">
-            <property role="3oM_SC" value="Check" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$lE" role="1PaTwD">
-            <property role="3oM_SC" value="if" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$lF" role="1PaTwD">
-            <property role="3oM_SC" value="is" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$lG" role="1PaTwD">
-            <property role="3oM_SC" value="null" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$lH" role="1PaTwD">
-            <property role="3oM_SC" value="or" />
-          </node>
-          <node concept="3oM_SD" id="7wm6rPSv$lI" role="1PaTwD">
-            <property role="3oM_SC" value="empty" />
-          </node>
-        </node>
-      </node>
-      <node concept="3clFbJ" id="7wm6rPSv$lJ" role="3cqZAp">
-        <node concept="3clFbS" id="7wm6rPSv$lK" role="3clFbx">
-          <node concept="2MkqsV" id="7wm6rPSv$lL" role="3cqZAp">
-            <node concept="Xl_RD" id="7wm6rPSv$lM" role="2MkJ7o">
-              <property role="Xl_RC" value="Name should not be null or empty" />
-            </node>
-            <node concept="1YBJjd" id="7wm6rPSv$lN" role="1urrMF">
-              <ref role="1YBMHb" node="7wm6rPSv$i8" resolve="association" />
-            </node>
-          </node>
-        </node>
-        <node concept="22lmx$" id="7wm6rPSv$lO" role="3clFbw">
-          <node concept="3clFbC" id="7wm6rPSv$lP" role="3uHU7w">
-            <node concept="Xl_RD" id="7wm6rPSv$lQ" role="3uHU7w">
-              <property role="Xl_RC" value=" " />
-            </node>
-            <node concept="2OqwBi" id="7wm6rPSv$lR" role="3uHU7B">
-              <node concept="1YBJjd" id="7wm6rPSv$lS" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSv$i8" resolve="association" />
-              </node>
-              <node concept="3TrcHB" id="7wm6rPSv$lT" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-          <node concept="3clFbC" id="7wm6rPSv$lU" role="3uHU7B">
-            <node concept="2OqwBi" id="7wm6rPSv$lV" role="3uHU7B">
-              <node concept="1YBJjd" id="7wm6rPSv$lW" role="2Oq$k0">
-                <ref role="1YBMHb" node="7wm6rPSv$i8" resolve="association" />
-              </node>
-              <node concept="3TrcHB" id="7wm6rPSv$lX" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-            <node concept="10Nm6u" id="7wm6rPSv$lY" role="3uHU7w" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="7wm6rPSv$i8" role="1YuTPh">
-      <property role="TrG5h" value="association" />
-      <ref role="1YaFvo" to="3cva:7wm6rPSsj4D" resolve="Association" />
-    </node>
-  </node>
   <node concept="Q5z_Y" id="7wm6rPSw7mW">
     <property role="TrG5h" value="CapitalizeAccountSpecName" />
     <node concept="Q6JDH" id="7wm6rPSw7nf" role="Q6Id_">
@@ -1598,12 +1450,74 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="5fOgv8G4nRK" role="3cqZAp">
+          <node concept="2OqwBi" id="5fOgv8G4oSZ" role="3clFbG">
+            <node concept="2OqwBi" id="5fOgv8G4o2M" role="2Oq$k0">
+              <node concept="QwW4i" id="5fOgv8G4nRI" role="2Oq$k0">
+                <ref role="QwW4h" node="5fOgv8G4nGd" resolve="UserAccountAssociation" />
+              </node>
+              <node concept="3TrcHB" id="5fOgv8G4otQ" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="5fOgv8G4puZ" role="2OqNvi">
+              <node concept="3cpWs3" id="5fOgv8G4vFq" role="tz02z">
+                <node concept="2OqwBi" id="5fOgv8G4uE2" role="3uHU7B">
+                  <node concept="2OqwBi" id="5fOgv8G4sY5" role="2Oq$k0">
+                    <node concept="2OqwBi" id="5fOgv8G4pEO" role="2Oq$k0">
+                      <node concept="QwW4i" id="5fOgv8G4pwU" role="2Oq$k0">
+                        <ref role="QwW4h" node="5fOgv8G4nGd" resolve="UserAccountAssociation" />
+                      </node>
+                      <node concept="3TrcHB" id="5fOgv8G4pJM" role="2OqNvi">
+                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="5fOgv8G4tD7" role="2OqNvi">
+                      <ref role="37wK5l" to="wyt6:~String.substring(int,int)" resolve="substring" />
+                      <node concept="3cmrfG" id="5fOgv8G4tEr" role="37wK5m">
+                        <property role="3cmrfH" value="0" />
+                      </node>
+                      <node concept="3cmrfG" id="5fOgv8G4uqR" role="37wK5m">
+                        <property role="3cmrfH" value="1" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="5fOgv8G4vqI" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase()" resolve="toUpperCase" />
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="5fOgv8G4x6X" role="3uHU7w">
+                  <node concept="2OqwBi" id="5fOgv8G4wd2" role="2Oq$k0">
+                    <node concept="QwW4i" id="5fOgv8G4vPE" role="2Oq$k0">
+                      <ref role="QwW4h" node="5fOgv8G4nGd" resolve="UserAccountAssociation" />
+                    </node>
+                    <node concept="3TrcHB" id="5fOgv8G4wxV" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="5fOgv8G4xDy" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.substring(int)" resolve="substring" />
+                    <node concept="3cmrfG" id="5fOgv8G4xDA" role="37wK5m">
+                      <property role="3cmrfH" value="1" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="Q6JDH" id="7wm6rPSwdHf" role="Q6Id_">
-      <property role="TrG5h" value="association" />
+      <property role="TrG5h" value="AccountTransactionAssociation" />
       <node concept="3Tqbb2" id="7wm6rPSwdHr" role="Q6QK4">
-        <ref role="ehGHo" to="3cva:7wm6rPSsj4D" resolve="Association" />
+        <ref role="ehGHo" to="3cva:5fOgv8FYu_9" resolve="AccountTransactionAssociation" />
+      </node>
+    </node>
+    <node concept="Q6JDH" id="5fOgv8G4nGd" role="Q6Id_">
+      <property role="TrG5h" value="UserAccountAssociation" />
+      <node concept="3Tqbb2" id="5fOgv8G4nHq" role="Q6QK4">
+        <ref role="ehGHo" to="3cva:5fOgv8FYu$t" resolve="UserAccountAssociation" />
       </node>
     </node>
     <node concept="QznSV" id="7wm6rPSwdHz" role="QzAvj">
