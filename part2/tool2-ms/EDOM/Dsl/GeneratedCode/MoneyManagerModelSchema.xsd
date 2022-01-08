@@ -1,0 +1,1988 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="MoneyManagerModelSchema" targetNamespace="http://schemas.microsoft.com/dsltools/MoneyManagerModel" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/dsltools/MoneyManagerModel" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- Model -->
+  <xsd:element name="model" type="Model" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Model">
+    <xsd:annotation>
+      <xsd:documentation>The root in which all other elements are embedded. Appears as a diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ExampleModelHasElements -->
+          <xsd:element name="elements" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ExampleModelHasElements</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="exampleModelHasElements">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ExampleModelHasElements needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="userSpec" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ModelTemAccountSpec -->
+          <xsd:element name="accountSpec" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ModelTemAccountSpec</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="modelTemAccountSpec" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ModelTemAccountSpec needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ModelHasTransactionSpec -->
+          <xsd:element name="transactionSpec" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ModelHasTransactionSpec</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="modelHasTransactionSpec" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ModelHasTransactionSpec needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ModelHasAttributeType -->
+          <xsd:element name="attributeType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ModelHasAttributeType</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="modelHasAttributeType" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ModelHasAttributeType needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ModelHasAccountGroupSpec -->
+          <xsd:element name="accountGroupSpec" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ModelHasAccountGroupSpec</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="modelHasAccountGroupSpec" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ModelHasAccountGroupSpec needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ModelHasUserAccountAssociation -->
+          <xsd:element name="userAccountAssociation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ModelHasUserAccountAssociation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="modelHasUserAccountAssociation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ModelHasUserAccountAssociation needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ModelHasAccountTransactionAssociation -->
+          <xsd:element name="accountTransactionAssociation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ModelHasAccountTransactionAssociation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="modelHasAccountTransactionAssociation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ModelHasAccountTransactionAssociation needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ModelHasCategorySpec -->
+          <xsd:element name="categorySpec" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ModelHasCategorySpec</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="modelHasCategorySpec" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ModelHasCategorySpec needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ModelHasCategoryTransactionAssociation -->
+          <xsd:element name="categoryTransactionAssociation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ModelHasCategoryTransactionAssociation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="modelHasCategoryTransactionAssociation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ModelHasCategoryTransactionAssociation needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- dslVersion -->
+        <xsd:attribute name="dslVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.Model.Name</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Model Moniker -->
+  <xsd:element name="modelMoniker" type="ModelMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModelMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Model instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserSpec -->
+  <xsd:element name="userSpec" type="UserSpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="UserSpec">
+    <xsd:annotation>
+      <xsd:documentation>Elements embedded in the model. Appear as boxes on the diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: UserSpecTemUserAttribute -->
+          <xsd:element name="userAttribute" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of UserSpecTemUserAttribute</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="userSpecTemUserAttribute" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of UserSpecTemUserAttribute needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: UserSpecReferencesUserAccountAssociation -->
+          <xsd:element name="userAccountAssociation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of UserSpecReferencesUserAccountAssociation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="userSpecReferencesUserAccountAssociation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of UserSpecReferencesUserAccountAssociation needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CardinalityMax -->
+        <xsd:attribute name="cardinalityMax" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.UserSpec.Cardinality</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.UserSpec.Name</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CardinalityMin -->
+        <xsd:attribute name="cardinalityMin" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserSpec Moniker -->
+  <xsd:element name="userSpecMoniker" type="UserSpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="UserSpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for UserSpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountSpec -->
+  <xsd:element name="accountSpec" type="AccountSpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AccountSpec">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AccountSpec</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: AccountSpecTemAccountAttribute -->
+          <xsd:element name="accountAttribute" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of AccountSpecTemAccountAttribute</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="accountSpecTemAccountAttribute" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of AccountSpecTemAccountAttribute needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: AccountSpecReferencesUserAccountAssociation -->
+          <xsd:element name="userAccountAssociation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of AccountSpecReferencesUserAccountAssociation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="accountSpecReferencesUserAccountAssociation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of AccountSpecReferencesUserAccountAssociation needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: AccountSpecReferencesAccountTransactionAssociation -->
+          <xsd:element name="accountTransactionAssociation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of AccountSpecReferencesAccountTransactionAssociation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="accountSpecReferencesAccountTransactionAssociation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of AccountSpecReferencesAccountTransactionAssociation needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CardinalityMax -->
+        <xsd:attribute name="cardinalityMax" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AccountSpec.Cardinality</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AccountSpec.Name</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CardinalityMin -->
+        <xsd:attribute name="cardinalityMin" type="xsd:string" />
+        <!-- Property: NeedBanckAccount -->
+        <xsd:attribute name="needBanckAccount" type="xsd:boolean" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountSpec Moniker -->
+  <xsd:element name="accountSpecMoniker" type="AccountSpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AccountSpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AccountSpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionSpec -->
+  <xsd:element name="transactionSpec" type="TransactionSpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TransactionSpec">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.TransactionSpec</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: TransactionSpecTemTransactionAttribute -->
+          <xsd:element name="transactionAttribute" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of TransactionSpecTemTransactionAttribute</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="transactionSpecTemTransactionAttribute" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of TransactionSpecTemTransactionAttribute needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: TransactionSpecReferencesAccountTransactionAssociation -->
+          <xsd:element name="accountTransactionAssociation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of TransactionSpecReferencesAccountTransactionAssociation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="transactionSpecReferencesAccountTransactionAssociation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of TransactionSpecReferencesAccountTransactionAssociation needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: TransactionSpecReferencesCategoryTransactionAssociation -->
+          <xsd:element name="categoryTransactionAssociation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of TransactionSpecReferencesCategoryTransactionAssociation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="transactionSpecReferencesCategoryTransactionAssociation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of TransactionSpecReferencesCategoryTransactionAssociation needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CardinalityMax -->
+        <xsd:attribute name="cardinalityMax" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.TransactionSpec.Cardinality</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.TransactionSpec.Name</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CardinalityMin -->
+        <xsd:attribute name="cardinalityMin" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionSpec Moniker -->
+  <xsd:element name="transactionSpecMoniker" type="TransactionSpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TransactionSpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TransactionSpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AttributeType -->
+  <xsd:element name="attributeType" type="AttributeType" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AttributeType">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AttributeType</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Text -->
+        <xsd:attribute name="text" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AttributeType.Text</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Number -->
+        <xsd:attribute name="number" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AttributeType.Number</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Choice -->
+        <xsd:attribute name="choice" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AttributeType.Choice</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Date -->
+        <xsd:attribute name="date" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AttributeType.Date</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AttributeType Moniker -->
+  <xsd:element name="attributeTypeMoniker" type="AttributeTypeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AttributeTypeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AttributeType instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserAttribute -->
+  <xsd:element name="userAttribute" type="UserAttribute" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="UserAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.UserAttribute</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: UserAttributeReferênciasAttributeTypes -->
+          <xsd:element name="attributeTypes" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of UserAttributeReferênciasAttributeTypes</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="userAttributeReferênciasAttributeTypes" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of UserAttributeReferênciasAttributeTypes needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.UserAttribute.Name</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AttributeType -->
+        <xsd:attribute name="attributeType" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.UserAttribute.Attribute Type</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserAttribute Moniker -->
+  <xsd:element name="userAttributeMoniker" type="UserAttributeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="UserAttributeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for UserAttribute instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountAttribute -->
+  <xsd:element name="accountAttribute" type="AccountAttribute" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AccountAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AccountAttribute</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: AccountAttributeReferênciasAttributeTypes -->
+          <xsd:element name="attributeTypes" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of AccountAttributeReferênciasAttributeTypes</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="accountAttributeReferênciasAttributeTypes" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of AccountAttributeReferênciasAttributeTypes needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AccountAttribute.Name</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AttributeType -->
+        <xsd:attribute name="attributeType" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AccountAttribute.Attribute Type</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountAttribute Moniker -->
+  <xsd:element name="accountAttributeMoniker" type="AccountAttributeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AccountAttributeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AccountAttribute instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionAttribute -->
+  <xsd:element name="transactionAttribute" type="TransactionAttribute" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TransactionAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.TransactionAttribute</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: TransactionAttributeReferênciasAttributeTypes -->
+          <xsd:element name="attributeTypes" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of TransactionAttributeReferênciasAttributeTypes</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="transactionAttributeReferênciasAttributeTypes" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of TransactionAttributeReferênciasAttributeTypes needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.TransactionAttribute.Name</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AttributeType -->
+        <xsd:attribute name="attributeType" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Descrição de Empresa.MoneyManagerModel.TransactionAttribute.Attribute Type</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionAttribute Moniker -->
+  <xsd:element name="transactionAttributeMoniker" type="TransactionAttributeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TransactionAttributeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TransactionAttribute instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountGroupSpec -->
+  <xsd:element name="accountGroupSpec" type="AccountGroupSpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AccountGroupSpec">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: AccountGroupSpecReferencesAccountSpec -->
+          <xsd:element name="accountSpec" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of AccountGroupSpecReferencesAccountSpec</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="accountGroupSpecReferencesAccountSpec" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of AccountGroupSpecReferencesAccountSpec needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+        <!-- Property: CardinalityMin -->
+        <xsd:attribute name="cardinalityMin" type="xsd:string" />
+        <!-- Property: CardinalityMax -->
+        <xsd:attribute name="cardinalityMax" type="xsd:string" />
+        <!-- Property: needBankAccount -->
+        <xsd:attribute name="needBankAccount" type="xsd:boolean" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountGroupSpec Moniker -->
+  <xsd:element name="accountGroupSpecMoniker" type="AccountGroupSpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AccountGroupSpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AccountGroupSpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserAccountAssociation -->
+  <xsd:element name="userAccountAssociation" type="UserAccountAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="UserAccountAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserAccountAssociation Moniker -->
+  <xsd:element name="userAccountAssociationMoniker" type="UserAccountAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="UserAccountAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for UserAccountAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountTransactionAssociation -->
+  <xsd:element name="accountTransactionAssociation" type="AccountTransactionAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AccountTransactionAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountTransactionAssociation Moniker -->
+  <xsd:element name="accountTransactionAssociationMoniker" type="AccountTransactionAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AccountTransactionAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AccountTransactionAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategorySpec -->
+  <xsd:element name="categorySpec" type="CategorySpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CategorySpec">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: CategorySpecHasCategoryAttribute -->
+          <xsd:element name="categoryAttribute" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of CategorySpecHasCategoryAttribute</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="categorySpecHasCategoryAttribute" minOccurs="1" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of CategorySpecHasCategoryAttribute needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: CategorySpecReferencesCategoryTransactionAssociation -->
+          <xsd:element name="categoryTransactionAssociation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of CategorySpecReferencesCategoryTransactionAssociation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="categorySpecReferencesCategoryTransactionAssociation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of CategorySpecReferencesCategoryTransactionAssociation needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+        <!-- Property: CardinalityMin -->
+        <xsd:attribute name="cardinalityMin" type="xsd:string" />
+        <!-- Property: CardinalityMax -->
+        <xsd:attribute name="cardinalityMax" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategorySpec Moniker -->
+  <xsd:element name="categorySpecMoniker" type="CategorySpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CategorySpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CategorySpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategoryAttribute -->
+  <xsd:element name="categoryAttribute" type="CategoryAttribute" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CategoryAttribute">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: CategoryAttributeReferencesAttributeType1 -->
+          <xsd:element name="attributeType1" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of CategoryAttributeReferencesAttributeType1</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="categoryAttributeReferencesAttributeType1" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of CategoryAttributeReferencesAttributeType1 needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+        <!-- Property: AttributeType -->
+        <xsd:attribute name="attributeType" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategoryAttribute Moniker -->
+  <xsd:element name="categoryAttributeMoniker" type="CategoryAttributeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CategoryAttributeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CategoryAttribute instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategoryTransactionAssociation -->
+  <xsd:element name="categoryTransactionAssociation" type="CategoryTransactionAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CategoryTransactionAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategoryTransactionAssociation Moniker -->
+  <xsd:element name="categoryTransactionAssociationMoniker" type="CategoryTransactionAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CategoryTransactionAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CategoryTransactionAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasElements -->
+  <xsd:element name="exampleModelHasElements" abstract="true" type="ExampleModelHasElements" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExampleModelHasElements" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Embedding relationship between the Model and Elements</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end UserSpec -->
+          <xsd:element ref="userSpec" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasElements Moniker -->
+  <xsd:element name="exampleModelHasElementsMoniker" type="ExampleModelHasElementsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExampleModelHasElementsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ExampleModelHasElements instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelTemAccountSpec -->
+  <xsd:element name="modelTemAccountSpec" type="ModelTemAccountSpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModelTemAccountSpec">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.ModelTemAccountSpec</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AccountSpec -->
+          <xsd:element ref="accountSpec" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelTemAccountSpec Moniker -->
+  <xsd:element name="modelTemAccountSpecMoniker" type="ModelTemAccountSpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModelTemAccountSpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModelTemAccountSpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasTransactionSpec -->
+  <xsd:element name="modelHasTransactionSpec" type="ModelHasTransactionSpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModelHasTransactionSpec">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end TransactionSpec -->
+          <xsd:element ref="transactionSpec" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasTransactionSpec Moniker -->
+  <xsd:element name="modelHasTransactionSpecMoniker" type="ModelHasTransactionSpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModelHasTransactionSpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModelHasTransactionSpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasAttributeType -->
+  <xsd:element name="modelHasAttributeType" type="ModelHasAttributeType" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModelHasAttributeType">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AttributeType -->
+          <xsd:element ref="attributeType" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasAttributeType Moniker -->
+  <xsd:element name="modelHasAttributeTypeMoniker" type="ModelHasAttributeTypeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModelHasAttributeTypeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModelHasAttributeType instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserSpecTemUserAttribute -->
+  <xsd:element name="userSpecTemUserAttribute" type="UserSpecTemUserAttribute" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="UserSpecTemUserAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.UserSpecTemUserAttribute</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end UserAttribute -->
+          <xsd:element ref="userAttribute" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserSpecTemUserAttribute Moniker -->
+  <xsd:element name="userSpecTemUserAttributeMoniker" type="UserSpecTemUserAttributeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="UserSpecTemUserAttributeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for UserSpecTemUserAttribute instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountSpecTemAccountAttribute -->
+  <xsd:element name="accountSpecTemAccountAttribute" type="AccountSpecTemAccountAttribute" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AccountSpecTemAccountAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AccountAttribute -->
+          <xsd:element ref="accountAttribute" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountSpecTemAccountAttribute Moniker -->
+  <xsd:element name="accountSpecTemAccountAttributeMoniker" type="AccountSpecTemAccountAttributeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AccountSpecTemAccountAttributeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AccountSpecTemAccountAttribute instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionSpecTemTransactionAttribute -->
+  <xsd:element name="transactionSpecTemTransactionAttribute" type="TransactionSpecTemTransactionAttribute" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TransactionSpecTemTransactionAttribute">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end TransactionAttribute -->
+          <xsd:element ref="transactionAttribute" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionSpecTemTransactionAttribute Moniker -->
+  <xsd:element name="transactionSpecTemTransactionAttributeMoniker" type="TransactionSpecTemTransactionAttributeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TransactionSpecTemTransactionAttributeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TransactionSpecTemTransactionAttribute instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserAttributeReferênciasAttributeTypes -->
+  <xsd:element name="userAttributeReferênciasAttributeTypes" type="UserAttributeReferênciasAttributeTypes" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="UserAttributeReferênciasAttributeTypes">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AttributeType -->
+          <xsd:element ref="attributeTypeMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserAttributeReferênciasAttributeTypes Moniker -->
+  <xsd:element name="userAttributeReferênciasAttributeTypesMoniker" type="UserAttributeReferênciasAttributeTypesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="UserAttributeReferênciasAttributeTypesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for UserAttributeReferênciasAttributeTypes instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountAttributeReferênciasAttributeTypes -->
+  <xsd:element name="accountAttributeReferênciasAttributeTypes" type="AccountAttributeReferênciasAttributeTypes" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AccountAttributeReferênciasAttributeTypes">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AttributeType -->
+          <xsd:element ref="attributeTypeMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountAttributeReferênciasAttributeTypes Moniker -->
+  <xsd:element name="accountAttributeReferênciasAttributeTypesMoniker" type="AccountAttributeReferênciasAttributeTypesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AccountAttributeReferênciasAttributeTypesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AccountAttributeReferênciasAttributeTypes instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionAttributeReferênciasAttributeTypes -->
+  <xsd:element name="transactionAttributeReferênciasAttributeTypes" type="TransactionAttributeReferênciasAttributeTypes" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TransactionAttributeReferênciasAttributeTypes">
+    <xsd:annotation>
+      <xsd:documentation>Descrição de Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AttributeType -->
+          <xsd:element ref="attributeTypeMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionAttributeReferênciasAttributeTypes Moniker -->
+  <xsd:element name="transactionAttributeReferênciasAttributeTypesMoniker" type="TransactionAttributeReferênciasAttributeTypesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TransactionAttributeReferênciasAttributeTypesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TransactionAttributeReferênciasAttributeTypes instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasAccountGroupSpec -->
+  <xsd:element name="modelHasAccountGroupSpec" type="ModelHasAccountGroupSpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModelHasAccountGroupSpec">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AccountGroupSpec -->
+          <xsd:element ref="accountGroupSpec" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasAccountGroupSpec Moniker -->
+  <xsd:element name="modelHasAccountGroupSpecMoniker" type="ModelHasAccountGroupSpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModelHasAccountGroupSpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModelHasAccountGroupSpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountGroupSpecReferencesAccountSpec -->
+  <xsd:element name="accountGroupSpecReferencesAccountSpec" type="AccountGroupSpecReferencesAccountSpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AccountGroupSpecReferencesAccountSpec">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AccountSpec -->
+          <xsd:element ref="accountSpecMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountGroupSpecReferencesAccountSpec Moniker -->
+  <xsd:element name="accountGroupSpecReferencesAccountSpecMoniker" type="AccountGroupSpecReferencesAccountSpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AccountGroupSpecReferencesAccountSpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AccountGroupSpecReferencesAccountSpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasUserAccountAssociation -->
+  <xsd:element name="modelHasUserAccountAssociation" type="ModelHasUserAccountAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModelHasUserAccountAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end UserAccountAssociation -->
+          <xsd:element ref="userAccountAssociation" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasUserAccountAssociation Moniker -->
+  <xsd:element name="modelHasUserAccountAssociationMoniker" type="ModelHasUserAccountAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModelHasUserAccountAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModelHasUserAccountAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasAccountTransactionAssociation -->
+  <xsd:element name="modelHasAccountTransactionAssociation" type="ModelHasAccountTransactionAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModelHasAccountTransactionAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AccountTransactionAssociation -->
+          <xsd:element ref="accountTransactionAssociation" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasAccountTransactionAssociation Moniker -->
+  <xsd:element name="modelHasAccountTransactionAssociationMoniker" type="ModelHasAccountTransactionAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModelHasAccountTransactionAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModelHasAccountTransactionAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasCategorySpec -->
+  <xsd:element name="modelHasCategorySpec" type="ModelHasCategorySpec" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModelHasCategorySpec">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end CategorySpec -->
+          <xsd:element ref="categorySpec" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasCategorySpec Moniker -->
+  <xsd:element name="modelHasCategorySpecMoniker" type="ModelHasCategorySpecMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModelHasCategorySpecMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModelHasCategorySpec instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategoryAttributeReferencesAttributeType1 -->
+  <xsd:element name="categoryAttributeReferencesAttributeType1" type="CategoryAttributeReferencesAttributeType1" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CategoryAttributeReferencesAttributeType1">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AttributeType -->
+          <xsd:element ref="attributeTypeMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategoryAttributeReferencesAttributeType1 Moniker -->
+  <xsd:element name="categoryAttributeReferencesAttributeType1Moniker" type="CategoryAttributeReferencesAttributeType1Moniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CategoryAttributeReferencesAttributeType1Moniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CategoryAttributeReferencesAttributeType1 instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategorySpecHasCategoryAttribute -->
+  <xsd:element name="categorySpecHasCategoryAttribute" type="CategorySpecHasCategoryAttribute" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CategorySpecHasCategoryAttribute">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end CategoryAttribute -->
+          <xsd:element ref="categoryAttribute" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategorySpecHasCategoryAttribute Moniker -->
+  <xsd:element name="categorySpecHasCategoryAttributeMoniker" type="CategorySpecHasCategoryAttributeMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CategorySpecHasCategoryAttributeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CategorySpecHasCategoryAttribute instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserSpecReferencesUserAccountAssociation -->
+  <xsd:element name="userSpecReferencesUserAccountAssociation" type="UserSpecReferencesUserAccountAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="UserSpecReferencesUserAccountAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end UserAccountAssociation -->
+          <xsd:element ref="userAccountAssociationMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UserSpecReferencesUserAccountAssociation Moniker -->
+  <xsd:element name="userSpecReferencesUserAccountAssociationMoniker" type="UserSpecReferencesUserAccountAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="UserSpecReferencesUserAccountAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for UserSpecReferencesUserAccountAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountSpecReferencesUserAccountAssociation -->
+  <xsd:element name="accountSpecReferencesUserAccountAssociation" type="AccountSpecReferencesUserAccountAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AccountSpecReferencesUserAccountAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end UserAccountAssociation -->
+          <xsd:element ref="userAccountAssociationMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountSpecReferencesUserAccountAssociation Moniker -->
+  <xsd:element name="accountSpecReferencesUserAccountAssociationMoniker" type="AccountSpecReferencesUserAccountAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AccountSpecReferencesUserAccountAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AccountSpecReferencesUserAccountAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountSpecReferencesAccountTransactionAssociation -->
+  <xsd:element name="accountSpecReferencesAccountTransactionAssociation" type="AccountSpecReferencesAccountTransactionAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AccountSpecReferencesAccountTransactionAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AccountTransactionAssociation -->
+          <xsd:element ref="accountTransactionAssociationMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AccountSpecReferencesAccountTransactionAssociation Moniker -->
+  <xsd:element name="accountSpecReferencesAccountTransactionAssociationMoniker" type="AccountSpecReferencesAccountTransactionAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AccountSpecReferencesAccountTransactionAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AccountSpecReferencesAccountTransactionAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionSpecReferencesAccountTransactionAssociation -->
+  <xsd:element name="transactionSpecReferencesAccountTransactionAssociation" type="TransactionSpecReferencesAccountTransactionAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TransactionSpecReferencesAccountTransactionAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AccountTransactionAssociation -->
+          <xsd:element ref="accountTransactionAssociationMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionSpecReferencesAccountTransactionAssociation Moniker -->
+  <xsd:element name="transactionSpecReferencesAccountTransactionAssociationMoniker" type="TransactionSpecReferencesAccountTransactionAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TransactionSpecReferencesAccountTransactionAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TransactionSpecReferencesAccountTransactionAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasCategoryTransactionAssociation -->
+  <xsd:element name="modelHasCategoryTransactionAssociation" type="ModelHasCategoryTransactionAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModelHasCategoryTransactionAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end CategoryTransactionAssociation -->
+          <xsd:element ref="categoryTransactionAssociation" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelHasCategoryTransactionAssociation Moniker -->
+  <xsd:element name="modelHasCategoryTransactionAssociationMoniker" type="ModelHasCategoryTransactionAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModelHasCategoryTransactionAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModelHasCategoryTransactionAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategorySpecReferencesCategoryTransactionAssociation -->
+  <xsd:element name="categorySpecReferencesCategoryTransactionAssociation" type="CategorySpecReferencesCategoryTransactionAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CategorySpecReferencesCategoryTransactionAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end CategoryTransactionAssociation -->
+          <xsd:element ref="categoryTransactionAssociationMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CategorySpecReferencesCategoryTransactionAssociation Moniker -->
+  <xsd:element name="categorySpecReferencesCategoryTransactionAssociationMoniker" type="CategorySpecReferencesCategoryTransactionAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CategorySpecReferencesCategoryTransactionAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CategorySpecReferencesCategoryTransactionAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionSpecReferencesCategoryTransactionAssociation -->
+  <xsd:element name="transactionSpecReferencesCategoryTransactionAssociation" type="TransactionSpecReferencesCategoryTransactionAssociation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TransactionSpecReferencesCategoryTransactionAssociation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end CategoryTransactionAssociation -->
+          <xsd:element ref="categoryTransactionAssociationMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TransactionSpecReferencesCategoryTransactionAssociation Moniker -->
+  <xsd:element name="transactionSpecReferencesCategoryTransactionAssociationMoniker" type="TransactionSpecReferencesCategoryTransactionAssociationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TransactionSpecReferencesCategoryTransactionAssociationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TransactionSpecReferencesCategoryTransactionAssociation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+</xsd:schema>
+

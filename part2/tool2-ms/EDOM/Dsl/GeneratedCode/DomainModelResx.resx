@@ -1,0 +1,1987 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.MoneyManagerModel</value>
+    <comment>Description for DslLibrary &apos;MoneyManagerModel&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.MoneyManagerModelDomainModel.DisplayName" xml:space="preserve">
+    <value>MoneyManagerModel</value>
+    <comment>DisplayName for DslLibrary &apos;MoneyManagerModel&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.Model.Description" xml:space="preserve">
+    <value>The root in which all other elements are embedded. Appears as a diagram.</value>
+    <comment>Description for DomainClass &apos;Model&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainClass &apos;Model&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.Model/Name.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.Model.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Model&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.Model/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Model&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpec.Description" xml:space="preserve">
+    <value>Elements embedded in the model. Appear as boxes on the diagram.</value>
+    <comment>Description for DomainClass &apos;UserSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpec.DisplayName" xml:space="preserve">
+    <value>User Spec</value>
+    <comment>DisplayName for DomainClass &apos;UserSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpec/CardinalityMax.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserSpec.Cardinality</value>
+    <comment>Description for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;UserSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpec/CardinalityMax.DisplayName" xml:space="preserve">
+    <value>Cardinality Max</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;UserSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpec/Name.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserSpec.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;UserSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpec/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;UserSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpec/CardinalityMin.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.UserSpec.Cardinality Min</value>
+    <comment>Description for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;UserSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpec/CardinalityMin.DisplayName" xml:space="preserve">
+    <value>Cardinality Min</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;UserSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountSpec</value>
+    <comment>Description for DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec.DisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>DisplayName for DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec/CardinalityMax.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountSpec.Cardinality</value>
+    <comment>Description for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec/CardinalityMax.DisplayName" xml:space="preserve">
+    <value>Cardinality Max</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec/Name.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountSpec.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec/CardinalityMin.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountSpec.Cardinality Min</value>
+    <comment>Description for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec/CardinalityMin.DisplayName" xml:space="preserve">
+    <value>Cardinality Min</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec/NeedBanckAccount.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountSpec.Need Banck Account</value>
+    <comment>Description for DomainProperty &apos;NeedBanckAccount&apos; on DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpec/NeedBanckAccount.DisplayName" xml:space="preserve">
+    <value>Need Banck Account</value>
+    <comment>DisplayName for DomainProperty &apos;NeedBanckAccount&apos; on DomainClass &apos;AccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpec.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionSpec</value>
+    <comment>Description for DomainClass &apos;TransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpec.DisplayName" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>DisplayName for DomainClass &apos;TransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpec/CardinalityMax.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionSpec.Cardinality</value>
+    <comment>Description for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;TransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpec/CardinalityMax.DisplayName" xml:space="preserve">
+    <value>Cardinality Max</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;TransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpec/Name.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionSpec.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;TransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpec/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;TransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpec/CardinalityMin.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.TransactionSpec.Cardinality Min</value>
+    <comment>Description for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;TransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpec/CardinalityMin.DisplayName" xml:space="preserve">
+    <value>Cardinality Min</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;TransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AttributeType</value>
+    <comment>Description for DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType.DisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>DisplayName for DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType/Text.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AttributeType.Text</value>
+    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType/Text.DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType/Number.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AttributeType.Number</value>
+    <comment>Description for DomainProperty &apos;Number&apos; on DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType/Number.DisplayName" xml:space="preserve">
+    <value>Number</value>
+    <comment>DisplayName for DomainProperty &apos;Number&apos; on DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType/Choice.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AttributeType.Choice</value>
+    <comment>Description for DomainProperty &apos;Choice&apos; on DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType/Choice.DisplayName" xml:space="preserve">
+    <value>Choice</value>
+    <comment>DisplayName for DomainProperty &apos;Choice&apos; on DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType/Date.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AttributeType.Date</value>
+    <comment>Description for DomainProperty &apos;Date&apos; on DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeType/Date.DisplayName" xml:space="preserve">
+    <value>Date</value>
+    <comment>DisplayName for DomainProperty &apos;Date&apos; on DomainClass &apos;AttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserAttribute</value>
+    <comment>Description for DomainClass &apos;UserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttribute.DisplayName" xml:space="preserve">
+    <value>User Attribute</value>
+    <comment>DisplayName for DomainClass &apos;UserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttribute/Name.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserAttribute.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;UserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttribute/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;UserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttribute/AttributeType.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserAttribute.Attribute Type</value>
+    <comment>Description for DomainProperty &apos;AttributeType&apos; on DomainClass &apos;UserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttribute/AttributeType.DisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>DisplayName for DomainProperty &apos;AttributeType&apos; on DomainClass &apos;UserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountAttribute</value>
+    <comment>Description for DomainClass &apos;AccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttribute.DisplayName" xml:space="preserve">
+    <value>Account Attribute</value>
+    <comment>DisplayName for DomainClass &apos;AccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttribute/Name.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountAttribute.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttribute/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttribute/AttributeType.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountAttribute.Attribute Type</value>
+    <comment>Description for DomainProperty &apos;AttributeType&apos; on DomainClass &apos;AccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttribute/AttributeType.DisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>DisplayName for DomainProperty &apos;AttributeType&apos; on DomainClass &apos;AccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionAttribute</value>
+    <comment>Description for DomainClass &apos;TransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttribute.DisplayName" xml:space="preserve">
+    <value>Transaction Attribute</value>
+    <comment>DisplayName for DomainClass &apos;TransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttribute/Name.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionAttribute.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;TransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttribute/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;TransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttribute/AttributeType.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionAttribute.Attribute Type</value>
+    <comment>Description for DomainProperty &apos;AttributeType&apos; on DomainClass &apos;TransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttribute/AttributeType.DisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>DisplayName for DomainProperty &apos;AttributeType&apos; on DomainClass &apos;TransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountGroupSpec</value>
+    <comment>Description for DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec.DisplayName" xml:space="preserve">
+    <value>Account Group Spec</value>
+    <comment>DisplayName for DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec/Name.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountGroupSpec.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec/CardinalityMin.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountGroupSpec.Cardinality Min</value>
+    <comment>Description for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec/CardinalityMin.DisplayName" xml:space="preserve">
+    <value>Cardinality Min</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec/CardinalityMax.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountGroupSpec.Cardinality Max</value>
+    <comment>Description for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec/CardinalityMax.DisplayName" xml:space="preserve">
+    <value>Cardinality Max</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec/needBankAccount.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountGroupSpec.Need Bank Account</value>
+    <comment>Description for DomainProperty &apos;needBankAccount&apos; on DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpec/needBankAccount.DisplayName" xml:space="preserve">
+    <value>Need Bank Account</value>
+    <comment>DisplayName for DomainProperty &apos;needBankAccount&apos; on DomainClass &apos;AccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAccountAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.UserAccountAssociation</value>
+    <comment>Description for DomainClass &apos;UserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAccountAssociation.DisplayName" xml:space="preserve">
+    <value>User Account Association</value>
+    <comment>DisplayName for DomainClass &apos;UserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAccountAssociation/Name.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.UserAccountAssociation.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;UserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAccountAssociation/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;UserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountTransactionAssociation</value>
+    <comment>Description for DomainClass &apos;AccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Account Transaction Association</value>
+    <comment>DisplayName for DomainClass &apos;AccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountTransactionAssociation/Name.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountTransactionAssociation.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountTransactionAssociation/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpec</value>
+    <comment>Description for DomainClass &apos;CategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpec.DisplayName" xml:space="preserve">
+    <value>Category Spec</value>
+    <comment>DisplayName for DomainClass &apos;CategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpec/Name.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpec.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;CategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpec/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;CategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpec/CardinalityMin.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpec.Cardinality Min</value>
+    <comment>Description for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;CategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpec/CardinalityMin.DisplayName" xml:space="preserve">
+    <value>Cardinality Min</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMin&apos; on DomainClass &apos;CategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpec/CardinalityMax.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpec.Cardinality Max</value>
+    <comment>Description for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;CategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpec/CardinalityMax.DisplayName" xml:space="preserve">
+    <value>Cardinality Max</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityMax&apos; on DomainClass &apos;CategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttribute.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryAttribute</value>
+    <comment>Description for DomainClass &apos;CategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttribute.DisplayName" xml:space="preserve">
+    <value>Category Attribute</value>
+    <comment>DisplayName for DomainClass &apos;CategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttribute/Name.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryAttribute.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;CategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttribute/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;CategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttribute/AttributeType.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryAttribute.Attribute Type</value>
+    <comment>Description for DomainProperty &apos;AttributeType&apos; on DomainClass &apos;CategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttribute/AttributeType.DisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>DisplayName for DomainProperty &apos;AttributeType&apos; on DomainClass &apos;CategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryTransactionAssociation</value>
+    <comment>Description for DomainClass &apos;CategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Category Transaction Association</value>
+    <comment>DisplayName for DomainClass &apos;CategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryTransactionAssociation/Name.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryTransactionAssociation.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;CategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryTransactionAssociation/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;CategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ExampleModelHasElements.Description" xml:space="preserve">
+    <value>Embedding relationship between the Model and Elements</value>
+    <comment>Description for DomainClass &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ExampleModelHasElements.DisplayName" xml:space="preserve">
+    <value>Example Model Has Elements</value>
+    <comment>DisplayName for DomainClass &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ExampleModelHasElements/Model.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;Model&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ExampleModelHasElements/Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ExampleModelHasElements/Model.PropertyDisplayName" xml:space="preserve">
+    <value>Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ExampleModelHasElements/Element.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ExampleModelHasElements/Element.DisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ExampleModelHasElements/Element.PropertyDisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelTemAccountSpec.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.ModelTemAccountSpec</value>
+    <comment>Description for DomainClass &apos;ModelTemAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelTemAccountSpec.DisplayName" xml:space="preserve">
+    <value>Model Tem Account Spec</value>
+    <comment>DisplayName for DomainClass &apos;ModelTemAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelTemAccountSpec/Model.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.ModelTemAccountSpec.Model</value>
+    <comment>Description for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelTemAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelTemAccountSpec/Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelTemAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelTemAccountSpec/Model.PropertyDisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelTemAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelTemAccountSpec/AccountSpec.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.ModelTemAccountSpec.AccountSpec</value>
+    <comment>Description for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;ModelTemAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelTemAccountSpec/AccountSpec.DisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>DisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;ModelTemAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelTemAccountSpec/AccountSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;ModelTemAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasTransactionSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasTransactionSpec</value>
+    <comment>Description for DomainClass &apos;ModelHasTransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasTransactionSpec.DisplayName" xml:space="preserve">
+    <value>Model Has Transaction Spec</value>
+    <comment>DisplayName for DomainClass &apos;ModelHasTransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasTransactionSpec/Model.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasTransactionSpec.Model</value>
+    <comment>Description for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasTransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasTransactionSpec/Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasTransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasTransactionSpec/Model.PropertyDisplayName" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasTransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasTransactionSpec/TransactionSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasTransactionSpec.TransactionSpec</value>
+    <comment>Description for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;ModelHasTransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasTransactionSpec/TransactionSpec.DisplayName" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>DisplayName for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;ModelHasTransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasTransactionSpec/TransactionSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;ModelHasTransactionSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAttributeType.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasAttributeType</value>
+    <comment>Description for DomainClass &apos;ModelHasAttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAttributeType.DisplayName" xml:space="preserve">
+    <value>Model Has Attribute Type</value>
+    <comment>DisplayName for DomainClass &apos;ModelHasAttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAttributeType/Model.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasAttributeType.Model</value>
+    <comment>Description for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasAttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAttributeType/Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasAttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAttributeType/Model.PropertyDisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasAttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAttributeType/AttributeType.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasAttributeType.AttributeType</value>
+    <comment>Description for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;ModelHasAttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAttributeType/AttributeType.DisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>DisplayName for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;ModelHasAttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAttributeType/AttributeType.PropertyDisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;ModelHasAttributeType&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecTemUserAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserSpecTemUserAttribute</value>
+    <comment>Description for DomainClass &apos;UserSpecTemUserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecTemUserAttribute.DisplayName" xml:space="preserve">
+    <value>User Spec Tem User Attribute</value>
+    <comment>DisplayName for DomainClass &apos;UserSpecTemUserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecTemUserAttribute/UserSpec.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserSpecTemUserAttribute.UserSpec</value>
+    <comment>Description for DomainRole &apos;UserSpec&apos; on DomainRelationship &apos;UserSpecTemUserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecTemUserAttribute/UserSpec.DisplayName" xml:space="preserve">
+    <value>User Spec</value>
+    <comment>DisplayName for DomainRole &apos;UserSpec&apos; on DomainRelationship &apos;UserSpecTemUserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecTemUserAttribute/UserSpec.PropertyDisplayName" xml:space="preserve">
+    <value>User Attribute</value>
+    <comment>PropertyDisplayName for DomainRole &apos;UserSpec&apos; on DomainRelationship &apos;UserSpecTemUserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecTemUserAttribute/UserAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserSpecTemUserAttribute.UserAttribute</value>
+    <comment>Description for DomainRole &apos;UserAttribute&apos; on DomainRelationship &apos;UserSpecTemUserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecTemUserAttribute/UserAttribute.DisplayName" xml:space="preserve">
+    <value>User Attribute</value>
+    <comment>DisplayName for DomainRole &apos;UserAttribute&apos; on DomainRelationship &apos;UserSpecTemUserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecTemUserAttribute/UserAttribute.PropertyDisplayName" xml:space="preserve">
+    <value>User Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;UserAttribute&apos; on DomainRelationship &apos;UserSpecTemUserAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute</value>
+    <comment>Description for DomainClass &apos;AccountSpecTemAccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute.DisplayName" xml:space="preserve">
+    <value>Account Spec Tem Account Attribute</value>
+    <comment>DisplayName for DomainClass &apos;AccountSpecTemAccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute/AccountSpec.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute.AccountSpec</value>
+    <comment>Description for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountSpecTemAccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute/AccountSpec.DisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>DisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountSpecTemAccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute/AccountSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Account Attribute</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountSpecTemAccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute/AccountAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute.AccountAttribute</value>
+    <comment>Description for DomainRole &apos;AccountAttribute&apos; on DomainRelationship &apos;AccountSpecTemAccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute/AccountAttribute.DisplayName" xml:space="preserve">
+    <value>Account Attribute</value>
+    <comment>DisplayName for DomainRole &apos;AccountAttribute&apos; on DomainRelationship &apos;AccountSpecTemAccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecTemAccountAttribute/AccountAttribute.PropertyDisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountAttribute&apos; on DomainRelationship &apos;AccountSpecTemAccountAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute</value>
+    <comment>Description for DomainClass &apos;TransactionSpecTemTransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute.DisplayName" xml:space="preserve">
+    <value>Transaction Spec Tem Transaction Attribute</value>
+    <comment>DisplayName for DomainClass &apos;TransactionSpecTemTransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute/TransactionSpec.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute.TransactionSpec</value>
+    <comment>Description for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;TransactionSpecTemTransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute/TransactionSpec.DisplayName" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>DisplayName for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;TransactionSpecTemTransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute/TransactionSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Transaction Attribute</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;TransactionSpecTemTransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute/TransactionAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute.TransactionAttribute</value>
+    <comment>Description for DomainRole &apos;TransactionAttribute&apos; on DomainRelationship &apos;TransactionSpecTemTransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute/TransactionAttribute.DisplayName" xml:space="preserve">
+    <value>Transaction Attribute</value>
+    <comment>DisplayName for DomainRole &apos;TransactionAttribute&apos; on DomainRelationship &apos;TransactionSpecTemTransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecTemTransactionAttribute/TransactionAttribute.PropertyDisplayName" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TransactionAttribute&apos; on DomainRelationship &apos;TransactionSpecTemTransactionAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes</value>
+    <comment>Description for DomainClass &apos;UserAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes.DisplayName" xml:space="preserve">
+    <value>User Attribute Referências Attribute Types</value>
+    <comment>DisplayName for DomainClass &apos;UserAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes/UserAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes.UserAttribute</value>
+    <comment>Description for DomainRole &apos;UserAttribute&apos; on DomainRelationship &apos;UserAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes/UserAttribute.DisplayName" xml:space="preserve">
+    <value>User Attribute</value>
+    <comment>DisplayName for DomainRole &apos;UserAttribute&apos; on DomainRelationship &apos;UserAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes/UserAttribute.PropertyDisplayName" xml:space="preserve">
+    <value>Attribute Types</value>
+    <comment>PropertyDisplayName for DomainRole &apos;UserAttribute&apos; on DomainRelationship &apos;UserAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes/AttributeType.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes.AttributeType</value>
+    <comment>Description for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;UserAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes/AttributeType.DisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>DisplayName for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;UserAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeReferênciasAttributeTypes/AttributeType.PropertyDisplayName" xml:space="preserve">
+    <value>User Attributes</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;UserAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes</value>
+    <comment>Description for DomainClass &apos;AccountAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes.DisplayName" xml:space="preserve">
+    <value>Account Attribute Referências Attribute Types</value>
+    <comment>DisplayName for DomainClass &apos;AccountAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes/AccountAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes.AccountAttribute</value>
+    <comment>Description for DomainRole &apos;AccountAttribute&apos; on DomainRelationship &apos;AccountAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes/AccountAttribute.DisplayName" xml:space="preserve">
+    <value>Account Attribute</value>
+    <comment>DisplayName for DomainRole &apos;AccountAttribute&apos; on DomainRelationship &apos;AccountAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes/AccountAttribute.PropertyDisplayName" xml:space="preserve">
+    <value>Attribute Types</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountAttribute&apos; on DomainRelationship &apos;AccountAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes/AttributeTypes.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes.AttributeTypes</value>
+    <comment>Description for DomainRole &apos;AttributeTypes&apos; on DomainRelationship &apos;AccountAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes/AttributeTypes.DisplayName" xml:space="preserve">
+    <value>Attribute Types</value>
+    <comment>DisplayName for DomainRole &apos;AttributeTypes&apos; on DomainRelationship &apos;AccountAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeReferênciasAttributeTypes/AttributeTypes.PropertyDisplayName" xml:space="preserve">
+    <value>Account Attribute</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AttributeTypes&apos; on DomainRelationship &apos;AccountAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes</value>
+    <comment>Description for DomainClass &apos;TransactionAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes.DisplayName" xml:space="preserve">
+    <value>Transaction Attribute Referências Attribute Types</value>
+    <comment>DisplayName for DomainClass &apos;TransactionAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes/TransactionAttribute.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes.TransactionAttribute</value>
+    <comment>Description for DomainRole &apos;TransactionAttribute&apos; on DomainRelationship &apos;TransactionAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes/TransactionAttribute.DisplayName" xml:space="preserve">
+    <value>Transaction Attribute</value>
+    <comment>DisplayName for DomainRole &apos;TransactionAttribute&apos; on DomainRelationship &apos;TransactionAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes/TransactionAttribute.PropertyDisplayName" xml:space="preserve">
+    <value>Attribute Types</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TransactionAttribute&apos; on DomainRelationship &apos;TransactionAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes/AttributeType.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes.AttributeType</value>
+    <comment>Description for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;TransactionAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes/AttributeType.DisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>DisplayName for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;TransactionAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeReferênciasAttributeTypes/AttributeType.PropertyDisplayName" xml:space="preserve">
+    <value>Transaction Attributes</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;TransactionAttributeReferênciasAttributeTypes&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasAccountGroupSpec</value>
+    <comment>Description for DomainClass &apos;ModelHasAccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.DisplayName" xml:space="preserve">
+    <value>Model Has Account Group Spec</value>
+    <comment>DisplayName for DomainClass &apos;ModelHasAccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/Model.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.Model</value>
+    <comment>Description for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasAccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasAccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/Model.PropertyDisplayName" xml:space="preserve">
+    <value>Account Group Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasAccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/AccountGroupSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasAccountGroupSpec.AccountGroupSpec</value>
+    <comment>Description for DomainRole &apos;AccountGroupSpec&apos; on DomainRelationship &apos;ModelHasAccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/AccountGroupSpec.DisplayName" xml:space="preserve">
+    <value>Account Group Spec</value>
+    <comment>DisplayName for DomainRole &apos;AccountGroupSpec&apos; on DomainRelationship &apos;ModelHasAccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountGroupSpec/AccountGroupSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountGroupSpec&apos; on DomainRelationship &apos;ModelHasAccountGroupSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec</value>
+    <comment>Description for DomainClass &apos;AccountGroupSpecReferencesAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.DisplayName" xml:space="preserve">
+    <value>Account Group Spec References Account Spec</value>
+    <comment>DisplayName for DomainClass &apos;AccountGroupSpecReferencesAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountGroupSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountGroupSpec</value>
+    <comment>Description for DomainRole &apos;AccountGroupSpec&apos; on DomainRelationship &apos;AccountGroupSpecReferencesAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountGroupSpec.DisplayName" xml:space="preserve">
+    <value>Account Group Spec</value>
+    <comment>DisplayName for DomainRole &apos;AccountGroupSpec&apos; on DomainRelationship &apos;AccountGroupSpecReferencesAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountGroupSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountGroupSpec&apos; on DomainRelationship &apos;AccountGroupSpecReferencesAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec.AccountSpec</value>
+    <comment>Description for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountGroupSpecReferencesAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountSpec.DisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>DisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountGroupSpecReferencesAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecReferencesAccountSpec/AccountSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Account Group Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountGroupSpecReferencesAccountSpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasUserAccountAssociation</value>
+    <comment>Description for DomainClass &apos;ModelHasUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.DisplayName" xml:space="preserve">
+    <value>Model Has User Account Association</value>
+    <comment>DisplayName for DomainClass &apos;ModelHasUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/Model.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.Model</value>
+    <comment>Description for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/Model.PropertyDisplayName" xml:space="preserve">
+    <value>User Account Association</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/UserAccountAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasUserAccountAssociation.UserAccountAssociation</value>
+    <comment>Description for DomainRole &apos;UserAccountAssociation&apos; on DomainRelationship &apos;ModelHasUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/UserAccountAssociation.DisplayName" xml:space="preserve">
+    <value>User Account Association</value>
+    <comment>DisplayName for DomainRole &apos;UserAccountAssociation&apos; on DomainRelationship &apos;ModelHasUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasUserAccountAssociation/UserAccountAssociation.PropertyDisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;UserAccountAssociation&apos; on DomainRelationship &apos;ModelHasUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation</value>
+    <comment>Description for DomainClass &apos;ModelHasAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Model Has Account Transaction Association</value>
+    <comment>DisplayName for DomainClass &apos;ModelHasAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/Model.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.Model</value>
+    <comment>Description for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/Model.PropertyDisplayName" xml:space="preserve">
+    <value>Account Transaction Association</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/AccountTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation.AccountTransactionAssociation</value>
+    <comment>Description for DomainRole &apos;AccountTransactionAssociation&apos; on DomainRelationship &apos;ModelHasAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/AccountTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Account Transaction Association</value>
+    <comment>DisplayName for DomainRole &apos;AccountTransactionAssociation&apos; on DomainRelationship &apos;ModelHasAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasAccountTransactionAssociation/AccountTransactionAssociation.PropertyDisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountTransactionAssociation&apos; on DomainRelationship &apos;ModelHasAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategorySpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasCategorySpec</value>
+    <comment>Description for DomainClass &apos;ModelHasCategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategorySpec.DisplayName" xml:space="preserve">
+    <value>Model Has Category Spec</value>
+    <comment>DisplayName for DomainClass &apos;ModelHasCategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.Model</value>
+    <comment>Description for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasCategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasCategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.PropertyDisplayName" xml:space="preserve">
+    <value>Category Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasCategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategorySpec/CategorySpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.CategorySpec</value>
+    <comment>Description for DomainRole &apos;CategorySpec&apos; on DomainRelationship &apos;ModelHasCategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategorySpec/CategorySpec.DisplayName" xml:space="preserve">
+    <value>Category Spec</value>
+    <comment>DisplayName for DomainRole &apos;CategorySpec&apos; on DomainRelationship &apos;ModelHasCategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategorySpec/CategorySpec.PropertyDisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CategorySpec&apos; on DomainRelationship &apos;ModelHasCategorySpec&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1</value>
+    <comment>Description for DomainClass &apos;CategoryAttributeReferencesAttributeType1&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.DisplayName" xml:space="preserve">
+    <value>Category Attribute References Attribute Type1</value>
+    <comment>DisplayName for DomainClass &apos;CategoryAttributeReferencesAttributeType1&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/CategoryAttribute.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.CategoryAttribute</value>
+    <comment>Description for DomainRole &apos;CategoryAttribute&apos; on DomainRelationship &apos;CategoryAttributeReferencesAttributeType1&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/CategoryAttribute.DisplayName" xml:space="preserve">
+    <value>Category Attribute</value>
+    <comment>DisplayName for DomainRole &apos;CategoryAttribute&apos; on DomainRelationship &apos;CategoryAttributeReferencesAttributeType1&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/CategoryAttribute.PropertyDisplayName" xml:space="preserve">
+    <value>Attribute Type1</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CategoryAttribute&apos; on DomainRelationship &apos;CategoryAttributeReferencesAttributeType1&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/AttributeType.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1.AttributeType</value>
+    <comment>Description for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;CategoryAttributeReferencesAttributeType1&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/AttributeType.DisplayName" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>DisplayName for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;CategoryAttributeReferencesAttributeType1&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeReferencesAttributeType1/AttributeType.PropertyDisplayName" xml:space="preserve">
+    <value>Category Attribute1</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AttributeType&apos; on DomainRelationship &apos;CategoryAttributeReferencesAttributeType1&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute</value>
+    <comment>Description for DomainClass &apos;CategorySpecHasCategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.DisplayName" xml:space="preserve">
+    <value>Category Spec Has Category Attribute</value>
+    <comment>DisplayName for DomainClass &apos;CategorySpecHasCategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpec</value>
+    <comment>Description for DomainRole &apos;CategorySpec&apos; on DomainRelationship &apos;CategorySpecHasCategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.DisplayName" xml:space="preserve">
+    <value>Category Spec</value>
+    <comment>DisplayName for DomainRole &apos;CategorySpec&apos; on DomainRelationship &apos;CategorySpecHasCategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.PropertyDisplayName" xml:space="preserve">
+    <value>Category Attribute</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CategorySpec&apos; on DomainRelationship &apos;CategorySpecHasCategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategoryAttribute.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategoryAttribute</value>
+    <comment>Description for DomainRole &apos;CategoryAttribute&apos; on DomainRelationship &apos;CategorySpecHasCategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategoryAttribute.DisplayName" xml:space="preserve">
+    <value>Category Attribute</value>
+    <comment>DisplayName for DomainRole &apos;CategoryAttribute&apos; on DomainRelationship &apos;CategorySpecHasCategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategoryAttribute.PropertyDisplayName" xml:space="preserve">
+    <value>Category Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CategoryAttribute&apos; on DomainRelationship &apos;CategorySpecHasCategoryAttribute&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation</value>
+    <comment>Description for DomainClass &apos;UserSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.DisplayName" xml:space="preserve">
+    <value>User Spec References User Account Association</value>
+    <comment>DisplayName for DomainClass &apos;UserSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserSpec</value>
+    <comment>Description for DomainRole &apos;UserSpec&apos; on DomainRelationship &apos;UserSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserSpec.DisplayName" xml:space="preserve">
+    <value>User Spec</value>
+    <comment>DisplayName for DomainRole &apos;UserSpec&apos; on DomainRelationship &apos;UserSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserSpec.PropertyDisplayName" xml:space="preserve">
+    <value>User Account Association</value>
+    <comment>PropertyDisplayName for DomainRole &apos;UserSpec&apos; on DomainRelationship &apos;UserSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserAccountAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation.UserAccountAssociation</value>
+    <comment>Description for DomainRole &apos;UserAccountAssociation&apos; on DomainRelationship &apos;UserSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserAccountAssociation.DisplayName" xml:space="preserve">
+    <value>User Account Association</value>
+    <comment>DisplayName for DomainRole &apos;UserAccountAssociation&apos; on DomainRelationship &apos;UserSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecReferencesUserAccountAssociation/UserAccountAssociation.PropertyDisplayName" xml:space="preserve">
+    <value>User Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;UserAccountAssociation&apos; on DomainRelationship &apos;UserSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation</value>
+    <comment>Description for DomainClass &apos;AccountSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.DisplayName" xml:space="preserve">
+    <value>Account Spec References User Account Association</value>
+    <comment>DisplayName for DomainClass &apos;AccountSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/AccountSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.AccountSpec</value>
+    <comment>Description for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/AccountSpec.DisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>DisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/AccountSpec.PropertyDisplayName" xml:space="preserve">
+    <value>User Account Association</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/UserAccountAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation.UserAccountAssociation</value>
+    <comment>Description for DomainRole &apos;UserAccountAssociation&apos; on DomainRelationship &apos;AccountSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/UserAccountAssociation.DisplayName" xml:space="preserve">
+    <value>User Account Association</value>
+    <comment>DisplayName for DomainRole &apos;UserAccountAssociation&apos; on DomainRelationship &apos;AccountSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesUserAccountAssociation/UserAccountAssociation.PropertyDisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;UserAccountAssociation&apos; on DomainRelationship &apos;AccountSpecReferencesUserAccountAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation</value>
+    <comment>Description for DomainClass &apos;AccountSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Account Spec References Account Transaction Association</value>
+    <comment>DisplayName for DomainClass &apos;AccountSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountSpec</value>
+    <comment>Description for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountSpec.DisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>DisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Account Transaction Association</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountSpec&apos; on DomainRelationship &apos;AccountSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation.AccountTransactionAssociation</value>
+    <comment>Description for DomainRole &apos;AccountTransactionAssociation&apos; on DomainRelationship &apos;AccountSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Account Transaction Association</value>
+    <comment>DisplayName for DomainRole &apos;AccountTransactionAssociation&apos; on DomainRelationship &apos;AccountSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.PropertyDisplayName" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountTransactionAssociation&apos; on DomainRelationship &apos;AccountSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation</value>
+    <comment>Description for DomainClass &apos;TransactionSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Transaction Spec References Account Transaction Association</value>
+    <comment>DisplayName for DomainClass &apos;TransactionSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/TransactionSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.TransactionSpec</value>
+    <comment>Description for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;TransactionSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/TransactionSpec.DisplayName" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>DisplayName for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;TransactionSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/TransactionSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Account Transaction Association</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;TransactionSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation.AccountTransactionAssociation</value>
+    <comment>Description for DomainRole &apos;AccountTransactionAssociation&apos; on DomainRelationship &apos;TransactionSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Account Transaction Association</value>
+    <comment>DisplayName for DomainRole &apos;AccountTransactionAssociation&apos; on DomainRelationship &apos;TransactionSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesAccountTransactionAssociation/AccountTransactionAssociation.PropertyDisplayName" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AccountTransactionAssociation&apos; on DomainRelationship &apos;TransactionSpecReferencesAccountTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation</value>
+    <comment>Description for DomainClass &apos;ModelHasCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Model Has Category Transaction Association</value>
+    <comment>DisplayName for DomainClass &apos;ModelHasCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/Model.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.Model</value>
+    <comment>Description for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/Model.DisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>DisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/Model.PropertyDisplayName" xml:space="preserve">
+    <value>Category Transaction Association</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Model&apos; on DomainRelationship &apos;ModelHasCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/CategoryTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation.CategoryTransactionAssociation</value>
+    <comment>Description for DomainRole &apos;CategoryTransactionAssociation&apos; on DomainRelationship &apos;ModelHasCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/CategoryTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Category Transaction Association</value>
+    <comment>DisplayName for DomainRole &apos;CategoryTransactionAssociation&apos; on DomainRelationship &apos;ModelHasCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.ModelHasCategoryTransactionAssociation/CategoryTransactionAssociation.PropertyDisplayName" xml:space="preserve">
+    <value>Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CategoryTransactionAssociation&apos; on DomainRelationship &apos;ModelHasCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation</value>
+    <comment>Description for DomainClass &apos;CategorySpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Category Spec References Category Transaction Association</value>
+    <comment>DisplayName for DomainClass &apos;CategorySpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategorySpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategorySpec</value>
+    <comment>Description for DomainRole &apos;CategorySpec&apos; on DomainRelationship &apos;CategorySpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategorySpec.DisplayName" xml:space="preserve">
+    <value>Category Spec</value>
+    <comment>DisplayName for DomainRole &apos;CategorySpec&apos; on DomainRelationship &apos;CategorySpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategorySpec.PropertyDisplayName" xml:space="preserve">
+    <value>Category Transaction Association</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CategorySpec&apos; on DomainRelationship &apos;CategorySpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociation</value>
+    <comment>Description for DomainRole &apos;CategoryTransactionAssociation&apos; on DomainRelationship &apos;CategorySpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Category Transaction Association</value>
+    <comment>DisplayName for DomainRole &apos;CategoryTransactionAssociation&apos; on DomainRelationship &apos;CategorySpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.PropertyDisplayName" xml:space="preserve">
+    <value>Category Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CategoryTransactionAssociation&apos; on DomainRelationship &apos;CategorySpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation</value>
+    <comment>Description for DomainClass &apos;TransactionSpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Transaction Spec References Category Transaction Association</value>
+    <comment>DisplayName for DomainClass &apos;TransactionSpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/TransactionSpec.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.TransactionSpec</value>
+    <comment>Description for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;TransactionSpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/TransactionSpec.DisplayName" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>DisplayName for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;TransactionSpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/TransactionSpec.PropertyDisplayName" xml:space="preserve">
+    <value>Category Transaction Association</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TransactionSpec&apos; on DomainRelationship &apos;TransactionSpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation.CategoryTransactionAssociation</value>
+    <comment>Description for DomainRole &apos;CategoryTransactionAssociation&apos; on DomainRelationship &apos;TransactionSpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.DisplayName" xml:space="preserve">
+    <value>Category Transaction Association</value>
+    <comment>DisplayName for DomainRole &apos;CategoryTransactionAssociation&apos; on DomainRelationship &apos;TransactionSpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecReferencesCategoryTransactionAssociation/CategoryTransactionAssociation.PropertyDisplayName" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CategoryTransactionAssociation&apos; on DomainRelationship &apos;TransactionSpecReferencesCategoryTransactionAssociation&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecShape.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserSpecShape</value>
+    <comment>Description for DomainClass &apos;UserSpecShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserSpecShape.DisplayName" xml:space="preserve">
+    <value>User Spec Shape</value>
+    <comment>DisplayName for DomainClass &apos;UserSpecShape&apos;</comment>
+  </data>
+  <data name="UserSpecShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecShape.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountSpecShape</value>
+    <comment>Description for DomainClass &apos;AccountSpecShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountSpecShape.DisplayName" xml:space="preserve">
+    <value>Account Spec Shape</value>
+    <comment>DisplayName for DomainClass &apos;AccountSpecShape&apos;</comment>
+  </data>
+  <data name="AccountSpecShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecShape.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionSpecShape</value>
+    <comment>Description for DomainClass &apos;TransactionSpecShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionSpecShape.DisplayName" xml:space="preserve">
+    <value>Transaction Spec Shape</value>
+    <comment>DisplayName for DomainClass &apos;TransactionSpecShape&apos;</comment>
+  </data>
+  <data name="TransactionSpecShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeTypeShape.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AttributeTypeShape</value>
+    <comment>Description for DomainClass &apos;AttributeTypeShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AttributeTypeShape.DisplayName" xml:space="preserve">
+    <value>Attribute Type Shape</value>
+    <comment>DisplayName for DomainClass &apos;AttributeTypeShape&apos;</comment>
+  </data>
+  <data name="AttributeTypeShapeTextDecoratorDefaultText" xml:space="preserve">
+    <value>TextDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeShape.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.UserAttributeShape</value>
+    <comment>Description for DomainClass &apos;UserAttributeShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAttributeShape.DisplayName" xml:space="preserve">
+    <value>User Attribute Shape</value>
+    <comment>DisplayName for DomainClass &apos;UserAttributeShape&apos;</comment>
+  </data>
+  <data name="UserAttributeShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeShape.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.AccountAttributeShape</value>
+    <comment>Description for DomainClass &apos;AccountAttributeShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountAttributeShape.DisplayName" xml:space="preserve">
+    <value>Account Attribute Shape</value>
+    <comment>DisplayName for DomainClass &apos;AccountAttributeShape&apos;</comment>
+  </data>
+  <data name="AccountAttributeShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeShape.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.TransactionAttributeShape</value>
+    <comment>Description for DomainClass &apos;TransactionAttributeShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.TransactionAttributeShape.DisplayName" xml:space="preserve">
+    <value>Transaction Attribute Shape</value>
+    <comment>DisplayName for DomainClass &apos;TransactionAttributeShape&apos;</comment>
+  </data>
+  <data name="TransactionAttributeShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecSchape.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountGroupSpecSchape</value>
+    <comment>Description for DomainClass &apos;AccountGroupSpecSchape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountGroupSpecSchape.DisplayName" xml:space="preserve">
+    <value>Account Group Spec Schape</value>
+    <comment>DisplayName for DomainClass &apos;AccountGroupSpecSchape&apos;</comment>
+  </data>
+  <data name="AccountGroupSpecSchapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAccountAssociationShape.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.UserAccountAssociationShape</value>
+    <comment>Description for DomainClass &apos;UserAccountAssociationShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.UserAccountAssociationShape.DisplayName" xml:space="preserve">
+    <value>User Account Association Shape</value>
+    <comment>DisplayName for DomainClass &apos;UserAccountAssociationShape&apos;</comment>
+  </data>
+  <data name="UserAccountAssociationShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountTransactionAssociationShape.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.AccountTransactionAssociationShape</value>
+    <comment>Description for DomainClass &apos;AccountTransactionAssociationShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.AccountTransactionAssociationShape.DisplayName" xml:space="preserve">
+    <value>Account Transaction Association Shape</value>
+    <comment>DisplayName for DomainClass &apos;AccountTransactionAssociationShape&apos;</comment>
+  </data>
+  <data name="AccountTransactionAssociationShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecShape.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategorySpecShape</value>
+    <comment>Description for DomainClass &apos;CategorySpecShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategorySpecShape.DisplayName" xml:space="preserve">
+    <value>Category Spec Shape</value>
+    <comment>DisplayName for DomainClass &apos;CategorySpecShape&apos;</comment>
+  </data>
+  <data name="CategorySpecShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeShape.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryAttributeShape</value>
+    <comment>Description for DomainClass &apos;CategoryAttributeShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryAttributeShape.DisplayName" xml:space="preserve">
+    <value>Category Attribute Shape</value>
+    <comment>DisplayName for DomainClass &apos;CategoryAttributeShape&apos;</comment>
+  </data>
+  <data name="CategoryAttributeShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryTransactionAssociationShape.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.CategoryTransactionAssociationShape</value>
+    <comment>Description for DomainClass &apos;CategoryTransactionAssociationShape&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.CategoryTransactionAssociationShape.DisplayName" xml:space="preserve">
+    <value>Category Transaction Association Shape</value>
+    <comment>DisplayName for DomainClass &apos;CategoryTransactionAssociationShape&apos;</comment>
+  </data>
+  <data name="CategoryTransactionAssociationShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.Incorporação.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.Incorporação</value>
+    <comment>Description for DomainClass &apos;Incorporação&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.Incorporação.DisplayName" xml:space="preserve">
+    <value>Incorporação</value>
+    <comment>DisplayName for DomainClass &apos;Incorporação&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.Referência.Description" xml:space="preserve">
+    <value>Descrição de Empresa.MoneyManagerModel.Referência</value>
+    <comment>Description for DomainClass &apos;Referência&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.Referência.DisplayName" xml:space="preserve">
+    <value>Referência</value>
+    <comment>DisplayName for DomainClass &apos;Referência&apos;</comment>
+  </data>
+  <data name="FormatList" xml:space="preserve">
+    <value>MoneyManagerModel (*.MoneyManagerModel)|*.MoneyManagerModel</value>
+    <comment>A list of file format specifiers for the Save dialog box</comment>
+  </data>
+  <data name="ModelExplorerTitle" xml:space="preserve">
+    <value>MoneyManagerModel Explorer</value>
+    <comment>Model Explorer Toolwindow title</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.MoneyManagerModelDiagram.Description" xml:space="preserve">
+    <value>Description for Empresa.MoneyManagerModel.MoneyManagerModelDiagram</value>
+    <comment>Description for DomainClass &apos;MoneyManagerModelDiagram&apos;</comment>
+  </data>
+  <data name="Empresa.MoneyManagerModel.MoneyManagerModelDiagram.DisplayName" xml:space="preserve">
+    <value>Minimal Language Diagram</value>
+    <comment>DisplayName for DomainClass &apos;MoneyManagerModelDiagram&apos;</comment>
+  </data>
+  <data name="MoneyManagerModelToolboxTab" xml:space="preserve">
+    <value>MoneyManagerModel</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="UserSpecToolboxItem" xml:space="preserve">
+    <value>UserSpec</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="UserSpecToolboxTooltip" xml:space="preserve">
+    <value>User Spec</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AccountSpecToolboxItem" xml:space="preserve">
+    <value>AccountSpec</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AccountSpecToolboxTooltip" xml:space="preserve">
+    <value>Account Spec</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="TransactionSpecToolboxItem" xml:space="preserve">
+    <value>TransactionSpec</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="TransactionSpecToolboxTooltip" xml:space="preserve">
+    <value>Transaction Spec</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AttributeTypeToolboxItem" xml:space="preserve">
+    <value>AttributeType</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AttributeTypeToolboxTooltip" xml:space="preserve">
+    <value>Attribute Type</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UserAttributeToolboxItem" xml:space="preserve">
+    <value>UserAttribute</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="UserAttributeToolboxTooltip" xml:space="preserve">
+    <value>User Attribute</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AccountAttributeToolboxItem" xml:space="preserve">
+    <value>AccountAttribute</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AccountAttributeToolboxTooltip" xml:space="preserve">
+    <value>Account Attribute</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="TransactionAttributeToolboxItem" xml:space="preserve">
+    <value>TransactionAttribute</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="TransactionAttributeToolboxTooltip" xml:space="preserve">
+    <value>Transaction Attribute</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AccAttAttTypeToolboxItem" xml:space="preserve">
+    <value>AccAttAttType</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AccAttAttTypeToolboxTooltip" xml:space="preserve">
+    <value>Acc Att Att Type</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="TransAttAttTypeToolboxItem" xml:space="preserve">
+    <value>TransAttAttType</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="TransAttAttTypeToolboxTooltip" xml:space="preserve">
+    <value>Trans Att Att Type</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UserAttAttTypeToolboxItem" xml:space="preserve">
+    <value>UserAttAttType</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="UserAttAttTypeToolboxTooltip" xml:space="preserve">
+    <value>User Att Att Type</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AccountGroupSpecToolboxItem" xml:space="preserve">
+    <value>AccountGroupSpec</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AccountGroupSpecToolboxTooltip" xml:space="preserve">
+    <value>Account Group Spec</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AccountGroupSpecReferencesAccountSpecToolboxItem" xml:space="preserve">
+    <value>AccountGroupSpecReferencesAccountSpec</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AccountGroupSpecReferencesAccountSpecToolboxTooltip" xml:space="preserve">
+    <value>Account Group Spec References Account Spec</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UserAccountAssociationToolboxItem" xml:space="preserve">
+    <value>UserAccountAssociation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="UserAccountAssociationToolboxTooltip" xml:space="preserve">
+    <value>User Account Association</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AccountTransactionAssociationToolboxItem" xml:space="preserve">
+    <value>AccountTransactionAssociation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AccountTransactionAssociationToolboxTooltip" xml:space="preserve">
+    <value>Account Transaction Association</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="CategorySpecToolboxItem" xml:space="preserve">
+    <value>CategorySpec</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CategorySpecToolboxTooltip" xml:space="preserve">
+    <value>Category Spec</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="CategoryAttributeReferencesAttributeTypeToolboxItem" xml:space="preserve">
+    <value>CategoryAttributeReferencesAttributeType</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CategoryAttributeReferencesAttributeTypeToolboxTooltip" xml:space="preserve">
+    <value>Category Attribute References Attribute Type</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="CategoryAttributeToolboxItem" xml:space="preserve">
+    <value>CategoryAttribute</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CategoryAttributeToolboxTooltip" xml:space="preserve">
+    <value>Category Attribute</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UserSpecTemUserAttributeToolboxItem" xml:space="preserve">
+    <value>UserSpecTemUserAttribute</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="UserSpecTemUserAttributeToolboxTooltip" xml:space="preserve">
+    <value>User Spec Tem User Attribute</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AccountSpecReferencesUserAccountAssociationToolboxItem" xml:space="preserve">
+    <value>AccountSpecReferencesUserAccountAssociation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AccountSpecReferencesUserAccountAssociationToolboxTooltip" xml:space="preserve">
+    <value>Account Spec References User Account Association</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AccountSpecReferencesAccountTransactionAssociationToolboxItem" xml:space="preserve">
+    <value>AccountSpecReferencesAccountTransactionAssociation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AccountSpecReferencesAccountTransactionAssociationToolboxTooltip" xml:space="preserve">
+    <value>Account Spec References Account Transaction Association</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="TransactionSpecReferencesAccountTransactionAssociationToolboxItem" xml:space="preserve">
+    <value>TransactionSpecReferencesAccountTransactionAssociation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="TransactionSpecReferencesAccountTransactionAssociationToolboxTooltip" xml:space="preserve">
+    <value>Transaction Spec References Account Transaction Association</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="CategorySpecReferencesCategoryTransactionAssociationToolboxItem" xml:space="preserve">
+    <value>CategorySpecReferencesCategoryTransactionAssociation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CategorySpecReferencesCategoryTransactionAssociationToolboxTooltip" xml:space="preserve">
+    <value>Category Spec References Category Transaction Association</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="TransactionSpecReferencesCategoryTransactionAssociationToolboxItem" xml:space="preserve">
+    <value>TransactionSpecReferencesCategoryTransactionAssociation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="TransactionSpecReferencesCategoryTransactionAssociationToolboxTooltip" xml:space="preserve">
+    <value>Transaction Spec References Category Transaction Association</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UserSpecReferencesUserAccountAssociationToolboxItem" xml:space="preserve">
+    <value>UserSpecReferencesUserAccountAssociation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="UserSpecReferencesUserAccountAssociationToolboxTooltip" xml:space="preserve">
+    <value>User Spec References User Account Association</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="CategoryTransactionAssociationToolboxItem" xml:space="preserve">
+    <value>CategoryTransactionAssociation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CategoryTransactionAssociationToolboxTooltip" xml:space="preserve">
+    <value>Category Transaction Association</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UnresolvedToolboxItem" xml:space="preserve">
+    <value>ToolboxItem {0} was not found</value>
+    <comment>Invalid toolId</comment>
+  </data>
+  <data name="UnsupportedToolboxFormat" xml:space="preserve">
+    <value>Unsupported toolbox format: {0}</value>
+    <comment>Unsupported format Id</comment>
+  </data>
+  <data name="UnrecognizedElementType" xml:space="preserve">
+    <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>
+    <comment>Incorrect ElementType passed in to Model.CreateElement method</comment>
+  </data>
+  <data name="UnrecognizedElementLinkType" xml:space="preserve">
+    <value>ElementLinkType {0} is not recognized as a type of domain relationship which belongs to this domain model.</value>
+    <comment>Incorrect ElementLinkType passed in to Model.CreateElementLink method</comment>
+  </data>
+  <data name="AmbiguousSchema" xml:space="preserve">
+    <value>More than one schema found for target namespace &apos;{0}&apos;, use the first one at &apos;{1}&apos;.</value>
+    <comment>Serialization Warning: AmbiguousSchema</comment>
+  </data>
+  <data name="ExpectingFullFormRelationship" xml:space="preserve">
+    <value>Element &apos;{0}&apos; is treated as the target role-player of a relationship &apos;{1}&apos; instance, which should be serialized in full-form.</value>
+    <comment>Serialization Warning: ExpectingFullFormRelationship</comment>
+  </data>
+  <data name="ExpectingShortFormRelationship" xml:space="preserve">
+    <value>Instances of relationship &apos;{0}&apos; should be serialized in short-form.</value>
+    <comment>Serialization Warning: ExpectingShortFormRelationship</comment>
+  </data>
+  <data name="IgnoredPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;, ignored.</value>
+    <comment>Serialization Warning: IgnoredPropertyValue</comment>
+  </data>
+  <data name="MissingId" xml:space="preserve">
+    <value>Missing &apos;Id&apos; attribute, a new Guid &apos;{0}&apos; is auto-generated.</value>
+    <comment>Serialization Warning: MissingId</comment>
+  </data>
+  <data name="MonikerResolvedToDuplicateLink" xml:space="preserve">
+    <value>Resolving moniker &apos;{0}&apos; causes a duplicate link to be created, so the link and the moniker are ignored.</value>
+    <comment>Serialization Warning: MonikerResolvedToDuplicateLink</comment>
+  </data>
+  <data name="NoSchema" xml:space="preserve">
+    <value>Cannot find a schema that defines target namespace &apos;{0}&apos;, schema validation skipped.</value>
+    <comment>Serialization Warning: NoSchema</comment>
+  </data>
+  <data name="UnexpectedXmlElement" xml:space="preserve">
+    <value>Unexpected XML element &apos;{0}&apos;, ignored.</value>
+    <comment>Serialization Warning: UnexpectedXmlElement</comment>
+  </data>
+  <data name="AmbiguousMoniker" xml:space="preserve">
+    <value>Ambiguous moniker &apos;{0}&apos; encountered. It is used for both &apos;{1}&apos; and &apos;{2}&apos;.</value>
+    <comment>Serialization Error: AmbiguousMoniker</comment>
+  </data>
+  <data name="CannotMonikerizeElement" xml:space="preserve">
+    <value>Instances of DomainClass &apos;{0}&apos; cannot be serialized as a moniker.
+A DomainClass can be serialized as a moniker only if 
+1) it has a defined/inherited DomainProperty marked as IsMonikerKey=true, or 
+2) it is marked/inherited with SerializeId=true.</value>
+    <comment>Serialization Error: CannotMonikerizeElement</comment>
+  </data>
+  <data name="CannotOpenDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotOpenDocument</comment>
+  </data>
+  <data name="CannotSaveDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotSaveDocument</comment>
+  </data>
+  <data name="DanglingRelationship" xml:space="preserve">
+    <value>Relationship &apos;{0}&apos; instance is missing target role-player.</value>
+    <comment>Serialization Error: DanglingRelationship</comment>
+  </data>
+  <data name="InvalidPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;.</value>
+    <comment>Serialization Error: InvalidPropertyValue</comment>
+  </data>
+  <data name="MissingMoniker" xml:space="preserve">
+    <value>Missing moniker. A moniker is expected in attribute &apos;{0}&apos;.</value>
+    <comment>Serialization Error: MissingMoniker</comment>
+  </data>
+  <data name="MissingTransaction" xml:space="preserve">
+    <value>This must be called within the context of an active transaction.</value>
+    <comment>Serialization Error: MissingTransaction</comment>
+  </data>
+  <data name="UnresolvedMoniker" xml:space="preserve">
+    <value>Cannot resolve moniker &apos;{0}&apos;.</value>
+    <comment>Serialization Error: UnresolvedMoniker</comment>
+  </data>
+  <data name="VersionMismatch" xml:space="preserve">
+    <value>Unsupported version &apos;{0}&apos;, can only support &apos;{1}&apos;.</value>
+    <comment>Serialization Error: VersionMismatch</comment>
+  </data>
+  <data name="CannotCloseExistingDiagramDocument" xml:space="preserve">
+    <value>Diagram file &apos;{0}&apos; cannot be closed.</value>
+    <comment>User cancel closing diagram file. Hence, the DSL model file cannot be opened</comment>
+  </data>
+  <data name="BindingErrorOccurred" xml:space="preserve">
+    <value>Extensions for this designer may not be found as a MEF binding error has occurred. The error that occurred was:
+{0}</value>
+    <comment>MEF binding error occurred - exception message being logged in the error window so the user is aware.</comment>
+  </data>
+  <data name="InvalidSaveRootElementType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid root element type.</value>
+    <comment>Exception message used if an invalid root element type is passed to IDomainModelSerializer.SaveModel / SaveModelAndDiagram</comment>
+  </data>
+  <data name="InvalidSaveDiagramType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid diagram type.</value>
+    <comment>Exception message used if an invalid diagram type is passed to IDomainModelSerializer.SaveModelAndDiagram</comment>
+  </data>
+  <data name="MinimumMultiplicityMissingLink" xml:space="preserve">
+    <value>{0} {1} has no {2}.</value>
+    <comment>Multiplicity underflow validation.</comment>
+  </data>
+  <data name="SaveOperationCancelled" xml:space="preserve">
+    <value>Save operation cancelled.</value>
+    <comment>Message when save is cancelled on validation errors</comment>
+  </data>
+  <data name="SaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors, continue save?</value>
+    <comment>Message when validation errors are found on save</comment>
+  </data>
+  <data name="UnloadableSaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
+    <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="UserSpecToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AccountSpecToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="TransactionSpecToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AttributeTypeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="UserAttributeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AccountAttributeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="TransactionAttributeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AccAttAttTypeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AccAttAttTypeSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="AccAttAttTypeTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="TransAttAttTypeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="TransAttAttTypeSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="TransAttAttTypeTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="UserAttAttTypeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="UserAttAttTypeSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="UserAttAttTypeTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="AccountGroupSpecToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AccountGroupSpecReferencesAccountSpecToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AccountGroupSpecReferencesAccountSpecSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="AccountGroupSpecReferencesAccountSpecTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="UserAccountAssociationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AccountTransactionAssociationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CategorySpecToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CategoryAttributeReferencesAttributeTypeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CategoryAttributeReferencesAttributeTypeSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="CategoryAttributeReferencesAttributeTypeTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="CategoryAttributeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="UserSpecTemUserAttributeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="UserSpecTemUserAttributeSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="UserSpecTemUserAttributeTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="AccountSpecReferencesUserAccountAssociationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AccountSpecReferencesUserAccountAssociationSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="AccountSpecReferencesUserAccountAssociationTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="AccountSpecReferencesAccountTransactionAssociationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AccountSpecReferencesAccountTransactionAssociationSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="AccountSpecReferencesAccountTransactionAssociationTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="TransactionSpecReferencesAccountTransactionAssociationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="TransactionSpecReferencesAccountTransactionAssociationSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="TransactionSpecReferencesAccountTransactionAssociationTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="CategorySpecReferencesCategoryTransactionAssociationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CategorySpecReferencesCategoryTransactionAssociationSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="CategorySpecReferencesCategoryTransactionAssociationTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="TransactionSpecReferencesCategoryTransactionAssociationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="TransactionSpecReferencesCategoryTransactionAssociationSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="TransactionSpecReferencesCategoryTransactionAssociationTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="UserSpecReferencesUserAccountAssociationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="UserSpecReferencesUserAccountAssociationSourceCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorSourceSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="UserSpecReferencesUserAccountAssociationTargetCursor" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTargetSearch.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Custom connection tool cursor</comment>
+  </data>
+  <data name="CategoryTransactionAssociationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+</root>
+
+

@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\MoneyManagerModel</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{6f70aa66-bde3-441a-a75f-bdbdbb46803c}</TemplateID>
+        <Name Package="{06612bd9-348e-48fc-9d2f-1c2e08c52e66}" ID="103" />
+        <Description Package="{06612bd9-348e-48fc-9d2f-1c2e08c52e66}" ID="102" />
+        <Icon Package="{06612bd9-348e-48fc-9d2f-1c2e08c52e66}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MoneyManagerModel.MoneyManagerModel</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\MoneyManagerModel</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{a8a1f7f2-40ac-47fe-8d9b-0b91fd1c36c9}</TemplateID>
+        <Name Package="{06612bd9-348e-48fc-9d2f-1c2e08c52e66}" ID="103" />
+        <Description Package="{06612bd9-348e-48fc-9d2f-1c2e08c52e66}" ID="102" />
+        <Icon Package="{06612bd9-348e-48fc-9d2f-1c2e08c52e66}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MoneyManagerModel.MoneyManagerModel</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>
