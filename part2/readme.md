@@ -79,7 +79,29 @@ For all models, there are some common functionalities:
 
 ## Activity 4: Identify Commonality and Variability in the Code
 
+### Commonalities
+
+After analysing all the prototypes developed, we realised that there were some common classes and functionalities that could be generated in the next activity:
+
+* Model - this would be a class that could/should be implemented for each specific model. This can give us some default/common methods and variables for all the implementations;
+* User - same as Model. This class is a constant that is present in all the studied applications and therefore shall have a presence on the generated code.
+* Account - same as User.
+* Transaction - same as Account and User.
+* User/Account/Transaction Attributes - Those are part of above models and are mandatory per model validations.
+
+### Variabilities
+
+As opposed to commonalities, there are some aspects of the metamodel that may or may not have a presence when building a model. Those classes/funcionalities are:
+
+* AccountGroupSpec - AccountGroupSpec is an aspect that is present in some studied applications but not all of them. Some applications don't have the concept of an 'Account library' therefore in those models, this Spec is not instanciated/not exists.
+* CategorySpec - Same as AccountGroupSpec. Not every application has the concept of Category or something that describes the Transaction main intent or 'area'.
+* CategoryAttributeSpec - Since this concept is directly related to category, it follows the same fate as the above.
+
 ## Activity 5: Design and Implement Code Generation
+
+Class attributes and constructors - Each Class derived from UserSpec, AccountSpec, TransactionSpec and CategorySpec, has attributes (at least one since it's a model validation parameter).  
+Those attributes when 'translated' into a Object Oriented Application have the same syntax, placement and instanciation.  
+Therefore it's the main concern that the team shall address in the following activities.
 
 - **[MoneyManager iOS Prototype](tool1-mps/readme.md)**
 
@@ -94,7 +116,9 @@ After generating all the code in the different applications, the generation was 
 ## Constraints and Refactorings
 
 **Model**
-* nameMustBegreaterThan1Char - each model cannot have a blank or null name 
+* nameMustBegreaterThan1Char - each model cannot have a blank or null name
+* mustNotHaveDuplicatedAssociations - each association contained in the model shall have diferent references from one another
+* 
 
 **UserSpec**
 * mustHaveAttributeWithDifferentNames - a user cannot have fields with the same name 
@@ -156,10 +180,6 @@ After generating all the code in the different applications, the generation was 
 * nameMustBegreaterThan1Char - a category cannot have a blank or null name
 
 **AttributeType**
-
-## Metamodel Graphical Representation
-
-
 
 ## Presentations of Models (instances)
 
