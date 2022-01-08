@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<moneyManagerModelDiagram dslVersion="1.0.0.0" Id="ef19b055-ee63-4ad4-b34e-c589939a2569" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <modelMoniker Id="514369bc-ece5-4fa2-b623-d6ab63d7fe46" />
+  <nestedChildShapes>
+    <userSpecShape Id="904ca310-f388-4361-9b5a-52a41d6e90a5" absoluteBounds="2.5, 1.125, 1.125, 0.625">
+      <userSpecMoniker name="/514369bc-ece5-4fa2-b623-d6ab63d7fe46/UserSpec1" />
+    </userSpecShape>
+  </nestedChildShapes>
+</moneyManagerModelDiagram>
