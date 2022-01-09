@@ -16,10 +16,8 @@ public class Account
   		this.InitialAmount = initialamount;
     }
     
-    public Account(string name, double initialamount) =>
-    	this(new List<Transaction>(), name, initialamount);
-
-    public override string ToString() => $"Account -> Name:{Name}, InitialAmount:{InitialAmount}";
+    public Account(string name, double initialamount)
+    	: this(new List<Transaction>(), name, initialamount){}
 
     public void ListAll()
     {
@@ -28,4 +26,6 @@ public class Account
             Console.WriteLine("\t\t" + transaction.ToString());
         }
     }
+    
+    public override string ToString() => $"Account -> Name:{Name}, InitialAmount:{InitialAmount}";
 }

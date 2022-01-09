@@ -1,0 +1,19 @@
+namespace [%=modname%].Classes;
+
+using System;
+
+public class [%=tranSpec.name%]
+{
+    [%for (t in tranSpec.transactionattribute){%]
+  	public [%=t.type%] [%=t.name%] { get; set; }
+	[%}%]
+
+    public [%=tranSpec.name%]([%for (t in tranSpec.transactionattribute){%][%=t.type%] [%=t.name.toLowerCase()%][%if(tranSpec.transactionattribute.last() != t){%], [%}%][%}%])
+    {
+        [%for (t in tranSpec.transactionattribute){%]
+	  	this.[%=t.name%] = [%=t.name.toLowerCase()%];
+		[%}%]
+    }
+
+    public override string ToString() => $"[%=tranSpec.name%] -> [%for (t in tranSpec.transactionattribute){%][%=t.name%]:{[%=t.name%]}[%if(tranSpec.transactionattribute.last() != t){%], [%}%][%}%]";
+}

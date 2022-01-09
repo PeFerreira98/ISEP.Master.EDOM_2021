@@ -1,33 +1,62 @@
-namespace [%=modname%].Classes;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
 
-using System;
-using System.Collections.Generic;
+public class [%=actSpec.name%] {
 
-public class [%=actSpec.name%]
-{
-    public List<Transaction> Transactions { get; set; }
-    [%for (a in actSpec.accountattribute){%]
-  	public [%=a.type%] [%=a.name%] { get; set; }
+    public List<Transaction> transactionList;
+    [%for (u in actSpec.accountattribute){%]
+  	public [%=u.type%] [%=u.name.toLowerCase()%];
 	[%}%]
 
-    public [%=actSpec.name%](List<Transaction> transactions[%for (a in actSpec.accountattribute){%], [%=a.type%] [%=a.name.toLowerCase()%][%}%])
-    {
-        this.Transactions = transactions;
-        [%for (a in actSpec.accountattribute){%]
-  		this.[%=a.name%] = [%=a.name.toLowerCase()%];
+    public [%=actSpec.name%](List<Transaction> transactionList) {
+        this.transactionList = transactionList;
+    }
+    
+    public [%=actSpec.name%](List<Transaction> transactionList, [%for (u in actSpec.accountattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(actSpec.accountattribute.last() != u){%], [%}%][%}%]) {
+        this.transactionList = transactionList;
+        [%for (u in actSpec.accountattribute){%]
+  		this.[%=u.name.toLowerCase()%] = [%=u.name.toLowerCase()%];
+		[%}%]
+        
+    }
+    public [%=actSpec.name%]([%for (u in actSpec.accountattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(actSpec.accountattribute.last() != u){%], [%}%][%}%]) {
+    	this.transactionList = new ArrayList<>();
+        [%for (u in actSpec.accountattribute){%]
+  		this.[%=u.name.toLowerCase()%] = [%=u.name.toLowerCase()%];
 		[%}%]
     }
-    
-    public [%=actSpec.name%]([%for (a in actSpec.accountattribute){%][%=a.type%] [%=a.name.toLowerCase()%][%if(actSpec.accountattribute.last() != a){%], [%}%][%}%])
-    	: this(new List<Transaction>()[%for (a in actSpec.accountattribute){%], [%=a.name.toLowerCase()%][%}%]){}
 
-    public void ListAll()
-    {
-        foreach (var transaction in Transactions)
-        {
-            Console.WriteLine("\t\t" + transaction.ToString());
+    public List<Transaction> getTransactionList() {
+        return transactionList;
+    }
+
+    public void setTransactionList(List<Transaction> transactionList) {
+        this.transactionList = transactionList;
+    }
+
+    @Override
+    public String toString() {
+        return "[%=actSpec.name%] => \n" +
+                "Transaction List: " + transactionList + "\n" + [%for (u in actSpec.accountattribute){%]"[%=u.name%]: " + [%=u.name.toLowerCase()%] + "\n" [%if(actSpec.accountattribute.last() != u){%]+ [%}%][%}%];
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        [%=actSpec.name%] [%=actSpec.name.toLowerCase()%] = ([%=actSpec.name%]) o;
+        return name.equals([%=actSpec.name.toLowerCase()%].name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+    public void listAll ([%=actSpec.name%] [%=actSpec.name.toLowerCase()%]){
+        for (Transaction trans: [%=actSpec.name.toLowerCase()%].transactionList) {
+            System.out.println(trans.toString());
         }
     }
-    
-    public override string ToString() => $"[%=actSpec.name%] -> [%for (a in actSpec.accountattribute){%][%=a.name%]:{[%=a.name%]}[%if(actSpec.accountattribute.last() != a){%], [%}%][%}%]";
 }

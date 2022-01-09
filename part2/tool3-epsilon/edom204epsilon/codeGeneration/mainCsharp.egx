@@ -1,0 +1,55 @@
+pre
+{
+	var modname = Model.allInstances().first().name;
+}
+
+rule transactionToCode transform tranSpec : TransactionSpec
+{
+	parameters : Map
+	{
+		"modname" = modname
+	}
+	
+	template: "egl/transactionToCode.egl"
+	target: "gen/" + modname + "/Classes/" + tranSpec.name + ".cs"
+}
+
+rule accountToCode transform actSpec : AccountSpec
+{
+	parameters : Map
+	{
+		"modname" = modname
+	}
+	
+	template: "egl/accountToCode.egl"
+	target: "gen/" + modname + "/Classes/" + actSpec.name + ".cs"
+}
+
+rule userToCode transform usrSpec : UserSpec
+{
+	parameters : Map
+	{
+		"modname" = modname
+	}
+
+	template: "egl/userToCode.egl"
+	target: "gen/" + modname + "/Classes/" + usrSpec.name + ".cs"
+}
+
+rule modelToCode transform mod : Model
+{
+	template: "egl/modelToCode.egl"
+	target: "gen/" + modname + "/Classes/Model.cs"
+}
+
+rule programToCode transform mod : Model
+{
+	template: "egl/programToCode.egl"
+	target: "gen/" + modname + "/Program.cs"
+}
+
+rule projectToCode transform mod : Model
+{
+	template: "egl/projectToCode.egl"
+	target: "gen/" + modname + "/" + mod.name + ".csproj"
+}

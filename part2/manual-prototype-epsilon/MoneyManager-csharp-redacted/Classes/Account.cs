@@ -9,9 +9,11 @@ public class Account
     public string Name { get; set; }
     public double InitialAmount { get; set; }
 
-    public Account(List<Transaction> transactions)
+    public Account(List<Transaction> transactions, string name, double initialAmount)
     {
         this.Transactions = transactions;
+        Name = name;
+        InitialAmount = amount;
     }
 
     public override string ToString() => $"Account -> Name:{Name}, InitialAmount:{InitialAmount}";

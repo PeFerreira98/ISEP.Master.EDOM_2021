@@ -8,6 +8,7 @@ public class Transaction
     public string To { get; set; }
     public double Amount { get; set; }
     public DateTime Date { get; set; }
+    public Category Category {get; set; }
 
     public Transaction(string from, string to, double amount, DateTime date)
     {
@@ -15,6 +16,7 @@ public class Transaction
         this.To = to;
         this.Amount = amount;
         this.Date = date;
+        this.Category = category;
     }
 
     public override string ToString() => $"Transaction -> From:{From}, To:{To}, Amount:{Amount}, Date:{Date}";

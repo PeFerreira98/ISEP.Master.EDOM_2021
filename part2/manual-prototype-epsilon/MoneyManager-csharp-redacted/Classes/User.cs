@@ -32,4 +32,13 @@ public class User
             account.ListAll();
         }
     }
+
+    public static User UserCreation()
+    {
+        Console.WriteLine("Insert User Name: ");
+        var name = Console.ReadLine();
+        Console.WriteLine("Insert DoB: ");
+        var dob = Console.ReadLine();
+        return new User(name, DateTime.Parse(dob));
+    }
 }

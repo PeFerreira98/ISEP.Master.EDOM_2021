@@ -20,11 +20,7 @@ public class Model
 
     internal void AddUser()
     {
-        Console.WriteLine("Insert User Name: ");
-        var name = Console.ReadLine();
-        Console.WriteLine("Insert DoB: ");
-        var dob = Console.ReadLine();
-        this.Users.Add(new User(name, DateTime.Parse(dob)));
+        this.Users.Add(User.UserCreation());
         Console.WriteLine("User Added!");
     }
 

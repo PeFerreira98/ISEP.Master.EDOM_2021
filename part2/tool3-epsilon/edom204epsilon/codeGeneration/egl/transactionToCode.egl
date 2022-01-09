@@ -1,19 +1,31 @@
-namespace [%=modname%].Classes;
+import java.time.LocalDate;
 
-using System;
+public class [%=tranSpec.name%] {
 
-public class [%=tranSpec.name%]
-{
+    private Category category;
     [%for (t in tranSpec.transactionattribute){%]
-  	public [%=t.type%] [%=t.name%] { get; set; }
+  	public [%=t.type%] [%=t.name.ToLowerCase()%];
 	[%}%]
 
-    public [%=tranSpec.name%]([%for (t in tranSpec.transactionattribute){%][%=t.type%] [%=t.name.toLowerCase()%][%if(tranSpec.transactionattribute.last() != t){%], [%}%][%}%])
-    {
+    public [%=tranSpec.name%](Category cat, [%for (u in tranSpec.transactionattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(tranSpec.transactionattribute.last() != u){%], [%}%][%}%]) {
+        this.category = cat;
         [%for (t in tranSpec.transactionattribute){%]
-	  	this.[%=t.name%] = [%=t.name.toLowerCase()%];
+  		this.[%=t.name.toLowerCase()%] = [%=t.name.toLowerCase()%];
 		[%}%]
     }
 
-    public override string ToString() => $"[%=tranSpec.name%] -> [%for (t in tranSpec.transactionattribute){%][%=t.name%]:{[%=t.name%]}[%if(tranSpec.transactionattribute.last() != t){%], [%}%][%}%]";
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "[%=tranSpec.name%] => \n" +
+			"[%=tranSpec.name%]  Category: " + category.getName() + "\n" + [%for (u in tranSpec.transactionattribute){%]"[%=u.name%]: " + [%=u.name.toLowerCase()%] + "\n" [%if(tranSpec.transactionattribute.last() != u){%]+ [%}%][%}%];
+                
+    }
 }

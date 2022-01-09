@@ -2,21 +2,21 @@ namespace MoneyManager2.Classes;
 
 using System.Collections.Generic;
 
-public class Owner
+public class User
 {
     public List<Account> Accounts { get; set; }
   	public string Name { get; set; }
+  	public DateTime Dob { get; set; }
     
-    public Owner(List<Account> accounts, string name)
+    public User(List<Account> accounts, string name, DateTime dob)
     {
         this.Accounts = accounts;
   		this.Name = name;
+  		this.Dob = dob;
     }
 
-    public Owner(string name)
-        : this(new List<Account>(), name) { }
-
-    public override string ToString() => $"Owner -> Name:{Name}";
+    public User(string name, DateTime dob)
+    	: this(new List<Account>(), name, dob);
 
     public void ListAll()
     {
@@ -26,4 +26,6 @@ public class Owner
             account.ListAll();
         }
     }
+    
+    public override string ToString() => $"User -> Name:{Name}, Dob:{Dob}";
 }

@@ -14,6 +14,8 @@ Following there are examples of proposed sections for this part of the report (t
 
 ![MetaModelv3](../diagrams/metamodel_v3.png)
 
+As we can see in the image above, we added a new component called CategorySpec as well as CategoryAttribute. This new component represents the Transaction's Category, in other words, that transaction intent like (Food, Bills, Hobby, ...)
+
 ## Activity 1: Design Concrete Syntax for the DSL
 
 ### Graphical DSL (Epsilon/Eugenia)
@@ -31,7 +33,6 @@ For each metamodel element, the team chose a different graphically representatio
 * AttributeType - for the AttributeType, we will be using a **oval blue** object;
 
 ### Graphical DSL (MS Tools)
-
 For each metamodel element, the team chose a different graphically representation:
 
 * AccountGroupSpec - for the AccountGroupSpec, we will be using an **rectangle red ** object;
@@ -53,6 +54,7 @@ For each metamodel element, the team chose a different graphically representatio
 ## Activity 2: Specify Common Features for Applications of the Domain
 
 For the prototypes we will be using a common OO Language such as Java or C# and we will be developing a console application based in the MoneyManager(iOS), Moneyboard and MoneyManager(Android) apps.
+The team choose 2 different object oriented programming languages by each member preference and to show the possibilities of code generation techniques that will be used on the activities ahead.
 
 For all models, there are some common functionalities:
 
@@ -77,7 +79,29 @@ For all models, there are some common functionalities:
 
 ## Activity 4: Identify Commonality and Variability in the Code
 
+### Commonalities
+
+After analysing all the prototypes developed, we realised that there were some common classes and functionalities that could be generated in the next activity:
+
+* Model - this would be a class that could/should be implemented for each specific model. This can give us some default/common methods and variables for all the implementations;
+* User - same as Model. This class is a constant that is present in all the studied applications and therefore shall have a presence on the generated code.
+* Account - same as User.
+* Transaction - same as Account and User.
+* User/Account/Transaction Attributes - Those are part of above models and are mandatory per model validations.
+
+### Variabilities
+
+As opposed to commonalities, there are some aspects of the metamodel that may or may not have a presence when building a model. Those classes/funcionalities are:
+
+* AccountGroupSpec - AccountGroupSpec is an aspect that is present in some studied applications but not all of them. Some applications don't have the concept of an 'Account library' therefore in those models, this Spec is not instanciated/not exists.
+* CategorySpec - Same as AccountGroupSpec. Not every application has the concept of Category or something that describes the Transaction main intent or 'area'.
+* CategoryAttributeSpec - Since this concept is directly related to category, it follows the same fate as the above.
+
 ## Activity 5: Design and Implement Code Generation
+
+Class attributes and constructors - Each Class derived from UserSpec, AccountSpec, TransactionSpec and CategorySpec, has attributes (at least one since it's a model validation parameter).  
+Those attributes when 'translated' into a Object Oriented Application have the same syntax, placement and instanciation.  
+Therefore it's the main concern that the team shall address in the following activities.
 
 - **[MoneyManager iOS Prototype](tool1-mps/readme.md)**
 
@@ -92,11 +116,11 @@ After generating all the code in the different applications, the generation was 
 ## Constraints and Refactorings
 
 **Model**
-
-* nameMustBegreaterThan1Char - each model cannot have a blank or null name 
+* nameMustBegreaterThan1Char - each model cannot have a blank or null name
+* mustNotHaveDuplicatedAssociations - each association contained in the model shall have diferent references from one another
+* 
 
 **UserSpec**
-
 * mustHaveAttributeWithDifferentNames - a user cannot have fields with the same name 
 * mustHaveNameAttribute - a user must have an attribute called 'name' - check
 * nameShouldNotContainSpaces - a user cannot contain spaces in its name
@@ -104,7 +128,6 @@ After generating all the code in the different applications, the generation was 
 * cardinalityMaxMustBeHigherThanCardinalityMin - a user's max cardinality ma must be higher than min cardinality
 
 **AccountSpec**
-
 * mustHaveAttributeWithDifferentNames - an account cannot have fields with the same name
 * mustHaveCurrencyAttribute - an account must have an attribute called 'currency' - check
 * nameShouldNotContainSpaces - an account cannot contain spaces in its name
@@ -112,7 +135,6 @@ After generating all the code in the different applications, the generation was 
 * cardinalityMaxMustBeHigherThanCardinalityMin - a Account's max cardinality ma must be higher than min cardinality
 
 **TransactionSpec**
-
 * mustHaveAttributeWithDifferentNames - a transaction cannot have fields with the same name 
 * mustHaveCurrencyAttribute - a transaction must have an attribute called 'currency' - check
 * mustHaveAmountAttribute - a transaction must have an attribute called 'amount' - check
@@ -122,7 +144,6 @@ After generating all the code in the different applications, the generation was 
 * cardinalityMaxMustBeHigherThanCardinalityMin - a transaction's max cardinality ma must be higher than min cardinality
 
 **CategorySpec**
-
 * mustHaveAttributeWithDifferentNames - a Category cannot have fields with the same name 
 * mustHaveCurrencyAttribute - a Category must have an attribute called 'currency' - check
 * mustHaveAmountAttribute - a Category must have an attribute called 'amount' - check
@@ -132,44 +153,33 @@ After generating all the code in the different applications, the generation was 
 * cardinalityMaxMustBeHigherThanCardinalityMin - a category' max cardinality ma must be higher than min cardinality
 
 **UserAccountAssociation**
-
 * nameMustBegreaterThan1Char - an User Account Association cannot have a blank or null name
 * nameShouldNotContainSpaces - an User Account Association cannot contain spaces in its name
 * nameMustStartWithCapitalLetter - an User Account Association name must start with a capital letter
 
 **AccountTransactionAssociation**
-
 * nameMustBegreaterThan1Char - an Account Transaction Association cannot have a blank or null name
 * nameShouldNotContainSpaces - an Account Transaction Association  cannot contain spaces in its name
 * nameMustStartWithCapitalLetter - an Account Transaction Association  name must start with a capital letter
 
 **CategoryTransactionAssociation**
-
 * nameMustBegreaterThan1Char - a Category Transaction Association cannot have a blank or null name
 * nameShouldNotContainSpaces - a Category Transaction Association cannot contain spaces in its name
 * nameMustStartWithCapitalLetter - a Category Transaction Association name must start with a capital letter
 
 **UserAttribute**
-
 * nameMustBegreaterThan1Char - a user cannot have a blank or null name
 
 **AccountAttribute**
-
 * nameMustBegreaterThan1Char - an account cannot have a blank or null name
 
 **TransactionAttribute**
-
 * nameMustBegreaterThan1Char - a transaction cannot have a blank or null name
 
 **CategoryAttribute**
-
 * nameMustBegreaterThan1Char - a category cannot have a blank or null name
 
 **AttributeType**
-
-## Metamodel Graphical Representation
-
-
 
 ## Presentations of Models (instances)
 

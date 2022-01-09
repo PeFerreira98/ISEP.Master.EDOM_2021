@@ -1,33 +1,45 @@
-namespace [%=modname%].Classes;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
 
-using System.Collections.Generic;
+public class [%=usrSpec.name%] {
 
-public class [%=usrSpec.name%]
-{
-    public List<Account> Accounts { get; set; }
+    public List<Account> accountList;
     [%for (u in usrSpec.userattribute){%]
-  	public [%=u.type%] [%=u.name%] { get; set; }
+  	public [%=u.type%] [%=u.name.toLowerCase()%];
 	[%}%]
-    
-    public [%=usrSpec.name%](List<Account> accounts[%for (u in usrSpec.userattribute){%], [%=u.type%] [%=u.name.toLowerCase()%][%}%])
-    {
-        this.Accounts = accounts;
+
+    public [%=usrSpec.name%](List<Account> accountList, [%for (u in usrSpec.userattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(usrSpec.userattribute.last() != u){%], [%}%][%}%]) {
+        this.accountList = accountList;
         [%for (u in usrSpec.userattribute){%]
-  		this.[%=u.name%] = [%=u.name.toLowerCase()%];
+  		this.[%=u.name.toLowerCase()%] = [%=u.name.toLowerCase()%];
+		[%}%]
+        
+    }
+    public [%=usrSpec.name%]([%for (u in usrSpec.userattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(usrSpec.userattribute.last() != u){%], [%}%][%}%]) {
+    	this.accountList = new ArrayList<>();
+        [%for (u in usrSpec.userattribute){%]
+  		this.[%=u.name.toLowerCase()%] = [%=u.name.toLowerCase()%];
 		[%}%]
     }
 
-    public [%=usrSpec.name%]([%for (u in usrSpec.userattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(usrSpec.userattribute.last() != u){%], [%}%][%}%])
-    	: this(new List<Account>()[%for (u in usrSpec.userattribute){%], [%=u.name.toLowerCase()%][%}%]);
+    public List<Account> getAccountList() {
+        return accountList;
+    }
 
-    public void ListAll()
-    {
-        foreach (var account in Accounts)
-        {
-            Console.WriteLine("\t" + account.ToString());
-            account.ListAll();
+    public void setAccountList(List<Account> accountList) {
+        this.accountList = accountList;
+    }
+
+    @Override
+    public String toString() {
+        return "[%=usrSpec.name%] => \n" +
+                "Account List: " + accountList + "\n" + [%for (u in usrSpec.userattribute){%]"[%=u.name%]: " + [%=u.name.toLowerCase()%] + "\n" [%if(usrSpec.userattribute.last() != u){%]+ [%}%][%}%];
+    }
+
+    public void listAll ([%=usrSpec.name%] [%=usrSpec.name.toLowerCase()%]){
+        for (Account acc: [%=usrSpec.name.toLowerCase()%].accountList) {
+            System.out.println(acc.toString());
         }
     }
-    
-    public override string ToString() => $"[%=usrSpec.name%] -> [%for (u in usrSpec.userattribute){%][%=u.name%]:{[%=u.name%]}[%if(usrSpec.userattribute.last() != u){%], [%}%][%}%]";
 }

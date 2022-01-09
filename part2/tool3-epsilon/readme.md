@@ -51,23 +51,26 @@ The EGL Co-Ordination Language (EGX), as the name implies, it is a coordination 
 
 In the image below, it is represented a small part of the EGX file used that contains several rules that uses some templates that will generate the C# classes we designed in the EMF Model for the application(s).
 
-![EGX](../../diagrams/tool3-epsilon/part2/egxMainExample.png)
+![egx](../../diagrams/tool3-epsilon/part2/7_main_egx.png)
 
-The EGL is a language tailored for model-to-text transformation (M2T),template-based and that provides several features to simplify the design of the templates needed. EGL can be used to transform models into various types of textual artefact, including code (e.g. Java), reports (e.g. in HTML/LaTeX), images (e.g. using Graphviz), formal specifications (e.g. Z notation), or even entire applications comprising code in multiple languages (e.g. HTML, Javascript and CSS).
+The EGL is a language tailored for model-to-text transformation (M2T), template-based and that provides several features to simplify the design of the templates needed. EGL can be used to transform models into various types of textual artefact, including code (e.g. Java, C#...), reports (e.g. in HTML/LaTeX), images (e.g. using Graphviz), formal specifications (e.g. Z notation), or even entire applications comprising code in multiple languages (e.g. HTML, Javascript and CSS).
 
-![EGL](../../diagrams/tool3-epsilon/part2/eglTemplateExample.png)
+In the example below, we can see the base structure of a C# class that will be instanciated with the info of the EMF Model.
+
+![egx](../../diagrams/tool3-epsilon/part2/8_egl.png)
 
 
-EGL is similar in purpose to server-side scripting languages like PHP and a EGL template is a text file which has both static and dynamic regions. As the name implies, a static region is where text appears as-is in the output, whereas a dynamic region uses code to generate the output, often relying on data which is only available at runtime . Dynamic regions are expressed using EOL with this notation "[%" and "%]".
+EGL is similar in purpose to server-side scripting languages like PHP and a EGL template is a text file which has both static and dynamic regions. As the name implies, a static region is where text appears as-is in the output, whereas a dynamic region uses code to generate the output, often relying on data which is only available at runtime.  
+Dynamic regions are expressed using EOL with this notation "[%" and "%]".
 
-To run the EGX model in Eclipse, we just need to create an "EGL Generator" Running Configuration with the **main.egx** file specified and the model we want to use (we need to specify the **Model.xmi** created along with the **.ecore** metamodel). 
+To run the EGX model in Eclipse, we just need to create an "EGL Generator" Running Configuration with the **main.egx** file specified and the model we want to use (we need to specify the **Model.xmi** or **Model.model** created along with the **.emf**/**.ecore** metamodel). 
 
-Using this, all the java code was generated, including all model objects, control methods and main class, creating a functional console application for the 3 Models presented (Amazon, Online Newspaper and Youtube Comment Models).
+Using this, all the C# code was generated, including all model objects, methods and main class, creating a functional console application for the 3 Models presented (MoneyManager(Android), MoneyManager(iOS) and MoneyBoard).
 
 ## Activity 6: Generate Applications
 
-Using the EGL templates, we were able to generate code for all the Models, using the Generic/Common classes between them. The implementation was based in abstract classes and interfaces, which made possible the reuse of code between models and the use of models with pieces of dynamic code also allowed us to pass the necessary parameters to generate the intended models.
+Using the EGL templates, we were able to generate code for all the Models, using the Generic/Common classes between them.
 
-![EGL files](../../diagrams/tool3-epsilon/part2/eglFiles.png)
+The implementation was based in abstract classes and interfaces, which made possible the reuse of code between models and the use of models with pieces of dynamic code also allowed us to pass the necessary parameters to generate the intended models.
 
-![EGL generated Java Classes](../../diagrams/tool3-epsilon/part2/generatedClasses.png)
+![Generated files](../../diagrams/tool3-epsilon/part2/9_gen_files.png)
