@@ -69,23 +69,21 @@ For all models, there are some common functionalities:
 - Create Account
     - The User need to create an Account based on AccountSpec that will contain Attributes/fields based on AccountAttribute and a name. 
     - In this case we will assume a Account has a Transaction list for simplicity.
-- Create Transaction
+- Make Transaction
     - The User need to create Transaction based on TransactionSpec that will contain Attributes/fields based on TransactionAttribute and a name.
     - In this case we will assume a Transaction has one Category for simplicity. Category could be "Income" or "Expense".
-
 - Create AccountGroup
     - The User need to create an AccountGroup based on AccountGroupSpec that will contain Attributes/fields based on AccountAttribute and a name. 
     - In this case we will assume a AccountGroup has a Account list for simplicity.
 
+- Add Accounts to Accounts Groups
+    - The user can add an existing account to an existing account group.
 - Show the User Profile
     - The User wants to see his profile.
-
 - List Accounts
     - The User wants to get all the accounts that he had created.
-
 - List AccountGroups
     - The User wants to get all the accounts groups that he had created.
-
 - List Transactions
     - The User wants to get all the transactions that he had made.
 
@@ -118,6 +116,7 @@ As opposed to commonalities, there are some aspects of the metamodel that may or
 * AccountGroupSpec - AccountGroupSpec is an aspect that is present in some studied applications but not all of them. Some applications don't have the concept of an 'Account library' therefore in those models, this Spec is not instanciated/not exists.
 * CategorySpec - Same as AccountGroupSpec. Not every application has the concept of Category or something that describes the Transaction main intent or 'area'.
 * CategoryAttributeSpec - Since this concept is directly related to category, it follows the same fate as the above.
+* needBankAccount - Some applications don't ask for the bank account to create an account.
 
 ## Activity 5: Design and Implement Code Generation
 

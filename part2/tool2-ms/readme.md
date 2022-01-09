@@ -26,54 +26,53 @@ Only some aspects were changed like mentioned in the previous section which resu
 
 A graphical syntax was designed following a colour code like it is said in  **[Activity 1: Design Concrete Syntax for the DSL](../readme.md)** from the base readme:
 
-![ColorCodedModel](Images\Instance.PNG)
+![ColorCodedModel](Images\Instance.png)
 
-This was done by simply altering each GeometryShape mapped to the DomainClasses in the DSL properties, bellow is the properties of the CommentShape used to represent the Comment DomainClass in the model:
+This was done by simply altering each GeometryShape mapped to the DomainClasses in the DSL properties:
 
-![CommentProperties](Images\Shape.PNG)
+![CommentProperties](Images\Shape.png)
 
 ## Activity 3: Implement Prototypes of Applications of the Domain
 
-For this activity a prototype replicating the _Publico_ Online newspaper website was made writing a simple Java console application. This prototypes allows the user to:
+For this activity a prototype replicating the MoneyBoard App  was made writing a simple Java console application. This prototype allows to:
 
-- View Articles
-- Create Articles
-- View Article's Comments
-- Comment on an Article
-- View Replies of Article's Comments
-- Rate a Comment (This is simpler than it sounds, it's just increasing the number of likes a Comment has)
+- Create an User
+- Create an Account
+- Create an Account Group
+- Make a Transaction
+- Show User's Profile
+- Show User's Accounts
+- Show User's Account Groups
+- Show User's Transactions
+- Add an Account to an Account Group
 
- The prototype uses the Builder Pattern, however that implementation wasn't applied to the prototype involving code generation due to complexity reasons. The prototype has the following strucrute:
+The prototype has the following strucrute:
 
- ![ProtoStructure](C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\ISEP.Master.EDOM.Old-main\edom-20-21-team-405\part2\tool2-ms\images\ms-proto1Structure.PNG)
+ ![ProtoStructure](Images\Prototype_Structure.png)
 
  And a sample of this prototype being used is present bellow:
 
- ![ProtoSample](C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\ISEP.Master.EDOM.Old-main\edom-20-21-team-405\part2\tool2-ms\images\ms-proto1Sample.PNG)
+ ![ProtoSample](images\Prototype_Menu.png)
 
 ## Activity 5: Design and Implement Code Generation
 
-With MSDK to generate code you must use T4 Templates which, with the Modeling SDK, allow the user to write templates based on a certain model. More info on this [link](https://docs.microsoft.com/en-us/visualstudio/modeling/accessing-models-from-text-templates?view=vs-2019).
+With MSDK to generate code you must use T4 Templates which, with the Modeling SDK, allow the user to write templates based on a certain model.
 
-This is done easily by creating a `.tt` file, set the extension to `.java` and type away, however after minutes of thinking how to tackle code generation, this method wasn't possible and wan't going to be so easy. Simply because generating like this gives the user only 1 generated file per 1 text template file and for this to work I would need 1 text template file to generate more code files.
+Using a `.tt` file,  we set the extension to `.java` and then the codification started . Each template will generate a class, so in my case I have to create 17 templates for 17 classes. I separated this classes in 3 packages:
 
-Luckily, MSDK documentation was prepared for this and following this [section](https://docs.microsoft.com/en-us/visualstudio/modeling/accessing-models-from-text-templates?view=vs-2019#generating-multiple-files-from-a-template) a solution was implemented. This solution basically requires generating a _loooong_ file with delimiters (file with a `.t4` extension) and then one `.tt` file that reads the giant generated file and splits them by the delimiter defined.
+- **Model** Package
+- **UI** Package
+- **Controller** Package
 
-In my case, I made 3 big file templates:
+In Model Package functionality is to have the domain classes, the UI Package is to save the Classes responsible to establish contact with the user and the Controller Package is to execute the methods that the user asked by the UI.
 
-- To generate all **Model** classes
-- To generate the **ApplicationUI** class
-- To generate the **Main** class (this one is not so big but was needed)
+We choose to generate this three packages in order to respond to the MVC pattern.
 
-The ApplicationUI and Main templates didn't have to follow the same process however defining the output path is something that this solution brings and simple `.tt` templating doesn't, which is why this method was used on everything.
+The templates are very similar. Through a **foreach** I can get the variables that I want from the Metamodel developed.
 
-I didn't feel the need to generate controllers as through my prototype all they did was access Model and Subject objects and as they are abstract no generation was needed. The ApplicationUI was the trickiest to build and required me to let go some of the features but was done despite that. The features lost was having multiple Subjects in one Model, this will only work if you only have 1 Subject in any Model and the Rating system, everything was ready for it with interfaces and all, but was too complex to implement when thought about.
+Bellow is a snippet of the `Transaction.tt` file used to generate all the Transacation class:
 
-Bellow is a snippet of the `Model.t4` file used to generate all the Model classes for the application:
-
-![ModelT4Snippet](C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\ISEP.Master.EDOM.Old-main\edom-20-21-team-405\part2\tool2-ms\images\ms-modelT4Snippet.PNG)
-
-*Note: This isn't the normal look of a `.t4` file, I installed the Devart T4 extension to have syntax highlighting to facilitate my work.*
+![ModelT4Snippet](Images\ttFile.png)
 
 ## Activity 6: Generate Applications
 
@@ -85,10 +84,4 @@ With all of them generated, the project will look like this:
 
 ![Prototype2](C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\ISEP.Master.EDOM.Old-main\edom-20-21-team-405\part2\tool2-ms\images\ms-proto2.PNG)
 
-Here are samples using Publico model vs Amazon Model:
-
-![PublicoModelSample](C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\ISEP.Master.EDOM.Old-main\edom-20-21-team-405\part2\tool2-ms\images\ms-publicoSample.PNG)
-
-![AmazonModelSample](C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\ISEP.Master.EDOM.Old-main\edom-20-21-team-405\part2\tool2-ms\images\ms-amazonSample.PNG)
-
-As we can see the applications are very similar and certain keywords will be different across the application when using different models. Another limitation of this development is how it would be hard to generate the ApplicationUI to be aware of it being a slightly different model and use more options, for example, in the Youtube model the Subject (Video) has a Date, and that is present in the Applicatio, however, it's not presented to the user, a custom implementation would have to be made. An idea after developing this work would be having the ApplicationUI abstract with some implementations and let the user extend it and have a custom implementation of each method for example a different mainMenu or a different showSubjects method).
+As we can see the applications are very similar and certain keywords will be different across the application when using different models. Another limitation of this development is how it would be hard to generate the ApplicationUI to be aware of it being a slightly different model and use more options, for example, in the Youtube model the Subject (Video) has a Date, and that is present in the Application, however, it's not presented to the user, a custom implementation would have to be made. An idea after developing this work would be having the ApplicationUI abstract with some implementations and let the user extend it and have a custom implementation of each method for example a different mainMenu or a different showSubjects method).
