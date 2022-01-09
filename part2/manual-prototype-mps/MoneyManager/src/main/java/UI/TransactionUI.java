@@ -1,9 +1,8 @@
 package UI;
 
-import Controller.AccountGroupController;
 import Controller.Modelation;
 import Controller.TransactionController;
-import Model.Account;
+import Model.AccountBase;
 
 import java.util.Scanner;
 
@@ -23,7 +22,7 @@ public class TransactionUI {
                     System.out.println(menu);
                     break;
                 case 2:
-                    for (Account acc : modelation.getUser().getAccountList()) {
+                    for (AccountBase acc : modelation.getUser().getAccountList()) {
                         System.out.println(acc.getTransactionList());
                     }
                     System.out.println(menu);

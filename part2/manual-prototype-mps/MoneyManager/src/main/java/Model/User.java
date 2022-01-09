@@ -6,12 +6,12 @@ import java.util.List;
 public class User {
 
     private String name;
-    private List<Account> accountList;
+    private List<AccountBase> accountBaseList;
     private LocalDate birthDate;
 
-    public User(String name, List<Account> accountList, LocalDate birthDate) {
+    public User(String name, List<AccountBase> accountBaseList, LocalDate birthDate) {
         this.name = name;
-        this.accountList = accountList;
+        this.accountBaseList = accountBaseList;
         this.birthDate = birthDate;
     }
     public User(String name, LocalDate birthDate) {
@@ -27,12 +27,12 @@ public class User {
         this.name = name;
     }
 
-    public List<Account> getAccountList() {
-        return accountList;
+    public List<AccountBase> getAccountList() {
+        return accountBaseList;
     }
 
-    public void setAccountList(List<Account> accountList) {
-        this.accountList = accountList;
+    public void setAccountList(List<AccountBase> accountBaseList) {
+        this.accountBaseList = accountBaseList;
     }
 
     public LocalDate getBirthDate() {
@@ -47,12 +47,12 @@ public class User {
     public String toString() {
         return "User => \n" +
                 "Name: " + name + "\n" +
-                "Account List: " + accountList + "\n" +
+                "Account List: " + accountBaseList + "\n" +
                 "Birth Date: " + birthDate + "\n";
     }
 
     public void listAll (User user){
-        for (Account acc: user.accountList) {
+        for (AccountBase acc: user.accountBaseList) {
             System.out.println(acc.toString());
         }
     }

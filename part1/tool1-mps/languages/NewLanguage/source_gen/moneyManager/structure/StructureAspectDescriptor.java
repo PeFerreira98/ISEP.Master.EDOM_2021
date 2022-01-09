@@ -191,7 +191,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:14f1c09e-60d3-4a37-87a9-f14d5d5a2302(moneyManager.structure)/8653132035599184129");
     b.version(2);
     b.aggregate("UserSpecs", 0x781619bd78713107L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713102L).optional(true).ordered(true).multiple(false).origin("8653132035599184135").done();
-    b.aggregate("AccountSpecs", 0x781619bd78713122L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713105L).optional(true).ordered(true).multiple(false).origin("8653132035599184162").done();
+    b.aggregate("AccountSpecs", 0x781619bd78713122L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713105L).optional(true).ordered(true).multiple(true).origin("8653132035599184162").done();
     b.aggregate("TransactionSpecs", 0x781619bd78713132L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x781619bd78713123L).optional(true).ordered(true).multiple(false).origin("8653132035599184178").done();
     b.aggregate("AccountGroupSpecs", 0x781619bd78713133L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x53f441f22bf9e915L).optional(true).ordered(true).multiple(false).origin("8653132035599184179").done();
     b.aggregate("CategorySpecs", 0x53f441f22c20b467L).target(0x9a5f9a2ebfeb4763L, 0xbcb7ba78024d6876L, 0x53f441f22c20b449L).optional(true).ordered(true).multiple(false).origin("6049532707843650663").done();

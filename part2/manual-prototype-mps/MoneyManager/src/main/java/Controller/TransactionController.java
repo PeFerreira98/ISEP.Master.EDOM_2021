@@ -1,6 +1,8 @@
 package Controller;
 
 import Model.*;
+import Model.Category.ExpenseCategory;
+import Model.Category.IncomeCategory;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -50,7 +52,7 @@ public class TransactionController {
 
         if (Objects.equals(categoryDescription, "Income")) {
             int i = 0;
-            for (Account acc : user.getAccountList()) {
+            for (AccountBase acc : user.getAccountList()) {
                 if (!Objects.equals(accName, acc.getName())) {
                     i++;
                 } else {
@@ -60,7 +62,7 @@ public class TransactionController {
                 }
             }
             i = 0;
-            for (Account acc : user.getAccountList()) {
+            for (AccountBase acc : user.getAccountList()) {
                 if (!Objects.equals(to, acc.getName())) {
                     i++;
                 } else {
@@ -71,7 +73,7 @@ public class TransactionController {
             }
         } else {
             int i = 0;
-            for (Account acc : user.getAccountList()) {
+            for (AccountBase acc : user.getAccountList()) {
                 if (!Objects.equals(accName, acc.getName())) {
                     i++;
                 } else {
@@ -81,7 +83,7 @@ public class TransactionController {
                 }
             }
             i = 0;
-            for (Account acc : user.getAccountList()) {
+            for (AccountBase acc : user.getAccountList()) {
                 if (!Objects.equals(to, acc.getName())) {
                     i++;
                 } else {

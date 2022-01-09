@@ -1,6 +1,8 @@
-package Model;
+package Model.Category;
 
-public class Category {
+import java.io.Serializable;
+
+public abstract class Category  implements Serializable {
 
     private String name;
     public Category(String name) {

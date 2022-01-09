@@ -1,72 +1,19 @@
 package Model;
 
 import java.util.List;
-import java.util.Objects;
 
-public class Account {
+public class Account extends AccountBase{
 
-    private List<Transaction> transactionList;
-    private String name;
-    private double amount;
+    private boolean needBankAccount;
 
     public Account(List<Transaction> transactionList) {
-        this.transactionList = transactionList;
+        super(transactionList);
     }
 
-    public Account(List<Transaction> transactionList, String name, double initialAmount) {
-        this.transactionList = transactionList;
-        this.name = name;
-        this.amount = initialAmount;
+    public Account(List<Transaction> transactionList, String name, double initialAmount, boolean needBankAccount) {
+        super(transactionList, name, initialAmount);
+        this.needBankAccount = needBankAccount;
     }
 
-    public List<Transaction> getTransactionList() {
-        return transactionList;
-    }
 
-    public void setTransactionList(List<Transaction> transactionList) {
-        this.transactionList = transactionList;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getInitialAmount() {
-        return amount;
-    }
-
-    public void setInitialAmount(double initialAmount) {
-        this.amount = initialAmount;
-    }
-
-    @Override
-    public String toString() {
-        return "Account => \n" +
-                "Transaction List: " + transactionList + "\n" +
-                "Name: " + name + " \n " +
-                "Amount: " + amount + "\n";
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Account account = (Account) o;
-        return name.equals(account.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name);
-    }
-
-    public void listAll (Account acc){
-        for (Transaction trans: acc.transactionList) {
-            System.out.println(trans.toString());
-        }
-    }
 }
