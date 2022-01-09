@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081855346303:jetbrains.mps.baseLanguage.structure.BreakStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1177666668936:jetbrains.mps.baseLanguage.structure.DoWhileStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
@@ -10,312 +12,490 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1163670490218:jetbrains.mps.baseLanguage.structure.SwitchStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
     <file name="AccountBase.java">
-      <unit at="7,0,83,0" name="SolutionMoneyManager.a_model.AccountBase" />
+      <unit at="7,0,84,0" name="MoneyManagerGeneratedCode.model.AccountBase" />
     </file>
     <file name="AccountController.java">
-      <unit at="10,0,48,0" name="SolutionMoneyManager.a_model.AccountController" />
+      <unit at="15,0,53,0" name="MoneyManagerGeneratedCode.controller.AccountController" />
     </file>
     <file name="Category.java">
-      <unit at="7,0,30,0" name="SolutionMoneyManager.a_model.Category" />
+      <unit at="6,0,29,0" name="MoneyManagerGeneratedCode.model.category.Category" />
     </file>
     <file name="Modelation.java">
-      <unit at="8,0,45,0" name="SolutionMoneyManager.a_model.Modelation" />
+      <unit at="8,0,45,0" name="MoneyManagerGeneratedCode.model.Modelation" />
     </file>
     <file name="Program.java">
-      <unit at="6,0,8,0" name="SolutionMoneyManager.a_model.Program" />
+      <unit at="13,0,52,0" name="MoneyManagerGeneratedCode.ui.Program" />
     </file>
   </root>
   <root nodeRef="r:40ab0ff7-848a-4b34-9f5c-2b72c8b4de63(SolutionMoneyManager.a_model)/7744288875023187754">
     <file name="Account.java">
-      <node id="7744288875026996230" at="10,81,11,41" concept="10" />
-      <node id="7744288875026996230" at="14,53,15,27" concept="10" />
-      <node id="7744288875026996230" at="22,28,23,57" concept="7" />
-      <node id="7744288875026996230" at="23,57,24,91" concept="7" />
-      <node id="7744288875026996230" at="24,91,25,70" concept="7" />
-      <node id="7744288875026996230" at="25,70,26,68" concept="7" />
-      <node id="7744288875026996230" at="26,68,27,34" concept="8" />
-      <node id="7744288875026996230" at="10,0,13,0" concept="1" trace="Account#(Ljava/util/List;Ljava/lang/String;D)V" />
-      <node id="7744288875026996230" at="14,0,17,0" concept="1" trace="Account#(Ljava/util/List;)V" />
-      <node id="7744288875026996230" at="21,0,29,0" concept="6" trace="toString#()Ljava/lang/String;" />
-      <scope id="7744288875026996230" at="10,81,11,41" />
-      <scope id="7744288875026996230" at="14,53,15,27" />
-      <scope id="7744288875026996230" at="10,0,13,0">
+      <node id="7744288875026996230" at="11,81,12,41" concept="13" />
+      <node id="7744288875026996230" at="17,53,18,27" concept="13" />
+      <node id="7744288875026996230" at="25,28,26,57" concept="9" />
+      <node id="7744288875026996230" at="26,57,27,91" concept="9" />
+      <node id="7744288875026996230" at="27,91,28,70" concept="9" />
+      <node id="7744288875026996230" at="28,70,29,68" concept="9" />
+      <node id="7744288875026996230" at="29,68,30,34" concept="10" />
+      <node id="7744288875026996230" at="11,0,14,0" concept="2" trace="Account#(Ljava/util/List;Ljava/lang/String;D)V" />
+      <node id="7744288875026996230" at="17,0,20,0" concept="2" trace="Account#(Ljava/util/List;)V" />
+      <node id="7744288875026996230" at="24,0,32,0" concept="8" trace="toString#()Ljava/lang/String;" />
+      <scope id="7744288875026996230" at="11,81,12,41" />
+      <scope id="7744288875026996230" at="17,53,18,27" />
+      <scope id="7744288875026996230" at="11,0,14,0">
         <var name="amount" id="7744288875026996230" />
         <var name="name" id="7744288875026996230" />
         <var name="transactionList" id="7744288875026996230" />
       </scope>
-      <scope id="7744288875026996230" at="14,0,17,0">
+      <scope id="7744288875026996230" at="17,0,20,0">
         <var name="transactionList" id="7744288875026996230" />
       </scope>
-      <scope id="7744288875026996230" at="22,28,27,34">
+      <scope id="7744288875026996230" at="25,28,30,34">
         <var name="amountString" id="7744288875026996230" />
         <var name="last" id="7744288875026996230" />
         <var name="nameString" id="7744288875026996230" />
         <var name="transactionlistString" id="7744288875026996230" />
       </scope>
-      <scope id="7744288875026996230" at="21,0,29,0" />
-      <unit id="7744288875026996230" at="7,0,30,0" name="SolutionMoneyManager.a_model.Account" />
+      <scope id="7744288875026996230" at="24,0,32,0" />
+      <unit id="7744288875026996230" at="7,0,33,0" name="MoneyManagerGeneratedCode.model.Account" />
     </file>
     <file name="AccountGroup.java">
-      <node id="7744288875026996244" at="8,0,9,0" concept="3" trace="name" />
-      <node id="7744288875026996244" at="9,0,10,0" concept="3" trace="accountList" />
-      <node id="7744288875026996244" at="12,67,13,21" concept="2" />
-      <node id="7744288875026996244" at="13,21,14,35" concept="2" />
-      <node id="7744288875026996244" at="18,27,19,21" concept="8" />
-      <node id="7744288875026996244" at="21,36,22,21" concept="2" />
-      <node id="7744288875026996244" at="24,45,25,28" concept="8" />
-      <node id="7744288875026996244" at="27,61,28,35" concept="2" />
-      <node id="7744288875026996244" at="31,0,32,0" concept="3" trace="nameString" />
-      <node id="7744288875026996244" at="32,0,33,0" concept="3" trace="accountListString" />
-      <node id="7744288875026996244" at="34,28,35,65" concept="8" />
-      <node id="7744288875026996244" at="41,20,42,18" concept="8" />
-      <node id="7744288875026996244" at="44,55,45,19" concept="8" />
-      <node id="7744288875026996244" at="46,5,47,0" concept="9" />
-      <node id="7744288875026996244" at="47,0,48,41" concept="7" />
-      <node id="7744288875026996244" at="49,73,50,19" concept="8" />
-      <node id="7744288875026996244" at="51,5,52,0" concept="9" />
-      <node id="7744288875026996244" at="52,0,53,16" concept="8" />
-      <node id="7744288875026996244" at="56,25,57,19" concept="7" />
-      <node id="7744288875026996244" at="57,19,58,77" concept="2" />
-      <node id="7744288875026996244" at="58,77,59,18" concept="8" />
-      <node id="7744288875026996244" at="18,0,21,0" concept="6" trace="getName#()Ljava/lang/String;" />
-      <node id="7744288875026996244" at="21,0,24,0" concept="6" trace="setName#(Ljava/lang/String;)V" />
-      <node id="7744288875026996244" at="24,0,27,0" concept="6" trace="getAccountList#()Ljava/util/List;" />
-      <node id="7744288875026996244" at="27,0,30,0" concept="6" trace="setAccountList#(Ljava/util/List;)V" />
-      <node id="7744288875026996244" at="40,35,43,5" concept="5" />
-      <node id="7744288875026996244" at="43,5,46,5" concept="5" />
-      <node id="7744288875026996244" at="48,41,51,5" concept="5" />
-      <node id="7744288875026996244" at="12,0,16,0" concept="1" trace="AccountGroup#(Ljava/lang/String;Ljava/util/List;)V" />
-      <node id="7744288875026996244" at="33,0,37,0" concept="6" trace="toString#()Ljava/lang/String;" />
-      <node id="7744288875026996244" at="55,0,61,0" concept="6" trace="hashCode#()I" />
-      <node id="7744288875026996244" at="39,0,55,0" concept="6" trace="equals#(Ljava/lang/Object;)Z" />
-      <scope id="7744288875026996244" at="18,27,19,21" />
-      <scope id="7744288875026996244" at="21,36,22,21" />
-      <scope id="7744288875026996244" at="24,45,25,28" />
-      <scope id="7744288875026996244" at="27,61,28,35" />
-      <scope id="7744288875026996244" at="34,28,35,65" />
-      <scope id="7744288875026996244" at="41,20,42,18" />
-      <scope id="7744288875026996244" at="44,55,45,19" />
-      <scope id="7744288875026996244" at="49,73,50,19" />
-      <scope id="7744288875026996244" at="12,67,14,35" />
-      <scope id="7744288875026996244" at="18,0,21,0" />
-      <scope id="7744288875026996244" at="21,0,24,0">
+      <node id="7744288875026996244" at="8,0,9,0" concept="5" trace="name" />
+      <node id="7744288875026996244" at="9,0,10,0" concept="5" trace="accountList" />
+      <node id="7744288875026996244" at="11,67,12,21" concept="4" />
+      <node id="7744288875026996244" at="12,21,13,35" concept="4" />
+      <node id="7744288875026996244" at="16,27,17,21" concept="10" />
+      <node id="7744288875026996244" at="19,36,20,21" concept="4" />
+      <node id="7744288875026996244" at="22,45,23,28" concept="10" />
+      <node id="7744288875026996244" at="25,61,26,35" concept="4" />
+      <node id="7744288875026996244" at="29,0,30,0" concept="5" trace="nameString" />
+      <node id="7744288875026996244" at="30,0,31,0" concept="5" trace="accountListString" />
+      <node id="7744288875026996244" at="32,28,33,66" concept="10" />
+      <node id="7744288875026996244" at="39,20,40,18" concept="10" />
+      <node id="7744288875026996244" at="42,55,43,19" concept="10" />
+      <node id="7744288875026996244" at="44,5,45,0" concept="11" />
+      <node id="7744288875026996244" at="45,0,46,41" concept="9" />
+      <node id="7744288875026996244" at="47,73,48,19" concept="10" />
+      <node id="7744288875026996244" at="49,5,50,0" concept="11" />
+      <node id="7744288875026996244" at="50,0,51,16" concept="10" />
+      <node id="7744288875026996244" at="54,25,55,19" concept="9" />
+      <node id="7744288875026996244" at="55,19,56,77" concept="4" />
+      <node id="7744288875026996244" at="56,77,57,18" concept="10" />
+      <node id="7744288875026996244" at="16,0,19,0" concept="8" trace="getName#()Ljava/lang/String;" />
+      <node id="7744288875026996244" at="19,0,22,0" concept="8" trace="setName#(Ljava/lang/String;)V" />
+      <node id="7744288875026996244" at="22,0,25,0" concept="8" trace="getAccountList#()Ljava/util/List;" />
+      <node id="7744288875026996244" at="25,0,28,0" concept="8" trace="setAccountList#(Ljava/util/List;)V" />
+      <node id="7744288875026996244" at="38,35,41,5" concept="7" />
+      <node id="7744288875026996244" at="41,5,44,5" concept="7" />
+      <node id="7744288875026996244" at="46,41,49,5" concept="7" />
+      <node id="7744288875026996244" at="11,0,15,0" concept="2" trace="AccountGroup#(Ljava/lang/String;Ljava/util/List;)V" />
+      <node id="7744288875026996244" at="31,0,35,0" concept="8" trace="toString#()Ljava/lang/String;" />
+      <node id="7744288875026996244" at="53,0,59,0" concept="8" trace="hashCode#()I" />
+      <node id="7744288875026996244" at="37,0,53,0" concept="8" trace="equals#(Ljava/lang/Object;)Z" />
+      <scope id="7744288875026996244" at="16,27,17,21" />
+      <scope id="7744288875026996244" at="19,36,20,21" />
+      <scope id="7744288875026996244" at="22,45,23,28" />
+      <scope id="7744288875026996244" at="25,61,26,35" />
+      <scope id="7744288875026996244" at="32,28,33,66" />
+      <scope id="7744288875026996244" at="39,20,40,18" />
+      <scope id="7744288875026996244" at="42,55,43,19" />
+      <scope id="7744288875026996244" at="47,73,48,19" />
+      <scope id="7744288875026996244" at="11,67,13,35" />
+      <scope id="7744288875026996244" at="16,0,19,0" />
+      <scope id="7744288875026996244" at="19,0,22,0">
         <var name="name" id="7744288875026996244" />
       </scope>
-      <scope id="7744288875026996244" at="24,0,27,0" />
-      <scope id="7744288875026996244" at="27,0,30,0">
+      <scope id="7744288875026996244" at="22,0,25,0" />
+      <scope id="7744288875026996244" at="25,0,28,0">
         <var name="accountList" id="7744288875026996244" />
       </scope>
-      <scope id="7744288875026996244" at="56,25,59,18">
+      <scope id="7744288875026996244" at="54,25,57,18">
         <var name="result" id="7744288875026996244" />
       </scope>
-      <scope id="7744288875026996244" at="12,0,16,0">
+      <scope id="7744288875026996244" at="11,0,15,0">
         <var name="accountList" id="7744288875026996244" />
         <var name="name" id="7744288875026996244" />
       </scope>
-      <scope id="7744288875026996244" at="33,0,37,0" />
-      <scope id="7744288875026996244" at="55,0,61,0" />
-      <scope id="7744288875026996244" at="40,35,53,16">
+      <scope id="7744288875026996244" at="31,0,35,0" />
+      <scope id="7744288875026996244" at="53,0,59,0" />
+      <scope id="7744288875026996244" at="38,35,51,16">
         <var name="that" id="7744288875026996244" />
       </scope>
-      <scope id="7744288875026996244" at="39,0,55,0">
+      <scope id="7744288875026996244" at="37,0,53,0">
         <var name="o" id="7744288875026996244" />
       </scope>
-      <unit id="7744288875026996244" at="7,0,62,0" name="SolutionMoneyManager.a_model.AccountGroup" />
+      <unit id="7744288875026996244" at="7,0,60,0" name="MoneyManagerGeneratedCode.model.AccountGroup" />
     </file>
     <file name="AccountGroupController.java">
-      <node id="7744288875026996244" at="16,56,17,40" concept="7" />
-      <node id="7744288875026996244" at="17,40,18,47" concept="2" />
-      <node id="7744288875026996244" at="18,47,19,58" concept="7" />
-      <node id="7744288875026996244" at="19,58,20,36" concept="7" />
-      <node id="7744288875026996244" at="20,36,21,58" concept="2" />
-      <node id="7744288875026996244" at="21,58,22,73" concept="2" />
-      <node id="7744288875026996244" at="22,73,23,34" concept="7" />
-      <node id="7744288875026996244" at="24,41,25,48" concept="2" />
-      <node id="7744288875026996244" at="25,48,26,31" concept="2" />
-      <node id="7744288875026996244" at="26,31,27,42" concept="2" />
-      <node id="7744288875026996244" at="27,42,28,60" concept="2" />
-      <node id="7744288875026996244" at="28,60,29,74" concept="2" />
-      <node id="7744288875026996244" at="29,74,30,29" concept="2" />
-      <node id="7744288875026996244" at="13,0,15,0" concept="1" trace="AccountGroupController#()V" />
-      <node id="7744288875026996244" at="23,34,31,5" concept="11" />
-      <node id="7744288875026996244" at="16,0,33,0" concept="6" trace="addAccountGroup#(Ljava/util/List;)V" />
-      <scope id="7744288875026996244" at="13,35,13,35" />
-      <scope id="7744288875026996244" at="13,0,15,0" />
-      <scope id="7744288875026996244" at="24,41,30,29" />
-      <scope id="7744288875026996244" at="16,56,31,5">
+      <node id="7744288875026996244" at="18,56,19,40" concept="9" />
+      <node id="7744288875026996244" at="19,40,20,47" concept="4" />
+      <node id="7744288875026996244" at="20,47,21,58" concept="9" />
+      <node id="7744288875026996244" at="21,58,22,36" concept="9" />
+      <node id="7744288875026996244" at="22,36,23,58" concept="4" />
+      <node id="7744288875026996244" at="23,58,24,73" concept="4" />
+      <node id="7744288875026996244" at="24,73,25,34" concept="9" />
+      <node id="7744288875026996244" at="26,41,27,48" concept="4" />
+      <node id="7744288875026996244" at="27,48,28,31" concept="4" />
+      <node id="7744288875026996244" at="28,31,29,42" concept="4" />
+      <node id="7744288875026996244" at="29,42,30,60" concept="4" />
+      <node id="7744288875026996244" at="30,60,31,74" concept="4" />
+      <node id="7744288875026996244" at="31,74,32,29" concept="4" />
+      <node id="7744288875026996244" at="15,0,17,0" concept="2" trace="AccountGroupController#()V" />
+      <node id="7744288875026996244" at="25,34,33,5" concept="15" />
+      <node id="7744288875026996244" at="18,0,35,0" concept="8" trace="addAccountGroup#(Ljava/util/List;)V" />
+      <scope id="7744288875026996244" at="15,35,15,35" />
+      <scope id="7744288875026996244" at="15,0,17,0" />
+      <scope id="7744288875026996244" at="26,41,32,29" />
+      <scope id="7744288875026996244" at="18,56,33,5">
         <var name="accGName" id="7744288875026996244" />
         <var name="accountBaseList" id="7744288875026996244" />
         <var name="answer" id="7744288875026996244" />
         <var name="sc" id="7744288875026996244" />
       </scope>
-      <scope id="7744288875026996244" at="16,0,33,0">
+      <scope id="7744288875026996244" at="18,0,35,0">
         <var name="accG" id="7744288875026996244" />
       </scope>
-      <unit id="7744288875026996244" at="10,0,34,0" name="SolutionMoneyManager.a_model.AccountGroupController" />
+      <unit id="7744288875026996244" at="12,0,36,0" name="MoneyManagerGeneratedCode.controller.AccountGroupController" />
     </file>
     <file name="AccountGroupUI.java">
-      <unit id="7744288875026996244" at="6,0,8,0" name="SolutionMoneyManager.a_model.AccountGroupUI" />
+      <node id="7744288875026996244" at="11,60,12,40" concept="9" />
+      <node id="7744288875026996244" at="12,40,13,15" concept="9" />
+      <node id="7744288875026996244" at="13,15,14,81" concept="9" />
+      <node id="7744288875026996244" at="14,81,15,96" concept="9" />
+      <node id="7744288875026996244" at="15,96,16,29" concept="4" />
+      <node id="7744288875026996244" at="17,8,18,28" concept="4" />
+      <node id="7744288875026996244" at="20,15,21,71" concept="4" />
+      <node id="7744288875026996244" at="21,71,22,35" concept="4" />
+      <node id="7744288875026996244" at="22,35,23,16" concept="1" />
+      <node id="7744288875026996244" at="24,15,25,51" concept="4" />
+      <node id="7744288875026996244" at="25,51,26,35" concept="4" />
+      <node id="7744288875026996244" at="26,35,27,16" concept="1" />
+      <node id="7744288875026996244" at="28,15,29,35" concept="4" />
+      <node id="7744288875026996244" at="29,35,30,16" concept="1" />
+      <node id="7744288875026996244" at="31,16,32,35" concept="4" />
+      <node id="7744288875026996244" at="32,35,33,37" concept="4" />
+      <node id="7744288875026996244" at="18,28,34,7" concept="14" />
+      <node id="7744288875026996244" at="16,29,35,26" concept="3" />
+      <node id="7744288875026996244" at="11,0,37,0" concept="12" trace="accountGroupUI#(LMoneyManagerGeneratedCode/model/Modelation;)V" />
+      <scope id="7744288875026996244" at="28,15,30,16" />
+      <scope id="7744288875026996244" at="31,16,33,37" />
+      <scope id="7744288875026996244" at="20,15,23,16" />
+      <scope id="7744288875026996244" at="24,15,27,16" />
+      <scope id="7744288875026996244" at="17,8,34,7" />
+      <scope id="7744288875026996244" at="11,60,35,26">
+        <var name="accountGroupController" id="7744288875026996244" />
+        <var name="menu" id="7744288875026996244" />
+        <var name="option" id="7744288875026996244" />
+        <var name="sc" id="7744288875026996244" />
+      </scope>
+      <scope id="7744288875026996244" at="11,0,37,0">
+        <var name="modelation" id="7744288875026996244" />
+      </scope>
+      <unit id="7744288875026996244" at="9,0,38,0" name="MoneyManagerGeneratedCode.ui.AccountGroupUI" />
     </file>
     <file name="AccountUI.java">
-      <unit id="7744288875026996230" at="6,0,8,0" name="SolutionMoneyManager.a_model.AccountUI" />
+      <node id="7744288875026996230" at="11,55,12,40" concept="9" />
+      <node id="7744288875026996230" at="12,40,13,15" concept="9" />
+      <node id="7744288875026996230" at="13,15,14,66" concept="9" />
+      <node id="7744288875026996230" at="14,66,15,121" concept="9" />
+      <node id="7744288875026996230" at="15,121,16,29" concept="4" />
+      <node id="7744288875026996230" at="17,8,18,28" concept="4" />
+      <node id="7744288875026996230" at="20,15,21,67" concept="4" />
+      <node id="7744288875026996230" at="21,67,22,35" concept="4" />
+      <node id="7744288875026996230" at="22,35,23,16" concept="1" />
+      <node id="7744288875026996230" at="24,15,25,68" concept="4" />
+      <node id="7744288875026996230" at="25,68,26,35" concept="4" />
+      <node id="7744288875026996230" at="26,35,27,16" concept="1" />
+      <node id="7744288875026996230" at="28,15,29,66" concept="4" />
+      <node id="7744288875026996230" at="30,73,31,53" concept="4" />
+      <node id="7744288875026996230" at="32,11,33,37" concept="9" />
+      <node id="7744288875026996230" at="33,37,34,106" concept="4" />
+      <node id="7744288875026996230" at="34,106,35,35" concept="4" />
+      <node id="7744288875026996230" at="35,35,36,16" concept="1" />
+      <node id="7744288875026996230" at="37,15,38,35" concept="4" />
+      <node id="7744288875026996230" at="38,35,39,16" concept="1" />
+      <node id="7744288875026996230" at="40,16,41,35" concept="4" />
+      <node id="7744288875026996230" at="41,35,42,32" concept="4" />
+      <node id="7744288875026996230" at="29,66,32,11" concept="6" />
+      <node id="7744288875026996230" at="18,28,43,7" concept="14" />
+      <node id="7744288875026996230" at="16,29,44,26" concept="3" />
+      <node id="7744288875026996230" at="11,0,46,0" concept="12" trace="accountUI#(LMoneyManagerGeneratedCode/model/Modelation;)V" />
+      <scope id="7744288875026996230" at="30,73,31,53" />
+      <scope id="7744288875026996230" at="37,15,39,16" />
+      <scope id="7744288875026996230" at="40,16,42,32" />
+      <scope id="7744288875026996230" at="20,15,23,16" />
+      <scope id="7744288875026996230" at="24,15,27,16" />
+      <scope id="7744288875026996230" at="29,66,32,11">
+        <var name="acc" id="7744288875026996230" />
+      </scope>
+      <scope id="7744288875026996230" at="28,15,36,16">
+        <var name="account" id="7744288875026996230" />
+      </scope>
+      <scope id="7744288875026996230" at="17,8,43,7" />
+      <scope id="7744288875026996230" at="11,55,44,26">
+        <var name="accountController" id="7744288875026996230" />
+        <var name="menu" id="7744288875026996230" />
+        <var name="option" id="7744288875026996230" />
+        <var name="sc" id="7744288875026996230" />
+      </scope>
+      <scope id="7744288875026996230" at="11,0,46,0">
+        <var name="modelation" id="7744288875026996230" />
+      </scope>
+      <unit id="7744288875026996230" at="10,0,47,0" name="MoneyManagerGeneratedCode.ui.AccountUI" />
     </file>
     <file name="ExpenseCategory.java">
-      <unit id="7744288875026996238" at="6,0,8,0" name="SolutionMoneyManager.a_model.ExpenseCategory" />
+      <node id="7744288875026996238" at="8,0,9,0" concept="5" trace="description" />
+      <node id="7744288875026996238" at="10,39,11,16" concept="13" />
+      <node id="7744288875026996238" at="11,16,12,33" concept="4" />
+      <node id="7744288875026996238" at="16,28,17,57" concept="9" />
+      <node id="7744288875026996238" at="17,57,18,68" concept="9" />
+      <node id="7744288875026996238" at="18,68,19,69" concept="10" />
+      <node id="7744288875026996238" at="10,0,14,0" concept="2" trace="ExpenseCategory#(Ljava/lang/String;)V" />
+      <node id="7744288875026996238" at="15,0,21,0" concept="8" trace="toString#()Ljava/lang/String;" />
+      <scope id="7744288875026996238" at="10,39,12,33" />
+      <scope id="7744288875026996238" at="16,28,19,69">
+        <var name="descriptionString" id="7744288875026996238" />
+        <var name="nameString" id="7744288875026996238" />
+      </scope>
+      <scope id="7744288875026996238" at="10,0,14,0">
+        <var name="name" id="7744288875026996238" />
+      </scope>
+      <scope id="7744288875026996238" at="15,0,21,0" />
+      <unit id="7744288875026996238" at="6,0,22,0" name="MoneyManagerGeneratedCode.model.category.ExpenseCategory" />
     </file>
     <file name="IncomeCategory.java">
-      <unit id="7744288875026996238" at="6,0,9,0" name="SolutionMoneyManager.a_model.IncomeCategory" />
+      <node id="7744288875026996238" at="8,0,9,0" concept="5" trace="description" />
+      <node id="7744288875026996238" at="10,38,11,16" concept="13" />
+      <node id="7744288875026996238" at="11,16,12,32" concept="4" />
+      <node id="7744288875026996238" at="15,28,16,57" concept="9" />
+      <node id="7744288875026996238" at="16,57,17,68" concept="9" />
+      <node id="7744288875026996238" at="17,68,18,68" concept="10" />
+      <node id="7744288875026996238" at="10,0,14,0" concept="2" trace="IncomeCategory#(Ljava/lang/String;)V" />
+      <node id="7744288875026996238" at="14,0,20,0" concept="8" trace="toString#()Ljava/lang/String;" />
+      <scope id="7744288875026996238" at="10,38,12,32" />
+      <scope id="7744288875026996238" at="15,28,18,68">
+        <var name="descriptionString" id="7744288875026996238" />
+        <var name="nameString" id="7744288875026996238" />
+      </scope>
+      <scope id="7744288875026996238" at="10,0,14,0">
+        <var name="name" id="7744288875026996238" />
+      </scope>
+      <scope id="7744288875026996238" at="14,0,20,0" />
+      <unit id="7744288875026996238" at="6,0,21,0" name="MoneyManagerGeneratedCode.model.category.IncomeCategory" />
     </file>
     <file name="Transaction.java">
-      <node id="7744288875026996234" at="8,0,9,0" concept="3" trace="from" />
-      <node id="7744288875026996234" at="9,0,10,0" concept="3" trace="to" />
-      <node id="7744288875026996234" at="10,0,11,0" concept="3" trace="amount" />
-      <node id="7744288875026996234" at="11,0,12,0" concept="3" trace="date" />
-      <node id="7744288875026996234" at="12,0,13,0" concept="3" trace="icategory" />
-      <node id="7744288875026996234" at="13,0,14,0" concept="3" trace="ecategory" />
-      <node id="7744288875026996234" at="16,104,17,21" concept="2" />
-      <node id="7744288875026996234" at="17,21,18,17" concept="2" />
-      <node id="7744288875026996234" at="18,17,19,25" concept="2" />
-      <node id="7744288875026996234" at="19,25,20,21" concept="2" />
-      <node id="7744288875026996234" at="20,21,21,31" concept="2" />
-      <node id="7744288875026996234" at="23,103,24,21" concept="2" />
-      <node id="7744288875026996234" at="24,21,25,17" concept="2" />
-      <node id="7744288875026996234" at="25,17,26,25" concept="2" />
-      <node id="7744288875026996234" at="26,25,27,21" concept="2" />
-      <node id="7744288875026996234" at="27,21,28,31" concept="2" />
-      <node id="7744288875026996234" at="34,27,35,21" concept="8" />
-      <node id="7744288875026996234" at="37,36,38,21" concept="2" />
-      <node id="7744288875026996234" at="40,25,41,19" concept="8" />
-      <node id="7744288875026996234" at="43,32,44,17" concept="2" />
-      <node id="7744288875026996234" at="46,29,47,23" concept="8" />
-      <node id="7744288875026996234" at="49,40,50,25" concept="2" />
-      <node id="7744288875026996234" at="52,30,53,21" concept="8" />
-      <node id="7744288875026996234" at="55,39,56,21" concept="2" />
-      <node id="7744288875026996234" at="58,40,59,26" concept="8" />
-      <node id="7744288875026996234" at="61,54,62,31" concept="2" />
-      <node id="7744288875026996234" at="64,41,65,26" concept="8" />
-      <node id="7744288875026996234" at="67,55,68,31" concept="2" />
-      <node id="7744288875026996234" at="71,0,72,0" concept="3" trace="fromString" />
-      <node id="7744288875026996234" at="72,0,73,0" concept="3" trace="toString" />
-      <node id="7744288875026996234" at="73,0,74,0" concept="3" trace="amountString" />
-      <node id="7744288875026996234" at="74,0,75,0" concept="3" trace="dateString" />
-      <node id="7744288875026996234" at="75,0,76,0" concept="3" trace="iCategoryString" />
-      <node id="7744288875026996234" at="76,0,77,0" concept="3" trace="eCategoryString" />
-      <node id="7744288875026996234" at="80,28,81,119" concept="8" />
-      <node id="7744288875026996234" at="34,0,37,0" concept="6" trace="getFrom#()Ljava/lang/String;" />
-      <node id="7744288875026996234" at="37,0,40,0" concept="6" trace="setFrom#(Ljava/lang/String;)V" />
-      <node id="7744288875026996234" at="40,0,43,0" concept="6" trace="getTo#()Ljava/lang/String;" />
-      <node id="7744288875026996234" at="43,0,46,0" concept="6" trace="setTo#(Ljava/lang/String;)V" />
-      <node id="7744288875026996234" at="46,0,49,0" concept="6" trace="getAmount#()D" />
-      <node id="7744288875026996234" at="49,0,52,0" concept="6" trace="setAmount#(D)V" />
-      <node id="7744288875026996234" at="52,0,55,0" concept="6" trace="getDate#()Ljava/time/LocalDate;" />
-      <node id="7744288875026996234" at="55,0,58,0" concept="6" trace="setDate#(Ljava/time/LocalDate;)V" />
-      <node id="7744288875026996234" at="58,0,61,0" concept="6" trace="getIcategory#()LSolutionMoneyManager/a_model/IncomeCategory;" />
-      <node id="7744288875026996234" at="61,0,64,0" concept="6" trace="setIcategory#(LSolutionMoneyManager/a_model/IncomeCategory;)V" />
-      <node id="7744288875026996234" at="64,0,67,0" concept="6" trace="getEcategory#()LSolutionMoneyManager/a_model/ExpenseCategory;" />
-      <node id="7744288875026996234" at="67,0,70,0" concept="6" trace="setEcategory#(LSolutionMoneyManager/a_model/ExpenseCategory;)V" />
-      <node id="7744288875026996234" at="79,0,83,0" concept="6" trace="toString#()Ljava/lang/String;" />
-      <node id="7744288875026996234" at="16,0,23,0" concept="1" trace="Transaction#(Ljava/lang/String;Ljava/lang/String;DLjava/time/LocalDate;LSolutionMoneyManager/a_model/ExpenseCategory;)V" />
-      <node id="7744288875026996234" at="23,0,30,0" concept="1" trace="Transaction#(Ljava/lang/String;Ljava/lang/String;DLjava/time/LocalDate;LSolutionMoneyManager/a_model/IncomeCategory;)V" />
-      <scope id="7744288875026996234" at="34,27,35,21" />
-      <scope id="7744288875026996234" at="37,36,38,21" />
-      <scope id="7744288875026996234" at="40,25,41,19" />
-      <scope id="7744288875026996234" at="43,32,44,17" />
-      <scope id="7744288875026996234" at="46,29,47,23" />
-      <scope id="7744288875026996234" at="49,40,50,25" />
-      <scope id="7744288875026996234" at="52,30,53,21" />
-      <scope id="7744288875026996234" at="55,39,56,21" />
-      <scope id="7744288875026996234" at="58,40,59,26" />
-      <scope id="7744288875026996234" at="61,54,62,31" />
-      <scope id="7744288875026996234" at="64,41,65,26" />
-      <scope id="7744288875026996234" at="67,55,68,31" />
-      <scope id="7744288875026996234" at="80,28,81,119" />
-      <scope id="7744288875026996234" at="34,0,37,0" />
-      <scope id="7744288875026996234" at="37,0,40,0">
+      <node id="7744288875026996234" at="10,0,11,0" concept="5" trace="from" />
+      <node id="7744288875026996234" at="11,0,12,0" concept="5" trace="to" />
+      <node id="7744288875026996234" at="12,0,13,0" concept="5" trace="amount" />
+      <node id="7744288875026996234" at="13,0,14,0" concept="5" trace="date" />
+      <node id="7744288875026996234" at="14,0,15,0" concept="5" trace="icategory" />
+      <node id="7744288875026996234" at="15,0,16,0" concept="5" trace="ecategory" />
+      <node id="7744288875026996234" at="18,104,19,21" concept="4" />
+      <node id="7744288875026996234" at="19,21,20,17" concept="4" />
+      <node id="7744288875026996234" at="20,17,21,25" concept="4" />
+      <node id="7744288875026996234" at="21,25,22,21" concept="4" />
+      <node id="7744288875026996234" at="22,21,23,31" concept="4" />
+      <node id="7744288875026996234" at="25,103,26,21" concept="4" />
+      <node id="7744288875026996234" at="26,21,27,17" concept="4" />
+      <node id="7744288875026996234" at="27,17,28,25" concept="4" />
+      <node id="7744288875026996234" at="28,25,29,21" concept="4" />
+      <node id="7744288875026996234" at="29,21,30,31" concept="4" />
+      <node id="7744288875026996234" at="36,27,37,21" concept="10" />
+      <node id="7744288875026996234" at="39,36,40,21" concept="4" />
+      <node id="7744288875026996234" at="42,25,43,19" concept="10" />
+      <node id="7744288875026996234" at="45,32,46,17" concept="4" />
+      <node id="7744288875026996234" at="48,29,49,23" concept="10" />
+      <node id="7744288875026996234" at="51,40,52,25" concept="4" />
+      <node id="7744288875026996234" at="54,30,55,21" concept="10" />
+      <node id="7744288875026996234" at="57,39,58,21" concept="4" />
+      <node id="7744288875026996234" at="60,40,61,26" concept="10" />
+      <node id="7744288875026996234" at="63,54,64,31" concept="4" />
+      <node id="7744288875026996234" at="66,41,67,26" concept="10" />
+      <node id="7744288875026996234" at="69,55,70,31" concept="4" />
+      <node id="7744288875026996234" at="73,0,74,0" concept="5" trace="fromString" />
+      <node id="7744288875026996234" at="74,0,75,0" concept="5" trace="toString" />
+      <node id="7744288875026996234" at="75,0,76,0" concept="5" trace="amountString" />
+      <node id="7744288875026996234" at="76,0,77,0" concept="5" trace="dateString" />
+      <node id="7744288875026996234" at="77,0,78,0" concept="5" trace="iCategoryString" />
+      <node id="7744288875026996234" at="78,0,79,0" concept="5" trace="eCategoryString" />
+      <node id="7744288875026996234" at="82,28,83,119" concept="10" />
+      <node id="7744288875026996234" at="36,0,39,0" concept="8" trace="getFrom#()Ljava/lang/String;" />
+      <node id="7744288875026996234" at="39,0,42,0" concept="8" trace="setFrom#(Ljava/lang/String;)V" />
+      <node id="7744288875026996234" at="42,0,45,0" concept="8" trace="getTo#()Ljava/lang/String;" />
+      <node id="7744288875026996234" at="45,0,48,0" concept="8" trace="setTo#(Ljava/lang/String;)V" />
+      <node id="7744288875026996234" at="48,0,51,0" concept="8" trace="getAmount#()D" />
+      <node id="7744288875026996234" at="51,0,54,0" concept="8" trace="setAmount#(D)V" />
+      <node id="7744288875026996234" at="54,0,57,0" concept="8" trace="getDate#()Ljava/time/LocalDate;" />
+      <node id="7744288875026996234" at="57,0,60,0" concept="8" trace="setDate#(Ljava/time/LocalDate;)V" />
+      <node id="7744288875026996234" at="60,0,63,0" concept="8" trace="getIcategory#()LMoneyManagerGeneratedCode/model/category/IncomeCategory;" />
+      <node id="7744288875026996234" at="63,0,66,0" concept="8" trace="setIcategory#(LMoneyManagerGeneratedCode/model/category/IncomeCategory;)V" />
+      <node id="7744288875026996234" at="66,0,69,0" concept="8" trace="getEcategory#()LMoneyManagerGeneratedCode/model/category/ExpenseCategory;" />
+      <node id="7744288875026996234" at="69,0,72,0" concept="8" trace="setEcategory#(LMoneyManagerGeneratedCode/model/category/ExpenseCategory;)V" />
+      <node id="7744288875026996234" at="81,0,85,0" concept="8" trace="toString#()Ljava/lang/String;" />
+      <node id="7744288875026996234" at="18,0,25,0" concept="2" trace="Transaction#(Ljava/lang/String;Ljava/lang/String;DLjava/time/LocalDate;LMoneyManagerGeneratedCode/model/category/ExpenseCategory;)V" />
+      <node id="7744288875026996234" at="25,0,32,0" concept="2" trace="Transaction#(Ljava/lang/String;Ljava/lang/String;DLjava/time/LocalDate;LMoneyManagerGeneratedCode/model/category/IncomeCategory;)V" />
+      <scope id="7744288875026996234" at="36,27,37,21" />
+      <scope id="7744288875026996234" at="39,36,40,21" />
+      <scope id="7744288875026996234" at="42,25,43,19" />
+      <scope id="7744288875026996234" at="45,32,46,17" />
+      <scope id="7744288875026996234" at="48,29,49,23" />
+      <scope id="7744288875026996234" at="51,40,52,25" />
+      <scope id="7744288875026996234" at="54,30,55,21" />
+      <scope id="7744288875026996234" at="57,39,58,21" />
+      <scope id="7744288875026996234" at="60,40,61,26" />
+      <scope id="7744288875026996234" at="63,54,64,31" />
+      <scope id="7744288875026996234" at="66,41,67,26" />
+      <scope id="7744288875026996234" at="69,55,70,31" />
+      <scope id="7744288875026996234" at="82,28,83,119" />
+      <scope id="7744288875026996234" at="36,0,39,0" />
+      <scope id="7744288875026996234" at="39,0,42,0">
         <var name="from" id="7744288875026996234" />
       </scope>
-      <scope id="7744288875026996234" at="40,0,43,0" />
-      <scope id="7744288875026996234" at="43,0,46,0">
+      <scope id="7744288875026996234" at="42,0,45,0" />
+      <scope id="7744288875026996234" at="45,0,48,0">
         <var name="to" id="7744288875026996234" />
       </scope>
-      <scope id="7744288875026996234" at="46,0,49,0" />
-      <scope id="7744288875026996234" at="49,0,52,0">
+      <scope id="7744288875026996234" at="48,0,51,0" />
+      <scope id="7744288875026996234" at="51,0,54,0">
         <var name="amount" id="7744288875026996234" />
       </scope>
-      <scope id="7744288875026996234" at="52,0,55,0" />
-      <scope id="7744288875026996234" at="55,0,58,0">
+      <scope id="7744288875026996234" at="54,0,57,0" />
+      <scope id="7744288875026996234" at="57,0,60,0">
         <var name="date" id="7744288875026996234" />
       </scope>
-      <scope id="7744288875026996234" at="58,0,61,0" />
-      <scope id="7744288875026996234" at="61,0,64,0">
+      <scope id="7744288875026996234" at="60,0,63,0" />
+      <scope id="7744288875026996234" at="63,0,66,0">
         <var name="icategory" id="7744288875026996234" />
       </scope>
-      <scope id="7744288875026996234" at="64,0,67,0" />
-      <scope id="7744288875026996234" at="67,0,70,0">
+      <scope id="7744288875026996234" at="66,0,69,0" />
+      <scope id="7744288875026996234" at="69,0,72,0">
         <var name="ecategory" id="7744288875026996234" />
       </scope>
-      <scope id="7744288875026996234" at="79,0,83,0" />
-      <scope id="7744288875026996234" at="16,104,21,31" />
-      <scope id="7744288875026996234" at="23,103,28,31" />
-      <scope id="7744288875026996234" at="16,0,23,0">
+      <scope id="7744288875026996234" at="81,0,85,0" />
+      <scope id="7744288875026996234" at="18,104,23,31" />
+      <scope id="7744288875026996234" at="25,103,30,31" />
+      <scope id="7744288875026996234" at="18,0,25,0">
         <var name="amount" id="7744288875026996234" />
         <var name="date" id="7744288875026996234" />
         <var name="ecategory" id="7744288875026996234" />
         <var name="from" id="7744288875026996234" />
         <var name="to" id="7744288875026996234" />
       </scope>
-      <scope id="7744288875026996234" at="23,0,30,0">
+      <scope id="7744288875026996234" at="25,0,32,0">
         <var name="amount" id="7744288875026996234" />
         <var name="date" id="7744288875026996234" />
         <var name="from" id="7744288875026996234" />
         <var name="icategory" id="7744288875026996234" />
         <var name="to" id="7744288875026996234" />
       </scope>
-      <unit id="7744288875026996234" at="7,0,84,0" name="SolutionMoneyManager.a_model.Transaction" />
+      <unit id="7744288875026996234" at="9,0,86,0" name="MoneyManagerGeneratedCode.model.Transaction" />
     </file>
     <file name="TransactionController.java">
-      <node id="7744288875026996234" at="17,50,18,40" concept="7" />
-      <node id="7744288875026996234" at="18,40,19,41" concept="2" />
-      <node id="7744288875026996234" at="19,41,20,35" concept="7" />
-      <node id="7744288875026996234" at="20,35,21,45" concept="2" />
-      <node id="7744288875026996234" at="21,45,22,32" concept="7" />
-      <node id="7744288875026996234" at="22,32,23,43" concept="2" />
-      <node id="7744288875026996234" at="23,43,24,30" concept="7" />
-      <node id="7744288875026996234" at="24,30,25,45" concept="2" />
-      <node id="7744288875026996234" at="25,45,26,32" concept="7" />
-      <node id="7744288875026996234" at="26,32,27,76" concept="7" />
-      <node id="7744288875026996234" at="27,76,28,59" concept="7" />
-      <node id="7744288875026996234" at="28,59,29,47" concept="2" />
-      <node id="7744288875026996234" at="29,47,30,36" concept="7" />
-      <node id="7744288875026996234" at="30,36,31,31" concept="7" />
-      <node id="7744288875026996234" at="31,31,32,32" concept="7" />
-      <node id="7744288875026996234" at="32,32,33,49" concept="2" />
-      <node id="7744288875026996234" at="33,49,34,32" concept="7" />
-      <node id="7744288875026996234" at="34,32,35,46" concept="2" />
-      <node id="7744288875026996234" at="35,46,36,43" concept="7" />
-      <node id="7744288875026996234" at="36,43,37,59" concept="7" />
-      <node id="7744288875026996234" at="37,59,38,59" concept="7" />
-      <node id="7744288875026996234" at="39,56,40,34" concept="2" />
-      <node id="7744288875026996234" at="40,34,41,79" concept="2" />
-      <node id="7744288875026996234" at="41,79,42,35" concept="2" />
-      <node id="7744288875026996234" at="42,35,43,79" concept="2" />
-      <node id="7744288875026996234" at="44,12,45,34" concept="2" />
-      <node id="7744288875026996234" at="45,34,46,35" concept="2" />
-      <node id="7744288875026996234" at="46,35,47,79" concept="2" />
-      <node id="7744288875026996234" at="47,79,48,79" concept="2" />
-      <node id="7744288875026996234" at="14,0,16,0" concept="1" trace="TransactionController#()V" />
-      <node id="7744288875026996234" at="44,10,49,5" concept="0" />
-      <node id="7744288875026996234" at="38,59,49,5" concept="5" />
-      <node id="7744288875026996234" at="17,0,51,0" concept="6" trace="addTransactionToAccount#(LSolutionMoneyManager/a_model/User;)V" />
-      <scope id="7744288875026996234" at="14,34,14,34" />
-      <scope id="7744288875026996234" at="14,0,16,0" />
-      <scope id="7744288875026996234" at="39,56,43,79" />
-      <scope id="7744288875026996234" at="44,12,48,79" />
-      <scope id="7744288875026996234" at="17,50,49,5">
+      <node id="7744288875026996234" at="22,50,23,40" concept="9" />
+      <node id="7744288875026996234" at="23,40,24,41" concept="4" />
+      <node id="7744288875026996234" at="24,41,25,35" concept="9" />
+      <node id="7744288875026996234" at="25,35,26,45" concept="4" />
+      <node id="7744288875026996234" at="26,45,27,32" concept="9" />
+      <node id="7744288875026996234" at="27,32,28,43" concept="4" />
+      <node id="7744288875026996234" at="28,43,29,30" concept="9" />
+      <node id="7744288875026996234" at="29,30,30,45" concept="4" />
+      <node id="7744288875026996234" at="30,45,31,32" concept="9" />
+      <node id="7744288875026996234" at="31,32,32,76" concept="9" />
+      <node id="7744288875026996234" at="32,76,33,59" concept="9" />
+      <node id="7744288875026996234" at="33,59,34,47" concept="4" />
+      <node id="7744288875026996234" at="34,47,35,36" concept="9" />
+      <node id="7744288875026996234" at="35,36,36,31" concept="9" />
+      <node id="7744288875026996234" at="36,31,37,32" concept="9" />
+      <node id="7744288875026996234" at="37,32,38,49" concept="4" />
+      <node id="7744288875026996234" at="38,49,39,32" concept="9" />
+      <node id="7744288875026996234" at="39,32,40,46" concept="4" />
+      <node id="7744288875026996234" at="40,46,41,43" concept="9" />
+      <node id="7744288875026996234" at="41,43,42,59" concept="9" />
+      <node id="7744288875026996234" at="42,59,43,59" concept="9" />
+      <node id="7744288875026996234" at="44,56,45,42" concept="4" />
+      <node id="7744288875026996234" at="45,42,46,79" concept="4" />
+      <node id="7744288875026996234" at="46,79,47,43" concept="4" />
+      <node id="7744288875026996234" at="47,43,48,79" concept="4" />
+      <node id="7744288875026996234" at="49,12,50,42" concept="4" />
+      <node id="7744288875026996234" at="50,42,51,43" concept="4" />
+      <node id="7744288875026996234" at="51,43,52,79" concept="4" />
+      <node id="7744288875026996234" at="52,79,53,79" concept="4" />
+      <node id="7744288875026996234" at="54,5,55,0" concept="11" />
+      <node id="7744288875026996234" at="56,56,57,16" concept="9" />
+      <node id="7744288875026996234" at="59,56,60,14" concept="4" />
+      <node id="7744288875026996234" at="61,16,62,114" concept="4" />
+      <node id="7744288875026996234" at="62,114,63,76" concept="4" />
+      <node id="7744288875026996234" at="65,7,66,12" concept="4" />
+      <node id="7744288875026996234" at="68,51,69,14" concept="4" />
+      <node id="7744288875026996234" at="70,16,71,114" concept="4" />
+      <node id="7744288875026996234" at="71,114,72,76" concept="4" />
+      <node id="7744288875026996234" at="75,12,76,16" concept="9" />
+      <node id="7744288875026996234" at="78,56,79,14" concept="4" />
+      <node id="7744288875026996234" at="80,16,81,114" concept="4" />
+      <node id="7744288875026996234" at="81,114,82,76" concept="4" />
+      <node id="7744288875026996234" at="84,7,85,12" concept="4" />
+      <node id="7744288875026996234" at="87,51,88,14" concept="4" />
+      <node id="7744288875026996234" at="89,16,90,114" concept="4" />
+      <node id="7744288875026996234" at="90,114,91,76" concept="4" />
+      <node id="7744288875026996234" at="92,9,93,0" concept="11" />
+      <node id="7744288875026996234" at="19,0,21,0" concept="2" trace="TransactionController#()V" />
+      <node id="7744288875026996234" at="61,14,64,9" concept="0" />
+      <node id="7744288875026996234" at="70,14,73,9" concept="0" />
+      <node id="7744288875026996234" at="80,14,83,9" concept="0" />
+      <node id="7744288875026996234" at="89,14,92,9" concept="0" />
+      <node id="7744288875026996234" at="49,10,54,5" concept="0" />
+      <node id="7744288875026996234" at="58,53,64,9" concept="7" />
+      <node id="7744288875026996234" at="67,53,73,9" concept="7" />
+      <node id="7744288875026996234" at="77,53,83,9" concept="7" />
+      <node id="7744288875026996234" at="86,53,92,9" concept="7" />
+      <node id="7744288875026996234" at="57,16,65,7" concept="6" />
+      <node id="7744288875026996234" at="66,12,74,7" concept="6" />
+      <node id="7744288875026996234" at="76,16,84,7" concept="6" />
+      <node id="7744288875026996234" at="85,12,94,7" concept="6" />
+      <node id="7744288875026996234" at="43,59,54,5" concept="7" />
+      <node id="7744288875026996234" at="75,10,95,5" concept="0" />
+      <node id="7744288875026996234" at="55,0,95,5" concept="7" />
+      <node id="7744288875026996234" at="22,0,97,0" concept="8" trace="addTransactionToAccount#(LMoneyManagerGeneratedCode/model/User;)V" />
+      <scope id="7744288875026996234" at="19,34,19,34" />
+      <scope id="7744288875026996234" at="59,56,60,14" />
+      <scope id="7744288875026996234" at="68,51,69,14" />
+      <scope id="7744288875026996234" at="78,56,79,14" />
+      <scope id="7744288875026996234" at="87,51,88,14" />
+      <scope id="7744288875026996234" at="19,0,21,0" />
+      <scope id="7744288875026996234" at="61,16,63,76" />
+      <scope id="7744288875026996234" at="70,16,72,76" />
+      <scope id="7744288875026996234" at="80,16,82,76" />
+      <scope id="7744288875026996234" at="89,16,91,76" />
+      <scope id="7744288875026996234" at="44,56,48,79" />
+      <scope id="7744288875026996234" at="49,12,53,79" />
+      <scope id="7744288875026996234" at="58,53,64,9" />
+      <scope id="7744288875026996234" at="67,53,73,9" />
+      <scope id="7744288875026996234" at="77,53,83,9" />
+      <scope id="7744288875026996234" at="86,53,93,0" />
+      <scope id="7744288875026996234" at="57,16,65,7">
+        <var name="acc" id="7744288875026996234" />
+      </scope>
+      <scope id="7744288875026996234" at="66,12,74,7">
+        <var name="acc" id="7744288875026996234" />
+      </scope>
+      <scope id="7744288875026996234" at="76,16,84,7">
+        <var name="acc" id="7744288875026996234" />
+      </scope>
+      <scope id="7744288875026996234" at="85,12,94,7">
+        <var name="acc" id="7744288875026996234" />
+      </scope>
+      <scope id="7744288875026996234" at="56,56,74,7">
+        <var name="i" id="7744288875026996234" />
+      </scope>
+      <scope id="7744288875026996234" at="75,12,94,7">
+        <var name="i" id="7744288875026996234" />
+      </scope>
+      <scope id="7744288875026996234" at="22,50,95,5">
         <var name="accName" id="7744288875026996234" />
         <var name="amount" id="7744288875026996234" />
         <var name="category" id="7744288875026996234" />
@@ -331,52 +511,90 @@
         <var name="transactionList1" id="7744288875026996234" />
         <var name="transactionList2" id="7744288875026996234" />
       </scope>
-      <scope id="7744288875026996234" at="17,0,51,0">
+      <scope id="7744288875026996234" at="22,0,97,0">
         <var name="user" id="7744288875026996234" />
       </scope>
-      <unit id="7744288875026996234" at="12,0,52,0" name="SolutionMoneyManager.a_model.TransactionController" />
+      <unit id="7744288875026996234" at="17,0,98,0" name="MoneyManagerGeneratedCode.controller.TransactionController" />
     </file>
     <file name="TransactionUI.java">
-      <unit id="7744288875026996234" at="6,0,8,0" name="SolutionMoneyManager.a_model.TransactionUI" />
+      <node id="7744288875026996234" at="11,59,12,40" concept="9" />
+      <node id="7744288875026996234" at="12,40,13,15" concept="9" />
+      <node id="7744288875026996234" at="13,15,14,78" concept="9" />
+      <node id="7744288875026996234" at="14,78,15,90" concept="9" />
+      <node id="7744288875026996234" at="15,90,16,29" concept="4" />
+      <node id="7744288875026996234" at="17,8,18,28" concept="4" />
+      <node id="7744288875026996234" at="20,15,21,78" concept="4" />
+      <node id="7744288875026996234" at="21,78,22,35" concept="4" />
+      <node id="7744288875026996234" at="22,35,23,16" concept="1" />
+      <node id="7744288875026996234" at="25,73,26,57" concept="4" />
+      <node id="7744288875026996234" at="27,11,28,35" concept="4" />
+      <node id="7744288875026996234" at="28,35,29,16" concept="1" />
+      <node id="7744288875026996234" at="30,15,31,35" concept="4" />
+      <node id="7744288875026996234" at="31,35,32,16" concept="1" />
+      <node id="7744288875026996234" at="33,16,34,35" concept="4" />
+      <node id="7744288875026996234" at="34,35,35,36" concept="4" />
+      <node id="7744288875026996234" at="24,15,27,11" concept="6" />
+      <node id="7744288875026996234" at="18,28,36,7" concept="14" />
+      <node id="7744288875026996234" at="16,29,37,26" concept="3" />
+      <node id="7744288875026996234" at="11,0,39,0" concept="12" trace="transactionUI#(LMoneyManagerGeneratedCode/model/Modelation;)V" />
+      <scope id="7744288875026996234" at="25,73,26,57" />
+      <scope id="7744288875026996234" at="30,15,32,16" />
+      <scope id="7744288875026996234" at="33,16,35,36" />
+      <scope id="7744288875026996234" at="20,15,23,16" />
+      <scope id="7744288875026996234" at="24,15,27,11">
+        <var name="acc" id="7744288875026996234" />
+      </scope>
+      <scope id="7744288875026996234" at="24,15,29,16" />
+      <scope id="7744288875026996234" at="17,8,36,7" />
+      <scope id="7744288875026996234" at="11,59,37,26">
+        <var name="menu" id="7744288875026996234" />
+        <var name="option" id="7744288875026996234" />
+        <var name="sc" id="7744288875026996234" />
+        <var name="transactionController" id="7744288875026996234" />
+      </scope>
+      <scope id="7744288875026996234" at="11,0,39,0">
+        <var name="modelation" id="7744288875026996234" />
+      </scope>
+      <unit id="7744288875026996234" at="10,0,40,0" name="MoneyManagerGeneratedCode.ui.TransactionUI" />
     </file>
     <file name="User.java">
-      <node id="7744288875026813463" at="9,0,10,0" concept="3" trace="name" />
-      <node id="7744288875026813463" at="10,0,11,0" concept="3" trace="accountList" />
-      <node id="7744288875026813463" at="11,0,12,0" concept="3" trace="birthDate" />
-      <node id="7744288875026813463" at="14,49,15,31" concept="2" />
-      <node id="7744288875026813463" at="15,31,16,21" concept="2" />
-      <node id="7744288875026813463" at="19,80,20,21" concept="2" />
-      <node id="7744288875026813463" at="20,21,21,35" concept="2" />
-      <node id="7744288875026813463" at="21,35,22,31" concept="2" />
-      <node id="7744288875026813463" at="25,27,26,21" concept="8" />
-      <node id="7744288875026813463" at="28,36,29,21" concept="2" />
-      <node id="7744288875026813463" at="31,45,32,28" concept="8" />
-      <node id="7744288875026813463" at="34,61,35,35" concept="2" />
-      <node id="7744288875026813463" at="37,35,38,26" concept="8" />
-      <node id="7744288875026813463" at="40,49,41,31" concept="2" />
-      <node id="7744288875026813463" at="44,0,45,0" concept="3" trace="nameString" />
-      <node id="7744288875026813463" at="45,0,46,0" concept="3" trace="accountListString" />
-      <node id="7744288875026813463" at="46,0,47,0" concept="3" trace="birthDateString" />
-      <node id="7744288875026813463" at="49,28,50,76" concept="8" />
-      <node id="7744288875026813463" at="54,46,55,41" concept="2" />
-      <node id="7744288875026813463" at="25,0,28,0" concept="6" trace="getName#()Ljava/lang/String;" />
-      <node id="7744288875026813463" at="28,0,31,0" concept="6" trace="setName#(Ljava/lang/String;)V" />
-      <node id="7744288875026813463" at="31,0,34,0" concept="6" trace="getAccountList#()Ljava/util/List;" />
-      <node id="7744288875026813463" at="34,0,37,0" concept="6" trace="setAccountList#(Ljava/util/List;)V" />
-      <node id="7744288875026813463" at="37,0,40,0" concept="6" trace="getBirthDate#()Ljava/time/LocalDate;" />
-      <node id="7744288875026813463" at="40,0,43,0" concept="6" trace="setBirthDate#(Ljava/time/LocalDate;)V" />
-      <node id="7744288875026813463" at="53,34,56,5" concept="4" />
-      <node id="7744288875026813463" at="14,0,18,0" concept="1" trace="User#(Ljava/time/LocalDate;Ljava/lang/String;)V" />
-      <node id="7744288875026813463" at="48,0,52,0" concept="6" trace="toString#()Ljava/lang/String;" />
-      <node id="7744288875026813463" at="19,0,24,0" concept="1" trace="User#(Ljava/lang/String;Ljava/util/List;Ljava/time/LocalDate;)V" />
-      <node id="7744288875026813463" at="53,0,58,0" concept="6" trace="listAll#(LSolutionMoneyManager/a_model/User;)V" />
+      <node id="7744288875026813463" at="9,0,10,0" concept="5" trace="name" />
+      <node id="7744288875026813463" at="10,0,11,0" concept="5" trace="accountList" />
+      <node id="7744288875026813463" at="11,0,12,0" concept="5" trace="birthDate" />
+      <node id="7744288875026813463" at="14,49,15,31" concept="4" />
+      <node id="7744288875026813463" at="15,31,16,21" concept="4" />
+      <node id="7744288875026813463" at="19,80,20,21" concept="4" />
+      <node id="7744288875026813463" at="20,21,21,35" concept="4" />
+      <node id="7744288875026813463" at="21,35,22,31" concept="4" />
+      <node id="7744288875026813463" at="25,27,26,21" concept="10" />
+      <node id="7744288875026813463" at="28,36,29,21" concept="4" />
+      <node id="7744288875026813463" at="31,45,32,28" concept="10" />
+      <node id="7744288875026813463" at="34,61,35,35" concept="4" />
+      <node id="7744288875026813463" at="37,35,38,26" concept="10" />
+      <node id="7744288875026813463" at="40,49,41,31" concept="4" />
+      <node id="7744288875026813463" at="44,0,45,0" concept="5" trace="nameString" />
+      <node id="7744288875026813463" at="45,0,46,0" concept="5" trace="accountListString" />
+      <node id="7744288875026813463" at="46,0,47,0" concept="5" trace="birthDateString" />
+      <node id="7744288875026813463" at="49,28,50,75" concept="10" />
+      <node id="7744288875026813463" at="54,46,55,41" concept="4" />
+      <node id="7744288875026813463" at="25,0,28,0" concept="8" trace="getName#()Ljava/lang/String;" />
+      <node id="7744288875026813463" at="28,0,31,0" concept="8" trace="setName#(Ljava/lang/String;)V" />
+      <node id="7744288875026813463" at="31,0,34,0" concept="8" trace="getAccountList#()Ljava/util/List;" />
+      <node id="7744288875026813463" at="34,0,37,0" concept="8" trace="setAccountList#(Ljava/util/List;)V" />
+      <node id="7744288875026813463" at="37,0,40,0" concept="8" trace="getBirthDate#()Ljava/time/LocalDate;" />
+      <node id="7744288875026813463" at="40,0,43,0" concept="8" trace="setBirthDate#(Ljava/time/LocalDate;)V" />
+      <node id="7744288875026813463" at="53,34,56,5" concept="6" />
+      <node id="7744288875026813463" at="14,0,18,0" concept="2" trace="User#(Ljava/time/LocalDate;Ljava/lang/String;)V" />
+      <node id="7744288875026813463" at="48,0,52,0" concept="8" trace="toString#()Ljava/lang/String;" />
+      <node id="7744288875026813463" at="19,0,24,0" concept="2" trace="User#(Ljava/lang/String;Ljava/util/List;Ljava/time/LocalDate;)V" />
+      <node id="7744288875026813463" at="53,0,58,0" concept="8" trace="listAll#(LMoneyManagerGeneratedCode/model/User;)V" />
       <scope id="7744288875026813463" at="25,27,26,21" />
       <scope id="7744288875026813463" at="28,36,29,21" />
       <scope id="7744288875026813463" at="31,45,32,28" />
       <scope id="7744288875026813463" at="34,61,35,35" />
       <scope id="7744288875026813463" at="37,35,38,26" />
       <scope id="7744288875026813463" at="40,49,41,31" />
-      <scope id="7744288875026813463" at="49,28,50,76" />
+      <scope id="7744288875026813463" at="49,28,50,75" />
       <scope id="7744288875026813463" at="54,46,55,41" />
       <scope id="7744288875026813463" at="14,49,16,21" />
       <scope id="7744288875026813463" at="19,80,22,31" />
@@ -409,13 +627,62 @@
       <scope id="7744288875026813463" at="53,0,58,0">
         <var name="user" id="7744288875026813463" />
       </scope>
-      <unit id="7744288875026813463" at="8,0,59,0" name="SolutionMoneyManager.a_model.User" />
+      <unit id="7744288875026813463" at="8,0,59,0" name="MoneyManagerGeneratedCode.model.User" />
     </file>
     <file name="UserController.java">
-      <unit id="7744288875026813463" at="6,0,8,0" name="SolutionMoneyManager.a_model.UserController" />
+      <node id="7744288875026813463" at="19,25,20,40" concept="9" />
+      <node id="7744288875026813463" at="20,40,21,38" concept="4" />
+      <node id="7744288875026813463" at="21,38,22,32" concept="9" />
+      <node id="7744288875026813463" at="22,32,23,42" concept="4" />
+      <node id="7744288875026813463" at="23,42,24,32" concept="9" />
+      <node id="7744288875026813463" at="24,32,25,76" concept="9" />
+      <node id="7744288875026813463" at="25,76,26,59" concept="9" />
+      <node id="7744288875026813463" at="26,59,27,58" concept="9" />
+      <node id="7744288875026813463" at="27,58,28,54" concept="10" />
+      <node id="7744288875026813463" at="16,0,18,0" concept="2" trace="UserController#()V" />
+      <node id="7744288875026813463" at="19,0,30,0" concept="8" trace="addUser#()LMoneyManagerGeneratedCode/model/User;" />
+      <scope id="7744288875026813463" at="16,27,16,27" />
+      <scope id="7744288875026813463" at="16,0,18,0" />
+      <scope id="7744288875026813463" at="19,25,28,54">
+        <var name="accountBaseList" id="7744288875026813463" />
+        <var name="date" id="7744288875026813463" />
+        <var name="formatter" id="7744288875026813463" />
+        <var name="localDate" id="7744288875026813463" />
+        <var name="name" id="7744288875026813463" />
+        <var name="sc" id="7744288875026813463" />
+      </scope>
+      <scope id="7744288875026813463" at="19,0,30,0" />
+      <unit id="7744288875026813463" at="13,0,31,0" name="MoneyManagerGeneratedCode.controller.UserController" />
     </file>
     <file name="UserUI.java">
-      <unit id="7744288875026813463" at="6,0,8,0" name="SolutionMoneyManager.a_model.UserUI" />
+      <node id="7744288875026813463" at="10,52,11,40" concept="9" />
+      <node id="7744288875026813463" at="11,40,12,15" concept="9" />
+      <node id="7744288875026813463" at="12,15,13,68" concept="9" />
+      <node id="7744288875026813463" at="13,68,14,29" concept="4" />
+      <node id="7744288875026813463" at="15,8,16,28" concept="4" />
+      <node id="7744288875026813463" at="18,15,19,62" concept="4" />
+      <node id="7744288875026813463" at="19,62,20,35" concept="4" />
+      <node id="7744288875026813463" at="20,35,21,16" concept="1" />
+      <node id="7744288875026813463" at="22,15,23,35" concept="4" />
+      <node id="7744288875026813463" at="23,35,24,16" concept="1" />
+      <node id="7744288875026813463" at="25,16,26,35" concept="4" />
+      <node id="7744288875026813463" at="26,35,27,29" concept="4" />
+      <node id="7744288875026813463" at="16,28,28,7" concept="14" />
+      <node id="7744288875026813463" at="14,29,29,26" concept="3" />
+      <node id="7744288875026813463" at="10,0,31,0" concept="12" trace="userUI#(LMoneyManagerGeneratedCode/model/Modelation;)V" />
+      <scope id="7744288875026813463" at="22,15,24,16" />
+      <scope id="7744288875026813463" at="25,16,27,29" />
+      <scope id="7744288875026813463" at="18,15,21,16" />
+      <scope id="7744288875026813463" at="15,8,28,7" />
+      <scope id="7744288875026813463" at="10,52,29,26">
+        <var name="menu" id="7744288875026813463" />
+        <var name="option" id="7744288875026813463" />
+        <var name="sc" id="7744288875026813463" />
+      </scope>
+      <scope id="7744288875026813463" at="10,0,31,0">
+        <var name="modelation" id="7744288875026813463" />
+      </scope>
+      <unit id="7744288875026813463" at="8,0,32,0" name="MoneyManagerGeneratedCode.ui.UserUI" />
     </file>
     <file name="map_Model.java">
       <unit id="7744288875023187754" at="6,0,8,0" name="SolutionMoneyManager.a_model.map_Model" />
