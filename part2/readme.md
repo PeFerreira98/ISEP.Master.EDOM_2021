@@ -54,18 +54,35 @@ For each metamodel element, the team chose a different graphically representatio
 ## Activity 2: Specify Common Features for Applications of the Domain
 
 For the prototypes we will be using a common OO Language such as Java or C# and we will be developing a console application based in the MoneyManager(iOS), Moneyboard and MoneyManager(Android) apps.
-The team choose 2 different object oriented programming languages by each member preference and to show the possibilities of code generation techniques that will be used on the activities ahead.
+The team choose Java as object oriented programming languages by each member preference and to show the possibilities of code generation techniques that will be used on the activities ahead.
 
 For all models, there are some common functionalities:
 
-1. Create User
+- Create User
     - The User need to create a User based on UserSpec that will contain Attributes/fields based on UserAttribute and a name. 
     - In this case we will assume a User has an Account list for simplicity.
-2. Create Account
+- Create Account
     - The User need to create an Account based on AccountSpec that will contain Attributes/fields based on AccountAttribute and a name. 
-    - In this case we will assume a Account has an Transaction list for simplicity.
-3. Create Transaction
+    - In this case we will assume a Account has a Transaction list for simplicity.
+- Create Transaction
     - The User need to create Transaction based on TransactionSpec that will contain Attributes/fields based on TransactionAttribute and a name.
+    - In this case we will assume a Transaction has one Category for simplicity.
+
+- Create AccountGroup
+    - The User need to create an AccountGroup based on AccountGroupSpec that will contain Attributes/fields based on AccountAttribute and a name. 
+    - In this case we will assume a AccountGroup has a Account list for simplicity.
+
+- Show the User Profile
+    - The User wants to see his profile.
+
+- List Accounts
+    - The User wants to get all the accounts that he had created.
+
+- List AccountGroups
+    - The User wants to get all the accounts groups that he had created.
+
+- List Transactions
+    - The User wants to get all the transactions that he had made.
 
 
 ## Activity 3: Implement Prototypes of Applications of the Domain
