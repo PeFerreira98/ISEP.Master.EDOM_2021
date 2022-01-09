@@ -69,6 +69,60 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Category.txt</LastGenOutput>
     </None>
+    <None Include="IncomeCategory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IncomeCategory.txt</LastGenOutput>
+    </None>
+    <None Include="ExpenseCategory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ExpenseCategory.txt</LastGenOutput>
+    </None>
+    <None Include="User.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>User.txt</LastGenOutput>
+    </None>
+    <None Include="Account.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Account.txt</LastGenOutput>
+    </None>
+    <None Include="Transaction.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Transaction.txt</LastGenOutput>
+    </None>
+    <None Include="AccountGroup.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AccountGroup.txt</LastGenOutput>
+    </None>
+    <Content Include="AccountGroup.txt">
+      <DependentUpon>AccountGroup.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="Transaction.txt">
+      <DependentUpon>Transaction.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="Account.txt">
+      <DependentUpon>Account.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="User.txt">
+      <DependentUpon>User.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="ExpenseCategory.txt">
+      <DependentUpon>ExpenseCategory.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="IncomeCategory.txt">
+      <DependentUpon>IncomeCategory.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
     <Content Include="Category.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

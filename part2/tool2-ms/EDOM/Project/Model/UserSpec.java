@@ -9,9 +9,9 @@ public class UserSpec {
     private List<Account> accountList;
     private LocalDate birthDate;
 
-	public UserSpec(String name, List<Account> accountList, LocalDate birthDate) {
+	public UserSpec(String name, List<AccountSpec> accountList, LocalDate birthDate) {
         this.name = name;
-        this.accountList = accountList;
+        this.AccountSpecList = AccountSpecList;
         this.birthDate = birthDate;
     }
 
@@ -23,12 +23,12 @@ public class UserSpec {
         this.name = name;
     }
 
-    public List<Account> getAccountList() {
-        return accountList;
+    public List<AccountSpec> getAccountSpecList() {
+        return AccountSpecList;
     }
 
-    public void setAccountList(List<Account> accountList) {
-        this.accountList = accountList;
+    public void setAccountSpecList(List<AccountSpec> AccountSpecList) {
+        this.AccountSpecList = AccountSpecList;
     }
 
     public LocalDate getBirthDate() {
@@ -44,7 +44,7 @@ public class UserSpec {
     public String toString() {
         return "UserSpec" +
                 "name='" + name + '\'' +
-                ", accountList=" + accountList +
+                ", AccountSpecList=" + AccountSpecList +
                 ", birthDate=" + birthDate +
                 '}';
     }

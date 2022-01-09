@@ -8,36 +8,26 @@
 <#@ output extension=".txt" #>
 <#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
 <#
-  foreach (UserSpec user in this.Model.Elements)
-  {
-  String userName = user.Name;
   foreach (AccountSpec account in this.Model.AccountSpec)
   {
   String accountName = account.Name;
+  foreach (AccountGroupSpec accountGroup in this.Model.AccountGroupSpec)
+  {
+  String accountGroupName = accountGroup.Name;
 #>
 package Model;
 
-import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 		
-public class <#= userName #> {
+public class <#= accountGroupName #> {
 			
 	private String name;
-    private List<Account> accountList;
-    private LocalDate birthDate;
+    private List<<#= accountName #>> <#= accountName #>List;
 
-	public <#= userName #>(String name, List<<#= accountName #>> accountList, LocalDate birthDate) {
+	public <#= accountGroupName #>(String name, List<<#= accountName #>> <#= accountName #>List) {
         this.name = name;
         this.<#= accountName #>List = <#= accountName #>List;
-        this.birthDate = birthDate;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public List<<#= accountName #>> get<#= accountName #>List() {
@@ -48,28 +38,39 @@ public class <#= userName #> {
         this.<#= accountName #>List = <#= accountName #>List;
     }
 
-    public LocalDate getBirthDate() {
-        return birthDate;
+    public String getName() {
+        return name;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setName(String name) {
+        this.name = name;
     }
-
 
     @Override
     public String toString() {
-        return "<#= userName #>" +
-                "name='" + name + '\'' +
-                ", <#= accountName #>List=" + <#= accountName #>List +
-                ", birthDate=" + birthDate +
-                '}';
+        return "<#= accountGroupName #>{" +
+                "<#= accountName #>List=" + <#= accountName #>List +
+                ", name='" + name + '\'' +
+                "}\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        <#= accountGroupName #> that = (<#= accountGroupName #>) o;
+        return name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }
 <#    
         String dir = "../../../Project/Model";
         Directory.CreateDirectory(dir);
-        File.WriteAllText(Path.Combine(dir, userName + ".java"), this.GenerationEnvironment.ToString());
+        File.WriteAllText(Path.Combine(dir, accountGroupName + ".java"), this.GenerationEnvironment.ToString());
 
     this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
     }

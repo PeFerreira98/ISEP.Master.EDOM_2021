@@ -1,30 +1,30 @@
 package Model;
 
-import java.util.List;
 import java.util.Objects;
-
-public class Account {
-
-    private List<Transaction> transactionList;
-    private String name;
+import java.util.List;
+		
+public class AccountSpec {
+			
+	private String name;
+    private List<TransactionSpec> TransactionSpecList;
     private double amount;
 
-    public Account(List<Transaction> transactionList) {
-        this.transactionList = transactionList;
+    public AccountSpec(List<TransactionSpec> TransactionSpecList) {
+        this.TransactionSpecList = TransactionSpecList;
     }
 
-    public Account(List<Transaction> transactionList, String name, double initialAmount) {
-        this.transactionList = transactionList;
+	public AccountSpec(String name, List<TransactionSpec> TransactionSpecList, double initialAmount) {
         this.name = name;
+        this.TransactionSpecList = TransactionSpecList;
         this.amount = initialAmount;
     }
 
-    public List<Transaction> getTransactionList() {
-        return transactionList;
+    public List<TransactionSpec> getTransactionSpecList() {
+        return TransactionSpecList;
     }
 
-    public void setTransactionList(List<Transaction> transactionList) {
-        this.transactionList = transactionList;
+    public void setTransactionSpecList(List<TransactionSpec> TransactionSpecList) {
+        this.TransactionSpecList = TransactionSpecList;
     }
 
     public String getName() {
@@ -43,10 +43,11 @@ public class Account {
         this.amount = initialAmount;
     }
 
+
     @Override
     public String toString() {
-        return "Account{" +
-                "transactionList=" + transactionList +
+        return "AccountSpec{" +
+                "TransactionSpecList=" + TransactionSpecList +
                 ", name='" + name + '\'' +
                 ", amount=" + amount +
                 "}\n";
@@ -56,8 +57,8 @@ public class Account {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Account account = (Account) o;
-        return name.equals(account.name);
+        AccountSpec that = (AccountSpec) o;
+        return name.equals(that.name);
     }
 
     @Override
