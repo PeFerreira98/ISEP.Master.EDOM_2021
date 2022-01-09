@@ -321,6 +321,9 @@
         <node concept="ljvvj" id="5fOgv8G4NDz" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
+        <node concept="Vb9p2" id="2jW5yChkKJx" role="3F10Kt">
+          <property role="Vbekb" value="g1_kEg4/ITALIC" />
+        </node>
       </node>
       <node concept="3F0ifn" id="5fOgv8G4NDp" role="3EZMnx">
         <property role="3F0ifm" value=" " />
@@ -348,6 +351,9 @@
         <node concept="3$7fVu" id="5fOgv8G5pYw" role="3F10Kt">
           <property role="3$6WeP" value="8" />
         </node>
+        <node concept="Vb9p2" id="2jW5yChkKJD" role="3F10Kt">
+          <property role="Vbekb" value="g1_kEg4/ITALIC" />
+        </node>
       </node>
       <node concept="3F0ifn" id="5fOgv8G4NEq" role="3EZMnx">
         <property role="3F0ifm" value=" " />
@@ -374,6 +380,9 @@
         </node>
         <node concept="3$7fVu" id="5fOgv8G5pYB" role="3F10Kt">
           <property role="3$6WeP" value="8" />
+        </node>
+        <node concept="Vb9p2" id="2jW5yChkKJM" role="3F10Kt">
+          <property role="Vbekb" value="g1_kEg4/ITALIC" />
         </node>
       </node>
       <node concept="3F0ifn" id="5fOgv8G4NGe" role="3EZMnx">

@@ -125,6 +125,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       editorCell.setCellId("property_name");
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.ITALIC);
       editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
@@ -202,6 +203,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
       style.set(StyleAttributes.PADDING_LEFT, new Padding(8, Measure.SPACES));
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.ITALIC);
       editorCell.getStyle().putAll(style);
     }
     @Override
@@ -281,6 +283,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
       style.set(StyleAttributes.PADDING_LEFT, new Padding(8, Measure.SPACES));
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.ITALIC);
       editorCell.getStyle().putAll(style);
     }
     @Override
