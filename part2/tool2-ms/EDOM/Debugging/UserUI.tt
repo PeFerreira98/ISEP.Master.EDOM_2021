@@ -1,0 +1,51 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  foreach (UserSpec user in this.Model.Elements)
+  {
+  String userName = user.Name;
+#>
+package UI;
+
+import Controller.<#= this.Model.Name #>ation;
+import java.util.Scanner;
+		
+public class <#= userName #>UI {
+
+	public static void <#= userName #>UI(<#= this.Model.Name #>ation <#= this.Model.Name #>ation) {
+        Scanner sc = new Scanner(System.in);
+        int option;
+        String menu = "1 - Check User Profile\n0 - Go to Main Menu";
+        System.out.println(menu);
+        do {
+            option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    System.out.println(<#= this.Model.Name #>ation.get<#= userName #>().toString());
+                    System.out.println(menu);
+                    break;
+                case 0:
+                    Program.menu(<#= this.Model.Name #>ation);
+                    break;
+                default:
+                    System.out.println(menu);
+                    <#= userName #>UI(<#= this.Model.Name #>ation);
+            }
+        } while (option != 0);
+    }
+}
+<#    
+        String dir = "../../../Project/UI";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, userName + "UI.java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }
+#>

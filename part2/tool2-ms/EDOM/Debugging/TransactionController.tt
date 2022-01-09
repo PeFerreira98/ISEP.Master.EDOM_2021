@@ -1,0 +1,126 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  String model = this.Model.Name;
+  String categoryName = this.Model.CategorySpec.Name;
+  foreach (UserSpec user in this.Model.Elements)
+  {
+  foreach (AccountSpec account in this.Model.AccountSpec)
+  {
+  String accountName = account.Name;
+  foreach (TransactionSpec transaction in this.Model.TransactionSpec)
+  {
+  String transactionName = transaction.Name;
+  String userName = user.Name;
+#>
+package Controller;
+
+import Model.*;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
+
+public class <#= transactionName #>Controller {
+
+    public <#= transactionName #>Controller() {
+    }
+
+    public void add<#= transactionName #>To<#= accountName #>(<#= userName #> <#= userName #>) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Account Name");
+        String accName = sc.nextLine();
+        System.out.println("Transaction From");
+        String from = sc.nextLine();
+        System.out.println("Transaction To");
+        String to = sc.nextLine();
+        System.out.println("Transaction Date");
+        String date = sc.nextLine();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate localDate = LocalDate.parse(date, formatter);
+        System.out.println("Transaction Amount");
+        double amount = sc.nextDouble();
+        Income<#= categoryName #> icat = null;
+        Expense<#= categoryName #> ecat = null;
+        System.out.println("Transaction Category");
+        String <#= categoryName #> = sc.next();
+        System.out.println("Income or Expensive?");
+        String <#= categoryName #>Description = sc.next();
+        List<<#= transactionName #>> <#= transactionName #>List1 = new ArrayList<>();
+        List<<#= transactionName #>> <#= transactionName #>List2 = new ArrayList<>();
+        if (Objects.equals(<#= categoryName #>Description, "Income")) {
+            icat = new Income<#= categoryName #>(<#= categoryName #>);
+            <#= transactionName #>List1.add(new <#= transactionName #>(from, to, amount, localDate, icat));
+            ecat = new Expense<#= categoryName #>(<#= categoryName #>);
+            <#= transactionName #>List2.add(new <#= transactionName #>(from, to, amount, localDate, ecat));
+        } else {
+            icat = new Income<#= categoryName #>(<#= categoryName #>);
+            ecat = new Expense<#= categoryName #>(<#= categoryName #>);
+            <#= transactionName #>List1.add(new <#= transactionName #>(from, to, amount, localDate, ecat));
+            <#= transactionName #>List2.add(new <#= transactionName #>(from, to, amount, localDate, icat));
+        }
+
+        if (Objects.equals(<#= categoryName #>Description, "Income")) {
+            int i = 0;
+            for (<#= accountName #> acc : <#= userName #>.get<#= accountName #>List()) {
+                if (!Objects.equals(accName, acc.getName())) {
+                    i++;
+                } else {
+                    <#= userName #>.get<#= accountName #>List().get(i).setInitialAmount(
+                            <#= userName #>.get<#= accountName #>List().get(i).getInitialAmount() + amount);
+                    <#= userName #>.get<#= accountName #>List().get(i).set<#= transactionName #>List(<#= transactionName #>List1);
+                }
+            }
+            i = 0;
+            for (<#= accountName #> acc : <#= userName #>.get<#= accountName #>List()) {
+                if (!Objects.equals(to, acc.getName())) {
+                    i++;
+                } else {
+                    <#= userName #>.get<#= accountName #>List().get(i).setInitialAmount(
+                            <#= userName #>.get<#= accountName #>List().get(i).getInitialAmount() - amount);
+                    <#= userName #>.get<#= accountName #>List().get(i).set<#= transactionName #>List(<#= transactionName #>List2);
+                }
+            }
+        } else {
+            int i = 0;
+            for (<#= accountName #> acc : <#= userName #>.get<#= accountName #>List()) {
+                if (!Objects.equals(accName, acc.getName())) {
+                    i++;
+                } else {
+                    <#= userName #>.get<#= accountName #>List().get(i).setInitialAmount(
+                            <#= userName #>.get<#= accountName #>List().get(i).getInitialAmount() - amount);
+                    <#= userName #>.get<#= accountName #>List().get(i).set<#= transactionName #>List(<#= transactionName #>List1);
+                }
+            }
+            i = 0;
+            for (<#= accountName #> acc : <#= userName #>.get<#= accountName #>List()) {
+                if (!Objects.equals(to, acc.getName())) {
+                    i++;
+                } else {
+                    <#= userName #>.get<#= accountName #>List().get(i).setInitialAmount(
+                            <#= userName #>.get<#= accountName #>List().get(i).getInitialAmount() + amount);
+                    <#= userName #>.get<#= accountName #>List().get(i).set<#= transactionName #>List(<#= transactionName #>List2);
+                }
+            }
+        }
+    }
+}
+
+<#
+        String dir = "../../../Project/Controller";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, transactionName + "Controller.java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }}}
+#>

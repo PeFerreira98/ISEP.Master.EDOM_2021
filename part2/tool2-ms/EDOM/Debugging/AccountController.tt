@@ -1,0 +1,77 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  foreach (AccountGroupSpec accountGroup in this.Model.AccountGroupSpec)
+  {
+  String accountGroupName = accountGroup.Name;
+  foreach (UserSpec user in this.Model.Elements)
+  {
+  String userName = user.Name;
+  foreach (AccountSpec account in this.Model.AccountSpec)
+  {
+  String accountName = account.Name;
+  foreach (TransactionSpec transaction in this.Model.TransactionSpec)
+  {
+  String transactionName = transaction.Name;
+#>
+package Controller;
+
+import Model.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
+
+public class <#= accountName #>Controller {
+
+    public <#= accountName #>Controller() {
+    }
+
+    public void add<#= accountName #>To<#= userName #>(<#= userName #> <#= userName #>) {
+        Scanner sc = new Scanner(System.in);
+        List<<#= transactionName #>> <#= transactionName #>List = new ArrayList<>();
+        System.out.println("Account Name");
+        String name = sc.nextLine();
+        System.out.println("Account Amount");
+        double amount = sc.nextDouble();
+        List<<#= accountName #>> <#= accountName #>List = <#= userName #>.get<#= accountName #>List();
+        <#= accountName #>List.add(new <#= accountName #>(name,<#= transactionName #>List,amount));
+        <#= userName #>.set<#= accountName #>List(<#= accountName #>List);
+    }
+
+    public void add<#= accountName #>To<#= accountGroupName #>(<#= userName #> <#= userName #>,String <#= accountName #>Name,List<<#= accountGroupName #>><#= accountGroupName #>List) {
+        List<<#= accountName #>> <#= accountName #>List = <#= userName #>.get<#= accountName #>List();
+        int i = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Account Group Name");
+        String <#= accountGroupName #>Name = sc.nextLine();
+        for (<#= accountGroupName #> <#= accountGroupName #> : <#= accountGroupName #>List) {
+            if (!Objects.equals(<#= accountGroupName #>Name, <#= accountGroupName #>.getName())) {
+                i++;
+            } else {
+                for (<#= accountName #> acc : <#= accountName #>List) {
+                    if (Objects.equals(<#= accountName #>Name, acc.getName())) {
+                        <#= accountGroupName #>List.get(i).get<#= accountName #>List().add(acc);
+                    }
+                }
+            }
+        }
+    }
+}
+
+<#
+        String dir = "../../../Project/Controller";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, accountName + "Controller.java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }}}}
+#>

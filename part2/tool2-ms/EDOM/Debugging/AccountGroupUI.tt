@@ -1,0 +1,58 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+    String model = this.Model.Name;
+  foreach (AccountGroupSpec accountGroup in this.Model.AccountGroupSpec)
+  {
+  String accountGroupName = accountGroup.Name;
+#>
+package UI;
+import Controller.<#= accountGroupName #>Controller;
+import Controller.<#= model #>ation;
+
+import java.util.Scanner;
+
+public class <#= accountGroupName #>UI {
+
+   public static void <#= accountGroupName #>UI(<#= model #>ation <#= model #>ation) {
+        Scanner sc = new Scanner(System.in);
+        int option;
+        <#= accountGroupName #>Controller <#= accountGroupName #>Controller = new <#= accountGroupName #>Controller();
+        String menu = "1 - Add Account Group\n2 - Check Account Groups\n0 - Go to Main Menu";
+        System.out.println(menu);
+        do {
+            option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    <#= accountGroupName #>Controller.add<#= accountGroupName #>(<#= model #>ation.get<#= accountGroupName #>List());
+                    System.out.println(menu);
+                    break;
+                case 2:
+                    System.out.println(<#= model #>ation.get<#= accountGroupName #>List());
+                    System.out.println(menu);
+                    break;
+                case 0:
+                    Program.menu(<#= model #>ation);
+                    break;
+                default:
+                    System.out.println(menu);
+                    <#= accountGroupName #>UI(<#= model #>ation);
+            }
+        } while (option != 0);
+    }
+}
+<#    
+        String dir = "../../../Project/UI";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, accountGroupName + "UI.java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }
+#>

@@ -1,0 +1,53 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  foreach (UserSpec user in this.Model.Elements)
+  {
+  String userName = user.Name;
+  foreach (AccountSpec account in this.Model.AccountSpec)
+  {
+  String accountName = account.Name;
+#>
+package Controller;
+
+import Model.*;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class <#= userName #>Controller {
+
+    public <#= userName #>Controller() {
+    }
+
+    public <#= userName #> add<#= userName #>() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("User Name");
+        String name = sc.nextLine();
+        System.out.println("User Birthday");
+        String date = sc.nextLine();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate localDate = LocalDate.parse(date, formatter);
+        List<<#= accountName #>> <#= accountName #>List = new ArrayList<>();
+        return new <#= userName #>(name, <#= accountName #>List, localDate);
+    }
+}
+
+<#
+        String dir = "../../../Project/Controller";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, userName + "Controller.java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }}
+#>
