@@ -1,5 +1,8 @@
 package Model;
 
+import Model.Category.ExpenseCategory;
+import Model.Category.IncomeCategory;
+
 import java.time.LocalDate;
 
 public class Transaction {

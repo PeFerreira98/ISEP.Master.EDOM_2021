@@ -6,11 +6,11 @@ import java.util.Objects;
 public class AccountGroup {
 
     private String name;
-    private List<Account> accountList;
+    private List<AccountBase> accountBaseList;
 
-    public AccountGroup(String name, List<Account> accountList) {
+    public AccountGroup(String name, List<AccountBase> accountBaseList) {
         this.name = name;
-        this.accountList = accountList;
+        this.accountBaseList = accountBaseList;
     }
 
     public String getName() {
@@ -21,23 +21,23 @@ public class AccountGroup {
         this.name = name;
     }
 
-    public List<Account> getAccountList() {
-        return accountList;
+    public List<AccountBase> getAccountList() {
+        return accountBaseList;
     }
 
-    public void setAccountList(List<Account> accountList) {
-        this.accountList = accountList;
+    public void setAccountList(List<AccountBase> accountBaseList) {
+        this.accountBaseList = accountBaseList;
     }
 
     @Override
     public String toString() {
         return "AccountGroup => \n" +
                 "Name: " + name + "\n" +
-                "Account List: " + accountList + "\n";
+                "Account List: " + accountBaseList + "\n";
     }
 
     public void listAll (AccountGroup accG){
-        for (Account acc: accG.accountList) {
+        for (AccountBase acc: accG.accountBaseList) {
             System.out.println(acc.toString());
         }
     }

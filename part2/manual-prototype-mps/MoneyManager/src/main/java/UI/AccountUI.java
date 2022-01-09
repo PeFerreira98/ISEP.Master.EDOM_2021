@@ -2,7 +2,7 @@ package UI;
 
 import Controller.AccountController;
 import Controller.Modelation;
-import Model.Account;
+import Model.AccountBase;
 
 import java.util.Scanner;
 
@@ -27,7 +27,7 @@ public class AccountUI {
                     break;
                 case 3:
                     System.out.println("Which account do you want to add?");
-                    for (Account acc: modelation.getUser().getAccountList()) {
+                    for (AccountBase acc: modelation.getUser().getAccountList()) {
                         System.out.printf(acc.getName() + "\n");
                     }
                     String account = sc.next();

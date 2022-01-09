@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.Account;
+import Model.AccountBase;
 import Model.User;
 
 import java.time.LocalDate;
@@ -22,8 +22,8 @@ public class UserController {
         String date = sc.nextLine();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate localDate = LocalDate.parse(date, formatter);
-        List<Account> accountList = new ArrayList<>();
-        return new User(name, accountList, localDate);
+        List<AccountBase> accountBaseList = new ArrayList<>();
+        return new User(name, accountBaseList, localDate);
     }
 
 

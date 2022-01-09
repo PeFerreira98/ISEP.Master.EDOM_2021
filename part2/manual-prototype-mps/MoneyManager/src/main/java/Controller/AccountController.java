@@ -1,9 +1,6 @@
 package Controller;
 
-import Model.Account;
-import Model.AccountGroup;
-import Model.Transaction;
-import Model.User;
+import Model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,13 +19,13 @@ public class AccountController {
         String name = sc.nextLine();
         System.out.println("Account Amount:");
         double amount = sc.nextDouble();
-        List<Account> accountList = user.getAccountList();
-        accountList.add(new Account(transactionList, name, amount));
-        user.setAccountList(accountList);
+        List<AccountBase> accountBaseList = user.getAccountList();
+        accountBaseList.add(new Account(transactionList, name, amount, true));
+        user.setAccountList(accountBaseList);
     }
 
     public void addAccountToAccountGroup(User user,String accountName,List<AccountGroup>accGList) {
-        List<Account> accountList = user.getAccountList();
+        List<AccountBase> accountBaseList = user.getAccountList();
         int i = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Account Group Name:");
@@ -37,7 +34,7 @@ public class AccountController {
             if (!Objects.equals(accGName, accG.getName())) {
                 i++;
             } else {
-                for (Account acc : accountList) {
+                for (AccountBase acc : accountBaseList) {
                     if (Objects.equals(accountName, acc.getName())) {
                         accGList.get(i).getAccountList().add(acc);
                     }

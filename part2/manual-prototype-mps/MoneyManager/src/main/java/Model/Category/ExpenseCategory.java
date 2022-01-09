@@ -1,4 +1,4 @@
-package Model;
+package Model.Category;
 
 public class ExpenseCategory extends Category {
 
