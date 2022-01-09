@@ -5,14 +5,15 @@
   <uses module="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt+dp" />
   <uses module="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
   <dependency className="SolutionMoneyManager.a_model.Account">
-    <classNode dependClassName="SolutionMoneyManager.a_model.Transaction" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Transaction" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.List" />
-    <classNode extendsClassName="SolutionMoneyManager.a_model.AccountBase" />
+    <classNode extendsClassName="MoneyManagerGeneratedCode.model.AccountBase" />
   </dependency>
   <dependency className="SolutionMoneyManager.a_model.AccountBase">
-    <classNode dependClassName="SolutionMoneyManager.a_model.Transaction" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Transaction" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -20,11 +21,11 @@
     <classNode dependClassName="java.util.List" />
   </dependency>
   <dependency className="SolutionMoneyManager.a_model.AccountController">
-    <classNode dependClassName="SolutionMoneyManager.a_model.Account" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.AccountBase" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.AccountGroup" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.Transaction" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.User" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Account" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountGroup" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Transaction" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.User" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -33,15 +34,16 @@
     <classNode dependClassName="java.util.Scanner" />
   </dependency>
   <dependency className="SolutionMoneyManager.a_model.AccountGroup">
-    <classNode dependClassName="SolutionMoneyManager.a_model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountGroup" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.List" />
   </dependency>
   <dependency className="SolutionMoneyManager.a_model.AccountGroupController">
-    <classNode dependClassName="SolutionMoneyManager.a_model.AccountBase" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.AccountGroup" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountGroup" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -49,36 +51,73 @@
     <classNode dependClassName="java.util.Objects" />
     <classNode dependClassName="java.util.Scanner" />
   </dependency>
-  <dependency className="SolutionMoneyManager.a_model.AccountGroupUI" />
-  <dependency className="SolutionMoneyManager.a_model.AccountUI" />
+  <dependency className="SolutionMoneyManager.a_model.AccountGroupUI">
+    <classNode dependClassName="MoneyManagerGeneratedCode.controller.AccountGroupController" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Modelation" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.ui.Program" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.Scanner" />
+  </dependency>
+  <dependency className="SolutionMoneyManager.a_model.AccountUI">
+    <classNode dependClassName="MoneyManagerGeneratedCode.controller.AccountController" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Modelation" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.ui.Program" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.Scanner" />
+  </dependency>
   <dependency className="SolutionMoneyManager.a_model.Category">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
-    <classNode extendsClassName="java.io.Serializable" />
   </dependency>
-  <dependency className="SolutionMoneyManager.a_model.ExpenseCategory" />
-  <dependency className="SolutionMoneyManager.a_model.IncomeCategory" />
+  <dependency className="SolutionMoneyManager.a_model.ExpenseCategory">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="MoneyManagerGeneratedCode.model.category.Category" />
+  </dependency>
+  <dependency className="SolutionMoneyManager.a_model.IncomeCategory">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="MoneyManagerGeneratedCode.model.category.Category" />
+  </dependency>
   <dependency className="SolutionMoneyManager.a_model.Modelation">
-    <classNode dependClassName="SolutionMoneyManager.a_model.AccountGroup" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.User" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountGroup" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.User" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
   </dependency>
-  <dependency className="SolutionMoneyManager.a_model.Program" />
+  <dependency className="SolutionMoneyManager.a_model.Program">
+    <classNode dependClassName="MoneyManagerGeneratedCode.controller.UserController" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountGroup" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Modelation" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.User" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.ui.AccountGroupUI" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.ui.AccountUI" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.ui.TransactionUI" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.ui.UserUI" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Scanner" />
+  </dependency>
   <dependency className="SolutionMoneyManager.a_model.Transaction">
-    <classNode dependClassName="SolutionMoneyManager.a_model.ExpenseCategory" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.IncomeCategory" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.category.ExpenseCategory" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.category.IncomeCategory" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.time.LocalDate" />
   </dependency>
   <dependency className="SolutionMoneyManager.a_model.TransactionController">
-    <classNode dependClassName="SolutionMoneyManager.a_model.ExpenseCategory" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.IncomeCategory" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.Transaction" />
-    <classNode dependClassName="SolutionMoneyManager.a_model.User" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Transaction" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.User" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.category.ExpenseCategory" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.category.IncomeCategory" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.time.LocalDate" />
@@ -88,17 +127,42 @@
     <classNode dependClassName="java.util.Objects" />
     <classNode dependClassName="java.util.Scanner" />
   </dependency>
-  <dependency className="SolutionMoneyManager.a_model.TransactionUI" />
+  <dependency className="SolutionMoneyManager.a_model.TransactionUI">
+    <classNode dependClassName="MoneyManagerGeneratedCode.controller.TransactionController" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Modelation" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.ui.Program" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.Scanner" />
+  </dependency>
   <dependency className="SolutionMoneyManager.a_model.User">
-    <classNode dependClassName="SolutionMoneyManager.a_model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.User" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.time.LocalDate" />
     <classNode dependClassName="java.util.List" />
   </dependency>
-  <dependency className="SolutionMoneyManager.a_model.UserController" />
-  <dependency className="SolutionMoneyManager.a_model.UserUI" />
+  <dependency className="SolutionMoneyManager.a_model.UserController">
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.AccountBase" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.User" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.time.LocalDate" />
+    <classNode dependClassName="java.time.format.DateTimeFormatter" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Scanner" />
+  </dependency>
+  <dependency className="SolutionMoneyManager.a_model.UserUI">
+    <classNode dependClassName="MoneyManagerGeneratedCode.model.Modelation" />
+    <classNode dependClassName="MoneyManagerGeneratedCode.ui.Program" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.Scanner" />
+  </dependency>
   <dependency className="SolutionMoneyManager.a_model.map_Model" />
 </dependenciesRoot>
 
