@@ -33,7 +33,7 @@ public class <#= this.Model.CategorySpec.Name #> {
     }
 }
 <#    
-        String dir = "../../../Project/Model";
+        String dir = "../../../../Project_Aux/src/main/java/Model";
         Directory.CreateDirectory(dir);
         File.WriteAllText(Path.Combine(dir, this.Model.CategorySpec.Name + ".java"), this.GenerationEnvironment.ToString());
 

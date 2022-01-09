@@ -58,7 +58,7 @@ public class Modelation {
     }
 }
 <#    
-        String dir = "../../../Project/Controller";
+        String dir = "../../../../Project_Aux/src/main/java/Controller";
         Directory.CreateDirectory(dir);
         File.WriteAllText(Path.Combine(dir, model + "ation.java"), this.GenerationEnvironment.ToString());
 

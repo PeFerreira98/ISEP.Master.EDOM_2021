@@ -117,7 +117,7 @@ public class <#= transactionName #>Controller {
 }
 
 <#
-        String dir = "../../../Project/Controller";
+        String dir = "../../../../Project_Aux/src/main/java/Controller";
         Directory.CreateDirectory(dir);
         File.WriteAllText(Path.Combine(dir, transactionName + "Controller.java"), this.GenerationEnvironment.ToString());
 

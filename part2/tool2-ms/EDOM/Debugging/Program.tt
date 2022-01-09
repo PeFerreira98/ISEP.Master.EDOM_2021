@@ -72,7 +72,7 @@ public class Program {
     }
 }
 <#    
-        String dir = "../../../Project/UI";
+        String dir = "../../../../Project_Aux/src/main/java/UI";
         Directory.CreateDirectory(dir);
         File.WriteAllText(Path.Combine(dir,"Program.java"), this.GenerationEnvironment.ToString());
 

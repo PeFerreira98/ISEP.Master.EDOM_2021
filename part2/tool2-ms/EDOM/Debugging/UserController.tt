@@ -44,7 +44,7 @@ public class <#= userName #>Controller {
 }
 
 <#
-        String dir = "../../../Project/Controller";
+        String dir = "../../../../Project_Aux/src/main/java/Controller";
         Directory.CreateDirectory(dir);
         File.WriteAllText(Path.Combine(dir, userName + "Controller.java"), this.GenerationEnvironment.ToString());
 

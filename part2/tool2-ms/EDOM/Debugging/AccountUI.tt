@@ -65,7 +65,7 @@ public class <#= accountName #>UI {
     }
 }
 <#    
-        String dir = "../../../Project/UI";
+        String dir = "../../../../Project_Aux/src/main/java/UI";
         Directory.CreateDirectory(dir);
         File.WriteAllText(Path.Combine(dir, accountName + "UI.java"), this.GenerationEnvironment.ToString());
 

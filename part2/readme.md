@@ -51,6 +51,8 @@ For each metamodel element, the team chose a different graphically representatio
 
 ### Textual DSL (JetBrains MPS)
 
+
+
 ## Activity 2: Specify Common Features for Applications of the Domain
 
 For the prototypes we will be using a common OO Language such as Java or C# and we will be developing a console application based in the MoneyManager(iOS), Moneyboard and MoneyManager(Android) apps.
@@ -135,7 +137,6 @@ After generating all the code in the different applications, the generation was 
 **Model**
 * nameMustBegreaterThan1Char - each model cannot have a blank or null name
 * mustNotHaveDuplicatedAssociations - each association contained in the model shall have diferent references from one another
-* 
 
 **UserSpec**
 * mustHaveAttributeWithDifferentNames - a user cannot have fields with the same name 
@@ -203,3 +204,4 @@ After generating all the code in the different applications, the generation was 
 ### MS Tools
 
 ![Instance](tool2-ms\Images\Instance.png)
+

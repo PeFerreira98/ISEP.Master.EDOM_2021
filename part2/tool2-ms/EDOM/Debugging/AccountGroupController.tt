@@ -49,7 +49,7 @@ public class <#= accountGroupName #>Controller {
 }
 
 <#
-        String dir = "../../../Project/Controller";
+        String dir = "../../../../Project_Aux/src/main/java/Controller";
         Directory.CreateDirectory(dir);
         File.WriteAllText(Path.Combine(dir, accountGroupName + "Controller.java"), this.GenerationEnvironment.ToString());
 

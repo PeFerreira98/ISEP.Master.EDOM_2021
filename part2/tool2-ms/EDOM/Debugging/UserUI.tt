@@ -42,7 +42,7 @@ public class <#= userName #>UI {
     }
 }
 <#    
-        String dir = "../../../Project/UI";
+        String dir = "../../../../Project_Aux/src/main/java/UI";
         Directory.CreateDirectory(dir);
         File.WriteAllText(Path.Combine(dir, userName + "UI.java"), this.GenerationEnvironment.ToString());
 

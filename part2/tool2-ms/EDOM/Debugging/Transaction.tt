@@ -103,7 +103,7 @@ public class <#= transactionName #> {
 
 }
 <#    
-        String dir = "../../../Project/Model";
+        String dir = "../../../../Project_Aux/src/main/java/Model";
         Directory.CreateDirectory(dir);
         File.WriteAllText(Path.Combine(dir, transactionName + ".java"), this.GenerationEnvironment.ToString());
 
