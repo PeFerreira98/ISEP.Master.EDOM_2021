@@ -51,7 +51,10 @@ For each metamodel element, the team chose a different graphically representatio
 
 ### Textual DSL (JetBrains MPS)
 
+For each metamodel element, the team chose a different graphically representation:
 
+* For UserSpec, AccountSpec, TransactioSpec, AccountGroupSpec and CategorySpec the class name will be in **bold**.
+* For UserAttributes, AccountAttributes, AccountAttributes the class name will be in **bold** and *italic*.
 
 ## Activity 2: Specify Common Features for Applications of the Domain
 
@@ -200,6 +203,18 @@ After generating all the code in the different applications, the generation was 
 **AttributeType**
 
 ## Presentations of Models (instances)
+
+### MPS
+
+![Instance](tool1-mps\Images\Instance_1.png)
+
+![Instance](tool1-mps\Images\Instance_2.png)
+
+![Instance](tool1-mps\Images\Instance_3.png)
+
+![Instance](tool1-mps\Images\Instance_4.png)
+
+![Instance](tool1-mps\Images\Instance_5.png)
 
 ### MS Tools
 
