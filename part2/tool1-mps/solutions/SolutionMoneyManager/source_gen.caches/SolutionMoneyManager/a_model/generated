@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="-5ri39qv9bzpxgx201439nfrr2jvahq5">
+  <files names="map_Model.java" />
+  <files dir="MoneyManagerGeneratedCode/controller" names="AccountController.java:AccountGroupController.java:TransactionController.java:UserController.java" />
+  <files dir="MoneyManagerGeneratedCode/model" names="Account.java:AccountBase.java:AccountGroup.java:Modelation.java:Transaction.java:User.java" />
+  <files dir="MoneyManagerGeneratedCode/model/category" names="Category.java:ExpenseCategory.java:IncomeCategory.java" />
+  <files dir="MoneyManagerGeneratedCode/ui" names="AccountGroupUI.java:AccountUI.java:Program.java:TransactionUI.java:UserUI.java" />
+</product>
+
