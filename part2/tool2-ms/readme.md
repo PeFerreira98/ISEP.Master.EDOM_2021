@@ -76,12 +76,18 @@ Bellow is a snippet of the `Transaction.tt` file used to generate all the Transa
 
 ## Activity 6: Generate Applications
 
-For the last activity I was able to create a model of my colleagues scenarios (Amazon and Youtube) creating the files `Amazon.crr` and `Youtube.crr`. I then changed manually the fileName of each `.t4` file to use Amazon's or Youtube's model instead of Publico and clicked Build > Transform all T4 Templates which created all the classes needed to run the application.
-
-Before any advancements, everything was ready with just the generation because before all that I created a simple Java project at the same level which had in the `src` folder the common implementations agreed to the team: Comment, Model, Subject, etc. as well as the controllers as they weren't generated in my solution. Then, in the `*Splitter.tt` files (the template files that will split the big files as mentioned before) I added the output path to be the `src-gen` of the Java project created and (in IntelliJ) I marked the `src-gen` folder as a *Generated Sources Root* which allowed every file there to be recognized and not cause problems during the Application's execution.
+Throw the `.tt` files the classes were create in Java language and save in the respective package. A Java project was already created so we only need to save the results in the correct folders.
 
 With all of them generated, the project will look like this:
 
-![Prototype2](C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\ISEP.Master.EDOM.Old-main\edom-20-21-team-405\part2\tool2-ms\images\ms-proto2.PNG)
+![Prototype2](Images\Generated_Project.png)
 
-As we can see the applications are very similar and certain keywords will be different across the application when using different models. Another limitation of this development is how it would be hard to generate the ApplicationUI to be aware of it being a slightly different model and use more options, for example, in the Youtube model the Subject (Video) has a Date, and that is present in the Application, however, it's not presented to the user, a custom implementation would have to be made. An idea after developing this work would be having the ApplicationUI abstract with some implementations and let the user extend it and have a custom implementation of each method for example a different mainMenu or a different showSubjects method).
+One of the main issues was the imports, because sometimes they weren't recognized by the Intellij IDE. However, after some refreshes and new generations this issue was overcome.
+
+After the application generation, the team swap some classes in order to test the solution's reliability. One of the main issues was that some applications allows to associate a bank account with an account. In order to resolve this problem, has to be created a superclass AccountBase and a child class Account. In this way we can create accounts that could ask for bank accounts or not.
+
+![needBankAccount](Images\needBank.png)
+
+This is the main menu from the application with the swapped classes:
+
+![menu_swap](Images\menu_swap.png)
