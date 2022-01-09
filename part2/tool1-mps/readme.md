@@ -1,158 +1,156 @@
-# JetBrains MPS (Meta Programming System)
+# EDOM Project, Part2, Tool 1
 
-## Tool description
+In this folder you should add **all** artifacts developed for part 2 of the EDOM Project, related to tool 1.
 
-MPS is a tool to design domain-specific languages (DSL).
-It uses projectional editing which allows users to overcome the limits of language parsers, and build DSL editors, such as ones with tables and diagrams. It implements language-oriented programming.
+## Activity 1: Design Concrete Syntax for the DSL
 
-## How to Setup and Install
+As described in Part 1, we can change how models are displayed by creating Editors for each concept. These allow us to change how models are shown to be more appealable and intuitive.  
 
-The installation and setup of JetBrains MPS is a pretty simple process.
-We downloaded the IDE from the official JetBrain's WebSite [here](https://www.jetbrains.com/mps/download/).
-In order to install and setup the IDE we used the official documentation from [here](https://www.jetbrains.com/help/mps/installation-guide.html).
-After finished the installation and setup proccess, our IDE is ready to use.
+As follows, is described the whole process of the creation of the Editors:
 
-## Implementation of the Metamodel
+Below is represented the list of Editors implemented in the project.
 
-When creating the project, we can select "Create sandbox solution" or create the sandbox solution later manually.
+![editor_lista](images/editor_lista.PNG)
 
-![criação_projeto](./images/criação_projeto.png)
+To create these Editors we just need:  
 
-In this particular case, it was created when the project was created.
+* Right click on "editor";
+* Choose "New" -> "Concept Editor";
+* On "editor for concept" we choose the Concept we want;
+* On "node cell layout" it's where we apply the layout we want to present on sandbox;
 
-Thus, the project has the following structure:
-* Sandbox Solution (marked with S): This is where we can immediately test our language, when creating applications for testing purposes
-* Language (marked with L): This is where our language is developed.
+![editor_account](images/editor_account.PNG)
 
-![estrutura_projeto](./images/estrutura_projeto.png)
+As represented above, we have:
 
-In order to implement the Metamodel, it is necessary to develop the language that is structured as follows:
+* static text (known as *"constant"*);
+* concept properties (represented with **% %**);
+* lists (represented with **[- -]**):
+* references to other concepts.  
 
-![estrutura_linguagem](./images/estrutura_linguagem.png)
+In order to customize the appearance and make it appealable, I used the Editor's Inspector with some format commands as shown below:
 
-Inside the "Structure" folder the concepts are created.
-Concepts implement the INamedConcept interface so that they have "name" as a property.
-For "children" we have the connections and cardinality (Composition)
-So, our metamodel concepts looks like this:
+![editor_inspetor](images/editor_inspetor.PNG)
 
-![estrutura_concepts](./images/estrutura_concepts.png)
+The result of this process is represented in the following picture. Can be observable the identation throughout the Model and the font styling for each field:
 
-Concepts can use references, which means they can reference other concepts instead of creating a new concept.
-For example, in our case "Association" is referenced in several other concepts.
-Thus, a "Smart-Reference" was created in the MPS.
+![editor_representacao](images/editor_representacao.PNG)
 
-![smart_reference](./images/smart_reference.png)
+ 
 
-## Implementation of Constraints and Refactorings
+## Activity 3: Implement Prototypes of Application of the Domain
 
-In the MPS tool, there are two ways to implement constraints:
-* Constraints
-* Checking Rules
+The current activity's goal is to implement a prototype application with the features of the application selected in the first part of the project.
 
-In our case, we use "Checking Rules" as a way to implement the constraints defined by the group.
+![prototype_estrutura](images/prototype_estrutura.PNG)
 
-![checking_rule](./images/checking_rule.png)
+As shown above, the prototype project structure as planned using the MVC pattern:
 
-In short, this method is carried out as follows:
-* In the concept where we intend to create a "checking rule", we click on "Typesystem" in the bar below;
-* We click on "Click do create new aspect";
-* We selected the "Checking Rule" option;
-* In the "do" we write the rule we want.
+* **Model:** The central component of the pattern. It is the application's dynamic data structure, independent of the user interface.It directly manages the data, logic and rules of the application.
+* **View:** Any representation of information such as a chart, diagram or table. Multiple views of the same information are possible, such as a bar chart for management and a tabular view for accountants.
+* **Controller:** Accepts input and converts it to commands for the model or view. Containing the methods with some of the necessary logic implicit in the feature.
 
-Below is an example of one of our "checking rules":
+The following image shows the Main class of the prototype - Program.java - which is responsible of running the entire application:
 
-![exemplo_checking_rule](./images/exemplo_checking_rule.png)
+![prototype_main](images/prototype_main.PNG)
 
-To implement the refactoring, "Quick fixes" were created. This way we automate the process of finding an error and correcting it directly.
+Here is the implementation of the Main Menu and the redirection to the submenus of the application.
 
-![quick_fix](./images/quick_fix.png)
+In order to have sub menus and an organized project structure  while using the MVC pattern, different UI classes were created. To exemplify, below is the example of the class UserUI.java - a class responsible of the User sub menu.
 
-For this:
-* We right-click on "Typesystem";
-* Select the "New" option;
-* Select the "Quick Fix" option.
+![prototype_ui](images/prototype_ui.PNG)
 
-The following is an example of a "Quick fix" to fix the error of a name not starting with a capital letter. 
+This class calls the controller of it's Object in order to process the request. The following images represents the Controller of the object User:
 
-![exemplo_quick_fix](./images/exemplo_quick_fix.png)
+![prototype_controller](images/prototype_controller.PNG)
 
-In order to assign a "Quick fix" to its appropriate "Checking Rule", we carry out the following process:
+The  Controller needs the Model class in order to know the business rules. So, to represent the Model class, the next image is the User.java class:
 
-![atribuir_quick_fix](./images/atribuir_quick_fix.png)
+![prototype_model](images/prototype_model.PNG)
 
-* 1st click on the word "error" within the intended checking rule;
-* 2nd click on the "Inspector" option in the lower right corner of the screen;
-* 3rd edit the field: "intention to fix an error(optional)" with the name of the "quick fix" developed.
+The final result of the console application is shown below with the picture of the creation of the fist user and the main Menu:
 
-## Implementation of the Visualizations
+![prototype_console1](images/prototype_console1.PNG)
 
-To implement the visualization we created a "Behavior" for the concept "Model" where the code referring to the puml file generator is present, along with the classes present in our language and the appropriate connections.
+After selecting an option, the User is presented with sub menus like the following one:
 
-The following image is intended to show an excerpt of this code:
+![prototype_console_account](images/prototype_console_account.PNG)
 
-![trechoo_behavior](./images/trechoo_behavior.png)
 
-In order to respect the standards of the group, colors were assigned to certain classes.
 
-This being the configuration:
+**Note:** In order to have a better code, were created super classes and subclasses.
 
-*TransactionSpec - for the TransactionSpec, we will be using the color Light Blue (#00e5e5)
+![prototype_superclass](images/prototype_superclass.PNG)
 
-![color_transactionspec](./images/color_transactionspec.png)
+The subclasses extends the superclass as shown below:
+![prototype_subclass](images/prototype_subclass.PNG)
 
-*Association - for the Association, we will be using the color Gray (#C0C0C0)
+## Activity 5: Design and Implement Code Generation 
 
-![color_association](./images/color_association.png)
+In MPS therer are a few ways to generate code from the created model.
 
-*UserSpec - for the UserSpec, we will be using the PlantUML default color
+* **TextGen: ** Gives us the possibility to generate a file with any extension and then we have to write all the content as intended. Creating from TextGen will not check whether our classes are builded right or not  as it is interpreted only as text.
+* **Generator:** Contains templates to generate Java classes for each concept instance. It is possible to access the content of the instance, such as attributes, children (references that may have to other instances), methods created in the concept (known as *Concept Behavior*).
 
-![color_userspec](./images/color_userspec.png)
+In this particular case, were used MPS Generator.
 
-*AccountSpec - for the AccountSpec, we will be using the color Light Green (#95e500)
+The following image represents the strucutor of the Generator with all its classes:
 
-![color_accountspec](./images/color_accountspec.png)
+![generator_list](images/generator_list.PNG)
 
-In order to automate the process of generating .PUML files, an "Intention" of the "Model" was created, as shown in the image below:
+The classes above were developed as templates for each concept for the code to be generated. This code generation needs to be modular, since the number of attributes of a class can be dynamic, depending on the elements created in the DSL. For this templates to work it is necessary to map each one on **main**. 
 
-![intention](./images/intention.png)
+In the **main** were mapped:
 
-## Implementation of Models (instances)
+* mapping labels;
+* conditional root rules;
+* root mapping rules.
 
-As mentioned above, the option of "Create sandbox solution" has been added. This one serves to test the previously created model.
-In the sandbox we can only add models whose concepts are defined as being "root".
+![generator_conditional_rules](images/generator_conditional_rules.PNG)
 
-The following image is intended to illustrate the example of creating and developing a test model:
+![generator_root_rule](images/generator_root_rule.PNG)
 
-![model_teste](./images/model_teste.png)
+As stated before, in **templates** it is contained the code that will generate the final code for each concept instance.
 
-With the model, we can verify if the "Constraints" and the "Refactoring" are being properly executed, as will be explained in the next section.
+For each template was necessary to specify the concept mapped inside the template.
 
-## Execution of Constraints and Refactorings
+Basically, the templates are interpreted and written as java classes, but we can use macros that will help obtain the information about the concept instance.
 
-Constraints are immediately applied as soon as they are created and the language is "Rebuild".
+![generator_account](images/generator_account.PNG)
 
-To "Refactor" the model, an error will appear with a lamp on the left side with suggested modifications that were defined in the "Quick Fixes"
+Here, we are presented with the **Node Macro - $LABEL$** that refers to the label specified in the **main**, **Node Macro - $IF$** - that, as the name says, is a conditional macro that, in this particular case, only requests a certain attribute if it is needed in the other prototypes.
 
-The following image demonstrates the detection of failures such following the "constraints" made:
+Were also used **Reference Macros** to reference instances of certain nodes and **Property Macros** that computes a property value.
 
-![detecao_erro](./images/detecao_erro.png)
+Being all the templates implemented and without errors, the Java classes are created and shown in the MPS Tool as follows:
+![generated_classes](generated_classes.PNG)
 
-Then the correction of these same failures through "quick fixes" (Refactoring) is represented:
+## Activity 6: Generate Applications
 
-![refactoring](./images/refactoring.png)
+Following the code generation with all the Java classes created and save in the respective package. A Java project was already created.
 
-## Generation/Execution of Visualizations
+The project generated by the MPS Tool looks like this:
+![project_structure](project_structure.PNG)
 
-To verify the generation / execution of Visualizations, a solution of the "MoneyBoard" application was created.
+The IntelliJ IDE had a lot of issues with the imports, not recognizing them most of the times.
 
-The procedure to generate the plantUML file is shown in the figure below:
+After the application generation, the team changed some classes between the generated classes in the different tools in order to test the reliability.
 
-![gerar_ficheiro](./images/gerar_ficheiro.png)
+One of the issues was the allowance of some applications to associate a bank account to an account. To solve this issue, the superclass AccountBase and it's subclass - Account - was created as mentioned before. The adopted change allow us to have the possibility of creating accounts that can associate bank accounts or not, depending on the application.
 
-With this, a .PUML file is created and saved in the defined directory whose result (for the created solution) is the following:
+![superclass](superclass.PNG)
 
-![codigo_puml](./images/codigo_puml.png)
+To sum up:
 
-When using code conversion plugins for diagrams, the result obtained can be seen in the following image:
+Some challenges were encountered during the development of these last two activities:
 
-![diagrama](./images/diagrama.png)
+* The IDE provided by Jetbrains is not very user friendly when writing the algorithms - requesting extra and redundant work;
+* The syntax used by MPS Generator is not easily interpreted and difficult to learn with the lack of online support content;
+* Sometimes errors appeared when generating the code;
+
+
+
+
+
+
+

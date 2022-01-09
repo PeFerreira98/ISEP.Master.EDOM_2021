@@ -6,21 +6,15 @@ import java.util.List;
 
 public class Account extends AccountBase {
 
-
-
   public Account(List<Transaction> transactionList, String name, double amount) {
     super(transactionList, name, amount);
   }
-
-
 
   public Account(List<Transaction> transactionList) {
     super(transactionList);
   }
 
-
-
-
+  
   @Override
   public String toString() {
     String nameString = "Name: " + this.getName() + "\n";

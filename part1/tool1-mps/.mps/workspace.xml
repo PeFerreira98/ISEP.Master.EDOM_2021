@@ -132,6 +132,20 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -139,8 +153,14 @@
               <option name="myItemId" value="SolutionMoneyManager" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:40ab0ff7-848a-4b34-9f5c-2b72c8b4de63(SolutionMoneyManager.a_model) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps]" />
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -152,17 +172,59 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="45a538e3-b65c-4b67-acd7-9ded33190c06(SolutionMoneyManager@transient30)" />
+              <option name="myItemId" value="moneyManager" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="45a538e3-b65c-4b67-acd7-9ded33190c06/i:10000001(SolutionMoneyManager@transient30/SolutionMoneyManager.a_model@0) in null" />
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="45a538e3-b65c-4b67-acd7-9ded33190c06(SolutionMoneyManager@transient30)" />
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:499a2339-0360-4faf-861c-0753dbf488e7(moneyManager.generator.templates@generator) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/generator/templates/moneyManager.generator.templates@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SolutionMoneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:40ab0ff7-848a-4b34-9f5c-2b72c8b4de63(SolutionMoneyManager.a_model) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -182,44 +244,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:e40507fe-1e8c-40e6-8db2-3f02f368b9e9(moneyManager.editor) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.editor.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SolutionMoneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
           <SELECTED>
             <PATH_ELEMENT>
               <option name="myItemId" value="moneyManager" />
@@ -230,11 +254,19 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:e40507fe-1e8c-40e6-8db2-3f02f368b9e9(moneyManager.editor) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.editor.mps]" />
+              <option name="myItemId" value="moneyManager.generator" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="6049532707842023039" />
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:499a2339-0360-4faf-861c-0753dbf488e7(moneyManager.generator.templates@generator) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/generator/templates/moneyManager.generator.templates@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1091008552795812802" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
