@@ -315,7 +315,7 @@ namespace Empresa.MoneyManagerModel
 						else
 						{
 							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <categorySpec>
-							ReadModelHasCategorySpecInstances(serializationContext, element, reader);
+							ReadModelHasCategorySpecInstance(serializationContext, element, reader);
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </categorySpec>
 						}
 						break;
@@ -664,18 +664,25 @@ namespace Empresa.MoneyManagerModel
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship ModelHasCategorySpec.
+		/// Reads instance of relationship ModelHasCategorySpec.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
-		/// either the first instance, or a bogus tag. This method will deserialize all instances and ignore all bogus tags. When the
-		/// method returns, the reader will be positioned at the end tag of the relationship (or EOF if somehow that happens).
+		/// either the first instance, or a bogus tag. This method will deserialize only the first valid instance and ignore all the
+		/// rest tags (because the multiplicity allows only one instance). When the method returns, the reader will be positioned at 
+		/// the end tag of the relationship (or EOF if somehow that happens).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory Model instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		private static void ReadModelHasCategorySpecInstances(DslModeling::SerializationContext serializationContext, Model element, global::System.Xml.XmlReader reader)
+		private static void ReadModelHasCategorySpecInstance(DslModeling::SerializationContext serializationContext, Model element, global::System.Xml.XmlReader reader)
 		{
+			if (DslModeling::DomainRoleInfo.GetElementLinks<ModelHasCategorySpec> (element, ModelHasCategorySpec.ModelDomainRoleId).Count > 0)
+			{	// Only allow one instance, which already exists, so skip everything
+				DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+				return;
+			}
+	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
 				DslModeling::DomainClassXmlSerializer newModelHasCategorySpecSerializer = serializationContext.Directory.GetSerializer(ModelHasCategorySpec.DomainClassId);
@@ -687,6 +694,7 @@ namespace Empresa.MoneyManagerModel
 					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newModelHasCategorySpec.GetDomainClass().Id);	
 					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newModelHasCategorySpec.GetDomainClass().Name + "!");
 					targetSerializer.Read(serializationContext, newModelHasCategorySpec, reader);
+					break;	// Only allow one instance.
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
@@ -696,10 +704,11 @@ namespace Empresa.MoneyManagerModel
 					if (newCategorySpecOfModelHasCategorySpec != null)
 					{
 						MoneyManagerModelSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(ModelHasCategorySpec));
-						element.CategorySpec.Add(newCategorySpecOfModelHasCategorySpec);
+						element.CategorySpec = newCategorySpecOfModelHasCategorySpec;
 						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newCategorySpecOfModelHasCategorySpec.GetDomainClass().Id);	
 						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newCategorySpecOfModelHasCategorySpec.GetDomainClass().Name + "!");
 						targetSerializer.Read(serializationContext, newCategorySpecOfModelHasCategorySpec, reader);
+						break;	// Only allow one instance.
 					}
 					else
 					{	// Unknown element, skip.
@@ -1329,19 +1338,13 @@ namespace Empresa.MoneyManagerModel
 			}
 	
 			// ModelHasCategorySpec
-			global::System.Collections.ObjectModel.ReadOnlyCollection<ModelHasCategorySpec> allModelHasCategorySpecInstances = ModelHasCategorySpec.GetLinksToCategorySpec(element);
-			if (!serializationContext.Result.Failed && allModelHasCategorySpecInstances.Count > 0)
+			ModelHasCategorySpec theModelHasCategorySpecInstance = ModelHasCategorySpec.GetLinkToCategorySpec(element);
+			if (!serializationContext.Result.Failed && theModelHasCategorySpecInstance != null)
 			{
 				writer.WriteStartElement("categorySpec");
-				foreach (ModelHasCategorySpec eachModelHasCategorySpecInstance in allModelHasCategorySpecInstances)
-				{
-					if (serializationContext.Result.Failed)
-						break;
-	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachModelHasCategorySpecInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachModelHasCategorySpecInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachModelHasCategorySpecInstance, writer);
-				}
+				DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(theModelHasCategorySpecInstance.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + theModelHasCategorySpecInstance.GetDomainClass().Name + "!");
+				relSerializer.Write(serializationContext, theModelHasCategorySpecInstance, writer);
 				writer.WriteEndElement();
 			}
 	
@@ -10008,7 +10011,7 @@ namespace Empresa.MoneyManagerModel
 						else
 						{
 							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <categoryAttribute>
-							ReadCategorySpecHasCategoryAttributeInstances(serializationContext, element, reader);
+							ReadCategorySpecHasCategoryAttributeInstance(serializationContext, element, reader);
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </categoryAttribute>
 						}
 						break;
@@ -10031,18 +10034,25 @@ namespace Empresa.MoneyManagerModel
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship CategorySpecHasCategoryAttribute.
+		/// Reads instance of relationship CategorySpecHasCategoryAttribute.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
-		/// either the first instance, or a bogus tag. This method will deserialize all instances and ignore all bogus tags. When the
-		/// method returns, the reader will be positioned at the end tag of the relationship (or EOF if somehow that happens).
+		/// either the first instance, or a bogus tag. This method will deserialize only the first valid instance and ignore all the
+		/// rest tags (because the multiplicity allows only one instance). When the method returns, the reader will be positioned at 
+		/// the end tag of the relationship (or EOF if somehow that happens).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory CategorySpec instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		private static void ReadCategorySpecHasCategoryAttributeInstances(DslModeling::SerializationContext serializationContext, CategorySpec element, global::System.Xml.XmlReader reader)
+		private static void ReadCategorySpecHasCategoryAttributeInstance(DslModeling::SerializationContext serializationContext, CategorySpec element, global::System.Xml.XmlReader reader)
 		{
+			if (DslModeling::DomainRoleInfo.GetElementLinks<CategorySpecHasCategoryAttribute> (element, CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId).Count > 0)
+			{	// Only allow one instance, which already exists, so skip everything
+				DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+				return;
+			}
+	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
 				DslModeling::DomainClassXmlSerializer newCategorySpecHasCategoryAttributeSerializer = serializationContext.Directory.GetSerializer(CategorySpecHasCategoryAttribute.DomainClassId);
@@ -10054,6 +10064,7 @@ namespace Empresa.MoneyManagerModel
 					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newCategorySpecHasCategoryAttribute.GetDomainClass().Id);	
 					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newCategorySpecHasCategoryAttribute.GetDomainClass().Name + "!");
 					targetSerializer.Read(serializationContext, newCategorySpecHasCategoryAttribute, reader);
+					break;	// Only allow one instance.
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
@@ -10063,10 +10074,11 @@ namespace Empresa.MoneyManagerModel
 					if (newCategoryAttributeOfCategorySpecHasCategoryAttribute != null)
 					{
 						MoneyManagerModelSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(CategorySpecHasCategoryAttribute));
-						element.CategoryAttribute.Add(newCategoryAttributeOfCategorySpecHasCategoryAttribute);
+						element.CategoryAttribute = newCategoryAttributeOfCategorySpecHasCategoryAttribute;
 						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newCategoryAttributeOfCategorySpecHasCategoryAttribute.GetDomainClass().Id);	
 						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newCategoryAttributeOfCategorySpecHasCategoryAttribute.GetDomainClass().Name + "!");
 						targetSerializer.Read(serializationContext, newCategoryAttributeOfCategorySpecHasCategoryAttribute, reader);
+						break;	// Only allow one instance.
 					}
 					else
 					{	// Unknown element, skip.
@@ -10585,19 +10597,13 @@ namespace Empresa.MoneyManagerModel
 		private static void WriteChildElements(DslModeling::SerializationContext serializationContext, CategorySpec element, global::System.Xml.XmlWriter writer)
 		{
 			// CategorySpecHasCategoryAttribute
-			global::System.Collections.ObjectModel.ReadOnlyCollection<CategorySpecHasCategoryAttribute> allCategorySpecHasCategoryAttributeInstances = CategorySpecHasCategoryAttribute.GetLinksToCategoryAttribute(element);
-			if (!serializationContext.Result.Failed && allCategorySpecHasCategoryAttributeInstances.Count > 0)
+			CategorySpecHasCategoryAttribute theCategorySpecHasCategoryAttributeInstance = CategorySpecHasCategoryAttribute.GetLinkToCategoryAttribute(element);
+			if (!serializationContext.Result.Failed && theCategorySpecHasCategoryAttributeInstance != null)
 			{
 				writer.WriteStartElement("categoryAttribute");
-				foreach (CategorySpecHasCategoryAttribute eachCategorySpecHasCategoryAttributeInstance in allCategorySpecHasCategoryAttributeInstances)
-				{
-					if (serializationContext.Result.Failed)
-						break;
-	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachCategorySpecHasCategoryAttributeInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachCategorySpecHasCategoryAttributeInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachCategorySpecHasCategoryAttributeInstance, writer);
-				}
+				DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(theCategorySpecHasCategoryAttributeInstance.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + theCategorySpecHasCategoryAttributeInstance.GetDomainClass().Name + "!");
+				relSerializer.Write(serializationContext, theCategorySpecHasCategoryAttributeInstance, writer);
 				writer.WriteEndElement();
 			}
 	

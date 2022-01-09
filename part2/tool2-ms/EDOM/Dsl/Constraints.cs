@@ -196,11 +196,7 @@ namespace Empresa.MoneyManagerModel
         )]
         public void ValidateCategoryName(ValidationContext context)
         {
-            if (this.CategorySpec != null)
-            {
-                foreach (CategorySpec categorySpec in this.CategorySpec)
-                {
-                    if (categorySpec.Name == null || categorySpec.Name == "" || categorySpec.Name.Contains(" "))
+                    if (this.CategorySpec.Name == null || this.CategorySpec.Name == "" || this.CategorySpec.Name.Contains(" "))
                     {
                         context.LogError(
                         // Description:
@@ -210,7 +206,7 @@ namespace Empresa.MoneyManagerModel
                         // Objects to select when user double-clicks error:
                         this);
                     }
-                    else if (categorySpec.CardinalityMin > categorySpec.CardinalityMax)
+                    else if (this.CategorySpec.CardinalityMin > this.CategorySpec.CardinalityMax)
                     {
                         context.LogError(
                         // Description:
@@ -220,34 +216,18 @@ namespace Empresa.MoneyManagerModel
                         // Objects to select when user double-clicks error:
                         this);
                     }
-                    else if ((categorySpec.Name.Length > 0) && (categorySpec.Name.Substring(0, 1).ToUpper().CompareTo(categorySpec.Name.Substring(0, 1)) != 0))
+                    else if ((this.CategorySpec.Name.Length > 0) && (this.CategorySpec.Name.Substring(0, 1).ToUpper().CompareTo(this.CategorySpec.Name.Substring(0, 1)) != 0))
                     {
                         using (Transaction t = Store.TransactionManager.BeginTransaction("updates"))
                         {
-                            categorySpec.Name = Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(categorySpec.Name);
+                    this.CategorySpec.Name = Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(this.CategorySpec.Name);
                             t.Commit();
                         }
                     }
-                }
+                
 
-                for (int i = 0; i < this.CategorySpec.LongCount(); i++)
-                {
-                    for (int j = i + 1; j < this.CategorySpec.LongCount(); j++)
-                    {
-                        if (this.CategorySpec[i].Name == this.CategorySpec[j].Name)
-                        {
-                            context.LogError(
-                             // Description:
-                             "Category Names must be unique",
-                              // Unique code for this error:
-                              "03CategoryNameError",
-                            // Objects to select when user double-clicks error:
-                              this);
-                        }
-                    }
-                }
             }
-        }
+        
 
         [ValidationMethod
         ( // Specify which events cause the method to be invoked:
@@ -559,19 +539,17 @@ namespace Empresa.MoneyManagerModel
         {
             if (this.CategoryAttribute != null)
             {
-                foreach (CategoryAttribute userAtt in this.CategoryAttribute)
-                {
-                    if (userAtt.Name == null || userAtt.Name == "")
+                    if (CategoryAttribute.Name == null || CategoryAttribute.Name == "")
                     {
                         context.LogError(
                         // Description:
-                        "Names UserAttribute can't be empty",
+                        "Names CategoryAttribute can't be empty",
                         // Unique code for this error:
-                        "01UserAttributeError",
+                        "01CategoryAttributeError",
                         // Objects to select when user double-clicks error:
                         this);
                     }
-                }
+                
             }
         }
     }

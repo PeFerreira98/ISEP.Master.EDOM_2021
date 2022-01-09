@@ -241,17 +241,21 @@ namespace Empresa.MoneyManagerModel
 		}
 		#endregion
 		#region CategorySpec opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of CategorySpec.
+		/// Gets or sets CategorySpec.
 		/// Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.Model
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<CategorySpec> CategorySpec
+		public virtual CategorySpec CategorySpec
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<CategorySpec>, CategorySpec>(global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId) as CategorySpec;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -328,6 +332,11 @@ namespace Empresa.MoneyManagerModel
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::Empresa.MoneyManagerModel.CategorySpec.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ModelHasCategorySpec.CategorySpec
+					if (this.CategorySpec != null)
+					{
+						return false;
+					}
 					return true;
 				}
 				
@@ -427,7 +436,7 @@ namespace Empresa.MoneyManagerModel
 			if (sourceCategorySpec8 != null)
 			{
 				// Create link for path ModelHasCategorySpec.CategorySpec
-				this.CategorySpec.Add(sourceCategorySpec8);
+				this.CategorySpec = sourceCategorySpec8;
 
 				return;
 			}
@@ -4455,18 +4464,22 @@ namespace Empresa.MoneyManagerModel
 		}
 		#endregion
 		#region CategoryAttribute opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of CategoryAttribute.
+		/// Gets or sets CategoryAttribute.
 		/// Description for
 		/// Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpec
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<CategoryAttribute> CategoryAttribute
+		public virtual CategoryAttribute CategoryAttribute
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryAttribute>, CategoryAttribute>(global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId) as CategoryAttribute;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -4508,6 +4521,11 @@ namespace Empresa.MoneyManagerModel
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::Empresa.MoneyManagerModel.CategoryAttribute.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: CategorySpecHasCategoryAttribute.CategoryAttribute
+					if (this.CategoryAttribute != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -4539,7 +4557,7 @@ namespace Empresa.MoneyManagerModel
 			if (sourceCategoryAttribute1 != null)
 			{
 				// Create link for path CategorySpecHasCategoryAttribute.CategoryAttribute
-				this.CategoryAttribute.Add(sourceCategoryAttribute1);
+				this.CategoryAttribute = sourceCategoryAttribute1;
 
 				return;
 			}

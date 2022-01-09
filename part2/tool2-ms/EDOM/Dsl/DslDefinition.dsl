@@ -565,7 +565,7 @@
     </DomainRelationship>
     <DomainRelationship Id="360a5d5f-42b0-49dd-8726-49ba2d615250" Description="Description for Empresa.MoneyManagerModel.ModelHasCategorySpec" Name="ModelHasCategorySpec" DisplayName="Model Has Category Spec" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
       <Source>
-        <DomainRole Id="cf1a6a0b-3705-4ee1-ada8-ac3427c5895e" Description="Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.Model" Name="Model" DisplayName="Model" PropertyName="CategorySpec" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Category Spec">
+        <DomainRole Id="cf1a6a0b-3705-4ee1-ada8-ac3427c5895e" Description="Description for Empresa.MoneyManagerModel.ModelHasCategorySpec.Model" Name="Model" DisplayName="Model" PropertyName="CategorySpec" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Category Spec">
           <RolePlayer>
             <DomainClassMoniker Name="Model" />
           </RolePlayer>
@@ -597,7 +597,7 @@
     </DomainRelationship>
     <DomainRelationship Id="532da53a-eefd-43db-ac78-44eee34ba305" Description="Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute" Name="CategorySpecHasCategoryAttribute" DisplayName="Category Spec Has Category Attribute" Namespace="Empresa.MoneyManagerModel" IsEmbedding="true">
       <Source>
-        <DomainRole Id="8cfe4cd6-1264-4981-8d61-d3926cd47910" Description="Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpec" Name="CategorySpec" DisplayName="Category Spec" PropertyName="CategoryAttribute" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Category Attribute">
+        <DomainRole Id="8cfe4cd6-1264-4981-8d61-d3926cd47910" Description="Description for Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpec" Name="CategorySpec" DisplayName="Category Spec" PropertyName="CategoryAttribute" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Category Attribute">
           <RolePlayer>
             <DomainClassMoniker Name="CategorySpec" />
           </RolePlayer>

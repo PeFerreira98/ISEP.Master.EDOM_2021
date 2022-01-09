@@ -4,3 +4,9 @@ C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Debugging\obj\Debug\Debugging.dll
 C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Desktop\edom-21-22-atb-204\part1\tool2-ms\EDOM\Debugging\obj\Debug\Debugging.pdb
+C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Debugging\bin\Debug\Debugging.dll
+C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Debugging\bin\Debug\Debugging.pdb
+C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Debugging\obj\Debug\Debugging.csproj.AssemblyReference.cache
+C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Debugging\obj\Debug\Debugging.dll
+C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Debugging\obj\Debug\Debugging.pdb

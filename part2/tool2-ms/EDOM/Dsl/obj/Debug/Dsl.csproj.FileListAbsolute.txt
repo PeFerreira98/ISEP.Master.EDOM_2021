@@ -304,10 +304,10 @@ C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\bin\Debug\Microso
 C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
 C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\bin\Debug\en\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.15.0.resources.dll
 C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\bin\Debug\en\Microsoft.VisualStudio.Imaging.resources.dll
-C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csproj.AssemblyReference.cache
 C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\obj\Debug\Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx.resources
 C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csproj.GenerateResource.cache
 C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csproj.CoreCompileInputs.cache
 C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csproj.CopyComplete
 C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\obj\Debug\Empresa.MoneyManagerModel.Dsl.dll
 C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\obj\Debug\Empresa.MoneyManagerModel.Dsl.pdb
+C:\Users\Utilizador\edom-21-22-atb-204\part2\tool2-ms\EDOM\Dsl\obj\Debug\Dsl.csproj.AssemblyReference.cache

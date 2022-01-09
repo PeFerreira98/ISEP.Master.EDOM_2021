@@ -2,14 +2,14 @@ package Model;
 
 import java.time.LocalDate;
 import java.util.List;
-
-public class User {
-
-    private String name;
+		
+public class UserSpec {
+			
+	private String name;
     private List<Account> accountList;
     private LocalDate birthDate;
 
-    public User(String name, List<Account> accountList, LocalDate birthDate) {
+	public UserSpec(String name, List<Account> accountList, LocalDate birthDate) {
         this.name = name;
         this.accountList = accountList;
         this.birthDate = birthDate;
@@ -39,9 +39,10 @@ public class User {
         this.birthDate = birthDate;
     }
 
+
     @Override
     public String toString() {
-        return "User{" +
+        return "UserSpec" +
                 "name='" + name + '\'' +
                 ", accountList=" + accountList +
                 ", birthDate=" + birthDate +

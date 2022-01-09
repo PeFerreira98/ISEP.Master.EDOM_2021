@@ -65,6 +65,15 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Category.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Category.txt</LastGenOutput>
+    </None>
+    <Content Include="Category.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Category.tt</DependentUpon>
+    </Content>
     <Content Include="MoneyManagerModelReport.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

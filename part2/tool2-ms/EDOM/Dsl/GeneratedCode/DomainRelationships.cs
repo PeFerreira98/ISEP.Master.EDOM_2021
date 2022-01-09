@@ -3516,7 +3516,7 @@ namespace Empresa.MoneyManagerModel
 		/// </summary>
 		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CategorySpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CategorySpec", PropertyDisplayNameKey="Empresa.MoneyManagerModel.ModelHasCategorySpec/Model.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("cf1a6a0b-3705-4ee1-ada8-ac3427c5895e")]
 		public virtual Model Model
 		{
@@ -3586,24 +3586,43 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Static methods to access CategorySpec of a Model
 		/// <summary>
-		/// Gets a list of CategorySpec.
+		/// Gets CategorySpec.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<CategorySpec> GetCategorySpec(Model element)
+		public static CategorySpec GetCategorySpec(Model element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<CategorySpec>, CategorySpec>(element, ModelDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ModelDomainRoleId) as CategorySpec;
+		}
+		
+		/// <summary>
+		/// Sets CategorySpec.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetCategorySpec(Model element, CategorySpec newCategorySpec)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ModelDomainRoleId, newCategorySpec);
 		}
 		#endregion
 		#region Model link accessor
 		/// <summary>
-		/// Get the list of ModelHasCategorySpec links to a Model.
+		/// Get the ModelHasCategorySpec link to a Model.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.ModelHasCategorySpec> GetLinksToCategorySpec ( global::Empresa.MoneyManagerModel.Model modelInstance )
+		public static global::Empresa.MoneyManagerModel.ModelHasCategorySpec GetLinkToCategorySpec (global::Empresa.MoneyManagerModel.Model modelInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategorySpec>(modelInstance, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId);
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.ModelHasCategorySpec> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.ModelHasCategorySpec>(modelInstance, global::Empresa.MoneyManagerModel.ModelHasCategorySpec.ModelDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Model not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region CategorySpec link accessor
@@ -4017,7 +4036,7 @@ namespace Empresa.MoneyManagerModel
 		/// </summary>
 		[DslDesign::DisplayNameResource("Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.DisplayName", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.Description", typeof(global::Empresa.MoneyManagerModel.MoneyManagerModelDomainModel), "Empresa.MoneyManagerModel.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CategoryAttribute", PropertyDisplayNameKey="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CategoryAttribute", PropertyDisplayNameKey="Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute/CategorySpec.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("8cfe4cd6-1264-4981-8d61-d3926cd47910")]
 		public virtual CategorySpec CategorySpec
 		{
@@ -4088,24 +4107,43 @@ namespace Empresa.MoneyManagerModel
 		#endregion
 		#region Static methods to access CategoryAttribute of a CategorySpec
 		/// <summary>
-		/// Gets a list of CategoryAttribute.
+		/// Gets CategoryAttribute.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<CategoryAttribute> GetCategoryAttribute(CategorySpec element)
+		public static CategoryAttribute GetCategoryAttribute(CategorySpec element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<CategoryAttribute>, CategoryAttribute>(element, CategorySpecDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CategorySpecDomainRoleId) as CategoryAttribute;
+		}
+		
+		/// <summary>
+		/// Sets CategoryAttribute.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetCategoryAttribute(CategorySpec element, CategoryAttribute newCategoryAttribute)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, CategorySpecDomainRoleId, newCategoryAttribute);
 		}
 		#endregion
 		#region CategorySpec link accessor
 		/// <summary>
-		/// Get the list of CategorySpecHasCategoryAttribute links to a CategorySpec.
+		/// Get the CategorySpecHasCategoryAttribute link to a CategorySpec.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute> GetLinksToCategoryAttribute ( global::Empresa.MoneyManagerModel.CategorySpec categorySpecInstance )
+		public static global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute GetLinkToCategoryAttribute (global::Empresa.MoneyManagerModel.CategorySpec categorySpecInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute>(categorySpecInstance, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId);
+			global::System.Collections.Generic.IList<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute>(categorySpecInstance, global::Empresa.MoneyManagerModel.CategorySpecHasCategoryAttribute.CategorySpecDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CategorySpec not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region CategoryAttribute link accessor
