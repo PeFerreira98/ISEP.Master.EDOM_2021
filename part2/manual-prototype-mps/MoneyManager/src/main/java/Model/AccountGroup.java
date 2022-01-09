@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -29,7 +31,7 @@ public class AccountGroup {
 
     @Override
     public String toString() {
-        return "Account Group => \n" +
+        return "AccountGroup => \n" +
                 "Name: " + name + "\n" +
                 "Account List: " + accountList + "\n";
     }

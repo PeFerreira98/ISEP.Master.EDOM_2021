@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -45,8 +47,8 @@ public class Account {
     public String toString() {
         return "Account => \n" +
                 "Transaction List: " + transactionList + "\n" +
-                "Name: " + name + '\n' +
-                "Amount: " + amount + "€ \n";
+                "Name: " + name + " \n " +
+                "Amount: " + amount + "\n";
     }
 
     @Override

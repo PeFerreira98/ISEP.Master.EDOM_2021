@@ -1,5 +1,6 @@
+package Model;
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class User {
@@ -45,7 +46,7 @@ public class User {
     @Override
     public String toString() {
         return "User => \n" +
-                "Name: " + name  + "\n" +
+                "Name: " + name + "\n" +
                 "Account List: " + accountList + "\n" +
                 "Birth Date: " + birthDate + "\n";
     }

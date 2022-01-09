@@ -145,35 +145,21 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SolutionMoneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:14f1c09e-60d3-4a37-87a9-f14d5d5a2302(moneyManager.structure) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.structure.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -190,6 +176,52 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:6f2d3399-b2b2-4b82-beef-54947872ca0e(moneyManager.behavior) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.behavior.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SolutionMoneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:40ab0ff7-848a-4b34-9f5c-2b72c8b4de63(SolutionMoneyManager.a_model) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moneyManager" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:14f1c09e-60d3-4a37-87a9-f14d5d5a2302(moneyManager.structure) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.structure.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -213,43 +245,21 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SolutionMoneyManager" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:40ab0ff7-848a-4b34-9f5c-2b72c8b4de63(SolutionMoneyManager.a_model) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
           <SELECTED>
             <PATH_ELEMENT>
               <option name="myItemId" value="moneyManager" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="6a7f05e2-470d-4981-a527-d9a26e1e79bf" />
+              <option name="myItemId" value="9a5f9a2e-bfeb-4763-bcb7-ba78024d6876(moneyManager)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SolutionMoneyManager" />
+              <option name="myItemId" value="r:14f1c09e-60d3-4a37-87a9-f14d5d5a2302(moneyManager.structure) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/languages/NewLanguage/models/moneyManager.structure.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:40ab0ff7-848a-4b34-9f5c-2b72c8b4de63(SolutionMoneyManager.a_model) in IdeaFile[path: C:/Users/Daniel Ferreira/Documents/edom-21-22-atb-204/part1/tool1-mps/solutions/SolutionMoneyManager/models/SolutionMoneyManager.a_model.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7744288875023187754" />
+              <option name="myItemId" value="8653132035599184167" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>

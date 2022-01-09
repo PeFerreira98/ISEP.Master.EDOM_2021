@@ -1,7 +1,8 @@
+package Model;
+
 public class Category {
 
     private String name;
-
     public Category(String name) {
         this.name = name;
     }
@@ -16,7 +17,7 @@ public class Category {
 
     @Override
     public String toString() {
-        return "Category => \n" +
+        return "Category =>  \n" +
                 "Name: " + name + "\n";
     }
 }
