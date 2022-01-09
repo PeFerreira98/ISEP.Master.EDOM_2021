@@ -68,7 +68,7 @@ For all models, there are some common functionalities:
     - In this case we will assume a Account has a Transaction list for simplicity.
 - Create Transaction
     - The User need to create Transaction based on TransactionSpec that will contain Attributes/fields based on TransactionAttribute and a name.
-    - In this case we will assume a Transaction has one Category for simplicity.
+    - In this case we will assume a Transaction has one Category for simplicity. Category could be "Income" or "Expense".
 
 - Create AccountGroup
     - The User need to create an AccountGroup based on AccountGroupSpec that will contain Attributes/fields based on AccountAttribute and a name. 
