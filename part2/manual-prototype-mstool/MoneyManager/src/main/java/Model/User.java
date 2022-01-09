@@ -14,10 +14,6 @@ public class User {
         this.accountList = accountList;
         this.birthDate = birthDate;
     }
-    public User(String name, LocalDate birthDate) {
-        this.name = name;
-        this.birthDate = birthDate;
-    }
 
     public String getName() {
         return name;
@@ -50,11 +46,5 @@ public class User {
                 ", accountList=" + accountList +
                 ", birthDate=" + birthDate +
                 '}';
-    }
-
-    public void listAll (User user){
-        for (Account acc: user.accountList) {
-            System.out.println(acc.toString());
-        }
     }
 }

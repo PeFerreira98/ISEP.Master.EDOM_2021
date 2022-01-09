@@ -1,0 +1,76 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+    String model = this.Model.Name;
+  foreach (UserSpec user in this.Model.Elements)
+  {
+  String userName = user.Name;
+    foreach (AccountSpec account in this.Model.AccountSpec)
+  {
+  String accountName = account.Name;
+  foreach (AccountGroupSpec accountGroup in this.Model.AccountGroupSpec)
+  {
+  String accountGroupName = accountGroup.Name;
+#>
+package UI;
+import Controller.<#= accountName #>Controller;
+import Controller.<#= model #>ation;
+import Model.<#= accountName #>;
+
+import java.util.Scanner;
+
+public class <#= accountName #>UI {
+
+    public static void <#= accountName #>UI(<#= model #>ation <#= model #>ation) {
+        Scanner sc = new Scanner(System.in);
+        int option;
+        <#= accountName #>Controller <#= accountName #>Controller = new <#= accountName #>Controller();
+        String menu = "1 - Add Account\n2 - Check Accounts\n3 - Add Account to Account Group\n0 - Go to Main Menu";
+        System.out.println(menu);
+        do {
+            option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    <#= accountName #>Controller.add<#= accountName #>To<#= userName #>(<#= model #>ation.get<#= userName #>());
+                    System.out.println(menu);
+                    break;
+                case 2:
+                    System.out.println(<#= model #>ation.get<#= userName #>().get<#= accountName #>List());
+                    System.out.println(menu);
+                    break;
+                case 3:
+                    System.out.println("Which account do you want to add?");
+                    for (<#= accountName #> acc: <#= model #>ation.get<#= userName #>().get<#= accountName #>List()) {
+                        System.out.printf(acc.getName() + "\n");
+                    }
+                    String <#= accountName #> = sc.next();
+                    <#= accountName #>Controller.add<#= accountName #>To<#= accountGroupName #>(<#= model #>ation.get<#= userName #>(),<#= accountName #>,<#= model #>ation.get<#= accountGroupName #>List());
+                    System.out.println(menu);
+                    break;
+                case 0:
+                    Program.menu(<#= model #>ation);
+                    break;
+                default:
+                    System.out.println(menu);
+                    <#= accountName #>UI(<#= model #>ation);
+            }
+        } while (option != 0);
+    }
+}
+<#    
+        String dir = "../../../../Project_Aux/src/main/java/UI";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, accountName + "UI.java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }
+    }
+    }
+#>

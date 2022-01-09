@@ -1,7 +1,6 @@
 package UI;
 
 import Controller.Modelation;
-
 import java.util.Scanner;
 
 public class UserUI {

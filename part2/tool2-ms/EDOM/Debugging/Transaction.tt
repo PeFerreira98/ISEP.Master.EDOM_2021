@@ -1,0 +1,112 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  foreach (TransactionSpec transaction in this.Model.TransactionSpec)
+  {
+  String transactionName = transaction.Name;
+#>
+package Model;
+
+import java.time.LocalDate;
+		
+public class <#= transactionName #> {
+			
+    private String from;
+    private String to;
+    private double amount;
+    private LocalDate date;
+    private Income<#= this.Model.CategorySpec.Name #> i<#= this.Model.CategorySpec.Name #>;
+    private Expense<#= this.Model.CategorySpec.Name #> e<#= this.Model.CategorySpec.Name #>;
+
+    public <#= transactionName #>(String from, String to, double amount, LocalDate date, Income<#= this.Model.CategorySpec.Name #> cat) {
+        this.from = from;
+        this.to = to;
+        this.amount = amount;
+        this.date = date;
+        this.i<#= this.Model.CategorySpec.Name #> = cat;
+    }
+
+    public <#= transactionName #>(String from, String to, double amount, LocalDate date, Expense<#= this.Model.CategorySpec.Name #> cat) {
+        this.from = from;
+        this.to = to;
+        this.amount = amount;
+        this.date = date;
+        this.e<#= this.Model.CategorySpec.Name #> = cat;
+    }
+
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public Income<#= this.Model.CategorySpec.Name #> getI<#= this.Model.CategorySpec.Name #>() {
+        return i<#= this.Model.CategorySpec.Name #>;
+    }
+
+    public void setI<#= this.Model.CategorySpec.Name #>(Income<#= this.Model.CategorySpec.Name #> i<#= this.Model.CategorySpec.Name #>) {
+        this.i<#= this.Model.CategorySpec.Name #> = i<#= this.Model.CategorySpec.Name #>;
+    }
+
+    public Expense<#= this.Model.CategorySpec.Name #> getE<#= this.Model.CategorySpec.Name #>() {
+        return e<#= this.Model.CategorySpec.Name #>;
+    }
+
+    public void setE<#= this.Model.CategorySpec.Name #>(Expense<#= this.Model.CategorySpec.Name #> e<#= this.Model.CategorySpec.Name #>) {
+        this.e<#= this.Model.CategorySpec.Name #> = e<#= this.Model.CategorySpec.Name #>;
+    }
+
+    @Override
+    public String toString() {
+        return "<#= transactionName #>{" +
+                "from='" + from + '\'' +
+                ", to='" + to + '\'' +
+                ", amount=" + amount +
+                ", date=" + date +
+                ", i<#= this.Model.CategorySpec.Name #>=" + i<#= this.Model.CategorySpec.Name #> +
+                ", e<#= this.Model.CategorySpec.Name #>=" + e<#= this.Model.CategorySpec.Name #> +
+                '}';
+    }
+
+}
+<#    
+        String dir = "../../../../Project_Aux/src/main/java/Model";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, transactionName + ".java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }
+#>

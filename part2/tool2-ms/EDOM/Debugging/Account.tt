@@ -1,0 +1,94 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  foreach (AccountSpec account in this.Model.AccountSpec)
+  {
+  String accountName = account.Name;
+  foreach (TransactionSpec transaction in this.Model.TransactionSpec)
+  {
+  String transactionName = transaction.Name;
+#>
+package Model;
+
+import java.util.Objects;
+import java.util.List;
+		
+public class <#= accountName #> {
+			
+	private String name;
+    private List<<#= transactionName #>> <#= transactionName #>List;
+    private double amount;
+
+    public <#= accountName #>(List<<#= transactionName #>> <#= transactionName #>List) {
+        this.<#= transactionName #>List = <#= transactionName #>List;
+    }
+
+	public <#= accountName #>(String name, List<<#= transactionName #>> <#= transactionName #>List, double initialAmount) {
+        this.name = name;
+        this.<#= transactionName #>List = <#= transactionName #>List;
+        this.amount = initialAmount;
+    }
+
+    public List<<#= transactionName #>> get<#= transactionName #>List() {
+        return <#= transactionName #>List;
+    }
+
+    public void set<#= transactionName #>List(List<<#= transactionName #>> <#= transactionName #>List) {
+        this.<#= transactionName #>List = <#= transactionName #>List;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getInitialAmount() {
+        return amount;
+    }
+
+    public void setInitialAmount(double initialAmount) {
+        this.amount = initialAmount;
+    }
+
+
+    @Override
+    public String toString() {
+        return "<#= accountName #>{" +
+                "<#= transactionName #>List=" + <#= transactionName #>List +
+                ", name='" + name + '\'' +
+                ", amount=" + amount +
+                "}\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        <#= accountName #> that = (<#= accountName #>) o;
+        return name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+}
+<#    
+        String dir = "../../../../Project_Aux/src/main/java/Model";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, accountName + ".java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }
+    }
+#>

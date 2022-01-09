@@ -37,12 +37,6 @@ public class AccountGroup {
                 "}\n";
     }
 
-    public void listAll (AccountGroup accG){
-        for (Account acc: accG.accountList) {
-            System.out.println(acc.toString());
-        }
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

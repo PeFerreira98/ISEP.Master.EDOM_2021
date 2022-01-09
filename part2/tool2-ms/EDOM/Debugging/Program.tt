@@ -1,0 +1,81 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  String model = this.Model.Name;
+  foreach (AccountGroupSpec accountGroup in this.Model.AccountGroupSpec)
+  {
+  String accountGroupName = accountGroup.Name;
+  foreach (UserSpec user in this.Model.Elements)
+  {
+  foreach (AccountSpec account in this.Model.AccountSpec)
+  {
+  String accountName = account.Name;
+  foreach (TransactionSpec transaction in this.Model.TransactionSpec)
+  {
+  String transactionName = transaction.Name;
+  String userName = user.Name;
+#>
+package UI;
+
+import Controller.*;
+import Model.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Program {
+    private static final String a = "Menu:\n 1 - User\n 2 - Account\n 3 - Account Group\n " + "4 - Transaction\n " +
+            "0 - Exit\n\n What's your option?";
+
+    public static void main(String[] args) {
+        <#= userName #>Controller <#= userName #>Controller = new <#= userName #>Controller();
+        <#= userName #> <#= userName #> = <#= userName #>Controller.add<#= userName #>();
+        List<<#= accountGroupName #>> <#= accountGroupName #>List = new ArrayList<>();
+        <#= model #>ation <#= model #>ation = new <#= model #>ation(<#= userName #>, <#= accountGroupName #>List);
+        menu(<#= model #>ation);
+    }
+
+    public static void menu(<#= model #>ation <#= model #>ation) {
+        Scanner sc = new Scanner(System.in);
+        int option;
+        System.out.println(a);
+        do {
+            option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    <#= userName #>UI.<#= userName #>UI(<#= model #>ation);
+                    break;
+                case 2:
+                    <#= accountName #>UI.<#= accountName #>UI(<#= model #>ation);
+                    break;
+                case 3:
+                    <#= accountGroupName #>UI.<#= accountGroupName #>UI(<#= model #>ation);
+                    break;
+                case 4:
+                    <#= transactionName #>UI.<#= transactionName #>UI(<#= model #>ation);
+                    break;
+                case 0:
+                    System.exit(0);
+                default:
+                    System.out.println(a);
+                    menu(<#= model #>ation);
+            }
+        } while (option != -1);
+    }
+}
+<#    
+        String dir = "../../../../Project_Aux/src/main/java/UI";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir,"Program.java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }}}}
+#>

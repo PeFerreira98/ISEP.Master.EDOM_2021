@@ -1,10 +1,8 @@
 package UI;
 
-import Controller.AccountGroupController;
 import Controller.Modelation;
 import Controller.TransactionController;
 import Model.Account;
-
 import java.util.Scanner;
 
 public class TransactionUI {

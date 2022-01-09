@@ -65,16 +65,12 @@ namespace UML_Generator
 
                     }
                     file.WriteLine("\n");
-                    foreach (CategorySpec categorySpec in model.CategorySpec)
-                    {
 
-                        file.WriteLine("class " + categorySpec.Name + " #e0b0ff {");
+                        String categorySpec = model.CategorySpec.Name;
+                        CategoryAttribute categoryAttribute = model.CategorySpec.CategoryAttribute;
+                        file.WriteLine("class " + categorySpec + " #e0b0ff {");
+                        file.WriteLine(categoryAttribute.Name + "\n" + categoryAttribute.AttributeType1 + "\n}");
 
-                        foreach (CategoryAttribute categoryAttribute in categorySpec.CategoryAttribute)
-                        {
-                            file.WriteLine(categoryAttribute.Name + "\n" + categoryAttribute.AttributeType1 + "\n}");
-                        }
-                    }
                     file.WriteLine("\n");
                     foreach (UserAccountAssociation association in model.UserAccountAssociation)
                     {
@@ -133,13 +129,10 @@ namespace UML_Generator
                         }
                     }
 
-                    foreach (CategorySpec categorySpec in model.CategorySpec)
-                    {
-                        foreach (CategoryTransactionAssociation association in model.CategoryTransactionAssociation)
+                    foreach (CategoryTransactionAssociation association in model.CategoryTransactionAssociation)
                         {
-                            file.WriteLine(categorySpec.Name + " \"1\" --> \"0..*\" " + association.Name);
+                            file.WriteLine(categorySpec + " \"1\" --> \"0..*\" " + association.Name);
                         }
-                    }
 
                     file.WriteLine("@enduml");
 

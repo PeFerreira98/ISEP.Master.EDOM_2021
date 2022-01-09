@@ -1,0 +1,77 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  foreach (UserSpec user in this.Model.Elements)
+  {
+  String userName = user.Name;
+  foreach (AccountSpec account in this.Model.AccountSpec)
+  {
+  String accountName = account.Name;
+#>
+package Model;
+
+import java.time.LocalDate;
+import java.util.List;
+		
+public class <#= userName #> {
+			
+	private String name;
+    private List<<#= accountName #>> <#= accountName #>List;
+    private LocalDate birthDate;
+
+	public <#= userName #>(String name, List<<#= accountName #>> <#= accountName #>List, LocalDate birthDate) {
+        this.name = name;
+        this.<#= accountName #>List = <#= accountName #>List;
+        this.birthDate = birthDate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<<#= accountName #>> get<#= accountName #>List() {
+        return <#= accountName #>List;
+    }
+
+    public void set<#= accountName #>List(List<<#= accountName #>> <#= accountName #>List) {
+        this.<#= accountName #>List = <#= accountName #>List;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+
+    @Override
+    public String toString() {
+        return "<#= userName #>" +
+                "name='" + name + '\'' +
+                ", <#= accountName #>List=" + <#= accountName #>List +
+                ", birthDate=" + birthDate +
+                '}';
+    }
+}
+<#    
+        String dir = "../../../../Project_Aux/src/main/java/Model";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, userName + ".java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }
+    }
+#>

@@ -64,10 +64,4 @@ public class Account {
     public int hashCode() {
         return Objects.hash(name);
     }
-
-    public void listAll (Account acc){
-        for (Transaction trans: acc.transactionList) {
-            System.out.println(trans.toString());
-        }
-    }
 }

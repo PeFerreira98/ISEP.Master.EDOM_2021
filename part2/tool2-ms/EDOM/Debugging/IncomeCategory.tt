@@ -1,0 +1,35 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+package Model;
+		
+public class Income<#= this.Model.CategorySpec.Name #> extends <#= this.Model.CategorySpec.Name #> {
+			
+	private final String description;
+
+	public Income<#= this.Model.CategorySpec.Name #>(String name) {
+        super(name);
+        this.description = "Income";
+    }
+
+    @Override
+    public String toString() {
+        return "Income<#= this.Model.CategorySpec.Name #>" +
+                "name="+ this.getName()+
+                " description='" + description + '\'' +
+                '}';
+    }
+}
+<#    
+        String dir = "../../../../Project_Aux/src/main/java/Model";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, "Income"+this.Model.CategorySpec.Name + ".java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+#>

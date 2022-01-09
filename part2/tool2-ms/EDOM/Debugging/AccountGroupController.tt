@@ -1,0 +1,58 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  foreach (AccountGroupSpec accountGroup in this.Model.AccountGroupSpec)
+  {
+  String accountGroupName = accountGroup.Name;
+  foreach (AccountSpec account in this.Model.AccountSpec)
+  {
+  String accountName = account.Name;
+#>
+package Controller;
+
+import Model.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
+
+public class <#= accountGroupName #>Controller {
+
+    public <#= accountGroupName #>Controller() {
+    }
+
+    public void add<#= accountGroupName #>(List<<#= accountGroupName #>> <#= accountGroupName #>List) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Account Group Name");
+        List<<#= accountName #>> <#= accountName #>List = new ArrayList<>();
+        String accGName = sc.nextLine();
+        <#= accountGroupName #>List.add(new <#= accountGroupName #>(accGName, <#= accountName #>List));
+        System.out.println("Do you want to add more Account Groups (y/n)");
+        String answer = sc.nextLine();
+        while (Objects.equals(answer, "y")) {
+            System.out.println("Account Group Name");
+            accGName = sc.nextLine();
+            <#= accountName #>List = new ArrayList<>();
+            <#= accountGroupName #>List.add(new <#= accountGroupName #>(accGName, <#= accountName #>List));
+            System.out.println("Do you want to add more Account Groups (y/n)");
+            answer = sc.nextLine();
+        }
+    }
+}
+
+<#
+        String dir = "../../../../Project_Aux/src/main/java/Controller";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, accountGroupName + "Controller.java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }}
+#>

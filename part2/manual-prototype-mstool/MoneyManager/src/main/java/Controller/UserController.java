@@ -25,6 +25,4 @@ public class UserController {
         List<Account> accountList = new ArrayList<>();
         return new User(name, accountList, localDate);
     }
-
-
 }

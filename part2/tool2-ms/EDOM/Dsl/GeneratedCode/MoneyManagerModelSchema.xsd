@@ -123,13 +123,13 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: ModelHasCategorySpec -->
-          <xsd:element name="categorySpec" minOccurs="0" maxOccurs="1">
+          <xsd:element name="categorySpec" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ModelHasCategorySpec</xsd:documentation>
+              <xsd:documentation>Instance of ModelHasCategorySpec</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="modelHasCategorySpec" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="modelHasCategorySpec" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of ModelHasCategorySpec needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
@@ -852,11 +852,11 @@
           <!-- Relationship: CategorySpecHasCategoryAttribute -->
           <xsd:element name="categoryAttribute" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of CategorySpecHasCategoryAttribute</xsd:documentation>
+              <xsd:documentation>Instance of CategorySpecHasCategoryAttribute</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="categorySpecHasCategoryAttribute" minOccurs="1" maxOccurs="unbounded">
+                <xsd:element ref="categorySpecHasCategoryAttribute" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of CategorySpecHasCategoryAttribute needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>

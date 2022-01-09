@@ -1,0 +1,68 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  String model = this.Model.Name;  
+ foreach (UserSpec user in this.Model.Elements)
+  {
+  String userName = user.Name;
+    foreach (AccountGroupSpec accountGroup in this.Model.AccountGroupSpec)
+  {
+  String accountGroupName = accountGroup.Name;
+#>
+package Controller;
+
+import Model.<#= accountGroupName #>;
+import Model.<#= userName #>;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Modelation {
+
+    private <#= userName #> <#= userName #>;
+    private List<<#= accountGroupName #>> <#= accountGroupName #>List = new ArrayList<>();
+
+    public Modelation(<#= userName #> <#= userName #>, List<<#= accountGroupName #>> <#= accountGroupName #>List) {
+        this.<#= userName #> = <#= userName #>;
+        this.<#= accountGroupName #>List = <#= accountGroupName #>List;
+    }
+
+    public <#= userName #> get<#= userName #>() {
+        return <#= userName #>;
+    }
+
+    public void set<#= userName #>(<#= userName #> <#= userName #>) {
+        this.<#= userName #> = <#= userName #>;
+    }
+
+    public List<<#= accountGroupName #>> get<#= accountGroupName #>List() {
+        return <#= accountGroupName #>List;
+    }
+
+    public void set<#= accountGroupName #>List(List<<#= accountGroupName #>> <#= accountGroupName #>List) {
+        this.<#= accountGroupName #>List = <#= accountGroupName #>List;
+    }
+
+    @Override
+    public String toString() {
+        return "Model{" +
+                "<#= userName #>=" + <#= userName #>.toString() +
+                ", <#= accountGroupName #>List=" + <#= accountGroupName #>List +
+                '}';
+    }
+}
+<#    
+        String dir = "../../../../Project_Aux/src/main/java/Controller";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, model + "ation.java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }
+    }
+#>

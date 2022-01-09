@@ -1,0 +1,78 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ parameter name="delimiter" type="System.String" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".txt" #>
+<#@ MoneyManagerModel processor="MoneyManagerModelDirectiveProcessor" requires="fileName='Test_IT2.MoneyManagerModel'" #>
+<#
+  foreach (AccountSpec account in this.Model.AccountSpec)
+  {
+  String accountName = account.Name;
+  foreach (AccountGroupSpec accountGroup in this.Model.AccountGroupSpec)
+  {
+  String accountGroupName = accountGroup.Name;
+#>
+package Model;
+
+import java.util.List;
+import java.util.Objects;
+		
+public class <#= accountGroupName #> {
+			
+	private String name;
+    private List<<#= accountName #>> <#= accountName #>List;
+
+	public <#= accountGroupName #>(String name, List<<#= accountName #>> <#= accountName #>List) {
+        this.name = name;
+        this.<#= accountName #>List = <#= accountName #>List;
+    }
+
+    public List<<#= accountName #>> get<#= accountName #>List() {
+        return <#= accountName #>List;
+    }
+
+    public void set<#= accountName #>List(List<<#= accountName #>> <#= accountName #>List) {
+        this.<#= accountName #>List = <#= accountName #>List;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "<#= accountGroupName #>{" +
+                "<#= accountName #>List=" + <#= accountName #>List +
+                ", name='" + name + '\'' +
+                "}\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        <#= accountGroupName #> that = (<#= accountGroupName #>) o;
+        return name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+}
+<#    
+        String dir = "../../../../Project_Aux/src/main/java/Model";
+        Directory.CreateDirectory(dir);
+        File.WriteAllText(Path.Combine(dir, accountGroupName + ".java"), this.GenerationEnvironment.ToString());
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+    }
+    }
+#>
