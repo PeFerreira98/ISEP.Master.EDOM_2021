@@ -138,7 +138,7 @@ After the application generation, the team changed some classes between the gene
 
 One of the issues was the allowance of some applications to associate a bank account to an account. To solve this issue, the superclass AccountBase and it's subclass - Account - was created as mentioned before. The adopted change allow us to have the possibility of creating accounts that can associate bank accounts or not, depending on the application.
 
-![superclass](superclass.png)
+![superclass](images/superclass.png)
 
 To sum up:
 
