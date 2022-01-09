@@ -65,6 +65,92 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Modelation.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Modelation.txt</LastGenOutput>
+    </None>
+    <None Include="AccountGroupUI.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AccountGroupUI.txt</LastGenOutput>
+    </None>
+    <None Include="Program.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Program.txt</LastGenOutput>
+    </None>
+    <None Include="AccountGroupController.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AccountGroupController.txt</LastGenOutput>
+    </None>
+    <Content Include="AccountGroupController.txt">
+      <DependentUpon>AccountGroupController.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="Program.txt">
+      <DependentUpon>Program.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="AccountGroupUI.txt">
+      <DependentUpon>AccountGroupUI.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="AccountUI.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountUI.tt</DependentUpon>
+    </Content>
+    <Content Include="Modelation.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelation.tt</DependentUpon>
+    </Content>
+    <None Include="TransactionUI.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TransactionUI.txt</LastGenOutput>
+    </None>
+    <None Include="TransactionController.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TransactionController.txt</LastGenOutput>
+    </None>
+    <None Include="UserController.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UserController.txt</LastGenOutput>
+    </None>
+    <None Include="AccountController.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AccountController.txt</LastGenOutput>
+    </None>
+    <Content Include="AccountController.txt">
+      <DependentUpon>AccountController.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="UserController.txt">
+      <DependentUpon>UserController.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="TransactionController.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionController.tt</DependentUpon>
+    </Content>
+    <Content Include="TransactionUI.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionUI.tt</DependentUpon>
+    </Content>
+    <None Include="AccountUI.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AccountUI.txt</LastGenOutput>
+    </None>
+    <Content Include="UserUI.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserUI.tt</DependentUpon>
+    </Content>
     <None Include="Category.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Category.txt</LastGenOutput>
@@ -108,6 +194,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Content>
+    <None Include="UserUI.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UserUI.txt</LastGenOutput>
+    </None>
     <Content Include="User.txt">
       <DependentUpon>User.tt</DependentUpon>
       <AutoGen>True</AutoGen>

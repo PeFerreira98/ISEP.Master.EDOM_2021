@@ -6,10 +6,10 @@ import java.util.List;
 public class UserSpec {
 			
 	private String name;
-    private List<Account> accountList;
+    private List<AccountSpec> AccountSpecList;
     private LocalDate birthDate;
 
-	public UserSpec(String name, List<AccountSpec> accountList, LocalDate birthDate) {
+	public UserSpec(String name, List<AccountSpec> AccountSpecList, LocalDate birthDate) {
         this.name = name;
         this.AccountSpecList = AccountSpecList;
         this.birthDate = birthDate;

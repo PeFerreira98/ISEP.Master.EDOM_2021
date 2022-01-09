@@ -23,10 +23,10 @@ import java.util.List;
 public class <#= userName #> {
 			
 	private String name;
-    private List<Account> accountList;
+    private List<<#= accountName #>> <#= accountName #>List;
     private LocalDate birthDate;
 
-	public <#= userName #>(String name, List<<#= accountName #>> accountList, LocalDate birthDate) {
+	public <#= userName #>(String name, List<<#= accountName #>> <#= accountName #>List, LocalDate birthDate) {
         this.name = name;
         this.<#= accountName #>List = <#= accountName #>List;
         this.birthDate = birthDate;
