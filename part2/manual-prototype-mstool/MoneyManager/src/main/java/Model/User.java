@@ -1,14 +1,22 @@
-import java.util.List;
-import java.util.Objects;
+package Model;
 
-public class AccountGroup {
+import java.time.LocalDate;
+import java.util.List;
+
+public class User {
 
     private String name;
     private List<Account> accountList;
+    private LocalDate birthDate;
 
-    public AccountGroup(String name, List<Account> accountList) {
+    public User(String name, List<Account> accountList, LocalDate birthDate) {
         this.name = name;
         this.accountList = accountList;
+        this.birthDate = birthDate;
+    }
+    public User(String name, LocalDate birthDate) {
+        this.name = name;
+        this.birthDate = birthDate;
     }
 
     public String getName() {
@@ -27,30 +35,26 @@ public class AccountGroup {
         this.accountList = accountList;
     }
 
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
     @Override
     public String toString() {
-        return "AccountGroup{" +
+        return "User{" +
                 "name='" + name + '\'' +
                 ", accountList=" + accountList +
-                "}\n";
+                ", birthDate=" + birthDate +
+                '}';
     }
 
-    public void listAll (AccountGroup accG){
-        for (Account acc: accG.accountList) {
+    public void listAll (User user){
+        for (Account acc: user.accountList) {
             System.out.println(acc.toString());
         }
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AccountGroup that = (AccountGroup) o;
-        return name.equals(that.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name);
     }
 }

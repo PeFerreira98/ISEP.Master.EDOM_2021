@@ -1,3 +1,5 @@
+package Model;
+
 import java.time.LocalDate;
 
 public class Transaction {
@@ -6,14 +8,22 @@ public class Transaction {
     private String to;
     private double amount;
     private LocalDate date;
-    private Category category;
+    private IncomeCategory icategory;
+    private ExpenseCategory ecategory;
 
-    public Transaction(String from, String to, double amount, LocalDate date, Category cat) {
+    public Transaction(String from, String to, double amount, LocalDate date, IncomeCategory cat) {
         this.from = from;
         this.to = to;
         this.amount = amount;
         this.date = date;
-        this.category = cat;
+        this.icategory = cat;
+    }
+    public Transaction(String from, String to, double amount, LocalDate date, ExpenseCategory cat) {
+        this.from = from;
+        this.to = to;
+        this.amount = amount;
+        this.date = date;
+        this.ecategory = cat;
     }
 
     public String getFrom() {
@@ -48,12 +58,20 @@ public class Transaction {
         this.date = date;
     }
 
-    public Category getCategory() {
-        return category;
+    public IncomeCategory getIcategory() {
+        return icategory;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setIcategory(IncomeCategory icategory) {
+        this.icategory = icategory;
+    }
+
+    public ExpenseCategory getEcategory() {
+        return ecategory;
+    }
+
+    public void setEcategory(ExpenseCategory ecategory) {
+        this.ecategory = ecategory;
     }
 
     @Override
@@ -63,7 +81,8 @@ public class Transaction {
                 ", to='" + to + '\'' +
                 ", amount=" + amount +
                 ", date=" + date +
-                ", category=" + category.getName() +
+                ", icategory=" + icategory +
+                ", ecategory=" + ecategory +
                 '}';
     }
 }
