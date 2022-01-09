@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="-5e1usks7anx8fnb1eodzafadt73c374">
+  <files names="CapitalizeAccountSpecName_QuickFix.java:CapitalizeAssociationName_QuickFix.java:CapitalizeTransactionSpecName_QuickFix.java:CapitalizeUserSpecName_QuickFix.java:DeleteUniqueAccountSpec_QuickFix.java:DeleteUniqueModel_QuickFix.java:DeleteUniqueTransactionSpec_QuickFix.java:DeleteUniqueUserSpec_QuickFix.java:TypesystemDescriptor.java:check_AccountAttribute_NonTypesystemRule.java:check_AccountSpec_NonTypesystemRule.java:check_Model_NonTypesystemRule.java:check_TransactionAttribute_NonTypesystemRule.java:check_TransactionSpec_NonTypesystemRule.java:check_UserAttribute_NonTypesystemRule.java:check_UserSpec_NonTypesystemRule.java" />
+</product>
+
