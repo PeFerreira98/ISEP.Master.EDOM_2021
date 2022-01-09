@@ -137,10 +137,12 @@ After generating all the code in the different applications, the generation was 
 ## Constraints and Refactorings
 
 **Model**
+
 * nameMustBegreaterThan1Char - each model cannot have a blank or null name
 * mustNotHaveDuplicatedAssociations - each association contained in the model shall have diferent references from one another
 
 **UserSpec**
+
 * mustHaveAttributeWithDifferentNames - a user cannot have fields with the same name 
 * mustHaveNameAttribute - a user must have an attribute called 'name' - check
 * nameShouldNotContainSpaces - a user cannot contain spaces in its name
@@ -148,6 +150,7 @@ After generating all the code in the different applications, the generation was 
 * cardinalityMaxMustBeHigherThanCardinalityMin - a user's max cardinality ma must be higher than min cardinality
 
 **AccountSpec**
+
 * mustHaveAttributeWithDifferentNames - an account cannot have fields with the same name
 * mustHaveCurrencyAttribute - an account must have an attribute called 'currency' - check
 * nameShouldNotContainSpaces - an account cannot contain spaces in its name
@@ -155,6 +158,7 @@ After generating all the code in the different applications, the generation was 
 * cardinalityMaxMustBeHigherThanCardinalityMin - a Account's max cardinality ma must be higher than min cardinality
 
 **TransactionSpec**
+
 * mustHaveAttributeWithDifferentNames - a transaction cannot have fields with the same name 
 * mustHaveCurrencyAttribute - a transaction must have an attribute called 'currency' - check
 * mustHaveAmountAttribute - a transaction must have an attribute called 'amount' - check
@@ -164,6 +168,7 @@ After generating all the code in the different applications, the generation was 
 * cardinalityMaxMustBeHigherThanCardinalityMin - a transaction's max cardinality ma must be higher than min cardinality
 
 **CategorySpec**
+
 * mustHaveAttributeWithDifferentNames - a Category cannot have fields with the same name 
 * mustHaveCurrencyAttribute - a Category must have an attribute called 'currency' - check
 * mustHaveAmountAttribute - a Category must have an attribute called 'amount' - check
@@ -173,30 +178,37 @@ After generating all the code in the different applications, the generation was 
 * cardinalityMaxMustBeHigherThanCardinalityMin - a category' max cardinality ma must be higher than min cardinality
 
 **UserAccountAssociation**
+
 * nameMustBegreaterThan1Char - an User Account Association cannot have a blank or null name
 * nameShouldNotContainSpaces - an User Account Association cannot contain spaces in its name
 * nameMustStartWithCapitalLetter - an User Account Association name must start with a capital letter
 
 **AccountTransactionAssociation**
+
 * nameMustBegreaterThan1Char - an Account Transaction Association cannot have a blank or null name
 * nameShouldNotContainSpaces - an Account Transaction Association  cannot contain spaces in its name
 * nameMustStartWithCapitalLetter - an Account Transaction Association  name must start with a capital letter
 
 **CategoryTransactionAssociation**
+
 * nameMustBegreaterThan1Char - a Category Transaction Association cannot have a blank or null name
 * nameShouldNotContainSpaces - a Category Transaction Association cannot contain spaces in its name
 * nameMustStartWithCapitalLetter - a Category Transaction Association name must start with a capital letter
 
 **UserAttribute**
+
 * nameMustBegreaterThan1Char - a user cannot have a blank or null name
 
 **AccountAttribute**
+
 * nameMustBegreaterThan1Char - an account cannot have a blank or null name
 
 **TransactionAttribute**
+
 * nameMustBegreaterThan1Char - a transaction cannot have a blank or null name
 
 **CategoryAttribute**
+
 * nameMustBegreaterThan1Char - a category cannot have a blank or null name
 
 **AttributeType**
@@ -204,6 +216,7 @@ After generating all the code in the different applications, the generation was 
 ## Presentations of Models (instances)
 
 ### Eclipse
+![Instance](../diagrams/tool3-epsilon/part2/2_new_diagram.png)
 
 ### MPS
 
