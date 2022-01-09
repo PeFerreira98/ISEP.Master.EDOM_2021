@@ -81,6 +81,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AccountGroupController.txt</LastGenOutput>
     </None>
+    <Content Include="Account.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.tt</DependentUpon>
+    </Content>
     <Content Include="AccountGroupController.txt">
       <DependentUpon>AccountGroupController.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -186,11 +191,6 @@
     </Content>
     <Content Include="Transaction.txt">
       <DependentUpon>Transaction.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Content>
-    <Content Include="Account.txt">
-      <DependentUpon>Account.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Content>
