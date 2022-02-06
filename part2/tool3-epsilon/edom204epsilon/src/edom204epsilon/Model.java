@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edom204epsilon.Model#getUserspec <em>Userspec</em>}</li>
  *   <li>{@link edom204epsilon.Model#getAccountspec <em>Accountspec</em>}</li>
  *   <li>{@link edom204epsilon.Model#getTransactionspec <em>Transactionspec</em>}</li>
+ *   <li>{@link edom204epsilon.Model#getCategoryspec <em>Categoryspec</em>}</li>
  *   <li>{@link edom204epsilon.Model#getUseraccountassociation <em>Useraccountassociation</em>}</li>
  *   <li>{@link edom204epsilon.Model#getAccounttransactionassociation <em>Accounttransactionassociation</em>}</li>
  * </ul>
@@ -99,6 +100,18 @@ public interface Model extends EObject {
 	 * @generated
 	 */
 	EList<TransactionSpec> getTransactionspec();
+
+	/**
+	 * Returns the value of the '<em><b>Categoryspec</b></em>' containment reference list.
+	 * The list contents are of type {@link edom204epsilon.CategorySpec}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Categoryspec</em>' containment reference list.
+	 * @see edom204epsilon.Edom204epsilonPackage#getModel_Categoryspec()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<CategorySpec> getCategoryspec();
 
 	/**
 	 * Returns the value of the '<em><b>Useraccountassociation</b></em>' containment reference list.

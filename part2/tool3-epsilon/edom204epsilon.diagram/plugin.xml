@@ -258,7 +258,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Edom204epsilon"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002"/>
       </viewProvider>
    </extension>
@@ -271,13 +271,13 @@
             <method name="getType()" value="Edom204epsilon"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,2003,2004"/>
+            <method name="getType()" value="2001,2002,2003,2004,2005"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5002,5003,5004"/>
+            <method name="getType()" value="5001,5002,5003,5004,5005"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value=""/>
@@ -314,6 +314,11 @@
          <object class="edom204epsilon.diagram.edit.parts.TransactionSpecEditPart" id="TransactionSpec_2004"/>
          <context elements="TransactionSpec_2004"/>
       </modelingAssistantProvider>
+            <modelingAssistantProvider class="edom204epsilon.diagram.providers.assistants.Edom204epsilonModelingAssistantProviderOfCategorySpecEditPart">
+         <Priority name="Lowest"/>
+         <object class="edom204epsilon.diagram.edit.parts.CategorySpecEditPart" id="CategorySpec_2005"/>
+         <context elements="CategorySpec_2005"/>
+      </modelingAssistantProvider>
       
    </extension>
 
@@ -337,7 +342,7 @@
       <decoratorProvider class="edom204epsilon.diagram.providers.Edom204epsilonShortcutsDecoratorProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
-            <method name="getType()" value="2001,2002,2003,2004"/>
+            <method name="getType()" value="2001,2002,2003,2004,2005"/>
          </object>
          <context decoratorTargets="generated-top-nodes"/>
       </decoratorProvider>
@@ -397,6 +402,16 @@
       </metamodel>
       <metamodel nsURI="edom204epsilon">
          <metamodelType
+               id="edom204epsilon.diagram.CategorySpec_2005"
+               name="%metatype.name.CategorySpec_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CategorySpec"
+               edithelper="edom204epsilon.diagram.edit.helpers.CategorySpecEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="edom204epsilon">
+         <metamodelType
                id="edom204epsilon.diagram.UserAccountAssociation_4001"
                name="%metatype.name.UserAccountAssociation_4001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
@@ -432,6 +447,7 @@
          <elementType ref="edom204epsilon.diagram.UserSpec_2002"/>
          <elementType ref="edom204epsilon.diagram.AccountSpec_2003"/>
          <elementType ref="edom204epsilon.diagram.TransactionSpec_2004"/>
+         <elementType ref="edom204epsilon.diagram.CategorySpec_2005"/>
          <elementType ref="edom204epsilon.diagram.UserAccountAssociation_4001"/>
          <elementType ref="edom204epsilon.diagram.AccountTransactionAssociation_4002"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>

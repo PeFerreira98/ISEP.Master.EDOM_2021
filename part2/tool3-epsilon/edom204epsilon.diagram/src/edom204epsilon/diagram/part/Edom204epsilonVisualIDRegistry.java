@@ -17,6 +17,8 @@ import edom204epsilon.diagram.edit.parts.AccountGroupSpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.AccountTransactionAssociationEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.ModelEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecNameEditPart;
@@ -138,6 +140,9 @@ public class Edom204epsilonVisualIDRegistry {
 			if (Edom204epsilonPackage.eINSTANCE.getTransactionSpec().isSuperTypeOf(domainElement.eClass())) {
 				return TransactionSpecEditPart.VISUAL_ID;
 			}
+			if (Edom204epsilonPackage.eINSTANCE.getCategorySpec().isSuperTypeOf(domainElement.eClass())) {
+				return CategorySpecEditPart.VISUAL_ID;
+			}
 			break;
 		}
 		return -1;
@@ -175,6 +180,9 @@ public class Edom204epsilonVisualIDRegistry {
 			if (TransactionSpecEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (CategorySpecEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case AccountGroupSpecEditPart.VISUAL_ID:
 			if (AccountGroupSpecNameEditPart.VISUAL_ID == nodeVisualID) {
@@ -193,6 +201,11 @@ public class Edom204epsilonVisualIDRegistry {
 			break;
 		case TransactionSpecEditPart.VISUAL_ID:
 			if (TransactionSpecNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case CategorySpecEditPart.VISUAL_ID:
+			if (CategorySpecNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -256,6 +269,7 @@ public class Edom204epsilonVisualIDRegistry {
 		case UserSpecEditPart.VISUAL_ID:
 		case AccountSpecEditPart.VISUAL_ID:
 		case TransactionSpecEditPart.VISUAL_ID:
+		case CategorySpecEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

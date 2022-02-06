@@ -26,7 +26,7 @@ public enum AttributeType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STRING(0, "string", "string"), /**
+	STRING(0, "String", "String"), /**
 	 * The '<em><b>Date Time</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -42,14 +42,22 @@ public enum AttributeType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DOUBLE(2, "double", "double");
+	DOUBLE(2, "double", "double"), /**
+	 * The '<em><b>Local Date</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LOCAL_DATE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	LOCAL_DATE(3, "LocalDate", "LocalDate");
 
 	/**
 	 * The '<em><b>String</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #STRING
-	 * @model name="string"
+	 * @model name="String"
 	 * @generated
 	 * @ordered
 	 */
@@ -78,6 +86,17 @@ public enum AttributeType implements Enumerator {
 	public static final int DOUBLE_VALUE = 2;
 
 	/**
+	 * The '<em><b>Local Date</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LOCAL_DATE
+	 * @model name="LocalDate"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int LOCAL_DATE_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Attribute Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -88,6 +107,7 @@ public enum AttributeType implements Enumerator {
 			STRING,
 			DATE_TIME,
 			DOUBLE,
+			LOCAL_DATE,
 		};
 
 	/**
@@ -147,6 +167,7 @@ public enum AttributeType implements Enumerator {
 			case STRING_VALUE: return STRING;
 			case DATE_TIME_VALUE: return DATE_TIME;
 			case DOUBLE_VALUE: return DOUBLE;
+			case LOCAL_DATE_VALUE: return LOCAL_DATE;
 		}
 		return null;
 	}

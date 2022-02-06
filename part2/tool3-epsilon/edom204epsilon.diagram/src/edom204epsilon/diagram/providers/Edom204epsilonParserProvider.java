@@ -19,6 +19,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import edom204epsilon.Edom204epsilonPackage;
 import edom204epsilon.diagram.edit.parts.AccountGroupSpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecNameEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.UserSpecNameEditPart;
 import edom204epsilon.diagram.parsers.MessageFormatParser;
@@ -100,6 +101,23 @@ public class Edom204epsilonParserProvider extends AbstractProvider implements IP
 	/**
 	* @generated
 	*/
+	private IParser categorySpecName_5005Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getCategorySpecName_5005Parser() {
+		if (categorySpecName_5005Parser == null) {
+			EAttribute[] features = new EAttribute[] { Edom204epsilonPackage.eINSTANCE.getCategorySpec_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			categorySpecName_5005Parser = parser;
+		}
+		return categorySpecName_5005Parser;
+	}
+
+	/**
+	* @generated
+	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case AccountGroupSpecNameEditPart.VISUAL_ID:
@@ -110,6 +128,8 @@ public class Edom204epsilonParserProvider extends AbstractProvider implements IP
 			return getAccountSpecName_5003Parser();
 		case TransactionSpecNameEditPart.VISUAL_ID:
 			return getTransactionSpecName_5004Parser();
+		case CategorySpecNameEditPart.VISUAL_ID:
+			return getCategorySpecName_5005Parser();
 		}
 		return null;
 	}

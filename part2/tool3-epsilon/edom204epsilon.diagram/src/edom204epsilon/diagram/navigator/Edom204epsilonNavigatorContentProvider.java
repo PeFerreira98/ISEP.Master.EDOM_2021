@@ -31,6 +31,7 @@ import org.eclipse.ui.navigator.ICommonContentProvider;
 import edom204epsilon.diagram.edit.parts.AccountGroupSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountTransactionAssociationEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecEditPart;
 import edom204epsilon.diagram.edit.parts.ModelEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecEditPart;
 import edom204epsilon.diagram.edit.parts.UserAccountAssociationEditPart;
@@ -247,6 +248,9 @@ public class Edom204epsilonNavigatorContentProvider implements ICommonContentPro
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					Edom204epsilonVisualIDRegistry.getType(TransactionSpecEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					Edom204epsilonVisualIDRegistry.getType(CategorySpecEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					Edom204epsilonVisualIDRegistry.getType(UserAccountAssociationEditPart.VISUAL_ID));

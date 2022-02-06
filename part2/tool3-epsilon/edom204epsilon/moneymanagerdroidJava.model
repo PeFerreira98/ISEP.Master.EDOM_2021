@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="edom204epsilon" xmi:id="_ZKb6kG80EeyaE6qQaPlT7A" name="MoneyManager3">
+<Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="edom204epsilon" xmi:id="_ZKb6kG80EeyaE6qQaPlT7A" name="MoneyManager31">
   <userspec xmi:id="_bxnYMG80EeyaE6qQaPlT7A" name="User">
     <userattribute xmi:id="_kiZRUG80EeyaE6qQaPlT7A" name="Name"/>
     <userattribute xmi:id="_zOqUoG84EeyaE6qQaPlT7A" name="Dob" type="LocalDate"/>
@@ -14,4 +14,5 @@
     <transactionattribute xmi:id="_rm3b0G9DEeyaE6qQaPlT7A" name="Amount" type="double"/>
     <transactionattribute xmi:id="_tj8MgG9DEeyaE6qQaPlT7A" name="Date" type="LocalDate"/>
   </transactionspec>
+  <useraccountassociation xmi:id="_xMejQH_HEeyrht9bU0pM-Q" userspec="_bxnYMG80EeyaE6qQaPlT7A" accountspec="_cyaG0G80EeyaE6qQaPlT7A"/>
 </Model>

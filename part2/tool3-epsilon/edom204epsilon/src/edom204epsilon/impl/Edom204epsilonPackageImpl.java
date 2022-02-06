@@ -7,6 +7,7 @@ import edom204epsilon.AccountGroupSpec;
 import edom204epsilon.AccountSpec;
 import edom204epsilon.AccountTransactionAssociation;
 import edom204epsilon.AttributeType;
+import edom204epsilon.CategorySpec;
 import edom204epsilon.Edom204epsilonFactory;
 import edom204epsilon.Edom204epsilonPackage;
 import edom204epsilon.Model;
@@ -65,6 +66,13 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	 * @generated
 	 */
 	private EClass transactionSpecEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass categorySpecEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,7 +243,7 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	 * @generated
 	 */
 	@Override
-	public EReference getModel_Useraccountassociation() {
+	public EReference getModel_Categoryspec() {
 		return (EReference)modelEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -245,8 +253,18 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	 * @generated
 	 */
 	@Override
-	public EReference getModel_Accounttransactionassociation() {
+	public EReference getModel_Useraccountassociation() {
 		return (EReference)modelEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getModel_Accounttransactionassociation() {
+		return (EReference)modelEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -447,6 +465,46 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 	@Override
 	public EReference getTransactionSpec_Transactionattribute() {
 		return (EReference)transactionSpecEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCategorySpec() {
+		return categorySpecEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCategorySpec_Name() {
+		return (EAttribute)categorySpecEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCategorySpec_CardinalityMin() {
+		return (EAttribute)categorySpecEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCategorySpec_CardinalityMax() {
+		return (EAttribute)categorySpecEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -724,6 +782,7 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		createEReference(modelEClass, MODEL__USERSPEC);
 		createEReference(modelEClass, MODEL__ACCOUNTSPEC);
 		createEReference(modelEClass, MODEL__TRANSACTIONSPEC);
+		createEReference(modelEClass, MODEL__CATEGORYSPEC);
 		createEReference(modelEClass, MODEL__USERACCOUNTASSOCIATION);
 		createEReference(modelEClass, MODEL__ACCOUNTTRANSACTIONASSOCIATION);
 
@@ -750,6 +809,11 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		createEAttribute(transactionSpecEClass, TRANSACTION_SPEC__CARDINALITY_MIN);
 		createEAttribute(transactionSpecEClass, TRANSACTION_SPEC__CARDINALITY_MAX);
 		createEReference(transactionSpecEClass, TRANSACTION_SPEC__TRANSACTIONATTRIBUTE);
+
+		categorySpecEClass = createEClass(CATEGORY_SPEC);
+		createEAttribute(categorySpecEClass, CATEGORY_SPEC__NAME);
+		createEAttribute(categorySpecEClass, CATEGORY_SPEC__CARDINALITY_MIN);
+		createEAttribute(categorySpecEClass, CATEGORY_SPEC__CARDINALITY_MAX);
 
 		userAccountAssociationEClass = createEClass(USER_ACCOUNT_ASSOCIATION);
 		createEAttribute(userAccountAssociationEClass, USER_ACCOUNT_ASSOCIATION__NAME);
@@ -819,6 +883,7 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		initEReference(getModel_Userspec(), this.getUserSpec(), null, "userspec", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModel_Accountspec(), this.getAccountSpec(), null, "accountspec", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModel_Transactionspec(), this.getTransactionSpec(), null, "transactionspec", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModel_Categoryspec(), this.getCategorySpec(), null, "categoryspec", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModel_Useraccountassociation(), this.getUserAccountAssociation(), null, "useraccountassociation", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModel_Accounttransactionassociation(), this.getAccountTransactionAssociation(), null, "accounttransactionassociation", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -845,6 +910,11 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		initEAttribute(getTransactionSpec_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "1", 0, 1, TransactionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransactionSpec_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "-1", 0, 1, TransactionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransactionSpec_Transactionattribute(), this.getTransactionAttribute(), null, "transactionattribute", null, 0, -1, TransactionSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(categorySpecEClass, CategorySpec.class, "CategorySpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCategorySpec_Name(), ecorePackage.getEString(), "name", "categoryName", 0, 1, CategorySpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCategorySpec_CardinalityMin(), ecorePackage.getEInt(), "cardinalityMin", "0", 0, 1, CategorySpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCategorySpec_CardinalityMax(), ecorePackage.getEInt(), "cardinalityMax", "1", 0, 1, CategorySpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userAccountAssociationEClass, UserAccountAssociation.class, "UserAccountAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUserAccountAssociation_Name(), ecorePackage.getEString(), "name", "userAccountAssociationName", 0, 1, UserAccountAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -879,6 +949,7 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 		addEEnumLiteral(attributeTypeEEnum, AttributeType.STRING);
 		addEEnumLiteral(attributeTypeEEnum, AttributeType.DATE_TIME);
 		addEEnumLiteral(attributeTypeEEnum, AttributeType.DOUBLE);
+		addEEnumLiteral(attributeTypeEEnum, AttributeType.LOCAL_DATE);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -946,6 +1017,14 @@ public class Edom204epsilonPackageImpl extends EPackageImpl implements Edom204ep
 			   "label", "name",
 			   "color", "0,255,0",
 			   "figure", "ellipse"
+		   });
+		addAnnotation
+		  (categorySpecEClass,
+		   source,
+		   new String[] {
+			   "label", "name",
+			   "color", "255,165,0",
+			   "figure", "rectangle"
 		   });
 		addAnnotation
 		  (userAttributeEClass,

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="edom204epsilon" xmi:id="_yi4GwH_NEeyrht9bU0pM-Q" name="MoneyManager31">
+  <accountgroupSpec xmi:id="_TkEeQIBnEeyrht9bU0pM-Q" name="AccountGroup"/>
+  <userspec xmi:id="_2Ro3gH_NEeyrht9bU0pM-Q" name="User">
+    <userattribute xmi:id="_GfrzcH_OEeyrht9bU0pM-Q" name="Name"/>
+    <userattribute xmi:id="_H2ue4H_OEeyrht9bU0pM-Q" name="DateOfBirth" type="LocalDate"/>
+  </userspec>
+  <accountspec xmi:id="_OA-aoH_OEeyrht9bU0pM-Q" name="Account">
+    <accountattribute xmi:id="_PMXPsH_OEeyrht9bU0pM-Q" name="Name"/>
+    <accountattribute xmi:id="_QpIIoH_OEeyrht9bU0pM-Q" name="InitialAmount" type="double"/>
+  </accountspec>
+  <transactionspec xmi:id="_TMEmgH_OEeyrht9bU0pM-Q" name="Transaction">
+    <transactionattribute xmi:id="_U4nn4H_OEeyrht9bU0pM-Q" name="From"/>
+    <transactionattribute xmi:id="_Vp6h8H_OEeyrht9bU0pM-Q" name="To"/>
+    <transactionattribute xmi:id="_XypJAH_OEeyrht9bU0pM-Q" name="Date" type="LocalDate"/>
+    <transactionattribute xmi:id="_fn-fkIBoEeyrht9bU0pM-Q" name="Amount" type="double"/>
+  </transactionspec>
+</Model>

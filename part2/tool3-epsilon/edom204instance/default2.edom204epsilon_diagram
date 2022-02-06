@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="edom204epsilon" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_xuhRYIBsEeyXwOHI0nh3DA" type="Edom204epsilon" name="default2.edom204epsilon_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_yssw4IBsEeyXwOHI0nh3DA" type="2002">
+    <children xmi:type="notation:DecorationNode" xmi:id="_yssw5YBsEeyXwOHI0nh3DA" type="5002"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_yssw4YBsEeyXwOHI0nh3DA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_yssw4oBsEeyXwOHI0nh3DA" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_yssw44BsEeyXwOHI0nh3DA"/>
+    <element xmi:type="UserSpec" href="default2.edom204epsilon#//@userspec.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yssw5IBsEeyXwOHI0nh3DA" x="40" y="95"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2mKVwIBsEeyXwOHI0nh3DA" type="2003">
+    <children xmi:type="notation:DecorationNode" xmi:id="_2mK80IBsEeyXwOHI0nh3DA" type="5003"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_2mKVwYBsEeyXwOHI0nh3DA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2mKVwoBsEeyXwOHI0nh3DA" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_2mKVw4BsEeyXwOHI0nh3DA"/>
+    <element xmi:type="AccountSpec" href="default2.edom204epsilon#//@accountspec.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2mKVxIBsEeyXwOHI0nh3DA" x="275" y="180"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_82VTUIBsEeyXwOHI0nh3DA" type="2004">
+    <children xmi:type="notation:DecorationNode" xmi:id="_82VTVYBsEeyXwOHI0nh3DA" type="5004"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_82VTUYBsEeyXwOHI0nh3DA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_82VTUoBsEeyXwOHI0nh3DA" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_82VTU4BsEeyXwOHI0nh3DA"/>
+    <element xmi:type="TransactionSpec" href="default2.edom204epsilon#//@transactionspec.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_82VTVIBsEeyXwOHI0nh3DA" x="365" y="125"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_FHZKkIBtEeyXwOHI0nh3DA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FHZKlYBtEeyXwOHI0nh3DA" type="5001"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_FHZKkYBtEeyXwOHI0nh3DA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_FHZKkoBtEeyXwOHI0nh3DA" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_FHZKk4BtEeyXwOHI0nh3DA"/>
+    <element xmi:type="AccountGroupSpec" href="default2.edom204epsilon#//@accountgroupSpec.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FHZKlIBtEeyXwOHI0nh3DA" x="90" y="175"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_xuhRYYBsEeyXwOHI0nh3DA"/>
+  <element xmi:type="Model" href="default2.edom204epsilon#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_5r6lwIBsEeyXwOHI0nh3DA" type="4001" source="_yssw4IBsEeyXwOHI0nh3DA" target="_2mKVwIBsEeyXwOHI0nh3DA">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_5r6lwYBsEeyXwOHI0nh3DA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_5r6lwoBsEeyXwOHI0nh3DA" fontName="Segoe UI"/>
+    <element xmi:type="UserAccountAssociation" href="default2.edom204epsilon#//@useraccountassociation.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5r6lw4BsEeyXwOHI0nh3DA" points="[10, 20, -34, -75]$[82, 95, 38, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_-Xdu4IBsEeyXwOHI0nh3DA" type="4002" source="_2mKVwIBsEeyXwOHI0nh3DA" target="_82VTUIBsEeyXwOHI0nh3DA">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_-Xdu4YBsEeyXwOHI0nh3DA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_-Xdu4oBsEeyXwOHI0nh3DA" fontName="Segoe UI"/>
+    <element xmi:type="AccountTransactionAssociation" href="default2.edom204epsilon#//@accounttransactionassociation.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-Xdu44BsEeyXwOHI0nh3DA" points="[3, 20, -23, -103]$[19, 103, -7, -20]"/>
+  </edges>
+</notation:Diagram>

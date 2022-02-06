@@ -5,6 +5,7 @@ package edom204epsilon.impl;
 import edom204epsilon.AccountGroupSpec;
 import edom204epsilon.AccountSpec;
 import edom204epsilon.AccountTransactionAssociation;
+import edom204epsilon.CategorySpec;
 import edom204epsilon.Edom204epsilonPackage;
 import edom204epsilon.Model;
 import edom204epsilon.TransactionSpec;
@@ -40,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edom204epsilon.impl.ModelImpl#getUserspec <em>Userspec</em>}</li>
  *   <li>{@link edom204epsilon.impl.ModelImpl#getAccountspec <em>Accountspec</em>}</li>
  *   <li>{@link edom204epsilon.impl.ModelImpl#getTransactionspec <em>Transactionspec</em>}</li>
+ *   <li>{@link edom204epsilon.impl.ModelImpl#getCategoryspec <em>Categoryspec</em>}</li>
  *   <li>{@link edom204epsilon.impl.ModelImpl#getUseraccountassociation <em>Useraccountassociation</em>}</li>
  *   <li>{@link edom204epsilon.impl.ModelImpl#getAccounttransactionassociation <em>Accounttransactionassociation</em>}</li>
  * </ul>
@@ -106,6 +108,16 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * @ordered
 	 */
 	protected EList<TransactionSpec> transactionspec;
+
+	/**
+	 * The cached value of the '{@link #getCategoryspec() <em>Categoryspec</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategoryspec()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CategorySpec> categoryspec;
 
 	/**
 	 * The cached value of the '{@link #getUseraccountassociation() <em>Useraccountassociation</em>}' containment reference list.
@@ -227,6 +239,19 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * @generated
 	 */
 	@Override
+	public EList<CategorySpec> getCategoryspec() {
+		if (categoryspec == null) {
+			categoryspec = new EObjectContainmentEList<CategorySpec>(CategorySpec.class, this, Edom204epsilonPackage.MODEL__CATEGORYSPEC);
+		}
+		return categoryspec;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<UserAccountAssociation> getUseraccountassociation() {
 		if (useraccountassociation == null) {
 			useraccountassociation = new EObjectContainmentEList<UserAccountAssociation>(UserAccountAssociation.class, this, Edom204epsilonPackage.MODEL__USERACCOUNTASSOCIATION);
@@ -263,6 +288,8 @@ public class ModelImpl extends EObjectImpl implements Model {
 				return ((InternalEList<?>)getAccountspec()).basicRemove(otherEnd, msgs);
 			case Edom204epsilonPackage.MODEL__TRANSACTIONSPEC:
 				return ((InternalEList<?>)getTransactionspec()).basicRemove(otherEnd, msgs);
+			case Edom204epsilonPackage.MODEL__CATEGORYSPEC:
+				return ((InternalEList<?>)getCategoryspec()).basicRemove(otherEnd, msgs);
 			case Edom204epsilonPackage.MODEL__USERACCOUNTASSOCIATION:
 				return ((InternalEList<?>)getUseraccountassociation()).basicRemove(otherEnd, msgs);
 			case Edom204epsilonPackage.MODEL__ACCOUNTTRANSACTIONASSOCIATION:
@@ -289,6 +316,8 @@ public class ModelImpl extends EObjectImpl implements Model {
 				return getAccountspec();
 			case Edom204epsilonPackage.MODEL__TRANSACTIONSPEC:
 				return getTransactionspec();
+			case Edom204epsilonPackage.MODEL__CATEGORYSPEC:
+				return getCategoryspec();
 			case Edom204epsilonPackage.MODEL__USERACCOUNTASSOCIATION:
 				return getUseraccountassociation();
 			case Edom204epsilonPackage.MODEL__ACCOUNTTRANSACTIONASSOCIATION:
@@ -325,6 +354,10 @@ public class ModelImpl extends EObjectImpl implements Model {
 				getTransactionspec().clear();
 				getTransactionspec().addAll((Collection<? extends TransactionSpec>)newValue);
 				return;
+			case Edom204epsilonPackage.MODEL__CATEGORYSPEC:
+				getCategoryspec().clear();
+				getCategoryspec().addAll((Collection<? extends CategorySpec>)newValue);
+				return;
 			case Edom204epsilonPackage.MODEL__USERACCOUNTASSOCIATION:
 				getUseraccountassociation().clear();
 				getUseraccountassociation().addAll((Collection<? extends UserAccountAssociation>)newValue);
@@ -360,6 +393,9 @@ public class ModelImpl extends EObjectImpl implements Model {
 			case Edom204epsilonPackage.MODEL__TRANSACTIONSPEC:
 				getTransactionspec().clear();
 				return;
+			case Edom204epsilonPackage.MODEL__CATEGORYSPEC:
+				getCategoryspec().clear();
+				return;
 			case Edom204epsilonPackage.MODEL__USERACCOUNTASSOCIATION:
 				getUseraccountassociation().clear();
 				return;
@@ -388,6 +424,8 @@ public class ModelImpl extends EObjectImpl implements Model {
 				return accountspec != null && !accountspec.isEmpty();
 			case Edom204epsilonPackage.MODEL__TRANSACTIONSPEC:
 				return transactionspec != null && !transactionspec.isEmpty();
+			case Edom204epsilonPackage.MODEL__CATEGORYSPEC:
+				return categoryspec != null && !categoryspec.isEmpty();
 			case Edom204epsilonPackage.MODEL__USERACCOUNTASSOCIATION:
 				return useraccountassociation != null && !useraccountassociation.isEmpty();
 			case Edom204epsilonPackage.MODEL__ACCOUNTTRANSACTIONASSOCIATION:

@@ -286,42 +286,52 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String TransactionAttribute4CreationTool_title;
+	public static String CategorySpec4CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TransactionAttribute4CreationTool_desc;
+	public static String CategorySpec4CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TransactionSpec5CreationTool_title;
+	public static String TransactionAttribute5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TransactionSpec5CreationTool_desc;
+	public static String TransactionAttribute5CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String UserAttribute6CreationTool_title;
+	public static String TransactionSpec6CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String UserAttribute6CreationTool_desc;
+	public static String TransactionSpec6CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String UserSpec7CreationTool_title;
+	public static String UserAttribute7CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String UserSpec7CreationTool_desc;
+	public static String UserAttribute7CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String UserSpec8CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String UserSpec8CreationTool_desc;
 
 	/**
 	* @generated

@@ -21,6 +21,7 @@ import edom204epsilon.Edom204epsilonPackage;
 import edom204epsilon.diagram.edit.parts.AccountGroupSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountTransactionAssociationEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecEditPart;
 import edom204epsilon.diagram.edit.parts.ModelEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecEditPart;
 import edom204epsilon.diagram.edit.parts.UserAccountAssociationEditPart;
@@ -76,6 +77,11 @@ public class Edom204epsilonElementTypes {
 	*/
 	public static final IElementType TransactionSpec_2004 = getElementType(
 			"edom204epsilon.diagram.TransactionSpec_2004"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType CategorySpec_2005 = getElementType("edom204epsilon.diagram.CategorySpec_2005"); //$NON-NLS-1$
+
 	/**
 	* @generated
 	*/
@@ -135,6 +141,8 @@ public class Edom204epsilonElementTypes {
 
 			elements.put(TransactionSpec_2004, Edom204epsilonPackage.eINSTANCE.getTransactionSpec());
 
+			elements.put(CategorySpec_2005, Edom204epsilonPackage.eINSTANCE.getCategorySpec());
+
 			elements.put(UserAccountAssociation_4001, Edom204epsilonPackage.eINSTANCE.getUserAccountAssociation());
 
 			elements.put(AccountTransactionAssociation_4002,
@@ -161,6 +169,7 @@ public class Edom204epsilonElementTypes {
 			KNOWN_ELEMENT_TYPES.add(UserSpec_2002);
 			KNOWN_ELEMENT_TYPES.add(AccountSpec_2003);
 			KNOWN_ELEMENT_TYPES.add(TransactionSpec_2004);
+			KNOWN_ELEMENT_TYPES.add(CategorySpec_2005);
 			KNOWN_ELEMENT_TYPES.add(UserAccountAssociation_4001);
 			KNOWN_ELEMENT_TYPES.add(AccountTransactionAssociation_4002);
 		}
@@ -182,6 +191,8 @@ public class Edom204epsilonElementTypes {
 			return AccountSpec_2003;
 		case TransactionSpecEditPart.VISUAL_ID:
 			return TransactionSpec_2004;
+		case CategorySpecEditPart.VISUAL_ID:
+			return CategorySpec_2005;
 		case UserAccountAssociationEditPart.VISUAL_ID:
 			return UserAccountAssociation_4001;
 		case AccountTransactionAssociationEditPart.VISUAL_ID:

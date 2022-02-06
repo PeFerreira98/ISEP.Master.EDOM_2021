@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="edom204epsilon">
+  <accountgroupSpec name="AccountGroup"/>
+  <userspec name="User"/>
+  <accountspec name="Account"/>
+  <transactionspec name="Transaction"/>
+  <useraccountassociation userspec="//@userspec.0" accountspec="//@accountspec.0"/>
+  <accounttransactionassociation accountspec="//@accountspec.0" transactionspec="//@transactionspec.0"/>
+</Model>

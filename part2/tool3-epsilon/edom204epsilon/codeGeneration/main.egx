@@ -1,29 +1,49 @@
 pre
 {
-	var modname = Model.allInstances().first().name;
+	var modname : String = Model.allInstances().first().name.toLowerCase();
+	var hasAccountGroup : Boolean = AccountGroupSpec.allInstances().notEmpty();
+	var hasCategory : Boolean = CategorySpec.allInstances().notEmpty();
+	var targetPath : String = "gen/" + modname + "/src/main/java/";
 }
 
-rule accountGroupToCode
-{
-	template: "egl/accountGroupToCode.egl"
-	target: "gen/" + modname + "/src/main/java/AccountGroup.java"
-}
-
-rule categoryToCode
-{
-	template: "egl/categoryToCode.egl"
-	target: "gen/" + modname + "/src/main/java/Category.java"
-}
-
-rule transactionToCode transform tranSpec : TransactionSpec
+rule categoryToCode transform cSpec : CategorySpec
 {
 	parameters : Map
 	{
 		"modname" = modname
 	}
-	
+	template: "egl/categoryToCode.egl"
+	target: targetPath + cSpec.name + ".java"
+}
+
+rule accountGroupToCode transform aSpec : AccountGroupSpec
+{
+	parameters : Map
+	{
+		"modname" = modname
+	}
+	template: "egl/accountGroupToCode.egl"
+	target: targetPath + aSpec.name + ".java"
+}
+
+rule transactionToCode transform tranSpec : TransactionSpec
+{
+	pre
+	{
+		var catName : String = "";
+		if(hasCategory)
+		{
+			catName = CategorySpec.allInstances().first().name;
+		}
+	}
+	parameters : Map
+	{
+		"modname" = modname,
+		"hasCategory" = hasCategory,
+		"categoryName" = catName
+	}
 	template: "egl/transactionToCode.egl"
-	target: "gen/" + modname + "/src/main/java/" + tranSpec.name + ".java"
+	target: targetPath + tranSpec.name + ".java"
 }
 
 rule accountToCode transform actSpec : AccountSpec
@@ -32,9 +52,8 @@ rule accountToCode transform actSpec : AccountSpec
 	{
 		"modname" = modname
 	}
-	
 	template: "egl/accountToCode.egl"
-	target: "gen/" + modname + "/src/main/java/" + actSpec.name + ".java"
+	target: targetPath + actSpec.name + ".java"
 }
 
 rule userToCode transform usrSpec : UserSpec
@@ -43,21 +62,41 @@ rule userToCode transform usrSpec : UserSpec
 	{
 		"modname" = modname
 	}
-
 	template: "egl/userToCode.egl"
-	target: "gen/" + modname + "/src/main/java/" + usrSpec.name + ".java"
+	target: targetPath + usrSpec.name + ".java"
 }
 
 rule modelToCode transform mod : Model
 {
+	pre
+	{
+		var accGroupName : String = "";
+		var usrName : String = UserSpec.allInstances().first().name;
+		if(hasAccountGroup)
+		{
+			accGroupName = AccountGroupSpec.allInstances().first().name;
+		}
+	}
+	parameters : Map
+	{
+		"modname" = modname,
+		"hasAccountGroup" = hasAccountGroup,
+		"accountGroupName" = accGroupName,
+		"userName" = usrName
+	}
 	template: "egl/modelToCode.egl"
-	target: "gen/" + modname + "/src/main/java/Model.java"
+	target: targetPath + "Model.java"
 }
 
-rule programToCode transform mod : Model
+rule programToCode
 {
+	parameters : Map
+	{
+		"modname" = modname,
+		"hasAccountGroup" = hasAccountGroup
+	}
 	template: "egl/programToCode.egl"
-	target: "gen/" + modname + "/src/main/java/Program.java"
+	target: targetPath + "Program.java"
 }
 
 rule pomToCode

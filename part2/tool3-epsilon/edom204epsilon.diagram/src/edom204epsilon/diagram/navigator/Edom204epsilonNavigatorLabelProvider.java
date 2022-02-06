@@ -28,6 +28,8 @@ import edom204epsilon.diagram.edit.parts.AccountGroupSpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.AccountTransactionAssociationEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.ModelEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecNameEditPart;
@@ -114,6 +116,9 @@ public class Edom204epsilonNavigatorLabelProvider extends LabelProvider
 		case TransactionSpecEditPart.VISUAL_ID:
 			return getImage("Navigator?TopLevelNode?edom204epsilon?TransactionSpec", //$NON-NLS-1$
 					Edom204epsilonElementTypes.TransactionSpec_2004);
+		case CategorySpecEditPart.VISUAL_ID:
+			return getImage("Navigator?TopLevelNode?edom204epsilon?CategorySpec", //$NON-NLS-1$
+					Edom204epsilonElementTypes.CategorySpec_2005);
 		case UserAccountAssociationEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?edom204epsilon?UserAccountAssociation", //$NON-NLS-1$
 					Edom204epsilonElementTypes.UserAccountAssociation_4001);
@@ -188,6 +193,8 @@ public class Edom204epsilonNavigatorLabelProvider extends LabelProvider
 			return getAccountSpec_2003Text(view);
 		case TransactionSpecEditPart.VISUAL_ID:
 			return getTransactionSpec_2004Text(view);
+		case CategorySpecEditPart.VISUAL_ID:
+			return getCategorySpec_2005Text(view);
 		case UserAccountAssociationEditPart.VISUAL_ID:
 			return getUserAccountAssociation_4001Text(view);
 		case AccountTransactionAssociationEditPart.VISUAL_ID:
@@ -270,6 +277,22 @@ public class Edom204epsilonNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			Edom204epsilonDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5004); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getCategorySpec_2005Text(View view) {
+		IParser parser = Edom204epsilonParserProvider.getParser(Edom204epsilonElementTypes.CategorySpec_2005,
+				view.getElement() != null ? view.getElement() : view,
+				Edom204epsilonVisualIDRegistry.getType(CategorySpecNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			Edom204epsilonDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5005); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

@@ -62,6 +62,7 @@ public class Edom204epsilonFactoryImpl extends EFactoryImpl implements Edom204ep
 			case Edom204epsilonPackage.USER_SPEC: return createUserSpec();
 			case Edom204epsilonPackage.ACCOUNT_SPEC: return createAccountSpec();
 			case Edom204epsilonPackage.TRANSACTION_SPEC: return createTransactionSpec();
+			case Edom204epsilonPackage.CATEGORY_SPEC: return createCategorySpec();
 			case Edom204epsilonPackage.USER_ACCOUNT_ASSOCIATION: return createUserAccountAssociation();
 			case Edom204epsilonPackage.ACCOUNT_TRANSACTION_ASSOCIATION: return createAccountTransactionAssociation();
 			case Edom204epsilonPackage.USER_ATTRIBUTE: return createUserAttribute();
@@ -155,6 +156,17 @@ public class Edom204epsilonFactoryImpl extends EFactoryImpl implements Edom204ep
 	public TransactionSpec createTransactionSpec() {
 		TransactionSpecImpl transactionSpec = new TransactionSpecImpl();
 		return transactionSpec;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CategorySpec createCategorySpec() {
+		CategorySpecImpl categorySpec = new CategorySpecImpl();
+		return categorySpec;
 	}
 
 	/**

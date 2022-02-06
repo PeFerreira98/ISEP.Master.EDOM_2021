@@ -1,6 +1,12 @@
-import java.time.LocalDate;
+//package [%=modname%];
+
 import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 
 public class [%=actSpec.name%] {
 
@@ -18,8 +24,8 @@ public class [%=actSpec.name%] {
         [%for (u in actSpec.accountattribute){%]
   		this.[%=u.name.toLowerCase()%] = [%=u.name.toLowerCase()%];
 		[%}%]
-        
     }
+    
     public [%=actSpec.name%]([%for (u in actSpec.accountattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(actSpec.accountattribute.last() != u){%], [%}%][%}%]) {
     	this.transactionList = new ArrayList<>();
         [%for (u in actSpec.accountattribute){%]
@@ -27,18 +33,9 @@ public class [%=actSpec.name%] {
 		[%}%]
     }
 
-    public List<Transaction> getTransactionList() {
-        return transactionList;
-    }
-
-    public void setTransactionList(List<Transaction> transactionList) {
-        this.transactionList = transactionList;
-    }
-
     @Override
     public String toString() {
-        return "[%=actSpec.name%] => \n" +
-                "Transaction List: " + transactionList + "\n" + [%for (u in actSpec.accountattribute){%]"[%=u.name%]: " + [%=u.name.toLowerCase()%] + "\n" [%if(actSpec.accountattribute.last() != u){%]+ [%}%][%}%];
+        return "\n\t[%=actSpec.name%] =>" + [%for (u in actSpec.accountattribute){%]" [%=u.name%]: " + [%=u.name.toLowerCase()%] + [%}%] "\n\t" + transactionList + "\n";
     }
 
     @Override
@@ -58,5 +55,26 @@ public class [%=actSpec.name%] {
         for (Transaction trans: [%=actSpec.name.toLowerCase()%].transactionList) {
             System.out.println(trans.toString());
         }
+    }
+
+    public static Account build()
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        [%for (u in actSpec.accountattribute){%]
+        System.out.println("Account - [%=u.name.toLowerCase()%]: ");
+        [%if(u.type.toString() = "LocalDate"){%]
+        String [%=u.name.toLowerCase()%]Unparsed = sc.nextLine();
+        LocalDate [%=u.name.toLowerCase()%] = LocalDate.parse([%=u.name.toLowerCase()%]Unparsed, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        [%}%]
+        [%else if(u.type.toString() = "double"){%]
+        [%=u.type%] [%=u.name.toLowerCase()%] = sc.nextDouble();
+        [%}%]
+        [%else{%]
+        String [%=u.name.toLowerCase()%] = sc.nextLine();
+        [%}%]
+        [%}%]
+        
+        return new [%=actSpec.name%]([%for (u in actSpec.accountattribute){%][%=u.name.toLowerCase()%][%if(actSpec.accountattribute.last() != u){%], [%}%][%}%]);
     }
 }

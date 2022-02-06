@@ -96,6 +96,12 @@ public class Edom204epsilonSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Edom204epsilonPackage.CATEGORY_SPEC: {
+				CategorySpec categorySpec = (CategorySpec)theEObject;
+				T result = caseCategorySpec(categorySpec);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Edom204epsilonPackage.USER_ACCOUNT_ASSOCIATION: {
 				UserAccountAssociation userAccountAssociation = (UserAccountAssociation)theEObject;
 				T result = caseUserAccountAssociation(userAccountAssociation);
@@ -202,6 +208,21 @@ public class Edom204epsilonSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTransactionSpec(TransactionSpec object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Category Spec</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Category Spec</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCategorySpec(CategorySpec object) {
 		return null;
 	}
 

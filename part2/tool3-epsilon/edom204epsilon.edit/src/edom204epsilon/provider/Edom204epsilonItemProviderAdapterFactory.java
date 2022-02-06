@@ -187,6 +187,29 @@ public class Edom204epsilonItemProviderAdapterFactory extends Edom204epsilonAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edom204epsilon.CategorySpec} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CategorySpecItemProvider categorySpecItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edom204epsilon.CategorySpec}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCategorySpecAdapter() {
+		if (categorySpecItemProvider == null) {
+			categorySpecItemProvider = new CategorySpecItemProvider(this);
+		}
+
+		return categorySpecItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link edom204epsilon.UserAccountAssociation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -411,6 +434,7 @@ public class Edom204epsilonItemProviderAdapterFactory extends Edom204epsilonAdap
 		if (userSpecItemProvider != null) userSpecItemProvider.dispose();
 		if (accountSpecItemProvider != null) accountSpecItemProvider.dispose();
 		if (transactionSpecItemProvider != null) transactionSpecItemProvider.dispose();
+		if (categorySpecItemProvider != null) categorySpecItemProvider.dispose();
 		if (userAccountAssociationItemProvider != null) userAccountAssociationItemProvider.dispose();
 		if (accountTransactionAssociationItemProvider != null) accountTransactionAssociationItemProvider.dispose();
 		if (userAttributeItemProvider != null) userAttributeItemProvider.dispose();

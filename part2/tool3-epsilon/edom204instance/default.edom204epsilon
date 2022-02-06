@@ -4,9 +4,12 @@
   <userspec name="User"/>
   <accountspec name="Account1"/>
   <accountspec name="Account2"/>
-  <transactionspec name="Transaction1"/>
+  <transactionspec name="Transaction1">
+    <transactionattribute/>
+  </transactionspec>
   <transactionspec name="Transaction2"/>
   <transactionspec name="Transaction3"/>
+  <categoryspec name="Category"/>
   <useraccountassociation userspec="//@userspec.0" accountspec="//@accountspec.0"/>
   <useraccountassociation userspec="//@userspec.0" accountspec="//@accountspec.1"/>
   <accounttransactionassociation accountspec="//@accountspec.0" transactionspec="//@transactionspec.0"/>

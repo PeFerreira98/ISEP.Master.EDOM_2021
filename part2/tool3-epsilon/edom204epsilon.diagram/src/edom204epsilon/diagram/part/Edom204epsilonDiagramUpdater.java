@@ -19,6 +19,7 @@ import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
 import edom204epsilon.AccountGroupSpec;
 import edom204epsilon.AccountSpec;
 import edom204epsilon.AccountTransactionAssociation;
+import edom204epsilon.CategorySpec;
 import edom204epsilon.Edom204epsilonPackage;
 import edom204epsilon.Model;
 import edom204epsilon.TransactionSpec;
@@ -27,6 +28,7 @@ import edom204epsilon.UserSpec;
 import edom204epsilon.diagram.edit.parts.AccountGroupSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountTransactionAssociationEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecEditPart;
 import edom204epsilon.diagram.edit.parts.ModelEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecEditPart;
 import edom204epsilon.diagram.edit.parts.UserAccountAssociationEditPart;
@@ -97,6 +99,14 @@ public class Edom204epsilonDiagramUpdater {
 				continue;
 			}
 		}
+		for (Iterator<?> it = modelElement.getCategoryspec().iterator(); it.hasNext();) {
+			CategorySpec childElement = (CategorySpec) it.next();
+			int visualID = Edom204epsilonVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == CategorySpecEditPart.VISUAL_ID) {
+				result.add(new Edom204epsilonNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
 		return result;
 	}
 
@@ -115,6 +125,8 @@ public class Edom204epsilonDiagramUpdater {
 			return getAccountSpec_2003ContainedLinks(view);
 		case TransactionSpecEditPart.VISUAL_ID:
 			return getTransactionSpec_2004ContainedLinks(view);
+		case CategorySpecEditPart.VISUAL_ID:
+			return getCategorySpec_2005ContainedLinks(view);
 		case UserAccountAssociationEditPart.VISUAL_ID:
 			return getUserAccountAssociation_4001ContainedLinks(view);
 		case AccountTransactionAssociationEditPart.VISUAL_ID:
@@ -136,6 +148,8 @@ public class Edom204epsilonDiagramUpdater {
 			return getAccountSpec_2003IncomingLinks(view);
 		case TransactionSpecEditPart.VISUAL_ID:
 			return getTransactionSpec_2004IncomingLinks(view);
+		case CategorySpecEditPart.VISUAL_ID:
+			return getCategorySpec_2005IncomingLinks(view);
 		case UserAccountAssociationEditPart.VISUAL_ID:
 			return getUserAccountAssociation_4001IncomingLinks(view);
 		case AccountTransactionAssociationEditPart.VISUAL_ID:
@@ -157,6 +171,8 @@ public class Edom204epsilonDiagramUpdater {
 			return getAccountSpec_2003OutgoingLinks(view);
 		case TransactionSpecEditPart.VISUAL_ID:
 			return getTransactionSpec_2004OutgoingLinks(view);
+		case CategorySpecEditPart.VISUAL_ID:
+			return getCategorySpec_2005OutgoingLinks(view);
 		case UserAccountAssociationEditPart.VISUAL_ID:
 			return getUserAccountAssociation_4001OutgoingLinks(view);
 		case AccountTransactionAssociationEditPart.VISUAL_ID:
@@ -201,6 +217,13 @@ public class Edom204epsilonDiagramUpdater {
 	 * @generated
 	 */
 	public static List<Edom204epsilonLinkDescriptor> getTransactionSpec_2004ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<Edom204epsilonLinkDescriptor> getCategorySpec_2005ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -257,6 +280,13 @@ public class Edom204epsilonDiagramUpdater {
 	}
 
 	/**
+	* @generated
+	*/
+	public static List<Edom204epsilonLinkDescriptor> getCategorySpec_2005IncomingLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
 	 * @generated
 	 */
 	public static List<Edom204epsilonLinkDescriptor> getUserAccountAssociation_4001IncomingLinks(View view) {
@@ -301,6 +331,13 @@ public class Edom204epsilonDiagramUpdater {
 	 * @generated
 	 */
 	public static List<Edom204epsilonLinkDescriptor> getTransactionSpec_2004OutgoingLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<Edom204epsilonLinkDescriptor> getCategorySpec_2005OutgoingLinks(View view) {
 		return Collections.emptyList();
 	}
 

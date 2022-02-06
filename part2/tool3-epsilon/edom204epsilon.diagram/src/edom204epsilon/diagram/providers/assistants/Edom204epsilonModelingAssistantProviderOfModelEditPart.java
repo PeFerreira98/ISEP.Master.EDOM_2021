@@ -23,11 +23,12 @@ public class Edom204epsilonModelingAssistantProviderOfModelEditPart extends Edom
 	@Override
 
 	public List<IElementType> getTypesForPopupBar(IAdaptable host) {
-		List<IElementType> types = new ArrayList<IElementType>(4);
+		List<IElementType> types = new ArrayList<IElementType>(5);
 		types.add(Edom204epsilonElementTypes.AccountGroupSpec_2001);
 		types.add(Edom204epsilonElementTypes.UserSpec_2002);
 		types.add(Edom204epsilonElementTypes.AccountSpec_2003);
 		types.add(Edom204epsilonElementTypes.TransactionSpec_2004);
+		types.add(Edom204epsilonElementTypes.CategorySpec_2005);
 		return types;
 	}
 

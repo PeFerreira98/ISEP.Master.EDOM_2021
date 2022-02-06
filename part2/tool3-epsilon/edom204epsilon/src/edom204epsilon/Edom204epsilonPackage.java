@@ -112,13 +112,22 @@ public interface Edom204epsilonPackage extends EPackage {
 	int MODEL__TRANSACTIONSPEC = 4;
 
 	/**
+	 * The feature id for the '<em><b>Categoryspec</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__CATEGORYSPEC = 5;
+
+	/**
 	 * The feature id for the '<em><b>Useraccountassociation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL__USERACCOUNTASSOCIATION = 5;
+	int MODEL__USERACCOUNTASSOCIATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Accounttransactionassociation</b></em>' containment reference list.
@@ -127,7 +136,7 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL__ACCOUNTTRANSACTIONASSOCIATION = 6;
+	int MODEL__ACCOUNTTRANSACTIONASSOCIATION = 7;
 
 	/**
 	 * The number of structural features of the '<em>Model</em>' class.
@@ -136,7 +145,7 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_FEATURE_COUNT = 7;
+	int MODEL_FEATURE_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.AccountGroupSpecImpl <em>Account Group Spec</em>}' class.
@@ -359,6 +368,52 @@ public interface Edom204epsilonPackage extends EPackage {
 	int TRANSACTION_SPEC_FEATURE_COUNT = 4;
 
 	/**
+	 * The meta object id for the '{@link edom204epsilon.impl.CategorySpecImpl <em>Category Spec</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edom204epsilon.impl.CategorySpecImpl
+	 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getCategorySpec()
+	 * @generated
+	 */
+	int CATEGORY_SPEC = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORY_SPEC__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Cardinality Min</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORY_SPEC__CARDINALITY_MIN = 1;
+
+	/**
+	 * The feature id for the '<em><b>Cardinality Max</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORY_SPEC__CARDINALITY_MAX = 2;
+
+	/**
+	 * The number of structural features of the '<em>Category Spec</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORY_SPEC_FEATURE_COUNT = 3;
+
+	/**
 	 * The meta object id for the '{@link edom204epsilon.impl.UserAccountAssociationImpl <em>User Account Association</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -366,7 +421,7 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getUserAccountAssociation()
 	 * @generated
 	 */
-	int USER_ACCOUNT_ASSOCIATION = 5;
+	int USER_ACCOUNT_ASSOCIATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -412,7 +467,7 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getAccountTransactionAssociation()
 	 * @generated
 	 */
-	int ACCOUNT_TRANSACTION_ASSOCIATION = 6;
+	int ACCOUNT_TRANSACTION_ASSOCIATION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -458,7 +513,7 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getUserAttribute()
 	 * @generated
 	 */
-	int USER_ATTRIBUTE = 7;
+	int USER_ATTRIBUTE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -513,7 +568,7 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getAccountAttribute()
 	 * @generated
 	 */
-	int ACCOUNT_ATTRIBUTE = 8;
+	int ACCOUNT_ATTRIBUTE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -568,7 +623,7 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getTransactionAttribute()
 	 * @generated
 	 */
-	int TRANSACTION_ATTRIBUTE = 9;
+	int TRANSACTION_ATTRIBUTE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -623,7 +678,7 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getAttributeType()
 	 * @generated
 	 */
-	int ATTRIBUTE_TYPE = 10;
+	int ATTRIBUTE_TYPE = 11;
 
 	/**
 	 * Returns the meta object for class '{@link edom204epsilon.Model <em>Model</em>}'.
@@ -689,6 +744,17 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getModel_Transactionspec();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edom204epsilon.Model#getCategoryspec <em>Categoryspec</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Categoryspec</em>'.
+	 * @see edom204epsilon.Model#getCategoryspec()
+	 * @see #getModel()
+	 * @generated
+	 */
+	EReference getModel_Categoryspec();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link edom204epsilon.Model#getUseraccountassociation <em>Useraccountassociation</em>}'.
@@ -927,6 +993,49 @@ public interface Edom204epsilonPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTransactionSpec_Transactionattribute();
+
+	/**
+	 * Returns the meta object for class '{@link edom204epsilon.CategorySpec <em>Category Spec</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Category Spec</em>'.
+	 * @see edom204epsilon.CategorySpec
+	 * @generated
+	 */
+	EClass getCategorySpec();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edom204epsilon.CategorySpec#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see edom204epsilon.CategorySpec#getName()
+	 * @see #getCategorySpec()
+	 * @generated
+	 */
+	EAttribute getCategorySpec_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edom204epsilon.CategorySpec#getCardinalityMin <em>Cardinality Min</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cardinality Min</em>'.
+	 * @see edom204epsilon.CategorySpec#getCardinalityMin()
+	 * @see #getCategorySpec()
+	 * @generated
+	 */
+	EAttribute getCategorySpec_CardinalityMin();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edom204epsilon.CategorySpec#getCardinalityMax <em>Cardinality Max</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cardinality Max</em>'.
+	 * @see edom204epsilon.CategorySpec#getCardinalityMax()
+	 * @see #getCategorySpec()
+	 * @generated
+	 */
+	EAttribute getCategorySpec_CardinalityMax();
 
 	/**
 	 * Returns the meta object for class '{@link edom204epsilon.UserAccountAssociation <em>User Account Association</em>}'.
@@ -1259,6 +1368,14 @@ public interface Edom204epsilonPackage extends EPackage {
 		EReference MODEL__TRANSACTIONSPEC = eINSTANCE.getModel_Transactionspec();
 
 		/**
+		 * The meta object literal for the '<em><b>Categoryspec</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL__CATEGORYSPEC = eINSTANCE.getModel_Categoryspec();
+
+		/**
 		 * The meta object literal for the '<em><b>Useraccountassociation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1441,6 +1558,40 @@ public interface Edom204epsilonPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRANSACTION_SPEC__TRANSACTIONATTRIBUTE = eINSTANCE.getTransactionSpec_Transactionattribute();
+
+		/**
+		 * The meta object literal for the '{@link edom204epsilon.impl.CategorySpecImpl <em>Category Spec</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edom204epsilon.impl.CategorySpecImpl
+		 * @see edom204epsilon.impl.Edom204epsilonPackageImpl#getCategorySpec()
+		 * @generated
+		 */
+		EClass CATEGORY_SPEC = eINSTANCE.getCategorySpec();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CATEGORY_SPEC__NAME = eINSTANCE.getCategorySpec_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Cardinality Min</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CATEGORY_SPEC__CARDINALITY_MIN = eINSTANCE.getCategorySpec_CardinalityMin();
+
+		/**
+		 * The meta object literal for the '<em><b>Cardinality Max</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CATEGORY_SPEC__CARDINALITY_MAX = eINSTANCE.getCategorySpec_CardinalityMax();
 
 		/**
 		 * The meta object literal for the '{@link edom204epsilon.impl.UserAccountAssociationImpl <em>User Account Association</em>}' class.

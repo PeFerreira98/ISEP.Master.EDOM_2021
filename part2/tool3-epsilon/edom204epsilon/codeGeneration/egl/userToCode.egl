@@ -1,6 +1,12 @@
-import java.time.LocalDate;
+//package [%=modname%];
+
 import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 
 public class [%=usrSpec.name%] {
 
@@ -23,23 +29,54 @@ public class [%=usrSpec.name%] {
 		[%}%]
     }
 
-    public List<Account> getAccountList() {
-        return accountList;
-    }
-
-    public void setAccountList(List<Account> accountList) {
-        this.accountList = accountList;
-    }
-
     @Override
     public String toString() {
-        return "[%=usrSpec.name%] => \n" +
-                "Account List: " + accountList + "\n" + [%for (u in usrSpec.userattribute){%]"[%=u.name%]: " + [%=u.name.toLowerCase()%] + "\n" [%if(usrSpec.userattribute.last() != u){%]+ [%}%][%}%];
+        return "[%=usrSpec.name%] =>" + [%for (u in usrSpec.userattribute){%]" [%=u.name%]: " + [%=u.name.toLowerCase()%] + [%}%] "\n" + accountList + "\n";
     }
 
     public void listAll ([%=usrSpec.name%] [%=usrSpec.name.toLowerCase()%]){
         for (Account acc: [%=usrSpec.name.toLowerCase()%].accountList) {
             System.out.println(acc.toString());
         }
+    }
+
+    public void addAccount()
+    {
+        this.accountList.add(Account.build());
+    }
+
+    public void addTransaction()
+    {
+        Transaction transaction = Transaction.build();
+
+        for (Account acc : this.accountList)
+        {
+            if (Objects.equals(transaction.from, acc.name))
+            {
+                acc.transactionList.add(transaction);
+            }
+            if (Objects.equals(transaction.to, acc.name))
+            {
+                acc.transactionList.add(transaction);
+            }
+        }
+    }
+
+    public static [%=usrSpec.name%] build()
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        [%for (u in usrSpec.userattribute){%]
+  		System.out.println("User - [%=u.name.toLowerCase()%]: ");
+        [%if(u.type.toString() = "LocalDate"){%]
+        String [%=u.name.toLowerCase()%]Unparsed = sc.nextLine();
+        LocalDate [%=u.name.toLowerCase()%] = LocalDate.parse([%=u.name.toLowerCase()%]Unparsed, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        [%}%]
+        [%else{%]
+        String [%=u.name.toLowerCase()%] = sc.nextLine();
+        [%}%]
+		[%}%]
+		
+        return new [%=usrSpec.name%]([%for (u in usrSpec.userattribute){%][%=u.name.toLowerCase()%][%if(usrSpec.userattribute.last() != u){%], [%}%][%}%]);
     }
 }

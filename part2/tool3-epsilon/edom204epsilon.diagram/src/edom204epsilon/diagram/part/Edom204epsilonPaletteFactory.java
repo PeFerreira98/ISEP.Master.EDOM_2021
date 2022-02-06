@@ -38,10 +38,11 @@ public class Edom204epsilonPaletteFactory {
 		paletteContainer.add(createAccountAttribute1CreationTool());
 		paletteContainer.add(createAccountGroupSpec2CreationTool());
 		paletteContainer.add(createAccountSpec3CreationTool());
-		paletteContainer.add(createTransactionAttribute4CreationTool());
-		paletteContainer.add(createTransactionSpec5CreationTool());
-		paletteContainer.add(createUserAttribute6CreationTool());
-		paletteContainer.add(createUserSpec7CreationTool());
+		paletteContainer.add(createCategorySpec4CreationTool());
+		paletteContainer.add(createTransactionAttribute5CreationTool());
+		paletteContainer.add(createTransactionSpec6CreationTool());
+		paletteContainer.add(createUserAttribute7CreationTool());
+		paletteContainer.add(createUserSpec8CreationTool());
 		return paletteContainer;
 	}
 
@@ -98,22 +99,35 @@ public class Edom204epsilonPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createTransactionAttribute4CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.TransactionAttribute4CreationTool_title,
-				Messages.TransactionAttribute4CreationTool_desc, null, null) {
-		};
-		entry.setId("createTransactionAttribute4CreationTool"); //$NON-NLS-1$
+	private ToolEntry createCategorySpec4CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.CategorySpec4CreationTool_title,
+				Messages.CategorySpec4CreationTool_desc,
+				Collections.singletonList(Edom204epsilonElementTypes.CategorySpec_2005));
+		entry.setId("createCategorySpec4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(Edom204epsilonElementTypes.getImageDescriptor(Edom204epsilonElementTypes.CategorySpec_2005));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createTransactionSpec5CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.TransactionSpec5CreationTool_title,
-				Messages.TransactionSpec5CreationTool_desc,
+	private ToolEntry createTransactionAttribute5CreationTool() {
+		ToolEntry entry = new ToolEntry(Messages.TransactionAttribute5CreationTool_title,
+				Messages.TransactionAttribute5CreationTool_desc, null, null) {
+		};
+		entry.setId("createTransactionAttribute5CreationTool"); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createTransactionSpec6CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.TransactionSpec6CreationTool_title,
+				Messages.TransactionSpec6CreationTool_desc,
 				Collections.singletonList(Edom204epsilonElementTypes.TransactionSpec_2004));
-		entry.setId("createTransactionSpec5CreationTool"); //$NON-NLS-1$
+		entry.setId("createTransactionSpec6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(
 				Edom204epsilonElementTypes.getImageDescriptor(Edom204epsilonElementTypes.TransactionSpec_2004));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -123,22 +137,22 @@ public class Edom204epsilonPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createUserAttribute6CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.UserAttribute6CreationTool_title,
-				Messages.UserAttribute6CreationTool_desc, null, null) {
+	private ToolEntry createUserAttribute7CreationTool() {
+		ToolEntry entry = new ToolEntry(Messages.UserAttribute7CreationTool_title,
+				Messages.UserAttribute7CreationTool_desc, null, null) {
 		};
-		entry.setId("createUserAttribute6CreationTool"); //$NON-NLS-1$
+		entry.setId("createUserAttribute7CreationTool"); //$NON-NLS-1$
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createUserSpec7CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.UserSpec7CreationTool_title,
-				Messages.UserSpec7CreationTool_desc,
+	private ToolEntry createUserSpec8CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.UserSpec8CreationTool_title,
+				Messages.UserSpec8CreationTool_desc,
 				Collections.singletonList(Edom204epsilonElementTypes.UserSpec_2002));
-		entry.setId("createUserSpec7CreationTool"); //$NON-NLS-1$
+		entry.setId("createUserSpec8CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(Edom204epsilonElementTypes.getImageDescriptor(Edom204epsilonElementTypes.UserSpec_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;

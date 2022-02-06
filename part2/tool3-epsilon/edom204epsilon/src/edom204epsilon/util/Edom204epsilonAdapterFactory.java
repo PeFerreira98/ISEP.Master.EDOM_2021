@@ -88,6 +88,10 @@ public class Edom204epsilonAdapterFactory extends AdapterFactoryImpl {
 				return createTransactionSpecAdapter();
 			}
 			@Override
+			public Adapter caseCategorySpec(CategorySpec object) {
+				return createCategorySpecAdapter();
+			}
+			@Override
 			public Adapter caseUserAccountAssociation(UserAccountAssociation object) {
 				return createUserAccountAssociationAdapter();
 			}
@@ -194,6 +198,20 @@ public class Edom204epsilonAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTransactionSpecAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edom204epsilon.CategorySpec <em>Category Spec</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edom204epsilon.CategorySpec
+	 * @generated
+	 */
+	public Adapter createCategorySpecAdapter() {
 		return null;
 	}
 

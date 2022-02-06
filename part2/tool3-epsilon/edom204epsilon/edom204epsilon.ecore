@@ -13,6 +13,8 @@
         eType="#//AccountSpec" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transactionspec" upperBound="-1"
         eType="#//TransactionSpec" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="categoryspec" upperBound="-1"
+        eType="#//CategorySpec" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="useraccountassociation"
         upperBound="-1" eType="#//UserAccountAssociation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="accounttransactionassociation"
@@ -77,6 +79,19 @@
         defaultValueLiteral="-1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transactionattribute" upperBound="-1"
         eType="#//TransactionAttribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CategorySpec">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="color" value="255,165,0"/>
+      <details key="figure" value="rectangle"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="categoryName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinalityMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinalityMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UserAccountAssociation">
     <eAnnotations source="gmf.link">
@@ -145,8 +160,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//AttributeType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AttributeType">
-    <eLiterals name="string"/>
+    <eLiterals name="String"/>
     <eLiterals name="DateTime" value="1"/>
     <eLiterals name="double" value="2"/>
+    <eLiterals name="LocalDate" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

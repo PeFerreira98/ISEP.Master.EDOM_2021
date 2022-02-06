@@ -83,6 +83,25 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
+    <topLevelNodes visualID="2005" editPartClassName="CategorySpecEditPart" itemSemanticEditPolicyClassName="CategorySpecItemSemanticEditPolicy" canonicalEditPolicyClassName="CategorySpecCanonicalEditPolicy" graphicalNodeEditPolicyClassName="CategorySpecGraphicalNodeEditPolicy" createCommandClassName="CategorySpecCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="CategorySpecEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="CategorySpecFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CategorySpecFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureCategorySpecLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CategorySpecFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureCategorySpecLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureCategorySpecLabelFigure.setText(&quot;CategorySpec&quot;);&#xA;&#xA;this.add(fFigureCategorySpecLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureCategorySpecLabelFigure() {&#xA;&#x9;&#x9;return fFigureCategorySpecLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 255, 165, 0);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="edom204epsilon.genmodel#//edom204epsilon/CategorySpec"/>
+        <containmentMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/categoryspec"/>
+        <childMetaFeature href="edom204epsilon.genmodel#//edom204epsilon/Model/categoryspec"/>
+      </modelFacet>
+      <labels visualID="5005" editPartClassName="CategorySpecNameEditPart" itemSemanticEditPolicyClassName="CategorySpecNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureCategorySpecLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="edom204epsilon.genmodel#//edom204epsilon/CategorySpec/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
     <links visualID="4001" editPartClassName="UserAccountAssociationEditPart" itemSemanticEditPolicyClassName="UserAccountAssociationItemSemanticEditPolicy" createCommandClassName="UserAccountAssociationCreateCommand" reorientCommandClassName="UserAccountAssociationReorientCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="UserAccountAssociationEditHelper"/>
@@ -116,6 +135,7 @@
         <entries xsi:type="gmfgen:ToolEntry" title="AccountAttribute" description="Create new AccountAttribute"/>
         <entries xsi:type="gmfgen:ToolEntry" title="AccountGroupSpec" description="Create new AccountGroupSpec" genNodes="//@diagram/@topLevelNodes.0"/>
         <entries xsi:type="gmfgen:ToolEntry" title="AccountSpec" description="Create new AccountSpec" genNodes="//@diagram/@topLevelNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="CategorySpec" description="Create new CategorySpec" genNodes="//@diagram/@topLevelNodes.4"/>
         <entries xsi:type="gmfgen:ToolEntry" title="TransactionAttribute" description="Create new TransactionAttribute"/>
         <entries xsi:type="gmfgen:ToolEntry" title="TransactionSpec" description="Create new TransactionSpec" genNodes="//@diagram/@topLevelNodes.3"/>
         <entries xsi:type="gmfgen:ToolEntry" title="UserAttribute" description="Create new UserAttribute"/>
@@ -145,6 +165,7 @@
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.1"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.2"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.3"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.4"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.0" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.2" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
@@ -170,7 +191,7 @@
   </propertySheet>
   <domainGenModel href="edom204epsilon.genmodel#/"/>
   <labelParsers extensibleViaService="true">
-    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@topLevelNodes.4/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus context="//@diagram">
     <items xsi:type="gmfgen:LoadResourceAction"/>

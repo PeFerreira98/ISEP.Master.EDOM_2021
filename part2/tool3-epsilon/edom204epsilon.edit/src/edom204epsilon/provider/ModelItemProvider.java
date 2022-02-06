@@ -106,6 +106,7 @@ public class ModelItemProvider
 			childrenFeatures.add(Edom204epsilonPackage.Literals.MODEL__USERSPEC);
 			childrenFeatures.add(Edom204epsilonPackage.Literals.MODEL__ACCOUNTSPEC);
 			childrenFeatures.add(Edom204epsilonPackage.Literals.MODEL__TRANSACTIONSPEC);
+			childrenFeatures.add(Edom204epsilonPackage.Literals.MODEL__CATEGORYSPEC);
 			childrenFeatures.add(Edom204epsilonPackage.Literals.MODEL__USERACCOUNTASSOCIATION);
 			childrenFeatures.add(Edom204epsilonPackage.Literals.MODEL__ACCOUNTTRANSACTIONASSOCIATION);
 		}
@@ -170,6 +171,7 @@ public class ModelItemProvider
 			case Edom204epsilonPackage.MODEL__USERSPEC:
 			case Edom204epsilonPackage.MODEL__ACCOUNTSPEC:
 			case Edom204epsilonPackage.MODEL__TRANSACTIONSPEC:
+			case Edom204epsilonPackage.MODEL__CATEGORYSPEC:
 			case Edom204epsilonPackage.MODEL__USERACCOUNTASSOCIATION:
 			case Edom204epsilonPackage.MODEL__ACCOUNTTRANSACTIONASSOCIATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -208,6 +210,11 @@ public class ModelItemProvider
 			(createChildParameter
 				(Edom204epsilonPackage.Literals.MODEL__TRANSACTIONSPEC,
 				 Edom204epsilonFactory.eINSTANCE.createTransactionSpec()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Edom204epsilonPackage.Literals.MODEL__CATEGORYSPEC,
+				 Edom204epsilonFactory.eINSTANCE.createCategorySpec()));
 
 		newChildDescriptors.add
 			(createChildParameter

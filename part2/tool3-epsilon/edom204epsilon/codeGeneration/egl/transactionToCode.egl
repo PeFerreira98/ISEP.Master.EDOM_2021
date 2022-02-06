@@ -1,31 +1,62 @@
+//package [%=modname%];
+//cat -> [%=hasCategory%] -> [%=categoryName%]
+
+import java.time.LocalDateTime;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 
 public class [%=tranSpec.name%] {
 
-    private Category category;
+[%if(hasCategory){%]
+    public [%=categoryName%] [%=categoryName.ToLowerCase()%];
+[%}%]
     [%for (t in tranSpec.transactionattribute){%]
   	public [%=t.type%] [%=t.name.ToLowerCase()%];
 	[%}%]
 
-    public [%=tranSpec.name%](Category cat, [%for (u in tranSpec.transactionattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(tranSpec.transactionattribute.last() != u){%], [%}%][%}%]) {
-        this.category = cat;
+    public [%=tranSpec.name%]([%if(hasCategory){%][%=categoryName%] [%=categoryName.ToLowerCase()%],[%}%] [%for (u in tranSpec.transactionattribute){%][%=u.type%] [%=u.name.toLowerCase()%][%if(tranSpec.transactionattribute.last() != u){%], [%}%][%}%]) {
+[%if(hasCategory){%]
+        this.[%=categoryName.ToLowerCase()%] = [%=categoryName.ToLowerCase()%];
+[%}%]
         [%for (t in tranSpec.transactionattribute){%]
   		this.[%=t.name.toLowerCase()%] = [%=t.name.toLowerCase()%];
 		[%}%]
     }
 
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
     @Override
     public String toString() {
-        return "[%=tranSpec.name%] => \n" +
-			"[%=tranSpec.name%]  Category: " + category.getName() + "\n" + [%for (u in tranSpec.transactionattribute){%]"[%=u.name%]: " + [%=u.name.toLowerCase()%] + "\n" [%if(tranSpec.transactionattribute.last() != u){%]+ [%}%][%}%];
+        return "\n\t\t[%=tranSpec.name%] =>" + [%if(hasCategory){%][%=categoryName.ToLowerCase()%].toString() +[%}%] [%for (u in tranSpec.transactionattribute){%]" [%=u.name%]: " + [%=u.name.toLowerCase()%] [%if(tranSpec.transactionattribute.last() != u){%] + [%}%][%}%];        
+    }
+
+    public static [%=tranSpec.name%] build()
+    {
+        Scanner sc = new Scanner(System.in);
                 
+        [%for (u in tranSpec.transactionattribute){%]
+        System.out.println("[%=tranSpec.name%] - [%=u.name.toLowerCase()%]: ");
+        [%if(u.type.toString() = "LocalDate"){%]
+        String [%=u.name.toLowerCase()%]Unparsed = sc.nextLine();
+        LocalDate [%=u.name.toLowerCase()%] = LocalDate.parse([%=u.name.toLowerCase()%]Unparsed, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        [%}%]
+        [%else if(u.type.toString() = "double"){%]
+        [%=u.type%] [%=u.name.toLowerCase()%] = sc.nextDouble();
+        [%}%]
+        [%else{%]
+        String [%=u.name.toLowerCase()%] = sc.nextLine();
+        [%}%]
+        [%}%]
+
+[%if(hasCategory){%]
+        System.out.println("[%=tranSpec.name%] [%=categoryName%]: ");
+        String [%=categoryName.ToLowerCase()%] = sc.nextLine();
+        return new [%=tranSpec.name%](new [%=categoryName%]([%=categoryName.ToLowerCase()%]), [%for (u in tranSpec.transactionattribute){%][%=u.name.toLowerCase()%][%if(tranSpec.transactionattribute.last() != u){%], [%}%][%}%]);
+[%}%]
+[%else{%]
+        return new [%=tranSpec.name%]([%for (u in tranSpec.transactionattribute){%][%=u.name.toLowerCase()%][%if(tranSpec.transactionattribute.last() != u){%], [%}%][%}%]);
+[%}%]
     }
 }

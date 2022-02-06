@@ -12,6 +12,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
 
 import edom204epsilon.diagram.edit.commands.AccountGroupSpecCreateCommand;
 import edom204epsilon.diagram.edit.commands.AccountSpecCreateCommand;
+import edom204epsilon.diagram.edit.commands.CategorySpecCreateCommand;
 import edom204epsilon.diagram.edit.commands.TransactionSpecCreateCommand;
 import edom204epsilon.diagram.edit.commands.UserSpecCreateCommand;
 import edom204epsilon.diagram.providers.Edom204epsilonElementTypes;
@@ -43,6 +44,9 @@ public class ModelItemSemanticEditPolicy extends Edom204epsilonBaseItemSemanticE
 		}
 		if (Edom204epsilonElementTypes.TransactionSpec_2004 == req.getElementType()) {
 			return getGEFWrapper(new TransactionSpecCreateCommand(req));
+		}
+		if (Edom204epsilonElementTypes.CategorySpec_2005 == req.getElementType()) {
+			return getGEFWrapper(new CategorySpecCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

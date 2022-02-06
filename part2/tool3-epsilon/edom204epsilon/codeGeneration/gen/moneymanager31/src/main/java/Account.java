@@ -1,41 +1,38 @@
-import java.time.LocalDate;
+//package moneymanager31;
+
 import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 
 public class Account {
 
     public List<Transaction> transactionList;
-  	public string name;
+  	public String name;
   	public double initialamount;
 
     public Account(List<Transaction> transactionList) {
         this.transactionList = transactionList;
     }
     
-    public Account(List<Transaction> transactionList, string name, double initialamount) {
+    public Account(List<Transaction> transactionList, String name, double initialamount) {
         this.transactionList = transactionList;
   		this.name = name;
   		this.initialamount = initialamount;
-        
     }
-    public Account(string name, double initialamount) {
+    
+    public Account(String name, double initialamount) {
     	this.transactionList = new ArrayList<>();
   		this.name = name;
   		this.initialamount = initialamount;
     }
 
-    public List<Transaction> getTransactionList() {
-        return transactionList;
-    }
-
-    public void setTransactionList(List<Transaction> transactionList) {
-        this.transactionList = transactionList;
-    }
-
     @Override
     public String toString() {
-        return "Account => \n" +
-                "Transaction List: " + transactionList + "\n" + "Name: " + name + "\n" + "InitialAmount: " + initialamount + "\n" ;
+        return "\n\tAccount =>" + " Name: " + name + " InitialAmount: " + initialamount +  "\n\t" + transactionList + "\n";
     }
 
     @Override
@@ -55,5 +52,17 @@ public class Account {
         for (Transaction trans: account.transactionList) {
             System.out.println(trans.toString());
         }
+    }
+
+    public static Account build()
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Account - name: ");
+        String name = sc.nextLine();
+        System.out.println("Account - initialamount: ");
+        double initialamount = sc.nextDouble();
+        
+        return new Account(name, initialamount);
     }
 }

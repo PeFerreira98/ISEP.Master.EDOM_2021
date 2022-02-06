@@ -52,6 +52,12 @@ public class Edom204epsilonEditPartFactory implements EditPartFactory {
 			case TransactionSpecNameEditPart.VISUAL_ID:
 				return new TransactionSpecNameEditPart(view);
 
+			case CategorySpecEditPart.VISUAL_ID:
+				return new CategorySpecEditPart(view);
+
+			case CategorySpecNameEditPart.VISUAL_ID:
+				return new CategorySpecNameEditPart(view);
+
 			case UserAccountAssociationEditPart.VISUAL_ID:
 				return new UserAccountAssociationEditPart(view);
 

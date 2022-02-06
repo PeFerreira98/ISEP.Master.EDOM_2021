@@ -67,6 +67,15 @@ public interface Edom204epsilonFactory extends EFactory {
 	TransactionSpec createTransactionSpec();
 
 	/**
+	 * Returns a new object of class '<em>Category Spec</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Category Spec</em>'.
+	 * @generated
+	 */
+	CategorySpec createCategorySpec();
+
+	/**
 	 * Returns a new object of class '<em>User Account Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

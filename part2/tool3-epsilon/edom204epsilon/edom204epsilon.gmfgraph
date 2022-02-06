@@ -41,6 +41,16 @@
       </actualFigure>
       <accessors accessor="getFigureTransactionSpecLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
+    <descriptors name="CategorySpecFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CategorySpecFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="165"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="CategorySpecLabelFigure" text="CategorySpec"/>
+      </actualFigure>
+      <accessors accessor="getFigureCategorySpecLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
     <descriptors name="UserAttributeFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="UserAttributeFigure">
         <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255"/>
@@ -49,7 +59,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="UserAttributeLabelFigure" text="UserAttribute"/>
       </actualFigure>
-      <accessors accessor="getFigureUserAttributeLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureUserAttributeLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="AccountAttributeFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="AccountAttributeFigure">
@@ -59,7 +69,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="AccountAttributeLabelFigure" text="AccountAttribute"/>
       </actualFigure>
-      <accessors accessor="getFigureAccountAttributeLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureAccountAttributeLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="TransactionAttributeFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="TransactionAttributeFigure">
@@ -69,7 +79,7 @@
         </border>
         <children xsi:type="gmfgraph:Label" name="TransactionAttributeLabelFigure" text="TransactionAttribute"/>
       </actualFigure>
-      <accessors accessor="getFigureTransactionAttributeLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureTransactionAttributeLabelFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="UserAccountAssociationFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="UserAccountAssociationFigure" lineWidth="2">
@@ -86,6 +96,7 @@
   <nodes name="UserSpec" figure="UserSpecFigure"/>
   <nodes name="AccountSpec" figure="AccountSpecFigure"/>
   <nodes name="TransactionSpec" figure="TransactionSpecFigure"/>
+  <nodes name="CategorySpec" figure="CategorySpecFigure"/>
   <nodes name="UserAttribute" figure="UserAttributeFigure"/>
   <nodes name="AccountAttribute" figure="AccountAttributeFigure"/>
   <nodes name="TransactionAttribute" figure="TransactionAttributeFigure"/>
@@ -95,7 +106,8 @@
   <labels name="UserSpecLabel" figure="UserSpecFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels name="AccountSpecLabel" figure="AccountSpecFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels name="TransactionSpecLabel" figure="TransactionSpecFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
-  <labels name="UserAttributeLabel" figure="UserAttributeFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
-  <labels name="AccountAttributeLabel" figure="AccountAttributeFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
-  <labels name="TransactionAttributeLabel" figure="TransactionAttributeFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="CategorySpecLabel" figure="CategorySpecFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="UserAttributeLabel" figure="UserAttributeFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="AccountAttributeLabel" figure="AccountAttributeFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="TransactionAttributeLabel" figure="TransactionAttributeFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
 </gmfgraph:Canvas>

@@ -38,6 +38,7 @@ import edom204epsilon.Edom204epsilonPackage;
 import edom204epsilon.diagram.edit.parts.AccountGroupSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountTransactionAssociationEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecEditPart;
 import edom204epsilon.diagram.edit.parts.ModelEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecEditPart;
 import edom204epsilon.diagram.edit.parts.UserAccountAssociationEditPart;
@@ -79,6 +80,7 @@ public class ModelCanonicalEditPolicy extends CanonicalEditPolicy {
 			myFeaturesToSynchronize.add(Edom204epsilonPackage.eINSTANCE.getModel_Userspec());
 			myFeaturesToSynchronize.add(Edom204epsilonPackage.eINSTANCE.getModel_Accountspec());
 			myFeaturesToSynchronize.add(Edom204epsilonPackage.eINSTANCE.getModel_Transactionspec());
+			myFeaturesToSynchronize.add(Edom204epsilonPackage.eINSTANCE.getModel_Categoryspec());
 		}
 		return myFeaturesToSynchronize;
 	}
@@ -119,6 +121,7 @@ public class ModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case UserSpecEditPart.VISUAL_ID:
 		case AccountSpecEditPart.VISUAL_ID:
 		case TransactionSpecEditPart.VISUAL_ID:
+		case CategorySpecEditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -302,6 +305,13 @@ public class ModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case TransactionSpecEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(Edom204epsilonDiagramUpdater.getTransactionSpec_2004ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case CategorySpecEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(Edom204epsilonDiagramUpdater.getCategorySpec_2005ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

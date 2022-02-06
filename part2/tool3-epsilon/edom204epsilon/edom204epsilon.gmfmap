@@ -41,7 +41,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="edom204epsilon.gmftool#//@palette/@tools.0/@tools.6"/>
+          href="edom204epsilon.gmftool#//@palette/@tools.0/@tools.7"/>
       <diagramNode
           href="edom204epsilon.gmfgraph#UserSpec"/>
     </ownedChild>
@@ -81,9 +81,29 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="edom204epsilon.gmftool#//@palette/@tools.0/@tools.4"/>
+          href="edom204epsilon.gmftool#//@palette/@tools.0/@tools.5"/>
       <diagramNode
           href="edom204epsilon.gmfgraph#TransactionSpec"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="edom204epsilon.ecore#//Model/categoryspec"/>
+    <ownedChild>
+      <domainMetaElement
+          href="edom204epsilon.ecore#//CategorySpec"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="edom204epsilon.gmfgraph#CategorySpecLabel"/>
+        <features
+            href="edom204epsilon.ecore#//CategorySpec/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="edom204epsilon.gmftool#//@palette/@tools.0/@tools.3"/>
+      <diagramNode
+          href="edom204epsilon.gmfgraph#CategorySpec"/>
     </ownedChild>
   </nodes>
   <links>

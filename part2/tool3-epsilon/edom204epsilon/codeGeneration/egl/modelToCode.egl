@@ -1,3 +1,8 @@
+//package [%=modname%];
+//hasAccG -> [%=hasAccountGroup%] -> [%=accountGroupName%]
+//usr -> [%=userName%]
+
+import java.time.LocalDateTime;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -5,142 +10,110 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Model {
+public class Model
+{
+    public [%=userName%] user;
+[%if(hasAccountGroup){%]
+    public List<[%=accountGroupName%]> accG;
+[%}%]
+
+	public Model() {
+        this.user = [%=userName%].build();
+[%if(hasAccountGroup){%]
+        this.accG = new ArrayList<>();
+[%}%]
+    }
+
+	public Model([%=userName%] user) {
+        this.user = user;
+[%if(hasAccountGroup){%]
+        this.accG = new ArrayList<>();
+[%}%]
+    }
+
+[%if(hasAccountGroup){%]
+    public Model([%=userName%] user, List<[%=accountGroupName%]> accG) {
+        this.user = user;
+        this.accG = accG;
+    }
+
+[%}%]
     @Override
     public String toString() {
-        return "Model{" +
-                "user=" + user.toString() +
-                ", accG=" + accG +
-                '}';
+        return "Model\n{" +
+                "\n\tuser=" + user.toString() +
+[%if(hasAccountGroup){%]
+                "\n\taccG=" + accG +
+[%}%]
+                "\n}";
     }
 
-    private User user;
-    private List<AccountGroup> accG = new ArrayList<>();
-
-    public Model(User user,List<AccountGroup> accG ) {
-        this.user = user;
-        this.accG = accG;
+    public void showProfile()
+    {
+        System.out.println(user.toString());
     }
 
-    public Model() {
+    public void addAccountToUser()
+    {
+        this.user.addAccount();
     }
 
-    public User getUser() {
-        return user;
+    public void showAccountsInfo()
+    {
+        System.out.println(user.accountList);
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void addTransactionToUser()
+    {
+        this.user.addTransaction();
+    }
+    
+    public void showTransactionInfo()
+    {
+		for (Account acc : user.accountList)
+		{
+			System.out.println(acc.transactionList);
+		}
     }
 
-    public List<AccountGroup> getAccG() {
-        return accG;
+[%if(hasAccountGroup){%]
+    public void addAccountGroup()
+    {
+        this.accG.add([%=accountGroupName%].build());
     }
-
-    public void setAccG(List<AccountGroup> accG) {
-        this.accG = accG;
+    
+    public void showAccountGroups()
+    {
+    	System.out.println(accG);
     }
-
-    public User addUser() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("User Name: ");
-        String name = sc.nextLine();
-        System.out.println("User Birthday: ");
-        String date = sc.nextLine();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        LocalDate localDate = LocalDate.parse(date, formatter);
-        List<Account> accountList = new ArrayList<>();
-        return new User(name, accountList, localDate);
-    }
-
-    public void addAccountToUser() {
-        Scanner sc = new Scanner(System.in);
-        List<Transaction> transactionList = new ArrayList<>();
-        System.out.println("Account Name: ");
-        String name = sc.nextLine();
-        System.out.println("Account Amount: ");
-        double amount = sc.nextDouble();
-        List<Account> accountList = user.getAccountList();
-        accountList.add(new Account(transactionList, name, amount));
-        this.user.setAccountList(accountList);
-    }
-
-    public void addTransactionToAccount() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Account Name: ");
-        String accName = sc.nextLine();
-        System.out.println("Transaction From: ");
-        String from = sc.nextLine();
-        System.out.println("Transaction To: ");
-        String to = sc.nextLine();
-        System.out.println("Transaction Date: ");
-        String date = sc.nextLine();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        LocalDate localDate = LocalDate.parse(date, formatter);
-        System.out.println("Transaction Category: ");
-        String category = sc.nextLine();
-        System.out.println("Transaction Amount: ");
-        double amount = sc.nextDouble();
-        List<Transaction> transactionList = new ArrayList<>();
-        transactionList.add(new Transaction(from, to, amount, localDate, new Category(category)));
-        int i = 0;
-        for (Account acc : this.user.getAccountList()) {
-            if (!Objects.equals(accName, acc.getName())) {
-                i++;
-            } else {
-                this.user.getAccountList().get(i).setInitialAmount(
-                        this.user.getAccountList().get(i).getInitialAmount() - amount);
-                this.user.getAccountList().get(i).setTransactionList(transactionList);
-            }
+    
+    public void addAccountToGroup()
+    {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Which account Group?");
+		for ([%=accountGroupName%] accG : this.accG) {
+            System.out.printf(accG.name + "\n");
         }
-        i = 0;
-        for (Account acc : this.user.getAccountList()) {
-            if (!Objects.equals(to, acc.getName())) {
-                i++;
-            } else {
-                this.user.getAccountList().get(i).setInitialAmount(
-                        this.user.getAccountList().get(i).getInitialAmount() + amount);
-                this.user.getAccountList().get(i).setTransactionList(transactionList);
-            }
-        }
-    }
-
-    public List<AccountGroup> addAccountGroup() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Account Group Name: ");
-        List<Account> accountList = new ArrayList<>();
-        String accGName = sc.nextLine();
-        this.accG.add(new AccountGroup(accGName, accountList));
-        System.out.println("Do you want to add more Account Groups? (y/n)");
-        String answer = sc.nextLine();
-        while (Objects.equals(answer, "y")) {
-            System.out.println("Account Group Name: ");
-            accGName = sc.nextLine();
-            accountList = new ArrayList<>();
-            this.accG.add(new AccountGroup(accGName, accountList));
-            System.out.println("Do you want to add more Account Groups? (y/n)");
-            answer = sc.nextLine();
-        }
-        return this.accG;
-    }
-
-    public void addAccountToAccountGroup(String accountName) {
-        List<Account> accountList = this.user.getAccountList();
-        int i = 0;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Account Group Name: ");
-        String accGName = sc.nextLine();
-        for (AccountGroup accG : this.accG) {
-            if (!Objects.equals(accGName, accG.getName())) {
-                i++;
-            } else {
-                for (Account acc : accountList) {
-                    if (Objects.equals(accountName, acc.getName())) {
-                        this.accG.get(i).getAccountList().add(acc);
+        String accountGroupName = sc.nextLine();
+		
+		System.out.println("Which account do you want to add?");
+		for (Account acc : user.accountList) {
+			System.out.printf(acc.name + "\n");
+		}
+		String accountName = sc.nextLine();
+		
+		for ([%=accountGroupName%] accG : this.accG) {
+            if (Objects.equals(accountGroupName, accG.name)) {
+                for (Account acc : user.accountList) {
+                    if (Objects.equals(accountName, acc.name)) {
+                        accG.accountList.add(acc);
+                        System.out.printf("AccountAdded!");
                     }
                 }
             }
-        }
+        }  
     }
+[%}%]
 }
 

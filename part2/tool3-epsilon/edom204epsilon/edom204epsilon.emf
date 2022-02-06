@@ -8,6 +8,7 @@ class Model {
 	val UserSpec[*] userspec;
 	val AccountSpec[*] accountspec;
 	val TransactionSpec[*] transactionspec;
+	val CategorySpec[*] categoryspec;
 	val UserAccountAssociation[*] useraccountassociation;
 	val AccountTransactionAssociation[*] accounttransactionassociation;
 }
@@ -42,6 +43,13 @@ class TransactionSpec {
 	attr int cardinalityMin = 1;
 	attr int cardinalityMax = -1;
 	val TransactionAttribute[*] transactionattribute;
+}
+
+@gmf.node(label = "name", color = "255,165,0", figure = "rectangle")
+class CategorySpec {
+	attr String name = "categoryName";
+	attr int cardinalityMin = 0;
+	attr int cardinalityMax = 1;
 }
 
 @gmf.link(source="userspec", target="accountspec", width="2", color = "255,165,0")
@@ -83,7 +91,7 @@ class TransactionAttribute {
 }
 
 enum AttributeType {
-	string = 0;
+	String = 0;
 	DateTime = 1;
 	double = 2;
 	LocalDate = 3;

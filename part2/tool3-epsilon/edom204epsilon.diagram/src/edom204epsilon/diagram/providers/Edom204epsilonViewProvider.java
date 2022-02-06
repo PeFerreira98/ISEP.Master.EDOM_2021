@@ -49,6 +49,8 @@ import edom204epsilon.diagram.edit.parts.AccountGroupSpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecEditPart;
 import edom204epsilon.diagram.edit.parts.AccountSpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.AccountTransactionAssociationEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecEditPart;
+import edom204epsilon.diagram.edit.parts.CategorySpecNameEditPart;
 import edom204epsilon.diagram.edit.parts.ModelEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecEditPart;
 import edom204epsilon.diagram.edit.parts.TransactionSpecNameEditPart;
@@ -143,6 +145,7 @@ public class Edom204epsilonViewProvider extends AbstractProvider implements IVie
 				case UserSpecEditPart.VISUAL_ID:
 				case AccountSpecEditPart.VISUAL_ID:
 				case TransactionSpecEditPart.VISUAL_ID:
+				case CategorySpecEditPart.VISUAL_ID:
 					if (domainElement == null || visualID != Edom204epsilonVisualIDRegistry
 							.getNodeVisualID(op.getContainerView(), domainElement)) {
 						return false; // visual id in semantic hint should match visual id for domain element
@@ -154,7 +157,8 @@ public class Edom204epsilonViewProvider extends AbstractProvider implements IVie
 			}
 		}
 		return AccountGroupSpecEditPart.VISUAL_ID == visualID || UserSpecEditPart.VISUAL_ID == visualID
-				|| AccountSpecEditPart.VISUAL_ID == visualID || TransactionSpecEditPart.VISUAL_ID == visualID;
+				|| AccountSpecEditPart.VISUAL_ID == visualID || TransactionSpecEditPart.VISUAL_ID == visualID
+				|| CategorySpecEditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -212,6 +216,8 @@ public class Edom204epsilonViewProvider extends AbstractProvider implements IVie
 			return createAccountSpec_2003(domainElement, containerView, index, persisted, preferencesHint);
 		case TransactionSpecEditPart.VISUAL_ID:
 			return createTransactionSpec_2004(domainElement, containerView, index, persisted, preferencesHint);
+		case CategorySpecEditPart.VISUAL_ID:
+			return createCategorySpec_2005(domainElement, containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -379,6 +385,42 @@ public class Edom204epsilonViewProvider extends AbstractProvider implements IVie
 		}
 		Node label5004 = createLabel(node,
 				Edom204epsilonVisualIDRegistry.getType(TransactionSpecNameEditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
+	public Node createCategorySpec_2005(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(Edom204epsilonVisualIDRegistry.getType(CategorySpecEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		Node label5005 = createLabel(node, Edom204epsilonVisualIDRegistry.getType(CategorySpecNameEditPart.VISUAL_ID));
 		return node;
 	}
 

@@ -39,6 +39,15 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
+          title="CategorySpec"
+          description="Create new CategorySpec">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="TransactionAttribute"
           description="Create new TransactionAttribute">
         <smallIcon
